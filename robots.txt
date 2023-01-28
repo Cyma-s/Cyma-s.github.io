@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://demo-gatsby-starter-primer-wiki.owenyoung.com/sitemap/sitemap-index.xml
-Host: https://demo-gatsby-starter-primer-wiki.owenyoung.com
+Sitemap: https://cyma-s.github.io//sitemap/sitemap-index.xml
+Host: https://cyma-s.github.io
