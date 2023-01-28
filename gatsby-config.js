@@ -1,11 +1,10 @@
 const path = require("path");
 const pathPrefix = "/";
 const siteMetadata = {
-  title: "Gatsby Starter for Gatsby Theme Primer Wiki",
+  title: "Vero Wiki",
   shortName: "Wiki",
   description:
-    "A starter that use gatsby-theme-primer-wiki",
-  twitterName: "theowenyoung",
+    "개인 위키입니다.",
   imageUrl: "/graph-visualisation.jpg",
   siteUrl: "https://demo-gatsby-starter-primer-wiki.owenyoung.com",
 };
@@ -30,14 +29,11 @@ module.exports = {
       
           {
             title: "Github",
-            url: "https://github.com/theowenyoung/gatsby-starter-primer-wiki/",
-          },
-          {
-            title: "Twitter",
-            url: "https://twitter.com/theowenyoung",
+            url: "https://github.com/Cyma-s/",
           },
         ],
-        editUrl: "https://github.com/theowenyoung/gatsby-starter-primer-wiki/tree/main/",
+        editUrl: "https://github.com/Cyma-s/",
+        defaultColorMode: "auto",
       },
     },
     {

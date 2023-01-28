@@ -9,7 +9,8 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "serve": "gatsby serve",
-    "test": "echo test"
+    "test": "echo test",
+    "deploy": "gatsby build && gh-pages -d public -b deploy"
   },
   "dependencies": {
     "gatsby": "4.6.0",
@@ -19,6 +20,7 @@
     "gatsby-plugin-sitemap": "^5.11.1",
     "gatsby-source-filesystem": "^4.11.1",
     "gatsby-theme-primer-wiki": "^2.0.5",
+    "gh-pages": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
