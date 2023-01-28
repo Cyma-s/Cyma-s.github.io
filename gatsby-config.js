@@ -6,7 +6,7 @@ const siteMetadata = {
   description:
     "개인 위키입니다.",
   imageUrl: "/graph-visualisation.jpg",
-  siteUrl: "https://demo-gatsby-starter-primer-wiki.owenyoung.com",
+  siteUrl: "https://cyma-s.github.io/",
 };
 module.exports = {
   siteMetadata,
