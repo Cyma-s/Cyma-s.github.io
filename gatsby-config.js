@@ -32,7 +32,7 @@ module.exports = {
             url: "https://github.com/Cyma-s/",
           },
         ],
-        editUrl: "https://github.com/Cyma-s/",
+        editUrl: "https://github.com/Cyma-s/Cyma-s.github.io/",
         defaultColorMode: "auto",
       },
     },
