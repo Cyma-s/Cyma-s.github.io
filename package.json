@@ -1,7 +1,8 @@
 {
   "private": true,
-  "name": "wiki",
+  "name": "VERO Archive",
   "version": "1.0.0",
+  "author": "cyma <sol031988@gmail.com>",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
