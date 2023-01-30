@@ -13,6 +13,7 @@ import TagsBlock from "gatsby-theme-primer-wiki/src/components/tags-block";
 import { getSidebarItems } from "gatsby-theme-primer-wiki/src/utils/sidebar-items";
 import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
 import PageHistory from "./page-history";
+import Blockquote from "gatsby-theme-primer-wiki/src/components/blockquote";
 
 function TagsList({ type = "normal", title, url, items, depth = 0 }) {
   items = items || [];
@@ -56,8 +57,6 @@ const Post = ({ data, pageContext, location }) => {
 
   const {
     title,
-    lastUpdatedAt,
-    lastUpdated,
     gitCreatedAt,
     slug,
     url,
@@ -106,9 +105,17 @@ const Post = ({ data, pageContext, location }) => {
     tags: tags || [],
     language,
   };
+  
+  const postSlug = fields.slug;
   const AnchorTag = (props) => (
-    <components.a {...props} references={outboundReferences} />
+    <components.a
+     {...props} 
+     references={outboundReferences} 
+     postSlug={postSlug}
+     />
   );
+
+  
   return (
     <Layout pageContext={pageContext} location={location}>
       <SEO post={postSeoData}></SEO>
@@ -154,6 +161,8 @@ const Post = ({ data, pageContext, location }) => {
             created={date}
             lastUpdated={lastUpdatedTime}
           />
+	  
+	  {description && <Blockquote>{description}</Blockquote>}
 
           {tableOfContents.items ? (
             <Box
