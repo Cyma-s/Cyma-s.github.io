@@ -1,17 +1,17 @@
 import React from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import Layout from "./layout";
-import ReferencesBlock from "./references-block";
+import Layout from "gatsby-theme-primer-wiki/src/components/layout";
+import ReferencesBlock from "gatsby-theme-primer-wiki/src/components/references-block";
 import { MDXProvider } from "@mdx-js/react";
-import components from "./mdx-components";
-import SEO from "./seo";
+import components from "gatsby-theme-primer-wiki/src/components/mdx-components";
+import SEO from "gatsby-theme-primer-wiki/src/components/seo";
 import { Box, Heading, Text } from "@primer/components";
-import { HEADER_HEIGHT } from "./header";
-import PageFooter from "./page-footer";
-import TableOfContents from "./table-of-contents";
-import TagsBlock from "./tags-block";
-import { getSidebarItems } from "../utils/sidebar-items";
-import useThemeConfig from "../use-theme-config";
+import { HEADER_HEIGHT } from "gatsby-theme-primer-wiki/src/components/header";
+import PageFooter from "gatsby-theme-primer-wiki/src/components/page-footer";
+import TableOfContents from "gatsby-theme-primer-wiki/src/components/table-of-contents";
+import TagsBlock from "gatsby-theme-primer-wiki/src/components/tags-block";
+import { getSidebarItems } from "gatsby-theme-primer-wiki/src/utils/sidebar-items";
+import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
 import PageHistory from "./page-history";
 
 function TagsList({ type = "normal", title, url, items, depth = 0 }) {

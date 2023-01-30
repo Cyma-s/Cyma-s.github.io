@@ -1,6 +1,6 @@
 import { Text } from "@primer/components";
 import React from "react";
-import useThemeConfig from "../use-theme-config";
+import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
 
 const CreatedText = ({ created }) => {
   return (

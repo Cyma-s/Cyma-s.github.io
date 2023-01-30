@@ -2,7 +2,7 @@ import { StyledOcticon, Link, Box } from "@primer/components";
 import { PencilIcon } from "@primer/octicons-react";
 import React from "react";
 import LastUpdated from "./last-updated";
-import useThemeConfig from "../use-theme-config";
+import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
 
 function PageHistory({ editUrl, created, lastUpdated }) {
   const data = useThemeConfig();
