@@ -2,7 +2,7 @@ const path = require("path");
 const pathPrefix = "/";
 const siteMetadata = {
   title: "Vero Wiki",
-  shortName: "Wiki",
+  shortName: "Vero Wiki",
   description:
     "개인 위키입니다.",
   imageUrl: "/graph-visualisation.jpg",
