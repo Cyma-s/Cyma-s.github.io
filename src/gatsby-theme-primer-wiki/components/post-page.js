@@ -12,6 +12,7 @@ import TableOfContents from "./table-of-contents";
 import TagsBlock from "./tags-block";
 import { getSidebarItems } from "../utils/sidebar-items";
 import useThemeConfig from "../use-theme-config";
+import PageHistory from "./page-history";
 
 function TagsList({ type = "normal", title, url, items, depth = 0 }) {
   items = items || [];
@@ -147,6 +148,12 @@ const Post = ({ data, pageContext, location }) => {
               </Box>
             </Box>
           )}
+	 
+	 <PageHistory
+            editUrl={editUrl}
+            created={date}
+            lastUpdated={lastUpdatedTime}
+          />
 
           {tableOfContents.items ? (
             <Box
