@@ -4,7 +4,7 @@ import TagPage from "../components/tag-page";
 export default TagPage;
 
 export const query = graphql`
-  query tagQuery($tag: String) {
+  query EnrichedTagQuery($tag: String) {
     site {
       pathPrefix
       siteMetadata {

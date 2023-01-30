@@ -4,7 +4,7 @@ import PostPage from "../components/post-page";
 export default PostPage;
 
 export const query = graphql`
-  query PostQuery($slug: String!, $tags: [String!]!) {
+  query EnrichedPostQuery($slug: String!, $tags: [String!]!) {
     mdx(fields: { slug: { eq: $slug } }) {
       id
       tableOfContents(maxDepth: 2)

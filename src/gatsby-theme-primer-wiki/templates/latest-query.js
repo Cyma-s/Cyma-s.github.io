@@ -4,7 +4,7 @@ import LatestPage from "gatsby-theme-primer-wiki/src/components/latest-page";
 export default LatestPage;
 
 export const query = graphql`
-  query latestQuery {
+  query EnrichedLatestQuery {
     site {
       pathPrefix
       siteMetadata {
