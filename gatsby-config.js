@@ -25,15 +25,17 @@ module.exports = {
     {
       resolve: "gatsby-theme-primer-wiki",
       options: {
-        nav: [
-      
+        nav: [ 
           {
             title: "Github",
             url: "https://github.com/Cyma-s/",
           },
         ],
         editUrl: "https://github.com/Cyma-s/Cyma-s.github.io/",
-        defaultColorMode: "auto",
+        editUrlText: "수정하기",
+	defaultColorMode: "auto",
+	shouldShowLatestOnIndex: true,
+ 	lastUpdatedText: "최근 수정 시간",
       },
     },
     {
