@@ -223,7 +223,6 @@ const Post = ({ data, pageContext, location }) => {
             <TagsBlock tags={tags} nodes={tagsOutbound.nodes} />
           )}
 
-          <PageFooter editUrl={editUrl} lastUpdated={lastUpdated} />
         </Box>
       </Box>
     </Layout>
