@@ -37,7 +37,7 @@ module.exports = {
 	shouldShowLatestOnIndex: true,
 	shouldSupportLatest: true,
 	defaultIndexLatestPostCount: 20,
-	sidebarComponents: ["latest", "tags"],
+	sidebarComponents: ["latest", "tag"],
  	lastUpdatedText: "최근 수정 시간",
       },
     },
