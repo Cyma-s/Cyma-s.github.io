@@ -46,6 +46,9 @@ export const query = graphql`
             title
             shouldShowTitle
           }
+	  frontmatter {
+	    description
+	  }
         }
       }
       inboundReferences {
