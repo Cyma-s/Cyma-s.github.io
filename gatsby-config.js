@@ -39,7 +39,7 @@ module.exports = {
 	shouldSupportLatest: true,
 	defaultIndexLatestPostCount: 20,
 	sidebarComponents: ["latest", "tag"],
-	shouldShowTagGroupsOnIndex: false,
+	shouldShowTagGroupsOnIndex: true,
 	shouldSupportTags: true,
 	tagText: "TAGS",
  	lastUpdatedText: "최근 수정 시간",
@@ -51,6 +51,7 @@ module.exports = {
         name: siteMetadata.title,
         short_name: siteMetadata.shortName,
         start_url: pathPrefix,
+	lang: `ko`,
         background_color: `#f7f0eb`,
         display: `standalone`,
         icon: path.resolve(__dirname, "./static/logo.png"),
@@ -65,6 +66,12 @@ module.exports = {
         host: siteMetadata.siteUrl,
         sitemap: `${siteMetadata.siteUrl}/sitemap/sitemap-index.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: `@theowenyoung/gatsby-transformer-references`,
+      options: {
+        types: ["Mdx"], // or ["MarkdownRemark"] (or both)
       },
     },
   ],

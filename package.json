@@ -14,6 +14,7 @@
     "deploy": "gatsby build && gh-pages -d public -b deploy"
   },
   "dependencies": {
+    "@theowenyoung/gatsby-transformer-references": "^1.10.5",
     "gatsby": "4.6.0",
     "gatsby-plugin-google-gtag": "^4.11.0",
     "gatsby-plugin-manifest": "^4.11.0",
