@@ -5,7 +5,7 @@ import ReferencesBlock from "gatsby-theme-primer-wiki/src/components/references-
 import { MDXProvider } from "@mdx-js/react";
 import components from "gatsby-theme-primer-wiki/src/components/mdx-components";
 import SEO from "gatsby-theme-primer-wiki/src/components/seo";
-import { Box, Heading, Text } from "@primer/components";
+import { Box, Heading, Text, useTheme } from "@primer/components";
 import { HEADER_HEIGHT } from "gatsby-theme-primer-wiki/src/components/header";
 import PageFooter from "gatsby-theme-primer-wiki/src/components/page-footer";
 import TableOfContents from "gatsby-theme-primer-wiki/src/components/table-of-contents";
@@ -14,6 +14,7 @@ import { getSidebarItems } from "gatsby-theme-primer-wiki/src/utils/sidebar-item
 import useThemeConfig from "gatsby-theme-primer-wiki/src/use-theme-config";
 import PageHistory from "./page-history";
 import Blockquote from "gatsby-theme-primer-wiki/src/components/blockquote";
+import Giscus from "@giscus/react";
 
 function TagsList({ type = "normal", title, url, items, depth = 0 }) {
   items = items || [];
@@ -115,7 +116,7 @@ const Post = ({ data, pageContext, location }) => {
      />
   );
 
-  
+  const { resolvedColorMode } = useTheme(); 
   return (
     <Layout pageContext={pageContext} location={location}>
       <SEO post={postSeoData}></SEO>
@@ -222,7 +223,18 @@ const Post = ({ data, pageContext, location }) => {
           {primerWikiThemeConfig.shouldSupportTags && (
             <TagsBlock tags={tags} nodes={tagsOutbound.nodes} />
           )}
-
+	  <Giscus
+            repo="Cyma-s/Cyma-s.github.io"
+            repoId="R_kgDOI27ORg"
+            category="General"
+            categoryId="DIC_kwDOI27ORs4CUCCw"
+            mapping="specific"
+	    term={title}
+            reactionsEnabled="1"
+            emitMetadata="0"
+	    lang="ko"
+            theme={resolvedColorMode === "day" ? "light" : "dark"}
+          />
         </Box>
       </Box>
     </Layout>
