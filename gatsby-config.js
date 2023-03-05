@@ -15,6 +15,15 @@ module.exports = {
     DEV_SSR: true,
   },
   plugins: [
+	{
+		resolve: `gatsby-plugin-google-gtag`,
+		options: {
+			trackingIds: ['G-MFJ3E8N4SC'],
+			pluginConfig: {
+				head: true,
+			},
+		},
+	},
     {
       resolve: "gatsby-source-filesystem",
       options: {
