@@ -12,3 +12,7 @@ tags     :
 - 도메인 객체의 getter는 무조건 나쁜 것인가?
 - View 클래스를 인터페이스로 작성하는 이유 - MockView를 만들기 위해
 - 모든 컬렉션은 일급 컬렉션이 되어야 하는가?
+
+## 3/17
+- 스레드 풀
+- Concurrent Collection
