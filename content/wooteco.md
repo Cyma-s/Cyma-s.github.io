@@ -21,10 +21,19 @@ tags     :
 * [사다리 게임](https://github.com/Cyma-s/java-ladder)
 * [블랙잭](https://github.com/Cyma-s/java-blackjack)
   * [[level1-blackjack|블랙잭 미션에서 고민한 것들]]
+* [체스](https://github.com/Cyma-s/java-chess)
+  * [[level1-chess|체스 미션 기록]]
 
 ### 레벨1 학습로그
 * [[default-method]]
 * [[singleton-vs-static]]
+* [[functional-interface]]
+
+### 레벨1에서 한 것들
+- [[why-return-type-of-add-function-is-boolean]]
+- [[level1-level-log|레벨1 레벨인터뷰]]
+- [[bepohuhe-study|베포후헤 스터디]]
+- 
 
 ## 레벨2
 
