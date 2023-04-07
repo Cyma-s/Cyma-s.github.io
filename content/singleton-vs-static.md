@@ -7,6 +7,7 @@ tags     :
 - 레벨1
 - 학습로그
 ---
+
 ## 글을 쓰게 된 배경
 
 망고가 1단계 블랙잭 미션을 리팩터링하다 나에게 질문했다.
@@ -156,6 +157,7 @@ public static void printValue(final String value) {
 지금까지의 미션들은 이후 view가 콘솔이 아닌 다른 것으로 변경될 수 있으므로 변경이 용이해야 한다. 얼마든지 추가적인 확장이 생길 수 있으므로 미션에서는 싱글턴을 사용하는 것이 좋을 듯 하다.
 
 ## 참고 자료
+
 - https://tecoble.techcourse.co.kr/post/2020-11-07-singleton/
 - https://tecoble.techcourse.co.kr/post/2020-07-16-static-method/
 - https://javarevisited.blogspot.com/2013/03/difference-between-singleton-pattern-vs-static-class-java.html#axzz7vkYkDfOH

@@ -7,8 +7,8 @@ tags     :
 
 ## 스터디 주제 준비
 
-- [[functional-interface]]
 - [[default-method]]
+- [[functional-interface]]
 
 ## 면접
 - [[bepohuhe-study-question]]

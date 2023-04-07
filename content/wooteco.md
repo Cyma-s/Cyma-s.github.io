@@ -6,10 +6,12 @@ tags     :
 - 우테코
 ---
 ## 온보딩
+
 * [[wooteco-OT|우테코-OT]]
 * [[onboarding-week1|온보딩 1주차]]
 
 ## 레벨1
+
 * [[level1-week2|레벨1 2주차]]
 * [[level1-week3|레벨1 3주차]]
 * [[level1-week4|레벨1 4주차]]
@@ -17,6 +19,7 @@ tags     :
 * [[level1-week6|레벨1 6주차]]
 
 ### 레벨1 미션들
+
 * [자동차 경주](https://github.com/Cyma-s/java-racingcar)
 * [사다리 게임](https://github.com/Cyma-s/java-ladder)
 * [블랙잭](https://github.com/Cyma-s/java-blackjack)
@@ -25,15 +28,16 @@ tags     :
   * [[level1-chess|체스 미션 기록]]
 
 ### 레벨1 학습로그
+
 * [[default-method]]
 * [[singleton-vs-static]]
 * [[functional-interface]]
 
 ### 레벨1에서 한 것들
+
 - [[why-return-type-of-add-function-is-boolean]]
 - [[level1-level-log|레벨1 레벨인터뷰]]
 - [[bepohuhe-study|베포후헤 스터디]]
-- 
 
 ## 레벨2
 
