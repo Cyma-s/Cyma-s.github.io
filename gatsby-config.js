@@ -5,7 +5,7 @@ const siteMetadata = {
   shortName: "Vero Wiki",
   description:
     "개인 위키입니다.",
-  imageUrl: "/graph-visualisation.jpg",
+  imageUrl: "/door.jpg",
   siteUrl: "https://cyma-s.github.io/",
 };
 module.exports = {
