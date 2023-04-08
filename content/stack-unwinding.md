@@ -1,5 +1,5 @@
 ---
-title   : 스택 풀기 (Stack Unwiding)
+title   : 스택 풀기 (Stack Unwinding)
 date    : 2023-04-07 10:11:28 +0900
 updated : 2023-04-07 10:12:05 +0900
 tags     : 
@@ -55,5 +55,5 @@ Exception in thread "main" java.lang.IllegalArgumentException: Unchecked excepti
 
 ## 참고 자료
 
-- [https://luckygg.tistory.com/372]
-- [http://underpop.online.fr/j/java/help/stack-unwinding-exception-handling.html.gz]
+- [참고자료](https://luckygg.tistory.com/372)
+- [참고자료2](http://underpop.online.fr/j/java/help/stack-unwinding-exception-handling.html.gz)

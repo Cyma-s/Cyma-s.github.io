@@ -16,4 +16,4 @@ tags     :
 - [[stack-unwinding|스택 풀기]]
 
 ## 참고 자료
-- [https://stackoverflow.com/questions/3779285/exception-thrown-in-catch-and-finally-clause]
+- [stack-overflow-참고자료](https://stackoverflow.com/questions/3779285/exception-thrown-in-catch-and-finally-clause)
