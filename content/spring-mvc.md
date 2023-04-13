@@ -26,7 +26,7 @@ HTTP 메서드 별로 `@RequestMapping` 의 변형은 다음과 같다.
 -   `@DeleteMapping`
 -   `@PatchMapping`
 
-```
+```java
 @RestController
 @RequestMappping("/customers")
 class CustomerController {
@@ -61,7 +61,7 @@ class CustomerController {
 
 Request Header와 Controller Method가 생성하는 콘텐츠 유형 목록을 기반으로 Request Mapping의 범위를 좁힐 수 있다.
 
-```
+```java
 @GetMapping(path = "/pages/{id}", produces = "application/json")
 ```
 
@@ -81,7 +81,7 @@ class level에서 `produces` 을 사용하면 class level에서 `produces` 가 �
 
 Request Header와 Controller Method가 생성하는 콘텐츠 유형 목록을 기반으로 Request Mapping의 범위를 좁힐 수 있다.
 
-```
+```java
 @PostMapping(path = "/page", consumes = "application/json")
 ```
 
@@ -102,7 +102,7 @@ class level에서 `consumes` 을 사용하면 class level에서 `consumes` 가 �
 Request Parameter 조건에 따라 Request Mapping의 범위를 좁힐 수 있다.
 Request Parameter가 존재하는지, 아닌지, 특정 값을 갖는지 테스트할 수 있다.
 
-```
+```java
 @GetMapping(path = "/pages/{pageId}", params = "myParam=myValue")
 ```
 
@@ -123,7 +123,7 @@ Content-Type, Accept를 체크할 수도 있지만, consumes나 produces를 사�
 
 기본적으로는 `@RequestParam` 을 사용하는 메서드의 매개변수가 필수이지만, `required` 를 `false` 로 선언하면 메서드 매개변수가 선택 사항이라는 것을 지정할 수 있다.
 
-```
+```java
 @GetMapping
 public String setupForm(@RequestParam("petId") int petId, Model model) {
 	// ...
@@ -134,9 +134,9 @@ Parameter 타입이 String이 아닌 경우에는 타입 변환이 자동으로 
 
 - 참고 자료: [공식문서](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestparam)
 
-#### `@RequestBody`
+#### `@RequestBody` 
 
-```
+```java
 @PostMapping("/accounts") 
 public void handle(@RequestBody Account account) { // ... }
 ```
@@ -147,22 +147,53 @@ public void handle(@RequestBody Account account) { // ... }
 
 ### Return Values
 
-- 좀 더 추가합시다...
+### `@ResponseBody`
+
+자바 객체를 HTTP Request body로 전송할 수 있다.
+class level을 지원한다. class level에서 사용하면 모든 controller method에서 사용할 수 있다.
+
+```java
+@GetMapping("/account/{id}")
+@ResponseBody
+public Actor handle() {
+	// ...
+}
+```
+
+`@ResponseBody` 어노테이션이 적용된 메서드는 `HttpMessageConverter` 를 사용해서 변환을 처리한다.
+
 - 참고 자료: [공식문서](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-return-types)
+
+### `ResponseEntity<B>`
+
+`@ResponseBody` 와 비슷하지만 HttpStatus와 HttpHeaders, HttpBody가 있다.
+
+```java
+@GetMapping("/something")
+public ResponseEntity<String> handle() {
+	String body = ... ;
+	String etag = ... ;
+	return ResponseEntity.ok().eTag(etag).body(body);
+}
+```
+
+`ResponseEntity` 가 제네릭 타입
 
 ## Exception
 
 `@ExceptionHandler` 로 Controller 메서드의 예외를 처리하는 메서드를 가질 수 있다.
 
-```
+```java
 @ExceptionHandler 
 public ResponseEntity<String> handle(IOException ex) { // ... }
 ```
 
 일치시킬 예외 유형을 좁힐 수도 있다.
 
-```
-@ExceptionHandler({FileSystemException.class, RemoteException.class}) public ResponseEntity<String> handle(IOException ex) { // ... }
+```java
+@ExceptionHandler({FileSystemException.class, RemoteException.class}) public ResponseEntity<String> handle(IOException ex) { 
+	// ...
+}
 ```
 
 `IOException` 중에 `FileSystemException`, `RemoteExceptoin` 을 처리한다.
