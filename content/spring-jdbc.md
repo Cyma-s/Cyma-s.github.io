@@ -100,6 +100,8 @@ this.jdbcTemplate.update(
         Long.valueOf(actorId));
 ```
 
+- 참고 자료: [공식 문서](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc-JdbcTemplate-examples-update)
+
 ### Named Parameter
 
 NamedParameterJdbcTemplate 클래스는 `?` 인수만 사용하여 JDBC 문을 프로그래밍하는 것과 달리 이름이 있는 매개변수를 사용하여 JDBC 문을 프로그래밍할 수 있게 한다.
@@ -211,6 +213,8 @@ public int countOfActors(Actor exampleActor) {
 
 `NamedParameterJdbcTemplate` 은 JdbcTemplate을 래핑한 클래스이다.
 래핑된 JdbcTemplate 에 접근하기 위해서는 `getJdbcOperations()` 를 사용하여 JdbcTemplate 에 접근할 수 있다.
+
+-  참고 자료: [공식문서](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc-NamedParameterJdbcTemplate)
 
 ## SimpleJdbcInsert
 
@@ -350,3 +354,5 @@ public class GameRepository {
 time이 default 값을 가지고 있기 때문에 사용하는 column을 넣어주지 않으면 null이 들어가게 된다.
 time은 not null 이므로, `usingColumns` 를 사용하지 않으면 예외가 발생한다.
 default 값을 갖는 column의 경우에는 `usingColumns` 를 사용하면 필요한 column만 지정할 수 있어 좋다.
+
+- 참고 자료: [공식문서](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc-simple-jdbc-insert-1)

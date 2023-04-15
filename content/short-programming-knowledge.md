@@ -9,6 +9,13 @@ tags     :
 ## Java
 
 * [[why-return-type-of-add-function-is-boolean|왜 ArrayList의 add는 boolean을 리턴할까?]]
-- [[state-pattern]]
 - [[simultaneously-throw-exception|예외가 try, finally에서 동시에 발생하면 어떻게 될까?]]
 - [[stack-unwinding|스택 풀기]]
+
+## SQL
+
+- [[text-vs-varchar|TEXT와 VARCHAR의 차이점이 무엇일까?]]
+
+## 디자인 패턴
+
+- [[state-pattern|상태 패턴이란?]]

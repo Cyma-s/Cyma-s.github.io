@@ -11,4 +11,4 @@ tags     :
 - [[functional-interface]]
 
 ## 면접
-- [[bepohuhe-study-question]]
+- [[bepohuhemal-study-question]]
