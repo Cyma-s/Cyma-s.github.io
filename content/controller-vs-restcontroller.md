@@ -58,6 +58,13 @@ public class SimpleBookRestController {
 `@RestController` 어노테이션이 붙은 클래스들은 `@ResponseBody` 가 필요하지 않다.
 모든 Controller의 Request Handling method는 리턴되는 객체들을 `HttpResponse` 로 자동적으로 직렬화한다.
 
+## 두 어노테이션의 차이점
+
+`@Controller` 는 reponse가 주로 HTML 페이지인 UI 기반의 애플리케이션에서 사용된다. 
+메서드가 view name을 리턴하면 view resolver 가 해당하는 view를 찾아 응답한다.
+
+`@RestController` 는 데이터를 HTML로 변경하는 server-side rendering을 수행하지 않고, HTTP response를 JSON 또는 XML로 전달한다.
+
 ## 참고 자료
 
 - https://www.baeldung.com/spring-controller-vs-restcontroller
