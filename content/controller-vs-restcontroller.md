@@ -1,7 +1,7 @@
 ---
-title   : `@Controller` vs `@RestController`
+title   : @Controller vs @RestController
 date    : 2023-04-15 11:57:08 +0900
-updated : 2023-04-15 11:57:47 +0900
+updated : 2023-04-15 12:32:41 +0900
 tags     : 
 - 개발
 - Spring
