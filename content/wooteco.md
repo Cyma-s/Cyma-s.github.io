@@ -37,7 +37,7 @@ tags     :
 
 - [[why-return-type-of-add-function-is-boolean]]
 - [[level1-level-log|레벨1 레벨인터뷰]]
-- [[bepohuhe-study|베포후헤 스터디]]
+- [[vepohuhyemal-study|베포후헤 스터디]]
 
 ## 레벨2
 
