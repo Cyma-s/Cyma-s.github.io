@@ -1,7 +1,7 @@
 ---
 title   : 레벨2 1주차
 date    : 2023-04-11 10:58:56 +0900
-updated : 2023-04-11 14:16:00 +0900
+updated : 2023-04-18 10:49:35 +0900
 tags     : 
 - 우테코
 - 레벨2
@@ -42,5 +42,64 @@ connection을 열고 닫는 과정이 필요 없다.
 나는 간단하게 쿼리만 작성하면 되어서, 도메인 로직에만 집중할 수 있다.
 
 `JdbcTemplate`, `NamedParameterJdbcTemplate`, `SimpleJdbcInsert` 를 사용하는 기준을 잡으면 좋겠다. DB에 조회에 그치지 말고, 해당 template 들의 차이점을 알고 썼으면 좋겠다.
+
+# 4/18
+
+## 의존성
+
+```mermaid
+flowchart LR
+	class1 -- 사용 생성 호출 --> class2
+```
+
+### 객체 내부에서 객체를 생성하고, 사용한다면
+
+협력의 문맥이 고정된다.
+사용하는 객체가 변경되었을 때 변경이 필요하게 된다. 
+
+```mermaid
+flowchart LR
+	클래스 -- 사용 --> 인터페이스
+	클래스 -- 호출 --> 팩토리
+	팩토리 -- 생성 --> 구현클래스
+	인터페이스 -- 구현 --> 구현클래스
+```
+
+```mermaid
+flowchart LR
+	조립기 -- 생성 --> 구현클래스
+	조립기 -- 의존성 삽입 --> 클래스
+	클래스 -- 사용 --> 인터페이스
+	구현클래스 -- 구현 --> 인터페이스
+```
+다음과 같은 코드가 된다.
+
+```java
+public RacingCarService(PlayerResultDao playerResultDao) {
+	this.playResultDao = playerResultDao;
+}
+```
+
+이런 역할을 Spring이 해준다.
+
+Spring IoC Container는 의존성을 주입하는 방식으로 객체를 생성, 관리한다. 객체 간의 연결 관계, 의존성을 관리해준다.
+
+Spring이 모든 객체를 관리하는 것은 아니다. 개발자가 설정한 특정 객체들만 관리한다.
+
+## 설정의 방식
+
+1. XML
+2. Annotation-based configuration
+3. Java-based configuration
+
+`@Service`, `@Component`, `@Repository` ... 등등
+Service, Repository가 아니지만 Bean으로 설정하기 위해 `@Component` 를 사용할 수 있다.
+
+`@Service`, `@Controller`, `@Repository` 는 모두 `@Component` 를 포함한다. 
+위의 어노테이션은 해당 클래스를 Spring bean으로 만들라는 뜻이다.
+
+`@ComponentScan` 어노테이션을 통해 등록할 빈을 스캔할 classpath를 지정한다.
+`@SpringBootApplication` 의 내부에 `@ComponentScan` 이라는 어노테이션이 존재해서, 자동으로 bean을 생성할 수 있다.
+
 
 
