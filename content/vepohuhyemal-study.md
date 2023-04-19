@@ -9,6 +9,7 @@ tags     :
 
 - [[default-method]]
 - [[functional-interface]]
+- [[grasp]]
 
 ## 면접
 - [[bepohuhemal-study-question]]
