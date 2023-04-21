@@ -13,6 +13,7 @@ tags     :
 - 어떤 페이지에서는 왜 HTTP 버전이 다른 리소스가 존재할까?
 
 ## Spring
+- `@Transactional` 어노테이션
 
 ## SQL
 - outer join vs inner join
