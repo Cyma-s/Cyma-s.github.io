@@ -1,5 +1,5 @@
 ---
-title   : @Mock vs @MockBean
+title   : Mock vs MockBean
 date    : 2023-04-24 19:28:47 +0900
 updated : 2023-04-24 19:29:11 +0900
 tags     : 
