@@ -12,4 +12,4 @@ tags     :
 - [[grasp]]
 
 ## 면접
-- [[bepohuhemal-study-question]]
+- [[vepohuhemal-study-question]]

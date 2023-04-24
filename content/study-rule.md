@@ -38,7 +38,7 @@ tags     :
 
 ## 스터디 글 모음
 
-- [[bepohuhemal-study-question|베포후헤말 스터디 질문]]
+- [[vepohuhemal-study-question|베포후헤말 스터디 질문]]
 - [[default-method|디폴트 메서드란?]]
 - [[functional-interface|함수형 인터페이스는 무엇이고, 람다와 어떤 관계가 있나요?]]
 - [[grasp|GRASP란 무엇인가요?]]

@@ -58,6 +58,8 @@ class RacingCarControllerTest
 `excludeAutoConfiguration`: 해당 테스트에 적용되는 자동 설정들에서 제외할 빈을 등록할 수 있다.   
 `excludeFilters` : 추가되는 bean들 중에 임의로 제외하고 싶은 필터를 등록한다.
 
+// 필터와 excludeFilters 
+
 ```java
 @WebMvcTest(RacingCarController.class)   
 class RacingCarControllerTest {  
