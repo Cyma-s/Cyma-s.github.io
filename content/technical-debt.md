@@ -20,6 +20,7 @@ tags     :
 - Servlet
 - Dispatcher Servlet
 - `@Validated` vs `@Valid`
+- objectmapper의 역직렬화 과정 -> dto 기본 생성자가 private이 가능한 이유
 
 ## SQL
 - outer join vs inner join

@@ -15,11 +15,11 @@ WebMvcTest 는 Spring MVC controller를 테스트하기 위해 사용되는 Spri
 이 어노테이션은 전체 auto-configuration을 비활성화하고 대신 MVC 테스트와 관련된 구성만 적용한다.
 즉, Application Context 를 완전하게 Start 하지 않고 Web Layer를 테스트 하고 싶을 때 `@WebMvcTest` 를 사용하는 것을 고려해볼 수 있다.
 
-단위 테스트를 위해 Spring MVC 인프라를 자동으로 구성하지만, 스캔되는 Bean을 `@Controller`, `@ControllerAdvice`, `@RestController` `@JsonComponent`, `Filter`, `WebMvcConfigurer`, `HandlerMethodArgumentResolver` 로 제한한다.    
-만약 Service나 Repository의 Dependency가 필요한 경우에는 `@MockBean` 으로 주입 받아 테스트를 진행한다.
+단위 테스트를 위해 Spring MVC 인프라를 자동으로 구성하지만, 스캔되는 Bean을 `@Controller`, `@ControllerAdvice`, `@RestController`, `@JsonComponent`, `Filter`, `WebMvcConfigurer`, `HandlerMethodArgumentResolver` 로 제한한다.    
+만약 Service나 Repository의 Dependency가 필요한 경우에는 `@MockBean` 으로 주입 받아 테스트를 진행한다.    
 
 `@WebMvcTest`를 사용할 때, 일반 `@Component`, `@Service`, `@Repository` bean은 스캔되지 않는다.   
-따라서 `@MockBean` 또는 `@SpyBean` 을 사용하여 가짜 객체를 bean으로 등록해주어야 한다.
+따라서 `@MockBean` 또는 `@SpyBean` 을 사용하여 가짜 객체를 bean으로 등록해주어야 한다.    
 
 ## @SpringBootTest
 
@@ -56,9 +56,7 @@ class RacingCarControllerTest
 ```
 
 `excludeAutoConfiguration`: 해당 테스트에 적용되는 자동 설정들에서 제외할 빈을 등록할 수 있다.   
-`excludeFilters` : 추가되는 bean들 중에 임의로 제외하고 싶은 필터를 등록한다.
-
-// 필터와 excludeFilters 
+`excludeFilters` : 추가되는 bean들 중에 제외하고 싶은 Bean의 필터를 등록한다. 즉, `classes`에 들어갈 Bean을 제외하기 위한 필터를 정의하는 것이다. `ASSIANABLE_TYPE` 속성은 제외할 기준을 클래스로 지정한다.    
 
 ```java
 @WebMvcTest(RacingCarController.class)   
