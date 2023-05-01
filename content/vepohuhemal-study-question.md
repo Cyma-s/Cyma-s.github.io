@@ -245,24 +245,24 @@ user configuration, condition evaluation 등 다양한 요소의 영향을 받�
 
 - `AutoConfiguration` 을 사용해보신적 있으신가요?
 - `AutoConfiguration` 이 무엇인가요?
-- **`WebMvcTest` 가 꼭 필요하다고 생각하시나요?** : 포이
-- **기본 에러 페이지에서 url만 알면 마음대로 error 페이지에 접근할 수 있다는 단점이 있다고 하셨는데, 왜 이게 단점이라고 생각하시나요?** : 포이
+- `WebMvcTest` 가 꼭 필요하다고 생각하시나요? : 포이
+- 기본 에러 페이지에서 url만 알면 마음대로 error 페이지에 접근할 수 있다는 단점이 있다고 하셨는데, 왜 이게 단점이라고 생각하시나요? : 포이
 - 커스텀 예외를 사용하시나요? 사용하신다면 왜 사용하시는지 궁금합니다.
 - WebMvcTest의 `excludeFilters` 에 대해 설명해주세요.
 - `@Order` 어노테이션을 사용하는 것에 대해 어떻게 생각하시나요?
-- **`@ControllerAdvice` 에서 json을 리턴하는 것에 대해 어떻게 생각하시나요?** : 포이
-- **`@ControllerAdvice` 에서 커스텀 예외를 지정할 수도 있고, validation 어노테이션의 message를 사용하는 방법도 있는데 어떤 방법이 더 낫다고 생각하시나요?** : 헤나
-- **`HandlerAdapter` 의 매개변수가 왜 `HandlerMethod`가 아니라 `Object` 일까요?** -> 컨트롤러로 요청을 넘겨주기 전에 처리해야 하는 인터셉터 등을 포함하기 위해서 : 헤나
-- **`DispatcherServlet`이 맡는 공통 작업은 무엇인가요?** : 헤나
+- `@ControllerAdvice` 에서 json을 리턴하는 것에 대해 어떻게 생각하시나요? : 포이
+- `@ControllerAdvice` 에서 커스텀 예외를 지정할 수도 있고, validation 어노테이션의 message를 사용하는 방법도 있는데 어떤 방법이 더 낫다고 생각하시나요? : 헤나
+- `HandlerAdapter` 의 매개변수가 왜 `HandlerMethod`가 아니라 `Object` 일까요? -> 컨트롤러로 요청을 넘겨주기 전에 처리해야 하는 인터셉터 등을 포함하기 위해서 : 헤나
+- `DispatcherServlet`이 맡는 공통 작업은 무엇인가요? : 헤나
 - `WebMvcTest` 가 `SpringBootTest` 와 비교했을 때 어떤 부분이 다른가요?
-- **통합 테스트가 어려운 상황에는 어떤 것이 있을까요?** : 헤나
-- **controller 테스트가 필요하다고 생각하시나요?** : 말랑
-- **controller 테스트에서 체크해야 하는 건 뭐가 있을까요?** : 말랑
-- **qualifier 랑 primary 어노테이션의 우선순위가 뭘까요?** : 말랑
-- **DispatcherServlet이 있을 때와 없을 때의 차이에 대해 말해주세요.** : 말랑
-- **DispatcherServlet에서 어떤 과정을 거쳐서 적절하게 요청을 처리하는지 설명해주세요.** : 포이
-- **`HandlerExecutionChain` 을 직접 실행하지 않고, `HandlerAdapter` 를 통해 실행하는 이유가 무엇일까요?** -> 컨트롤러는 다양하게 구현되어 있으므로, 구현 방식에 상관 없이 요청을 위임하도록 어댑터 패턴을 사용한다. : 헤나
-- **DispatcherServlet을 한 문장으로 설명해주세요.** : 헤나
+- 통합 테스트가 어려운 상황에는 어떤 것이 있을까요? : 헤나
+- controller 테스트가 필요하다고 생각하시나요? : 말랑
+- controller 테스트에서 체크해야 하는 건 뭐가 있을까요? : 말랑
+- qualifier 랑 primary 어노테이션의 우선순위가 뭘까요? : 말랑
+- DispatcherServlet이 있을 때와 없을 때의 차이에 대해 말해주세요. : 말랑
+- DispatcherServlet에서 어떤 과정을 거쳐서 적절하게 요청을 처리하는지 설명해주세요. : 포이
+- `HandlerExecutionChain` 을 직접 실행하지 않고, `HandlerAdapter` 를 통해 실행하는 이유가 무엇일까요? -> 컨트롤러는 다양하게 구현되어 있으므로, 구현 방식에 상관 없이 요청을 위임하도록 어댑터 패턴을 사용한다. : 헤나
+- DispatcherServlet을 한 문장으로 설명해주세요. : 헤나
 
 ## 알려주고 싶은 내용
 
