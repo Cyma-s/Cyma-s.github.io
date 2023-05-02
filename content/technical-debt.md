@@ -14,6 +14,9 @@ tags     :
 - 소켓
 - 쿠키와 세션
 
+## 서버
+- 무상태성이란?
+
 ## Spring
 - `@Transactional` 어노테이션
 - Filter
