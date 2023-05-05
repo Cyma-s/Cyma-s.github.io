@@ -17,6 +17,7 @@
     "@giscus/react": "^2.2.6",
     "@theowenyoung/gatsby-transformer-references": "^1.10.5",
     "gatsby": "4.6.0",
+    "gatsby-plugin-cname": "^1.0.0",
     "gatsby-plugin-feed": "^4.25.0",
     "gatsby-plugin-google-gtag": "^4.25.0",
     "gatsby-plugin-manifest": "^4.11.0",

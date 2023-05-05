@@ -6,7 +6,7 @@ const siteMetadata = {
   description:
     "개인 위키입니다.",
   imageUrl: "/door.jpg",
-  siteUrl: "https://cyma-s.github.io/",
+  siteUrl: "https://vero.wiki/",
 };
 module.exports = {
   siteMetadata,
@@ -15,6 +15,9 @@ module.exports = {
     DEV_SSR: true,
   },
   plugins: [
+	{
+	  resolve: `gatsby-plugin-cname`
+	},
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
