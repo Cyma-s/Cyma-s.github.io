@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://cyma-s.github.io//sitemap/sitemap-index.xml
-Host: https://cyma-s.github.io
+Sitemap: https://vero.wiki//sitemap/sitemap-index.xml
+Host: https://vero.wiki
