@@ -10,6 +10,8 @@ tags     :
 - [[default-method]]
 - [[functional-interface]]
 - [[grasp]]
+- [[webmvctest]]
+- [[ioc-container]]
 
 ## 면접
 - [[vepohuhemal-study-question]]
