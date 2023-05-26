@@ -23,7 +23,7 @@ tags     :
 5. `nohup java -jar jwp-shopping-order.jar &`
 6. 배포 스크립트 실행
 
-<deploy.sh>
+`<deploy.sh>`
 ```shell
 #!/bin/sh
 
@@ -50,7 +50,7 @@ nohup java -jar jwp-shopping-order.jar &
 
 ### 유저 받아서 변경하기
 
-<deploy_custom.sh>
+`<deploy_custom.sh>`
 ```shell
 #!/bin/sh
 
@@ -76,7 +76,7 @@ nohup java -jar jwp-shopping-order.jar &
 
 - 기존에 디렉토리가 존재하면 pull, 없으면 clone
 
-<deploy_pull.sh>
+`<deploy_pull.sh>`
 ```shell
 #!/bin/sh
 
@@ -109,8 +109,6 @@ nohup java -jar jwp-shopping-order.jar &
 - **도메인 사서 설정 -> cloudfare** / 서브 도메인 사용
 - 쌩으로 ssl 설정하기
 
-80 포트를 쓸 때는 관련 코드에 nohup에 sudo 써야 한다.
-
 # 2단계
 
 ## 필수 구현 사항
@@ -120,12 +118,8 @@ nohup java -jar jwp-shopping-order.jar &
 	- order_product table : id, order_id, product_id, product_quantity
 - 상품 주문하기 API
 	- url: POST /orders
-	- 아마 장바구니에서만 호출되지 않을까
 	- request: Credential, `List<cartId>`, totalPrice(포인트 적용 전 상품 금액), point(적용한 포인트)
-	- reponse: created(order_id)
-	- 예외: point가 적을 경우, 존재하지 않는 cartId, 
 - 주문 상세 정보 API -> O
-	- 주문 번호: auto-increment된 id
 - 사용자 별 주문 목록 확인 -> O
 - 특정 주문의 상세 정보 확인 -> O
 
@@ -142,22 +136,23 @@ nohup java -jar jwp-shopping-order.jar &
 	- 최종 결제 금액 -> 사용자의 포인트 계산 (백엔드에서 처리)
 
 ### 프론트에게 질문
-- 한 번에 정보를 다 주는 것이 나은가 vs 각각 쿼리를 날리도록 하는 것이 나은가
-	- /orders
-	- /orders/{orderId}
-	- orders 페이지를 안 거치고 갈 가능성 있음.
+- `/orders` 요청 한 번에 정보를 다 주는데 굳이 상세 정보 API가 필요할까? (클라이언트 단에서 캐싱하면 되는데)
+	- `/orders` (모든 주문 정보)
+	- `/orders/{orderId}` (주문 상세)
+	- orders 페이지를 안 거치고 갈 가능성 있으므로 (주문 상세 페이지로 바로 들어가게 되는 경우도 존재할 것이다.) 따라서 필요하다.
+- 모든 정보를 다 주는 것 vs 현재 필요한 정보만 주는 것
+	- 어차피 필요한 것은 프론트에서 선별하기 때문에 다 내려줘도 괜찮다 by 도밥
+	- 뷰는 변화에 민감하므로 계속해서 변경될 수 있지만, 뷰의 변화에 따라 API가 변화하는 것은 바람직하지 않다. url에 맞는 정보를 최대한 제공해서 뷰가 변화할 때마다 필요한 정보를 선별하는 것이 낫다. by 포이
 
 ### 백엔드에서 구현해야 하는 사항
 - 기존 애플리케이션에 포인트를 추가한다.
-	- member가 가지고 있기
 - 계산 시에 포인트를 차감해서 할인을 받도록 한다.
 - 포인트는 현금과 1:1 매칭
 - 포인트는 어떻게 제공되나? -> 최종 결제 금액에서 10% 포인트 적립
 
 ###  기존 코드 수정 필요
-- 검증 로직 추가
+- 도메인 검증 로직 추가
 - delete cascade 제외했으므로 product 삭제 시 cart_item도 삭제하는 로직 필요
-- DB 주소 application.properties
-	- 서브 모듈: 
-	- application external properties
-	- clone 받아올 때 서버에 존재하는 application properties를 프로젝트 안에 포함시킨다.
+- DB 주소 `application.properties`
+	- 서브 모듈은 기각 -> 각각의 데이터베이스가 다르므로 어차피 DB 링크도 달라지게 된다. 그러므로 굳이 하나의 레포에서 관리할 이유가 없다.
+	- application external properties를 사용하자.
