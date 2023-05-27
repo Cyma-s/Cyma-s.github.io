@@ -65,20 +65,20 @@ cd build/libs
 sudo nohup java -jar jwp-shopping-order.jar &
 ```
 
-## https 설정하기
+### https 설정하기
 - **도메인 사서 설정 -> cloudfare** 
 	- 서브 도메인 사용
 
-# 2단계
+## 2단계
 
-## 필수 구현 사항
+### 필수 구현 사항
 
 - 추가될 테이블
 	- ![[table_schema.png]]
 - 상품 주문하기 API
-- 주문 상세 정보 API -> O
-- 사용자 별 주문 목록 확인 -> O
-- 특정 주문의 상세 정보 확인 -> O
+- 주문 상세 정보 API
+- 사용자 별 주문 목록 확인
+- 특정 주문의 상세 정보 확인
 
 ## 선택 구현 사항
 
