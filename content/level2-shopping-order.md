@@ -3,12 +3,14 @@ title   : 레벨2 장바구니 협업 with 다즐 헙크
 date    : 2023-05-23 14:13:31 +0900
 updated : 2023-05-23 14:13:41 +0900
 tags     : 
+- 우테코
+- 레벨2
 ---
 
 ## 페어 규칙
 - 시간은 재지 않고 진행한다.
 - 궁금한 점이나 의견은 언제든지 자유롭게 말한다. 분위기에 끌려가지 말기. 
-- 둘 다 좋다고 하지 않기.  -> 진짜 둘 다 좋은 경우에는 각각 좋은 이유를 말할 것.
+- 둘 다 좋다고 하지 않기 -> 진짜 둘 다 좋은 경우에는 각각 좋은 이유를 말할 것.
 	- 마음 속에 뭔가 정답이 있는 경우에는 그냥 말하기.
 - 경청 잘하기.
 
@@ -81,7 +83,7 @@ nohup java -jar jwp-shopping-order.jar &
 #!/bin/sh
 
 # kill process
-fuser -k 8080/tcp
+sudo fuser -k 80/tcp
 
 # clone git main branch
 if [ -d ~/jwp-shopping-order ]
@@ -98,27 +100,22 @@ fi
 
 # execute
 cd build/libs
-nohup java -jar jwp-shopping-order.jar &
+sudo nohup java -jar jwp-shopping-order.jar &
 ```
 
-## docker 배포
-
-## github action
-
-## https 설정하기 (완료)
+## https 설정하기
 - **도메인 사서 설정 -> cloudfare** / 서브 도메인 사용
-- 쌩으로 ssl 설정하기
 
 # 2단계
 
 ## 필수 구현 사항
 
 - 추가될 테이블
-	- order table : id, member_id, (used_point), total_price, created_at
-	- order_product table : id, order_id, product_id, product_quantity
+	- `order table` : `id, member_id, (used_point), total_price, created_at`
+	- `order_product table` : `id, order_id, product_id, product_quantity`
 - 상품 주문하기 API
-	- url: POST /orders
-	- request: Credential, `List<cartId>`, totalPrice(포인트 적용 전 상품 금액), point(적용한 포인트)
+	- url: POST `/orders`
+	- request: `Credential, List<cartId>, totalPrice(포인트 적용 전 상품 금액), point(적용한 포인트)`
 - 주문 상세 정보 API -> O
 - 사용자 별 주문 목록 확인 -> O
 - 특정 주문의 상세 정보 확인 -> O
