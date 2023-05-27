@@ -2,7 +2,7 @@
 title   : 레벨2 장바구니 협업 with 다즐 헙크
 date    : 2023-05-23 14:13:31 +0900
 updated : 2023-05-23 14:13:41 +0900
-tags     : 
+tags    : 
 - 우테코
 - 레벨2
 ---
@@ -14,18 +14,56 @@ tags     :
 	- 마음 속에 뭔가 정답이 있는 경우에는 그냥 말하기.
 - 경청 잘하기.
 
-## 0단계
-- 뼈대 코드 사용하기로 결정
+### 유저 받아서 변경하기
 
-### 프로세스
-1. 프로세스 종료
-2. 기존 코드 삭제
-3. git에서 clone 받기
-4. 새롭게 빌드 : `./gradlew build`
-5. `nohup java -jar jwp-shopping-order.jar &`
-6. 배포 스크립트 실행
-- process 있을 때 없을 때 검증
-- 폴더 있을 때 없을 때 검증
+```shell
+#!/bin/sh
+
+# kill process
+fuser -k 8080/tcp
+
+# remove original code
+rm -rf jwp-shopping-order
+
+# clone git main branch
+git clone https://github.com/$1/jwp-shopping-order.git
+
+# build
+cd jwp-shopping-order
+./gradlew bootJar
+
+# execute
+cd build/libs
+nohup java -jar jwp-shopping-order.jar &
+```
+
+### pull 로 바꾸기
+
+- 기존에 디렉토리가 존재하면 pull, 없으면 clone
+
+```shell
+#!/bin/sh
+
+# kill process
+sudo fuser -k 80/tcp
+
+# clone git main branch
+if [ -d ~/jwp-shopping-order ]
+then
+	cd jwp-shopping-order
+	git pull origin $2
+else
+	git clone https://github.com/$1/jwp-shopping-order.git
+	cd jwp-shopping-order
+fi
+
+# build
+./gradlew bootJar
+
+# execute
+cd build/libs
+sudo nohup java -jar jwp-shopping-order.jar &
+```
 
 ## https 설정하기
 - **도메인 사서 설정 -> cloudfare** 
@@ -36,11 +74,8 @@ tags     :
 ## 필수 구현 사항
 
 - 추가될 테이블
-	- `order table` : `id, member_id, (used_point), total_price, created_at`
-	- `order_product table` : `id, order_id, product_id, product_quantity`
+	- ![[table_schema.png]]
 - 상품 주문하기 API
-	- url: POST `/orders`
-	- request: `Credential, List<cartId>, totalPrice(포인트 적용 전 상품 금액), point(적용한 포인트)`
 - 주문 상세 정보 API -> O
 - 사용자 별 주문 목록 확인 -> O
 - 특정 주문의 상세 정보 확인 -> O
