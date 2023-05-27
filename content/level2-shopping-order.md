@@ -24,84 +24,12 @@ tags     :
 4. 새롭게 빌드 : `./gradlew build`
 5. `nohup java -jar jwp-shopping-order.jar &`
 6. 배포 스크립트 실행
-
-```shell
-#!/bin/sh
-
-# kill process
-fuser -k 8080/tcp
-
-# remove original code
-rm -rf jwp-shopping-order
-
-# clone git main branch
-git clone https://github.com/Cyma-s/jwp-shopping-order.git
-
-# build
-cd jwp-shopping-order
-./gradlew bootJar
-
-# execute
-cd build/libs
-nohup java -jar jwp-shopping-order.jar &
-```
-
 - process 있을 때 없을 때 검증
 - 폴더 있을 때 없을 때 검증
 
-### 유저 받아서 변경하기
-
-```shell
-#!/bin/sh
-
-# kill process
-fuser -k 8080/tcp
-
-# remove original code
-rm -rf jwp-shopping-order
-
-# clone git main branch
-git clone https://github.com/$1/jwp-shopping-order.git
-
-# build
-cd jwp-shopping-order
-./gradlew bootJar
-
-# execute
-cd build/libs
-nohup java -jar jwp-shopping-order.jar &
-```
-
-### pull 로 바꾸기
-
-- 기존에 디렉토리가 존재하면 pull, 없으면 clone
-
-```shell
-#!/bin/sh
-
-# kill process
-sudo fuser -k 80/tcp
-
-# clone git main branch
-if [ -d ~/jwp-shopping-order ]
-then
-	cd jwp-shopping-order
-	git pull origin $2
-else
-	git clone https://github.com/$1/jwp-shopping-order.git
-	cd jwp-shopping-order
-fi
-
-# build
-./gradlew bootJar
-
-# execute
-cd build/libs
-sudo nohup java -jar jwp-shopping-order.jar &
-```
-
 ## https 설정하기
-- **도메인 사서 설정 -> cloudfare** / 서브 도메인 사용
+- **도메인 사서 설정 -> cloudfare** 
+	- 서브 도메인 사용
 
 # 2단계
 
@@ -146,7 +74,7 @@ sudo nohup java -jar jwp-shopping-order.jar &
 
 ###  기존 코드 수정 필요
 - 도메인 검증 로직 추가
-- delete cascade 제외했으므로 product 삭제 시 cart_item도 삭제하는 로직 필요
+- `delete cascade` 제외했으므로 product 삭제 시 `cart_item`도 삭제하는 로직 필요
 - DB 주소 `application.properties`
 	- 서브 모듈은 기각 -> 각각의 데이터베이스가 다르므로 어차피 DB 링크도 달라지게 된다. 그러므로 굳이 하나의 레포에서 관리할 이유가 없다.
-	- application external properties를 사용하자.
+	- `application external properties`를 사용하자.
