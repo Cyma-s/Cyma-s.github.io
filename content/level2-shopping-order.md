@@ -111,5 +111,5 @@ sudo nohup java -jar jwp-shopping-order.jar &
 - 도메인 검증 로직 추가
 - `delete cascade` 제외했으므로 product 삭제 시 `cart_item`도 삭제하는 로직 필요
 - DB 주소 `application.properties`
-	- 서브 모듈은 기각 -> 각각의 데이터베이스가 다르므로 어차피 DB 링크도 달라지게 된다. 그러므로 굳이 하나의 레포에서 관리할 이유가 없다.
+	- 서브 모듈은 기각 -> 각각의 데이터베이스가 다르므로 `application.yml`에 들어가야 할 DB 링크도 달라지게 된다. 그렇다면 파일을 여러 개를 만들어야 하는데 (헙크, 나, 다즐 용으로) 그러면 굳이 하나의 레포에서 관리할 이유가 없다. 여러 개의 레포를 사용하는 것이 오히려 나을 수 있다. 근데 그런 경우에는 굳이 서브 모듈을 사용할 필요가 있을까?
 	- `application external properties`를 사용하자.
