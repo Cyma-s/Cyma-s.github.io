@@ -113,3 +113,29 @@ sudo nohup java -jar jwp-shopping-order.jar &
 - DB 주소 `application.properties`
 	- 서브 모듈은 기각 -> 각각의 데이터베이스가 다르므로 `application.yml`에 들어가야 할 DB 링크도 달라지게 된다. 그렇다면 파일을 여러 개를 만들어야 하는데 (헙크, 나, 다즐 용으로) 그러면 굳이 하나의 레포에서 관리할 이유가 없다. 여러 개의 레포를 사용하는 것이 오히려 나을 수 있다. 근데 그런 경우에는 굳이 서브 모듈을 사용할 필요가 있을까?
 	- `application external properties`를 사용하자.
+
+## 함께 자라기 🌱
+
+### url 길이 조정
+- image_url이 255는 너무 작은 것 같다. -> internet explorer의 url 최대 길이인 2048로 변경
+
+### 엔티티와 도메인은 분리되어야 하는가?
+- 최대한 분리하는 것이 좋다.
+
+### dao, repository, service, controller 테스트?
+- dao: `@JdbcTest`
+- repository: `@JdbcTest`
+- service: `@SpringBootTest`
+- controller: 안 함
+
+### DB를 믿을 것인가? (선택)
+- FK가 걸려 있음에도 findById를 수행해야 하는가? vs 굳이 할 필요 없다.
+	- 다즐: DB의 예외가 서비스 계층으로 올라오는 것이 좀 별로다.
+	- 헙크: 좀 믿자ㅋㅋ
+
+- equals -> id로 정의
+
+### 도메인 동등성?
+
+### 
+- 뭔가를 찾을 수 없으면 NOT_FOUND로 한다.

@@ -1,7 +1,7 @@
 ---
-title   : @Transactional
+title   : Transactional
 date    : 2023-05-29 19:38:14 +0900
-updated : 2023-05-29 19:38:24 +0900
+updated : 2023-05-30 12:51:21 +0900
 tags     : 
 - Spring
 ---
