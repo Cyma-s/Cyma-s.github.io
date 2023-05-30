@@ -137,5 +137,5 @@ sudo nohup java -jar jwp-shopping-order.jar &
 
 ### 도메인 동등성?
 
-### 
+## 통일하기
 - 뭔가를 찾을 수 없으면 NOT_FOUND로 한다.
