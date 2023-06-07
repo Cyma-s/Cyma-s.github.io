@@ -1,46 +1,13 @@
 ---
-title   : ApplicationContext 가볍게(?) 훑어보기
-date    : 2023-05-07 16:04:48 +0900
-updated : 2023-05-07 16:05:06 +0900
+title   : ApplicationContext 찍먹하기
+date    : 2023-06-06 16:24:15 +0900
+updated : 2023-06-06 16:24:41 +0900
 tags     : 
+- Spring
+- 개발
 - 스터디
 - 학습로그
-- Spring
 ---
-
-## IoC Container란?
-
-각각의 용어를 풀어보자.
-
-**IoC** 란 Inversion of Control 의 약자로서, 제어의 역전을 뜻한다. 의존성 주입이라고 하기도 한다.
-**컨테이너**는 객체의 생명주기를 관리하고, 생성된 인스턴스들에게 추가적인 기능을 제공한다.
-
-즉, IoC Container는 객체의 생성과 라이프사이클을 관리하고, 의존성을 클래스에 주입하기도 한다.
-
-주로 다음과 같은 기능을 제공한다.
-
-- IoC 컨테이너는 객체의 생성을 책임지고, 의존성을 관리한다.
-- POJO의 생성, 초기화, 서비스, 소멸에 대한 권한을 가진다.
-- 개발자들이 직접 POJO를 생성할 수 있지만 컨테이너에게 맡긴다.
-- 개발자는 비즈니스 로직에 집중할 수 있다.
-- 객체 생성 코드가 없으므로 TDD가 용이하다.
-
-Spring Framework의 IoC 컨테이너 구현은 org.springframework.beans, org.springframework.context 패키지의 기반이 된다.
-
-그 중에서도 `BeanFactory` 인터페이스는 모든 유형의 객체를 관리할 수 있는 고급 Configuration 메커니즘을 제공한다.
-`BeanFactory` 와 `ApplicationContext` 인터페이스는 Spring IoC 컨테이너를 가리킨다.
-
-Spring IoC 컨테이너가 관리하는 객체를 **빈(bean)** 이라고 하고, 이 빈(bean)들을 관리한다는 의미로 컨테이너를 **빈 팩토리(BeanFactory)** 라고 부른다.
-- 객체의 생성과 객체 사이의 런타임(run-time) 관계를 DI 관점에서 볼 때는 컨테이너를 **BeanFactory**라고 한다.
-- BeanFactory에 여러 가지 컨테이너 기능을 추가하여 **애플리케이션 컨텍스트(ApplicationContext)** 라고 부른다.
-
-### BeanFactory와 ApplicationContext
-
-- **BeanFactory**
-**Bean Factory**는 Bean을 등록, 생성, 조회, 반환을 관리한다. 보통은 BeanFactory를 바로 사용하지 않고, 이를 확장한 ApplicationContext를 사용한다. `getBean()` 메서드가 정의되어 있다.
-
-- **ApplicationContext**
-Bean을 등록,생성,조회,반환을 관리하는 기능은 **BeanFactory**와 같다. Spring의 각종 부가 서비스를 추가로 제공한다. 
 
 ## ApplicationContext
 
@@ -459,18 +426,16 @@ protected void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactor
 refresh의 자세한 동작 과정은 다음 포스팅을 기대해주세요~
 
 ## 정리
-
 애플리케이션에 대한 Configuration을 제공하는 인터페이스이다. Bean Factory를 상속받아 확장되었다.
 `@Configuration` 이 붙은 클래스들을 설정 정보로 등록해두고, `@Bean` 이 붙은 메서드의 이름으로 bean 목록을 생성한다.
 클라이언트가 해당 bean을 요청하면 bean 목록에서 요청한 이름이 있는지 찾고, 있으면 해당 bean 생성 메서드를 호출하여 객체를 생성하고 돌려준다.
 
 ## 추가할 내용
 - bean 후처리
-- BeanDefinition이 어디서 초기화 되는가?
+- BeanDefinition이 어디서 초기화 되는가? -> [[bean]] 에 추가했습니다.
 - getBean 알아보기
 
 ## 참고 자료
-
 - https://www.baeldung.com/spring-beanfactory-vs-applicationcontext
 - [망규형 블로그 - Application Run](https://mangkyu.tistory.com/213)
 - [망규형 블로그 - refresh](https://mangkyu.tistory.com/214)

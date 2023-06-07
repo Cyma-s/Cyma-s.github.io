@@ -140,7 +140,7 @@ sudo nohup java -jar jwp-shopping-order.jar &
 ### 어디까지 확장성을 고려해야 할까?
 
 ## 논의할 내용
-- 뭔가를 찾을 수 없으면 NOT_FOUND로 한다.
+- [x] 뭔가를 찾을 수 없으면 NOT_FOUND로 한다.
 - [x] orders에 delivery_fee 추가 
 	- 프론트가 배송비를 알려줘야 하나?
 		- 알려줄 때: deliver_fee가 유연하다. 이 값을 믿을 수 있는지? 서버 단에서 다시 검증해야 될 수도.
@@ -148,8 +148,8 @@ sudo nohup java -jar jwp-shopping-order.jar &
 	- 확장되는 순간: 5만원 이하면은 3000원, 3만원 이하면 5000원.
 -> 클라이언트 쪽에서 배송비 받는 것으로 변경. 배송비 받고 나서 추가 검증 수행하기 + 주문 내려줄 때도 배송비 포함하기로.
 만약 배송비 값이 달라지게 되었을 때, 클라이언트와 서버가 각각 배송비 계산을 하게 된다면 값이 변경되는 경우에 정합성 문제가 발생할 수 있다. (서버의 값은 바뀌었는데, 클라이언트는 안 바뀌는 문제)
-- [ ] mysql 서버 타임 시간 설정
-- [ ] 장바구니 상품 삭제하는 거 batch delete (step2 끝날 무렵쯤 반영)
+- [x] mysql 서버 타임 시간 설정
+- [x] 장바구니 상품 삭제하는 거 batch delete (step2 끝날 무렵쯤 반영)
 	-  /cart-items DELETE 요청 -> batch delete는 주로 어떻게 Url 구성할까?
 	- Request: 
 ```json
@@ -171,3 +171,17 @@ sudo nohup java -jar jwp-shopping-order.jar &
 5. 멤버의 포인트를 적립한다.
 6. 선택된 장바구니 상품을 삭제한다.
 7. 주문을 저장한다.
+
+## 2단계 리뷰 도둑질
+
+- `createdAt`을 현재는 Java에서 생성해주고 있는데요.
+1. 이 부분을 Java에서 생성하는 것과, DB에서 생성하는 것은 어떠한 장/단점이 있을까요?
+2. Java에서 생성하는 방식을 선택한 이유는 무엇인가요?
+- 메서드의 이름을 지어줄 때, 각각 어떠한 기준으로 정의했는지, 그에 일관성이 있는지 궁금하네요!
+1. 어떠한 도메인의 Controller/Service/Repository일 때, 접미사로 그 어떠한 도메인을 붙여줄 것인가?
+    - ex. `orderApiController.createOrder()` vs `orderApiController.create()`
+2. 무언가를 등록할 때, 용어를 선정하는 기준은 무엇인가?
+    - ex. `create` vs `register` vs `save`
+    - ex. `get` vs `find`
+3. 조건에 대해서도 접미사로 붙여줄 것인가?
+    - ex. `get` vs `getById` / `find` vs `findById`

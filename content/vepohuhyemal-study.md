@@ -11,7 +11,8 @@ tags     :
 - [[functional-interface]]
 - [[grasp]]
 - [[webmvctest]]
-- [[ioc-container]]
+- [[ioc-container-and-di]]
+- [[bean-candidate]]
 
 ## 면접
 - [[vepohuhemal-study-question]]
