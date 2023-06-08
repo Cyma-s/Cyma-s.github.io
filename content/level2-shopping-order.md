@@ -25,7 +25,7 @@ fuser -k 8080/tcp
 # remove original code
 rm -rf jwp-shopping-order
 
-# clone git main branch
+- [ ] # clone git main branch
 git clone https://github.com/$1/jwp-shopping-order.git
 
 # build
