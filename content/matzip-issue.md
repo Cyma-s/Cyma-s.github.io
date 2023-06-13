@@ -16,3 +16,5 @@ tags     :
 - 지금은 shutdown을 어떻게 하고 있나?
 
 [Issue 링크](https://github.com/The-Fellowship-of-the-matzip/mat.zip-back/issues/139)
+
+## Submodule을 적용한다.
