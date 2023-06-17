@@ -1,7 +1,7 @@
 ---
-title   : NAT: Network Address Translation
+title   : Network Address Translation
 date    : 2023-06-12 15:11:58 +0900
-updated : 2023-06-12 15:12:12 +0900
+updated : 2023-06-13 18:07:43 +0900
 tags     : 
 - 네트워크
 ---

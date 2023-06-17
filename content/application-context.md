@@ -24,7 +24,7 @@ public class JwpCartApplication {
 
 장바구니 미션의 `SpringApplication.run` 을 실행해보자.
 
-![[Pasted image 20230508142948.png]]
+![[spring-application-context-run.png]]
 
 `SpringApplication` 의 `run` 이 실행된다.
 
@@ -144,7 +144,7 @@ protected ConfigurableApplicationContext createApplicationContext() {
 
 내부는 다음과 같다.
 
-![[Pasted image 20230508151016.png]]
+![[spring-application-context-getFactories.png]]
 
 디버깅을 해보면 `create()`로 부터 생성되는 `ConfigurableApplicationContext`는 `AnnotationConfigServletWebServerApplicationContext`인 것을 확인할 수 있다.
 
@@ -226,7 +226,7 @@ private void prepareContext(DefaultBootstrapContext bootstrapContext, Configurab
 
 사용자가 추가한 설정을 적용하여, `ApplicationContext` 가 정상적으로 구동될 수 있도록 한다.
 
-![[Pasted image 20230508164618.png]]
+![[initializer.png]]
 
 애플리케이션 컨텍스트가 생성되고, initializer들의 initialize까지 진행되면 `BootstrapContext`가 불필요하므로 `BootstrapContext` 를 종료해준다.
 

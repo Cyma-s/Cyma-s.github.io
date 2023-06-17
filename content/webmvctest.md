@@ -181,7 +181,7 @@ public class Test {
 JUnit4를 사용한다면 `@RunWith(SpringRunner.class)` 를 같이 추가해줘야지만 annotation이 무시되지 않는다.   
 JUnit5를 사용한다면 `@RunWith`을 추가해 줄 필요가 없다. JUnit5에서는 `@WebMvcTest` 에도 `@RunWith` 어노테이션이 내장되어 있다.   
 
-![[./attachments/Pasted image 20230424144713.png]]
+![[junit-dependency.png]]
 
 이번 jwp-racingcar 미션에서는 JUnit5가 의존성에 포함되어 있기 때문에 테스트 코드마다 매번 `@RunWith` 를 써줄 필요가 없다.
 

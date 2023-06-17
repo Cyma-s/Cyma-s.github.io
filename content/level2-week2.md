@@ -43,7 +43,7 @@ Spring MVC Configuration이나 Spring MVC Annotation 등에서 삽질을 많이 
 ## Template Engine
 (오늘 토리랑 허브랑 이야기한 내용인데 나와서 신기하다 ㅋㅋ)
 
-![[../attachments/Pasted image 20230425111822.png]]
+![[request-structure.png]]
 
 view는 Dispatcher Servlet에 의해 변환된다.
 템플릿을 가지고 view가 결과물을 만들어서 Web browser에 전달한다.
@@ -81,11 +81,11 @@ Spring MVC는 thymeleaf view를 찾고, thymeleaf는 template으로 렌더링을
 -   ﻿﻿DEFINED_PORT: 실제 웹 환경을 구성, 지정한 포트를 listen
 -   ﻿﻿NONE: 아무런 웹 환경을 구성하지 않음
 
-![[../attachments/Pasted image 20230425121052.png]]
+![[mockmvc.png]]
 
 ## RestAssured
 
-![[../attachments/Pasted image 20230425121235.png]]
+![[rest-assured-test.png]]
 RANDOM_PORT를 쓰면 포트 번호를 모르니까 주입을 받아야 한다. 
 
 주입 받을 때 `@LocalServerPort` 로 주입을 받아야 한다.
