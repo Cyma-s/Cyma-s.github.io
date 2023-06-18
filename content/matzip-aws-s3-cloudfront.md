@@ -9,8 +9,6 @@ tags     :
 
 ## S3 버킷 생성
 
-matzip-image 버킷 생성
-
 ### 설정
 
 - 모든 퍼블릭 액세스 차단
@@ -29,7 +27,7 @@ matzip-image 버킷 생성
                 "Service": "cloudfront.amazonaws.com"
             },
             "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::matzip-image/*",
+            "Resource": "arn:aws:s3:::{버킷 이름}/*",
             "Condition": {
                 "StringEquals": {
                     "AWS:SourceArn": "arn:aws:cloudfront::{숫자로 된 계정 id}:distribution/{cloudfront id}"
