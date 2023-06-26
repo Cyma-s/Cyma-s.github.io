@@ -1,5 +1,5 @@
 ---
-title   : matzip issue 정리
+title   : matzip에서 발생한 issue 정리
 date    : 2023-05-15 16:08:15 +0900
 updated : 2023-05-15 16:08:37 +0900
 tags     : 
@@ -8,13 +8,10 @@ tags     :
 - issue
 ---
 
-## 동기 , 비동기 스레드에 대해 graceful shutdown을 적용한다
+## cloudfront의 image 링크를 열면 이미지 열기가 아니라 파일을 다운로드하는 문제
 
-- graceful shutdown이 왜 적용돼야 할까?
-- graceful shutdown을 적용하기 위해 gradle을 추가해야 할 것 같은데 어디 gradle에 추가해야 하는가?
-- 모든 모듈을 shutdown 해야 하는걸까?
-- 지금은 shutdown을 어떻게 하고 있나?
+MIME 유형을 지정해 주지 않아 발생한 문제였다. -> [[mime]]
 
-[Issue 링크](https://github.com/The-Fellowship-of-the-matzip/mat.zip-back/issues/139)
+## 로컬 환경에서 로컬 프로필이 적용되지 않는 문제
 
-## Submodule을 적용한다.
+여러 개의 active가 설정되어 있어 발생한 문제였다. -> [[spring-multi-profile-issue|Spring Profile 적용 순서]]
