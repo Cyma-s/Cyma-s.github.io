@@ -222,7 +222,7 @@ time profile은 프로그램이 특정 위치, 혹은 위치의 집합에서 수
 
 수신 프로세스는 통상 통신이 일어날 수 있도록 `accept_connection()` 호출에 permission을 제공한다.     
 연결을 받아들일 프로세스들의 대부분은 특수 목적의 daemon 이다.     
-`wait_for_connection()` 호출을 수행하고, 연결이 이루어질 때 개어난다.     
+`wait_for_connection()` 호출을 수행하고, 연결이 이루어질 때 깨어난다.     
 클라이언트로 알려진 통신의 출발지와 서버로 알려진 수신 daemon은 `read_message()` 와 `write_message()` 시스템 콜에 의해 메시지들을 교환한다.    
 
 `close_connection()` 호출은 통신을 종료한다.    
