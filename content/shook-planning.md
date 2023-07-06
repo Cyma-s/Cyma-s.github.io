@@ -164,10 +164,6 @@ closed #issue_number를 적어주세요-->
 
 - zzimkkong BE 코드 컨벤션 : https://xrabcde.notion.site/5cd0851364254f1db103607efa414a8d
 
-
-
-
-
 ## Git Branch 전략
 
 - main
