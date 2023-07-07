@@ -263,4 +263,47 @@ closed #issue_number를 적어주세요-->
 	- domain
 		- domain
 		- repository
-- 
+
+
+
+
+
+
+
+
+
+
+
+## 주간 스프린트 회의
+
+### 구현할 기능
+- ALL
+	- 노래의 킬링파트 등록
+	- 노래의 모든 킬링파트 조회
+- FE
+	- 와이어프레임 + 디자인 Figma 얼추
+	- 메인 페이지
+		- 노래 목록
+	- 노래 상세 페이지 + 조회 및 등록
+- BE
+	- DB 설계
+	- 특정 노래의 킬링 파트 등록: `/songs/{id}/killing-part POST`
+		- 구간 시작점 초: 180 (int / number)
+		- 구간 길이: 10 (int / number)
+	- 인기 노래 조회: `/songs/recommended GET`
+		- JSON Array로 전달
+		- 노래 정보
+			- 앨범 이미지 링크: string
+			- 노래 제목: string
+			- 가수 이름: string
+			- 킬링 파트
+				- 구간 시작점 초: 181 (int / number)
+				- 구간 끝점 초: 191 (int / number)
+	- 특정 노래 조회:  `/songs/{id} GET`
+		- 노래 정보
+			- 앨범 이미지 링크: string
+			- 노래 제목: string
+			- 가수 이름: string
+			- 노래 길이: int / number
+		- TOP3 킬링파트 3개 정보
+	- (시간 남으면) 노래 API 찾아보기 -> FE + BE 공통 회의하기
