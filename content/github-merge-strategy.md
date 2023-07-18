@@ -23,9 +23,9 @@ Commit log는 커밋을 행한 순서대로 기록되고, Merge log는 merge가 
 
 ### 예시
 
-commit 시간 순서: A - B - AC - BD
-A 브랜치 commit 순서: A - AC
-B 브랜치 commit 순서: B - BD
+commit 시간 순서: A - B - AC - BD     
+A 브랜치 commit 순서: A - AC     
+B 브랜치 commit 순서: B - BD      
 
 B 브랜치가 A 브랜치보다 main에 merge가 먼저 된 경우, main의 commit log는 다음과 같다.
 
