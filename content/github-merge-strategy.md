@@ -23,7 +23,7 @@ Commit log는 커밋을 행한 순서대로 기록되고, Merge log는 merge가 
 
 ### 예시
 
-commit 시간 순서: A - B - AC - BD     
+commit 시간 순서: A - B - AC - BD      
 A 브랜치 commit 순서: A - AC     
 B 브랜치 commit 순서: B - BD      
 
@@ -44,9 +44,9 @@ A - B - AC - BD - B merge commit - A merge commit
 
 ### 예시
 
-commit 시간 순서: A - B - AC - BD
-A 브랜치 commit 순서: A - AC
-B 브랜치 commit 순서: B - BD
+commit 시간 순서: A - B - AC - BD   
+A 브랜치 commit 순서: A - AC   
+B 브랜치 commit 순서: B - BD    
 
 B 브랜치가 A 브랜치보다 main에 merge가 먼저 된 경우, main의 commit log는 다음과 같다.
 
@@ -70,9 +70,9 @@ rebase 를 사용하므로 merge 된 이후의 로그를 보았을 때, main에�
 
 ### 예시
 
-commit 시간 순서: A - B - AC - BD
-A 브랜치 commit 순서: A - AC
-B 브랜치 commit 순서: B - BD
+commit 시간 순서: A - B - AC - BD      
+A 브랜치 commit 순서: A - AC     
+B 브랜치 commit 순서: B - BD     
 
 B 브랜치가 A 브랜치보다 main에 merge가 먼저 된 경우, main의 commit log는 다음과 같다.
 
@@ -92,6 +92,7 @@ rebase를 시작하기 전에 원격 레포지토리와 제대로 동기화가 �
 ### 결론?
 
 상황에 따라 사용해야 할 듯 하다.    
+우리는 Github Flow 로 진행하고 있기 때문에, main 에 커밋이 다 쌓이면 지저분할 것 같아서 Squash merge 전략을 사용하고 있다.     
 
 ## Conflict 해결하기
 
@@ -138,7 +139,7 @@ GPT의 답변은 다음과 같았습니다.
 
 커밋이 적은 경우에만 Cherry Pick을 사용하고, 브랜치의 모든 변경 사항을 다른 브랜치로 통합하는 경우에는 rebase가 더 적합한 듯 합니다.     
 
-상황에 따라 맞게 사용하는 것이 좋을 듯 합니다.     
+역시 상황에 따라 맞게 사용하는 것이 좋아보이네요.     
 
 ## 참고
 - https://inmoonlight.github.io/2021/07/11/Git-merge-strategy/
