@@ -7,5 +7,6 @@ tags     :
 ---
 
 ## Spotify
+
 [Spotify Web API 링크](https://developer.spotify.com/documentation/web-api)
 

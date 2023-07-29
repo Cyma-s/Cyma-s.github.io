@@ -3,7 +3,7 @@ title   : Spring Bean
 date    : 2023-05-29 18:52:32 +0900
 updated : 2023-05-29 18:52:54 +0900
 tags     : 
-- Spring
+- spring
 - 개발
 ---
 

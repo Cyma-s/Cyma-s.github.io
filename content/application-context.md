@@ -3,7 +3,7 @@ title   : ApplicationContext 찍먹하기
 date    : 2023-06-06 16:24:15 +0900
 updated : 2023-06-06 16:24:41 +0900
 tags     : 
-- Spring
+- spring
 - 개발
 - 스터디
 - 학습로그

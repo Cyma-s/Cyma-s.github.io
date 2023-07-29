@@ -3,7 +3,7 @@ title   : WebMvcTest
 date    : 2023-04-24 13:48:48 +0900
 updated : 2023-04-24 13:50:45 +0900
 tags     : 
-- Spring
+- spring
 - 레벨2
 - 학습로그
 - 스터디

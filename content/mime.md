@@ -6,6 +6,7 @@ tags     :
 - matzip
 - 개발
 - aws
+- trouble-shooting
 ---
 
 ## 어떤 이미지 링크는 다운로드가 된다

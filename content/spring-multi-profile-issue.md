@@ -3,9 +3,10 @@ title   : Spring의 Profile은 어떤 순서로 읽힐까?
 date    : 2023-06-26 21:52:20 +0900
 updated : 2023-06-26 21:52:54 +0900
 tags     : 
-- Spring
+- spring
 - 개발
 - matzip
+- trouble-shooting
 ---
 
 ## 로컬 환경에서 로컬 프로필이 적용되지 않는 문제
