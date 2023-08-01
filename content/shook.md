@@ -13,11 +13,30 @@ tags     :
 
 - [[shook-planning]]
 - [[shook-planning-interview]]
+- [[shook-persona]]
+- [[shook-service-introduce]]
+- [[shook-second-demoday]]
 
-## Github
-
-- [[github-merge-strategy]]
-
-## 자료 조사
+### 자료 조사
 
 - 음악 API: [[shook-music-api]]
+
+## 기술
+
+### Github
+
+- [[github-merge-strategy]]
+- [[github-codeowners]]
+- [[github-self-hosted-runner]]
+- [[shook-git-branch-strategy]]
+
+### Spring
+
+- [[spring-profile-trouble-shooting]]
+- [[spring-xml-parsing]]
+- [[spring-external-api-call-method]]
+
+### 기타
+
+- [[shook-tech-stack]]
+- [[shook-maniadb]]

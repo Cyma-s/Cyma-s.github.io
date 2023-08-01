@@ -14,6 +14,7 @@ tags     :
 모든 주요 HTTP 메서드에 대해 메서드를 제공하여 모든 종류의 HTTP 요청을 쉽게 수행할 수 있다.    
 
 그러나 Spring 5부터 `RestTemplate` 에 대한 업데이트는 없다. 따라서 새 프로젝트에서는 `WebClient` 를 사용하는 것을 추천한다고 한다.    
+
 또한 blocking I/O 모델을 사용하므로 `WebClient` 와 같은 non-blocking 방식에 비해 리소스 사용 측면에서 효율성이 떨어질 수 있다.    
 
 ## WebClient
@@ -22,6 +23,7 @@ Spring MVC 에서도 `WebClient` 를 사용할 수 있다.
 Non-blocking 으로 동작하여 많은 수의 동시 요청을 효율적으로 처리하는 데 적합하여 확장성을 향상시킬 수 있다.    
 
 그러나 Spring MVC 에서 사용되는 경우, non-blocking 특성이 각 request-response 주기에 대해서 스레드가 block 되는 서블릿 기반 애플리케이션에서는 이점이 없을 수도 있다.     
+
 또한 Spring MVC 애플리케이션의 동기식 메서드에서 `WebClient` 호출 결과를 사용해야 하는 경우, 다음과 같이 `block()` 을 호출하여 결과를 기다려야 할 수도 있다.     
 
 ```java

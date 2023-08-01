@@ -52,6 +52,95 @@ spring:
     import: classpath:shook-security/application.yml
 ```
 
+## local 프로필이 prod 프로필을 덮어 씌우는 문제
+
+github self-hosted runner 를 설정하면서, 로그를 확인했다.    
+분명 개발 서버에서는 prod 프로필으로 설정되어야 하는데, 이상하게도 데이터베이스 username은 prod 유저 이름인데, 데이터베이스 url이 local 프로필의 url 이었다.     
+
+왜 이런 상황이 발생했을까?
+
+```yml
+# main/resources 내부의 기본 application.yml
+spring:  
+  config:  
+    import: classpath:shook-security/application.yml  
+  profiles:  
+    group:  
+      prod: oauth, jwt  
+  
+---  
+spring:  
+  datasource:  
+    driver-class-name: org.h2.Driver  
+    url: jdbc:h2:mem:shook  
+  
+  sql:  
+    init:  
+      mode: always  
+      schema-locations: classpath:schema.sql  
+      data-locations: classpath:data.sql  
+  
+  jpa:  
+    properties:  
+      hibernate:  
+        format_sql: true  
+        show-sql: true  
+    hibernate:  
+      ddl-auto: validate
+```
+
+이때, 불러와지는 prod 프로필은 파일 하단이 아닌, local 프로필 위에 작성된다.     
+다음과 같이 말이다. 
+
+```yml
+# main/resources 내부의 기본 application.yml
+spring:  
+  config:  
+    import: classpath:shook-security/application.yml  
+  profiles:  
+    group:  
+      prod: oauth, jwt  
+
+---
+prod profile....
+  
+---  
+spring:  
+  datasource:  
+    driver-class-name: org.h2.Driver  
+    url: jdbc:h2:mem:shook  
+...
+```
+
+따라서 prod 프로필에만 존재하는 username, password 는 제대로 설정된 반면, 중복되게 정의된 `spring.datasource.url` 은 local 프로필의 내용으로 덮어씌워진 것이다.     
+
+그렇다면 어떻게 해결할 수 있을까?      
+
+답은 간단하다. local profile 의 이름을 정해주면 된다.     
+
+```yml
+spring:  
+  config:  
+    import: classpath:shook-security/application.yml  
+  profiles:  
+    group:  
+      prod: oauth, jwt  
+    active: local  
+  
+---  
+spring:  
+  config:  
+    activate:  
+      on-profile: local
+...
+```
+
+local 에서는 실행했을 때 local 프로필로 실행될 수 있도록 `active` 설정을 해주고, `on-profile` 로 이름을 명시해준다.     
+
+이전 파일에서는 local profile 이라는 명시가 없었기 때문에, 그냥 해당 application.yml 파일이 실행될 때 같이 실행되는 설정으로 인식한 듯 하다.    
+
+이렇게 하면 정상적으로 각 프로필을 지정하는 것을 볼 수 있을 것이다.    
+
 ## Profile에 대한 짧은 지식
 
 - profile 파일 이름으로 `application-{profile-name}.yml` 을 적으면, 굳이 `spring.config.activate.on-profile` 에 이름을 명시하지 않아도 잘 동작한다.    
