@@ -8,14 +8,16 @@ tags     :
 - 레벨3
 ---
 
-## RestTemplate
+현재 S-HOOK DB에 들어있는 노래 외에, ManiaDB 에 있는 노래를 조회하기 위해 외부 API 에 요청을 보내야 한다.     
+
+그 중에서 S-HOOK은 `WebCient` 를 채택했는데, 이유는 다음과 같다.      
+
+## RestTemplate 란?
 
 간단하고 사용하기 쉽다. sync-blocking 으로 작동한다.    
 모든 주요 HTTP 메서드에 대해 메서드를 제공하여 모든 종류의 HTTP 요청을 쉽게 수행할 수 있다.    
 
-그러나 Spring 5부터 `RestTemplate` 에 대한 업데이트는 없다. 따라서 새 프로젝트에서는 `WebClient` 를 사용하는 것을 추천한다고 한다.    
-
-또한 blocking I/O 모델을 사용하므로 `WebClient` 와 같은 non-blocking 방식에 비해 리소스 사용 측면에서 효율성이 떨어질 수 있다.    
+그러나 Spring 5부터 `RestTemplate` 에 대한 업데이트는 없다. 따라서 새 프로젝트에서는 `WebClient` 를 사용하는 것을 추천한다고 한다.     
 
 ## WebClient
 
