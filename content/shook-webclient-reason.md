@@ -14,6 +14,9 @@ tags     :
 
 ## WebClient 란?
 
+웹으로 API 를 호출하기 위해 사용되는 Http Client 모듈 중 하나이다.     
+기존의 동기 API 를 제공할 뿐만 아니라, nonblocking 과 async 접근 방식을 지원하며 효율적인 통신이 가능하다.
+
 ## RestTemplate을 사용하지 않는 이유
 
 ### Maintenance Mode의 RestTemplate
@@ -34,6 +37,12 @@ Spring 의 공식 문서에서도 Spring 5.0 부터는 해당 모듈에 기능�
 
 그러나 현재 `WebClient` 가 사용된 부분은 `blocking` 으로 동작하고 있습니다. 외부 API 에서 받아오는 요청을 가공해서 사용자에게 보내주어야 하기 때문에 요청이 받아질 때까지 기다려야 합니다.     
 그러므로 현재로써는 큰 장점은 아니지만, 추후 해당 기능이 필요해지는 경우 `RestTemplate` 보다 강점을 갖게 될 것입니다.     
+
+### 동시 사용자 성능
+
+Spring Boot 2 부터 IO 가 빈번한 경우에 성능이 향상되었습니다.    
+
+동시 사용자의 규모가 별로 없는 경우에는 `RestTemplate` 을 사용하는 것은 별 문제 없지만, 어느 정도의 규모가 있는 경우에는 `WebClient` 를 선택하는 것이 바람직하다고 할 수 있습니다.     
 
 ### 구현 상의 이점
 
