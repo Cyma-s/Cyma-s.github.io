@@ -8,6 +8,4 @@ tags     :
 - assertj
 ---
 
-## 테스트 도구
-
 * [[assertj]]

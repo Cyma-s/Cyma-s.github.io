@@ -221,7 +221,7 @@ bad permission 에러를 막기 위해 pem key 에 권한을 부여한다.
 chmod 400 2023-shook.pem
 ```
 
-운영 서버에서 DB 서버로 접속하낟.     
+운영 서버에서 DB 서버로 접속한다.     
 
 ```bash
 ssh -i pemkey이름 ubuntu@DB서버ip
