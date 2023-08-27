@@ -12,6 +12,8 @@ tags     :
 
 ### 이분탐색
 
+#### C++
+
 ```cpp
 #include <iostream> 
 #include <vector>  
@@ -35,6 +37,26 @@ int main() {
  	
 	cout << max_length;
 }
+```
+
+#### Python
+
+```python
+import bisect
+
+x = int(input())
+arr = list(map(int, input().split()))
+
+dp = [arr[0]]
+
+for i in range(x):
+	if arr[i] > dp[-1]:
+		dp.append(arr[i])
+		continue
+	index = bisect.bisect_left(dp, arr[i])
+	dp[index] = arr[i]
+
+print(len(dp))
 ```
 
 ## LIS의 원소 구하기
