@@ -28,7 +28,11 @@ tags     :
 ## 코드
 
 ```python
-
+def floyd_warshall(n, dist):  
+    for i in range(1, n + 1):  
+        for a in range(1, n + 1):  
+            for b in range(1, n + 1):  
+                dist[a][b] = min(dist[a][b], dist[a][i] + dist[i][b])
 ```
 
 ## 주의할 점
