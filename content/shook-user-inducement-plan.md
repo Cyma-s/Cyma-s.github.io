@@ -96,8 +96,6 @@ tags     :
 - HIPHOPPLAYA: https://hiphopplaya.com/g2/bbs/board.php?bo_table=freetalk
 	- 자유 게시판
 
-# S-HOOK 홍보 계획 글
-
 ## 사용자 유치 계획
 
 노래 추천이 가능하고, 좋아하는 노래 정보를 공유할 수 있는 커뮤니티에 홍보
