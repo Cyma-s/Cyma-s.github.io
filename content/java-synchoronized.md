@@ -36,3 +36,4 @@ https://en.wikipedia.org/wiki/Concurrency_(computer_science)
 - https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html
 - https://backtony.github.io/java/2022-05-04-java-50/
 - http://happinessoncode.com/2017/10/04/java-intrinsic-lock/
+- https://www.baeldung.com/java-synchronized

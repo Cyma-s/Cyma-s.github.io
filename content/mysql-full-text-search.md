@@ -1,12 +1,12 @@
 ---
-title   : MySQL Full Text Search
-date    : 2023-07-21 14:00:49 +0900
-updated : 2023-07-21 14:01:18 +0900
-tags     : 
-- mysql
-- 데이터베이스
-- shook
-- 레벨3
+title: MySQL Full Text Search
+date: 2023-07-21 14:00:49 +0900
+updated: 2023-07-21 14:01:18 +0900
+tags:
+  - mysql
+  - shook
+  - 레벨3
+  - database
 ---
 
 ## Full-Text Search 란
