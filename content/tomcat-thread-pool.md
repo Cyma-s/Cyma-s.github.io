@@ -62,7 +62,7 @@ server:
       max: 200 # 생성할 수 있는 thread의 총 개수
       min-spare: 10 # 항상 활성화 되어있는(idle) thread의 개수
     max-connections: 8192 # 수립가능한 connection의 총 개수
-    accept-count: 100 # 초과 connection 큐
+    accept-count: 100 # 작업 큐의 사이즈
     connection-timeout: 20000 # timeout 판단 기준 시간, 20초 (기본 값 없음)
   port: 8080 # 서버를 띄울 포트번호
 ```
@@ -256,13 +256,6 @@ public static class CountingTask extends RecursiveTask<Integer> {
           .collect(Collectors.summingInt(ForkJoinTask::join));
     }
 }
-
-TreeNode tree = new TreeNode(5,
-  new TreeNode(3), new TreeNode(2,
-    new TreeNode(2), new TreeNode(8)));
-
-ForkJoinPool forkJoinPool = ForkJoinPool.commonPool();
-int sum = forkJoinPool.invoke(new CountingTask(tree));
 ```
 
 

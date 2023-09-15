@@ -86,7 +86,7 @@ DispatcherServlet 도 Servlet 의 구현체이다.
 ### 서블릿 살펴보기
 
 - 라이프 사이클 메서드
-	- init(), service(), destroy()\
+	- init(), service(), destroy()
 
 #### 라이프 사이클이란?
 
