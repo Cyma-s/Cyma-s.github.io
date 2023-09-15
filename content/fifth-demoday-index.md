@@ -1,7 +1,7 @@
 ---
 title: Index로 성능 개선하기
 date: 2023-09-14 17:18:28 +0900
-updated: 2023-09-15 12:13:13 +0900
+updated: 2023-09-15 12:43:55 +0900
 tags:
   - shook
   - 레벨4
@@ -17,6 +17,8 @@ group by song.id
 ```
 
 ### Explain
+
+song 만 개, 킬링파트 3만 개로 테스트했다.
 
 | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |  
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |  
@@ -48,6 +50,9 @@ where comment.killing_part_id=?
 ```
 
 ### Explain
+
+comment 4만개 기준으로 테스트
+
 
 |table | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -132,3 +137,85 @@ offset ? rows fetch first ? rows only
 // 기준 노래의 킬링파트 조회하는 로직 
 select * from killing_part k1_0 where k1_0.song_id=?
 ```
+
+## Explain
+
+- 기준 노래보다 좋아요가 많은 데이터 조회 및 정렬
+
+| select\_type | table | type | possible\_keys | key | ref | rows | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PRIMARY | s1\_0 | ALL | PRIMARY | null | null | 9910 | Using temporary; Using filesort |
+| PRIMARY | k1\_0 | ALL | null | null | null | 29478 | Using where; Using join buffer \(hash join\) |
+| SUBQUERY | k3\_0 | ALL | null | null | null | 29478 | Using where |
+| SUBQUERY | k2\_0 | ALL | null | null | null | 29478 | Using where |
+
+모두 ALL Search 를 수행하고 있으며, filesort 또한 수행되고 있는 것을 볼 수 있다. (성능에 안 좋다는 건 다 들어간 인스턴스 쿼리;;)
+
+- 기준 노래보다 좋아요가 적은 데이터 조회 및 정렬
+
+| select\_type | table | type | possible\_keys | key | ref | rows | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PRIMARY | s1\_0 | ALL | PRIMARY | null | null | 9910 | Using temporary; Using filesort |
+| PRIMARY | k1\_0 | ALL | null | null | null | 29478 | Using where; Using join buffer \(hash join\) |
+| SUBQUERY | k3\_0 | ALL | null | null | null | 29478 | Using where |
+| SUBQUERY | k2\_0 | ALL | null | null | null | 29478 | Using where |
+
+마찬가지로 ALL search 수행 중이다.
+
+- song_id 로 킬링파트 조회
+
+| select\_type | table | type | key | ref | rows | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| SIMPLE | k1\_0 | ALL | null | null | 29478 | Using where |
+
+ALL Search 진행 중이다.
+
+### 성능 측정
+
+- 좋아요 많은 거 쿼리 (캐시 안 타도록)
+
+| COUNT\_STAR | SUM\_TIMER\_WAIT | MIN\_TIMER\_WAIT | AVG\_TIMER\_WAIT | MAX\_TIMER\_WAIT | SUM\_LOCK\_TIME |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 4 | 432433000000 | 102933000000 | 108108250000 | 114617000000 | 119000000 |
+
+- 좋아요 적은 거 쿼리 (캐시 안 타도록)
+
+| COUNT\_STAR | SUM\_TIMER\_WAIT | MIN\_TIMER\_WAIT | AVG\_TIMER\_WAIT | MAX\_TIMER\_WAIT | SUM\_LOCK\_TIME |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 5 | 510016000000 | 91359000000 | 102003200000 | 111161000000 | 31000000 |
+
+- 킬링파트 조회 쿼리 (캐시 안 타도록)
+
+| COUNT\_STAR | SUM\_TIMER\_WAIT | MIN\_TIMER\_WAIT | AVG\_TIMER\_WAIT | MAX\_TIMER\_WAIT | SUM\_LOCK\_TIME |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 4 | 99311000000 | 23335000000 | 24827750000 | 26468000000 | 14000000 |
+
+### 개선 방법
+
+- `killing_part` 의 `song_id` 인덱싱
+
+### 이후 성능 측정
+
+- 좋아요 많은 거 조회
+
+| COUNT\_STAR | SUM\_TIMER\_WAIT | MIN\_TIMER\_WAIT | AVG\_TIMER\_WAIT | MAX\_TIMER\_WAIT | SUM\_LOCK\_TIME |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 20 | 1597450000000 | 65837000000 | 79872500000 | 114617000000 | 185000000 |
+
+MIN_TIMER_WAIT 성능 30% 개선
+
+- 좋아요 아래 조회
+
+| COUNT\_STAR | SUM\_TIMER\_WAIT | MIN\_TIMER\_WAIT | AVG\_TIMER\_WAIT | MAX\_TIMER\_WAIT | SUM\_LOCK\_TIME |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 20 | 1406030000000 | 53473000000 | 70301500000 | 111161000000 | 97000000 |
+
+MIN_TIMER_WAIT 성능 250% 악화
+
+- 킬링파트 조회
+
+| COUNT\_STAR | SUM\_TIMER\_WAIT | MIN\_TIMER\_WAIT | AVG\_TIMER\_WAIT | MAX\_TIMER\_WAIT | SUM\_LOCK\_TIME |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 10 | 101400000000 | 288000000 | 10140000000 | 26468000000 | 34000000 |
+
+1/5 
