@@ -1,7 +1,7 @@
 ---
 title: Index로 성능 개선하기
 date: 2023-09-14 17:18:28 +0900
-updated: 2023-09-15 11:00:01 +0900
+updated: 2023-09-15 12:13:13 +0900
 tags:
   - shook
   - 레벨4
@@ -18,10 +18,10 @@ group by song.id
 
 ### Explain
 
-| id | select\_type | table | partitions | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |  
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |  
-| 1 | SIMPLE | song | null | ALL | PRIMARY | null | null | null | 9910 | 100 | Using temporary |  
-| 1 | SIMPLE | kp | null | ALL | null | null | null | null | 29478 | 100 | Using where; Using join buffer \(hash join\) |
+| type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |  
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |  
+| ALL | PRIMARY | null | null | null | 9910 | 100 | Using temporary |  
+| ALL | null | null | null | null | 29478 | 100 | Using where; Using join buffer \(hash join\) |
 
 type 이 ALL 로 나오기 때문에, 전체 테이블 스캔이 발생했다.  
 
@@ -49,27 +49,26 @@ where comment.killing_part_id=?
 
 ### Explain
 
-| id | select\_type | table | partitions | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | SIMPLE | comment | null | ALL | null | null | null | null | 40051 | 10 | Using where |
-| 1 | SIMPLE | m | null | eq\_ref | PRIMARY | PRIMARY | 8 | shook.comment.member\_id | 1 | 100 | null |
+|table | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| comment | ALL | null | null | null | null | 40051 | 10 | Using where |
+| m | eq\_ref | PRIMARY | PRIMARY | 8 | shook.comment.member\_id | 1 | 100 | null |
 
 마찬가지로 ALL 로 나오는 모습이다.  
 
 ### 기존 성능 체크
 
-| SCHEMA\_NAME | DIGEST | DIGEST\_TEXT | COUNT\_STAR | SUM\_TIMER\_WAIT | MIN\_TIMER\_WAIT | AVG\_TIMER\_WAIT | MAX\_TIMER\_WAIT | SUM\_LOCK\_TIME | SUM\_ERRORS | SUM\_WARNINGS | SUM\_ROWS\_AFFECTED | SUM\_ROWS\_SENT | SUM\_ROWS\_EXAMINED | SUM\_CREATED\_TMP\_DISK\_TABLES | SUM\_CREATED\_TMP\_TABLES | SUM\_SELECT\_FULL\_JOIN | SUM\_SELECT\_FULL\_RANGE\_JOIN | SUM\_SELECT\_RANGE | SUM\_SELECT\_RANGE\_CHECK | SUM\_SELECT\_SCAN | SUM\_SORT\_MERGE\_PASSES | SUM\_SORT\_RANGE | SUM\_SORT\_ROWS | SUM\_SORT\_SCAN | SUM\_NO\_INDEX\_USED | SUM\_NO\_GOOD\_INDEX\_USED | SUM\_CPU\_TIME | MAX\_CONTROLLED\_MEMORY | MAX\_TOTAL\_MEMORY | COUNT\_SECONDARY | FIRST\_SEEN | LAST\_SEEN | QUANTILE\_95 | QUANTILE\_99 | QUANTILE\_999 | QUERY\_SAMPLE\_TEXT | QUERY\_SAMPLE\_SEEN | QUERY\_SAMPLE\_TIMER\_WAIT |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| shook | 8c7c991592d576adb9e83e8c573e6f4db0a52e1c517c08038ad7be6f97e5c2f5 | SELECT \`comment\` . \`killing\_part\_id\` , \`comment\` . \`id\` , \`comment\` . \`content\` , \`comment\` . \`created\_at\` , \`comment\` . \`member\_id\` , \`m\` . \`id\` , \`m\` . \`created\_at\` , \`m\` . \`email\` , \`m\` . \`nickname\` FROM \`killing\_part\_comment\` COMMENT LEFT JOIN MEMBER \`m\` ON \`m\` . \`id\` = \`comment\` . \`member\_id\` WHERE \`comment\` . \`killing\_part\_id\` = ? | 2 | 41795000000 | 19135000000 | 20897500000 | 22660000000 | 15000000 | 0 | 0 | 0 | 1002 | 62002 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 1178336 | 1834916 | 0 | 2023-09-14 22:05:14.743496 | 2023-09-14 22:05:18.373364 | 22908676527 | 22908676527 | 22908676527 | /\* ApplicationName=IntelliJ IDEA 2023.2.1 \*/ select comment.killing\_part\_id,<br/>       comment.id,<br/>       comment.content,<br/>       comment.created\_at,<br/>       comment.member\_id,<br/>       m.id,<br/>       m.created\_at,<br/>       m.email,<br/>       m.nickname<br/>from killing\_part\_comment comment<br/>         left join member m on m.id = comment.member\_id<br/>where comment.killing\_part\_id = 3 | 2023-09-14 22:05:14.743496 | 22660000000 |
-
+| COUNT\_STAR | SUM\_TIMER\_WAIT | MIN\_TIMER\_WAIT | AVG\_TIMER\_WAIT | MAX\_TIMER\_WAIT | SUM\_LOCK\_TIME |
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| 2 | 41795000000 | 19135000000 | 20897500000 | 22660000000 | 15000000 |
 ### 개선사항
 
 - `member_id`, `killing_part_id` 에 인덱스 걸기
 
-| id | select\_type | table | partitions | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |  
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |  
-| 1 | SIMPLE | comment | null | ref | idx\_killing\_part\_comment\_killing\_part\_id | idx\_killing\_part\_comment\_killing\_part\_id | 8 | const | 18564 | 100 | null |  
-| 1 | SIMPLE | m | null | eq\_ref | PRIMARY | PRIMARY | 8 | shook.comment.member\_id | 1 | 100 | null |
+| table | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| comment | ref | idx\_killing\_part\_comment\_killing\_part\_id | idx\_killing\_part\_comment\_killing\_part\_id | 8 | const | 18564 | 100 | null |
+| m | eq\_ref | PRIMARY | PRIMARY | 8 | shook.comment.member\_id | 1 | 100 | null |
 
 확인하는 row 수가 2분의 1로 감소했다.  
 
@@ -79,4 +78,57 @@ where comment.killing_part_id=?
 
 성능도 최소 시간 기준 100분의 1로 크게 향상되었다.  
 
-## 
+## 스와이프하는 노래를 조회하는 쿼리 (비로그인)
+
+```sql
+select * from song s where s.id=? // 기준 song 조회 
+
+// 기준 노래보다 좋아요가 많은 노래 10개 조회
+select * from song s1_0 
+left join killing_part k1_0 on s1_0.id=k1_0.song_id 
+group by s1_0.id 
+having ( 
+// 좋아요 개수 값이 클 때 sum(coalesce(k1_0.like_count,0))> ( 
+		select sum(coalesce(k2_0.like_count,0)) 
+		from killing_part k2_0 where k2_0.song_id=? 
+	) 
+	or 
+// 좋아요 개수 같으면 id 가 큰 순으로 정렬 
+	( 
+		sum(coalesce(k1_0.like_count,0))= ( 
+			select sum(coalesce(k3_0.like_count,0)) 
+			from killing_part k3_0  
+			where k3_0.song_id=? 
+		) and s1_0.id>? 
+	) 
+) 
+order by sum(coalesce(k1_0.like_count,0)), s1_0.id // 좋아요 순 → id 작은 순 
+offset ? rows fetch first ? rows only 
+
+// 아래쪽 조회하는 쿼리  
+select * 
+from song s1_0 
+left join killing_part k1_0 on s1_0.id=k1_0.song_id 
+group by s1_0.id 
+having 
+sum(coalesce(k1_0.like_count,0))< 
+	( 
+	select sum(coalesce(k2_0.like_count,0)) 
+	from killing_part k2_0 
+	where k2_0.song_id=? 
+	) 
+or 
+( sum(coalesce(k1_0.like_count,0))= 
+	( 
+		select sum(coalesce(k3_0.like_count,0)) 
+		from killing_part k3_0 
+		where k3_0.song_id=? 
+	) 
+	and s1_0.id<? 
+) 
+order by sum(coalesce(k1_0.like_count,0)) desc, s1_0.id desc 
+offset ? rows fetch first ? rows only 
+
+// 기준 노래의 킬링파트 조회하는 로직 
+select * from killing_part k1_0 where k1_0.song_id=?
+```
