@@ -30,4 +30,3 @@ MySQL 서버 실행에 대한 세부적인 통계와 모니터링 정보를 제�
 	- 최소, 평균, 최대 실행 시간
 - SUM_ROWS_SENT, SUM_ROWS_EXAMINED
 	- 쿼리 실행 시 반환 및 조사된 행 수
-
