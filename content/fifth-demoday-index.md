@@ -1,7 +1,7 @@
 ---
 title: Index로 성능 개선하기
 date: 2023-09-14 17:18:28 +0900
-updated: 2023-09-15 13:15:31 +0900
+updated: 2023-09-15 15:09:17 +0900
 tags:
   - shook
   - 레벨4
@@ -51,6 +51,7 @@ where comment.killing_part_id=?
 
 ### Explain
 
+member 가 1명이었음  
 comment 4만개 기준으로 테스트
 
 
