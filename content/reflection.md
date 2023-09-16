@@ -1,11 +1,11 @@
 ---
-title   : Reflection (리플렉션)
-date    : 2023-09-13 12:18:02 +0900
-updated : 2023-09-13 12:18:18 +0900
-tags     : 
-- java
-- 레벨4
-- 우테코
+title: Reflection (리플렉션)
+date: 2023-09-13 12:18:02 +0900
+updated: 2023-09-16 14:27:52 +0900
+tags:
+  - java
+  - 레벨4
+  - 우테코
 ---
 
 ## Reflection
@@ -158,4 +158,3 @@ SomeClass instance = (SomeClass) constructor.newInstance("parameterValue");
 
 ## 참고
 
-- 
