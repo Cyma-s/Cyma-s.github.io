@@ -1,7 +1,7 @@
 ---
 title: Reflection (리플렉션)
 date: 2023-09-13 12:18:02 +0900
-updated: 2023-09-16 14:27:52 +0900
+updated: 2023-09-17 19:51:12 +0900
 tags:
   - java
   - 레벨4
@@ -155,6 +155,29 @@ constructor.setAccessible(true);
 SomeClass instance = (SomeClass) constructor.newInstance("parameterValue");
 ```
 
+## 어노테이션 유무
+
+### 어노테이션이 있는가?
+
+- `isAnnotationPresent`  
+클래스에 어노테이션이 존재하는지 확인해주는 메서드이다.  
+
+```java
+public class AnnotationChecker {
+    public static void main(String[] args) {
+        Class<MyClass> clazz = MyClass.class;
+
+        if (clazz.isAnnotationPresent(MyAnnotation.class)) {
+            System.out.println("MyAnnotation is present on MyClass.");
+        } else {
+            System.out.println("MyAnnotation is not present on MyClass.");
+        }
+    }
+}
+```
+
+만약 객체의 클래스에 어노테이션이 붙어있는지 확인하려면 `getClass().isAnnotationPresent()` 를 해주면 된다.  
 
 ## 참고
 
+- GPT 와 대화하기

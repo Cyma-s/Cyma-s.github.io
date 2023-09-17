@@ -1,7 +1,7 @@
 ---
 title: Mockito
 date: 2023-09-09 14:42:39 +0900
-updated: 2023-09-17 15:07:07 +0900
+updated: 2023-09-17 19:47:16 +0900
 tags:
   - test
   - 테스트
@@ -50,6 +50,38 @@ try (final MockedConstruction<Session> sessionMockedConstruction = mockConstruct
 
 try-with-resources 를 사용하여 테스트가 끝나면 닫아준다.  
 
+### 생성자가 호출된 횟수 알아내기
+
+```java
+class MyClass {
+    void myMethod() {
+        // do something
+    }
+}
+
+@Test
+public void testMyMethodInvocation() {
+    try (MockedConstruction<MyClass> mocked = mockConstruction(MyClass.class)) {
+        MyClass instance1 = new MyClass();
+        MyClass instance2 = new MyClass();
+
+        instance1.myMethod();
+        instance2.myMethod();
+        instance2.myMethod();
+
+        // 첫 번째 생성된 객체의 myMethod 호출 횟수 확인
+        verify(mocked.constructed().get(0), times(1)).myMethod();
+
+        // 두 번째 생성된 객체의 myMethod 호출 횟수 확인
+        verify(mocked.constructed().get(1), times(2)).myMethod();
+    }
+}
+```
+
+`.constructed().get(x)` 로 x번째로 생성된 객체의 메서드 호출 횟수를 확인할 수 있다.
+
+**⚠️ 주의 !! 리플렉션으로 동적으로 생성된 객체는 카운팅 되지 않으니 유의하자.**
+
 ## mockStatic
 
 static 메서드를 모킹하고 싶을 때가 있다.  
@@ -80,3 +112,14 @@ try (final MockedStatic<SessionManager> mockSessionManger = mockStatic(SessionMa
 
 클래스의 static 메서드가 어떤 값을 리턴할 지 지정해줄 수 있다.  
 try-with-resources 로 테스트가 끝나면 닫아준다.
+
+## `verify()`
+
+```java
+verify(requestDispatcher, only()).forward(any(), any());
+```
+
+**모킹된 객체**에서 메서드가 몇 번 불렸는지 확인할 수 있다. 
+(spy 도 가능하다.)
+
+`only()` 를 사용하면 단 한 번 호출되었다는 것을 확인할 수 있다.  
