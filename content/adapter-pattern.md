@@ -1,7 +1,7 @@
 ---
 title: 어댑터 패턴
 date: 2023-09-17 15:41:22 +0900
-updated: 2023-09-17 15:58:57 +0900
+updated: 2023-09-17 16:33:02 +0900
 tags:
   - design-pattern
   - 디자인패턴
@@ -94,8 +94,6 @@ public interface HandlerAdapter {
     ModelAndView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception;  
 }
 ```
-
-
 
 ## 스프링의 `HandlerAdapter` 
 
