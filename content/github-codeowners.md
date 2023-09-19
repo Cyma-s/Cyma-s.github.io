@@ -1,12 +1,12 @@
 ---
-title   : Github CODEOWNERS로 PR 리뷰어 자동 할당하기
-date    : 2023-07-15 13:09:51 +0900
-updated : 2023-07-15 13:10:14 +0900
-tags     : 
-- shook
-- github
-- 우테코
-- 레벨3
+title: Github CODEOWNERS로 PR 리뷰어 자동 할당하기
+date: 2023-07-15 13:09:51 +0900
+updated: 2023-09-19 11:56:38 +0900
+tags:
+  - shook
+  - github
+  - 우테코
+  - 레벨3
 ---
 
 ## CODEOWNERS?
