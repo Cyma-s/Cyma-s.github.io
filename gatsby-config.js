@@ -1,107 +1,143 @@
-const path = require("path");
-const pathPrefix = "/";
-const siteMetadata = {
-  title: "Vero Wiki",
-  shortName: "Vero Wiki",
-  description:
-    "개인 위키입니다.",
-  imageUrl: "/door.jpg",
-  siteUrl: "https://vero.wiki/",
-};
+const blogConfig = require("./blog-config")
+const { title, description, author, siteUrl } = blogConfig
+
 module.exports = {
-  siteMetadata,
-  pathPrefix,
-  flags: {
-    DEV_SSR: true,
+  pathPrefix: "/gatsby-starter-hoodie",
+  siteMetadata: {
+    title,
+    description,
+    author,
+    siteUrl,
   },
   plugins: [
-	{
-	  resolve: `gatsby-plugin-cname`
-	},
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-robots-txt`,
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: `gatsby-plugin-react-redux`,
       options: {
-        trackingIds: ['G-MFJ3E8N4SC'],
-        pluginConfig: {
-          head: true,
+        pathToCreateStoreModule: "./src/reducers/createStore",
+        serialize: {
+          space: 0,
+          isJSON: true,
+          unsafe: false,
+          ignoreFunction: true,
         },
+        cleanupOnClient: true,
+        windowKey: "__PRELOADED_STATE__",
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        name: "content",
-        path: `./content`,
+        fonts: [
+          `noto sans kr:300,400,500,700,900`,
+          `source code pro:700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
+    "gatsby-plugin-styled-components",
+    "gatsby-remark-reading-time",
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: title,
+        short_name: title,
+        description: description,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ced4da`,
+        display: `standalone`,
+        icon: `static/favicon.png`,
       },
     },
     {
-      resolve: "gatsby-theme-primer-wiki",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        nav: [
+        name: `markdown-pages`,
+        path: `${__dirname}/contents/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        commonmark: true,
+        footnotes: true,
+        pedantic: true,
+        gfm: true,
+        plugins: [
           {
-            title: "Github",
-            url: "https://github.com/Cyma-s/",
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 680,
+              loading: "lazy",
+              wrapperStyle: "margin-bottom: 16px;",
+              quality: 100,
+              showCaptions: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+              escapeEntities: {},
+            },
+          },
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`,
+            },
+          },
+          {
+            resolve: "gatsby-remark-static-images",
           },
         ],
-        icon: "./static/logo.png",
-        editUrl: "https://github.com/Cyma-s/Cyma-s.github.io/tree/main/content/",
-        editUrlText: "수정하기",
-		shouldShowTagGroupsOnIndex: true,
-        defaultColorMode: "auto",
-        shouldShowLatestOnIndex: true,
-        shouldSupportLatest: true,
-        defaultIndexLatestPostCount: 20,
-        sidebarComponents: ["latest", "tag"],
-        shouldSupportTags: true,
-        tagText: "TAGS",
-        lastUpdatedText: "최근 수정 시간",
       },
     },
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: siteMetadata.title,
-        short_name: siteMetadata.shortName,
-        start_url: pathPrefix,
-        lang: `ko`,
-        background_color: `#f7f0eb`,
-        display: `standalone`,
-        icon: path.resolve(__dirname, "./static/logo.png"),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-    },
-    {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        host: siteMetadata.siteUrl,
-        sitemap: `${siteMetadata.siteUrl}/sitemap/sitemap-index.xml`,
-        policy: [{ userAgent: "*", allow: "/" }],
-      },
-    },
-    {
-      resolve: `@theowenyoung/gatsby-transformer-references`,
-      options: {
-        types: ["Mdx"], // or ["MarkdownRemark"] (or both)
-      },
-    },
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-resolve-src`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
-        {
-          site {
-            siteMetadata {
-              title
-              description
-              siteUrl
-              site_url: siteUrl
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
             }
           }
-        }
-      `,
+        `,
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
@@ -111,37 +147,35 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                  custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
             query: `
-            {
-              allMarkdownRemark(
-                sort: {fields: frontmatter___date, order: DESC}
-                filter: {fields: {slug: {nin: ["/", "/placeholder/"]}}}
-              ) {
-                edges {
-                  node {
-                    fields {
-                      slug
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                      }
                     }
-                    frontmatter {
-                      title
-                      date
-                      updated
-                    }
-                    excerpt
                   }
                 }
               }
-            }
             `,
-            output: '/rss.xml',
-            title: "Vero Wiki RSS Feed",
+            output: `/rss.xml`,
+            title: `RSS Feed of ${title}`,
+            match: "^/blog/",
           },
         ],
       },
     },
   ],
-};
+}
