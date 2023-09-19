@@ -1,9 +1,9 @@
 ---
-title   : Transactional
-date    : 2023-05-29 19:38:14 +0900
-updated : 2023-05-30 12:51:21 +0900
-tags     : 
-- spring
+title: Transactional
+date: 2023-05-29 19:38:14 +0900
+updated: 2023-09-19 13:28:58 +0900
+tags:
+  - spring
 ---
 
 ## 트랜잭션이란

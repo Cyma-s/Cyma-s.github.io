@@ -1,8 +1,8 @@
 ---
-title   : EXPLAIN
-date    : 2023-09-14 21:34:46 +0900
-updated : 2023-09-14 21:34:51 +0900
-tags     : 
+title: EXPLAIN
+date: 2023-09-14 21:34:46 +0900
+updated: 2023-09-19 13:28:44 +0900
+tags: 
 ---
 ## EXPLAIN
 
