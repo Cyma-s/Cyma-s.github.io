@@ -1,7 +1,7 @@
 ---
 title: monitor lock과 synchronized
 date: 2023-08-21 16:31:47 +0900
-updated: 2023-09-22 16:28:13 +0900
+updated: 2023-09-25 00:48:08 +0900
 tags:
   - java
   - os
@@ -217,7 +217,6 @@ monitor ResourceAllocator {
 
 Java 는 스레드 동기화를 위한 모니터와 같은 병생성 기법을 제공한다.  
 `BoundedBuffer` 클래스는 생산자와 소비자 문제의 해결안을 구현한다.
-- [?]  생산자, 소비자 문제란?
 
 Java 의 모든 객체는 하나의 락과 연결되어 있다. 메서드가 `synchronized` 로 선언된 경우 메서드를 호출하려면 객체와 연결된 락을 획득해야 한다.  
 `BoundedBuffer` 클래스의 `insert()` 나 `remove()` 메서드와 같은 메서드를 정의할 때 `synchronized` 를 선언하면 `synchronized` 메서드가 된다. 

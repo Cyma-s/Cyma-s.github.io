@@ -1,7 +1,7 @@
 ---
 title: ViewResolver
 date: 2023-09-19 11:57:44 +0900
-updated: 2023-09-23 17:11:39 +0900
+updated: 2023-09-25 00:16:58 +0900
 tags:
   - spring
 ---
@@ -128,7 +128,9 @@ public UrlBasedViewResolverRegistration jsp(String prefix, String suffix) {
 }
 ```
 
-## 
+## `ContentNegotiatingViewResolver`
+
+`content-type` 이 주어진 경우 사용하는 `ViewResolver` 이다.  
 
 ```java
 package org.springframework.web.servlet.view;  
@@ -403,6 +405,101 @@ public class ContentNegotiatingViewResolver extends WebApplicationObjectSupport
           response.setStatus(HttpServletResponse.SC_NOT_ACCEPTABLE);  
        }  
     };  
+}
+```
+
+## `@ResponseBody`
+
+`@ResponseBody` 어노테이션을 사용하면 메서드 반환값이 뷰를 통해 렌더링 되는 것이 아니라, HTTP Response Body 에 직접 작성된다.  
+
+- `HttpMessageConverter` 메커니즘: `HttpMessageConverter` 구현체들을 사용하여 Java 객체를 HTTP 요청과 응답 메시지로 변환한다.  
+- JSON 변환: `MappingJackson2HttpMessageConverter` 가 Jackson 라이브러리를 사용하여 `HttpMessageConverter` 를 구현한다.  
+
+다음과 같은 과정으로 변환된다.  
+
+1. Controller 메서드가 호출되고 `@ResponseBody` 어노테이션이 있는 메서드의 반환값을 변환해야 할 때, 적절한 `HttpMessageConverter` 를 찾기 위해 등록된 리스트를 순회한다. (JSON 뿐만 아니라 XML, RSS 등 여러 가지 형태가 있을 수 있기 때문이다.)
+2. JSON 변환을 위해 `MappingJackson2HttpMessageConverter` 를 찾아 사용한다.  
+3. `MappingJackson2HttpMessageConverter` 가 Java 객체를 JSON 문자열로 변환한다.  
+4. HTTP Response Body 에 쓰여진다.  
+
+구체적인 코드는 아래에 있다. 
+
+```java
+package org.springframework.http.converter.json;  
+  
+import java.io.IOException;  
+import java.util.Collections;  
+import java.util.List;  
+  
+import com.fasterxml.jackson.core.JsonGenerator;  
+import com.fasterxml.jackson.databind.ObjectMapper;  
+  
+import org.springframework.http.MediaType;  
+import org.springframework.lang.Nullable;  
+  
+public class MappingJackson2HttpMessageConverter extends AbstractJackson2HttpMessageConverter {  
+  
+    private static final List<MediaType> problemDetailMediaTypes =  
+          Collections.singletonList(MediaType.APPLICATION_PROBLEM_JSON);  
+  
+  
+    @Nullable  
+    private String jsonPrefix;  
+  
+  
+    public MappingJackson2HttpMessageConverter() {  
+       this(Jackson2ObjectMapperBuilder.json().build());  
+    }  
+  
+    public MappingJackson2HttpMessageConverter(ObjectMapper objectMapper) {  
+       super(objectMapper, MediaType.APPLICATION_JSON, new MediaType("application", "*+json"));  
+    }  
+  
+  
+    public void setJsonPrefix(String jsonPrefix) {  
+       this.jsonPrefix = jsonPrefix;  
+    }  
+  
+    public void setPrefixJson(boolean prefixJson) {  
+       this.jsonPrefix = (prefixJson ? ")]}', " : null);  
+    }  
+  
+  
+    @Override  
+    protected List<MediaType> getMediaTypesForProblemDetail() {  
+       return problemDetailMediaTypes;  
+    }  
+  
+    @Override  
+    protected void writePrefix(JsonGenerator generator, Object object) throws IOException {  
+       if (this.jsonPrefix != null) {  
+          generator.writeRaw(this.jsonPrefix);  
+       }  
+    }  
+}
+```
+
+`generator.writeRaw()` 는 진짜로 쓰는 코드다.  
+
+```java
+@Override  
+public void writeRaw(String text) throws IOException  
+{  
+    // Nothing to check, can just output as is  
+    int len = text.length();  
+    int room = _outputEnd - _outputTail;  
+  
+    if (room == 0) {  
+        _flushBuffer();  
+        room = _outputEnd - _outputTail;  
+    }  
+    // But would it nicely fit in? If yes, it's easy  
+    if (room >= len) {  
+        text.getChars(0, len, _outputBuffer, _outputTail);  
+        _outputTail += len;  
+    } else {  
+        writeRawLong(text);  
+    }  
 }
 ```
 
