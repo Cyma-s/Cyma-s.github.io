@@ -1,12 +1,13 @@
 ---
-title   : Spring에서 외부 API XML Response 파싱하기
-date    : 2023-07-26 23:27:52 +0900
-updated : 2023-07-26 23:28:16 +0900
-tags     : 
-- spring
-- shook
-- 레벨3
-- 우테코
+title: Spring에서 외부 API XML Response 파싱하기
+date: 2023-07-26 23:27:52 +0900
+updated: 2023-09-25 20:14:34 +0900
+tags:
+  - spring
+  - shook
+  - 레벨3
+  - 우테코
+  - 미완성
 ---
 
 ## 발단

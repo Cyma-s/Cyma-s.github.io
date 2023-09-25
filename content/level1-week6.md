@@ -1,10 +1,10 @@
 ---
-title   : 레벨1 6주차
-date    : 2023-03-14 11:01:55 +0900
-updated : 2023-03-17 10:46:13 +0900
-tags     : 
-- 레벨1
-- 우테코
+title: 레벨1 6주차
+date: 2023-03-14 11:01:55 +0900
+updated: 2023-09-25 22:43:32 +0900
+tags:
+  - 레벨1
+  - 우테코
 ---
 # 3/14
 
@@ -17,13 +17,12 @@ Java에서 JDBC 드라이버를 이용하여 DB와 연결하기
 
 ### 코드
 
-```
+```java
 final UserDao userDao = new UserDao();
 final Connection connection = userDao.getConnection();
-
 ```
 
-```
+```java
 public final class UserDao {
 	public Connection getConnection() {
 	try {

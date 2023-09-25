@@ -1,9 +1,9 @@
 ---
-title   : 왜 ArrayList의 add는 boolean을 리턴할까?
-date    : 2023-02-21 14:56:13 +0900
-updated : 2023-02-27 15:28:47 +0900
-tags     : 
-- 개발
+title: 왜 ArrayList의 add는 boolean을 리턴할까?
+date: 2023-02-21 14:56:13 +0900
+updated: 2023-09-25 22:45:58 +0900
+tags:
+  - 개발
 ---
 **틀린 내용이 있을 수 있습니다. 모든 지적을 환영합니다.**
 
@@ -17,7 +17,7 @@ tags     :
 정답은 Collection 인터페이스에 존재한다.
 Collection에 ```boolean add(E e)``` 의 docs를 확인해보자.
 
-```
+```java
 Returns {@code true} if this collection changed as a result of the call.  
 Returns {@code false} if this collection does not permit duplicates and already contains the specified element.
 ```
@@ -34,7 +34,7 @@ Collection이 이미 요소를 포함하고 있다는 이유 이외의 이유로
 
 ## ArrayList의 add 함수
 
-```
+```java
 public boolean add(E e) {
          modCount++;
          add(e, elementData, size);
@@ -42,7 +42,7 @@ public boolean add(E e) {
      }
 ```
      
-```
+```java
 public void add(int index, E element) {
         rangeCheckForAdd(index);
 	modCount++;
@@ -61,7 +61,7 @@ public void add(int index, E element) {
 - 아래 참고 링크를 통해 답을 유추할 수 있었다. 우리가 add 메서드를 생각할 때, 리턴 타입이 void일 것이라고 예상하는 게 당연하다. 그런데 add 메서드는 Collection 인터페이스에 포함되어 있는 함수로, ArrayList, HashSet 등 Collection 클래스들은 모두 동일한 메서드 시그니처를 오버라이딩하여 구현한다.
 - HashSet의 add 함수는 ArrayList와 달랐다. HashSet의 add는 다음과 같다.
 
-```
+```java
 public boolean add(E e) {
         return map.put(e, PRESENT)==null;
 	    }
