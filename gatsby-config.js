@@ -171,24 +171,27 @@ module.exports = {
               })
             },
             query: `
-              {
-                allMarkdownRemark(
-                  sort: {fields: frontmatter___date, order: DESC}
-                  ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
-                        updated
-                      }
+            {
+              allMarkdownRemark(
+                sort: {frontmatter: {updated: DESC}}
+                filter: {fileAbsolutePath: {nin: "/template/"}}
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    frontmatter {
+                      date
+                      updated
+                      title
+                    }
+                    fields {
+                      slug
                     }
                   }
                 }
               }
+            }
             `,
             output: `/rss.xml`,
             title: `RSS Feed of ${title}`,

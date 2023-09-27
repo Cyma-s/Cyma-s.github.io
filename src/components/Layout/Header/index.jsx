@@ -128,10 +128,8 @@ const LinkWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  text-align: center;
   justify-content: space-between;
   transition: margin-left 0.3s, margin-right 0.3s;
-  margin-right: 2px;
 
   &:hover {
     margin-left: 5px;
