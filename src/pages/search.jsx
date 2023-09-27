@@ -18,6 +18,18 @@ const SearchWrapper = styled.div`
   }
 `
 
+const PostsCount = styled.p`
+    margin-bottom: 25.6px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: 700;
+    color: ${props => props.theme.colors.secondAccentText};
+
+    @media (max-width: 768px) {
+        padding: 0 15px;
+    }
+`
+
 const Search = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
 
@@ -40,10 +52,9 @@ const Search = ({ data }) => {
     <Layout>
       <SEO title={title} description={description} url={siteUrl} />
       <SearchWrapper>
-        <Title size="sm">
-          There are {filteredPosts.length} post{filteredPosts.length > 1 && "s"}
-          .
-        </Title>
+        <PostsCount size="sm">
+          {filteredPosts.length} 개의 글이 있습니다.
+        </PostsCount>
         <TextField
           onChange={e => setQuery(e.target.value)}
           placeholder="Search"
@@ -66,7 +77,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "YYYY년 MM월 DD일 HH:MM")
           title
           tags
         }

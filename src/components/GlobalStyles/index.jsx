@@ -8,7 +8,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Noto Sans KR', sans-serif;
     background: ${props => props.theme.colors.bodyBackground};
   }
-
 `
 
 export default GlobalStyles

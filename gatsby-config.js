@@ -2,7 +2,7 @@ const blogConfig = require("./blog-config")
 const { title, description, author, siteUrl } = blogConfig
 
 module.exports = {
-  pathPrefix: "/gatsby-starter-hoodie",
+  pathPrefix: "/Cyma-s.github.io",
   siteMetadata: {
     title,
     description,
@@ -10,6 +10,15 @@ module.exports = {
     siteUrl,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-MFJ3E8N4SC'],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-robots-txt`,
     {
@@ -62,6 +71,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `attachments`,
+        path: `${__dirname}/contents/posts/attachments`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         commonmark: true,
@@ -69,6 +85,9 @@ module.exports = {
         pedantic: true,
         gfm: true,
         plugins: [
+          require.resolve('./gatsby-remark-image-wiki-link-converter'),
+          require.resolve('./gatsby-remark-obsidian-wiki-link'),
+          require.resolve('./gatsby-remark-wiki-link-custom'),
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -154,8 +173,8 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
+                  sort: {fields: frontmatter___date, order: DESC}
+                  ) {
                   edges {
                     node {
                       excerpt
@@ -164,6 +183,7 @@ module.exports = {
                       frontmatter {
                         title
                         date
+                        updated
                       }
                     }
                   }

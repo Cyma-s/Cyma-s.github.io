@@ -1,0 +1,45 @@
+{
+  "settings": {
+    "migrated": 2,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "🖼",
+      "📂",
+      "📚"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false
+  },
+  "2023.md": {
+    "iconName": "📚",
+    "inheritanceIcon": "📚"
+  },
+  "template": {
+    "iconName": "📂",
+    "inheritanceIcon": "📂"
+  },
+  "attachments": {
+    "iconName": "🖼",
+    "inheritanceIcon": "🖼"
+  },
+  "attachments/obsidian-templater-location.png": {
+    "iconName": "🖼",
+    "inheritanceIcon": "🖼"
+  },
+  "attachments/obsidian-templater-shortcut.png": {
+    "iconName": "🖼",
+    "inheritanceIcon": "🖼"
+  },
+  "attachments/obsidian-templater-new-file.png": "🖼",
+  "attachments/obsidian-templater-template-choose.png": "🖼"
+}

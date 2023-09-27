@@ -24,6 +24,16 @@ const TagListWrapper = styled.div`
   }
 `
 
+const TagTitle = styled.p`
+  color: ${props => props.theme.colors.secondAccentText};
+  display: inline;
+`
+
+const TagPostCount = styled.p`
+  color: ${props => props.theme.colors.secondAccentText};
+  display: inline;
+`
+
 const TagsPage = ({ data }) => {
   const tags = _.sortBy(data.allMarkdownRemark.group, ["totalCount"]).reverse()
   const posts = data.allMarkdownRemark.nodes
@@ -42,13 +52,12 @@ const TagsPage = ({ data }) => {
       return
     }
 
-    setFilteredPosts(
-      filter(posts, post => post.frontmatter.tags.indexOf(selected) !== -1)
-    )
-  }, [selected])
+    const filtered = filter(posts, post => post.frontmatter.tags && post.frontmatter.tags.indexOf(selected) !== -1)
+    setFilteredPosts(filtered)
+  }, [selected, posts])
 
   useEffect(() => {
-    const q = queryString.parse(query)["q"]
+    const q = decodeURIComponent(queryString.parse(query)["q"] || "")
     setSelected(q)
   }, [query])
 
@@ -59,8 +68,7 @@ const TagsPage = ({ data }) => {
       <TagListWrapper>
         {selected ? (
           <Title size="sm">
-            There are {filteredPosts.length} post
-            {filteredPosts.length > 1 && "s"} that match #{selected}.
+            <TagTitle>#{selected}</TagTitle> 에 <TagPostCount>{filteredPosts.length}</TagPostCount>개의 글이 존재합니다.
           </Title>
         ) : (
           <Title size="sm">
@@ -77,7 +85,10 @@ const TagsPage = ({ data }) => {
             if (tag === selected) {
               navigate("/tags")
               alert("zz")
-            } else setSelected(tag)
+            } else {
+              setSelected(tag)
+              navigate(`/tags?q=${tag.fieldValue}`)
+            }
           }}
         />
       </TagListWrapper>
@@ -109,8 +120,8 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          update(formatString: "MMM DD, YYYY")
+          date(formatString: "YYYY년 MM월 DD일 HH:MM")
+          updated(formatString: "YYYY년 MM월 DD일 HH:MM")
           title
           tags
         }

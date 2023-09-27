@@ -1,0 +1,8 @@
+{
+    "name": "gatsby-remark-image-wiki-link-converter",
+    "version": "1.0.0",
+    "description": "A Gatsby Remark plugin to convert special image links",
+    "main": "index.js",
+    "license": "MIT"
+  }
+  

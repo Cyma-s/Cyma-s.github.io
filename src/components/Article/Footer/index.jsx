@@ -199,7 +199,6 @@ const Footer = ({ previous, next }) => {
           </ArticleButton>
         )}
       </ArticleButtonContainer>
-      <Bio />
       <CommentWrapper>
         <Divider mt="32px" />
         <Comment />

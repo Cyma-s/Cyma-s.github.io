@@ -4,10 +4,10 @@ const CommonStyle = css`
   code[class*="language-"],
   pre[class*="language-"] {
     margin-bottom: 24px;
-    font-size: 13.5px;
+    font-size: 14.5px;
     color: #ccc;
     background: none;
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-family: "Bai Jamjuree", monospace;
     text-align: left;
     white-space: pre;
     word-spacing: normal;

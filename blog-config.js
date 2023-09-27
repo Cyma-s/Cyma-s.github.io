@@ -1,17 +1,17 @@
 module.exports = {
-  title: "hoodie",
-  description: "Hello :) I'm Hudi who developed gatsby-starter-hoodie theme.",
-  author: "Hudi",
-  siteUrl: "https://devhudi.github.io/gatsby-starter-hoodie/",
+  title: "VERO WIKI",
+  description: "내가 몰랐던 지식은 모두 VERO WIKI에",
+  author: "VERO",
+  siteUrl: "https://vero.wiki",
   links: {
-    github: "https://github.com/devHudi",
+    github: "https://github.com/Cyma-s",
     linkedIn: "https://linkedin.com",
     facebook: "https://www.facebook.com",
     instagram: "https://www.instagram.com",
-    email: "mailto:devhudi@gmail.com",
+    email: "mailto:sol031988@gmail.com",
   },
   utterances: {
-    repo: "devHudi/gatsby-starter-hoodie",
+    repo: "Cyma-s/Cyma-s.github.io",
     type: "pathname",
   },
 }

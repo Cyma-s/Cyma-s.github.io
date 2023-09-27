@@ -12,6 +12,7 @@ import {
   FaRss,
   FaSearch,
   FaListUl,
+  FaEyeSlash,
 } from "react-icons/fa"
 
 const HeaderWrapper = styled.header`
@@ -69,12 +70,12 @@ const Menu = styled.div`
   }
 
   & svg path {
-    fill: ${props => props.theme.colors.icon};
+    fill: ${props => props.theme.colors.flipAccentText};
     transition: fill 0.3s;
   }
 
   & svg:hover path {
-    fill: ${props => props.theme.colors.text};
+    fill: ${props => props.theme.colors.flipAccentOppositeText};
   }
 `
 
@@ -108,34 +109,72 @@ const IconRail = styled.div`
   }
 `
 
-const Header = ({ toggleTheme }) => {
-  const theme = useTheme()
-  const [scrollY, setScrollY] = useState()
-  const [hidden, setHidden] = useState(false)
+const IconTitle = styled.p`
+  font-size: 10px;
+  color: ${props => props.theme.colors.text};
+  text-decoration: none;
+  display: none;
+  transition: opacity 0.3s, transform 0.3s, margin-top 0.3s;
 
-  const detectScrollDirection = () => {
-    if (scrollY >= window.scrollY) {
-      // scroll up
-      setHidden(false)
-    } else if (scrollY < window.scrollY && 400 <= window.scrollY) {
-      // scroll down
-      setHidden(true)
-    }
+  &.active {
+    display: block;
+    opacity: 1;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+`;
 
-    setScrollY(window.scrollY)
+const LinkWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  transition: margin-left 0.3s, margin-right 0.3s;
+  margin-right: 2px;
+
+  &:hover {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
+  &:hover svg path {
+    fill: ${props => props.theme.colors.flipAccentOppositeText};
+  }
+
+  & > a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+  }
+`;
+
+const Header = ({ toggleTheme }) => {
+  const theme = useTheme()
+  const [hidden, setHidden] = useState(false)
+  const [hoveredIndex, setHoveredIndex] = useState(null) // 추가된 상태
+
   useEffect(() => {
-    window.addEventListener("scroll", detectScrollDirection)
+    const detectScrollDirection = () => {
+      setHidden(window.scrollY > 400);
+    };
+
+    window.addEventListener("scroll", detectScrollDirection);
 
     return () => {
-      window.removeEventListener("scroll", detectScrollDirection)
-    }
-  }, [scrollY])
-
-  useEffect(() => {
-    setScrollY(window.scrollY)
+      window.removeEventListener("scroll", detectScrollDirection);
+    };
   }, [])
+
+  const menuItems = [
+    {to: "/tags", icon: <FaTags />, title: "전체 태그"},
+    {to: "/series", icon: <FaListUl />, title: "전체 시리즈"},
+    {to: "/rss.xml", icon: <FaRss />, title: "RSS"},
+    {to: "/search", icon: <FaSearch />, title: "전체 글 검색"},
+    {to: "/all", icon: <FaEyeSlash />, title: "전체 글 보기"},
+  ]
 
   return (
     <HeaderWrapper isHidden={hidden}>
@@ -144,24 +183,23 @@ const Header = ({ toggleTheme }) => {
           <Link to="/">{title}</Link>
         </BlogTitle>
         <Menu>
-          <ToggleWrapper>
+          <ToggleWrapper onClick={toggleTheme}>
             <IconRail theme={theme.name}>
-              <FaSun onClick={toggleTheme} />
-              <FaMoon onClick={toggleTheme} />
+              <FaSun />
+              <FaMoon />
             </IconRail>
           </ToggleWrapper>
-          <Link to="/tags">
-            <FaTags />
-          </Link>
-          <Link to="/series">
-            <FaListUl />
-          </Link>
-          <Link to="/rss.xml">
-            <FaRss />
-          </Link>
-          <Link to="/search">
-            <FaSearch style={{ marginRight: 0 }} />
-          </Link>
+          {menuItems.map((item, index) => (
+            <LinkWrapper key={index}
+            onMouseEnter={() => setHoveredIndex(index)} // 마우스가 들어올 때
+            onMouseLeave={() => setHoveredIndex(null)} // 마우스가 나갈 때
+            >
+              <Link to={item.to}>
+                {item.icon}
+                <IconTitle className={hoveredIndex === index ? "active" : ""}>{item.title}</IconTitle>
+              </Link>
+            </LinkWrapper>
+          ))}
         </Menu>
       </Inner>
     </HeaderWrapper>

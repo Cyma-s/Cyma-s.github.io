@@ -9,7 +9,7 @@ const RelativeWrapper = styled.div`
 
 const Wrapper = styled.aside`
   position: absolute;
-  left: 112%;
+  left: 117%;
   top: 0px;
   width: 200px;
   height: 100px;
@@ -23,7 +23,7 @@ const Wrapper = styled.aside`
 const Title = styled.div`
   margin-bottom: 25px;
   font-weight: bold;
-  color: ${props => props.theme.colors.secondaryText};
+  color: ${props => props.theme.colors.flipAccentText};
 `
 
 const Tag = styled.li`

@@ -1,0 +1,8 @@
+{
+    "name": "gatsby-remark-obsidian-wiki-link",
+    "version": "1.0.0",
+    "description": "A Gatsby Remark plugin to convert wiki link into link",
+    "main": "index.js",
+    "license": "MIT"
+  }
+  

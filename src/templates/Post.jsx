@@ -11,7 +11,7 @@ const Post = ({ data }) => {
   const post = data.markdownRemark
   const { previous, next, seriesList } = data
 
-  const { title, date, update, tags, series } = post.frontmatter
+  const { title, date, updated, tags, series } = post.frontmatter
   const { excerpt } = post
   const { readingTime, slug } = post.fields
 
@@ -39,7 +39,7 @@ const Post = ({ data }) => {
         <Article.Header
           title={title}
           date={date}
-          update={update}
+          updated={updated}
           tags={tags}
           minToRead={Math.round(readingTime.minutes)}
         />
@@ -73,8 +73,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        update(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY년 MM월 DD일 HH:MM")
+        updated(formatString: "YYYY년 MM월 DD일 HH:MM")
         tags
         series
       }

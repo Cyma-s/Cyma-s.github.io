@@ -194,7 +194,7 @@ const StyledMarkdown = styled.div`
 
   & code[class*="language-"],
   & pre[class*="language-"] {
-    font-size: 13.5px;
+    font-size: 15px;
   }
 
   & img {
@@ -217,13 +217,24 @@ const StyledMarkdown = styled.div`
     border-bottom: 1px solid ${props => props.theme.colors.border};
   }
 
+  & a[data-wiki-link="true"] {
+    color: ${props => props.theme.colors.flipAccentText};
+    background-color: none;
+    text-decoration: none;
+  }
+
+  & a[data-wiki-link="true"]:hover {
+    color: ${props => props.theme.colors.flipAccentOppositeText};
+    text-decoration: underline;
+  }
+
   & a {
     padding: 1.6px 0;
     color: ${props => props.theme.colors.text};
   }
 
   & a:hover {
-    background-color: ${props => props.theme.colors.text};
+    background-color: none;
     color: ${props => props.theme.colors.hoveredLinkText};
   }
 `

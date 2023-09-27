@@ -61,11 +61,11 @@ const ParagraphTitle = styled.div`
     props.active &&
     css`
       transform: translate(-11.2px, 0);
-      color: ${props => props.theme.colors.secondaryText};
+      color: ${props => props.theme.colors.accentText};
     `}
 
   &:hover {
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.secondAccentText};
     cursor: pointer;
   }
 `

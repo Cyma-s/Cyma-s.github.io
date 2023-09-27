@@ -16,6 +16,7 @@ import { siteUrl, description, author, links } from "../../../blog-config"
 const BioWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 
   @media (max-width: 768px) {
     padding: 0 15px;
@@ -30,8 +31,8 @@ const profileImageRoot =
 const Profile = styled.div`
   flex: 0 0 auto;
   margin-right: 16px;
-  width: 128px;
-  height: 128px;
+  width: 50px;
+  height: 50px;
   border-radius: 999px;
   background-image: url(${profileImageRoot}/profile.png);
   background-size: cover;
@@ -40,16 +41,9 @@ const Profile = styled.div`
 
 const Author = styled.div`
   margin-bottom: 4.8px;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
   color: ${props => props.theme.colors.text};
-`
-
-const Description = styled.div`
-  margin-bottom: 11.2px;
-  line-height: 1.5;
-  font-size: 16px;
-  color: ${props => props.theme.colors.secondaryText};
 `
 
 const LinksWrapper = styled.div`
@@ -69,7 +63,7 @@ const LinksWrapper = styled.div`
   }
 
   & a:hover svg path {
-    fill: ${props => props.theme.colors.text};
+    fill: ${props => props.theme.colors.secondAccentText};
   }
 `
 
@@ -90,28 +84,9 @@ const Bio = () => {
       <Profile />
       <div>
         <Author>@{author}</Author>
-        <Description>{description}</Description>
         <LinksWrapper>
           <Link link={github}>
             <FaGithub />
-          </Link>
-          <Link link={kaggle}>
-            <FaKaggle />
-          </Link>
-          <Link link={instagram}>
-            <FaInstagram />
-          </Link>
-          <Link link={facebook}>
-            <FaFacebook />
-          </Link>
-          <Link link={linkedIn}>
-            <FaLinkedin />
-          </Link>
-          <Link link={email}>
-            <FaEnvelope />
-          </Link>
-          <Link link={etc}>
-            <FaLink />
           </Link>
         </LinksWrapper>
       </div>
