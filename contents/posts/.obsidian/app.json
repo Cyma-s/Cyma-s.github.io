@@ -1,0 +1,9 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "attachments",
+  "spellcheck": false,
+  "foldHeading": true,
+  "readableLineLength": false,
+  "showLineNumber": false,
+  "propertiesInDocument": "source"
+}

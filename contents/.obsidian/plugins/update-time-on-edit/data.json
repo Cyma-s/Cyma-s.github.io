@@ -1,0 +1,14 @@
+{
+  "dateFormat": "yyyy-MM-dd HH:mm:ss xx",
+  "enableCreateTime": true,
+  "headerUpdated": "updated",
+  "headerCreated": "date",
+  "minMinutesBetweenSaves": 1,
+  "ignoreGlobalFolder": [
+    "attachments",
+    "template"
+  ],
+  "ignoreCreatedFolder": [
+    "attachments"
+  ]
+}

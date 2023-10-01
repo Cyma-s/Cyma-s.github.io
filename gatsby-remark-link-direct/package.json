@@ -1,0 +1,8 @@
+{
+    "name": "gatsby-remark-link-direct",
+    "version": "1.0.0",
+    "description": "A Gatsby Remark plugin to link direct",
+    "main": "index.js",
+    "license": "MIT"
+  }
+  
