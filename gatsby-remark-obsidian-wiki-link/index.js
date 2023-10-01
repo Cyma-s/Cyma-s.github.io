@@ -30,7 +30,7 @@ module.exports = ({ markdownAST }) => {
         // 매치를 링크 노드로 변환
         newNodes.push({
           type: "link",
-          url: link,
+          url: `/${link}`,
           title: null,
           // alias가 없으면 link를 텍스트로 사용합니다.
           children: [{ type: "text", value: alias || link }],

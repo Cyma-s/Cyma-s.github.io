@@ -78,14 +78,6 @@ const Toc = ({ items, articleOffset }) => {
   const [active, setActive] = useState(0)
 
   useEffect(() => {
-    const bioElm = document.getElementById("bio")
-
-    setRevealAt(
-      getElementOffset(bioElm).top - bioElm.getBoundingClientRect().height - 400
-    )
-  }, [])
-
-  useEffect(() => {
     setHeaders(
       [
         ...document.querySelectorAll("#article-body > h2, #article-body > h3"),
