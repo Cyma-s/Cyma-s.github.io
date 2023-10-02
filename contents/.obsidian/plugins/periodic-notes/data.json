@@ -4,7 +4,7 @@
   "hasMigratedWeeklyNoteSettings": false,
   "daily": {
     "format": "YYYY-MM-DD",
-    "folder": "/",
+    "folder": "posts",
     "template": "template/TIL",
     "enabled": true
   },

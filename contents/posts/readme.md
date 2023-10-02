@@ -1,10 +1,8 @@
 ---
-title: readme
+title: VERO WIKI
 date: 2023-08-01 22:38:31 +0900
-updated: 2023-09-19 22:21:05 +0900
-tags: 
+updated: 2023-09-20 00:13:37 +0900
 ---
-# VERO WIKI
 
 **⚖️ 공부한 것, 일기를 적는 개인 위키입니다**
 

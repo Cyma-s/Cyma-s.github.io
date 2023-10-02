@@ -11,12 +11,6 @@ import VerticalSpace from "components/VerticalSpace"
 import { title, description, siteUrl } from "../../blog-config"
 import SidePostList from "components/SidePostList"
 
-function isIndex(element)  {
-  if(element.frontmatter.title === 'readme')  {
-    return true;
-  }
-}
-
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
   const tags = _.sortBy(data.allMarkdownRemark.group, ["totalCount"]).reverse()
@@ -47,33 +41,33 @@ const BlogIndex = ({ data }) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query BlogIndex {
-    site {
-      siteMetadata {
+query BlogIndex {
+  site {
+    siteMetadata {
+      title
+    }
+  }
+  markdownRemark(frontmatter: {title: {eq: "VERO WIKI"}}) {
+    html
+  }
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    group(field: {frontmatter: {tags: SELECT}}) {
+      fieldValue
+      totalCount
+    }
+    nodes {
+      excerpt
+      fields {
+        slug
+      }
+      frontmatter {
+        date(formatString: "YYYY년 MM월 DD일 HH:MM")
+        updated(formatString: "YYYY년 MM월 DD일 HH:MM")
         title
-      }
-    }
-    markdownRemark(frontmatter: {title: {eq: "readme"}}) {
-      html
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "YYYY년 MM월 DD일 HH:MM")
-          updated(formatString: "YYYY년 MM월 DD일 HH:MM")
-          title
-          description
-          tags
-        }
+        description
+        tags
       }
     }
   }
+}
 `

@@ -1,10 +1,10 @@
 ---
-title   : Mock vs MockBean
-date    : 2023-04-24 19:28:47 +0900
-updated : 2023-04-24 19:29:11 +0900
-tags     : 
-- 개발
-- spring
+title: Mock vs MockBean
+date: 2023-04-24 19:28:47 +0900
+updated: 2023-09-25 22:47:25 +0900
+tags:
+  - 개발
+  - spring
 ---
 
 ## Mockito.mock()
@@ -110,7 +110,7 @@ class RacingCarControllerTest {
 
 `@MockBean` 을 사용해야 하는 `RacingCarService` 를 `@Mock` 으로 선언하게 되면, `RacingCarController` 에서 필요한 `RacingCarService` 를 auto-wiring 할 수 없게 된다.
 
-```
+```shell
 Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'racingcar.service.RacingCarService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 ```
 
