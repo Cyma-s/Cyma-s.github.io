@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://vero.wiki//sitemap/sitemap-index.xml
+Sitemap: https://vero.wiki/sitemap-index.xml
 Host: https://vero.wiki
