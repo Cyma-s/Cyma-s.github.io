@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/readme.md",
+                "file": "posts/2023-10-02.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/readme.md",
+                "file": "posts/2023-10-02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/readme.md",
+                "file": "posts/2023-10-02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/readme.md"
+                "file": "posts/2023-10-02.md"
               }
             }
           },
@@ -172,33 +172,35 @@
   },
   "active": "25254f87445b41e2",
   "lastOpenFiles": [
+    "2023-10-02.md",
     "posts/2023-10-02.md",
+    "posts/2023-10-01.md",
+    "posts/2023-09-19.md",
+    "template/template.md",
+    "template/TIL.md",
+    "template",
+    "posts/view-resolver.md",
+    "posts/shook-sixth-demoday-function.md",
+    "posts/shook-nickname-update-issue.md",
+    "posts/monitor-lock-and-java-synchoronized.md",
+    "posts/meeting-process-refactoring-request.md",
+    "posts/level4-db-connection-pool.md",
+    "posts/jdbctemplate.md",
+    "posts/attachments/monitor-wait-set.png",
+    "posts/application-context-aware.md",
+    "posts/2023-09-27.md",
+    "posts/2023-09-26.md",
+    "posts/2023-09-25.md",
+    "posts/2023-09-24.md",
+    "posts/2023-09-21.md",
+    "posts/2023-09-20.md",
+    "posts/readme.md",
     "posts/2023-09-16.md",
     "posts/2023.md",
-    "template/template.md",
     "posts/template/template.md",
-    "template/TIL.md",
     "posts/template/TIL.md",
     "2023-09-20.md",
-    "obsidian-plugin.md",
-    "2023-09-19.md",
-    "wooteco.md",
-    "wooteco-ot.md",
-    "wooteco-ux.md",
-    "writing-subject-candidate.md",
     "무제 폴더",
-    "short-programming-knowledge.md",
-    "readme.md",
-    "assertj.md",
-    "level1-week2.md",
-    "onboarding-week1.md",
-    "level1-week3.md",
-    "2023-03-02.md",
-    "level1-week4.md",
-    "2023-03-05.md",
-    "2023-03-06.md",
-    "level1-blackjack.md",
-    "2023-03-07.md",
     "attachments/Pasted image 20230919132328.png",
     "attachments/obsidian-admonition-prefix.png",
     "attachments/obsidian-callout.png",
@@ -208,8 +210,6 @@
     "attachments/obsidian-outliner-setting.png",
     "attachments/obsidian-natural-language-dates.png",
     "attachments/obsidian-calendar-view.png",
-    "attachments/obsidian-date-format.png",
-    "template",
     "무제 파일.canvas"
   ]
 }

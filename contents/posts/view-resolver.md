@@ -1,7 +1,7 @@
 ---
 title: ViewResolver
 date: 2023-09-19 11:57:44 +0900
-updated: 2023-09-25 00:16:58 +0900
+updated: 2023-10-02 23:17:51 +0900
 tags:
   - spring
 ---

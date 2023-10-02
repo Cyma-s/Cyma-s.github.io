@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "readme",
-      "path": "posts/readme.md"
-    },
-    {
       "basename": "2023-10-02",
       "path": "posts/2023-10-02.md"
+    },
+    {
+      "basename": "2023-10-01",
+      "path": "posts/2023-10-01.md"
+    },
+    {
+      "basename": "2023-09-19",
+      "path": "posts/2023-09-19.md"
+    },
+    {
+      "basename": "readme",
+      "path": "posts/readme.md"
     },
     {
       "basename": "2023-09-16",
@@ -15,14 +23,6 @@
     {
       "basename": "2023",
       "path": "posts/2023.md"
-    },
-    {
-      "basename": "template",
-      "path": "template/template.md"
-    },
-    {
-      "basename": "TIL",
-      "path": "template/TIL.md"
     },
     {
       "basename": "obsidian-plugin",
@@ -195,10 +195,6 @@
     {
       "basename": "2023-03-27",
       "path": "2023-03-27.md"
-    },
-    {
-      "basename": "functional-interface",
-      "path": "functional-interface.md"
     }
   ],
   "omittedPaths": [],

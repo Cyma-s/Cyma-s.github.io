@@ -1,5 +1,5 @@
 {
   "template": "template/TIL",
   "format": "YYYY-MM-DD",
-  "folder": "/"
+  "folder": "posts"
 }

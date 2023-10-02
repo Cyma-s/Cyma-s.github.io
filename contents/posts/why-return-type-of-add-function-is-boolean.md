@@ -1,7 +1,7 @@
 ---
 title: 왜 ArrayList의 add는 boolean을 리턴할까?
 date: 2023-02-21 14:56:13 +0900
-updated: 2023-09-25 22:45:58 +0900
+updated: 2023-10-02 23:17:50 +0900
 tags:
   - 개발
 ---

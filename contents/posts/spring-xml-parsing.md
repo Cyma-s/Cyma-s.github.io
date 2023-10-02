@@ -1,7 +1,7 @@
 ---
 title: Spring에서 외부 API XML Response 파싱하기
 date: 2023-07-26 23:27:52 +0900
-updated: 2023-09-25 20:14:34 +0900
+updated: 2023-10-02 23:17:50 +0900
 tags:
   - spring
   - shook

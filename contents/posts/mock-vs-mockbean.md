@@ -1,7 +1,7 @@
 ---
 title: Mock vs MockBean
 date: 2023-04-24 19:28:47 +0900
-updated: 2023-09-25 22:47:25 +0900
+updated: 2023-10-02 23:17:50 +0900
 tags:
   - 개발
   - spring
