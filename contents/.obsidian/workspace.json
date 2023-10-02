@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "template/template.md",
+                "file": "posts/readme.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "template/template.md",
+                "file": "posts/readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "template/template.md",
+                "file": "posts/readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "template/template.md"
+                "file": "posts/readme.md"
               }
             }
           },
@@ -172,9 +172,14 @@
   },
   "active": "25254f87445b41e2",
   "lastOpenFiles": [
-    "2023-09-20.md",
+    "posts/2023-10-02.md",
+    "posts/2023-09-16.md",
+    "posts/2023.md",
     "template/template.md",
+    "posts/template/template.md",
     "template/TIL.md",
+    "posts/template/TIL.md",
+    "2023-09-20.md",
     "obsidian-plugin.md",
     "2023-09-19.md",
     "wooteco.md",
@@ -194,11 +199,6 @@
     "2023-03-06.md",
     "level1-blackjack.md",
     "2023-03-07.md",
-    "level1-week5.md",
-    "2023-03-08.md",
-    "2023-03-09.md",
-    "2023-03-10.md",
-    "2023-03-12.md",
     "attachments/Pasted image 20230919132328.png",
     "attachments/obsidian-admonition-prefix.png",
     "attachments/obsidian-callout.png",

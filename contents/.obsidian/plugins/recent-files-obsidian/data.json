@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "readme",
+      "path": "posts/readme.md"
+    },
+    {
+      "basename": "2023-10-02",
+      "path": "posts/2023-10-02.md"
+    },
+    {
+      "basename": "2023-09-16",
+      "path": "posts/2023-09-16.md"
+    },
+    {
+      "basename": "2023",
+      "path": "posts/2023.md"
+    },
+    {
       "basename": "template",
       "path": "template/template.md"
     },
@@ -183,18 +199,6 @@
     {
       "basename": "functional-interface",
       "path": "functional-interface.md"
-    },
-    {
-      "basename": "2023-04-01",
-      "path": "2023-04-01.md"
-    },
-    {
-      "basename": "2023-03-31",
-      "path": "2023-03-31.md"
-    },
-    {
-      "basename": "2023-04-05",
-      "path": "2023-04-05.md"
     }
   ],
   "omittedPaths": [],

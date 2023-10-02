@@ -124,5 +124,31 @@
       ],
       "key": "Y"
     }
+  ],
+  "table-editor-obsidian:table-control-bar": [],
+  "obsidian-tasks-plugin:edit-task": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "T"
+    }
+  ],
+  "random-note": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
+    }
+  ],
+  "editor:toggle-blockquote": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "."
+    }
   ]
 }
