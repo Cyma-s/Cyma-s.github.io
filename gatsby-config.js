@@ -10,6 +10,7 @@ module.exports = {
     siteUrl,
   },
   plugins: [
+	`gatsby-plugin-cname`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
