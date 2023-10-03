@@ -150,5 +150,14 @@
       ],
       "key": "."
     }
+  ],
+  "global-search:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "F"
+    }
   ]
 }

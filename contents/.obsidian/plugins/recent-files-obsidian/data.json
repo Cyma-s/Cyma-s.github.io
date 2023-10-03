@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "hikaricp",
+      "path": "posts/hikaricp.md"
+    },
+    {
+      "basename": "2023-10-03",
+      "path": "posts/2023-10-03.md"
+    },
+    {
+      "basename": "matzip-aws",
+      "path": "posts/matzip-aws.md"
+    },
+    {
+      "basename": "matzip-aws-iam",
+      "path": "posts/matzip-aws-iam.md"
+    },
+    {
+      "basename": "matzip-aws-s3-cloudfront",
+      "path": "posts/matzip-aws-s3-cloudfront.md"
+    },
+    {
       "basename": "2023-10-02",
       "path": "posts/2023-10-02.md"
     },
@@ -179,22 +199,6 @@
     {
       "basename": "level1-writing",
       "path": "level1-writing.md"
-    },
-    {
-      "basename": "2023-03-26",
-      "path": "2023-03-26.md"
-    },
-    {
-      "basename": "2023-03-29",
-      "path": "2023-03-29.md"
-    },
-    {
-      "basename": "2023-03-30",
-      "path": "2023-03-30.md"
-    },
-    {
-      "basename": "2023-03-27",
-      "path": "2023-03-27.md"
     }
   ],
   "omittedPaths": [],

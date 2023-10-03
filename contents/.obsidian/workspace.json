@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-10-02.md",
+                "file": "posts/2023-10-03.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e820c8cae8bb163a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/hikaricp.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "짧은 개발",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +86,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -94,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-10-02.md",
+                "file": "posts/hikaricp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-10-02.md",
+                "file": "posts/hikaricp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-10-02.md"
+                "file": "posts/hikaricp.md"
               }
             }
           },
@@ -170,10 +184,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "25254f87445b41e2",
+  "active": "e820c8cae8bb163a",
   "lastOpenFiles": [
-    "2023-10-02.md",
+    "posts/2023-10-03.md",
+    "posts/matzip-aws.md",
+    "posts/matzip-aws-iam.md",
+    "posts/matzip-aws-s3-cloudfront.md",
+    "posts/hikaricp.md",
     "posts/2023-10-02.md",
+    "2023-10-02.md",
     "posts/2023-10-01.md",
     "posts/2023-09-19.md",
     "template/template.md",
@@ -195,11 +214,6 @@
     "posts/2023-09-21.md",
     "posts/2023-09-20.md",
     "posts/readme.md",
-    "posts/2023-09-16.md",
-    "posts/2023.md",
-    "posts/template/template.md",
-    "posts/template/TIL.md",
-    "2023-09-20.md",
     "무제 폴더",
     "attachments/Pasted image 20230919132328.png",
     "attachments/obsidian-admonition-prefix.png",

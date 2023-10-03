@@ -3,14 +3,9 @@ import { navigate } from "gatsby"
 import { useSelector } from "react-redux"
 import styled, { useTheme } from "styled-components"
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi"
-import { Utterances } from "utterances-react-component"
-
-import { utterances } from "../../../../blog-config"
-
+import Giscus from "@giscus/react";
 import MDSpinner from "react-md-spinner"
-
 import Divider from "components/Divider"
-import Bio from "components/Bio"
 
 const ArticleButtonContainer = styled.div`
   display: flex;
@@ -148,7 +143,7 @@ const Spinner = () => {
   )
 }
 
-const Comment = () => {
+const Comment = (title) => {
   const { theme } = useSelector(state => state.theme)
   const [spinner, setSpinner] = useState(true)
 
@@ -164,25 +159,39 @@ const Comment = () => {
 
       <HiddenWrapper isHidden={spinner}>
         <HiddenWrapper isHidden={theme === "light"}>
-          <Utterances
-            repo={utterances.repo}
-            theme={`github-dark`}
-            issueTerm={utterances.type}
-          />
+        <Giscus
+              repo="Cyma-s/Cyma-s.github.io"
+              repoId="R_kgDOI27ORg"
+              category="General"
+              categoryId="DIC_kwDOI27ORs4CUCCw"
+              mapping="specific"
+        term={title}
+              reactionsEnabled="1"
+              emitMetadata="0"
+              lang="ko"
+              theme="dark"
+            />
         </HiddenWrapper>
         <HiddenWrapper isHidden={theme === "dark"}>
-          <Utterances
-            repo={utterances.repo}
-            theme={`github-light`}
-            issueTerm={utterances.type}
-          />
+          <Giscus
+              repo="Cyma-s/Cyma-s.github.io"
+              repoId="R_kgDOI27ORg"
+              category="General"
+              categoryId="DIC_kwDOI27ORs4CUCCw"
+              mapping="specific"
+              term={title}
+              reactionsEnabled="1"
+              emitMetadata="0"
+              lang="ko"
+              theme="light"
+            />
         </HiddenWrapper>
       </HiddenWrapper>
     </>
   )
 }
 
-const Footer = ({ previous, next }) => {
+const Footer = ({ previous, next, title }) => {
   return (
     <>
       <ArticleButtonContainer>
@@ -201,7 +210,7 @@ const Footer = ({ previous, next }) => {
       </ArticleButtonContainer>
       <CommentWrapper>
         <Divider mt="32px" />
-        <Comment />
+        <Comment title={title}/>
       </CommentWrapper>
     </>
   )

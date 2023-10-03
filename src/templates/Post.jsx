@@ -47,7 +47,7 @@ const Post = ({ data }) => {
           <Article.Series header={series} series={filteredSeries} />
         )}
         <Article.Body html={post.html} />
-        <Article.Footer previous={previous} next={next} />
+        <Article.Footer previous={previous} next={next} title={title} />
       </Article>
     </Layout>
   )
