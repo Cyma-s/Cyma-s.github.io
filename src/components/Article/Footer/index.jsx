@@ -3,9 +3,9 @@ import { navigate } from "gatsby"
 import { useSelector } from "react-redux"
 import styled, { useTheme } from "styled-components"
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi"
-import Giscus from "@giscus/react";
 import MDSpinner from "react-md-spinner"
 import Divider from "components/Divider"
+import Giscus from "@giscus/react"
 
 const ArticleButtonContainer = styled.div`
   display: flex;
@@ -143,7 +143,7 @@ const Spinner = () => {
   )
 }
 
-const Comment = (title) => {
+const Comment = ({title}) => {
   const { theme } = useSelector(state => state.theme)
   const [spinner, setSpinner] = useState(true)
 
@@ -160,12 +160,13 @@ const Comment = (title) => {
       <HiddenWrapper isHidden={spinner}>
         <HiddenWrapper isHidden={theme === "light"}>
         <Giscus
+              id="comments"
               repo="Cyma-s/Cyma-s.github.io"
               repoId="R_kgDOI27ORg"
               category="General"
               categoryId="DIC_kwDOI27ORs4CUCCw"
-              mapping="specific"
-        term={title}
+              mapping="title"
+              term={title}
               reactionsEnabled="1"
               emitMetadata="0"
               lang="ko"
@@ -174,11 +175,12 @@ const Comment = (title) => {
         </HiddenWrapper>
         <HiddenWrapper isHidden={theme === "dark"}>
           <Giscus
+              id="comments"
               repo="Cyma-s/Cyma-s.github.io"
               repoId="R_kgDOI27ORg"
               category="General"
               categoryId="DIC_kwDOI27ORs4CUCCw"
-              mapping="specific"
+              mapping="title"
               term={title}
               reactionsEnabled="1"
               emitMetadata="0"
