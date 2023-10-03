@@ -1,7 +1,7 @@
 ---
 title: hikariCP
 date: 2023-10-03 14:45:52 +0900
-updated: 2023-10-03 16:05:02 +0900
+updated: 2023-10-03 17:39:36 +0900
 tags:
   - spring
   - 레벨4
@@ -32,8 +32,6 @@ hikariCP 가 빠른 이유는 다음과 같다.
 1. 바이트코드 수준의 엔지니어링: 어셈블리 수준의 네이티브 코딩을 포함한 극한의 바이트코드 수준 엔지니어링이 수행되었다.
 2. 마이크로 최적화: 측정하기는 어렵지만, 최적화가 결합되어 전반적인 성능을 향상시켰다.
 3. `Collections` 프레임워크의 똑똑한 사용: range chacking 을 제거하고, head to tail 제거 스캔을 수행하는 사용자 정의 클래스인 `FastList` 로 `ArrayList<Statement>` 를 대체했다.  
-
-### Spring 이 hikariCP 를 채택한 이유
 
 ## `HikariConfig`
 
@@ -69,10 +67,13 @@ private static HikariConfig config = new HikariConfig(
 
 다음과 같은 특성들이 필요하다.  
 
-```yml
-dataSourceClassName= //TBD
-dataSource.user= //TBD
-//other properties name should start with dataSource as shown above
+```properties
+dataSourceClassName=org.postgresql.ds.PGSimpleDataSource
+dataSource.user=test
+dataSource.password=test
+dataSource.databaseName=mydb
+dataSource.portNumber=5432
+dataSource.serverName=localhost
 ```
 
 ## 자주 사용되는 property
@@ -122,16 +123,61 @@ dataSource.user= //TBD
 HikariCP 가 풀에서 유지하려고 시도하는 최소 유휴 커넥션 수를 제어한다.  
 유휴 커넥션이 이 값 아래로 떨어지고, 풀의 총 커넥션 수가 최대 풀 크기보다 작아지면 커넥션을 추가한다.  
 성능과 급증하는 요청에 대한 응답성을 극대화하기 위해서는 해당 값을 설정하지 않고, HikariCP가 고정 크기 연결 풀로 작동하도록 하는 것이 좋다.  
-기본값: `maximumPoolSize` 와 동일
+**기본값은 `maximumPoolSize` 와 동일**
 
+- `maximumPoolSize`
+유휴 커넥션과 사용 중인 커넥션을 모두 포함해서 풀이 가질 수 있는 최대 크기를 제어한다.  
+기본적으로 해당 값에 따라 데이터베이스 백엔드의 실제 최대 커넥션 수가 결정된다.  
+풀이 이 크기에 도달하고, 사용 가능한 유휴 커넥션이 없는 경우, `getConnection()` 호출은 time out 전까지 최대 `connectionTimeout` 밀리초 동안 block 된다.  
+**기본값은 10**
 
+### 주의할 것
+
+지나치게 많은 값을 `maximumPoolSize` 로 잡지 않도록 주의해야 한다.  
+자세한 내용은 [[about-pool-sizing]] 에서 확인하자. 
 
 ## 튜닝이 필요한 이유
 
-## hikariCP configuration
+- 불필요하게 많은 커넥션을 유지하게 되면 메모리, 시스템 리소스가 낭비된다.  
+- 데이터베이스 커넥션을 생성 / 종료하는 것은 리소스를 많이 소모한다. 적절한 수의 커넥션을 유지하여 애플리케이션이 데이터베이스에 더 빠르게 액세스할 수 있다.  
+- 특정 상황에서 너무 많은 커넥션 요청이 있을 때 데드락이 발생할 수 있는데, 커넥션 풀 튜닝으로 이런 문제들을 예방할 수 있다.
+
+## MySQL 권장 설정
+
+- `prepStmtCacheSize`
+MySQL 드라이버가 커넥션 당 캐시할 `PreparedStatement` 수를 설정한다. 250-500 사이로 설정하는 것이 좋다.  
+**기본값은 25**
+
+- `prepStmtCacheSqlLimit`
+드라이버가 캐시할 `PreparedStatement` SQL 문의 최대 길이이다. MySQL 기본값은 256이다. Hibernate 와 같은 ORM 프레임워크의 경우 기본값은 생성되는 statement 의 길이보다 작은 편이다. **권장 설정 값은 2048이다.**
+
+- `cachePrepStmts`
+캐시가 기본적으로 비활성화되어 있는 경우, 위의 매개변수 중 어느 것도 영향을 미치지 않으므로 해당 매개변수를 true 로 설정해야 한다.  
+
+- `useServerPrepStmts`
+최신 버전의 MySQL 은 server-side `PreparedStatement` 를 지원하므로, 성능이 크게 향상될 수 있다. 해당 속서을 true 로 설정한다.  
+
+HikariCP 의 일반적인 MySQL 설정은 다음과 같다.  
+
+```properties
+jdbcUrl=jdbc:mysql://localhost:3306/simpsons
+username=test
+password=test
+dataSource.cachePrepStmts=true
+dataSource.prepStmtCacheSize=250
+dataSource.prepStmtCacheSqlLimit=2048
+dataSource.useServerPrepStmts=true
+dataSource.useLocalSessionState=true
+dataSource.rewriteBatchedStatements=true
+dataSource.cacheResultSetMetadata=true
+dataSource.cacheServerConfiguration=true
+dataSource.elideSetAutoCommits=true
+dataSource.maintainTimeStats=false
+```
 
 ## 참고
 
 - https://en.wikipedia.org/wiki/Connection_pool
 - https://www.baeldung.com/hikaricp
 - [hikariCP 공식 Github](https://github.com/brettwooldridge/HikariCP)
+- https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration

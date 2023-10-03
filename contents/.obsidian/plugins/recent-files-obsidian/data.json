@@ -5,6 +5,14 @@
       "path": "posts/hikaricp.md"
     },
     {
+      "basename": "about-pool-sizing",
+      "path": "posts/about-pool-sizing.md"
+    },
+    {
+      "basename": "jdbctemplate",
+      "path": "posts/jdbctemplate.md"
+    },
+    {
       "basename": "2023-10-03",
       "path": "posts/2023-10-03.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "2023-03-24",
       "path": "2023-03-24.md"
-    },
-    {
-      "basename": "2023-03-25",
-      "path": "2023-03-25.md"
-    },
-    {
-      "basename": "level1-writing",
-      "path": "level1-writing.md"
     }
   ],
   "omittedPaths": [],
