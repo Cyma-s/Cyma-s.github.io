@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "hikaricp",
-      "path": "posts/hikaricp.md"
+      "basename": "transaction-and-spring-transaction",
+      "path": "posts/transaction-and-spring-transaction.md"
+    },
+    {
+      "basename": "transactional",
+      "path": "posts/transactional.md"
+    },
+    {
+      "basename": "transaction",
+      "path": "posts/transaction.md"
     },
     {
       "basename": "about-pool-sizing",
       "path": "posts/about-pool-sizing.md"
+    },
+    {
+      "basename": "hikaricp",
+      "path": "posts/hikaricp.md"
     },
     {
       "basename": "jdbctemplate",
@@ -187,18 +199,6 @@
     {
       "basename": "effective-java-ed3",
       "path": "effective-java-ed3.md"
-    },
-    {
-      "basename": "2023-03-22",
-      "path": "2023-03-22.md"
-    },
-    {
-      "basename": "2023-03-23",
-      "path": "2023-03-23.md"
-    },
-    {
-      "basename": "2023-03-24",
-      "path": "2023-03-24.md"
     }
   ],
   "omittedPaths": [],
