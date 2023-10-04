@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "transaction-and-spring-transaction",
-      "path": "posts/transaction-and-spring-transaction.md"
+      "basename": "2023-10-04",
+      "path": "posts/2023-10-04.md"
     },
     {
       "basename": "transactional",
       "path": "posts/transactional.md"
     },
     {
+      "basename": "database-technique",
+      "path": "posts/database-technique.md"
+    },
+    {
       "basename": "transaction",
       "path": "posts/transaction.md"
+    },
+    {
+      "basename": "transaction-and-spring-transaction",
+      "path": "posts/transaction-and-spring-transaction.md"
     },
     {
       "basename": "about-pool-sizing",
@@ -191,14 +199,6 @@
     {
       "basename": "2023-03-20",
       "path": "2023-03-20.md"
-    },
-    {
-      "basename": "2023-03-21",
-      "path": "2023-03-21.md"
-    },
-    {
-      "basename": "effective-java-ed3",
-      "path": "effective-java-ed3.md"
     }
   ],
   "omittedPaths": [],

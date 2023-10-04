@@ -1,0 +1,48 @@
+/* Checkbox.module.css */
+.checkboxContainer {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkboxSymbol {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+  }
+  
+  .checkboxContainer:hover .checkboxSymbol {
+    background-color: #ccc;
+  }
+  
+  .checkbox:checked + .checkboxSymbol {
+    background-color: #2196F3;
+  }
+  
+  .checkboxSymbol:after {
+    content: attr(data-icon);
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    font-size: 14px; /* 아이콘 크기 조절 */
+    color: white;
+  }
+  
+  .checkbox:checked + .checkboxSymbol:after {
+    display: block;
+  }
+  

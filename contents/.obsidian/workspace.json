@@ -54,9 +54,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "74fc176f8311295a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2023-10-04.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b615d61f86e76987",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/database-technique.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -131,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/transaction-and-spring-transaction.md",
+                "file": "posts/2023-10-04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/transaction-and-spring-transaction.md",
+                "file": "posts/2023-10-04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/transaction-and-spring-transaction.md"
+                "file": "posts/2023-10-04.md"
               }
             }
           },
@@ -196,7 +220,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279.5
+    "width": 279.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -215,9 +240,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "750dfd6fd87eb82b",
+  "active": "74fc176f8311295a",
   "lastOpenFiles": [
     "posts/transactional.md",
+    "posts/2023-10-04.md",
+    "posts/database-technique.md",
     "posts/transaction.md",
     "posts/transaction-and-spring-transaction.md",
     "posts/about-pool-sizing.md",
@@ -244,8 +271,6 @@
     "posts/attachments/monitor-wait-set.png",
     "posts/application-context-aware.md",
     "posts/2023-09-27.md",
-    "posts/2023-09-26.md",
-    "posts/2023-09-25.md",
     "무제 폴더",
     "attachments/Pasted image 20230919132328.png",
     "attachments/obsidian-admonition-prefix.png",
