@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "transaction-and-spring-transaction",
+      "path": "posts/transaction-and-spring-transaction.md"
+    },
+    {
       "basename": "2023-10-04",
       "path": "posts/2023-10-04.md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "transaction",
       "path": "posts/transaction.md"
-    },
-    {
-      "basename": "transaction-and-spring-transaction",
-      "path": "posts/transaction-and-spring-transaction.md"
     },
     {
       "basename": "about-pool-sizing",

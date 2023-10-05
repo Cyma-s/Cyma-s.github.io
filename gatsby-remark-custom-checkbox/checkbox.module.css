@@ -33,13 +33,11 @@
   }
   
   .checkboxSymbol:after {
-    content: attr(data-icon);
     position: absolute;
-    display: none;
     left: 5px;
     top: 2px;
     font-size: 14px; /* 아이콘 크기 조절 */
-    color: white;
+    color: black;
   }
   
   .checkbox:checked + .checkboxSymbol:after {
