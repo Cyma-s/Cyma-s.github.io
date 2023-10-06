@@ -11,12 +11,13 @@ module.exports = ({ markdownAST }) => {
     const matches = textNode.value.match(regex);
 
     if (matches) {
-      console.log(textNode.value);
-      textNode.type = "html";
-      textNode.value = textNode.value.replace(regex, match => {
-        const icon = match.slice(1, -1); // 괄호 [] 내부의 값을 추출
-        return `<span class="custom-checkbox" data-icon="${icon}"></span>`;
-      });
+      const icon = matches[1];
+      node.data = {
+        ...node.data,
+        iconKey: icon
+      };
+      // 아이콘 정보를 저장한 후, 원래의 [icon] 텍스트를 제거합니다.
+      textNode.value = textNode.value.replace(regex, "");
     }
   });
 

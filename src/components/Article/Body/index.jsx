@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
+import ReactHtmlParser from 'react-html-parser';
+import CustomCheckbox from "components/CustomCheckbox";
 
 import useOffsetTop from "hooks/useOffsetTop"
 
@@ -29,6 +31,15 @@ const Body = ({ html }) => {
     )
   }, [])
 
+  const transformNode = (node) => {
+    if (node.type === 'tag' && node.name === 'span' && node.attribs && node.attribs['data-icon']) {
+      return <CustomCheckbox iconKey={node.attribs['data-icon']} />;
+    }
+    // 아무것도 반환하지 않으면 원래의 노드가 그대로 유지됩니다.
+  };
+
+  const reactComponents = ReactHtmlParser(html, { transform: transformNode });
+
   return (
     <Wrapper>
       <Toc items={toc} articleOffset={offsetTop} />
@@ -37,10 +48,11 @@ const Body = ({ html }) => {
 
       <StyledMarkdown
         id="article-body"
-        dangerouslySetInnerHTML={{ __html: html }}
         itemProp="articleBody"
         ref={ref}
-      />
+      >
+       {reactComponents} 
+      </StyledMarkdown>
     </Wrapper>
   )
 }

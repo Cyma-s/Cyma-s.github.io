@@ -1,5 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import {styled} from 'styled-components';
+import StyledMarkdown from "./StyledMarkdown"
+
 
 const StyledCheckboxSymbol = styled.span`
   svg {

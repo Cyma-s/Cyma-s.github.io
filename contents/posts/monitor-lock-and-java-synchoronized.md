@@ -1,7 +1,7 @@
 ---
 title: monitor lock과 synchronized
 date: 2023-08-21 16:31:47 +0900
-updated: 2023-10-02 23:17:51 +0900
+updated: 2023-10-06 14:38:21 +0900
 tags:
   - java
   - os
