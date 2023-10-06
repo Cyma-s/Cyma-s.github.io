@@ -1,11 +1,11 @@
 ---
-title   : singleton vs static class
-date    : 2023-03-12 22:38:47 +0900
-updated : 2023-03-12 22:45:18 +0900
-tags     : 
-- 우테코
-- 레벨1
-- 학습로그
+title: singleton vs static class
+date: 2023-03-12 22:38:47 +0900
+updated: 2023-10-05 22:31:33 +0900
+tags:
+  - 우테코
+  - 레벨1
+  - 학습로그
 ---
 
 ## 글을 쓰게 된 배경
@@ -29,7 +29,7 @@ tags     :
 
 가장 간단한 싱글턴 예제는 다음과 같다. 
 
-```
+```java
 public class Singleton() {
 	// Singleton 객체를 static으로 선언한다.
 	private static Singleton instance;
@@ -53,7 +53,7 @@ public class Singleton() {
 
 멀티스레드 환경에서는 두 개 이상의 스레드가 ```getInstance()```를 수행하는 경우 두 개 이상의 인스턴스가 생성되는 문제가 생길 수 있다.
 
-```
+```java
 public class Main {  
     public static void main(String[] args) {  
         Runnable runnable = () -> {  
@@ -89,7 +89,7 @@ public class Main {
 
 동시성을 보장할 때 가장 자주 사용되는 방법은 Holder initialization 방법이다.
 
-```
+```java
 public class Singleton {  
     private Singleton() {}  
   
@@ -109,7 +109,7 @@ holder 안에 선언된 instance가 static 이기 때문에 클래스 로딩 시
 
 정적 메서드는 클래스의 인스턴스 없이 호출이 가능한 메서드이다.
 
-```
+```java
 public static void printValue(final String value) {
 	System.out.println(value);
 }

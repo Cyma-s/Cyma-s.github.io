@@ -1,8 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "2023-10-06",
+      "path": "posts/2023-10-06.md"
+    },
+    {
+      "basename": "singleton-vs-static",
+      "path": "posts/singleton-vs-static.md"
+    },
+    {
+      "basename": "2023-10-05",
+      "path": "posts/2023-10-05.md"
+    },
+    {
+      "basename": "hikaricp",
+      "path": "posts/hikaricp.md"
+    },
+    {
+      "basename": "about-pool-sizing",
+      "path": "posts/about-pool-sizing.md"
+    },
+    {
       "basename": "transaction-and-spring-transaction",
       "path": "posts/transaction-and-spring-transaction.md"
+    },
+    {
+      "basename": "database-technique",
+      "path": "posts/database-technique.md"
+    },
+    {
+      "basename": "2023-10-03",
+      "path": "posts/2023-10-03.md"
     },
     {
       "basename": "2023-10-04",
@@ -13,28 +41,12 @@
       "path": "posts/transactional.md"
     },
     {
-      "basename": "database-technique",
-      "path": "posts/database-technique.md"
-    },
-    {
       "basename": "transaction",
       "path": "posts/transaction.md"
     },
     {
-      "basename": "about-pool-sizing",
-      "path": "posts/about-pool-sizing.md"
-    },
-    {
-      "basename": "hikaricp",
-      "path": "posts/hikaricp.md"
-    },
-    {
       "basename": "jdbctemplate",
       "path": "posts/jdbctemplate.md"
-    },
-    {
-      "basename": "2023-10-03",
-      "path": "posts/2023-10-03.md"
     },
     {
       "basename": "matzip-aws",
@@ -187,18 +199,6 @@
     {
       "basename": "2023-03-18",
       "path": "2023-03-18.md"
-    },
-    {
-      "basename": "2023-03-17",
-      "path": "2023-03-17.md"
-    },
-    {
-      "basename": "2023-03-19",
-      "path": "2023-03-19.md"
-    },
-    {
-      "basename": "2023-03-20",
-      "path": "2023-03-20.md"
     }
   ],
   "omittedPaths": [],

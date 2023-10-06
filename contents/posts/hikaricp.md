@@ -1,7 +1,7 @@
 ---
-title: hikariCP
+title: HikariCP
 date: 2023-10-03 14:45:52 +0900
-updated: 2023-10-03 17:39:36 +0900
+updated: 2023-10-05 21:54:51 +0900
 tags:
   - spring
   - 레벨4

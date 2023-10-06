@@ -2,6 +2,7 @@
     "name": "gatsby-remark-custom-checkbox",
     "version": "1.0.0",
     "description": "A Gatsby Remark plugin to convert custom checkboxes into beautiful styles",
+    "files": ["index.js", "CustomCheckbox.js"],
     "main": "index.js",
     "license": "MIT"
   }
