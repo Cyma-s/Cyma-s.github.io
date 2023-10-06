@@ -66,9 +66,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c679559de3d8ddb3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/transaction-manager.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -143,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md",
+                "file": "posts/transaction-manager.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md",
+                "file": "posts/transaction-manager.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md"
+                "file": "posts/transaction-manager.md"
               }
             }
           },
@@ -228,13 +240,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c37016702f1aca49",
+  "active": "c679559de3d8ddb3",
   "lastOpenFiles": [
+    "posts/transaction-manager.md",
+    "posts/monitor-lock-and-java-synchoronized.md",
     "posts/bean-scope.md",
     "posts/transactional.md",
     "posts/wooteco-aop.md",
     "posts/jdbctemplate.md",
-    "posts/monitor-lock-and-java-synchoronized.md",
     "posts/transaction.md",
     "posts/singleton-vs-static.md",
     "posts/2023-10-06.md",
@@ -257,7 +270,6 @@
     "template/TIL.md",
     "template",
     "posts/view-resolver.md",
-    "posts/shook-sixth-demoday-function.md",
     "posts/attachments/monitor-wait-set.png",
     "무제 폴더",
     "attachments/Pasted image 20230919132328.png",

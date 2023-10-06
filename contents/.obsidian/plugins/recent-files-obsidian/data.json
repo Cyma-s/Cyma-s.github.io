@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "transaction-manager",
+      "path": "posts/transaction-manager.md"
+    },
+    {
       "basename": "monitor-lock-and-java-synchoronized",
       "path": "posts/monitor-lock-and-java-synchoronized.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "2023-03-15",
       "path": "2023-03-15.md"
-    },
-    {
-      "basename": "2023-03-14",
-      "path": "2023-03-14.md"
     }
   ],
   "omittedPaths": [],
