@@ -1,5 +1,15 @@
 import React from 'react';
-import styles from './Checkbox.module.css';
+import {styled} from 'styled-components';
+import StyledMarkdown from "./StyledMarkdown"
+
+
+const StyledCheckboxSymbol = styled.span`
+  svg {
+    fill: ${props => props.theme.colors.secondAccentText || 'black'};
+    width: 24px;
+    height: 24px;
+  }
+`
 
 import {
   FaShare,
@@ -48,20 +58,21 @@ const ICON_MAPPINGS = {
     '8': <FaComment/>,
     '9': <FaComment/>,
     '0': <FaComment/>,
-  };
-  
+};
 
+const CustomCheckbox = ({ iconKey, ...props }) => {
+  const iconComponent = ICON_MAPPINGS[iconKey] || null;
 
-  const CustomCheckbox = ({ iconKey, ...props }) => {
-    const iconComponent = ICON_MAPPINGS[iconKey] || null; // 딕셔너리에 없는 경우에 대비하여 기본값 설정
-    return (
-      <label className={styles.checkboxContainer}>
-        <input type="checkbox" className={styles.checkbox} {...props} />
-        <span className={styles.checkboxSymbol}>
-          {iconComponent}
-        </span>
+  return (
+    <StyledMarkdown>
+      <label> 
+        <input type="checkbox" {...props} />
+        <StyledCheckboxSymbol>
+            {iconComponent}
+        </StyledCheckboxSymbol>
       </label>
-    );
-  }
-  
-  export default CustomCheckbox;
+    </StyledMarkdown>
+  );
+}
+
+export default CustomCheckbox;

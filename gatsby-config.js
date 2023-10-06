@@ -87,9 +87,9 @@ module.exports = {
         gfm: true,
         plugins: [
           require.resolve('./gatsby-remark-image-wiki-link-converter'),
-          require.resolve('./gatsby-remark-custom-checkbox'),
           require.resolve('./gatsby-remark-obsidian-wiki-link'),
           require.resolve('./gatsby-remark-wiki-link-custom'),
+          require.resolve('./gatsby-remark-custom-checkbox'),
           {
             resolve: `gatsby-remark-images`,
             options: {

@@ -1,12 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "2023-10-06",
-      "path": "posts/2023-10-06.md"
+      "basename": "monitor-lock-and-java-synchoronized",
+      "path": "posts/monitor-lock-and-java-synchoronized.md"
+    },
+    {
+      "basename": "bean-scope",
+      "path": "posts/bean-scope.md"
+    },
+    {
+      "basename": "transactional",
+      "path": "posts/transactional.md"
+    },
+    {
+      "basename": "wooteco-aop",
+      "path": "posts/wooteco-aop.md"
+    },
+    {
+      "basename": "jdbctemplate",
+      "path": "posts/jdbctemplate.md"
+    },
+    {
+      "basename": "transaction",
+      "path": "posts/transaction.md"
     },
     {
       "basename": "singleton-vs-static",
       "path": "posts/singleton-vs-static.md"
+    },
+    {
+      "basename": "2023-10-06",
+      "path": "posts/2023-10-06.md"
     },
     {
       "basename": "2023-10-05",
@@ -35,18 +59,6 @@
     {
       "basename": "2023-10-04",
       "path": "posts/2023-10-04.md"
-    },
-    {
-      "basename": "transactional",
-      "path": "posts/transactional.md"
-    },
-    {
-      "basename": "transaction",
-      "path": "posts/transaction.md"
-    },
-    {
-      "basename": "jdbctemplate",
-      "path": "posts/jdbctemplate.md"
     },
     {
       "basename": "matzip-aws",
@@ -187,18 +199,6 @@
     {
       "basename": "2023-03-14",
       "path": "2023-03-14.md"
-    },
-    {
-      "basename": "level1-week6",
-      "path": "level1-week6.md"
-    },
-    {
-      "basename": "2023-03-16",
-      "path": "2023-03-16.md"
-    },
-    {
-      "basename": "2023-03-18",
-      "path": "2023-03-18.md"
     }
   ],
   "omittedPaths": [],

@@ -30,9 +30,45 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9d50876da7f77307",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/transaction.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c37016702f1aca49",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/monitor-lock-and-java-synchoronized.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "013772e478635193",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/bean-scope.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -107,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-10-06.md",
+                "file": "posts/monitor-lock-and-java-synchoronized.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-10-06.md",
+                "file": "posts/monitor-lock-and-java-synchoronized.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-10-06.md"
+                "file": "posts/monitor-lock-and-java-synchoronized.md"
               }
             }
           },
@@ -192,10 +228,16 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5c0f16560d145e98",
+  "active": "c37016702f1aca49",
   "lastOpenFiles": [
-    "posts/2023-10-06.md",
+    "posts/bean-scope.md",
+    "posts/transactional.md",
+    "posts/wooteco-aop.md",
+    "posts/jdbctemplate.md",
+    "posts/monitor-lock-and-java-synchoronized.md",
+    "posts/transaction.md",
     "posts/singleton-vs-static.md",
+    "posts/2023-10-06.md",
     "posts/2023-10-05.md",
     "posts/hikaricp.md",
     "posts/about-pool-sizing.md",
@@ -203,9 +245,6 @@
     "posts/database-technique.md",
     "posts/2023-10-03.md",
     "posts/2023-10-04.md",
-    "posts/transactional.md",
-    "posts/transaction.md",
-    "posts/jdbctemplate.md",
     "posts/attachments/postgresql-benchmark.png",
     "posts/matzip-aws.md",
     "posts/matzip-aws-iam.md",
@@ -219,9 +258,6 @@
     "template",
     "posts/view-resolver.md",
     "posts/shook-sixth-demoday-function.md",
-    "posts/shook-nickname-update-issue.md",
-    "posts/monitor-lock-and-java-synchoronized.md",
-    "posts/meeting-process-refactoring-request.md",
     "posts/attachments/monitor-wait-set.png",
     "무제 폴더",
     "attachments/Pasted image 20230919132328.png",
