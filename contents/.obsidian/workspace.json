@@ -42,6 +42,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "05dde02059f38e33",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/jdk-synchronizer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 2
@@ -206,12 +218,13 @@
   },
   "active": "c37016702f1aca49",
   "lastOpenFiles": [
+    "posts/2023-10-08.md",
+    "posts/monitor-lock-and-java-synchoronized.md",
+    "posts/jdk-synchronizer.md",
     "posts/portfolio.md",
     "posts/vepohuhemal-study-question.md",
     "posts/readme.md",
     "posts/2023-10.md",
-    "posts/2023-10-08.md",
-    "posts/monitor-lock-and-java-synchoronized.md",
     "posts/2023-10-06.md",
     "posts/vepohuhyemal-study.md",
     "posts/bean-scope.md",
@@ -232,7 +245,6 @@
     "posts/attachments/postgresql-benchmark.png",
     "posts/matzip-aws.md",
     "posts/matzip-aws-iam.md",
-    "posts/matzip-aws-s3-cloudfront.md",
     "template",
     "posts/attachments/monitor-wait-set.png",
     "무제 폴더",
