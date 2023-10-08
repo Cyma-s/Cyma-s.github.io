@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-10-06.md",
+                "file": "posts/2023-10-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -242,15 +242,16 @@
   },
   "active": "c37016702f1aca49",
   "lastOpenFiles": [
+    "posts/2023-10-08.md",
+    "posts/2023-10-06.md",
+    "posts/monitor-lock-and-java-synchoronized.md",
     "posts/portfolio.md",
     "posts/vepohuhemal-study-question.md",
     "posts/vepohuhyemal-study.md",
-    "posts/monitor-lock-and-java-synchoronized.md",
     "posts/bean-scope.md",
     "posts/transaction-manager.md",
     "posts/2023-10-07.md",
     "posts/transaction.md",
-    "posts/2023-10-06.md",
     "posts/singleton-vs-static.md",
     "posts/transactional.md",
     "posts/wooteco-aop.md",
@@ -268,7 +269,6 @@
     "posts/matzip-aws-s3-cloudfront.md",
     "posts/2023-10-02.md",
     "2023-10-02.md",
-    "posts/2023-10-01.md",
     "template",
     "posts/attachments/monitor-wait-set.png",
     "무제 폴더",
