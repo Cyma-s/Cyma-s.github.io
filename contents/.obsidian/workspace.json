@@ -79,8 +79,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -155,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md",
+                "file": "posts/2023-10-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md",
+                "file": "posts/2023-10-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md"
+                "file": "posts/2023-10-08.md"
               }
             }
           },
@@ -240,11 +239,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c37016702f1aca49",
+  "active": "5c0f16560d145e98",
   "lastOpenFiles": [
+    "posts/monitor-lock-and-java-synchoronized.md",
     "posts/2023-10-08.md",
     "posts/2023-10-06.md",
-    "posts/monitor-lock-and-java-synchoronized.md",
     "posts/portfolio.md",
     "posts/vepohuhemal-study-question.md",
     "posts/vepohuhyemal-study.md",
