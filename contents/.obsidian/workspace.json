@@ -8,24 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e820c8cae8bb163a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/singleton-vs-static.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "5c0f16560d145e98",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "posts/2023-10-06.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e820c8cae8bb163a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/singleton-vs-static.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,31 +56,31 @@
             }
           },
           {
-            "id": "013772e478635193",
+            "id": "de2a8d38c4006787",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/bean-scope.md",
+                "file": "posts/portfolio.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "c679559de3d8ddb3",
+            "id": "9059aa5dddc6fabb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/transaction-manager.md",
+                "file": "posts/vepohuhemal-study-question.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/transaction-manager.md",
+                "file": "posts/monitor-lock-and-java-synchoronized.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/transaction-manager.md",
+                "file": "posts/monitor-lock-and-java-synchoronized.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/transaction-manager.md"
+                "file": "posts/monitor-lock-and-java-synchoronized.md"
               }
             }
           },
@@ -240,17 +240,21 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c679559de3d8ddb3",
+  "active": "c37016702f1aca49",
   "lastOpenFiles": [
-    "posts/transaction-manager.md",
+    "posts/portfolio.md",
+    "posts/vepohuhemal-study-question.md",
+    "posts/vepohuhyemal-study.md",
     "posts/monitor-lock-and-java-synchoronized.md",
     "posts/bean-scope.md",
+    "posts/transaction-manager.md",
+    "posts/2023-10-07.md",
+    "posts/transaction.md",
+    "posts/2023-10-06.md",
+    "posts/singleton-vs-static.md",
     "posts/transactional.md",
     "posts/wooteco-aop.md",
     "posts/jdbctemplate.md",
-    "posts/transaction.md",
-    "posts/singleton-vs-static.md",
-    "posts/2023-10-06.md",
     "posts/2023-10-05.md",
     "posts/hikaricp.md",
     "posts/about-pool-sizing.md",
@@ -265,11 +269,7 @@
     "posts/2023-10-02.md",
     "2023-10-02.md",
     "posts/2023-10-01.md",
-    "posts/2023-09-19.md",
-    "template/template.md",
-    "template/TIL.md",
     "template",
-    "posts/view-resolver.md",
     "posts/attachments/monitor-wait-set.png",
     "무제 폴더",
     "attachments/Pasted image 20230919132328.png",

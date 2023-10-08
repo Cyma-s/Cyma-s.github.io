@@ -1,7 +1,7 @@
 ---
 title: monitor lock과 synchronized
 date: 2023-08-21 16:31:47 +0900
-updated: 2023-10-06 14:38:21 +0900
+updated: 2023-10-07 18:42:49 +0900
 tags:
   - java
   - os
@@ -256,6 +256,128 @@ public someMethod() {
 }
 ```
 
+## Intrinsic Lock (고유 락)
+
+Java 의 동기화는 Intrinsic Lock 또는 Monitor lock 으로 알려진 내부 엔티티를 중심으로 만들어졌다.  
+
+고유 락은 동기화의 두 가지 측면, 객체의 상태에 대한 독점적 접근을 강제하고, 가시성에 필수적인 발생 전 관계를 설정하는 데 중요한 역할을 한다. 
+
+객체의 필드에 대한 배타적이고 일관적인 접근이 필요한 스레드는 객체에 접근하기 전에 객체의 고유 락을 얻어야 하고, 접근이 완료되면 고유 락을 release(해제)해야 한다. 
+
+스레드가 락을 획득한 시점부터 락을 해제한 때까지 '락을 소유했다' 라고 한다. 한 스레드가 고유 락을 소유하고 있는 경우, 다른 스레드는 동일한 락을 얻을 수 없다. 다른 스레드가 락을 얻으려고 시도하면 block 된다.
+
+스레드가 고유 락을 해제하면 해당 작업과 다음에 동일한 락을 얻는 작업 간에 선후 관계가 설정된다.  
+
+### synchronized 메서드의 락
+
+`synchronized` 메서드를 호출하면 해당 메서드의 객체에 대한 고유 락을 자동으로 획득하고, 메서드가 리턴될 때 락을 해제한다.
+
+정적 메서드의 경우 정적 `synchronized` 메서드가 호출되는 경우는 스레드가 클래스와 연관된 클래스 객체에 대한 고유 락을 획득하게 된다. (기반 되는 객체가 없으므로)  
+따라서 클래스의 정적 필드에 대한 접근은 클래스의 모든 인스턴스에 대한 락과 구별되는 락으로 제어된다.  
+
+- [?] 생성자에도 `synchronized` 가 가능한가?
+➡️ 불가능하다. 대신 생성자의 바디 부분에 `synchronized` 를 넣어서 필요한 경우 동기화를 할 수는 있다.
+
+### synchronized 코드
+
+`synchronized` statement 를 사용하여 `synchronized` 코드를 만들 수 있다.  
+`synchronized` statement 는 고유 락을 제공하는 객체를 지정해야 한다.  
+
+```java
+  public void addName(String name) {
+    synchronized(this) {
+        lastName = name;
+        nameCount++;
+    }
+    nameList.add(name);
+}
+```
+
+위 예제에서 `addName` 메서드는 `lastName`, `nameCount` 의 변경 사항을 동기화해야 하지만, 다르나 객체의 메서드 호출은 동기화하지 않아야 한다. (synchronized statment 에서 다른 객체의 메서드를 호출하면 Liveness 문제가 발생할 수 있다. )
+
+synchronized statement 가 없으면 `nameList.add` 를 호출하기 위한 목적으로만 동기화되지 않은 별도의 메서드가 있어야 한다.
+
+synchronized statement 는 세분화된 동기화를 통해 동시성을 개선하는 데 도움이 된다.  
+
+```java
+public class MsLunch {
+    private long c1 = 0;
+    private long c2 = 0;
+    private Object lock1 = new Object();
+    private Object lock2 = new Object();
+
+    public void inc1() {
+        synchronized(lock1) {
+            c1++;
+        }
+    }
+
+    public void inc2() {
+        synchronized(lock2) {
+            c2++;
+        }
+    }
+}
+```
+
+## Java의 고유 락 재진입 (Reentrancy)
+
+스레드는 다른 스레드가 갖고 있는 락을 획득할 수는 없지만, 이미 소유하고 있는 락은 얻을 수 있다.  
+
+```java
+public class Reentrancy {
+	public synchronized void a() {
+		System.out.println("a");
+	}
+
+	public synchronized void b() {
+		System.out.println("b");
+	}
+
+	public static void main(String[] args) {
+		new Reentrancy().a();
+	}
+}
+```
+
+자바의 Intrinsic Lock 은 재진입 가능하다. (락의 획득이 호출 단위가 아닌 스레드 단위로 일어나기 때문에) 즉, 이미 락을 획득한 스레드는 같은 락을 얻기 위해 대기할 필요가 없다. 
+
+만약 자바의 고유 락이 재진입 가능하지 않다면, 해당 코드는 a 메서드 내부의 b 를 호출하는 지점에서 self deadlock 이 발생할 것이다.  
+
+### structured lock
+
+고유 락을 이용한 동기화는 `structured lock` (구조적인 락) 이라고 한다. `synchronized` 블록 단위로 락의 획득 / 해제가 일어나므로 구조적이라고 한다. `synchronized` 블록을 진입할 때 락 획득이 일어나고, 블록을 벗어날 때 락의 해제가 일어난다. 따라서 구조적인 락 A, B가 있을 때 A 획득 -> B 획득 -> B 해제 -> A 해제는 가능하지만, A 획득 -> B 획득 -> A 해제 -> B 해제 는 불가능하다. 
+
+이런 순서로 락을 사용해야 하는 경우 `ReentrantLock` 과 같은 명시적인 락을 사용해야 한다.  
+
+### 가시성
+
+락을 사용하면 가시성의 문제가 사라진다.  
+Java 의 `synchronized` 키워드는 한 스레드가 수정한 내용이 다른 스레드에서 보이게 한다.  
+즉, 스레드가 락을 획득하는 경우 그 이전에 쓰인 값들의 가시성을 보장한다.  
+
+`synchronized` 블록에 들어갈 때와 나갈 때, 변수의 변경 사항은 모든 스레드에게 보여진다. 즉, 한 스레드가 `synchronized` 블록에서 변수를 수정하고 블록을 빠져나오면, 해당 변경 사항이 모든 스레드에 보여진다.
+
+#### (안 넣을 내용) Java 의 `synchronized` 는 어떻게 가시성을 제공하는가?
+
+**Java Memory Model (JMM)**
+Java 프로그램의 동시성 동작을 정의한다. 여러 스레드가 어떻게, 언제 메모리를 볼 수 있는지에 대한 규칙을 제공한다. `synchronized` 는 JMM 규칙에 따라 동작한다.
+
+가시성을 제공하는 메커니즘은 다음과 같다.
+1. 스레드가 관련된 객체의 monitor lock 을 획득한다.
+2. 스레드가 monitor lock 을 해제할 때, 해당 스레드의 로컬 메모리에 있던 변경 사항들이 주 메모리로 플러시 된다. 이로 인해 다른 스레드가 이후에 동일한 lock 을 획득하여 `synchronized` 블록에 들어갈 때, 해당 스레드가 가장 최근의 변경 사항들을 볼 수 있게 된다. 
+3. JMM에는 happens-before 관계라는 개념이 존재한다. `synchronized` 의 happens-before 규칙은 이렇다. 
+	- 스레드 A 가 monitor lock 을 해제하기 전에 수행한 모든 동작들은 스레드 B 가 동일한 모니터 락을 획득한 후에 수행하는 모든 동작들보다 먼저 일어난 것으로 간주된다.
+
+- [?] happens-before 규칙?
+다중 스레드 환경에서 메모리 동작의 순서와 가시성을 보장하기 위한 관계를 설명한다. 이 관계는 **메모리 쓰기가 특정 동작 후에 언제 메모리 읽기에 보이게 될 것인지를 정의하는 데**에 사용된다. 
+
+happens-before 규칙의 일부는 다음과 같다.
+1. **프로그램 순서 규칙**: 한 스레드 내에서, 한 문장이 다음 문장보다 앞서 있다면, 첫 번째 문장의 동작은 두 번째 문장의 동작보다 `happens-before` 관계에 있다.
+2. **모니터(lock) 규칙**: `synchronized` 블록의 잠금 해제는 같은 락에 대한 후속 잠금 획득보다 `happens-before` 관계에 있다.
+3. **volatile 변수 규칙**: `volatile` 변수에 대한 쓰기는 같은 변수에 대한 후속 읽기보다 `happens-before` 관계에 있다.
+4. **스레드 시작 규칙**: 스레드 A에서 `Thread B.start()`를 호출하는 것은 스레드 B의 모든 동작보다 `happens-before` 관계에 있다.
+5. **스레드 종료 규칙**: 스레드 A의 모든 동작은 다른 스레드 B에서 `A.join()`이 성공적으로 반환되기 전보다 `happens-before` 관계에 있다.
 ### Java Object 의 `wait()`, `notify()`
 
 ```java
@@ -300,8 +422,6 @@ public class Object {
 
 스레드가 어떤 객체의 `notify()` 를 호출하면 해당 객체 intrinsic lock 을 얻기 위해 해당 객체 intrinsic lock에 대기중인 스레드 하나를 깨운다.  
 
-
-
 ### `wait()` 메서드 호출 시
 
 스레드가 `wait()` 메서드를 호출하면 다음과 같은 현상이 발생한다.  
@@ -316,7 +436,7 @@ public class Object {
 ![[monitor-wait-set.png]]
 
 소비자 스레드는 생산자가 진행할 수 있다는 것을 어떻게 알릴까?  
-보통 스레드가 `synchronized` 메서드를 종료하면 이탈 스레드는 객체와 연결된 락만 해제하여 진입 집합에서 스레드를 제거하고 락 소유권을 넘겨준다.  
+보통 스레드가 `synchronized` 메서드를 종료하면 이탈 스레드는 객체와 연결된 락만 해제하여 진입 집합에서 스레드를 제거하고 락 소유권을 넘겨준다. 
 그러나 `insert()` 및 `remove()` 메서드 끝에서 `notify()` 메서드를 호출한다. 
 
 ```java
@@ -356,6 +476,13 @@ public synchronized E remove() {
 }
 ```
 
+반드시 `synchronized` 블록 내에서만 호출이 가능하다. `wait()` 은 락 소유권을 넘겨주어야 하기 때문에, 만약 `wait()` 를 호출하는 스레드가 락을 소유하고 있지 않다면 에러가 발생한다.
+
+- [!] `sleep()` 과의 차이점
+`sleep()` 메서드는 현재 스레드를 잠시 멈추게만 할 뿐, 락의 소유권을 넘기지는 않는다. 잠든 스레드는 여전히 락을 가지고 있다. 이 때문에 우선순위가 낮은 스레드가 우선순위가 높은 스레드를 BLOCK 시키는 우선순위 역전 현상이 발생하기도 한다.
+
+락을 소유하던 스레드는 락 소유권을 넘겨주면서 WAITING 또는 TIMED_WAITING 상태로 변하게 된다. WAITING, TIMED_WAITING 상태의 스레드는 `notify` 나 `notifyAll` 메서드를 호출하여 RUNNABLE 상태로 변경 가능하다. (TIMED_WAITING 스레드 경우에는 생성자를 이용하여 특정 시간을 설정하고 대기하고, 특정 시간이 지나면 자동으로 RUNNABLE 상태로 변경된다.)
+
 ### `notify()` 메서드 호출 시
 
 1. Wait Set 의 스레드 리스트에서 임의의 스레드 T 를 선택한다. (보통 FIFO 로 선택된다.)
@@ -364,6 +491,10 @@ public synchronized E remove() {
 
 T는 이제 다른 스레드와 락 경쟁을 할 수 있다.  
 T 가 락 제어를 다시 획득하면 `wait()` 호출에서 복귀하여 count 값을 다시 확인할 수 있다.  
+
+### `notifyAll()` 메서도 호출 시
+
+`wait()` 을 건 모든 스레드들을 한 번에 깨운다.
 
 ### 가정
 
@@ -406,106 +537,23 @@ finally {
 이유는 다음과 같다. 
 `try` 절 내에 `lock()` 을 배치하고 `lock()` 이 호출될 때 unchecked 예외가 발생하면 (`OutofMemoryError` 등) 문제가 발생할 수 있다.  
 `finally` 는 `unlock()` 을 호출하는데, 락이 획득된 상태가 아니면 `unlock()` 이 `IllegalMonitorStaateException` 을 발생시킨다.  
-해당 예외가 `lock()` 을 호출할 때 발생한 unchecked 예외를 대신하게 되기 때문에 실패한 원인을 찾기 어렵게 만든다.  
 
+**`ReentrantLock` 은 블록 구조를 가지고 있지 않기 때문에, `finally` 블록 내에서 `unlock()` 메서드를 사용하여 락을 명시적으로 해제해주어야 한다!**
+
+해당 예외가 `lock()` 을 호출할 때 발생한 unchecked 예외를 대신하게 되기 때문에 실패한 원인을 찾기 어렵게 만든다.  
 
 `ReentrantLock` 은 상호 배제를 제공하지만, 여러 스레드가 공유 데이터를 읽기만 하고 쓰지 않을 때는 너무 보수적인 전략일 수 있다.  (7.1.2 에서 설명했다네요)
 이를 위해 `ReentrantReadWriteLock` 을 제공한다. Reader 는 여러 개일 수 있지만, writer 는 반드시 하나여야 하는 락이다.
 
-## Intrinsic Lock (고유 락)
+### `synchronized` vs `ReentrantLock`
 
-Java 의 동기화는 Intrinsic Lock 또는 Monitor lock 으로 알려진 내부 엔티티를 중심으로 만들어졌다.  
+intrinsic lock 과 `ReentrantLock` 은 동일한 락과 메모리 시멘틱을 제공한다. `ReentrantLock` 의 성능은 Intrinsic Lock 의 성능을 압도하는 것처럼 보인다. 그렇다면 왜 synchronized 를 deprecated 하지 않고, 모든 동시성 코드가 `ReentrantLock` 으로 바꾸지 않는 걸까?
 
-고유 락은 동기화의 두 가지 측면, 객체의 상태에 대한 독점적 접근을 강제하고, 가시성에 필수적인 발생 전 관계를 설정하는 데 중요한 역할을 한다. 
+`ReentrantLock` 은 intrinsic lock 이 실용적이지 않은 상황을 위한 도구이다. time out, polling, 중단 가능한 락 획득, 공정한 queueing 또는 not-blocking 구조 락과 같은 고급 기능이 필요한 경우에 사용하고, 그렇지 않다면 `synchronized` 를 선택해라.
 
-객체의 필드에 대한 배타적이고 일관적인 접근이 필요한 스레드는 객체에 접근하기 전에 객체의 고유 락을 얻어야 하고, 접근이 완료되면 고유 락을 release(해제)해야 한다. 
+Java 5.0 에서는 JVM 이 어떤 스레드가 `ReentrantLock` 을 보유하는지 알 수 없어서 스레딩 문제를 디버깅하는 데에 도움을 줄 수 없었다. 
 
-스레드가 락을 획득한 시점부터 락을 해제한 때까지 '락을 소유했다' 라고 한다. 한 스레드가 고유 락을 소유하고 있는 경우, 다른 스레드는 동일한 락을 얻을 수 없다. 다른 스레드가 락을 얻으려고 시도하면 block 된다.
-
-스레드가 고유 락을 해제하면 해당 작업과 다음에 동일한 락을 얻는 작업 간에 선후 관계가 설정된다.  
-
-### synchronized 메서드의 락
-
-`synchronized` 메서드를 호출하면 해당 메서드의 객체에 대한 고유 락을 자동으로 획득하고, 메서드가 리턴될 때 락을 해제한다.
-
-정적 메서드의 경우 정적 `synchronized` 메서드가 호출되는 경우는 스레드가 클래스와 연관된 클래스 객체에 대한 고유 락을 획득하게 된다. 따라서 클래스의 정적 필드에 대한 접근은 클래스의 모든 인스턴스에 대한 락과 구별되는 락으로 제어된다.  
-
-### synchronized 코드
-
-`synchronized` statement 를 사용하여 `synchronized` 코드를 만들 수 있다.  
-`synchronized` statement 는 고유 락을 제공하는 객체를 지정해야 한다.  
-
-```java
-  public void addName(String name) {
-    synchronized(this) {
-        lastName = name;
-        nameCount++;
-    }
-    nameList.add(name);
-}
-```
-
-위 예제에서 `addName` 메서드는 `lastName`, `nameCount` 의 변경 사항을 동기화해야 하지만, 다르나 객체의 메서드 호출은 동기화하지 않아야 한다. (synchronized statment 에서 다른 객체의 메서드를 호출하면 Liveness 문제가 발생할 수 있다. )
-
-synchronized statement 가 없으면 `nameList.add` 를 호출하기 위한 목적으로만 동기화되지 않은 별도의 메서드가 있어야 한다.
-
-synchronized statement 는 세분화된 동기화를 통해 동시성을 개선하는 데 도움이 된다.  
-
-```java
-public class MsLunch {
-    private long c1 = 0;
-    private long c2 = 0;
-    private Object lock1 = new Object();
-    private Object lock2 = new Object();
-
-    public void inc1() {
-        synchronized(lock1) {
-            c1++;
-        }
-    }
-
-    public void inc2() {
-        synchronized(lock2) {
-            c2++;
-        }
-    }
-}
-```
-
-## Java의 고유 락 재진입
-
-스레드는 다른 스레드가 갖고 있는 락을 획득할 수는 없지만, 이미 소유하고 있는 락은 얻을 수 있다.  
-
-```java
-public class Reentrancy {
-	public synchronized void a() {
-		System.out.println("a");
-	}
-
-	public synchronized void b() {
-		System.out.println("b");
-	}
-
-	public static void main(String[] args) {
-		new Reentrancy().a();
-	}
-}
-```
-
-자바의 Intrinsic Lock 은 재진입 가능하다. (락의 획득이 호출 단위가 아닌 스레드 단위로 일어나기 때문에) 즉, 이미 락을 획득한 스레드는 같은 락을 얻기 위해 대기할 필요가 없다. 
-
-만약 자바의 고유 락이 재진입 가능하지 않다면, 해당 코드는 a 메서드 내부의 b 를 호출하는 지점에서 데드락이 발생한다.  
-
-### structured lock
-
-고유 락을 이용한 동기화는 `structured lock` (구조적인 락) 이라고 한다. `synchronized` 블록 단위로 락의 획득 / 해제가 일어나므로 구조적이라고 한다. `synchronized` 블록을 진입할 때 락 획득이 일어나고, 블록을 벗어날 때 락의 해제가 일어난다. 따라서 구조적인 락 A, B가 있을 때 A 획득 -> B 획득 -> B 해제 -> A 해제는 가능하지만, A 획득 -> B 획득 -> A 해제 -> B 해제 는 불가능하다. 
-
-이런 순서로 락을 사용해야 하는 경우 `ReentrantLock` 과 같은 명시적인 락을 사용해야 한다.  
-
-### 가시성
-
-락을 사용하면 가시성의 문제가 사라진다.  
-Java 에서는 스레드가 락을 획득하는 경우 그 이전에 쓰인 값들의 가시성을 보장한다.  
+intrinsic lock 은 명시적 락에 비해 여전히 상당한 이점이 존재한다. 가장 주목할만한 점은 친숙하고, 간단하다는 것이다. 많은 기존 프로그램에서 intrinsic lock 을 사용하고 있는데 이를 혼용하게 되면 혼란을 야기할 수 있다. 락은 동기화보다 훨씬 더 위험한 도구다.
 
 ## Intrinsic Lock vs Monitor
 
@@ -524,7 +572,11 @@ Java 의 모든 객체는 하나의 모니터를 가진다.
 ## 질문
 
 - `wait()`, `notify()` 가 어떻게 다른 스레드에게 전달하는 것인가? (OS 단에서)
+	- 
 - 왜 Java 의 모든 객체는 하나의 모니터를 가지도록 구현되었을까?
+	- 모든 객체에 모니터를 내장함으로써 개발자는 추가적인 동기화 메커니즘을 별도로 구현하거나 탐색할 필요 없이 동시성 제어를 할 수 있다.
+	- 개발자가 어떤 객체든 동기화를 위해 `synchronized` 를 사용할 수 있다는 일관성이 생긴다.
+	- 그러나 메모리 오버헤드가 있다. 실제로 대부분의 객체는 동기화가 필요하지 않을 수 있다. 이런 이유로 JVM 구현자들이 모니터에 대한 오버헤드를 최소화하기 위한 다양한 최적화 전략을 사용하고 있다.
 - 그렇다면 왜 멀티 스레드 환경에서 synchronized 는 안 좋을까?
 - Monitor lock 은 왜 필요한가?
 - 세마포어와 비교했을 때 Monitor Lock 이 이점을 갖는 부분은 무엇인가?
@@ -532,12 +584,17 @@ Java 의 모든 객체는 하나의 모니터를 가진다.
 - Java 에서 재진입을 허용하게 된 이유는 무엇인가?
 - 가시성 문제란 무엇인가?
 - happens-before 란 무엇인가?
+	- 위에 있음
 - 생산자-소비자 문제란 무엇인가?
 - 생산자-소비자 문제는 왜 해결해야 하는가?
 - Java 에서 Monitor Lock 을 가지게 됨으로써 얻을 수 있는 이점은 무엇인가?
 - notify() 를 수행했을 때 다음 스레드는 어떻게 결정되는가?
 - java 말고 다른 언어에도 Monitor lock 이 적용된 곳이 있는가?
 - Monitor Lock 이 적용되지 않은 언어가 있다면 어떻게 구현되어 있는가?
+- `ReentrantLock` 은 상호 배제를 제공하지만, 여러 스레드가 공유 데이터를 읽기만 하고 쓰지 않을 때는 너무 보수적인 전략일 수 있다. => 왜일까?
+	- 여러 스레드가 동시에 데이터를 읽을 때, 해당 데이터가 변경되지 않는 한 데이터의 일관성이나 무결성에 문제가 생기지 않는다. 그러나 모든 읽기 연산에 `ReentrantLock` 을 사용하면 동시에 수행될 수 있는 여러 읽기 연산이 서로 블로킹될 수 있다. 이는 불필요한 대기 시간으로, 전체 시스템의 처리량 / 성능을 저하시킨다.
+	- 읽기 연산만 있는 경우에도 락과 해제를 관리하는 코드를 추가해야 한다. 이는 코드의 복잡성을 높이고, 락을 해제하는 것을 잊어버릴 위험이 있다.
+
 
 ## 목차
 
