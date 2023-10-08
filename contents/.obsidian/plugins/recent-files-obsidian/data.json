@@ -1,16 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "2023-10-08",
-      "path": "posts/2023-10-08.md"
-    },
-    {
       "basename": "monitor-lock-and-java-synchoronized",
       "path": "posts/monitor-lock-and-java-synchoronized.md"
-    },
-    {
-      "basename": "2023-10-06",
-      "path": "posts/2023-10-06.md"
     },
     {
       "basename": "portfolio",
@@ -19,6 +11,22 @@
     {
       "basename": "vepohuhemal-study-question",
       "path": "posts/vepohuhemal-study-question.md"
+    },
+    {
+      "basename": "readme",
+      "path": "posts/readme.md"
+    },
+    {
+      "basename": "2023-10",
+      "path": "posts/2023-10.md"
+    },
+    {
+      "basename": "2023-10-08",
+      "path": "posts/2023-10-08.md"
+    },
+    {
+      "basename": "2023-10-06",
+      "path": "posts/2023-10-06.md"
     },
     {
       "basename": "vepohuhyemal-study",
@@ -109,10 +117,6 @@
       "path": "posts/2023-09-19.md"
     },
     {
-      "basename": "readme",
-      "path": "posts/readme.md"
-    },
-    {
       "basename": "2023-09-16",
       "path": "posts/2023-09-16.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "level1-week5",
       "path": "level1-week5.md"
-    },
-    {
-      "basename": "2023-03-08",
-      "path": "2023-03-08.md"
     }
   ],
   "omittedPaths": [],
