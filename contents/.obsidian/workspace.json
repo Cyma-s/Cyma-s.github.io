@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-10-08.md",
+                "file": "posts/shook-prod-server-setting.md",
                 "mode": "source",
                 "source": false
               }
@@ -54,9 +54,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b86098bb0dbf1d31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/shook-like-issue.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -85,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#shook  ",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +122,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -131,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md",
+                "file": "posts/shook-like-issue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md",
+                "file": "posts/shook-like-issue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md"
+                "file": "posts/shook-like-issue.md"
               }
             }
           },
@@ -216,35 +229,35 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c37016702f1aca49",
+  "active": "b86098bb0dbf1d31",
   "lastOpenFiles": [
-    "posts/2023-10-08.md",
-    "posts/monitor-lock-and-java-synchoronized.md",
-    "posts/jdk-synchronizer.md",
-    "posts/portfolio.md",
-    "posts/vepohuhemal-study-question.md",
-    "posts/readme.md",
-    "posts/2023-10.md",
-    "posts/2023-10-06.md",
-    "posts/vepohuhyemal-study.md",
-    "posts/bean-scope.md",
-    "posts/transaction-manager.md",
-    "posts/2023-10-07.md",
-    "posts/transaction.md",
-    "posts/singleton-vs-static.md",
-    "posts/transactional.md",
-    "posts/wooteco-aop.md",
-    "posts/jdbctemplate.md",
-    "posts/2023-10-05.md",
-    "posts/hikaricp.md",
-    "posts/about-pool-sizing.md",
-    "posts/transaction-and-spring-transaction.md",
-    "posts/database-technique.md",
-    "posts/2023-10-03.md",
-    "posts/2023-10-04.md",
+    "posts/shook-like-concurrency-issue.md",
+    "posts/shook-like-issue.md",
+    "posts/shook-level4.md",
+    "posts/shook-git-branch-strategy.md",
+    "posts/shook-five-minute-speech.md",
+    "posts/github-codeowners.md",
+    "posts/github-merge-strategy.md",
+    "posts/github-self-hosted-runner.md",
+    "posts/interceptor-argument-resolver-authenticated.md",
+    "posts/locust.md",
+    "posts/meeting-process-refactoring-request.md",
+    "posts/fifth-demoday-index.md",
+    "posts/broken-pipe-error.md",
+    "posts/api-docs-search.md",
+    "posts/shook-prod-server-setting.md",
+    "posts/shook-maniadb.md",
+    "posts/shook-music-api.md",
+    "posts/shook-nginx.md",
+    "posts/shook-nickname-update-issue.md",
+    "posts/shook-persona.md",
+    "posts/shook-planning-interview.md",
+    "posts/test-isolation.md",
+    "posts/swagger-trouble-shooting.md",
+    "posts/spring-xml-parsing.md",
+    "posts/spring-external-api-call-method.md",
+    "posts/shook-webclient-reason.md",
     "posts/attachments/postgresql-benchmark.png",
-    "posts/matzip-aws.md",
-    "posts/matzip-aws-iam.md",
     "template",
     "posts/attachments/monitor-wait-set.png",
     "무제 폴더",

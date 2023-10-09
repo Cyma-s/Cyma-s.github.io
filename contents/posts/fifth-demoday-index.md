@@ -1,7 +1,7 @@
 ---
 title: Index로 성능 개선하기
 date: 2023-09-14 17:18:28 +0900
-updated: 2023-09-15 15:09:17 +0900
+updated: 2023-10-09 16:41:28 +0900
 tags:
   - shook
   - 레벨4
@@ -218,5 +218,3 @@ MIN_TIMER_WAIT 성능 250% 악화
 | COUNT\_STAR | SUM\_TIMER\_WAIT | MIN\_TIMER\_WAIT | AVG\_TIMER\_WAIT | MAX\_TIMER\_WAIT | SUM\_LOCK\_TIME |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 10 | 101400000000 | 288000000 | 10140000000 | 26468000000 | 34000000 |
-
-1/5 

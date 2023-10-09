@@ -1,12 +1,156 @@
 {
   "recentFiles": [
     {
-      "basename": "monitor-lock-and-java-synchoronized",
-      "path": "posts/monitor-lock-and-java-synchoronized.md"
+      "basename": "shook-like-issue",
+      "path": "posts/shook-like-issue.md"
+    },
+    {
+      "basename": "shook-like-concurrency-issue",
+      "path": "posts/shook-like-concurrency-issue.md"
+    },
+    {
+      "basename": "shook-level4",
+      "path": "posts/shook-level4.md"
+    },
+    {
+      "basename": "shook-git-branch-strategy",
+      "path": "posts/shook-git-branch-strategy.md"
+    },
+    {
+      "basename": "shook-five-minute-speech",
+      "path": "posts/shook-five-minute-speech.md"
+    },
+    {
+      "basename": "github-codeowners",
+      "path": "posts/github-codeowners.md"
+    },
+    {
+      "basename": "github-merge-strategy",
+      "path": "posts/github-merge-strategy.md"
+    },
+    {
+      "basename": "github-self-hosted-runner",
+      "path": "posts/github-self-hosted-runner.md"
+    },
+    {
+      "basename": "interceptor-argument-resolver-authenticated",
+      "path": "posts/interceptor-argument-resolver-authenticated.md"
+    },
+    {
+      "basename": "locust",
+      "path": "posts/locust.md"
+    },
+    {
+      "basename": "meeting-process-refactoring-request",
+      "path": "posts/meeting-process-refactoring-request.md"
+    },
+    {
+      "basename": "fifth-demoday-index",
+      "path": "posts/fifth-demoday-index.md"
+    },
+    {
+      "basename": "broken-pipe-error",
+      "path": "posts/broken-pipe-error.md"
+    },
+    {
+      "basename": "api-docs-search",
+      "path": "posts/api-docs-search.md"
+    },
+    {
+      "basename": "shook-prod-server-setting",
+      "path": "posts/shook-prod-server-setting.md"
+    },
+    {
+      "basename": "shook-maniadb",
+      "path": "posts/shook-maniadb.md"
+    },
+    {
+      "basename": "shook-music-api",
+      "path": "posts/shook-music-api.md"
+    },
+    {
+      "basename": "shook-nginx",
+      "path": "posts/shook-nginx.md"
+    },
+    {
+      "basename": "shook-nickname-update-issue",
+      "path": "posts/shook-nickname-update-issue.md"
+    },
+    {
+      "basename": "shook-persona",
+      "path": "posts/shook-persona.md"
+    },
+    {
+      "basename": "shook-planning-interview",
+      "path": "posts/shook-planning-interview.md"
+    },
+    {
+      "basename": "test-isolation",
+      "path": "posts/test-isolation.md"
+    },
+    {
+      "basename": "swagger-trouble-shooting",
+      "path": "posts/swagger-trouble-shooting.md"
+    },
+    {
+      "basename": "spring-xml-parsing",
+      "path": "posts/spring-xml-parsing.md"
+    },
+    {
+      "basename": "spring-external-api-call-method",
+      "path": "posts/spring-external-api-call-method.md"
+    },
+    {
+      "basename": "shook-webclient-reason",
+      "path": "posts/shook-webclient-reason.md"
+    },
+    {
+      "basename": "shook-user-inducement-plan",
+      "path": "posts/shook-user-inducement-plan.md"
+    },
+    {
+      "basename": "shook-third-demoday-retrospect",
+      "path": "posts/shook-third-demoday-retrospect.md"
+    },
+    {
+      "basename": "shook-third-demoday",
+      "path": "posts/shook-third-demoday.md"
+    },
+    {
+      "basename": "shook-tech-stack",
+      "path": "posts/shook-tech-stack.md"
+    },
+    {
+      "basename": "shook-site-analysis",
+      "path": "posts/shook-site-analysis.md"
+    },
+    {
+      "basename": "shook-service-introduce",
+      "path": "posts/shook-service-introduce.md"
+    },
+    {
+      "basename": "shook-second-demoday",
+      "path": "posts/shook-second-demoday.md"
+    },
+    {
+      "basename": "shook-s3-introduce",
+      "path": "posts/shook-s3-introduce.md"
+    },
+    {
+      "basename": "shook-planning",
+      "path": "posts/shook-planning.md"
+    },
+    {
+      "basename": "2023-10-09",
+      "path": "posts/2023-10-09.md"
     },
     {
       "basename": "2023-10-08",
       "path": "posts/2023-10-08.md"
+    },
+    {
+      "basename": "monitor-lock-and-java-synchoronized",
+      "path": "posts/monitor-lock-and-java-synchoronized.md"
     },
     {
       "basename": "jdk-synchronizer",
@@ -55,150 +199,6 @@
     {
       "basename": "singleton-vs-static",
       "path": "posts/singleton-vs-static.md"
-    },
-    {
-      "basename": "transactional",
-      "path": "posts/transactional.md"
-    },
-    {
-      "basename": "wooteco-aop",
-      "path": "posts/wooteco-aop.md"
-    },
-    {
-      "basename": "jdbctemplate",
-      "path": "posts/jdbctemplate.md"
-    },
-    {
-      "basename": "2023-10-05",
-      "path": "posts/2023-10-05.md"
-    },
-    {
-      "basename": "hikaricp",
-      "path": "posts/hikaricp.md"
-    },
-    {
-      "basename": "about-pool-sizing",
-      "path": "posts/about-pool-sizing.md"
-    },
-    {
-      "basename": "transaction-and-spring-transaction",
-      "path": "posts/transaction-and-spring-transaction.md"
-    },
-    {
-      "basename": "database-technique",
-      "path": "posts/database-technique.md"
-    },
-    {
-      "basename": "2023-10-03",
-      "path": "posts/2023-10-03.md"
-    },
-    {
-      "basename": "2023-10-04",
-      "path": "posts/2023-10-04.md"
-    },
-    {
-      "basename": "matzip-aws",
-      "path": "posts/matzip-aws.md"
-    },
-    {
-      "basename": "matzip-aws-iam",
-      "path": "posts/matzip-aws-iam.md"
-    },
-    {
-      "basename": "matzip-aws-s3-cloudfront",
-      "path": "posts/matzip-aws-s3-cloudfront.md"
-    },
-    {
-      "basename": "2023-10-02",
-      "path": "posts/2023-10-02.md"
-    },
-    {
-      "basename": "2023-10-01",
-      "path": "posts/2023-10-01.md"
-    },
-    {
-      "basename": "2023-09-19",
-      "path": "posts/2023-09-19.md"
-    },
-    {
-      "basename": "2023-09-16",
-      "path": "posts/2023-09-16.md"
-    },
-    {
-      "basename": "2023",
-      "path": "posts/2023.md"
-    },
-    {
-      "basename": "obsidian-plugin",
-      "path": "obsidian-plugin.md"
-    },
-    {
-      "basename": "2023-09-19",
-      "path": "2023-09-19.md"
-    },
-    {
-      "basename": "wooteco",
-      "path": "wooteco.md"
-    },
-    {
-      "basename": "wooteco-ot",
-      "path": "wooteco-ot.md"
-    },
-    {
-      "basename": "wooteco-ux",
-      "path": "wooteco-ux.md"
-    },
-    {
-      "basename": "writing-subject-candidate",
-      "path": "writing-subject-candidate.md"
-    },
-    {
-      "basename": "short-programming-knowledge",
-      "path": "short-programming-knowledge.md"
-    },
-    {
-      "basename": "readme",
-      "path": "readme.md"
-    },
-    {
-      "basename": "assertj",
-      "path": "assertj.md"
-    },
-    {
-      "basename": "level1-week2",
-      "path": "level1-week2.md"
-    },
-    {
-      "basename": "onboarding-week1",
-      "path": "onboarding-week1.md"
-    },
-    {
-      "basename": "level1-week3",
-      "path": "level1-week3.md"
-    },
-    {
-      "basename": "2023-03-02",
-      "path": "2023-03-02.md"
-    },
-    {
-      "basename": "level1-week4",
-      "path": "level1-week4.md"
-    },
-    {
-      "basename": "2023-03-05",
-      "path": "2023-03-05.md"
-    },
-    {
-      "basename": "2023-03-06",
-      "path": "2023-03-06.md"
-    },
-    {
-      "basename": "level1-blackjack",
-      "path": "level1-blackjack.md"
-    },
-    {
-      "basename": "2023-03-07",
-      "path": "2023-03-07.md"
     }
   ],
   "omittedPaths": [],
