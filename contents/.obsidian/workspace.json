@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-10-09.md",
+                "file": "posts/about-pool-sizing.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-10-09.md",
+                "file": "posts/about-pool-sizing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-10-09.md",
+                "file": "posts/about-pool-sizing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-10-09.md"
+                "file": "posts/about-pool-sizing.md"
               }
             }
           },
@@ -217,8 +217,16 @@
   },
   "active": "c37016702f1aca49",
   "lastOpenFiles": [
-    "posts/2023-10-08.md",
     "posts/2023-10-09.md",
+    "posts/2023-10-08.md",
+    "posts/2023-10-07.md",
+    "posts/2023-10-06.md",
+    "posts/2023-10-05.md",
+    "posts/2023-10-04.md",
+    "posts/2023-10-03.md",
+    "posts/2023-10-02.md",
+    "posts/2023-10-01.md",
+    "posts/github-self-hosted-runner.md",
     "posts/monitor-lock-and-java-synchoronized.md",
     "posts/test-isolation.md",
     "posts/portfolio.md",
@@ -235,14 +243,6 @@
     "posts/shook-sixth-demoday-function.md",
     "posts/shook-tech-stack.md",
     "posts/shook-third-demoday.md",
-    "posts/shook-third-demoday-retrospect.md",
-    "posts/shook-user-inducement-plan.md",
-    "posts/shook-webclient-reason.md",
-    "posts/spring-external-api-call-method.md",
-    "posts/swagger-trouble-shooting.md",
-    "posts/shook-nickname-update-issue.md",
-    "posts/shook-music-api.md",
-    "posts/shook-nginx.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",
