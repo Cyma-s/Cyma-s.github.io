@@ -1,11 +1,15 @@
 ---
-title   : S3와 CloudFront 연동하기
-date    : 2023-06-17 14:46:24 +0900
-updated : 2023-06-17 14:46:53 +0900
-tags     : 
-- aws
-- matzip
+title: S3와 CloudFront 연동하기
+date: 2023-06-17 14:46:24 +0900
+updated: 2023-10-09 17:13:07 +0900
+tags:
+  - aws
+  - matzip
 ---
+
+## 개요
+
+
 
 ## S3 버킷 생성
 

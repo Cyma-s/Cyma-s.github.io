@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5c0f16560d145e98",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/shook-prod-server-setting.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e820c8cae8bb163a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/singleton-vs-static.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c37016702f1aca49",
             "type": "leaf",
             "state": {
@@ -49,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/jdk-synchronizer.md",
+                "file": "posts/ori-06-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,14 +37,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/shook-like-issue.md",
+                "file": "posts/test-isolation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8ebeb01199c45afd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/matzip-aws-s3-cloudfront.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -122,8 +110,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -144,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/shook-like-issue.md",
+                "file": "posts/test-isolation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/shook-like-issue.md",
+                "file": "posts/test-isolation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/shook-like-issue.md"
+                "file": "posts/test-isolation.md"
               }
             }
           },
@@ -231,32 +218,32 @@
   },
   "active": "b86098bb0dbf1d31",
   "lastOpenFiles": [
-    "posts/shook-like-concurrency-issue.md",
-    "posts/shook-like-issue.md",
-    "posts/shook-level4.md",
-    "posts/shook-git-branch-strategy.md",
-    "posts/shook-five-minute-speech.md",
-    "posts/github-codeowners.md",
-    "posts/github-merge-strategy.md",
-    "posts/github-self-hosted-runner.md",
-    "posts/interceptor-argument-resolver-authenticated.md",
-    "posts/locust.md",
-    "posts/meeting-process-refactoring-request.md",
-    "posts/fifth-demoday-index.md",
-    "posts/broken-pipe-error.md",
-    "posts/api-docs-search.md",
+    "posts/portfolio.md",
+    "posts/monitor-lock-and-java-synchoronized.md",
     "posts/shook-prod-server-setting.md",
-    "posts/shook-maniadb.md",
+    "posts/singleton-vs-static.md",
+    "posts/ori-06-08.md",
+    "posts/matzip-vpc-setting.md",
+    "posts/jdk-synchronizer.md",
+    "posts/matzip-aws-s3-cloudfront.md",
+    "posts/shook-s3-introduce.md",
+    "posts/shook-second-demoday.md",
+    "posts/shook-service-introduce.md",
+    "posts/shook-site-analysis.md",
+    "posts/shook-sixth-demoday-function.md",
+    "posts/shook-tech-stack.md",
+    "posts/shook-third-demoday.md",
+    "posts/shook-third-demoday-retrospect.md",
+    "posts/shook-user-inducement-plan.md",
+    "posts/shook-webclient-reason.md",
+    "posts/spring-external-api-call-method.md",
+    "posts/swagger-trouble-shooting.md",
+    "posts/test-isolation.md",
+    "posts/shook-nickname-update-issue.md",
     "posts/shook-music-api.md",
     "posts/shook-nginx.md",
-    "posts/shook-nickname-update-issue.md",
     "posts/shook-persona.md",
-    "posts/shook-planning-interview.md",
-    "posts/test-isolation.md",
-    "posts/swagger-trouble-shooting.md",
-    "posts/spring-xml-parsing.md",
-    "posts/spring-external-api-call-method.md",
-    "posts/shook-webclient-reason.md",
+    "posts/shook-planning.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",
