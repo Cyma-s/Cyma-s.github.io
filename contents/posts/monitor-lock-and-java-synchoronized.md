@@ -1,7 +1,7 @@
 ---
 title: monitor lock과 synchronized
 date: 2023-08-21 16:31:47 +0900
-updated: 2023-10-08 22:26:51 +0900
+updated: 2023-10-09 23:38:16 +0900
 tags:
   - java
   - os
@@ -284,12 +284,12 @@ Java 의 동기화는 Intrinsic Lock 또는 Monitor lock 으로 알려진 내부
 `synchronized` statement 는 고유 락을 제공하는 객체를 지정해야 한다.  
 
 ```java
-  public void addName(String name) {
-    synchronized(this) {
-        lastName = name;
-        nameCount++;
-    }
-    nameList.add(name);
+public void addName(String name) {
+	synchronized(this) {
+		lastName = name;
+		nameCount++;
+	}
+	nameList.add(name);
 }
 ```
 
@@ -586,7 +586,10 @@ Java 의 모든 객체는 하나의 모니터를 가진다.
 - happens-before 란 무엇인가?
 	- 위에 있음
 - 생산자-소비자 문제란 무엇인가?
+	- 위에 있음
 - 생산자-소비자 문제는 왜 해결해야 하는가?
+	- 생산자 소비자가 동시에 동작하면 버퍼 오버플로우, 버퍼 언더플로우가 발생할 수 있다. 또한 생산자와 소비자가 동시에 공유 자원에 접근하면 데이터의 무결성이 손상될 수 있다.
+	- 무한 대기 상태에 빠진 스레드나 프로세스가 리소스를 계속 점유하게 되어 시스템의 효율성이 저하된다.
 - Java 에서 Monitor Lock 을 가지게 됨으로써 얻을 수 있는 이점은 무엇인가?
 - notify() 를 수행했을 때 다음 스레드는 어떻게 결정되는가?
 - java 말고 다른 언어에도 Monitor lock 이 적용된 곳이 있는가?
