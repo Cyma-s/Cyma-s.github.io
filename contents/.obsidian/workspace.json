@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/about-pool-sizing.md",
+                "file": "posts/monitor-lock-and-java-synchoronized.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/about-pool-sizing.md",
+                "file": "posts/monitor-lock-and-java-synchoronized.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/about-pool-sizing.md",
+                "file": "posts/monitor-lock-and-java-synchoronized.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/about-pool-sizing.md"
+                "file": "posts/monitor-lock-and-java-synchoronized.md"
               }
             }
           },
@@ -217,6 +217,7 @@
   },
   "active": "c37016702f1aca49",
   "lastOpenFiles": [
+    "posts/about-pool-sizing.md",
     "posts/2023-10-09.md",
     "posts/2023-10-08.md",
     "posts/2023-10-07.md",
@@ -242,7 +243,6 @@
     "posts/shook-site-analysis.md",
     "posts/shook-sixth-demoday-function.md",
     "posts/shook-tech-stack.md",
-    "posts/shook-third-demoday.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",

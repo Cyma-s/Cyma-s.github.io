@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "monitor-lock-and-java-synchoronized",
+      "path": "posts/monitor-lock-and-java-synchoronized.md"
+    },
+    {
       "basename": "about-pool-sizing",
       "path": "posts/about-pool-sizing.md"
     },
@@ -43,10 +47,6 @@
     {
       "basename": "github-self-hosted-runner",
       "path": "posts/github-self-hosted-runner.md"
-    },
-    {
-      "basename": "monitor-lock-and-java-synchoronized",
-      "path": "posts/monitor-lock-and-java-synchoronized.md"
     },
     {
       "basename": "test-isolation",
