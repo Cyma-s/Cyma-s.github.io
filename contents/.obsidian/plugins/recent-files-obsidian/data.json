@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "transaction",
+      "path": "posts/transaction.md"
+    },
+    {
       "basename": "monitor-lock-and-java-synchoronized",
       "path": "posts/monitor-lock-and-java-synchoronized.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "interceptor-argument-resolver-authenticated",
       "path": "posts/interceptor-argument-resolver-authenticated.md"
-    },
-    {
-      "basename": "locust",
-      "path": "posts/locust.md"
     }
   ],
   "omittedPaths": [],

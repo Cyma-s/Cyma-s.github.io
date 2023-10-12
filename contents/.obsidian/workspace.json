@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md",
+                "file": "posts/transaction.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md",
+                "file": "posts/transaction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md",
+                "file": "posts/transaction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/monitor-lock-and-java-synchoronized.md"
+                "file": "posts/transaction.md"
               }
             }
           },
@@ -205,8 +205,8 @@
   },
   "active": "c37016702f1aca49",
   "lastOpenFiles": [
-    "posts/jdk-synchronizer.md",
     "posts/monitor-lock-and-java-synchoronized.md",
+    "posts/jdk-synchronizer.md",
     "posts/spurious-wakeups.md",
     "posts/ori-06-08.md",
     "posts/test-isolation.md",
