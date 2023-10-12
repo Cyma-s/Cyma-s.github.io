@@ -5,6 +5,18 @@
       "path": "posts/monitor-lock-and-java-synchoronized.md"
     },
     {
+      "basename": "ori-06-08",
+      "path": "posts/ori-06-08.md"
+    },
+    {
+      "basename": "test-isolation",
+      "path": "posts/test-isolation.md"
+    },
+    {
+      "basename": "matzip-aws-s3-cloudfront",
+      "path": "posts/matzip-aws-s3-cloudfront.md"
+    },
+    {
       "basename": "about-pool-sizing",
       "path": "posts/about-pool-sizing.md"
     },
@@ -49,10 +61,6 @@
       "path": "posts/github-self-hosted-runner.md"
     },
     {
-      "basename": "test-isolation",
-      "path": "posts/test-isolation.md"
-    },
-    {
       "basename": "portfolio",
       "path": "posts/portfolio.md"
     },
@@ -65,20 +73,12 @@
       "path": "posts/singleton-vs-static.md"
     },
     {
-      "basename": "ori-06-08",
-      "path": "posts/ori-06-08.md"
-    },
-    {
       "basename": "matzip-vpc-setting",
       "path": "posts/matzip-vpc-setting.md"
     },
     {
       "basename": "jdk-synchronizer",
       "path": "posts/jdk-synchronizer.md"
-    },
-    {
-      "basename": "matzip-aws-s3-cloudfront",
-      "path": "posts/matzip-aws-s3-cloudfront.md"
     },
     {
       "basename": "shook-s3-introduce",
