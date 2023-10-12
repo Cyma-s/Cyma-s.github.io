@@ -5,6 +5,14 @@
       "path": "posts/monitor-lock-and-java-synchoronized.md"
     },
     {
+      "basename": "jdk-synchronizer",
+      "path": "posts/jdk-synchronizer.md"
+    },
+    {
+      "basename": "spurious-wakeups",
+      "path": "posts/spurious-wakeups.md"
+    },
+    {
       "basename": "ori-06-08",
       "path": "posts/ori-06-08.md"
     },
@@ -75,10 +83,6 @@
     {
       "basename": "matzip-vpc-setting",
       "path": "posts/matzip-vpc-setting.md"
-    },
-    {
-      "basename": "jdk-synchronizer",
-      "path": "posts/jdk-synchronizer.md"
     },
     {
       "basename": "shook-s3-introduce",
@@ -195,10 +199,6 @@
     {
       "basename": "locust",
       "path": "posts/locust.md"
-    },
-    {
-      "basename": "meeting-process-refactoring-request",
-      "path": "posts/meeting-process-refactoring-request.md"
     }
   ],
   "omittedPaths": [],

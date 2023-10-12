@@ -1,9 +1,10 @@
 ---
 title: JDK 의 Synchronizer 파헤치기
 date: 2023-10-08 22:31:49 +0900
-updated: 2023-10-08 23:20:55 +0900
+updated: 2023-10-12 12:08:42 +0900
 tags:
   - jdk
+  - jvm
 ---
 
 ## `synchronizer.cpp`
