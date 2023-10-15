@@ -1,7 +1,7 @@
 ---
 title: 어댑터 패턴
 date: 2023-09-17 15:41:22 +0900
-updated: 2023-09-17 16:33:02 +0900
+updated: 2023-10-15 22:34:01 +0900
 tags:
   - design-pattern
   - 디자인패턴
@@ -97,7 +97,7 @@ public interface HandlerAdapter {
 
 ## 스프링의 `HandlerAdapter` 
 
-스프링에서도 마찬가지로 어댑터 패턴을 사용하고 있다. `HandlerAdapter` 에 대해 더 자세학 ㅔ알아보려면 [[handler-adapter]] 를 참고하자.
+스프링에서도 마찬가지로 어댑터 패턴을 사용하고 있다. `HandlerAdapter` 에 대해 더 자세하게 알아보려면 [[handler-adapter]] 를 참고하자.
 
 ## 참고
 

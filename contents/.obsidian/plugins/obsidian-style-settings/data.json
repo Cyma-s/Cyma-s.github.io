@@ -1,6 +1,6 @@
 {
   "anuppuccin-theme-settings@@anuppuccin-theme-light": "ctp-latte",
-  "anuppuccin-theme-settings@@anuppuccin-light-theme-accents": "ctp-accent-light-sky",
+  "anuppuccin-theme-settings@@anuppuccin-light-theme-accents": "ctp-accent-light-pink",
   "anuppuccin-theme-settings@@anp-active-line": "anp-current-line-border-only",
   "anuppuccin-theme-settings@@anp-callout-select": "none",
   "anuppuccin-theme-settings@@anp-list-toggle": true,
@@ -36,5 +36,6 @@
   "anuppuccin-theme-settings@@anp-table-toggle": true,
   "anuppuccin-theme-settings@@anp-table-width": true,
   "anuppuccin-theme-settings@@anp-callout-color-toggle": false,
-  "anuppuccin-theme-settings@@bold-weight": "600"
+  "anuppuccin-theme-settings@@bold-weight": "600",
+  "anuppuccin-theme-settings@@ctp-custom-pink@@light": "#FF3689"
 }

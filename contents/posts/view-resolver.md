@@ -1,7 +1,7 @@
 ---
 title: ViewResolver
 date: 2023-09-19 11:57:44 +0900
-updated: 2023-10-02 23:17:51 +0900
+updated: 2023-10-15 22:37:38 +0900
 tags:
   - spring
 ---
@@ -109,8 +109,6 @@ public class InternalResourceViewResolver extends UrlBasedViewResolver {
 ```java
 InternalResourceViewResolver resolver = new InternalResourceViewResolver("/WEB-INF/views/", ".jsp");
 ```
-
-
 
 `requiredViewClass()` : `ViewResolver` 가 요구하는 뷰 클래스의 타입을 반환한다. `InternalResourceView.class` 를 반환한다.  
 
@@ -502,4 +500,5 @@ public void writeRaw(String text) throws IOException
     }  
 }
 ```
+
 

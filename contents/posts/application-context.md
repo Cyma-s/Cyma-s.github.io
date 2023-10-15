@@ -1,12 +1,12 @@
 ---
-title   : ApplicationContext 찍먹하기
-date    : 2023-06-06 16:24:15 +0900
-updated : 2023-06-06 16:24:41 +0900
-tags     : 
-- spring
-- 개발
-- 스터디
-- 학습로그
+title: ApplicationContext 찍먹하기
+date: 2023-06-06 16:24:15 +0900
+updated: 2023-10-15 22:22:56 +0900
+tags:
+  - spring
+  - 개발
+  - 스터디
+  - 학습로그
 ---
 
 ## ApplicationContext
@@ -58,11 +58,11 @@ public ConfigurableApplicationContext run(String... args) {
 	// 배너 출력
       Banner printedBanner = printBanner(environment);  
 
-	// **애플리케이션 컨텍스트 생성**
+	// 애플리케이션 컨텍스트 생성
       context = createApplicationContext();  
       context.setApplicationStartup(this.applicationStartup);  
 
-	// **Context 준비 단계**
+	// Context 준비 단계
       prepareContext(bootstrapContext, context, environment, listeners, applicationArguments, printedBanner);  
 
 	// Context Refresh 단계

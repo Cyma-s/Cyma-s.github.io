@@ -1,0 +1,13 @@
+{
+  "confirmPassword": true,
+  "rememberPassword": true,
+  "rememberPasswordTimeout": 5,
+  "rememberPasswordLevel": "filename",
+  "featureWholeNoteEncrypt": {
+    "defaultView": "Source"
+  },
+  "featureInplaceEncrypt": {
+    "expandToWholeLines": false,
+    "showMarkerWhenReadingDefault": true
+  }
+}
