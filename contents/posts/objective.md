@@ -1,38 +1,8 @@
 ---
 title: 나의 목표
 date: 2023-10-15 08:09:43 +0900
-updated: 2023-10-15 09:29:42 +0900
+updated: 2023-10-15 18:27:02 +0900
 tags: 
 ---
 
-## 내가 20대에 되고 싶은 모습은 무엇인가?
-
-돈에 구애받지 않는 사람이 되고 싶다. 나는 돈을 좇는 사람은 아니지만, 내가 원할 때 무언가를 '돈' 때문에 못하는 건 너무 싫다.
-내가 주고 싶은 걸 주고, 내가 사고 싶은 걸 사고, 입고 싶은 걸 입고, 먹고 싶은 걸 먹고. 돈 때문에 모든 것에 머뭇거리는 건 싫다.
-
-그러니 나는 돈을 많이 번다. 나는 20대에 경제적으로 독립한다. 더 이상 부모님에게 손 벌리는 사람이 되지 않는다.
-20대에는 경제적으로 독립하는 것을 목표로 한다. 난 100억을 번다. 번 돈으로 용산에 집을 산다. 부모님에게 집을 사드린다.
-
-### 내가 학교로 돌아갔을 때 어떤 활동을 해야 할까?
-
-먼저 돈을 많이 벌려면 사업을 해야 한다. 사업을 하고 어느 정도 크기를 키워서 엑싯한다.
-사업을 하기 위해서는 내 커리어나, 학벌, 자금, 신뢰할 수 있는 동료가 필요하다.
-
-1. 계속해서 창업 아이템을 찾는다. -> 사이드 프로젝트를 하며 사용자에게 무엇인가 서비스할 수 있는 것을 만든다.
-2. 같이 사업을 할 수 있을만한 사람을 모색한다. -> 사이드 프로젝트를 할 때 다른 사람들을 모색한다.
-	1. 취업을 하고 나서 
-
-스타트업을 진행하고 있는 사람, 진행할 사람, 투자자와 인연을 만든다. -> 꾸준히 관련 모임에 참석하거나, 컨퍼런스라도 가본다. 커피챗을 적극 활용한다.
-
-정부에서 지원하는 창업 패키지에 지속적으로 지원한다. -> 
-
-## 내 인생이 끝나기 전, 나는 어떤 모습이었으면 하는가?
-
-내 옆에는 오빠가 있다. 그렇지 않으면 무엇도 의미가 없다.
-나는 돈보다 시간이 더 소중한 사람이다. 오빠랑 놀고 싶으면 놀고, 일하고 싶으면 일하고. 오빠와 내가 좋아하는 걸 많이 알아가고, 많이 한다.
-
-여행을 다니기에 무리 없이 영어를 한다. 가고 싶은 곳이 있다면 어디든지 간다.
-어딘가를 돌아다닐 때 신체적으로 무리가 없다. 건강한 몸을 가지고 있다.
-
-내가 하고 싶은 것을 찾았다. 하루하루 그 일을 하면서 재밌게 산다.
-모든 날이 행복할 수는 없겠지만, 하루하루를 허투루 쓰지 않고 소중하게 보낸다.
+🔐β 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 🔐

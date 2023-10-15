@@ -19,5 +19,6 @@
   "obsidian-admonition",
   "obsidian-git",
   "quick-latex",
-  "custom-font-loader"
+  "custom-font-loader",
+  "meld-encrypt"
 ]
