@@ -1,20 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "swagger-trouble-shooting",
+      "path": "posts/swagger-trouble-shooting.md"
+    },
+    {
+      "basename": "2023-08-17",
+      "path": "posts/2023-08-17.md"
+    },
+    {
+      "basename": "shook-prod-server-setting",
+      "path": "posts/shook-prod-server-setting.md"
+    },
+    {
+      "basename": "shook-nginx",
+      "path": "posts/shook-nginx.md"
+    },
+    {
+      "basename": "2023-10-15",
+      "path": "posts/2023-10-15.md"
+    },
+    {
       "basename": "transaction",
       "path": "posts/transaction.md"
     },
     {
-      "basename": "monitor-lock-and-java-synchoronized",
-      "path": "posts/monitor-lock-and-java-synchoronized.md"
+      "basename": "spurious-wakeups",
+      "path": "posts/spurious-wakeups.md"
     },
     {
       "basename": "jdk-synchronizer",
       "path": "posts/jdk-synchronizer.md"
     },
     {
-      "basename": "spurious-wakeups",
-      "path": "posts/spurious-wakeups.md"
+      "basename": "objective",
+      "path": "posts/objective.md"
+    },
+    {
+      "basename": "monitor-lock-and-java-synchoronized",
+      "path": "posts/monitor-lock-and-java-synchoronized.md"
     },
     {
       "basename": "ori-06-08",
@@ -77,10 +101,6 @@
       "path": "posts/portfolio.md"
     },
     {
-      "basename": "shook-prod-server-setting",
-      "path": "posts/shook-prod-server-setting.md"
-    },
-    {
       "basename": "singleton-vs-static",
       "path": "posts/singleton-vs-static.md"
     },
@@ -133,20 +153,12 @@
       "path": "posts/spring-external-api-call-method.md"
     },
     {
-      "basename": "swagger-trouble-shooting",
-      "path": "posts/swagger-trouble-shooting.md"
-    },
-    {
       "basename": "shook-nickname-update-issue",
       "path": "posts/shook-nickname-update-issue.md"
     },
     {
       "basename": "shook-music-api",
       "path": "posts/shook-music-api.md"
-    },
-    {
-      "basename": "shook-nginx",
-      "path": "posts/shook-nginx.md"
     },
     {
       "basename": "shook-persona",
@@ -187,18 +199,6 @@
     {
       "basename": "shook-five-minute-speech",
       "path": "posts/shook-five-minute-speech.md"
-    },
-    {
-      "basename": "github-codeowners",
-      "path": "posts/github-codeowners.md"
-    },
-    {
-      "basename": "github-merge-strategy",
-      "path": "posts/github-merge-strategy.md"
-    },
-    {
-      "basename": "interceptor-argument-resolver-authenticated",
-      "path": "posts/interceptor-argument-resolver-authenticated.md"
     }
   ],
   "omittedPaths": [],
