@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Oct 2023 06:15:54 GMT</lastBuildDate><item><title><![CDATA[Spurious wakeups]]></title><description><![CDATA[Spurious wakeups…]]></description><link>https://vero.wiki/spurious-wakeups/</link><guid isPermaLink="false">https://vero.wiki/spurious-wakeups/</guid><pubDate>Thu, 12 Oct 2023 02:35:38 GMT</pubDate><content:encoded>&lt;h2&gt;Spurious wakeups 란?&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Oct 2023 10:29:12 GMT</lastBuildDate><item><title><![CDATA[2023년 10월 15일]]></title><description><![CDATA[TODO 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30] 바론 코드리뷰  [priority:: highest]  [created:: 2023-10-15]  [scheduled:: 2023-10-1…]]></description><link>https://vero.wiki/2023-10-15/</link><guid isPermaLink="false">https://vero.wiki/2023-10-15/</guid><pubDate>Sun, 15 Oct 2023 07:21:40 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due today
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 바론 코드리뷰  [priority:: highest]  [created:: 2023-10-15]  [scheduled:: 2023-10-15]  [completion:: 2023-10-15]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 스터디룸 예약  [priority:: highest]  [due:: 2023-10-15]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 코드 리뷰 반영  [priority:: highest]  [due:: 2023-10-15]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 미션 2단계  [priority:: high]  [due:: 2023-10-15]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; Essay 보내기  [priority:: highest]  [due:: 2023-10-15]  [completion:: 2023-10-15]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Stream.concat&lt;/code&gt; 을 사용해서 두 stream 을 결합할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;nginx&lt;/code&gt; 파일을 최신화 안 해두니까 캠퍼스가 아닌 곳에서는 볼 수가 없다.. 당장 최신화 해서 어디에 저장해둬야겠다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Computer Science]]></title><description><![CDATA[My major is the Computer Science. I have been studying my major for five years from the high school. Currently, I'm making a service that…]]></description><link>https://vero.wiki/speaking-theme-computer-science/</link><guid isPermaLink="false">https://vero.wiki/speaking-theme-computer-science/</guid><pubDate>Sun, 15 Oct 2023 09:47:30 GMT</pubDate><content:encoded>&lt;p&gt;My major is the Computer Science. I have been studying my major for five years from the high school.&lt;/p&gt;
+&lt;p&gt;Currently, I&apos;m making a service that introduces &apos;killing-part&apos; in famous songs. &apos;Killing-part&apos; means that verse of songs loved by many people. I&apos;m a server developer that maintains my service server.&lt;/p&gt;
+&lt;p&gt;When I was a high school student, I had seen my senior who made some computer programs. It looked like so interesting, I wanted to learn about that. Therefore, I came into club of engineering. I studied about computer language (like language of C). It was so funny to learn about activating computer programs. I fell love in my major :)&lt;/p&gt;
+&lt;p&gt;My major makes me keep studying. Because it changes very quickly, I will keep studying about upcoming techniques. But ironically, it makes me very exciting! And My favorite hobby is to study about the computer science.&lt;/p&gt;
+&lt;p&gt;Nowadays, I&apos;m taking a year off from my university. At earlier of this year, I got accepted &apos;우아한테크코스&apos; that instructs some techniques about the server development. I have studied in study program that is operated in &apos;배달의민족&apos; company from that time. If I do good jobs, it can employ me. So I have to study hard.&lt;/p&gt;
+&lt;p&gt;I spend most of time with my teammates that develops my service together. When I didn&apos;t understand for some knowledge, they explained them very sincerely. Although studying sometimes made me feel bad, I can overcome if I&apos;m with my friends together. I have deeply appreciated them.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[영어 회화 주제 준비]]></title><description><![CDATA[speaking-theme-computer-science]]></description><link>https://vero.wiki/english-speaking-theme/</link><guid isPermaLink="false">https://vero.wiki/english-speaking-theme/</guid><pubDate>Sun, 15 Oct 2023 09:47:30 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/speaking-theme-computer-science&quot; data-wiki-link=&quot;true&quot;&gt;speaking-theme-computer-science&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[나의 목표]]></title><description><![CDATA[🔐β a3GeuF02DDnokbTPVBN4ZeYgBMPrsv2d/rZMoD5C1N7E3lWIs9uUGeQSeKcSrV/iVBaLKgpyD4wxingj9qpbI0W6blYcEXD6mCSSX2TlKMTYhKo5fNmuizpHSTVF6MPwpTlZS…]]></description><link>https://vero.wiki/objective/</link><guid isPermaLink="false">https://vero.wiki/objective/</guid><pubDate>Sat, 14 Oct 2023 23:09:43 GMT</pubDate><content:encoded>&lt;p&gt;🔐β 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 🔐&lt;/p&gt;</content:encoded></item><item><title><![CDATA[S-HOOK 개선하면 좋을 점들]]></title><description><![CDATA[시급한 것 README.md 서비스 구조도 최신화 ERD 최신화 기능 설명 구체화 기술 좋아요 동시성 문제 해결 [ ] 기획 외부 노래 검색할 수 있도록 기능 추가 백엔드 기술 graceful shutdown…]]></description><link>https://vero.wiki/shook-function-develop/</link><guid isPermaLink="false">https://vero.wiki/shook-function-develop/</guid><pubDate>Sun, 15 Oct 2023 09:13:38 GMT</pubDate><content:encoded>&lt;h2&gt;시급한 것&lt;/h2&gt;
+&lt;h3&gt;README.md&lt;/h3&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 서비스 구조도 최신화&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; ERD 최신화&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 기능 설명 구체화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;기술&lt;/h3&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 좋아요 동시성 문제 해결&lt;/li&gt;
+&lt;li&gt;[ ]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;기획&lt;/h2&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 외부 노래 검색할 수 있도록 기능 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;백엔드 기술&lt;/h2&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; graceful shutdown 적용&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 인메모리 캐싱 걷어내기&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 멀티 모듈 적용하기
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 패키지 정리하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 요청 / 응답 로깅&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; S3 &amp;#x26; cloudfront 도입하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;인프라&lt;/h3&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; jenkins 로 migration&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; cd 제대로 적용하기&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; cors 설정 nginx 로 migration&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[swagger 경로 설정 오류]]></title><description><![CDATA[문제 상황  문제 상황만 있고 해결 과정이 없네요..]]></description><link>https://vero.wiki/swagger-trouble-shooting/</link><guid isPermaLink="false">https://vero.wiki/swagger-trouble-shooting/</guid><pubDate>Thu, 17 Aug 2023 04:33:44 GMT</pubDate><content:encoded>&lt;h2&gt;문제 상황&lt;/h2&gt;
+&lt;p&gt;&lt;figure class=&apos;gatsby-resp-image-figure&apos; style=&apos;margin-bottom: 16px;&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; &apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/b3a4e/swagger-fail-load.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 32.94117647058823%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABBUlEQVR42n2PTUrDQBzF5zRaXRY8QcUbuHLpFVwIbgq68AJeIRa01kXP0qbRSlrFhjQzk4xgma88Z1KhH6Rd/Hj/D96DR1pnp2g2T9BoHOPg8Ai393fo9XsIngJ0up29PD4H6L6+oP1wjfObFi6vLkDSNEWSJJjNvisYoyiKvIZiYxei+EeAcYo5S5HROYi1FmVZ7sTa+rsxFlqbCj9bh3FZREqJdSbTLwzCCHE8xSgaY/wRIxy9I558Yhi+IXK3wTAC57kLU9j2E6UU1hHix9XmrpaoTLmr6tVXo5Qjy5irmON3sYDSm97aQGO0q2mWaryalVqPrXatNba9tYH7kHLJ7r/EHzV9BCNaeLGGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;swagger-fail-load.png&apos; title=&apos;&apos; src=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/ca1dc/swagger-fail-load.png&apos; srcset=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/e7570/swagger-fail-load.png 170w,
+/static/59cc1d85d0b7de778433624bcd5c6c7b/f46e7/swagger-fail-load.png 340w,
+/static/59cc1d85d0b7de778433624bcd5c6c7b/ca1dc/swagger-fail-load.png 680w,
+/static/59cc1d85d0b7de778433624bcd5c6c7b/02d09/swagger-fail-load.png 1020w,
+/static/59cc1d85d0b7de778433624bcd5c6c7b/9d567/swagger-fail-load.png 1360w,
+/static/59cc1d85d0b7de778433624bcd5c6c7b/b3a4e/swagger-fail-load.png 2542w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&apos;gatsby-resp-image-figcaption&apos;&gt;swagger-fail-load.png&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;문제 상황만 있고 해결 과정이 없네요..&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spurious wakeups]]></title><description><![CDATA[Spurious wakeups…]]></description><link>https://vero.wiki/spurious-wakeups/</link><guid isPermaLink="false">https://vero.wiki/spurious-wakeups/</guid><pubDate>Thu, 12 Oct 2023 02:35:38 GMT</pubDate><content:encoded>&lt;h2&gt;Spurious wakeups 란?&lt;/h2&gt;
 &lt;p&gt;스레드가 알 수 없는 이유로 &lt;code class=&quot;language-text&quot;&gt;wait()&lt;/code&gt; 혹은 유사한 블로킹 연산에서 예기치 않게 깨어나는 현상이다.&lt;/p&gt;
 &lt;p&gt;즉, &lt;code class=&quot;language-text&quot;&gt;notify()&lt;/code&gt; , &lt;code class=&quot;language-text&quot;&gt;notifyAll()&lt;/code&gt; 또는 스레드 인터럽트 등의 알려진 시그널을 받지 않았음에도 스레드가 깨어나는 것이다.&lt;/p&gt;
 &lt;p&gt;운영체제와 하드웨어 구현의 복잡성에서 기인하는 문제 중에 하나이다. 성능 최적화나 race condition 의 해결과 관련해서 발생할 수 있다.&lt;/p&gt;
@@ -8629,21 +8704,7 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; bellman_ford&
 &lt;li&gt;swagger API 문서를 열려면 swagger 의 css, js 파일이 필요한데, &lt;code class=&quot;language-text&quot;&gt;/var/nginx&lt;/code&gt; 의 정적 파일에 접근할 때 root 만 접근할 수 있기 때문에 ubuntu 로 접근하면 권한 문제가 발생한다. ubuntu 에도 권한을 부여해주면 접근할 수 있다!!!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;궁금한 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[swagger 경로 설정 오류]]></title><description><![CDATA[문제 상황]]></description><link>https://vero.wiki/swagger-trouble-shooting/</link><guid isPermaLink="false">https://vero.wiki/swagger-trouble-shooting/</guid><pubDate>Thu, 17 Aug 2023 04:33:44 GMT</pubDate><content:encoded>&lt;h2&gt;문제 상황&lt;/h2&gt;
-&lt;p&gt;&lt;figure class=&apos;gatsby-resp-image-figure&apos; style=&apos;margin-bottom: 16px;&apos;&gt;
-    &lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; &apos;&gt;
-      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/b3a4e/swagger-fail-load.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
-    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 32.94117647058823%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABBUlEQVR42n2PTUrDQBzF5zRaXRY8QcUbuHLpFVwIbgq68AJeIRa01kXP0qbRSlrFhjQzk4xgma88Z1KhH6Rd/Hj/D96DR1pnp2g2T9BoHOPg8Ai393fo9XsIngJ0up29PD4H6L6+oP1wjfObFi6vLkDSNEWSJJjNvisYoyiKvIZiYxei+EeAcYo5S5HROYi1FmVZ7sTa+rsxFlqbCj9bh3FZREqJdSbTLwzCCHE8xSgaY/wRIxy9I558Yhi+IXK3wTAC57kLU9j2E6UU1hHix9XmrpaoTLmr6tVXo5Qjy5irmON3sYDSm97aQGO0q2mWaryalVqPrXatNba9tYH7kHLJ7r/EHzV9BCNaeLGGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
-  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;swagger-fail-load.png&apos; title=&apos;&apos; src=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/ca1dc/swagger-fail-load.png&apos; srcset=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/e7570/swagger-fail-load.png 170w,
-/static/59cc1d85d0b7de778433624bcd5c6c7b/f46e7/swagger-fail-load.png 340w,
-/static/59cc1d85d0b7de778433624bcd5c6c7b/ca1dc/swagger-fail-load.png 680w,
-/static/59cc1d85d0b7de778433624bcd5c6c7b/02d09/swagger-fail-load.png 1020w,
-/static/59cc1d85d0b7de778433624bcd5c6c7b/9d567/swagger-fail-load.png 1360w,
-/static/59cc1d85d0b7de778433624bcd5c6c7b/b3a4e/swagger-fail-load.png 2542w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;figcaption class=&apos;gatsby-resp-image-figcaption&apos;&gt;swagger-fail-load.png&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Interceptor 나 Argument Resolver 에서 member를 조회해서 컨트롤러로 전달해주면 안 되나?]]></title><description><![CDATA[상황 설명 S-HOOK…]]></description><link>https://vero.wiki/interceptor-argument-resolver-authenticated/</link><guid isPermaLink="false">https://vero.wiki/interceptor-argument-resolver-authenticated/</guid><pubDate>Wed, 16 Aug 2023 01:01:48 GMT</pubDate><content:encoded>&lt;h2&gt;상황 설명&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Interceptor 나 Argument Resolver 에서 member를 조회해서 컨트롤러로 전달해주면 안 되나?]]></title><description><![CDATA[상황 설명 S-HOOK…]]></description><link>https://vero.wiki/interceptor-argument-resolver-authenticated/</link><guid isPermaLink="false">https://vero.wiki/interceptor-argument-resolver-authenticated/</guid><pubDate>Wed, 16 Aug 2023 01:01:48 GMT</pubDate><content:encoded>&lt;h2&gt;상황 설명&lt;/h2&gt;
 &lt;p&gt;S-HOOK 은 로그인 된 회원만 투표, 좋아요, 댓글 활동을 할 수 있습니다.&lt;br&gt;
 그러려면 인증/인가 로직이 필수적으로 필요합니다. 해당 사용자가 우리 회원인지 확인하고, 회원인 경우에만 투표 / 좋아요 / 댓글 기능을 쓸 수 있게 만들어야 하기 때문이죠.&lt;/p&gt;
 &lt;p&gt;이를 위해 OAuth + JWT 인증 로직을 도입했는데요, JWT 를 통해 클라이언트로 전달되는 값은 회원의 id 값입니다.&lt;/p&gt;
