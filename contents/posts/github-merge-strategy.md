@@ -1,12 +1,12 @@
 ---
-title   : Github merge 전략
-date    : 2023-07-15 13:52:24 +0900
-updated : 2023-07-15 13:52:44 +0900
-tags     : 
-- shook
-- 레벨3
-- github
-- 우테코
+title: Github merge 전략
+date: 2023-07-15 13:52:24 +0900
+updated: 2023-10-15 22:49:41 +0900
+tags:
+  - shook
+  - 레벨3
+  - github
+  - 우테코
 ---
 
 브랜치에서 작업한 내용을 다른 브랜치에 병합할 수 있는 방법은 다양하다.    
@@ -23,13 +23,15 @@ Commit log는 커밋을 행한 순서대로 기록되고, Merge log는 merge가 
 
 ### 예시
 
+```
 commit 시간 순서: A - B - AC - BD      
 A 브랜치 commit 순서: A - AC     
 B 브랜치 commit 순서: B - BD      
+```
 
 B 브랜치가 A 브랜치보다 main에 merge가 먼저 된 경우, main의 commit log는 다음과 같다.
 
-A - B - AC - BD - B merge commit - A merge commit
+`A - B - AC - BD - B merge commit - A merge commit`
 
 ### 단점
 
@@ -44,14 +46,16 @@ A - B - AC - BD - B merge commit - A merge commit
 
 ### 예시
 
+```
 commit 시간 순서: A - B - AC - BD   
 A 브랜치 commit 순서: A - AC   
 B 브랜치 commit 순서: B - BD    
+```
 
 B 브랜치가 A 브랜치보다 main에 merge가 먼저 된 경우, main의 commit log는 다음과 같다.
 
 `<main>` 
-B squashed commit(B-BD 커밋 메시지) - A squashed commit(A-AC 커밋 메시지)
+`B squashed commit(B-BD 커밋 메시지) - A squashed commit(A-AC 커밋 메시지)`
 
 ### 단점
 
@@ -94,6 +98,11 @@ rebase를 시작하기 전에 원격 레포지토리와 제대로 동기화가 �
 상황에 따라 사용해야 할 듯 하다.    
 우리는 Github Flow 로 진행하고 있기 때문에, main 에 커밋이 다 쌓이면 지저분할 것 같아서 Squash merge 전략을 사용하고 있다.     
 
+### Squash merge 후기
+
+실제로 코드를 깔끔하게 관리할 수 있었지만, 커밋 단위 롤백이 안 되는 것은 조금 불편했다.
+merge 전에 QA 를 꼼꼼히 해야 안전하게 merge 할 수 있다.
+
 ## Conflict 해결하기
 
 프로젝트를 진행하다보면 같은 파일을 수정하는 경우가 발생할 수 있다.    
@@ -118,7 +127,7 @@ rebase를 시작하기 전에 원격 레포지토리와 제대로 동기화가 �
 
 제 작업 브랜치가 원격 브랜치와 동기화되지 않아, pull을 하는 순간 git이 모두 새로운 파일이라 판단한 것입니다.
 
-저는 로컬 C 브랜치에 dev를 rebase 한 후, 원격 C 브랜치에 force push 하는 방식으로 해결했지만 다른 방법도 있습니다.    
+저는 로컬 C 브랜치에 dev를 rebase 한 후, 원격 C 브랜치에 force push 하는 방식으로 해결했는데, 다른 방법은 없을까요?
 
 ### Cherry Pick
 
@@ -140,6 +149,8 @@ GPT의 답변은 다음과 같았습니다.
 커밋이 적은 경우에만 Cherry Pick을 사용하고, 브랜치의 모든 변경 사항을 다른 브랜치로 통합하는 경우에는 rebase가 더 적합한 듯 합니다.     
 
 역시 상황에 따라 맞게 사용하는 것이 좋아보이네요.     
+
+저희 프로젝트에서는 한 사람이 한 피쳐를 맡는 경우가 많아 force-push 를 더 많이 사용했던 것 같습니다.
 
 ## 참고
 - https://inmoonlight.github.io/2021/07/11/Git-merge-strategy/

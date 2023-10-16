@@ -1,11 +1,11 @@
 ---
-title   : 여러 개의 Bean 후보
-date    : 2023-05-22 18:57:17 +0900
-updated : 2023-05-22 18:57:24 +0900
-tags     : 
-- 스터디
-- 학습로그
-- spring
+title: 여러 개의 Bean 후보
+date: 2023-05-22 18:57:17 +0900
+updated: 2023-10-15 22:54:17 +0900
+tags:
+  - 스터디
+  - 학습로그
+  - spring
 ---
 
 ## Bean의 후보가 여러 개라면?
@@ -153,7 +153,7 @@ public class Dummy {
 }
 ```
 
-```
+```bash
 Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'subway.domain.fare.ExtraFarePolicy' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value="strangePolicy")}
 ```
 
@@ -178,7 +178,7 @@ public class DummyPolicy implements ExtraFarePolicy {
 
 `@Primary` 어노테이션이 여러 개 존재하는 경우에는 `NoUniqueBeanDefinitionException` 이 발생한다.
 
-```
+```bash
 Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'subway.domain.fare.ExtraFarePolicy' available: more than one 'primary' bean found among candidates: [distanceBasedExtraFarePolicy, dummyPolicy]
 ```
 

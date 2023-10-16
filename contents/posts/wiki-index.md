@@ -1,15 +1,15 @@
 ---
 title: Wiki Index
 date: 2023-01-31 01:56:14 +0900
-updated: 2023-10-02 23:17:50 +0900
+updated: 2023-10-15 23:21:55 +0900
 tags: 
 ---
 
 ## 개발
 
-  * [[gatsby]]
   * [[programming-book|개발 책]]
   * [[short-programming-knowledge|짧은 개발 지식]]
+  * [[shook]]
   
 ## TIL
 

@@ -1,7 +1,7 @@
 ---
 title: 디폴트 메서드(Default method)
 date: 2023-03-19 22:46:45 +0900
-updated: 2023-09-17 19:16:33 +0900
+updated: 2023-10-15 22:51:41 +0900
 tags:
   - 레벨1
   - 우테코
@@ -13,7 +13,7 @@ tags:
 
 디폴트 메서드가 없던 때를 예로 들어보자.
 
-```
+```java
 public interface Vehicle {
 	int getWheelCount();	
 }
@@ -24,7 +24,7 @@ public interface Vehicle {
 
 그래서 기존에 서비스되던 ```Vehicle``` 에 ```isFourWheel``` 을 추가했다. 
 
-```
+```java
 public interface Vehicle {
 	int getWheelCount();
 	boolean isFourWheel();
@@ -44,7 +44,7 @@ public interface Vehicle {
 
 ```default``` 키워드로 시작하며, method body를 포함한다.
 
-```
+```java
 public interface Vehicle {
 	int getWheelCount();
 	default boolean isFourWheel() {
@@ -68,7 +68,7 @@ public interface Vehicle {
 
 기존 인터페이스에서 잘 사용하지 않던 메서드를 디폴트 메서드로 작성하여 인터페이스를 구현하는 클래스에서 빈 메서드 구현을 하지 않도록 한다.
 
-```
+```java
 interface Iterator<T> {
 	boolean hasNext();
 	T next();
@@ -79,7 +79,7 @@ interface Iterator<T> {
 ```Iterator```의 remove는 잘 쓰이지 않는다.
 그래서 Iterator를 구현하는 많은 클래스가 remove에 빈 구현을 제공했다.
 
-```
+```java
 public class ListIterator<E> implement Iterator<E> {
 	List<E> list; 
 	int cursor; 
@@ -106,7 +106,7 @@ public class ListIterator<E> implement Iterator<E> {
 
 잘 사용하지 않는 remove를 디폴트 메서드로 만들면 다음과 같다.
 
-```
+```java
 interface Iterator<T> {
 	boolean hasNext();
 	T next();
@@ -123,7 +123,7 @@ interface Iterator<T> {
 
 자바에서 클래스는 한 개만 상속할 수 있지만 인터페이스는 여러 개 구현할 수 있다.
 
-```
+```java
 public interface Rotatable {
 	void setRotationAngle(int angleInDegrees);
 	int getRotationAngle();
@@ -133,7 +133,7 @@ public interface Rotatable {
 }
 ```
 
-```
+```java
 public interface Moveable {
 	int getX();
 	int getY();
@@ -150,7 +150,7 @@ public interface Moveable {
 }
 ```
 
-```
+```java
 public interface Resizable {
 	int getWidth();
 	int getHeight();
@@ -166,7 +166,7 @@ public interface Resizable {
 
 인터페이스를 조합해서 다양한 클래스를 만들 수 있다.
 
-```
+```java
 public Monster implements Moveable, Rotatable, Resizable {
 	...
 }

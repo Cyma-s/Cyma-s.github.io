@@ -1,7 +1,7 @@
 ---
 title: Mockito
 date: 2023-09-09 14:42:39 +0900
-updated: 2023-09-17 19:47:16 +0900
+updated: 2023-10-15 22:59:39 +0900
 tags:
   - test
   - 테스트
@@ -22,7 +22,7 @@ private Session createSession(final User user) {
 ```
 
 이때 세션은 생성될 때 랜덤값을 생성하기 때문에 테스트하기 매우 곤란하다.  
-특히 UUID 가 겹칠 일은 지나가다 운석 맞을 확률이라고 한다 (ㅋㅋ)
+특히 UUID 가 겹칠 일은 사람이 걸어가다가 운석 맞을 확률이라고 한다 (ㅋㅋ)
 
 ```java
 public Session() {  
@@ -123,3 +123,4 @@ verify(requestDispatcher, only()).forward(any(), any());
 (spy 도 가능하다.)
 
 `only()` 를 사용하면 단 한 번 호출되었다는 것을 확인할 수 있다.  
+`times()` 로 몇 번 호출했는지 체크할 수 있다.

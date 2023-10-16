@@ -1,9 +1,9 @@
 ---
-title   : S-HOOK Git Branch 전략
-date    : 2023-07-05 11:23:21 +0900
-updated : 2023-07-05 11:23:46 +0900
-tags     : 
-- shook
+title: S-HOOK Git Branch 전략
+date: 2023-07-05 11:23:21 +0900
+updated: 2023-10-15 23:02:13 +0900
+tags:
+  - shook
 ---
 
 ## Git Branch 전략
@@ -31,3 +31,7 @@ Git Flow 에서 release를 삭제한 전략을 사용하기로 했다.
 
 현재 개발 서버가 존재하지 않는 상황에서 유의미한 QA가 불가능하다고 생각했습니다.    
 이후 개발 서버가 필요해지고, 세팅이 완료된 후에 release 브랜치를 고려해볼 예정입니다.
+
+## 10/15,  release 는 없어졌습니다
+
+Github Flow 를 사용하게 되면서 release 브랜치는 없어지고, feature 브랜치를 dev 서버에서 배포한 뒤 QA 후 머지하는 식으로 구현하고 있습니다.
