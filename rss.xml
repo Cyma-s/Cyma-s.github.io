@@ -1,4 +1,229 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 17 Oct 2023 01:43:26 GMT</lastBuildDate><item><title><![CDATA[nginx 설정기]]></title><description><![CDATA[설정 파일  에 설정했다. health-check 외부 nginx 가 헬스 체크 API 를 호출하기 위해서는 헬스 체크 API 를 구현해야 한다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 17 Oct 2023 15:17:28 GMT</lastBuildDate><item><title><![CDATA[2023년 10월 17일]]></title><description><![CDATA[TODO 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30] 코드 리뷰 반영  [priority:: highest]  [due:: 2023-10-15] 미션 2단계  [priority:: high]  [due…]]></description><link>https://vero.wiki/2023-10-17/</link><guid isPermaLink="false">https://vero.wiki/2023-10-17/</guid><pubDate>Tue, 17 Oct 2023 13:42:06 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due today
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 코드 리뷰 반영  [priority:: highest]  [due:: 2023-10-15]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 미션 2단계  [priority:: high]  [due:: 2023-10-15]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;영어 회화 수업이 있었다. 저번 주보다는 좀 더 잘 말한 것 같아서 좋았다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/english-speaking-10-17&quot; data-wiki-link=&quot;true&quot;&gt;english-speaking-10-17&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/forwarded-header-filter&quot; data-wiki-link=&quot;true&quot;&gt;forwarded-header-filter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;할 게 굉장히 많다. 열심히 해보자!&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[ForwardedHeaderFilter]]></title><description><![CDATA[Spring Framework 에서 제공하는 서블릿 필터이다.  를 상속하고 있다.
+리버스 프록시나 로드 밸런서 같은 중개자 서버에 의해 설정된  헤더를 처리하는 역할을 수행한다. removeOnly…]]></description><link>https://vero.wiki/forwarded-header-filter/</link><guid isPermaLink="false">https://vero.wiki/forwarded-header-filter/</guid><pubDate>Thu, 17 Aug 2023 04:33:44 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;ForwardedHeaderFilter&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Spring Framework 에서 제공하는 서블릿 필터이다. &lt;code class=&quot;language-text&quot;&gt;OncePerRequestFilter&lt;/code&gt; 를 상속하고 있다.
+리버스 프록시나 로드 밸런서 같은 중개자 서버에 의해 설정된 &lt;code class=&quot;language-text&quot;&gt;X-Forwarded-*&lt;/code&gt; 헤더를 처리하는 역할을 수행한다.&lt;/p&gt;
+&lt;p&gt;removeOnly 로 구성할 수도 있는데, 이 경우 헤더를 제거하지만 사용하지는 않는다.&lt;/p&gt;
+&lt;h3&gt;메서드&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;doFilterInternal&lt;/code&gt; 는 단일 요청 스레드 내에서 요청당 한 번만 호출되도록 보장한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;setRemoveOnly&lt;/code&gt;: &lt;code class=&quot;language-text&quot;&gt;Forwarded&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;X-Forwarded-*&lt;/code&gt; 헤더만 제거되고 그 안의 정보는 무시되는 모드를 활성화한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;역할&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;URL Reconstruction&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;원본 요청의 스키마 &lt;code class=&quot;language-text&quot;&gt;X-Forwarded-Proto&lt;/code&gt; , 호스트 &lt;code class=&quot;language-text&quot;&gt;X-Forwarded-Host&lt;/code&gt;, 포트 &lt;code class=&quot;language-text&quot;&gt;X-Forwarded-Port&lt;/code&gt; 및 경로 접두사 &lt;code class=&quot;language-text&quot;&gt;X-Forwarded-Prefix&lt;/code&gt; 에 관한 정보를 이용하여 요청 URL 을 재구성한다.
+애플리케이션 내에서 &lt;code class=&quot;language-text&quot;&gt;HttpServletRequest&lt;/code&gt; 를 사용해서 URL 정보를 조회할 때, 리버스 프록시나 로드 밸런서 뒤에서의 원래 요청 정보를 바탕으로 한 올바른 URL 정보를 얻을 수 있다.&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Scheme &amp;#x26; Remote Address&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;X-Forwarded-Proto&lt;/code&gt; 헤더를 기반으로 요청 스키마 (http, https) 를 업데이트한다.
+&lt;code class=&quot;language-text&quot;&gt;X-Forwarded-For&lt;/code&gt; 헤더를 사용하여 원래 클라이언트의 IP 주소를 알아낸다. 이렇게 하면 &lt;code class=&quot;language-text&quot;&gt;HttpServletRequest.getRemoteAddr()&lt;/code&gt; 호출 시 원래 클라이언트의 IP 를 반환할 수 있다.&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Clearing Forwarded Headers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;필터는 처리 후 &lt;code class=&quot;language-text&quot;&gt;X-Forwarded-*&lt;/code&gt; 헤더를 요청에서 제거할 수 있다. 보안 목적으로 유용하다.&lt;/p&gt;
+&lt;h2&gt;Spring 에 설정하기&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ForwardedHeaderFilter&lt;/code&gt; 는 자동으로 활성화되지 않는다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;token key atrule&quot;&gt;forward-headers-strategy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; framework&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 &lt;code class=&quot;language-text&quot;&gt;application.yml&lt;/code&gt; 을 설정해주면 &lt;code class=&quot;language-text&quot;&gt;ForwardedHeaderFilter&lt;/code&gt; 가 자동으로 등록되어 사용될 수 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[nginx]]></title><description><![CDATA[리버스 프록시나 API 게이트웨이 같은 중간자 섯버가 원래 요청의 컨텍스트나 경로 접두사 정보를 애플리케이션에 전달할 때 사용하는 HTTP 헤더이다. 해당 설정이 되어 있지 않으면 swagger 를 사용할 때 다음과 같이 swagger…]]></description><link>https://vero.wiki/nginx/</link><guid isPermaLink="false">https://vero.wiki/nginx/</guid><pubDate>Tue, 17 Oct 2023 01:23:23 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;X-Forwarded-Prefix&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;리버스 프록시나 API 게이트웨이 같은 중간자 섯버가 원래 요청의 컨텍스트나 경로 접두사 정보를 애플리케이션에 전달할 때 사용하는 HTTP 헤더이다.&lt;/p&gt;
+&lt;p&gt;해당 설정이 되어 있지 않으면 swagger 를 사용할 때 다음과 같이 swagger 문서 위치를 찾지 못할 수도 있다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&apos;gatsby-resp-image-figure&apos; style=&apos;margin-bottom: 16px;&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; &apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/b3a4e/swagger-fail-load.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 32.94117647058823%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABBUlEQVR42n2PTUrDQBzF5zRaXRY8QcUbuHLpFVwIbgq68AJeIRa01kXP0qbRSlrFhjQzk4xgma88Z1KhH6Rd/Hj/D96DR1pnp2g2T9BoHOPg8Ai393fo9XsIngJ0up29PD4H6L6+oP1wjfObFi6vLkDSNEWSJJjNvisYoyiKvIZiYxei+EeAcYo5S5HROYi1FmVZ7sTa+rsxFlqbCj9bh3FZREqJdSbTLwzCCHE8xSgaY/wRIxy9I558Yhi+IXK3wTAC57kLU9j2E6UU1hHix9XmrpaoTLmr6tVXo5Qjy5irmON3sYDSm97aQGO0q2mWaryalVqPrXatNba9tYH7kHLJ7r/EHzV9BCNaeLGGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;swagger-fail-load.png&apos; title=&apos;&apos; src=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/ca1dc/swagger-fail-load.png&apos; srcset=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/e7570/swagger-fail-load.png 170w,
+/static/59cc1d85d0b7de778433624bcd5c6c7b/f46e7/swagger-fail-load.png 340w,
+/static/59cc1d85d0b7de778433624bcd5c6c7b/ca1dc/swagger-fail-load.png 680w,
+/static/59cc1d85d0b7de778433624bcd5c6c7b/02d09/swagger-fail-load.png 1020w,
+/static/59cc1d85d0b7de778433624bcd5c6c7b/9d567/swagger-fail-load.png 1360w,
+/static/59cc1d85d0b7de778433624bcd5c6c7b/b3a4e/swagger-fail-load.png 2542w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&apos;gatsby-resp-image-figcaption&apos;&gt;swagger-fail-load.png&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;필요한 경우는 다음과 같다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Base Path Routing: 중간자 서버가 특정 경로 접두사를 기반으로 요청을 다른 다운스트림 서비스로 라우팅하는 경우&lt;/li&gt;
+&lt;li&gt;Application Context Awareness: 중간 서버에서 리버스 프록시된 요청의 원래 경로 접두사를 알아야 하는 애플리케이션 (올바른 상대 URL 생성을 위해)
+&lt;ul&gt;
+&lt;li&gt;swagger UI 가 API 문서에서 각 엔드포인트에 대한 상대적인 URL 을 생성한다. 만약 애플리케이션이 리버스 프록시 뒤의 특정 base path 에서 동작한다면, 상대 URL 은 올바른 base path 를 포함해야 하므로 &lt;code class=&quot;language-text&quot;&gt;X-Forwarded-Prefix&lt;/code&gt; 로 base-path 를 알아내야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Security and Logging: 로깅이나 보안 감사를 위해 원래 요청의 접두사를 알고 싶을 때
+&lt;ul&gt;
+&lt;li&gt;Swagger 는 &lt;code class=&quot;language-text&quot;&gt;ForwardedHeaderFilter&lt;/code&gt; 를 사용하여 &lt;code class=&quot;language-text&quot;&gt;X-Forwarded-*&lt;/code&gt; 헤더를 처리하고, 해당 정보를 사용해서 요청 URL 을 재구성한다. Swagger 는 이렇게 재구성된 URL 을 사용해서, 올바른 API 엔드포인트 URL 을 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;nginx&quot;&gt;&lt;pre class=&quot;language-nginx&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;location&lt;/span&gt; /app&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;proxy_set_header&lt;/span&gt; X-Forwarded-Prefix /app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;proxy_pass&lt;/span&gt; http://backend_server&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 설정하면 백엔드 서비스가 &lt;code class=&quot;language-text&quot;&gt;X-Forwarded-Prefix&lt;/code&gt; 헤더를 사용해서 원래 요청의 접두사를 알 수 있다.&lt;/p&gt;
+&lt;h2&gt;health-checking&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http {
+    upstream backend_servers {
+        server backend1.example.com; # 특정 포트1
+        server backend2.example.com; # 특정 포트2
+
+        # 헬스 체킹 설정
+        health_check interval=30s fails=3 passes=2 uri=/healthcheck;  # 특정 url 로 요청
+    }
+
+    server {
+        listen 80;
+
+        location / {
+            proxy_pass http://backend_servers;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[2023년 10월]]></title><description><![CDATA[2023-10-01 2023-10-02 2023-10-03 2023-10-04 2023-10-05 2023-10-06 2023-10-07 2023-10-08 2023-10-09 2023-10-15 2023-10-16 2023-10-17]]></description><link>https://vero.wiki/2023-10/</link><guid isPermaLink="false">https://vero.wiki/2023-10/</guid><pubDate>Sun, 08 Oct 2023 12:52:36 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-01&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-01&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-02&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-02&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-03&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-03&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-04&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-05&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-05&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-06&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-06&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-07&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-07&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-08&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-08&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-09&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-09&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-15&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-15&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-16&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-16&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10-17&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-17&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2023년 09월]]></title><description><![CDATA[2023-09-01 2023-09-04 2023-09-05 2023-09-06 2023-09-08 2023-09-11 2023-09-15 2023-09-16 2023-09-17 2023-09-19 2023-09-20 2023-09-21 2023-0…]]></description><link>https://vero.wiki/2023-09/</link><guid isPermaLink="false">https://vero.wiki/2023-09/</guid><pubDate>Fri, 01 Sep 2023 03:03:45 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-01&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-01&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-04&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-05&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-05&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-06&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-06&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-08&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-08&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-11&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-15&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-15&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-16&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-16&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-17&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-17&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-19&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-20&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-20&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-21&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-21&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-24&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-24&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-25&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-25&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-26&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-26&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09-27&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-27&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[10/17 회화 수업]]></title><description><![CDATA[배운 것 I'm weak 보다는 I get sick easily 가 더 자연스럽다. furniture, stuff 는 복수로 쓰지 않는다. 어딘가로 이사를 갈 때는  라고 말하는 것이 좋다. ~를 하기 위해 갔다는 drive up / come up…]]></description><link>https://vero.wiki/english-speaking-10-17/</link><guid isPermaLink="false">https://vero.wiki/english-speaking-10-17/</guid><pubDate>Tue, 17 Oct 2023 13:45:07 GMT</pubDate><content:encoded>&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I&apos;m weak 보다는 I get sick easily 가 더 자연스럽다.&lt;/li&gt;
+&lt;li&gt;furniture, stuff 는 복수로 쓰지 않는다.&lt;/li&gt;
+&lt;li&gt;어딘가로 이사를 갈 때는 &lt;code class=&quot;language-text&quot;&gt;move from (이전 위치) to (새로운 위치)&lt;/code&gt; 라고 말하는 것이 좋다.&lt;/li&gt;
+&lt;li&gt;~를 하기 위해 갔다는 drive up / come up to v-ing 로 표현한다.&lt;/li&gt;
+&lt;li&gt;cloth hanger 는 옷걸이. 행거는 rack 이라고 한다.&lt;/li&gt;
+&lt;li&gt;get rid of 는 쓰레기로 버린다는 느낌 보다는 기부 같이 어딘가에 줘서 없애버린다는 느낌이라고 한다. 쓰레기로 버렸다는 throw away 가 더 알맞다.&lt;/li&gt;
+&lt;li&gt;find 는 찾다가 뭔가를 발견한 (aha!) 느낌. search / look for 는 계속해서 찾는 느낌으로 사용한다.&lt;/li&gt;
+&lt;li&gt;자연스럽게 had been v-ing 를 사용하려면 had been v-ing이 포함된 한 문장, 그 뒤에 then / but / however / when 등으로 이어지는 다음 문장이 필요하다. 즉, 두 문장으로 구성되어야 한다.
+&lt;ul&gt;
+&lt;li&gt;그에 비해 was / were v-ing 는 한 문장으로 끝나도 어색하지 않다고 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I didn&apos;t hear you.
+&lt;ul&gt;
+&lt;li&gt;I can&apos;t listen your word 라고는 말하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;busy v-ing: ~하느라 바빴다.&lt;/li&gt;
+&lt;li&gt;for a month 가 아닌 a month 라고 한다.
+&lt;ul&gt;
+&lt;li&gt;ex. the rent was 300,000 won a month.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;when 과 then 은 비슷한 의미로 사용될 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;단어&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;rack: 행거&lt;/li&gt;
+&lt;li&gt;studio: 원룸&lt;/li&gt;
+&lt;li&gt;dorms: 대학이나 회사가 관리하는 기숙사&lt;/li&gt;
+&lt;li&gt;public housing: 정부에서 관리하는 집?&lt;/li&gt;
+&lt;li&gt;stipend: 회사에서 해주는 주거 지원&lt;/li&gt;
+&lt;li&gt;stipulations == requirements&lt;/li&gt;
+&lt;li&gt;ish: 대략 (around, about, approximately)
+&lt;ul&gt;
+&lt;li&gt;time, amount, year, date, money 등에 사용할 수 있다.&lt;/li&gt;
+&lt;li&gt;ex. how much clothes you have? I guess 30ish clothes.&lt;/li&gt;
+&lt;li&gt;it is 3ish&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;the government program: 정부에서 지원하는 정책? 같은 느낌인 듯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;발음&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;exhausting: egg-zausting&lt;/li&gt;
+&lt;li&gt;cloth: cloz&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[shook hikari]]></title><description><![CDATA[사용자 경험을 생각했을 때 5000ms (5초) 보통 사용자들은 안 나오면 새로고침을 한다.  기본값 => 그렇지만  과  가 같아서 아무런 영향을 주지 않는다. : 비활성화…]]></description><link>https://vero.wiki/shook-hikaricp/</link><guid isPermaLink="false">https://vero.wiki/shook-hikaricp/</guid><pubDate>Mon, 16 Oct 2023 06:51:13 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;connectionTimeout&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 경험을 생각했을 때 5000ms (5초)&lt;/li&gt;
+&lt;li&gt;보통 사용자들은 안 나오면 새로고침을 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;idleTimeout&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;기본값 =&gt; 그렇지만 &lt;code class=&quot;language-text&quot;&gt;minimumIdle&lt;/code&gt; 과 &lt;code class=&quot;language-text&quot;&gt;maximumPoolSize&lt;/code&gt; 가 같아서 아무런 영향을 주지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;keepaliveTime&lt;/code&gt;: 비활성화 0&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;maximumPoolSize&lt;/code&gt;: 기본값 + 변경될 값 차이 =&gt; 부하테스트
+&lt;ul&gt;
+&lt;li&gt;캐싱을 적용한 상태에서 DB 접근 시간이 있는 쿼리를 부하테스트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;minimumIdle&lt;/code&gt;: maximumPoolSize 와 동일&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;maxLifetime&lt;/code&gt;: 기본값 30분 (근거 없어서)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;==mysql 권장 설정==&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;properties&quot;&gt;&lt;pre class=&quot;language-properties&quot;&gt;&lt;code class=&quot;language-properties&quot;&gt;&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.cachePrepStmts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.prepStmtCacheSize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;250&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.prepStmtCacheSqlLimit&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;2048&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.useServerPrepStmts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.useLocalSessionState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.rewriteBatchedStatements&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.cacheResultSetMetadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.cacheServerConfiguration&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.elideSetAutoCommits&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.maintainTimeStats&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;DB 에 쿼리가 가는 요청&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;/members/{member_id}&lt;/code&gt; : 0&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;/reissue&lt;/code&gt;: 0&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;/login/{oauthType}&lt;/code&gt;: 607&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;/my-page&lt;/code&gt;: 753&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;/songs/{song_id}/parts/{killing_part_id}/likes&lt;/code&gt;: 175&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;/songs/{song_id}/parts/{killing_part_id}/comments&lt;/code&gt;: 56 + alpha&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;/voting-songs/{voting_song_id}/parts&lt;/code&gt; : 100&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;=&gt; 1800&lt;/p&gt;</content:encoded></item><item><title><![CDATA[nginx 설정기]]></title><description><![CDATA[설정 파일  에 설정했다. health-check 외부 nginx 가 헬스 체크 API 를 호출하기 위해서는 헬스 체크 API 를 구현해야 한다.
 헬스 체크 시 인증을 적용하여 외부 접근을 제한한다. 도커로 스프링 애플리케이션 분리하기 docker…]]></description><link>https://vero.wiki/shook-nginx/</link><guid isPermaLink="false">https://vero.wiki/shook-nginx/</guid><pubDate>Tue, 01 Aug 2023 13:25:34 GMT</pubDate><content:encoded>&lt;h2&gt;설정 파일&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;sites-enabled/default&lt;/code&gt; 에 설정했다.&lt;/p&gt;
 &lt;h3&gt;health-check&lt;/h3&gt;
@@ -45,26 +270,7 @@ short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/ul&gt;
 &lt;h2&gt;LOG&lt;/h2&gt;
 &lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[nginx]]></title><description><![CDATA[health-checking]]></description><link>https://vero.wiki/nginx/</link><guid isPermaLink="false">https://vero.wiki/nginx/</guid><pubDate>Tue, 17 Oct 2023 01:23:23 GMT</pubDate><content:encoded>&lt;h2&gt;health-checking&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http {
-    upstream backend_servers {
-        server backend1.example.com; # 특정 포트1
-        server backend2.example.com; # 특정 포트2
-
-        # 헬스 체킹 설정
-        health_check interval=30s fails=3 passes=2 uri=/healthcheck;  # 특정 url 로 요청
-    }
-
-    server {
-        listen 80;
-
-        location / {
-            proxy_pass http://backend_servers;
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
-        }
-    }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[HikariCP]]></title><description><![CDATA[데이터 커넥션 풀이란? In software engineering, a connection pool is a cache of database connections maintained so that the connections can be reused…]]></description><link>https://vero.wiki/hikaricp/</link><guid isPermaLink="false">https://vero.wiki/hikaricp/</guid><pubDate>Tue, 03 Oct 2023 05:45:52 GMT</pubDate><content:encoded>&lt;h2&gt;데이터 커넥션 풀이란?&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[HikariCP]]></title><description><![CDATA[데이터 커넥션 풀이란? In software engineering, a connection pool is a cache of database connections maintained so that the connections can be reused…]]></description><link>https://vero.wiki/hikaricp/</link><guid isPermaLink="false">https://vero.wiki/hikaricp/</guid><pubDate>Tue, 03 Oct 2023 05:45:52 GMT</pubDate><content:encoded>&lt;h2&gt;데이터 커넥션 풀이란?&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In &lt;a href=&quot;https://en.wikipedia.org/wiki/Software_engineering&quot; title=&quot;Software engineering&quot;&gt;software engineering&lt;/a&gt;, a &lt;strong&gt;connection pool&lt;/strong&gt; is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Database_cache&quot; title=&quot;Database cache&quot;&gt;cache&lt;/a&gt; of &lt;a href=&quot;https://en.wikipedia.org/wiki/Database_connection&quot; title=&quot;Database connection&quot;&gt;database connections&lt;/a&gt; maintained so that the connections can be reused when future requests to the database are required.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -221,38 +427,7 @@ short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.baeldung.com/hikaricp&quot;&gt;https://www.baeldung.com/hikaricp&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/brettwooldridge/HikariCP&quot;&gt;hikariCP 공식 Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration&quot;&gt;https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[shook hikari]]></title><description><![CDATA[사용자 경험을 생각했을 때 5000ms (5초) 보통 사용자들은 안 나오면 새로고침을 한다.  기본값 => 그렇지만  과  가 같아서 아무런 영향을 주지 않는다. : 비활성화…]]></description><link>https://vero.wiki/shook-hikaricp/</link><guid isPermaLink="false">https://vero.wiki/shook-hikaricp/</guid><pubDate>Mon, 16 Oct 2023 06:51:13 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;connectionTimeout&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자 경험을 생각했을 때 5000ms (5초)&lt;/li&gt;
-&lt;li&gt;보통 사용자들은 안 나오면 새로고침을 한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;idleTimeout&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;기본값 =&gt; 그렇지만 &lt;code class=&quot;language-text&quot;&gt;minimumIdle&lt;/code&gt; 과 &lt;code class=&quot;language-text&quot;&gt;maximumPoolSize&lt;/code&gt; 가 같아서 아무런 영향을 주지 않는다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;keepaliveTime&lt;/code&gt;: 비활성화 0&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;maximumPoolSize&lt;/code&gt;: 기본값 + 변경될 값 차이 =&gt; 부하테스트
-&lt;ul&gt;
-&lt;li&gt;캐싱을 적용한 상태에서 DB 접근 시간이 있는 쿼리를 부하테스트&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;minimumIdle&lt;/code&gt;: maximumPoolSize 와 동일&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;maxLifetime&lt;/code&gt;: 기본값 30분 (근거 없어서)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;그리고 mysql 권장 설정&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;properties&quot;&gt;&lt;pre class=&quot;language-properties&quot;&gt;&lt;code class=&quot;language-properties&quot;&gt;&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.cachePrepStmts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.prepStmtCacheSize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;250&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.prepStmtCacheSqlLimit&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;2048&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.useServerPrepStmts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.useLocalSessionState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.rewriteBatchedStatements&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.cacheResultSetMetadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.cacheServerConfiguration&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.elideSetAutoCommits&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;token key attr-name&quot;&gt;dataSource.maintainTimeStats&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token value attr-value&quot;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Pool Size 에 대해]]></title><description><![CDATA[Pool Size에 대해 를 번역하였습니다. 다른 변경 사항이 없는 상태에서 커넥션 풀 크기만 줄였을 때 애플리케이션 응답 시간이 최대 100ms 에서 2ms 로 50배 이상 개선되었다는 Oracle…]]></description><link>https://vero.wiki/about-pool-sizing/</link><guid isPermaLink="false">https://vero.wiki/about-pool-sizing/</guid><pubDate>Tue, 03 Oct 2023 08:28:48 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Pool Size 에 대해]]></title><description><![CDATA[Pool Size에 대해 를 번역하였습니다. 다른 변경 사항이 없는 상태에서 커넥션 풀 크기만 줄였을 때 애플리케이션 응답 시간이 최대 100ms 에서 2ms 로 50배 이상 개선되었다는 Oracle…]]></description><link>https://vero.wiki/about-pool-sizing/</link><guid isPermaLink="false">https://vero.wiki/about-pool-sizing/</guid><pubDate>Tue, 03 Oct 2023 08:28:48 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing&quot;&gt;Pool Size에 대해&lt;/a&gt; 를 번역하였습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;다른 변경 사항이 없는 상태에서 커넥션 풀 크기만 줄였을 때 애플리케이션 응답 시간이 최대 100ms 에서 2ms 로 50배 이상 개선되었다는 Oracle 의 성능 측정 결과가 있었다.&lt;/p&gt;
@@ -3277,22 +3452,7 @@ e: 정의역과 치역을 연결하는 전체 간선의 개수&lt;/p&gt;
 &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; jenkins 로 migration&lt;/li&gt;
 &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; cd 제대로 적용하기&lt;/li&gt;
 &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; cors 설정 nginx 로 migration&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[swagger 경로 설정 오류]]></title><description><![CDATA[문제 상황  문제 상황만 있고 해결 과정이 없네요..]]></description><link>https://vero.wiki/swagger-trouble-shooting/</link><guid isPermaLink="false">https://vero.wiki/swagger-trouble-shooting/</guid><pubDate>Thu, 17 Aug 2023 04:33:44 GMT</pubDate><content:encoded>&lt;h2&gt;문제 상황&lt;/h2&gt;
-&lt;p&gt;&lt;figure class=&apos;gatsby-resp-image-figure&apos; style=&apos;margin-bottom: 16px;&apos;&gt;
-    &lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; &apos;&gt;
-      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/b3a4e/swagger-fail-load.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
-    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 32.94117647058823%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABBUlEQVR42n2PTUrDQBzF5zRaXRY8QcUbuHLpFVwIbgq68AJeIRa01kXP0qbRSlrFhjQzk4xgma88Z1KhH6Rd/Hj/D96DR1pnp2g2T9BoHOPg8Ai393fo9XsIngJ0up29PD4H6L6+oP1wjfObFi6vLkDSNEWSJJjNvisYoyiKvIZiYxei+EeAcYo5S5HROYi1FmVZ7sTa+rsxFlqbCj9bh3FZREqJdSbTLwzCCHE8xSgaY/wRIxy9I558Yhi+IXK3wTAC57kLU9j2E6UU1hHix9XmrpaoTLmr6tVXo5Qjy5irmON3sYDSm97aQGO0q2mWaryalVqPrXatNba9tYH7kHLJ7r/EHzV9BCNaeLGGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
-  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;swagger-fail-load.png&apos; title=&apos;&apos; src=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/ca1dc/swagger-fail-load.png&apos; srcset=&apos;/static/59cc1d85d0b7de778433624bcd5c6c7b/e7570/swagger-fail-load.png 170w,
-/static/59cc1d85d0b7de778433624bcd5c6c7b/f46e7/swagger-fail-load.png 340w,
-/static/59cc1d85d0b7de778433624bcd5c6c7b/ca1dc/swagger-fail-load.png 680w,
-/static/59cc1d85d0b7de778433624bcd5c6c7b/02d09/swagger-fail-load.png 1020w,
-/static/59cc1d85d0b7de778433624bcd5c6c7b/9d567/swagger-fail-load.png 1360w,
-/static/59cc1d85d0b7de778433624bcd5c6c7b/b3a4e/swagger-fail-load.png 2542w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
-    &lt;figcaption class=&apos;gatsby-resp-image-figcaption&apos;&gt;swagger-fail-load.png&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;문제 상황만 있고 해결 과정이 없네요..&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JDK 의 Synchronizer 파헤치기]]></title><description><![CDATA[객체가 값 기반 클래스인지 확인한다. Lock 종류 LightWeight Lock (LWLock…]]></description><link>https://vero.wiki/jdk-synchronizer/</link><guid isPermaLink="false">https://vero.wiki/jdk-synchronizer/</guid><pubDate>Sun, 08 Oct 2023 13:31:49 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;synchronizer.cpp&lt;/code&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[JDK 의 Synchronizer 파헤치기]]></title><description><![CDATA[객체가 값 기반 클래스인지 확인한다. Lock 종류 LightWeight Lock (LWLock…]]></description><link>https://vero.wiki/jdk-synchronizer/</link><guid isPermaLink="false">https://vero.wiki/jdk-synchronizer/</guid><pubDate>Sun, 08 Oct 2023 13:31:49 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;synchronizer.cpp&lt;/code&gt;&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ObjectSynchronizer&lt;/span&gt;&lt;span class=&quot;token double-colon punctuation&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;enter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Handle obj&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; BasicLock&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; lock&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; JavaThread&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; current&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;klass&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;is_value_based&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token function&quot;&gt;handle_sync_on_value_based_class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; current&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -5399,16 +5559,7 @@ DB 는 그대로 실시간 업데이트 하되, 전날까지 집계된 좋아요
 &lt;/ol&gt;
 &lt;p&gt;킬링파트에 좋아요 수를 표시하되, TOP 3 옆에 마지막 업데이트 시간 표시하기&lt;/p&gt;
 &lt;h3&gt;해결 방법 고려하기&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/shook-like-issue&quot; data-wiki-link=&quot;true&quot;&gt;shook-like-issue&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2023년 10월]]></title><description><![CDATA[2023-10-01 2023-10-02 2023-10-03 2023-10-04 2023-10-05 2023-10-06 2023-10-07 2023-10-08]]></description><link>https://vero.wiki/2023-10/</link><guid isPermaLink="false">https://vero.wiki/2023-10/</guid><pubDate>Sun, 08 Oct 2023 12:52:36 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-10-01&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-01&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-10-02&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-02&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-10-03&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-03&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-10-04&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-04&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-10-05&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-05&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-10-06&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-06&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-10-07&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-07&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-10-08&quot; data-wiki-link=&quot;true&quot;&gt;2023-10-08&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[VERO WIKI]]></title><description><![CDATA[⚖️ 공부한 것, 일기를 적는 개인 위키입니다 인덱스 페이지: wiki-index 이번 달의 TIL: 2023년 10월의 TIL✨ 현재 자주 쓰는 글들: 우아한테크코스, S-HOOK 개발기]]></description><link>https://vero.wiki/readme/</link><guid isPermaLink="false">https://vero.wiki/readme/</guid><pubDate>Tue, 01 Aug 2023 13:38:31 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;⚖️ 공부한 것, 일기를 적는 개인 위키입니다&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/shook-like-issue&quot; data-wiki-link=&quot;true&quot;&gt;shook-like-issue&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[VERO WIKI]]></title><description><![CDATA[⚖️ 공부한 것, 일기를 적는 개인 위키입니다 인덱스 페이지: wiki-index 이번 달의 TIL: 2023년 10월의 TIL✨ 현재 자주 쓰는 글들: 우아한테크코스, S-HOOK 개발기]]></description><link>https://vero.wiki/readme/</link><guid isPermaLink="false">https://vero.wiki/readme/</guid><pubDate>Tue, 01 Aug 2023 13:38:31 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;⚖️ 공부한 것, 일기를 적는 개인 위키입니다&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;인덱스 페이지: &lt;a href=&quot;/wiki-index&quot; data-wiki-link=&quot;true&quot;&gt;wiki-index&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;이번 달의 TIL: &lt;a href=&quot;/2023-10&quot; data-wiki-link=&quot;true&quot;&gt;2023년 10월의 TIL✨&lt;/a&gt;&lt;/li&gt;
@@ -7075,17 +7226,7 @@ due today&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;다시 고쳤다. 하 너무 디버깅이 힘들다. 후디 테마 블로그로 갈아타서 거기서 커스터마이징 하는 게 더 좋을 것 같아서 지속적으로 사이드로 개발해둬야 겠다. 어제 한 7시간 동안 개츠비만 봤더니 개츠비 마스터 된 듯...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 09월]]></title><description><![CDATA[2023-09-01 2023-09-04 2023-09-05 2023-09-06 2023-09-08 2023-09-09 2023-09-11 2023-09-15 2023-09-16]]></description><link>https://vero.wiki/2023-09/</link><guid isPermaLink="false">https://vero.wiki/2023-09/</guid><pubDate>Fri, 01 Sep 2023 03:03:45 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-09-01&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-01&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-09-04&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-04&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-09-05&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-05&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-09-06&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-06&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-09-08&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-08&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-09-09&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-09&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-09-11&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-11&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-09-15&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-15&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-09-16&quot; data-wiki-link=&quot;true&quot;&gt;2023-09-16&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2023년]]></title><description><![CDATA[2023년 1분기 2023-02 2023-03 2023년 2분기 2023-04 2023-05 2023-06 2023년 3분기 2023-07 2023-08 2023-09 2023년 4분기]]></description><link>https://vero.wiki/2023/</link><guid isPermaLink="false">https://vero.wiki/2023/</guid><pubDate>Mon, 06 Feb 2023 14:02:45 GMT</pubDate><content:encoded>&lt;h1&gt;2023년 1분기&lt;/h1&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년]]></title><description><![CDATA[2023년 1분기 2023-02 2023-03 2023년 2분기 2023-04 2023-05 2023-06 2023년 3분기 2023-07 2023-08 2023-09 2023년 4분기]]></description><link>https://vero.wiki/2023/</link><guid isPermaLink="false">https://vero.wiki/2023/</guid><pubDate>Mon, 06 Feb 2023 14:02:45 GMT</pubDate><content:encoded>&lt;h1&gt;2023년 1분기&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;/2023-02&quot; data-wiki-link=&quot;true&quot;&gt;2023-02&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2023-03&quot; data-wiki-link=&quot;true&quot;&gt;2023-03&lt;/a&gt;&lt;/li&gt;
