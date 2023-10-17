@@ -13,20 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/hikaricp.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "626ab30a00219f86",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/segment-tree.md",
+                "file": "posts/2023-10-17.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,12 +47,25 @@
             }
           },
           {
-            "id": "2de0fe4feabee2b7",
+            "id": "688efa3190c777fa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/about-pool-sizing.md",
+                "file": "posts/forwarded-header-filter.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4741d3955806ef3b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/forwarded-header-filter.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -91,7 +91,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/hikaricp.md",
+                "file": "posts/2023-10-17.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/hikaricp.md",
+                "file": "posts/2023-10-17.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/hikaricp.md"
+                "file": "posts/2023-10-17.md"
               }
             }
           },
@@ -236,17 +236,22 @@
   },
   "active": "c2be9d4d9a703b0e",
   "lastOpenFiles": [
+    "posts/nginx.md",
+    "posts/forwarded-header-filter.md",
+    "posts/2023-10-17.md",
     "posts/shook-hikaricp.md",
+    "posts/segment-tree.md",
     "posts/about-pool-sizing.md",
+    "posts/2023-10.md",
+    "posts/2023-09.md",
+    "posts/english-speaking-10-17.md",
     "posts/hikaricp.md",
     "posts/shook-nginx.md",
-    "posts/nginx.md",
     "posts/2023-10-16.md",
     "posts/os-ch2.md",
     "posts/shook-prod-server-setting.md",
     "posts/2023-05-26.md",
     "posts/why-return-type-of-add-function-is-boolean.md",
-    "posts/segment-tree.md",
     "posts/tomcat-thread-pool.md",
     "posts/2023-06-07.md",
     "posts/shook-service-introduce.md",
@@ -257,11 +262,6 @@
     "posts/2023-03-31.md",
     "posts/mock-vs-mockbean.md",
     "posts/2023-04-24.md",
-    "posts/mockito.md",
-    "posts/fifth-demoday-index.md",
-    "posts/level1-level-log.md",
-    "posts/2023-10-15.md",
-    "posts/speaking-theme-computer-science.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",
