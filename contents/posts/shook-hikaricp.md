@@ -1,7 +1,7 @@
 ---
 title: shook hikari
 date: 2023-10-16 15:51:13 +0900
-updated: 2023-10-16 17:18:40 +0900
+updated: 2023-10-17 17:49:18 +0900
 tags: 
 ---
 
@@ -16,7 +16,7 @@ tags:
 - `minimumIdle`: maximumPoolSize 와 동일
 - `maxLifetime`: 기본값 30분 (근거 없어서)
 
-그리고 mysql 권장 설정
+==mysql 권장 설정==
 
 ```properties
 dataSource.cachePrepStmts=true
@@ -30,3 +30,15 @@ dataSource.cacheServerConfiguration=true
 dataSource.elideSetAutoCommits=true
 dataSource.maintainTimeStats=false
 ```
+
+## DB 에 쿼리가 가는 요청
+
+- `/members/{member_id}` : 0
+- `/reissue`: 0
+- `/login/{oauthType}`: 607
+- `/my-page`: 753
+- `/songs/{song_id}/parts/{killing_part_id}/likes`: 175
+- `/songs/{song_id}/parts/{killing_part_id}/comments`: 56 + alpha
+- `/voting-songs/{voting_song_id}/parts` : 100
+
+=> 1800
