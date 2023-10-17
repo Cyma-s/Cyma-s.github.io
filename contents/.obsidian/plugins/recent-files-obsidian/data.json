@@ -1,16 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "shook-hikaricp",
-      "path": "posts/shook-hikaricp.md"
+      "basename": "shook-nginx",
+      "path": "posts/shook-nginx.md"
+    },
+    {
+      "basename": "nginx",
+      "path": "posts/nginx.md"
+    },
+    {
+      "basename": "2023-10-16",
+      "path": "posts/2023-10-16.md"
+    },
+    {
+      "basename": "hikaricp",
+      "path": "posts/hikaricp.md"
     },
     {
       "basename": "about-pool-sizing",
       "path": "posts/about-pool-sizing.md"
     },
     {
-      "basename": "hikaricp",
-      "path": "posts/hikaricp.md"
+      "basename": "shook-hikaricp",
+      "path": "posts/shook-hikaricp.md"
     },
     {
       "basename": "os-ch2",
@@ -27,10 +39,6 @@
     {
       "basename": "why-return-type-of-add-function-is-boolean",
       "path": "posts/why-return-type-of-add-function-is-boolean.md"
-    },
-    {
-      "basename": "2023-10-16",
-      "path": "posts/2023-10-16.md"
     },
     {
       "basename": "segment-tree",
@@ -191,14 +199,6 @@
     {
       "basename": "2023-05-22",
       "path": "posts/2023-05-22.md"
-    },
-    {
-      "basename": "cors",
-      "path": "posts/cors.md"
-    },
-    {
-      "basename": "2023-08-30",
-      "path": "posts/2023-08-30.md"
     }
   ],
   "omittedPaths": [],

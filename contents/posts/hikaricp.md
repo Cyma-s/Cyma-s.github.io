@@ -1,7 +1,7 @@
 ---
 title: HikariCP
 date: 2023-10-03 14:45:52 +0900
-updated: 2023-10-16 15:56:10 +0900
+updated: 2023-10-17 10:19:44 +0900
 tags:
   - spring
   - 레벨4
@@ -40,7 +40,8 @@ hikariCP 가 빠른 이유는 다음과 같다.
 
 `jdbcUrl` 및 `dataSourceClassName` 중 일반적으로 한 번에 하나씩 사용한다.
 
-다른 풀링 프레임워크에서는 제공하지 않는 다음과 같은 기능들을 제공한다.  
+다른 풀링 프레임워크에서는 제공하지 않는 다음과 같은 기능들을 제
+공한다.  
 
 - _autoCommit_
 - _connectionTimeout_

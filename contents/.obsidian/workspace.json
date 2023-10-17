@@ -13,20 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/hikaricp.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "43a67a4a8b452447",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-10-16.md",
+                "file": "posts/shook-nginx.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -45,41 +32,21 @@
                 "source": false
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "16ab25ea62c801ef",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "2b5f514b3b3df71f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/about-pool-sizing.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           },
           {
-            "id": "c37016702f1aca49",
+            "id": "22a2297347764d6f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/shook-hikaricp.md",
+                "file": "posts/nginx.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -154,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/shook-hikaricp.md",
+                "file": "posts/shook-nginx.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/shook-hikaricp.md",
+                "file": "posts/shook-nginx.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/shook-hikaricp.md"
+                "file": "posts/shook-nginx.md"
               }
             }
           },
@@ -241,16 +208,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c37016702f1aca49",
+  "active": "c2be9d4d9a703b0e",
   "lastOpenFiles": [
+    "posts/nginx.md",
+    "posts/shook-nginx.md",
+    "posts/2023-10-16.md",
+    "posts/hikaricp.md",
     "posts/about-pool-sizing.md",
     "posts/shook-hikaricp.md",
-    "posts/hikaricp.md",
     "posts/os-ch2.md",
     "posts/shook-prod-server-setting.md",
     "posts/2023-05-26.md",
     "posts/why-return-type-of-add-function-is-boolean.md",
-    "posts/2023-10-16.md",
     "posts/segment-tree.md",
     "posts/tomcat-thread-pool.md",
     "posts/2023-06-07.md",
@@ -267,8 +236,6 @@
     "posts/level1-level-log.md",
     "posts/2023-10-15.md",
     "posts/speaking-theme-computer-science.md",
-    "posts/bipartite-matching.md",
-    "posts/objective.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",
