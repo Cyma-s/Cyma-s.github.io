@@ -65,22 +65,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/about-pool-sizing.md",
+                "file": "posts/shook-function-develop.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
-          },
-          {
-            "id": "f772403f9705a991",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -134,12 +127,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 327.5,
-    "collapsed": true
+    "width": 327.5
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -155,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-10-18.md",
+                "file": "posts/shook-function-develop.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-10-18.md",
+                "file": "posts/shook-function-develop.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-10-18.md"
+                "file": "posts/shook-function-develop.md"
               }
             }
           },
@@ -242,34 +235,34 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c2be9d4d9a703b0e",
+  "active": "f2f79b655beeee2b",
   "lastOpenFiles": [
-    "posts/2023-08.md",
-    "posts/2023-10-18.md",
-    "posts/2023-10-17.md",
-    "posts/nginx.md",
-    "posts/shook-hikaricp.md",
-    "posts/forwarded-header-filter.md",
-    "posts/about-pool-sizing.md",
-    "posts/segment-tree.md",
-    "posts/2023-10.md",
-    "posts/2023-09.md",
-    "posts/english-speaking-10-17.md",
-    "posts/hikaricp.md",
+    "posts/shook-git-branch-strategy.md",
+    "posts/shook-level4.md",
+    "posts/shook-like-concurrency-issue.md",
+    "posts/shook-like-issue.md",
+    "posts/shook-load-test.md",
+    "posts/shook-maniadb.md",
+    "posts/shook-music-api.md",
     "posts/shook-nginx.md",
-    "posts/2023-10-16.md",
-    "posts/os-ch2.md",
+    "posts/shook-nickname-update-issue.md",
+    "posts/shook-persona.md",
+    "posts/shook-planning.md",
+    "posts/shook-planning-interview.md",
     "posts/shook-prod-server-setting.md",
-    "posts/2023-05-26.md",
-    "posts/why-return-type-of-add-function-is-boolean.md",
-    "posts/tomcat-thread-pool.md",
-    "posts/2023-06-07.md",
+    "posts/shook-s3-introduce.md",
+    "posts/shook-second-demoday.md",
     "posts/shook-service-introduce.md",
-    "posts/level2-writing.md",
-    "posts/wooteco.md",
-    "posts/level2-week7-retrospect.md",
-    "posts/wiki-index.md",
-    "posts/2023-03-31.md",
+    "posts/shook-site-analysis.md",
+    "posts/shook-song-data.md",
+    "posts/spring-xml-parsing.md",
+    "posts/test-isolation.md",
+    "posts/shook-webclient-reason.md",
+    "posts/spring-external-api-call-method.md",
+    "posts/shook-user-inducement-plan.md",
+    "posts/shook-tech-stack.md",
+    "posts/shook-sixth-demoday-function.md",
+    "posts/about-pool-sizing.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",
