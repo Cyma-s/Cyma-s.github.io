@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-10-17.md",
+                "file": "posts/2023-10-18.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -71,9 +71,16 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f772403f9705a991",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,7 +99,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime"
+                "sortOrder": "alphabetical"
               }
             }
           },
@@ -148,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/forwarded-header-filter.md",
+                "file": "posts/2023-10-18.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/forwarded-header-filter.md",
+                "file": "posts/2023-10-18.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/forwarded-header-filter.md"
+                "file": "posts/2023-10-18.md"
               }
             }
           },
@@ -235,13 +242,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "688efa3190c777fa",
+  "active": "c2be9d4d9a703b0e",
   "lastOpenFiles": [
-    "posts/about-pool-sizing.md",
+    "posts/2023-08.md",
+    "posts/2023-10-18.md",
     "posts/2023-10-17.md",
     "posts/nginx.md",
-    "posts/forwarded-header-filter.md",
     "posts/shook-hikaricp.md",
+    "posts/forwarded-header-filter.md",
+    "posts/about-pool-sizing.md",
     "posts/segment-tree.md",
     "posts/2023-10.md",
     "posts/2023-09.md",
@@ -261,8 +270,6 @@
     "posts/level2-week7-retrospect.md",
     "posts/wiki-index.md",
     "posts/2023-03-31.md",
-    "posts/mock-vs-mockbean.md",
-    "posts/2023-04-24.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",

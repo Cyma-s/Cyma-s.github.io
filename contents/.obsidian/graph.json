@@ -11,7 +11,7 @@
       "query": "file:2023",
       "color": {
         "a": 1,
-        "rgb": 22015
+        "rgb": 16711803
       }
     }
   ],
@@ -25,6 +25,6 @@
   "repelStrength": 16.4054361979167,
   "linkStrength": 0.954020182291667,
   "linkDistance": 303,
-  "scale": 0.354199121606331,
+  "scale": 0.24357397184011662,
   "close": false
 }
