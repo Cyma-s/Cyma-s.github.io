@@ -60,19 +60,20 @@
             }
           },
           {
-            "id": "4741d3955806ef3b",
+            "id": "f2f79b655beeee2b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/forwarded-header-filter.md",
+                "file": "posts/about-pool-sizing.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -147,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-10-17.md",
+                "file": "posts/forwarded-header-filter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-10-17.md",
+                "file": "posts/forwarded-header-filter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-10-17.md"
+                "file": "posts/forwarded-header-filter.md"
               }
             }
           },
@@ -234,14 +235,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c2be9d4d9a703b0e",
+  "active": "688efa3190c777fa",
   "lastOpenFiles": [
+    "posts/about-pool-sizing.md",
+    "posts/2023-10-17.md",
     "posts/nginx.md",
     "posts/forwarded-header-filter.md",
-    "posts/2023-10-17.md",
     "posts/shook-hikaricp.md",
     "posts/segment-tree.md",
-    "posts/about-pool-sizing.md",
     "posts/2023-10.md",
     "posts/2023-09.md",
     "posts/english-speaking-10-17.md",
