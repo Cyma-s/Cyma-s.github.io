@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/shook-function-develop.md",
+                "file": "posts/2023-10-18.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/shook-function-develop.md",
+                "file": "posts/2023-10-18.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/shook-function-develop.md",
+                "file": "posts/2023-10-18.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/shook-function-develop.md"
+                "file": "posts/2023-10-18.md"
               }
             }
           },
@@ -237,6 +237,7 @@
   },
   "active": "f2f79b655beeee2b",
   "lastOpenFiles": [
+    "posts/shook-function-develop.md",
     "posts/shook-git-branch-strategy.md",
     "posts/shook-level4.md",
     "posts/shook-like-concurrency-issue.md",
@@ -262,7 +263,6 @@
     "posts/shook-user-inducement-plan.md",
     "posts/shook-tech-stack.md",
     "posts/shook-sixth-demoday-function.md",
-    "posts/about-pool-sizing.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",
