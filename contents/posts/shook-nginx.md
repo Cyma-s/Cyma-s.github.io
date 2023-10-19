@@ -1,7 +1,7 @@
 ---
-title: nginx 설정기
+\title: nginx 설정기
 date: 2023-08-01 22:25:34 +0900
-updated: 2023-10-17 10:41:48 +0900
+updated: 2023-10-19 15:48:17 +0900
 tags:
   - shook
   - nginx

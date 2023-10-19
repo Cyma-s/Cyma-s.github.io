@@ -1,7 +1,7 @@
 ---
 title: nginx
 date: 2023-10-17 10:23:23 +0900
-updated: 2023-10-18 00:04:01 +0900
+updated: 2023-10-19 15:48:31 +0900
 tags:
   - infra
 ---
@@ -30,6 +30,8 @@ location /app {
 ```
 
 이렇게 설정하면 백엔드 서비스가 `X-Forwarded-Prefix` 헤더를 사용해서 원래 요청의 접두사를 알 수 있다.
+
+[[forwarded-header-filter]] 참고
 
 ## health-checking
 

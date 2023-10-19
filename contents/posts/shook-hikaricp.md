@@ -1,7 +1,7 @@
 ---
 title: shook hikari
 date: 2023-10-16 15:51:13 +0900
-updated: 2023-10-17 17:49:18 +0900
+updated: 2023-10-19 16:27:22 +0900
 tags: 
 ---
 
@@ -34,7 +34,6 @@ dataSource.maintainTimeStats=false
 ## DB 에 쿼리가 가는 요청
 
 - `/members/{member_id}` : 0
-- `/reissue`: 0
 - `/login/{oauthType}`: 607
 - `/my-page`: 753
 - `/songs/{song_id}/parts/{killing_part_id}/likes`: 175

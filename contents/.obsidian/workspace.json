@@ -39,19 +39,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/shook-hikaricp.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "688efa3190c777fa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "posts/forwarded-header-filter.md",
                 "mode": "source",
                 "backlinks": true,
@@ -65,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-10-18.md",
+                "file": "posts/shook-hikaricp.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -132,7 +119,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327.5
+    "width": 327.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -148,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-10-18.md",
+                "file": "posts/shook-hikaricp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-10-18.md",
+                "file": "posts/shook-hikaricp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-10-18.md"
+                "file": "posts/shook-hikaricp.md"
               }
             }
           },
@@ -237,6 +225,11 @@
   },
   "active": "f2f79b655beeee2b",
   "lastOpenFiles": [
+    "posts/2023-10-18.md",
+    "posts/forwarded-header-filter.md",
+    "posts/nginx.md",
+    "posts/shook-nginx.md",
+    "posts/shook-hikaricp.md",
     "posts/shook-function-develop.md",
     "posts/shook-git-branch-strategy.md",
     "posts/shook-level4.md",
@@ -245,7 +238,6 @@
     "posts/shook-load-test.md",
     "posts/shook-maniadb.md",
     "posts/shook-music-api.md",
-    "posts/shook-nginx.md",
     "posts/shook-nickname-update-issue.md",
     "posts/shook-persona.md",
     "posts/shook-planning.md",
@@ -259,10 +251,6 @@
     "posts/spring-xml-parsing.md",
     "posts/test-isolation.md",
     "posts/shook-webclient-reason.md",
-    "posts/spring-external-api-call-method.md",
-    "posts/shook-user-inducement-plan.md",
-    "posts/shook-tech-stack.md",
-    "posts/shook-sixth-demoday-function.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",
