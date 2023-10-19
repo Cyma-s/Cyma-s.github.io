@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "locust",
+      "path": "posts/locust.md"
+    },
+    {
       "basename": "shook-hikaricp",
       "path": "posts/shook-hikaricp.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "2023-03-31",
       "path": "posts/2023-03-31.md"
-    },
-    {
-      "basename": "mock-vs-mockbean",
-      "path": "posts/mock-vs-mockbean.md"
     }
   ],
   "omittedPaths": [],
