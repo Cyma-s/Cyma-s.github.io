@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "2023-10-21",
+      "path": "posts/2023-10-21.md"
+    },
+    {
       "basename": "spring-data-jdbc",
       "path": "posts/spring-data-jdbc.md"
+    },
+    {
+      "basename": "level4-retrospect",
+      "path": "posts/level4-retrospect.md"
     },
     {
       "basename": "shook-like-issue",
@@ -191,14 +199,6 @@
     {
       "basename": "wooteco",
       "path": "posts/wooteco.md"
-    },
-    {
-      "basename": "level2-week7-retrospect",
-      "path": "posts/level2-week7-retrospect.md"
-    },
-    {
-      "basename": "wiki-index",
-      "path": "posts/wiki-index.md"
     }
   ],
   "omittedPaths": [],
