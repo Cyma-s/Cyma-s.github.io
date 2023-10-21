@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "2023-10-16",
-      "path": "posts/2023-10-16.md"
+      "basename": "spring-data-jdbc",
+      "path": "posts/spring-data-jdbc.md"
+    },
+    {
+      "basename": "shook-like-issue",
+      "path": "posts/shook-like-issue.md"
+    },
+    {
+      "basename": "shook-like-concurrency-issue",
+      "path": "posts/shook-like-concurrency-issue.md"
     },
     {
       "basename": "2023-10-18",
       "path": "posts/2023-10-18.md"
+    },
+    {
+      "basename": "2023-10-16",
+      "path": "posts/2023-10-16.md"
     },
     {
       "basename": "shook-function-develop",
@@ -43,14 +55,6 @@
     {
       "basename": "shook-level4",
       "path": "posts/shook-level4.md"
-    },
-    {
-      "basename": "shook-like-concurrency-issue",
-      "path": "posts/shook-like-concurrency-issue.md"
-    },
-    {
-      "basename": "shook-like-issue",
-      "path": "posts/shook-like-issue.md"
     },
     {
       "basename": "shook-load-test",
@@ -195,10 +199,6 @@
     {
       "basename": "wiki-index",
       "path": "posts/wiki-index.md"
-    },
-    {
-      "basename": "2023-03-31",
-      "path": "posts/2023-03-31.md"
     }
   ],
   "omittedPaths": [],
