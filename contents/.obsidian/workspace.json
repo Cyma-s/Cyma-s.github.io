@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-10-21.md",
+                "file": "posts/spring-data-jdbc.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -149,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-10-21.md",
+                "file": "posts/spring-data-jdbc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-10-21.md",
+                "file": "posts/spring-data-jdbc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -189,7 +189,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-10-21.md"
+                "file": "posts/spring-data-jdbc.md"
               }
             }
           },
@@ -237,8 +237,8 @@
   },
   "active": "fe09c17365c5eff6",
   "lastOpenFiles": [
-    "posts/spring-data-jdbc.md",
     "posts/2023-10-21.md",
+    "posts/spring-data-jdbc.md",
     "posts/level4-retrospect.md",
     "posts/shook-like-issue.md",
     "posts/shook-like-concurrency-issue.md",
