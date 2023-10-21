@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/shook-hikaricp.md",
+                "file": "posts/2023-10-16.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -136,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/shook-hikaricp.md",
+                "file": "posts/2023-10-16.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/shook-hikaricp.md",
+                "file": "posts/2023-10-16.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/shook-hikaricp.md"
+                "file": "posts/2023-10-16.md"
               }
             }
           },
@@ -197,12 +197,11 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 279.5,
-    "collapsed": true
+    "width": 279.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -223,15 +222,16 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "f2f79b655beeee2b",
+  "active": "d8ed52d6f6ae9197",
   "lastOpenFiles": [
-    "posts/locust.md",
     "posts/2023-10-18.md",
+    "posts/shook-function-develop.md",
+    "posts/shook-planning.md",
+    "posts/shook-hikaricp.md",
+    "posts/locust.md",
     "posts/nginx.md",
     "posts/forwarded-header-filter.md",
-    "posts/shook-hikaricp.md",
     "posts/shook-nginx.md",
-    "posts/shook-function-develop.md",
     "posts/shook-git-branch-strategy.md",
     "posts/shook-level4.md",
     "posts/shook-like-concurrency-issue.md",
@@ -241,7 +241,6 @@
     "posts/shook-music-api.md",
     "posts/shook-nickname-update-issue.md",
     "posts/shook-persona.md",
-    "posts/shook-planning.md",
     "posts/shook-planning-interview.md",
     "posts/shook-prod-server-setting.md",
     "posts/shook-s3-introduce.md",
