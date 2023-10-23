@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "2023-10-23",
+      "path": "posts/2023-10-23.md"
+    },
+    {
       "basename": "forwarded-header-filter",
       "path": "posts/forwarded-header-filter.md"
     },
@@ -19,10 +23,6 @@
     {
       "basename": "shook-like-issue",
       "path": "posts/shook-like-issue.md"
-    },
-    {
-      "basename": "2023-10-23",
-      "path": "posts/2023-10-23.md"
     },
     {
       "basename": "spring-data-jdbc",

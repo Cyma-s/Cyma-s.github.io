@@ -47,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/forwarded-header-filter.md",
+                "file": "posts/2023-10-23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/forwarded-header-filter.md",
+                "file": "posts/2023-10-23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/forwarded-header-filter.md"
+                "file": "posts/2023-10-23.md"
               }
             }
           },
@@ -188,7 +188,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279.5
+    "width": 279.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,11 +210,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "14dea998daad43ca",
+  "active": "fe09c17365c5eff6",
   "lastOpenFiles": [
+    "posts/forwarded-header-filter.md",
     "posts/level4-retrospect.md",
     "posts/2023-10-16.md",
-    "posts/forwarded-header-filter.md",
     "posts/nginx.md",
     "posts/shook-like-issue.md",
     "posts/2023-10-23.md",
