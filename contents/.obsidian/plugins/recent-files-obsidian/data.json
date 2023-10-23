@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "forwarded-header-filter",
+      "path": "posts/forwarded-header-filter.md"
+    },
+    {
+      "basename": "level4-retrospect",
+      "path": "posts/level4-retrospect.md"
+    },
+    {
+      "basename": "2023-10-16",
+      "path": "posts/2023-10-16.md"
+    },
+    {
+      "basename": "nginx",
+      "path": "posts/nginx.md"
+    },
+    {
+      "basename": "shook-like-issue",
+      "path": "posts/shook-like-issue.md"
+    },
+    {
+      "basename": "2023-10-23",
+      "path": "posts/2023-10-23.md"
+    },
+    {
       "basename": "spring-data-jdbc",
       "path": "posts/spring-data-jdbc.md"
     },
@@ -9,24 +33,12 @@
       "path": "posts/2023-10-21.md"
     },
     {
-      "basename": "level4-retrospect",
-      "path": "posts/level4-retrospect.md"
-    },
-    {
-      "basename": "shook-like-issue",
-      "path": "posts/shook-like-issue.md"
-    },
-    {
       "basename": "shook-like-concurrency-issue",
       "path": "posts/shook-like-concurrency-issue.md"
     },
     {
       "basename": "2023-10-18",
       "path": "posts/2023-10-18.md"
-    },
-    {
-      "basename": "2023-10-16",
-      "path": "posts/2023-10-16.md"
     },
     {
       "basename": "shook-function-develop",
@@ -43,14 +55,6 @@
     {
       "basename": "locust",
       "path": "posts/locust.md"
-    },
-    {
-      "basename": "nginx",
-      "path": "posts/nginx.md"
-    },
-    {
-      "basename": "forwarded-header-filter",
-      "path": "posts/forwarded-header-filter.md"
     },
     {
       "basename": "shook-nginx",
@@ -195,10 +199,6 @@
     {
       "basename": "level2-writing",
       "path": "posts/level2-writing.md"
-    },
-    {
-      "basename": "wooteco",
-      "path": "posts/wooteco.md"
     }
   ],
   "omittedPaths": [],
