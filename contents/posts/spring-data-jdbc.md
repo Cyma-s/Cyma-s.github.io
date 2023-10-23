@@ -1,7 +1,7 @@
 ---
 title: Spring Data JDBC
 date: 2023-10-21 16:51:20 +0900
-updated: 2023-10-21 19:37:38 +0900
+updated: 2023-10-23 13:55:36 +0900
 tags:
   - spring
 ---
@@ -78,8 +78,6 @@ interface UserRepository extends CrudRepository<User, Long> {
   List<User> removeByLastname(String lastname);
 }
 ```
-
-
 
 ### 쿼리 메서드
 

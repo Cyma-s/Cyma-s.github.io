@@ -1,32 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "level4-retrospect",
-      "path": "posts/level4-retrospect.md"
-    },
-    {
-      "basename": "2023-10-23",
-      "path": "posts/2023-10-23.md"
+      "basename": "spring-data-jdbc",
+      "path": "posts/spring-data-jdbc.md"
     },
     {
       "basename": "forwarded-header-filter",
       "path": "posts/forwarded-header-filter.md"
     },
     {
-      "basename": "2023-10-16",
-      "path": "posts/2023-10-16.md"
+      "basename": "level4-retrospect",
+      "path": "posts/level4-retrospect.md"
+    },
+    {
+      "basename": "swagger-fail-load",
+      "path": "posts/attachments/swagger-fail-load.png"
     },
     {
       "basename": "nginx",
       "path": "posts/nginx.md"
     },
     {
-      "basename": "shook-like-issue",
-      "path": "posts/shook-like-issue.md"
+      "basename": "2023-10-23",
+      "path": "posts/2023-10-23.md"
     },
     {
-      "basename": "spring-data-jdbc",
-      "path": "posts/spring-data-jdbc.md"
+      "basename": "2023-10-16",
+      "path": "posts/2023-10-16.md"
+    },
+    {
+      "basename": "shook-like-issue",
+      "path": "posts/shook-like-issue.md"
     },
     {
       "basename": "2023-10-21",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-06-07",
       "path": "posts/2023-06-07.md"
-    },
-    {
-      "basename": "level2-writing",
-      "path": "posts/level2-writing.md"
     }
   ],
   "omittedPaths": [],
