@@ -1,83 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 23 Oct 2023 04:31:26 GMT</lastBuildDate><item><title><![CDATA[레벨4 회고]]></title><description><![CDATA[돌아볼까. 9시 40분 쯤에 캠퍼스에 도착해서 팀원들과 인사를 한다.
-10시부터 데일리 미팅을 하면서 기분 점수를 공유한다. 난 언제나…]]></description><link>https://vero.wiki/level4-retrospect/</link><guid isPermaLink="false">https://vero.wiki/level4-retrospect/</guid><pubDate>Sat, 21 Oct 2023 09:00:13 GMT</pubDate><content:encoded>&lt;h2&gt;돌아볼까.&lt;/h2&gt;
-&lt;p&gt;9시 40분 쯤에 캠퍼스에 도착해서 팀원들과 인사를 한다.
-10시부터 데일리 미팅을 하면서 기분 점수를 공유한다. 난 언제나 9점 이상이었던 것 같다.&lt;/p&gt;
-&lt;p&gt;데일리 미팅이 끝나면 강의를 듣거나, 미션을 하거나, 피쳐를 개발하거나, 회의를 하거나. 항상 바빴던 기억 밖에 없다.&lt;/p&gt;
-&lt;p&gt;우테코 정규 교육 시간이 끝나고 나면 항상 오빠랑 같이 공부를 했다. 대략 생각해봤을 때 하루에 적어도 3시간씩은 꼭 남은 공부를 했던 것 같다.&lt;/p&gt;
-&lt;p&gt;바론과 함께 게임도 열심히 했다. 아직도 열심히 하고 있다.&lt;br&gt;
-테코톡도 했다. 준비하는 시간 동안은 준비 안 했던 게 조금은 후회되었지만, 난 발표 날에 너무 재밌었다. 질문이 더 많았었다면 더 좋았을 것 같다는 생각이 든다.&lt;br&gt;
-처음 사용자 유치 기준이 나왔을 때, 100명이 많아 보였다. 언제 다 채우지... 너무 높게 적었나 하면서 팀원들과 걱정했던 기억이 난다.&lt;br&gt;
-그런데도 막상 홍보하려고 하니까 저작권이 걱정돼서 한 2주 간 마음고생했었다. 변호사와 대화할 생각까지 했으니 ㅋㅋㅋ 한저협에서 저작권에 위배되지 않는다는 답변을 해줘서 다행이었다. 그때 다들 안도했던 모습이 떠오른다.&lt;br&gt;
-홍보할 때도 의견이 많이 갈렸다. 지금 생각해보면 역시 도밥 말대로 아무데나 홍보하는 게 맞았을 수도 있다 ㅋㅋㅋ 그렇지만 브라운이 말씀하셨던 것처럼 뭐든 실패를 하고 나서 배우는 게 더 많다고 생각한다. 오히려 홍보를 많이 실패해서 우리의 타깃을 다시 어디로 맞추어야 하는지 결정할 수 있는 계기가 됐다.&lt;br&gt;
-결국은 트위터 홍보를 대차게 망하고 나서, 밑져야 본전이라 생각해서 에타에 올렸는데 너무 홍보가 잘 돼서 놀랐다. 처음으로 트래픽이 끊기지 않아서 다들 감동받았던 기억이 난다.
-5차 데모데이 때는 발표를 했다. 너무너무 할 일이 많아 당일 발표 2시간 전에 도밥과 겨우 대본을 맞춰봤었다. 다행히 문제는 없이 잘 끝냈다.&lt;br&gt;
-갑자기 우형 면접 때 코테를 보게 되어서, 팀원들이 서비스에 들이는 시간을 줄인다고 해놓고도 너무 열심히 해줬다. 티는 안 냈지만 감동이었다. 역시 우리 팀이 최고다.&lt;br&gt;
-브라운과 커피챗을 했다. 분야를 어떻게 정해야 할 지, 목표를 어떻게 정하는 게 좋을 지 추상적인 질문만 했는데 브라운이 멋진 대답을 해주셔서 큰 영감을 받았다. 감사했습니다 브라운 🥹.
-6차 데모데이 전 주에는 이사를 했다. 이사하고 나니 캠퍼스가 더 가까워졌지만 오히려 지각을 하게 됐다.. 역시 거리가 가까워질수록 늦는 건 어쩔 수 없나보다.&lt;br&gt;
-6차 데모데이 때 팀원들과 함께 전 날 랜딩 페이지도 만들고, 스티커도 만들었다. 한 2일 간 처음으로 11시까지 남아본 것 같다. 이 기회에 사실을 말하자면 예쁜 스티커는 우리끼리 만들어서 가질 생각이었다..ㅋㅋㅋ&lt;br&gt;
-6차 데모데이 당일에는 로고 칭찬, 캐릭터 칭찬을 많이 받아서 행복했다. 디자인이 멋지다, 너무 잘 만들었다, 칭찬을 많이 받아서 우리 프로젝트 최고의 날이라고 생각했다. 끝나고는 다 같이 스플릿 집에서 술을 마셨다. 술 마시는 도중에 도밥이 테오 방에 우리 서비스 홍보해서 서비스 사용자가 250명 는 것 보고 일희일희 했다... ㅎ&lt;/p&gt;
-&lt;h2&gt;우테코&lt;/h2&gt;
-&lt;p&gt;그런 생각을 했다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 23 Oct 2023 13:30:18 GMT</lastBuildDate><item><title><![CDATA[나는 어떤 개발자가 되고 싶은가]]></title><description><![CDATA[…]]></description><link>https://vero.wiki/level4-writing/</link><guid isPermaLink="false">https://vero.wiki/level4-writing/</guid><pubDate>Mon, 23 Oct 2023 11:52:05 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;태양 가까이 날면 위험해, 이카로스.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;넌 앞으로 뭘 하고 싶어?&lt;/h2&gt;
+&lt;p&gt;지금은 부끄럽지만, 나에게는 그런 자부심이 있었다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;나만 너무 많은 걸 얻어가는 것 같다.
-다른 사람들도 많은 걸 얻어 갔으면 좋겠다.&lt;/p&gt;
+&lt;p&gt;내가 좋아하는 것만큼은 잘할 수 있다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;올해 얻은 것을 생각해보자.&lt;/p&gt;
-&lt;p&gt;나는 아무것도 할 수 없을 거라 생각했던 나를 버렸다. 어떻게 공부해야 할 지 몰라 방황하던 나도 제자리로 돌려놨다.&lt;br&gt;
-사람들과 이야기하는 것을 즐기게 되었다. 문제에 대해 이야기할 수 있는 많은 사람들을 얻었다. 편하게 의견을 나눌 수 있는 사람들과 인맥을 쌓았다. 이제는 함께하는 공부가 훨씬 재밌다는 것을 안다.&lt;br&gt;
-어떻게 하면 새로운 것을 배워갈 수 있는지, 내게 효과적인 공부법은 무엇인지 알게 됐다.
-막연하기만 했던 인생의 목표를 어떻게 정할 수 있는지는 알게 됐다. 나만의 소소한 목표도 세워 봤다.&lt;br&gt;
-우테코 기간 동안 꾸준히 블로그 글을 썼다. 나도 꾸준히 뭔가를 할 수 있는 사람이라는 걸 알게 됐다.&lt;br&gt;
-지금까지 내 탓이라 생각해왔던 일이 너무나도 손쉽게 해결됐다. 노력이라는 걸 할 수 있게 됐다.&lt;br&gt;
-함께 목표를 세우고, 목표를 향해 함께 달려갈 수 있는 사람과 행동력을 얻었다.&lt;br&gt;
-이젠 건강하지 않은 인간 관계를 판별할 수 있다.&lt;br&gt;
-좋은 팀원들을 만나 기억에 남을 멋진 팀플을 했고, 앞으로도 할 예정이다.&lt;br&gt;
-서비스는 절대 기술이 아닌, 서비스를 사용하는 사용자를 향하는 방향으로 반드시 움직여야 한다는 것을 알게 되었다.&lt;br&gt;
-혼자하는 공부도 좋지만, 함께하는 동료가 더 중요하다는 걸 알게 되었다.&lt;br&gt;
-(몇 년 간 살 수 있는 집도 생겼다 ㅋㅋ).&lt;/p&gt;
-&lt;p&gt;그저 지금은 당연하다고 생각할 수 있게 할 만큼의 많은 습관을 얻게 되었다.&lt;br&gt;
-물론 우테코 때문이 아닌 것들도 있지만, 8개월 간 많은 것들을 얻은 것은 확실하다.&lt;br&gt;
-이만큼 많은 것들을 얻을 수 있었던 이유는 단지 내가 너무 좋은 환경에 있었기 때문이다.&lt;br&gt;
-이런 많은 기회를, 멋진 경험들을 할 수 있게 도와줬던 우테코에게 감사하다. 지금도 과분하다고 생각한다.&lt;/p&gt;
-&lt;h2&gt;S-HOOK&lt;/h2&gt;
-&lt;p&gt;우테코 공식적으로는 서비스 운영 기간은 종료되었다. 그렇지만 3달 간 만들어왔던 서비스에 큰 애정이 생겼다.&lt;br&gt;
-처음으로 어떤 결과물이나, 성적에 목매달지 않고 진행했던 서비스라 그런지 앞으로도 더 열심히 운영하고 싶다.&lt;/p&gt;
-&lt;p&gt;프로젝트를 진행하면서 내 서비스의 사용자를 모으는 게 얼마나 힘든지 (ㅋㅋ), 사용자를 위한 기능을 고민하는 것이 얼마나 중요한지, 팀 속에서 내가 어떤 역할을 해야 하는 지 알 수 있었다.&lt;/p&gt;
-&lt;p&gt;우리 팀원들도 다들 취업해야 하고 하니, 그만할 줄 알고 프론트엔드 어떻게 구하지라는 고민을 하고 있었는데 ㅋㅋㅋㅋ 다들 계속해서 서비스를 개발하고 싶다고 해서 감동이었다 🥹&lt;/p&gt;
-&lt;p&gt;팀원들이 그렇게 말했어도 함께 하지 않아도 괜찮다. 그만두는 게 슬프지 않은 건 아니지만 😂&lt;br&gt;
-올해 3달 동안 팀원들과 개발한 과정은 아마 평생 잊지 못할 것 같다.&lt;/p&gt;
-&lt;h2&gt;안녕&lt;/h2&gt;
-&lt;p&gt;나 자신 수고 많았다! 진짜 Level 4까지 열심히 살았다고 생각한다.&lt;/p&gt;
-&lt;p&gt;앞으로도 파이팅하자.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2023년 10월 23일]]></title><description><![CDATA[TODO 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30] 미션 2단계  [priority:: high]  [due:: 2023-10-15] LOG T1 vs C9 T…]]></description><link>https://vero.wiki/2023-10-23/</link><guid isPermaLink="false">https://vero.wiki/2023-10-23/</guid><pubDate>Sun, 22 Oct 2023 15:00:08 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due today
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;ul class=&quot;contains-task-list&quot;&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30]&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 미션 2단계  [priority:: high]  [due:: 2023-10-15]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;T1 vs C9 T1 승리 ㅎ 직관 갔는데 너무 간단하게 이겨서 기쁘긴 했다 ㅋㅋㅋ 오히려 KT vs BLG 가 더 긴장됐던 거 같음&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;미션 어렵다... 너무 힘들다... JDBC 로 하지 말고 3단계 때 마이그레이션 할 걸...ㅋㅋㅋㅋ 다시 JPA 로 짜는 중..&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2023년 10월 21일]]></title><description><![CDATA[TODO 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30] 미션 2단계  [priority:: high]  [due:: 2023-10-15] LOG 배운 것  은 final class…]]></description><link>https://vero.wiki/2023-10-21/</link><guid isPermaLink="false">https://vero.wiki/2023-10-21/</guid><pubDate>Sat, 21 Oct 2023 10:43:44 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due today
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;ul class=&quot;contains-task-list&quot;&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30]&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 미션 2단계  [priority:: high]  [due:: 2023-10-15]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;LocalDateTime&lt;/code&gt; 은 final class 이기 때문에 모킹할 수 없다. 따라서 &lt;code class=&quot;language-text&quot;&gt;Clock&lt;/code&gt; 을 받아서 &lt;code class=&quot;language-text&quot;&gt;Clock&lt;/code&gt; 을 &lt;code class=&quot;language-text&quot;&gt;MockBean&lt;/code&gt; 으로 띄우는 방식으로 모킹을 간접적으로 구현할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Spring Data JDBC]]></title><description><![CDATA[Spring Data JDBC 란? 도메인 중심 설계 원칙에 따라 JDBC 데이터베이스를 사용하는 솔루션 개발에 핵심 Spring 개념을 적용한 것이다. JDBC Aggregate 의 핵심 기능은 Spring 컨테이너의 IoC…]]></description><link>https://vero.wiki/spring-data-jdbc/</link><guid isPermaLink="false">https://vero.wiki/spring-data-jdbc/</guid><pubDate>Sat, 21 Oct 2023 07:51:20 GMT</pubDate><content:encoded>&lt;h2&gt;Spring Data JDBC 란?&lt;/h2&gt;
+&lt;p&gt;하지만 좋아하는 것을 찾는 것이 더 어려운 일이었다.&lt;br&gt;
+어렸을 때부터 항상 주위의 누군가 물어보던 &quot;넌 앞으로 뭘 하고 싶어?&quot; 라는 질문에 대답하는 게 가장 힘들었으니 말이다.&lt;/p&gt;
+&lt;p&gt;그래서 그런 갈증이 있었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;좋아하는 걸 뭐라도 찾고 싶다. 진짜로 열심히 할 텐데.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그렇지만 아무것도 찾아내지 못한 채로, 그렇게 몇 년이 흘렀다.&lt;/p&gt;
+&lt;p&gt;사람들이 물어보던 질문이 정말로 궁금해서 물어보는 게 아니었다는 걸 알게 될 때쯤, 난 &quot;계속 공부를 하고 싶다&quot; 라는 두루뭉술한 대외적 답변을 하나 준비했다. 질문에 대답할&lt;br&gt;
+때마다 &apos;이게 정말 하고 싶은 게 맞을까?&apos;라는 생각이 들어도 애써 무시했다. 남들 다 있는 목표 하나 없는 사람이 되는 건 싫다는 소심한 자존감 때문이었다.&lt;/p&gt;
+&lt;p&gt;그저 그런 생각만으로 왜 살아가야 하는지 고민하게 되었던 고등학교 1학년, 나는 동아리의 구석 자리의 뭣도 아닌 컴퓨터 속의 고양이 하나에 매료되었다.&lt;/p&gt;
+&lt;h2&gt;움직이는 고양이&lt;/h2&gt;
+&lt;p&gt;별것도 아니었다. 고양이가 하늘을 날고, 사과를 먹으니 점수가 올랐다.&lt;br&gt;
+선배들은 그 조그만 화면을 보면서 웃기다며 깔깔댔다.&lt;/p&gt;
+&lt;p&gt;그냥 그런 생각을 했다. 해보고 싶다.&lt;/p&gt;
+&lt;p&gt;동아리에 들어가서 선배들이랑 간단한 게임도 만들고, 대학교 MOOC 강의도 들어봤다. 수능 공부할 시간을 쪼개 C언어를 공부했고, 주말에도 앱을 만들러 전남대학교에 갔다. 잠이&lt;br&gt;
+많은 내가 컴퓨터와 함께할 때면 자야 한다는 걸 잊을 만큼 재밌었다.&lt;/p&gt;
+&lt;p&gt;그때 정했다. 나는 프로그래머가 되어야겠다고.&lt;/p&gt;
+&lt;p&gt;순전히 재미 때문에 컴퓨터 공학과에 진학했고, 대학교에 가면 관련 공부만 할 생각에 너무 즐거웠다.&lt;br&gt;
+하지만 그때도 몰랐다. 프로그래머도 여전히 막연한 목표였다는 걸.&lt;/p&gt;
+&lt;h2&gt;나는 밀랍 날개를 달고, 내가 새인 줄 착각했다.&lt;/h2&gt;
+&lt;p&gt;으레 다른 사람들이 꿈꾸듯, 나도 &apos;서비스로 세상에 기여하는 개발자&apos;가 되고 싶었다.&lt;br&gt;
+&quot;서비스로 세상에 기여하는 개발자&quot;라는 태양은 태양이란 게 무엇인지 정확히 몰랐던 내게도 아름다워 보였다.&lt;br&gt;
+그 꿈은 어찌나 드높은지, 모두가 우러러보는 길이었다.&lt;/p&gt;
+&lt;p&gt;갈 길이 멀었다.&lt;br&gt;
+난 호기롭게 날아올랐다. 태양을 향해.&lt;/p&gt;
+&lt;p&gt;그저 전공 공부만 하면 개발 실력이 늘 거로 생각했다.&lt;br&gt;
+그저 뭔가를 만들 수만 있다면 그 꿈에 다가갈 수 있을 거로 생각했다.&lt;br&gt;
+그런데도 가까워지지 않았다. 왜인지 계속 제자리에 멈춘 듯한 느낌이었다.&lt;/p&gt;
+&lt;p&gt;&quot;내가 하는 게 정말 뭐지?&quot;&lt;br&gt;
+&quot;왜 이런 공부를 하고 있을까?&quot;&lt;br&gt;
+&quot;이렇게 하면 정말로 세상에 기여할 수 있는 서비스를 만들 수 있을까?&quot;&lt;br&gt;
+&quot;잘 공부하고 있는 걸까?&quot;&lt;/p&gt;
+&lt;p&gt;이런 답도 없는 막막한 고민을 하게 될 때쯤, 내 앞에 먼저 날아간 사람들이 너무 많다는 걸 알게 됐다.&lt;br&gt;
+먼저 출발한 그들을 따라잡으려면 시간이 필요했고, 원하는 경지는 단기간에 도달할 수 없는 경지였다. 그렇지만 난 당장 태양을 향해 가고 싶었다.&lt;/p&gt;
+&lt;p&gt;태양은 드높은데, 내 날개는 밀랍이 녹아 듬성듬성했다.&lt;br&gt;
+날아가는 고된 과정에서 아등바등하는 상황이 참 싫었다.&lt;br&gt;
+열정도 체력도 고갈된 나는 그렇게 추락했다. 바다로.&lt;/p&gt;
+&lt;h2&gt;바다. 그리고 파도&lt;/h2&gt;
+&lt;p&gt;바닥난 자존심과 함께 추락한 바다는 추웠다. 그땐 처음으로 &quot;못한다&quot;라고 느낀 순간이었다.&lt;br&gt;
+한동안 헤어 나오지 못했다. 좋아하는 것도 못 하면 어떡하지, 라는 생각이 들었다. 더 이상 아무것도 못 할 것만 같아서 무서웠다.&lt;/p&gt;
+&lt;p&gt;그 당시 공부하던 알고리즘만 봐도 불안했다. 문제를 풀다 막막해서 울던 날도 많다. 그때의 난 하던 일만 억지로 마칠 수 있었다.&lt;br&gt;
+힘들었지만, 겨우겨우 일어나서 프리코스를 했다. 정말 운이 좋게도, 다시 파도에 떠밀려 우테코에 올 수 있었다.&lt;/p&gt;
+&lt;h2&gt;재도전&lt;/h2&gt;
+&lt;p&gt;우테코에 와보니, 결국 그저 좋아하는 것을 하고 싶었을 뿐이라는 사실을 깨달았다.&lt;/p&gt;
+&lt;p&gt;난 여전히 검은 화면에 올라오는 흰색 글자들을 사랑한다.&lt;br&gt;
+크루들과 토론하는 시간, 끝없는 에러를 고치는 과정도 언제나 즐겁다.&lt;/p&gt;
+&lt;p&gt;그렇다. 나는 즐겁게 개발하는 개발자가 되고 싶다!&lt;/p&gt;
+&lt;p&gt;어쩔 수 없는 숙명인지, 태양을 좇고 싶다. 하지만 목표까지 가는 길이 힘들어도 이제는 괜찮다. 옆에서 같이 날아줄 사람들이 많으니까. 내가 추락하기 전에 잡아줄 거다.&lt;br&gt;
+앞서가는 사람들의 존재도 지금은 그렇게까지 위협적이지 않다. 나도 충분히 시간만 있다면 그 사람들과 함께 날아갈 수 있다는 자신감이 생겼다.&lt;/p&gt;
+&lt;p&gt;오늘도 날개를 고쳐 맨다. 태양열에 내 열정이 녹아내리지 않게.&lt;br&gt;
+태양은 드높아도, 가는 길이 재밌으니까. 그거면 됐다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[DH 채용 설명회]]></title><description><![CDATA[🔐β aHoJVsnkSKKz+XRqDtEXgN3uMtHpo56eXx4QC3on9i1dxPC6bGcEM/6fTRuWBGNH4M9gyzdj2ZcTDzGACLiqfr9oq1Sbg2hwxSJ1CejDpHe6RtssoZtjd5zVLOeE+okyy…]]></description><link>https://vero.wiki/delivery-hero-employment/</link><guid isPermaLink="false">https://vero.wiki/delivery-hero-employment/</guid><pubDate>Mon, 23 Oct 2023 10:06:10 GMT</pubDate><content:encoded>&lt;p&gt;🔐β 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 🔐&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spring Data JDBC]]></title><description><![CDATA[Spring Data JDBC 란? 도메인 중심 설계 원칙에 따라 JDBC 데이터베이스를 사용하는 솔루션 개발에 핵심 Spring 개념을 적용한 것이다. JDBC Aggregate 의 핵심 기능은 Spring 컨테이너의 IoC…]]></description><link>https://vero.wiki/spring-data-jdbc/</link><guid isPermaLink="false">https://vero.wiki/spring-data-jdbc/</guid><pubDate>Sat, 21 Oct 2023 07:51:20 GMT</pubDate><content:encoded>&lt;h2&gt;Spring Data JDBC 란?&lt;/h2&gt;
 &lt;p&gt;도메인 중심 설계 원칙에 따라 JDBC 데이터베이스를 사용하는 솔루션 개발에 핵심 Spring 개념을 적용한 것이다.&lt;/p&gt;
 &lt;p&gt;JDBC Aggregate 의 핵심 기능은 Spring 컨테이너의 IoC 서비스를 호출할 필요 없이 직접 사용할 수 있다. 이는 Spring 컨테이너의 다른 서비스 없이 &quot;독립적으로 사용할 수 있는&quot; &lt;code class=&quot;language-text&quot;&gt;JdbcTemplate&lt;/code&gt; 과 매우 유사하다.&lt;/p&gt;
 &lt;h2&gt;Requirements&lt;/h2&gt;
@@ -243,7 +220,86 @@ implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.springframew
 &lt;h2&gt;참고&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#requirements&quot;&gt;https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#requirements&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[S-HOOK 동시성 문제 해결]]></title><description><![CDATA[개요 우리 팀의 현재  는 문제가 많다. 정합성 문제와 함께 중복 데이터가 사용자에게 전달될 가능성도 존재한다. 현재는 어떻게 해결할 수 있을지 고민하는 시간을 갖고 있다. 너무 느린 API 응답 Locust 로 API 응답 측정 DB…]]></description><link>https://vero.wiki/shook-like-concurrency-issue/</link><guid isPermaLink="false">https://vero.wiki/shook-like-concurrency-issue/</guid><pubDate>Thu, 07 Sep 2023 06:18:41 GMT</pubDate><content:encoded>&lt;h2&gt;개요&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[레벨4 회고]]></title><description><![CDATA[돌아볼까. 9시 40분 쯤에 캠퍼스에 도착해서 팀원들과 인사를 한다.
+10시부터 데일리 미팅을 하면서 기분 점수를 공유한다. 난 언제나…]]></description><link>https://vero.wiki/level4-retrospect/</link><guid isPermaLink="false">https://vero.wiki/level4-retrospect/</guid><pubDate>Sat, 21 Oct 2023 09:00:13 GMT</pubDate><content:encoded>&lt;h2&gt;돌아볼까.&lt;/h2&gt;
+&lt;p&gt;9시 40분 쯤에 캠퍼스에 도착해서 팀원들과 인사를 한다.
+10시부터 데일리 미팅을 하면서 기분 점수를 공유한다. 난 언제나 9점 이상이었던 것 같다.&lt;/p&gt;
+&lt;p&gt;데일리 미팅이 끝나면 강의를 듣거나, 미션을 하거나, 피쳐를 개발하거나, 회의를 하거나. 항상 바빴던 기억 밖에 없다.&lt;/p&gt;
+&lt;p&gt;우테코 정규 교육 시간이 끝나고 나면 항상 오빠랑 같이 공부를 했다. 대략 생각해봤을 때 하루에 적어도 3시간씩은 꼭 남은 공부를 했던 것 같다.&lt;/p&gt;
+&lt;p&gt;바론과 함께 게임도 열심히 했다. 아직도 열심히 하고 있다.&lt;br&gt;
+테코톡도 했다. 준비하는 시간 동안은 준비 안 했던 게 조금은 후회되었지만, 난 발표 날에 너무 재밌었다. 질문이 더 많았었다면 더 좋았을 것 같다는 생각이 든다.&lt;br&gt;
+처음 사용자 유치 기준이 나왔을 때, 100명이 많아 보였다. 언제 다 채우지... 너무 높게 적었나 하면서 팀원들과 걱정했던 기억이 난다.&lt;br&gt;
+그런데도 막상 홍보하려고 하니까 저작권이 걱정돼서 한 2주 간 마음고생했었다. 변호사와 대화할 생각까지 했으니 ㅋㅋㅋ 한저협에서 저작권에 위배되지 않는다는 답변을 해줘서 다행이었다. 그때 다들 안도했던 모습이 떠오른다.&lt;br&gt;
+홍보할 때도 의견이 많이 갈렸다. 지금 생각해보면 역시 도밥 말대로 아무데나 홍보하는 게 맞았을 수도 있다 ㅋㅋㅋ 그렇지만 브라운이 말씀하셨던 것처럼 뭐든 실패를 하고 나서 배우는 게 더 많다고 생각한다. 오히려 홍보를 많이 실패해서 우리의 타깃을 다시 어디로 맞추어야 하는지 결정할 수 있는 계기가 됐다.&lt;br&gt;
+결국은 트위터 홍보를 대차게 망하고 나서, 밑져야 본전이라 생각해서 에타에 올렸는데 너무 홍보가 잘 돼서 놀랐다. 처음으로 트래픽이 끊기지 않아서 다들 감동받았던 기억이 난다.
+5차 데모데이 때는 발표를 했다. 너무너무 할 일이 많아 당일 발표 2시간 전에 도밥과 겨우 대본을 맞춰봤었다. 다행히 문제는 없이 잘 끝냈다.&lt;br&gt;
+갑자기 우형 면접 때 코테를 보게 되어서, 팀원들이 서비스에 들이는 시간을 줄인다고 해놓고도 너무 열심히 해줬다. 티는 안 냈지만 감동이었다. 역시 우리 팀이 최고다.&lt;br&gt;
+브라운과 커피챗을 했다. 분야를 어떻게 정해야 할 지, 목표를 어떻게 정하는 게 좋을 지 추상적인 질문만 했는데 브라운이 멋진 대답을 해주셔서 큰 영감을 받았다. 감사했습니다 브라운 🥹.
+6차 데모데이 전 주에는 이사를 했다. 이사하고 나니 캠퍼스가 더 가까워졌지만 오히려 지각을 하게 됐다.. 역시 거리가 가까워질수록 늦는 건 어쩔 수 없나보다.&lt;br&gt;
+6차 데모데이 때 팀원들과 함께 전 날 랜딩 페이지도 만들고, 스티커도 만들었다. 한 2일 간 처음으로 11시까지 남아본 것 같다. 이 기회에 사실을 말하자면 예쁜 스티커는 우리끼리 만들어서 가질 생각이었다..ㅋㅋㅋ&lt;br&gt;
+6차 데모데이 당일에는 로고 칭찬, 캐릭터 칭찬을 많이 받아서 행복했다. 디자인이 멋지다, 너무 잘 만들었다, 칭찬을 많이 받아서 우리 프로젝트 최고의 날이라고 생각했다. 끝나고는 다 같이 스플릿 집에서 술을 마셨다. 술 마시는 도중에 도밥이 테오 방에 우리 서비스 홍보해서 서비스 사용자가 250명 는 것 보고 일희일희 했다... ㅎ&lt;/p&gt;
+&lt;h2&gt;우테코&lt;/h2&gt;
+&lt;p&gt;그런 생각을 했다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;나만 너무 많은 걸 얻어가는 것 같다.
+다른 사람들도 많은 걸 얻어 갔으면 좋겠다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;올해 얻은 것을 생각해보자.&lt;/p&gt;
+&lt;p&gt;나는 아무것도 할 수 없을 거라 생각했던 나를 버렸다. 어떻게 공부해야 할 지 몰라 방황하던 나도 제자리로 돌려놨다.&lt;br&gt;
+사람들과 이야기하는 것을 즐기게 되었다. 문제에 대해 이야기할 수 있는 많은 사람들을 얻었다. 편하게 의견을 나눌 수 있는 사람들과 인맥을 쌓았다. 이제는 함께하는 공부가 훨씬 재밌다는 것을 안다.&lt;br&gt;
+어떻게 하면 새로운 것을 배워갈 수 있는지, 내게 효과적인 공부법은 무엇인지 알게 됐다.
+막연하기만 했던 인생의 목표를 어떻게 정할 수 있는지는 알게 됐다. 나만의 소소한 목표도 세워 봤다.&lt;br&gt;
+우테코 기간 동안 꾸준히 블로그 글을 썼다. 나도 꾸준히 뭔가를 할 수 있는 사람이라는 걸 알게 됐다.&lt;br&gt;
+지금까지 내 탓이라 생각해왔던 일이 너무나도 손쉽게 해결됐다. 노력이라는 걸 할 수 있게 됐다.&lt;br&gt;
+함께 목표를 세우고, 목표를 향해 함께 달려갈 수 있는 사람과 행동력을 얻었다.&lt;br&gt;
+이젠 건강하지 않은 인간 관계를 판별할 수 있다.&lt;br&gt;
+좋은 팀원들을 만나 기억에 남을 멋진 팀플을 했고, 앞으로도 할 예정이다.&lt;br&gt;
+서비스는 절대 기술이 아닌, 서비스를 사용하는 사용자를 향하는 방향으로 반드시 움직여야 한다는 것을 알게 되었다.&lt;br&gt;
+혼자하는 공부도 좋지만, 함께하는 동료가 더 중요하다는 걸 알게 되었다.&lt;br&gt;
+(몇 년 간 살 수 있는 집도 생겼다 ㅋㅋ).&lt;/p&gt;
+&lt;p&gt;그저 지금은 당연하다고 생각할 수 있게 할 만큼의 많은 습관을 얻게 되었다.&lt;br&gt;
+물론 우테코 때문이 아닌 것들도 있지만, 8개월 간 많은 것들을 얻은 것은 확실하다.&lt;br&gt;
+이만큼 많은 것들을 얻을 수 있었던 이유는 단지 내가 너무 좋은 환경에 있었기 때문이다.&lt;br&gt;
+이런 많은 기회를, 멋진 경험들을 할 수 있게 도와줬던 우테코에게 감사하다. 지금도 과분하다고 생각한다.&lt;/p&gt;
+&lt;h2&gt;S-HOOK&lt;/h2&gt;
+&lt;p&gt;우테코 공식적으로는 서비스 운영 기간은 종료되었다. 그렇지만 3달 간 만들어왔던 서비스에 큰 애정이 생겼다.&lt;br&gt;
+처음으로 어떤 결과물이나, 성적에 목매달지 않고 진행했던 서비스라 그런지 앞으로도 더 열심히 운영하고 싶다.&lt;/p&gt;
+&lt;p&gt;프로젝트를 진행하면서 내 서비스의 사용자를 모으는 게 얼마나 힘든지 (ㅋㅋ), 사용자를 위한 기능을 고민하는 것이 얼마나 중요한지, 팀 속에서 내가 어떤 역할을 해야 하는 지 알 수 있었다.&lt;/p&gt;
+&lt;p&gt;우리 팀원들도 다들 취업해야 하고 하니, 그만할 줄 알고 프론트엔드 어떻게 구하지라는 고민을 하고 있었는데 ㅋㅋㅋㅋ 다들 계속해서 서비스를 개발하고 싶다고 해서 감동이었다 🥹&lt;/p&gt;
+&lt;p&gt;팀원들이 그렇게 말했어도 함께 하지 않아도 괜찮다. 그만두는 게 슬프지 않은 건 아니지만 😂&lt;br&gt;
+올해 3달 동안 팀원들과 개발한 과정은 아마 평생 잊지 못할 것 같다.&lt;/p&gt;
+&lt;h2&gt;안녕&lt;/h2&gt;
+&lt;p&gt;나 자신 수고 많았다! 진짜 Level 4까지 열심히 살았다고 생각한다.&lt;/p&gt;
+&lt;p&gt;앞으로도 파이팅하자.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2023년 10월 23일]]></title><description><![CDATA[TODO 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30] 미션 2단계  [priority:: high]  [due:: 2023-10-15] LOG T1 vs C9 T…]]></description><link>https://vero.wiki/2023-10-23/</link><guid isPermaLink="false">https://vero.wiki/2023-10-23/</guid><pubDate>Sun, 22 Oct 2023 15:00:08 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due today
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 미션 2단계  [priority:: high]  [due:: 2023-10-15]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;T1 vs C9 T1 승리 ㅎ 직관 갔는데 너무 간단하게 이겨서 기쁘긴 했다 ㅋㅋㅋ 오히려 KT vs BLG 가 더 긴장됐던 거 같음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;미션 어렵다... 너무 힘들다... JDBC 로 하지 말고 3단계 때 마이그레이션 할 걸...ㅋㅋㅋㅋ 다시 JPA 로 짜는 중..&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2023년 10월 21일]]></title><description><![CDATA[TODO 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30] 미션 2단계  [priority:: high]  [due:: 2023-10-15] LOG 배운 것  은 final class…]]></description><link>https://vero.wiki/2023-10-21/</link><guid isPermaLink="false">https://vero.wiki/2023-10-21/</guid><pubDate>Sat, 21 Oct 2023 10:43:44 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due today
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 글쓰기 미션  [priority:: medium]  [due:: 2023-10-30]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 미션 2단계  [priority:: high]  [due:: 2023-10-15]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;LocalDateTime&lt;/code&gt; 은 final class 이기 때문에 모킹할 수 없다. 따라서 &lt;code class=&quot;language-text&quot;&gt;Clock&lt;/code&gt; 을 받아서 &lt;code class=&quot;language-text&quot;&gt;Clock&lt;/code&gt; 을 &lt;code class=&quot;language-text&quot;&gt;MockBean&lt;/code&gt; 으로 띄우는 방식으로 모킹을 간접적으로 구현할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[S-HOOK 동시성 문제 해결]]></title><description><![CDATA[개요 우리 팀의 현재  는 문제가 많다. 정합성 문제와 함께 중복 데이터가 사용자에게 전달될 가능성도 존재한다. 현재는 어떻게 해결할 수 있을지 고민하는 시간을 갖고 있다. 너무 느린 API 응답 Locust 로 API 응답 측정 DB…]]></description><link>https://vero.wiki/shook-like-concurrency-issue/</link><guid isPermaLink="false">https://vero.wiki/shook-like-concurrency-issue/</guid><pubDate>Thu, 07 Sep 2023 06:18:41 GMT</pubDate><content:encoded>&lt;h2&gt;개요&lt;/h2&gt;
 &lt;p&gt;우리 팀의 현재 &lt;code class=&quot;language-text&quot;&gt;killing_part_like&lt;/code&gt; 는 문제가 많다.&lt;br&gt;
 정합성 문제와 함께 중복 데이터가 사용자에게 전달될 가능성도 존재한다.&lt;/p&gt;
 &lt;p&gt;현재는 어떻게 해결할 수 있을지 고민하는 시간을 갖고 있다.&lt;/p&gt;
