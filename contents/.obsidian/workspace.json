@@ -34,19 +34,6 @@
             }
           },
           {
-            "id": "fe09c17365c5eff6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-10-23.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "2f8a53c5aba9e8d7",
             "type": "leaf",
             "state": {
@@ -71,9 +58,17 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6dde4f15fe72ab02",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -149,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/level4-writing.md",
+                "file": "posts/forwarded-header-filter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/level4-writing.md",
+                "file": "posts/forwarded-header-filter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -189,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/level4-writing.md"
+                "file": "posts/forwarded-header-filter.md"
               }
             }
           },
@@ -236,18 +231,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "90709d30269cfcae",
+  "active": "14dea998daad43ca",
   "lastOpenFiles": [
-    "posts/level4-writing.md",
     "posts/level4-retrospect.md",
+    "posts/nginx.md",
+    "posts/2023-10-23.md",
+    "posts/level4-writing.md",
     "posts/delivery-hero-employment.md",
     "posts/2023-03-25.md",
     "posts/vepohuhemal-study-question.md",
     "posts/spring-data-jdbc.md",
     "posts/forwarded-header-filter.md",
     "posts/attachments/swagger-fail-load.png",
-    "posts/nginx.md",
-    "posts/2023-10-23.md",
     "posts/2023-10-16.md",
     "posts/shook-like-issue.md",
     "posts/2023-10-21.md",
