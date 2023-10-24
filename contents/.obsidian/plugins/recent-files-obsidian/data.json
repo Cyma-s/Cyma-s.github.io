@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "vepohuhemal-study-question",
+      "path": "posts/vepohuhemal-study-question.md"
+    },
+    {
+      "basename": "vepohuhyemal-study",
+      "path": "posts/vepohuhyemal-study.md"
+    },
+    {
+      "basename": "default-method",
+      "path": "posts/default-method.md"
+    },
+    {
+      "basename": "nginx",
+      "path": "posts/nginx.md"
+    },
+    {
       "basename": "inmemory-cache-removal",
       "path": "posts/inmemory-cache-removal.md"
     },
@@ -29,10 +45,6 @@
       "path": "posts/forwarded-header-filter.md"
     },
     {
-      "basename": "nginx",
-      "path": "posts/nginx.md"
-    },
-    {
       "basename": "2023-10-23",
       "path": "posts/2023-10-23.md"
     },
@@ -43,10 +55,6 @@
     {
       "basename": "2023-03-25",
       "path": "posts/2023-03-25.md"
-    },
-    {
-      "basename": "vepohuhemal-study-question",
-      "path": "posts/vepohuhemal-study-question.md"
     },
     {
       "basename": "spring-data-jdbc",
@@ -191,14 +199,6 @@
     {
       "basename": "segment-tree",
       "path": "posts/segment-tree.md"
-    },
-    {
-      "basename": "2023-10",
-      "path": "posts/2023-10.md"
-    },
-    {
-      "basename": "2023-09",
-      "path": "posts/2023-09.md"
     }
   ],
   "omittedPaths": [],
