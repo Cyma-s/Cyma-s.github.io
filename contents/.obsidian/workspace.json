@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/level4-retrospect.md",
+                "file": "posts/shook-function-develop.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -63,12 +63,30 @@
             "id": "6dde4f15fe72ab02",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "posts/jpa-second-cache.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "24b43f569156a5bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/inmemory-cache-removal.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -144,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/forwarded-header-filter.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +179,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/forwarded-header-filter.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,7 +202,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/forwarded-header-filter.md"
+                "file": "posts/inmemory-cache-removal.md"
               }
             }
           },
@@ -231,24 +249,32 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "14dea998daad43ca",
+  "active": "24b43f569156a5bd",
   "lastOpenFiles": [
+    "posts/attachments/query-application-sort.png",
+    "posts/attachments/Pasted image 20231024151645.png",
+    "posts/attachments/not-fitting-query.png",
+    "posts/attachments/inmemory-performance-time.png",
+    "posts/level4-writing.md",
+    "posts/jpa-second-cache.md",
+    "posts/inmemory-cache-removal.md",
+    "posts/attachments/shook-main-page.png",
+    "posts/query-speed-improve.md",
+    "posts/shook-function-develop.md",
     "posts/level4-retrospect.md",
+    "posts/forwarded-header-filter.md",
     "posts/nginx.md",
     "posts/2023-10-23.md",
-    "posts/level4-writing.md",
     "posts/delivery-hero-employment.md",
     "posts/2023-03-25.md",
     "posts/vepohuhemal-study-question.md",
     "posts/spring-data-jdbc.md",
-    "posts/forwarded-header-filter.md",
     "posts/attachments/swagger-fail-load.png",
     "posts/2023-10-16.md",
     "posts/shook-like-issue.md",
     "posts/2023-10-21.md",
     "posts/shook-like-concurrency-issue.md",
     "posts/2023-10-18.md",
-    "posts/shook-function-develop.md",
     "posts/shook-planning.md",
     "posts/shook-hikaricp.md",
     "posts/locust.md",
@@ -256,10 +282,6 @@
     "posts/shook-git-branch-strategy.md",
     "posts/shook-level4.md",
     "posts/shook-load-test.md",
-    "posts/shook-maniadb.md",
-    "posts/shook-music-api.md",
-    "posts/shook-nickname-update-issue.md",
-    "posts/shook-persona.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",
@@ -267,10 +289,6 @@
     "attachments/Pasted image 20230919132328.png",
     "attachments/obsidian-admonition-prefix.png",
     "attachments/obsidian-callout.png",
-    "attachments/obsidian-how-to-plugin.png",
-    "attachments/obsidian-community-plugin.png",
-    "attachments/obsidian-style-settings.png",
-    "attachments/obsidian-outliner-setting.png",
     "무제 파일.canvas"
   ]
 }

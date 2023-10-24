@@ -1,12 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "forwarded-header-filter",
-      "path": "posts/forwarded-header-filter.md"
+      "basename": "inmemory-cache-removal",
+      "path": "posts/inmemory-cache-removal.md"
+    },
+    {
+      "basename": "level4-writing",
+      "path": "posts/level4-writing.md"
+    },
+    {
+      "basename": "jpa-second-cache",
+      "path": "posts/jpa-second-cache.md"
+    },
+    {
+      "basename": "query-speed-improve",
+      "path": "posts/query-speed-improve.md"
+    },
+    {
+      "basename": "shook-function-develop",
+      "path": "posts/shook-function-develop.md"
     },
     {
       "basename": "level4-retrospect",
       "path": "posts/level4-retrospect.md"
+    },
+    {
+      "basename": "forwarded-header-filter",
+      "path": "posts/forwarded-header-filter.md"
     },
     {
       "basename": "nginx",
@@ -15,10 +35,6 @@
     {
       "basename": "2023-10-23",
       "path": "posts/2023-10-23.md"
-    },
-    {
-      "basename": "level4-writing",
-      "path": "posts/level4-writing.md"
     },
     {
       "basename": "delivery-hero-employment",
@@ -59,10 +75,6 @@
     {
       "basename": "2023-10-18",
       "path": "posts/2023-10-18.md"
-    },
-    {
-      "basename": "shook-function-develop",
-      "path": "posts/shook-function-develop.md"
     },
     {
       "basename": "shook-planning",
@@ -187,18 +199,6 @@
     {
       "basename": "2023-09",
       "path": "posts/2023-09.md"
-    },
-    {
-      "basename": "english-speaking-10-17",
-      "path": "posts/english-speaking-10-17.md"
-    },
-    {
-      "basename": "hikaricp",
-      "path": "posts/hikaricp.md"
-    },
-    {
-      "basename": "os-ch2",
-      "path": "posts/os-ch2.md"
     }
   ],
   "omittedPaths": [],
