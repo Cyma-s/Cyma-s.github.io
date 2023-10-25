@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/shook-function-develop.md",
+                "file": "posts/interview-special-lecture.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -84,8 +84,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "450902b69a035c51",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/ehcache-apply.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -161,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/vepohuhemal-study-question.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/vepohuhemal-study-question.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -201,7 +215,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/vepohuhemal-study-question.md"
+                "file": "posts/inmemory-cache-removal.md"
               }
             }
           },
@@ -248,27 +262,31 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "22a2297347764d6f",
+  "active": "24b43f569156a5bd",
   "lastOpenFiles": [
+    "posts/attachments/jpa-level-2-cache-last-request.png",
+    "posts/attachments/jpa-level-2-cache.png",
+    "posts/ehcache-apply.md",
+    "posts/inmemory-cache-removal.md",
+    "posts/interview-special-lecture.md",
+    "posts/shook-function-develop.md",
+    "posts/jpa-second-cache.md",
+    "posts/level4-writing.md",
+    "posts/forwarded-header-filter.md",
+    "posts/vepohuhemal-study-question.md",
     "posts/vepohuhyemal-study.md",
     "posts/default-method.md",
     "posts/nginx.md",
-    "posts/inmemory-cache-removal.md",
     "posts/attachments/query-application-sort.png",
     "posts/attachments/Pasted image 20231024151645.png",
     "posts/attachments/not-fitting-query.png",
     "posts/attachments/inmemory-performance-time.png",
-    "posts/level4-writing.md",
-    "posts/jpa-second-cache.md",
     "posts/attachments/shook-main-page.png",
     "posts/query-speed-improve.md",
-    "posts/shook-function-develop.md",
     "posts/level4-retrospect.md",
-    "posts/forwarded-header-filter.md",
     "posts/2023-10-23.md",
     "posts/delivery-hero-employment.md",
     "posts/2023-03-25.md",
-    "posts/vepohuhemal-study-question.md",
     "posts/spring-data-jdbc.md",
     "posts/attachments/swagger-fail-load.png",
     "posts/2023-10-16.md",
@@ -279,15 +297,11 @@
     "posts/shook-planning.md",
     "posts/shook-hikaricp.md",
     "posts/locust.md",
-    "posts/shook-nginx.md",
-    "posts/shook-git-branch-strategy.md",
-    "posts/shook-level4.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",
     "무제 폴더",
     "attachments/Pasted image 20230919132328.png",
-    "attachments/obsidian-admonition-prefix.png",
     "무제 파일.canvas"
   ]
 }

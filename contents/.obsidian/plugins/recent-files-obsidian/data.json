@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "inmemory-cache-removal",
+      "path": "posts/inmemory-cache-removal.md"
+    },
+    {
+      "basename": "ehcache-apply",
+      "path": "posts/ehcache-apply.md"
+    },
+    {
+      "basename": "interview-special-lecture",
+      "path": "posts/interview-special-lecture.md"
+    },
+    {
+      "basename": "shook-function-develop",
+      "path": "posts/shook-function-develop.md"
+    },
+    {
+      "basename": "jpa-second-cache",
+      "path": "posts/jpa-second-cache.md"
+    },
+    {
+      "basename": "level4-writing",
+      "path": "posts/level4-writing.md"
+    },
+    {
+      "basename": "forwarded-header-filter",
+      "path": "posts/forwarded-header-filter.md"
+    },
+    {
       "basename": "vepohuhemal-study-question",
       "path": "posts/vepohuhemal-study-question.md"
     },
@@ -17,32 +45,12 @@
       "path": "posts/nginx.md"
     },
     {
-      "basename": "inmemory-cache-removal",
-      "path": "posts/inmemory-cache-removal.md"
-    },
-    {
-      "basename": "level4-writing",
-      "path": "posts/level4-writing.md"
-    },
-    {
-      "basename": "jpa-second-cache",
-      "path": "posts/jpa-second-cache.md"
-    },
-    {
       "basename": "query-speed-improve",
       "path": "posts/query-speed-improve.md"
     },
     {
-      "basename": "shook-function-develop",
-      "path": "posts/shook-function-develop.md"
-    },
-    {
       "basename": "level4-retrospect",
       "path": "posts/level4-retrospect.md"
-    },
-    {
-      "basename": "forwarded-header-filter",
-      "path": "posts/forwarded-header-filter.md"
     },
     {
       "basename": "2023-10-23",
@@ -191,14 +199,6 @@
     {
       "basename": "2023-08",
       "path": "posts/2023-08.md"
-    },
-    {
-      "basename": "2023-10-17",
-      "path": "posts/2023-10-17.md"
-    },
-    {
-      "basename": "segment-tree",
-      "path": "posts/segment-tree.md"
     }
   ],
   "omittedPaths": [],
