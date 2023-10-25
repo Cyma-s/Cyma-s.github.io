@@ -3,7 +3,7 @@
   "attachmentFolderPath": "posts/attachments",
   "spellcheck": false,
   "foldHeading": true,
-  "readableLineLength": false,
+  "readableLineLength": true,
   "showLineNumber": false,
   "propertiesInDocument": "source",
   "newFileLocation": "folder",

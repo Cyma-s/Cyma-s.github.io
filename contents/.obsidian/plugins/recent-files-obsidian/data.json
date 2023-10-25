@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "ehcache-apply",
+      "path": "posts/ehcache-apply.md"
+    },
+    {
+      "basename": "2023-10-25",
+      "path": "posts/2023-10-25.md"
+    },
+    {
       "basename": "inmemory-cache-removal",
       "path": "posts/inmemory-cache-removal.md"
     },
     {
-      "basename": "ehcache-apply",
-      "path": "posts/ehcache-apply.md"
+      "basename": "locust",
+      "path": "posts/locust.md"
+    },
+    {
+      "basename": "jpa-second-cache",
+      "path": "posts/jpa-second-cache.md"
     },
     {
       "basename": "interview-special-lecture",
@@ -15,10 +27,6 @@
     {
       "basename": "shook-function-develop",
       "path": "posts/shook-function-develop.md"
-    },
-    {
-      "basename": "jpa-second-cache",
-      "path": "posts/jpa-second-cache.md"
     },
     {
       "basename": "level4-writing",
@@ -99,10 +107,6 @@
     {
       "basename": "shook-hikaricp",
       "path": "posts/shook-hikaricp.md"
-    },
-    {
-      "basename": "locust",
-      "path": "posts/locust.md"
     },
     {
       "basename": "shook-nginx",
@@ -195,10 +199,6 @@
     {
       "basename": "about-pool-sizing",
       "path": "posts/about-pool-sizing.md"
-    },
-    {
-      "basename": "2023-08",
-      "path": "posts/2023-08.md"
     }
   ],
   "omittedPaths": [],

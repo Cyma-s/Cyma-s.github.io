@@ -78,7 +78,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/inmemory-cache-removal.md",
+                "file": "posts/2023-10-25.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +99,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/inmemory-cache-removal.md",
+                "file": "posts/ehcache-apply.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/inmemory-cache-removal.md",
+                "file": "posts/ehcache-apply.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -215,7 +215,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/inmemory-cache-removal.md"
+                "file": "posts/ehcache-apply.md"
               }
             }
           },
@@ -262,15 +262,17 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "24b43f569156a5bd",
+  "active": "450902b69a035c51",
   "lastOpenFiles": [
+    "posts/2023-10-25.md",
+    "posts/inmemory-cache-removal.md",
+    "posts/locust.md",
+    "posts/jpa-second-cache.md",
+    "posts/ehcache-apply.md",
     "posts/attachments/jpa-level-2-cache-last-request.png",
     "posts/attachments/jpa-level-2-cache.png",
-    "posts/ehcache-apply.md",
-    "posts/inmemory-cache-removal.md",
     "posts/interview-special-lecture.md",
     "posts/shook-function-develop.md",
-    "posts/jpa-second-cache.md",
     "posts/level4-writing.md",
     "posts/forwarded-header-filter.md",
     "posts/vepohuhemal-study-question.md",
@@ -296,12 +298,10 @@
     "posts/2023-10-18.md",
     "posts/shook-planning.md",
     "posts/shook-hikaricp.md",
-    "posts/locust.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",
     "무제 폴더",
-    "attachments/Pasted image 20230919132328.png",
     "무제 파일.canvas"
   ]
 }
