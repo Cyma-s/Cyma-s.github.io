@@ -78,7 +78,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-10-25.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +99,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/ehcache-apply.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/ehcache-apply.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -215,7 +215,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/ehcache-apply.md"
+                "file": "posts/inmemory-cache-removal.md"
               }
             }
           },
@@ -262,13 +262,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "450902b69a035c51",
+  "active": "24b43f569156a5bd",
   "lastOpenFiles": [
+    "posts/attachments/jpa-level-2-swipe.png",
     "posts/2023-10-25.md",
+    "posts/ehcache-apply.md",
     "posts/inmemory-cache-removal.md",
     "posts/locust.md",
     "posts/jpa-second-cache.md",
-    "posts/ehcache-apply.md",
     "posts/attachments/jpa-level-2-cache-last-request.png",
     "posts/attachments/jpa-level-2-cache.png",
     "posts/interview-special-lecture.md",
@@ -297,7 +298,6 @@
     "posts/shook-like-concurrency-issue.md",
     "posts/2023-10-18.md",
     "posts/shook-planning.md",
-    "posts/shook-hikaricp.md",
     "posts/attachments/postgresql-benchmark.png",
     "template",
     "posts/attachments/monitor-wait-set.png",

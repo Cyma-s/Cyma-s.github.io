@@ -1,7 +1,7 @@
 ---
 title: 로컬 캐시 제거하기
 date: 2023-10-24 13:29:21 +0900
-updated: 2023-10-25 13:49:04 +0900
+updated: 2023-10-25 17:17:01 +0900
 tags:
   - shook
 ---
@@ -131,7 +131,128 @@ List<SongTotalLikeCountDto> findAllWithTotalLikeCount();
 
 캐싱된 데이터를 조회하는 평균 시간을 계산하기 위해 다시 100번 테스트를 수행했을 때, 평균 응답 시간이 16ms 로 최적화되지 않은 쿼리 기준 106배 정도 빠른 성능으로 개선된 것을 볼 수 있다.
 
+## 실시간 좋아요를 캐시에 반영
 
+좋아요를 누르면 캐시에도 좋아요가 반영되도록 수정하였다. 
+
+```java
+
+```
+
+## 스와이프 API & 좋아요 API 동시 요청 테스트
+
+다음과 같은 순서로 테스트를 100번 수행했다.
+
+1. 스와이프 요청
+2. 하나의 킬링파트에 좋아요 등록
+3. 동일한 노래 아이디로 스와이프 요청
+4. 하나의 킬링파트에 좋아요 취소
+
+실행되는 코드는 다음과 같다.
+
+```java
+public SongSwipeResponse findSongByIdForFirstSwipe(  
+	final Long songId,  
+	final MemberInfo memberInfo  
+) {  
+	final Song currentSong = songRepository.findById(songId)  
+		.orElseThrow(  
+			() -> new MemberNotExistException(  
+				Map.of("SongId", String.valueOf(songId))  
+			)            );  
+
+	final List<Song> beforeSongs = songRepository.findSongsWithMoreLikeCountThanSongWithId(songId,  
+																						   PageRequest.of(0, 10));  
+	final List<Song> afterSongs = songRepository.findSongsWithLessLikeCountThanSongWithId(songId,  
+																						  PageRequest.of(0, 10));  
+	return convertToSongSwipeResponse(memberInfo, currentSong, beforeSongs, afterSongs);  
+}
+```
+
+사용한 쿼리는 다음과 같다. 집계 쿼리가 포함되어 있어 성능 저하가 발생한다.
+
+```java
+@Query("SELECT s FROM Song s "  
+    + "LEFT JOIN s.killingParts.killingParts kp "  
+    + "GROUP BY s.id "  
+    + "HAVING SUM(COALESCE(kp.likeCount, 0)) < (SELECT SUM(COALESCE(kp2.likeCount, 0)) FROM KillingPart kp2 WHERE kp2.song.id = :id) "  
+    + "OR (SUM(COALESCE(kp.likeCount, 0)) = (SELECT SUM(COALESCE(kp3.likeCount, 0)) FROM KillingPart kp3 WHERE kp3.song.id = :id) AND s.id < :id) "  
+    + "ORDER BY SUM(COALESCE(kp.likeCount, 0)) DESC, s.id DESC")  
+List<Song> findSongsWithLessLikeCountThanSongWithId(  
+    @Param("id") final Long songId,  
+    final Pageable pageable  
+);
+
+@Query("SELECT s FROM Song s "  
+    + "LEFT JOIN s.killingParts.killingParts kp "  
+    + "GROUP BY s.id "  
+    + "HAVING (SUM(COALESCE(kp.likeCount, 0)) > (SELECT SUM(COALESCE(kp2.likeCount, 0)) FROM KillingPart kp2 WHERE kp2.song.id = :id) "  
+    + "OR (SUM(COALESCE(kp.likeCount, 0)) = (SELECT SUM(COALESCE(kp3.likeCount, 0)) FROM KillingPart kp3 WHERE kp3.song.id = :id) AND s.id > :id)) "  
+    + "ORDER BY SUM(COALESCE(kp.likeCount, 0)), s.id")  
+List<Song> findSongsWithMoreLikeCountThanSongWithId(  
+    @Param("id") final Long songId,  
+    final Pageable pageable  
+);
+```
+
+### 로컬 캐시
+
+
+
+### JPA 2차 캐시
+
+캐싱은 다음과 같이 선언해 주었다. 킬링파트는 좋아요가 계속해서 업데이트 되기 때문에 `READ_WRITE` 로 선언했다.
+
+```java
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)  
+@Getter  
+@Embeddable  
+public class KillingParts {
+...
+}
+
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)  
+@Getter  
+@Entity  
+public class KillingPart {
+...
+}
+
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)  
+@Getter  
+@Entity  
+public class Song {
+...
+}
+```
+
+좋아요가 업데이트되는 시점에 캐시를 업데이트 해주기 위해 Listener 를 추가했다.  
+`killingPartCache` 가 업데이트되면 새롭게 업데이트된 `KillingPart` 로 캐시를 업데이트하는 로직이다.  
+
+```java
+@Component  
+public class LikeUpdateListener {  
+  
+    private CacheManager cacheManager;  
+  
+    public LikeUpdateListener() {  
+    }  
+    public LikeUpdateListener(final CacheManager cacheManager) {  
+        this.cacheManager = cacheManager;  
+    }  
+  
+    @PostUpdate  
+    public void onEntityChange(final KillingPart killingPart) {  
+        Cache entityCache = cacheManager.getCache("killingPartCache");  
+        if (entityCache != null) {  
+            entityCache.put(killingPart.getId(), killingPart);  
+        }  
+    }}
+```
+
+첫 캐시 로드 시에는 5s 정도의 오랜 시간이 걸린다.
+
+![[jpa-level-2-swipe.png]]
 
 ## 참고
 
