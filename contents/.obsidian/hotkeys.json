@@ -159,5 +159,14 @@
       ],
       "key": "F"
     }
+  ],
+  "app:delete-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "Backspace"
+    }
   ]
 }

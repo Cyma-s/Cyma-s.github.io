@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "shook-project-feedback",
-      "path": "posts/shook-project-feedback.md"
-    },
-    {
       "basename": "inmemory-cache-removal",
       "path": "posts/inmemory-cache-removal.md"
+    },
+    {
+      "basename": "ehcache-apply",
+      "path": "posts/ehcache-apply.md"
     },
     {
       "basename": "jpa-second-cache",
@@ -31,10 +31,6 @@
     {
       "basename": "2023-10-25",
       "path": "posts/2023-10-25.md"
-    },
-    {
-      "basename": "ehcache-apply",
-      "path": "posts/ehcache-apply.md"
     },
     {
       "basename": "locust",

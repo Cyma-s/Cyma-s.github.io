@@ -32,22 +32,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "50df792c211a1a75",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/shook-project-feedback.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -123,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/shook-project-feedback.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/shook-project-feedback.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/shook-project-feedback.md"
+                "file": "posts/inmemory-cache-removal.md"
               }
             }
           },
@@ -210,8 +196,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "50df792c211a1a75",
+  "active": "24b43f569156a5bd",
   "lastOpenFiles": [
+    "posts/ehcache-apply.md",
     "posts/shook-project-feedback.md",
     "posts/inmemory-cache-removal.md",
     "posts/jpa-second-cache.md",
@@ -221,7 +208,6 @@
     "posts/forwarded-header-filter.md",
     "posts/attachments/jpa-level-2-swipe.png",
     "posts/2023-10-25.md",
-    "posts/ehcache-apply.md",
     "posts/locust.md",
     "posts/attachments/jpa-level-2-cache-last-request.png",
     "posts/attachments/jpa-level-2-cache.png",

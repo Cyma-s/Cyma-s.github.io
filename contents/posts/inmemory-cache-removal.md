@@ -1,7 +1,7 @@
 ---
 title: 로컬 캐시 제거하기
 date: 2023-10-24 13:29:21 +0900
-updated: 2023-10-25 17:17:01 +0900
+updated: 2023-10-26 17:59:29 +0900
 tags:
   - shook
 ---
@@ -117,7 +117,7 @@ List<SongTotalLikeCountDto> findAllWithTotalLikeCount();
 
 응답 시간은 평균 Avg Time 8ms 이다.
 
-### JPA 2차 캐시 적용
+### JPA 2차 캐시 적용 (Spring Cache)
 
 적용하는 방법은 [[ehcache-apply|JPA 2차 캐시 적용하기]]에서 확인할 수 있다.
 
