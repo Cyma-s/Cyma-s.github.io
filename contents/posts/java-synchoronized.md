@@ -1,9 +1,9 @@
 ---
-title   : 모니터와 synchronized
-date    : 2023-08-21 16:31:47 +0900
-updated : 2023-08-21 16:31:57 +0900
-tags     : 
-- java
+title: 모니터와 synchronized
+date: 2023-08-21 16:31:47 +0900
+updated: 2023-10-27 17:56:38 +0900
+tags:
+  - java
 ---
 
 Monitor Lock 과 synchronized
@@ -16,8 +16,6 @@ Java 의 synchronized 키워드가 동기화를 제공하는 방법인 Monitor L
 
 1. critical section 에 대해 상호 배제 (mutual exclusion) 을 제공한다. 공유 데이터를 한 스레드만 접근할 수 있도록 제한하는 것을 의미한다.
 2. 스레드 간의 협업 또는 동기화의 역할을 수행한다. 어떤 작업을 완료하거나 특정 상태에 도달하는 경우 다른 스레드에 알려주어 해당 스레드가 동작할 수 있도록 한다.
-
-
 
 ## Intrinsic Locks
 

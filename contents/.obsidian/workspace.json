@@ -34,12 +34,25 @@
             }
           },
           {
-            "id": "9c29c6cea33f9dfd",
+            "id": "c834f850a95a2e7f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/minimum-vertex-cover.md",
+                "file": "posts/shook-like-concurrency-issue.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b629e6de886f9950",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/cache-and-cacheable.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -101,8 +114,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -123,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/minimum-vertex-cover.md",
+                "file": "posts/cache-and-cacheable.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/minimum-vertex-cover.md",
+                "file": "posts/cache-and-cacheable.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/minimum-vertex-cover.md"
+                "file": "posts/cache-and-cacheable.md"
               }
             }
           },
@@ -184,7 +196,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -210,44 +222,44 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "9c29c6cea33f9dfd",
+  "active": "b629e6de886f9950",
   "lastOpenFiles": [
-    "posts/minimum-vertex-cover.md",
-    "posts/inmemory-cache-removal.md",
-    "posts/ehcache-apply.md",
-    "posts/shook-project-feedback.md",
-    "posts/jpa-second-cache.md",
-    "posts/level4-writing.md",
-    "posts/interview-special-lecture.md",
-    "posts/vepohuhemal-study-question.md",
-    "posts/forwarded-header-filter.md",
-    "posts/attachments/jpa-level-2-swipe.png",
-    "posts/2023-10-25.md",
-    "posts/locust.md",
-    "posts/attachments/jpa-level-2-cache-last-request.png",
-    "posts/attachments/jpa-level-2-cache.png",
-    "posts/shook-function-develop.md",
-    "posts/vepohuhyemal-study.md",
-    "posts/default-method.md",
-    "posts/nginx.md",
-    "posts/attachments/query-application-sort.png",
-    "posts/attachments/Pasted image 20231024151645.png",
-    "posts/attachments/not-fitting-query.png",
-    "posts/attachments/inmemory-performance-time.png",
-    "posts/attachments/shook-main-page.png",
-    "posts/query-speed-improve.md",
-    "posts/level4-retrospect.md",
-    "posts/2023-10-23.md",
-    "posts/delivery-hero-employment.md",
-    "posts/2023-03-25.md",
-    "posts/spring-data-jdbc.md",
-    "posts/attachments/swagger-fail-load.png",
-    "posts/2023-10-16.md",
-    "posts/shook-like-issue.md",
-    "posts/2023-10-21.md",
+    "posts/cache-and-cacheable.md",
     "posts/shook-like-concurrency-issue.md",
-    "posts/2023-10-18.md",
-    "posts/attachments/postgresql-benchmark.png",
+    "posts/shook-nickname-update-issue.md",
+    "posts/java-synchoronized.md",
+    "posts/spring-core.md",
+    "posts/2023-07-20.md",
+    "posts/ioc-container-and-di.md",
+    "posts/level2-week2.md",
+    "posts/application-context.md",
+    "posts/2023-08-27.md",
+    "posts/bipartite-matching.md",
+    "posts/spring-multi-profile-issue.md",
+    "posts/locust.md",
+    "posts/os-ch2.md",
+    "posts/2023-04-06.md",
+    "posts/2023-03-15.md",
+    "posts/level2-week1.md",
+    "posts/speaking-theme-computer-science.md",
+    "posts/matzip.md",
+    "posts/matzip_pair.md",
+    "posts/rollback-release.md",
+    "posts/bitmasking.md",
+    "posts/assertj.md",
+    "posts/2023-09.md",
+    "posts/2023-06-07.md",
+    "posts/localdatetime-vs-timestamp.md",
+    "posts/attachments/jpa-level-2-cache.png",
+    "posts/attachments/jpa-dirty-checking-concurrency-issue.png",
+    "posts/attachments/initializer.png",
+    "posts/attachments/image-mime-type.png",
+    "posts/attachments/current-shook-git-branch-strategy.png",
+    "posts/attachments/aws-iam-management-console.png",
+    "posts/attachments/acceptance-test-failed.png",
+    "posts/attachments/feedback.png",
+    "posts/attachments/jpa-level-2-swipe.png",
+    "posts/attachments/jpa-level-2-cache-last-request.png",
     "template",
     "무제 폴더",
     "무제 파일.canvas"
