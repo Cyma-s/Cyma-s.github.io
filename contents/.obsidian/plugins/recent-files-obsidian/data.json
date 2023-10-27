@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "minimum-vertex-cover",
+      "path": "posts/minimum-vertex-cover.md"
+    },
+    {
       "basename": "inmemory-cache-removal",
       "path": "posts/inmemory-cache-removal.md"
     },
