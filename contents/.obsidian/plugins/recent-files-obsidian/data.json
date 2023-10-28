@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "2023-10-28",
+      "path": "posts/2023-10-28.md"
+    },
+    {
       "basename": "cache-and-cacheable",
       "path": "posts/cache-and-cacheable.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "initializer",
       "path": "posts/attachments/initializer.png"
-    },
-    {
-      "basename": "image-mime-type",
-      "path": "posts/attachments/image-mime-type.png"
     }
   ],
   "omittedPaths": [],
