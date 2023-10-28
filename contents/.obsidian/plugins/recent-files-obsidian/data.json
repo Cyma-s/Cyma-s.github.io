@@ -1,8 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "2023-10-28",
-      "path": "posts/2023-10-28.md"
+      "basename": "inmemory-cache-removal",
+      "path": "posts/inmemory-cache-removal.md"
+    },
+    {
+      "basename": "ehcache-apply",
+      "path": "posts/ehcache-apply.md"
     },
     {
       "basename": "cache-and-cacheable",
@@ -11,6 +15,14 @@
     {
       "basename": "shook-like-concurrency-issue",
       "path": "posts/shook-like-concurrency-issue.md"
+    },
+    {
+      "basename": "2023-10-28",
+      "path": "posts/2023-10-28.md"
+    },
+    {
+      "basename": "shook-function-develop",
+      "path": "posts/shook-function-develop.md"
     },
     {
       "basename": "java-synchoronized",
@@ -141,14 +153,6 @@
       "path": "posts/tomcat.md"
     },
     {
-      "basename": "ehcache-apply",
-      "path": "posts/ehcache-apply.md"
-    },
-    {
-      "basename": "inmemory-cache-removal",
-      "path": "posts/inmemory-cache-removal.md"
-    },
-    {
       "basename": "jpa-level-2-cache",
       "path": "posts/attachments/jpa-level-2-cache.png"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "jpa-dirty-checking-concurrency-issue",
       "path": "posts/attachments/jpa-dirty-checking-concurrency-issue.png"
-    },
-    {
-      "basename": "initializer",
-      "path": "posts/attachments/initializer.png"
     }
   ],
   "omittedPaths": [],

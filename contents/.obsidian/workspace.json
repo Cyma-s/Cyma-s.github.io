@@ -72,8 +72,7 @@
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -148,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-10-28.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-10-28.md",
+                "file": "posts/inmemory-cache-removal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-10-28.md"
+                "file": "posts/inmemory-cache-removal.md"
               }
             }
           },
@@ -235,11 +234,16 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "bf739c61d682242c",
+  "active": "24b43f569156a5bd",
   "lastOpenFiles": [
-    "posts/2023-10-28.md",
+    "posts/attachments/not-fit-local-cache.png",
+    "posts/attachments/not-fit-query-db-sort.png",
+    "posts/attachments/not-fit-query.png",
+    "posts/ehcache-apply.md",
     "posts/cache-and-cacheable.md",
     "posts/shook-like-concurrency-issue.md",
+    "posts/2023-10-28.md",
+    "posts/shook-function-develop.md",
     "posts/shook-nickname-update-issue.md",
     "posts/java-synchoronized.md",
     "posts/spring-core.md",
@@ -260,9 +264,6 @@
     "posts/matzip_pair.md",
     "posts/rollback-release.md",
     "posts/bitmasking.md",
-    "posts/assertj.md",
-    "posts/2023-09.md",
-    "posts/2023-06-07.md",
     "posts/attachments/jpa-level-2-cache.png",
     "posts/attachments/jpa-dirty-checking-concurrency-issue.png",
     "posts/attachments/initializer.png",
@@ -271,8 +272,6 @@
     "posts/attachments/aws-iam-management-console.png",
     "posts/attachments/acceptance-test-failed.png",
     "posts/attachments/feedback.png",
-    "posts/attachments/jpa-level-2-swipe.png",
-    "posts/attachments/jpa-level-2-cache-last-request.png",
     "template",
     "무제 폴더",
     "무제 파일.canvas"

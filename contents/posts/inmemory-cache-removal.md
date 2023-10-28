@@ -1,7 +1,7 @@
 ---
-title: 로컬 캐시 제거하기
+title: 로컬 캐시 개선기
 date: 2023-10-24 13:29:21 +0900
-updated: 2023-10-26 17:59:29 +0900
+updated: 2023-10-28 16:51:35 +0900
 tags:
   - shook
 ---
@@ -49,7 +49,11 @@ public class InMemorySongsScheduler {
 이때 문제점은 특정 노래만 저장하는 것이 아닌 **전체 노래**를 저장한다는 것이다.  
 즉, 노래 개수가 늘어날수록 저장해야 하는 메모리가 많아지는 비효율적인 구조가 될 수 있다. 
 
-이런 이유로 전체 노래를 저장하는 캐싱을 제거하기로 결정했다. 
+따라서 전체 노래를 저장하지 않고 사용자가 가장 많이 쓸 것으로 예상되는 첫 스와이프 화면에서 불리는 API 에서 사용될 데이터를 미리 캐싱해놓기로 했다.
+
+첫 스와이프 화면에서 위 또는 아래로 스와이프를 수행하면 실제로 데이터베이스에 쿼리를 보내는 API 가 호출될 것이다. 그러나 프론트엔드에서 사용자가 위, 아래에서 5번째 노래에 도달했을 때 백그라운드에서 호출하기 때문에, 오래 걸려도 상대적으로 사용자 경험에 영향을 덜 줄 것으로 예상했다.
+
+또한 서비스 특성 상 사용자의 좋아요 실시간성이 중요한 만큼, 사용자가 좋아요를 눌렀을 때 기존 캐시와 대조하여 순위를 변경해주는 기능을 추가했다.
 
 ## 영향을 받는 API
 
@@ -63,8 +67,17 @@ public class InMemorySongsScheduler {
 
 - 로컬에서 실행
 - 노래 데이터 10000개
+- 킬링파트 데이터 30000개
 
-### 최적화되지 않은 쿼리-전체 조회
+먼저 로컬 캐싱되지 않은 데이터를 조회할 때의 속도를 측정하기 위해 전체 노래를 조회해서 정렬한 뒤, 상위 10개의 노래를 반환하는 API 를 기준으로 테스트를 진행했다. 
+
+### 기존 방식 - 로컬 캐시 사용
+
+![[not-fit-local-cache.png]]
+
+응답 시간은 평균 Avg Time 8ms 이다. 굉장히 빠른 속도지만 모든 노래를 캐싱한다는 점에서 최적화가 필요하다.
+
+### 최적화되지 않은 쿼리 - 전체 조회
 
 노래 좋아요와 노래를 전체 조회한 뒤, 애플리케이션에서 정렬을 수행했다.
 
@@ -75,25 +88,42 @@ public class InMemorySongsScheduler {
 List<SongTotalLikeCountDto> findAllWithTotalLikeCount();
 ```
 
+DTO 를 반환하여 LAZY 로딩으로 데이터를 가져오지 않도록 방지했다.
+
 ```java
-    public List<HighLikedSongResponse> showHighLikedSongs() {  
-        final List<Song> songs = songRepository.findAllWithTotalLikeCount().stream()  
-            .sorted((s1, s2) -> {  
-                if (Objects.equals(s1.getTotalLikeCount(), s2.getTotalLikeCount())) {  
-                    return s2.getSong().getId().compareTo(s1.getSong().getId());  
-                }  
-                return s2.getTotalLikeCount().compareTo(s1.getTotalLikeCount());  
-            })  
-            .map(SongTotalLikeCountDto::getSong)  
-            .collect(Collectors.toList());  
-  
-        return HighLikedSongResponse.ofSongs(songs);  
-    }
+public List<HighLikedSongResponse> showHighLikedSongs() {  
+	final List<SongTotalLikeCountDto> songTotalLikeCountDtos = songRepository.findAllWithTotalLikeCount().stream()  
+		.sorted((s1, s2) -> {  
+			if (Objects.equals(s1.getTotalLikeCount(), s2.getTotalLikeCount())) {  
+				return s2.getSong().getId().compareTo(s1.getSong().getId());  
+			}  
+			return s2.getTotalLikeCount().compareTo(s1.getTotalLikeCount());  
+		}).toList();  
+
+	return HighLikedSongResponse.ofSongs(songTotalLikeCountDtos);  
+}
 ```
 
-![[not-fitting-query.png]]
+![[not-fit-query.png]]
 
-성능이 굉장히 느린 것을 볼 수 있다. 평균 응답 시간이 1.7s 로, 최악의 성능을 보여준다.
+평균 응답 시간이 594ms 로, 데이터 개수에 비해 느린 속도를 보여주고 있다.
+
+hibernate statistics 를 확인해보았을 때, 총 2개의 쿼리가 발생한 것을 볼 수 있다.
+
+```shell
+2023-10-28T16:37:15.385+09:00  INFO 61413 --- [nio-8080-exec-5] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    17250 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    114041 nanoseconds spent preparing 2 JDBC statements;
+    90312958 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    2125 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+```
 
 ### 최적화되지 않은 쿼리 - DB 정렬
 
@@ -107,19 +137,45 @@ DB 에서 정렬하는 쿼리이다.
 List<SongTotalLikeCountDto> findAllWithTotalLikeCount();
 ```
 
-![[query-application-sort.png]]
+![[not-fit-query-db-sort.png]]
 
-약간의 성능 개선이 있었지만, 매우 미미한 수준이다. 
-
-### 로컬 캐시 사용
-
-![[inmemory-performance-time.png]]
-
-응답 시간은 평균 Avg Time 8ms 이다.
+DB 정렬만으로 200% 성능 개선이 된 것을 확인할 수 있다.  
+쿼리 개수는 이전과 동일하다.
 
 ### JPA 2차 캐시 적용 (Spring Cache)
 
 적용하는 방법은 [[ehcache-apply|JPA 2차 캐시 적용하기]]에서 확인할 수 있다.
+
+```xml
+<config  
+  xmlns='http://www.ehcache.org/v3'  
+  xmlns:jsr107='http://www.ehcache.org/v3/jsr107'>  
+  
+  <service>    
+	  <jsr107:defaults enable-statistics="true"/>  
+  </service>  
+  <cache alias="shook.shook.song.domain.Song">  
+    <key-type>java.lang.Long</key-type>  
+    <value-type>shook.shook.song.domain.Song</value-type>  
+    <expiry>      
+	    <ttl unit="seconds">10000</ttl>  
+    </expiry>    
+    <resources>      
+	    <offheap unit="MB">100</offheap>  
+    </resources>  
+  </cache>  
+  <cache alias="shook.shook.song.domain.killingpart.KillingPart">  
+    <key-type>java.lang.Long</key-type>  
+    <value-type>shook.shook.song.domain.killingpart.KillingPart</value-type>  
+    <expiry>      
+	    <ttl unit="seconds">10000</ttl>  
+    </expiry>    
+    <resources>      
+	    <offheap unit="MB">100</offheap>  
+    </resources>  
+    </cache>
+</config>
+```
 
 동일 조건에서 테스트를 진행했다.
 
@@ -130,14 +186,6 @@ List<SongTotalLikeCountDto> findAllWithTotalLikeCount();
 ![[jpa-level-2-cache-last-request.png]]
 
 캐싱된 데이터를 조회하는 평균 시간을 계산하기 위해 다시 100번 테스트를 수행했을 때, 평균 응답 시간이 16ms 로 최적화되지 않은 쿼리 기준 106배 정도 빠른 성능으로 개선된 것을 볼 수 있다.
-
-## 실시간 좋아요를 캐시에 반영
-
-좋아요를 누르면 캐시에도 좋아요가 반영되도록 수정하였다. 
-
-```java
-
-```
 
 ## 스와이프 API & 좋아요 API 동시 요청 테스트
 

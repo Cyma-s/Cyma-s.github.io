@@ -42,9 +42,6 @@
   },
   "attachments/obsidian-templater-new-file.png": "🖼",
   "attachments/obsidian-templater-template-choose.png": "🖼",
-  "posts/attachments": {
-    "iconName": "🖼",
-    "inheritanceIcon": "🖼"
-  },
+  "posts/attachments": "🖼",
   "posts/attachments/acceptance-test-failed.png": "🖼"
 }
