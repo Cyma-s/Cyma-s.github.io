@@ -20,5 +20,8 @@
   "obsidian-git",
   "quick-latex",
   "custom-font-loader",
-  "meld-encrypt"
+  "meld-encrypt",
+  "obsidian-annotator",
+  "obsidian-full-calendar",
+  "obsidian-dictionary-plugin"
 ]

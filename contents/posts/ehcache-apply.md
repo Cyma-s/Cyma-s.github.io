@@ -1,6 +1,6 @@
 ---
 date: 2023-10-25 12:02:13 +0900
-updated: 2023-10-26 17:56:22 +0900
+updated: 2023-10-29 15:48:26 +0900
 title: JPA 2차 캐시 적용하기
 tags:
   - shook
@@ -12,78 +12,7 @@ tags:
 
 ## 의존성 설정하기
 
-S-HOOK 의 gradle 은 다음과 같습니다.
-
-```groovy
-plugins {  
-    id 'java'  
-    id 'org.springframework.boot' version '3.1.1'  
-    id 'io.spring.dependency-management' version '1.1.0'  
-}  
-  
-group = 'shook'  
-version = '0.0.1-SNAPSHOT'  
-  
-java {  
-    sourceCompatibility = '17'  
-}  
-  
-configurations {  
-    compileOnly {  
-        extendsFrom annotationProcessor  
-    }  
-}  
-  
-repositories {  
-    mavenCentral()  
-}  
-  
-  
-dependencies {  
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  
-    implementation 'org.springframework.boot:spring-boot-starter-web'  
-    implementation 'org.springframework.boot:spring-boot-starter-validation'  
-    // JWT Dependency  
-	...
-  
-    //swagger  
-    ...
-  
-    compileOnly 'org.projectlombok:lombok'  
-  
-    runtimeOnly 'com.h2database:h2'  
-    runtimeOnly 'com.mysql:mysql-connector-j'  
-  
-    annotationProcessor 'org.projectlombok:lombok'  
-  
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'  
-    testImplementation 'io.rest-assured:rest-assured:5.3.1'  
-    testImplementation 'org.awaitility:awaitility:4.2.0'  
-  
-    //log to slack  
-    ...
-  
-    //xlsx reader  
-    ...
-  
-    //actuator  
-    ...
-  
-    // aop  
-    ...
-  
-    // cache  
-    implementation 'org.hibernate.orm:hibernate-ehcache:6.0.0.Alpha7'  
-    implementation 'org.hibernate.orm:hibernate-jcache:6.2.0.CR2'  
-    implementation 'org.ehcache:ehcache:3.10.8'  
-}  
-  
-tasks.named('test') {  
-    useJUnitPlatform()  
-}
-```
-
-여기서 아래의 의존성을 추가해주어야 합니다.
+gradle 파일에 아래의 의존성을 추가해주어야 합니다.
 
 ```groovy
 // cache  
@@ -102,7 +31,7 @@ spring:
 	  properties:  
 	    javax:  
 	      cache:  
-	        provide: org.ehcache.jsr107.EhcacheCachingProvider  
+	        provider: org.ehcache.jsr107.EhcacheCachingProvider  
 	      persistence:  
 	        sharedCache:  
 	          mode: ENABLE_SELECTIVE  
@@ -115,7 +44,7 @@ spring:
 	          factory_class: jcache  
 ```
 
-`factory_class` 와 `provide` 가 추가되었습니다.
+`factory_class` 와 `provider` 가 추가되었습니다.
 
 ### `ehcache.xml` 적용하기
 

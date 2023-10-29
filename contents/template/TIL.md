@@ -7,7 +7,7 @@ tags:
 
 ```tasks
 not done 
-due today
+due this week
 short mode
 ```
 

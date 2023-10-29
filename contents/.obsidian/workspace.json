@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "24b43f569156a5bd",
+            "id": "688702a730a10015",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/singleton-vs-static.md",
+                "file": "posts/woowacourse-retrospect.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,59 +21,19 @@
             }
           },
           {
-            "id": "450902b69a035c51",
+            "id": "3e4abf6323794a44",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/ehcache-apply.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c834f850a95a2e7f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/shook-like-concurrency-issue.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b629e6de886f9950",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/cache-and-cacheable.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bf739c61d682242c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-10-28.md",
+                "file": "posts/2023-10-29.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -131,7 +91,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327.5
+    "width": 327.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -147,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-10-28.md",
+                "file": "posts/woowacourse-retrospect.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-10-28.md",
+                "file": "posts/woowacourse-retrospect.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-10-28.md"
+                "file": "posts/woowacourse-retrospect.md"
               }
             }
           },
@@ -217,6 +178,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-full-calendar:Open Full Calendar": false,
       "switcher:퀵 스위처 열기": true,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": true,
@@ -234,17 +196,22 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "bf739c61d682242c",
+  "active": "688702a730a10015",
   "lastOpenFiles": [
+    "posts/2023-10-29.md",
+    "posts/woowacourse-retrospect.md",
+    "posts/2023-02-06.md",
+    "template/TIL.md",
+    "posts/ehcache-apply.md",
+    "posts/2023-10-28.md",
+    "posts/2023-02.md",
+    "posts/cache-and-cacheable.md",
+    "posts/shook-like-concurrency-issue.md",
     "posts/singleton-vs-static.md",
     "posts/inmemory-cache-removal.md",
     "posts/attachments/not-fit-local-cache.png",
     "posts/attachments/not-fit-query-db-sort.png",
     "posts/attachments/not-fit-query.png",
-    "posts/ehcache-apply.md",
-    "posts/cache-and-cacheable.md",
-    "posts/shook-like-concurrency-issue.md",
-    "posts/2023-10-28.md",
     "posts/shook-function-develop.md",
     "posts/shook-nickname-update-issue.md",
     "posts/java-synchoronized.md",
@@ -260,11 +227,6 @@
     "posts/os-ch2.md",
     "posts/2023-04-06.md",
     "posts/2023-03-15.md",
-    "posts/level2-week1.md",
-    "posts/speaking-theme-computer-science.md",
-    "posts/matzip.md",
-    "posts/matzip_pair.md",
-    "posts/rollback-release.md",
     "posts/attachments/jpa-level-2-cache.png",
     "posts/attachments/jpa-dirty-checking-concurrency-issue.png",
     "posts/attachments/initializer.png",
