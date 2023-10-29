@@ -4,7 +4,7 @@
   "taskCompletionUseEmojiShorthand": true,
   "taskCompletionText": "completion",
   "taskCompletionDateFormat": "yyyy-MM-dd",
-  "recursiveSubTaskCompletion": false,
+  "recursiveSubTaskCompletion": true,
   "warnOnEmptyResult": true,
   "refreshEnabled": true,
   "refreshInterval": 2500,
@@ -22,5 +22,6 @@
   "enableDataviewJs": false,
   "enableInlineDataviewJs": false,
   "prettyRenderInlineFields": true,
+  "prettyRenderInlineFieldsInLivePreview": true,
   "dataviewJsKeyword": "dataviewjs"
 }

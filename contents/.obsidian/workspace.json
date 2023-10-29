@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6b6fe1fb6335eb7b",
+        "id": "3f2f629c159469ef",
         "type": "tabs",
         "children": [
           {
-            "id": "688702a730a10015",
+            "id": "aa329a2c295ac153",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/woowacourse-retrospect.md",
+                "file": "posts/ehcache-apply.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,7 +21,20 @@
             }
           },
           {
-            "id": "3e4abf6323794a44",
+            "id": "1fb313241c8e3391",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/inmemory-cache-develop.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "51b42f101f1efcb9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,7 +46,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,12 +117,20 @@
         "type": "tabs",
         "children": [
           {
+            "id": "113a78ec1fc851d7",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
+          },
+          {
             "id": "873203d8d0289465",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/woowacourse-retrospect.md",
+                "file": "posts/inmemory-cache-develop.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/woowacourse-retrospect.md",
+                "file": "posts/inmemory-cache-develop.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,16 +161,6 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "1edeb735703adf24",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "posts/woowacourse-retrospect.md"
               }
             }
           },
@@ -168,12 +180,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 279.5,
+    "width": 437.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -193,49 +204,51 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "meld-encrypt:New encrypted note": false,
       "meld-encrypt:Convert to or from an Encrypted note": false,
-      "periodic-notes:Open today": false
+      "periodic-notes:Open today": false,
+      "obsidian-day-planner:Timeline": false,
+      "homepage:Open homepage": false
     }
   },
-  "active": "688702a730a10015",
+  "active": "1fb313241c8e3391",
   "lastOpenFiles": [
+    "posts/attachments/linked-hash-map-local-cache.png",
     "posts/2023-10-29.md",
-    "posts/woowacourse-retrospect.md",
-    "posts/2023-02-06.md",
-    "template/TIL.md",
+    "posts/inmemory-cache-develop.md",
     "posts/ehcache-apply.md",
+    "posts/attachments/query-direct-find.png",
+    "posts/attachments/db-direct-find.png",
+    "posts/2023-02-08.md",
+    "dictionary",
+    "posts/2023-10-23.md",
+    "posts/2023-10-25.md",
     "posts/2023-10-28.md",
-    "posts/2023-02.md",
-    "posts/cache-and-cacheable.md",
-    "posts/shook-like-concurrency-issue.md",
-    "posts/singleton-vs-static.md",
-    "posts/inmemory-cache-removal.md",
+    "posts/2023-07-26.md",
+    "posts/2023-08-15.md",
+    "posts/2023-08-14.md",
+    "posts/2023-08-13.md",
+    "posts/2023-08-12.md",
+    "posts/2023-08-11.md",
+    "posts/2023-08-10.md",
+    "posts/2023-08-09.md",
+    "posts/2023-08-08.md",
+    "posts/2023-08-07.md",
+    "posts/2023-08-06.md",
+    "posts/2023-08-05.md",
+    "posts/2023-08-04.md",
+    "posts/2023-08-03.md",
+    "posts/2023-08-02.md",
+    "posts/2023-08-01.md",
+    "posts/2023-07-31.md",
+    "posts/2023-07-30.md",
     "posts/attachments/not-fit-local-cache.png",
     "posts/attachments/not-fit-query-db-sort.png",
     "posts/attachments/not-fit-query.png",
-    "posts/shook-function-develop.md",
-    "posts/shook-nickname-update-issue.md",
-    "posts/java-synchoronized.md",
-    "posts/spring-core.md",
-    "posts/2023-07-20.md",
-    "posts/ioc-container-and-di.md",
-    "posts/level2-week2.md",
-    "posts/application-context.md",
-    "posts/2023-08-27.md",
-    "posts/bipartite-matching.md",
-    "posts/spring-multi-profile-issue.md",
-    "posts/locust.md",
-    "posts/os-ch2.md",
-    "posts/2023-04-06.md",
-    "posts/2023-03-15.md",
     "posts/attachments/jpa-level-2-cache.png",
     "posts/attachments/jpa-dirty-checking-concurrency-issue.png",
     "posts/attachments/initializer.png",
     "posts/attachments/image-mime-type.png",
     "posts/attachments/current-shook-git-branch-strategy.png",
-    "posts/attachments/aws-iam-management-console.png",
-    "posts/attachments/acceptance-test-failed.png",
     "template",
-    "무제 폴더",
     "무제 파일.canvas"
   ]
 }

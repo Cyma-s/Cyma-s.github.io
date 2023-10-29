@@ -1,6 +1,6 @@
 {
   "globalQuery": "",
-  "globalFilter": "",
+  "globalFilter": "TODO",
   "removeGlobalFilter": false,
   "taskFormat": "dataview",
   "setCreatedDate": true,

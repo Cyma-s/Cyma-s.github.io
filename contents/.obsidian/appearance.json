@@ -4,5 +4,7 @@
   "baseFontSize": 18,
   "cssTheme": "AnuPpuccin",
   "translucency": false,
-  "monospaceFontFamily": "Bai Jamjuree"
+  "monospaceFontFamily": "Bai Jamjuree",
+  "textFontFamily": "Apple SD Gothic Neo",
+  "interfaceFontFamily": "Apple SD Gothic Neo"
 }

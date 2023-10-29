@@ -1,6 +1,6 @@
 ---
 date: 2023-10-25 12:02:13 +0900
-updated: 2023-10-29 15:48:26 +0900
+updated: 2023-10-29 17:19:08 +0900
 title: JPA 2차 캐시 적용하기
 tags:
   - shook
@@ -32,6 +32,7 @@ spring:
 	    javax:  
 	      cache:  
 	        provider: org.ehcache.jsr107.EhcacheCachingProvider  
+	        uri: classpath:ehcache.xml
 	      persistence:  
 	        sharedCache:  
 	          mode: ENABLE_SELECTIVE  
@@ -45,8 +46,9 @@ spring:
 ```
 
 `factory_class` 와 `provider` 가 추가되었습니다.
+`uri` 에는 ehcache 설정이 있는 xml 경로를 지정합니다.
 
-### `ehcache.xml` 적용하기
+### `ehcache.xml` 작성하기
 
 ```xml
 <config  
@@ -92,3 +94,16 @@ public class ShookApplication {
 }
 ```
 
+## `@Cache` 어노테이션
+
+캐싱을 원하는 엔티티 위에 `@Cache` 어노테이션을 달아줍니다. 
+
+```java
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)  
+@Entity  
+public class Song {
+```
+
+`usage` 에는 동시성 전략을 명시해줄 수 있습니다.
+
+자세한 설정은 [[cache-and-cacheable]] 에서 확인하실 수 있습니다.
