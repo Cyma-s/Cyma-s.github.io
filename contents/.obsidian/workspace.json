@@ -45,9 +45,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5f73524f90341422",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/woowacourse-retrospect.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/inmemory-cache-develop.md",
+                "file": "posts/ehcache-apply.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/inmemory-cache-develop.md",
+                "file": "posts/ehcache-apply.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -209,11 +221,12 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "1fb313241c8e3391",
+  "active": "aa329a2c295ac153",
   "lastOpenFiles": [
+    "posts/woowacourse-retrospect.md",
+    "posts/inmemory-cache-develop.md",
     "posts/attachments/linked-hash-map-local-cache.png",
     "posts/2023-10-29.md",
-    "posts/inmemory-cache-develop.md",
     "posts/ehcache-apply.md",
     "posts/attachments/query-direct-find.png",
     "posts/attachments/db-direct-find.png",
@@ -247,7 +260,6 @@
     "posts/attachments/jpa-dirty-checking-concurrency-issue.png",
     "posts/attachments/initializer.png",
     "posts/attachments/image-mime-type.png",
-    "posts/attachments/current-shook-git-branch-strategy.png",
     "template",
     "무제 파일.canvas"
   ]
