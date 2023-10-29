@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/inmemory-cache-removal.md",
+                "file": "posts/singleton-vs-static.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -72,7 +72,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -130,8 +131,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327.5,
-    "collapsed": true
+    "width": 327.5
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/inmemory-cache-removal.md",
+                "file": "posts/2023-10-28.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/inmemory-cache-removal.md",
+                "file": "posts/2023-10-28.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/inmemory-cache-removal.md"
+                "file": "posts/2023-10-28.md"
               }
             }
           },
@@ -234,8 +234,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "24b43f569156a5bd",
+  "active": "bf739c61d682242c",
   "lastOpenFiles": [
+    "posts/singleton-vs-static.md",
+    "posts/inmemory-cache-removal.md",
     "posts/attachments/not-fit-local-cache.png",
     "posts/attachments/not-fit-query-db-sort.png",
     "posts/attachments/not-fit-query.png",
@@ -263,7 +265,6 @@
     "posts/matzip.md",
     "posts/matzip_pair.md",
     "posts/rollback-release.md",
-    "posts/bitmasking.md",
     "posts/attachments/jpa-level-2-cache.png",
     "posts/attachments/jpa-dirty-checking-concurrency-issue.png",
     "posts/attachments/initializer.png",
@@ -271,7 +272,6 @@
     "posts/attachments/current-shook-git-branch-strategy.png",
     "posts/attachments/aws-iam-management-console.png",
     "posts/attachments/acceptance-test-failed.png",
-    "posts/attachments/feedback.png",
     "template",
     "무제 폴더",
     "무제 파일.canvas"

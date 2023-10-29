@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "2023-10-28",
+      "path": "posts/2023-10-28.md"
+    },
+    {
+      "basename": "singleton-vs-static",
+      "path": "posts/singleton-vs-static.md"
+    },
+    {
       "basename": "inmemory-cache-removal",
       "path": "posts/inmemory-cache-removal.md"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "shook-like-concurrency-issue",
       "path": "posts/shook-like-concurrency-issue.md"
-    },
-    {
-      "basename": "2023-10-28",
-      "path": "posts/2023-10-28.md"
     },
     {
       "basename": "shook-function-develop",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-10-27",
       "path": "posts/2023-10-27.md"
-    },
-    {
-      "basename": "jpa-dirty-checking-concurrency-issue",
-      "path": "posts/attachments/jpa-dirty-checking-concurrency-issue.png"
     }
   ],
   "omittedPaths": [],
