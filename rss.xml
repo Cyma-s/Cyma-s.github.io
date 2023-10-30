@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 30 Oct 2023 04:42:47 GMT</lastBuildDate><item><title><![CDATA[우아한테크코스 회고]]></title><description><![CDATA[길고 긴 10개월이 지나고, 벌써 레벨4가 마무리되는 지금 우아한테크코스를 회고해보려 합니다. 베로 위키 애독자들도 모를 수도 있는 올해 2월 6일 회고를 가져와 보겠습니다. 2월…]]></description><link>https://vero.wiki/woowacourse-retrospect/</link><guid isPermaLink="false">https://vero.wiki/woowacourse-retrospect/</guid><pubDate>Sun, 29 Oct 2023 06:48:53 GMT</pubDate><content:encoded>&lt;p&gt;길고 긴 10개월이 지나고, 벌써 레벨4가 마무리되는 지금 우아한테크코스를 회고해보려 합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 30 Oct 2023 05:01:02 GMT</lastBuildDate><item><title><![CDATA[우아한테크코스 회고]]></title><description><![CDATA[길고 긴 10개월이 지나고, 벌써 레벨4가 마무리되는 지금 우아한테크코스를 회고해보려 합니다. 베로 위키 애독자들도 모를 수도 있는 올해 2월 6일 회고를 가져와 보겠습니다. 2월…]]></description><link>https://vero.wiki/woowacourse-retrospect/</link><guid isPermaLink="false">https://vero.wiki/woowacourse-retrospect/</guid><pubDate>Sun, 29 Oct 2023 06:48:53 GMT</pubDate><content:encoded>&lt;p&gt;길고 긴 10개월이 지나고, 벌써 레벨4가 마무리되는 지금 우아한테크코스를 회고해보려 합니다.&lt;/p&gt;
 &lt;p&gt;베로 위키 애독자들도 모를 수도 있는 올해 2월 6일 회고를 가져와 보겠습니다. 2월 6일이면 첫 등교 전 날이죠.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;md&quot;&gt;&lt;pre class=&quot;language-md&quot;&gt;&lt;code class=&quot;language-md&quot;&gt;사실 조금 걱정이 된다. 지금 마음가짐이 어떤지 모르겠다.  
 의욕도, 목적도, 목표도 모호한 상태라 그냥 잘 모르겠다. 우테코에서 찾을 수 있지 않을까라는 안일한 마음가짐으로 내일 등교(?)할 예정이다.  
@@ -363,73 +363,7 @@ implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.ehcache:ehca
 &lt;span class=&quot;token annotation punctuation&quot;&gt;@Entity&lt;/span&gt;  
 &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Song&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;usage&lt;/code&gt; 에는 동시성 전략을 명시해줄 수 있습니다.&lt;/p&gt;
-&lt;p&gt;자세한 설정은 &lt;a href=&quot;/cache-and-cacheable&quot; data-wiki-link=&quot;true&quot;&gt;cache-and-cacheable&lt;/a&gt; 에서 확인하실 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 13일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-13/</link><guid isPermaLink="false">https://vero.wiki/2023-08-13/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 14일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-14/</link><guid isPermaLink="false">https://vero.wiki/2023-08-14/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 15일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-15/</link><guid isPermaLink="false">https://vero.wiki/2023-08-15/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 08일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-08/</link><guid isPermaLink="false">https://vero.wiki/2023-08-08/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 11일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-11/</link><guid isPermaLink="false">https://vero.wiki/2023-08-11/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 12일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-12/</link><guid isPermaLink="false">https://vero.wiki/2023-08-12/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 07월 31일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-07-31/</link><guid isPermaLink="false">https://vero.wiki/2023-07-31/</guid><pubDate>Sun, 29 Oct 2023 07:48:25 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 02일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-02/</link><guid isPermaLink="false">https://vero.wiki/2023-08-02/</guid><pubDate>Sun, 29 Oct 2023 07:48:26 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 07월 28일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-07-28/</link><guid isPermaLink="false">https://vero.wiki/2023-07-28/</guid><pubDate>Sun, 29 Oct 2023 07:48:25 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 07월 29일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-07-29/</link><guid isPermaLink="false">https://vero.wiki/2023-07-29/</guid><pubDate>Sun, 29 Oct 2023 07:48:25 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 07월 30일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-07-30/</link><guid isPermaLink="false">https://vero.wiki/2023-07-30/</guid><pubDate>Sun, 29 Oct 2023 07:48:25 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due this week
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년]]></title><description><![CDATA[2023년 1분기 2023-02 2023-03 2023년 2분기 2023-04 2023-05 2023-06 2023년 3분기 2023-07 2023-08 2023-09 2023년 4분기 2023-10]]></description><link>https://vero.wiki/2023/</link><guid isPermaLink="false">https://vero.wiki/2023/</guid><pubDate>Mon, 06 Feb 2023 14:02:45 GMT</pubDate><content:encoded>&lt;h1&gt;2023년 1분기&lt;/h1&gt;
+&lt;p&gt;자세한 설정은 &lt;a href=&quot;/cache-and-cacheable&quot; data-wiki-link=&quot;true&quot;&gt;cache-and-cacheable&lt;/a&gt; 에서 확인하실 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2023년]]></title><description><![CDATA[2023년 1분기 2023-02 2023-03 2023년 2분기 2023-04 2023-05 2023-06 2023년 3분기 2023-07 2023-08 2023-09 2023년 4분기 2023-10]]></description><link>https://vero.wiki/2023/</link><guid isPermaLink="false">https://vero.wiki/2023/</guid><pubDate>Mon, 06 Feb 2023 14:02:45 GMT</pubDate><content:encoded>&lt;h1&gt;2023년 1분기&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;/2023-02&quot; data-wiki-link=&quot;true&quot;&gt;2023-02&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2023-03&quot; data-wiki-link=&quot;true&quot;&gt;2023-03&lt;/a&gt;&lt;/li&gt;
