@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "ehcache-apply",
-      "path": "posts/ehcache-apply.md"
-    },
-    {
       "basename": "woowacourse-retrospect",
       "path": "posts/woowacourse-retrospect.md"
+    },
+    {
+      "basename": "ehcache-apply",
+      "path": "posts/ehcache-apply.md"
     },
     {
       "basename": "inmemory-cache-develop",
