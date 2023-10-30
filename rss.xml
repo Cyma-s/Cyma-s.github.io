@@ -1,36 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 29 Oct 2023 07:17:38 GMT</lastBuildDate><item><title><![CDATA[2023년 10월 29일]]></title><description><![CDATA[TODO 캐싱 테스트하기  [priority:: high]  [due:: 2023-10-28] 리뷰어 피드백 완료  [priority:: highest]  [due:: 2023-10-28] 우테코 회고 작성하기  [due:: 2023-11-0…]]></description><link>https://vero.wiki/2023-10-29/</link><guid isPermaLink="false">https://vero.wiki/2023-10-29/</guid><pubDate>Sun, 29 Oct 2023 07:15:10 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due today
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;ul class=&quot;contains-task-list&quot;&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 캐싱 테스트하기  [priority:: high]  [due:: 2023-10-28]&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 리뷰어 피드백 완료  [priority:: highest]  [due:: 2023-10-28]&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 우테코 회고 작성하기  [due:: 2023-11-05]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 10월 28일]]></title><description><![CDATA[TODO 미션 4단계 제출  [priority:: highest]  [created:: 2023-10-28]  [due:: 2023-10-28]  [completion:: 2023-10-28] 팀 피드백 완료  [priority:: highest…]]></description><link>https://vero.wiki/2023-10-28/</link><guid isPermaLink="false">https://vero.wiki/2023-10-28/</guid><pubDate>Sat, 28 Oct 2023 03:05:31 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due today
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;ul class=&quot;contains-task-list&quot;&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 미션 4단계 제출  [priority:: highest]  [created:: 2023-10-28]  [due:: 2023-10-28]  [completion:: 2023-10-28]&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 팀 피드백 완료  [priority:: highest]  [due:: 2023-10-28]  [completion:: 2023-10-28]&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 캐싱 테스트하기  [priority:: high]  [due:: 2023-10-28]&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 베베 리뷰 완료  [priority:: highest]  [due:: 2023-10-28]  [completion:: 2023-10-28]&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 리뷰어 피드백 완료  [priority:: highest]  [due:: 2023-10-28]&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 리뷰이 피드백 완료  [priority:: highest]  [due:: 2023-10-28]  [completion:: 2023-10-28]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;T1 이 녹아웃 스테이지에 진출했다. 갑자기 각성해서 BLG 를 씹어먹어버렸는데 왤까...&lt;/li&gt;
-&lt;li&gt;여전히 캐싱 처리 테스트를 하고 있다. 결론적으로 어떤 테스트를 해야 할 지부터 생각하는 게 좋을 거 같다. 대강 정리는 했는데 글 대제목으로 적으면서 더 정리해봐야겠다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;백준 13713 번을 풀었다. 실패 함수를 응용해서 가장 긴 접두사를 항상 지정해두고 O(N) 안에 전체 문자열을 탐색하는 어마어마한 알고리즘을 배웠다. 고마워요.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[우아한테크코스 회고]]></title><description><![CDATA[길고 긴 10개월이 지나고, 벌써 레벨4가 마무리되는 지금 우아한테크코스를 회고해보려 합니다. 베로 위키 애독자들도 모를 수도 있는 올해 2월 6일 회고를 가져와 보겠습니다. 2월…]]></description><link>https://vero.wiki/woowacourse-retrospect/</link><guid isPermaLink="false">https://vero.wiki/woowacourse-retrospect/</guid><pubDate>Sun, 29 Oct 2023 06:48:53 GMT</pubDate><content:encoded>&lt;p&gt;길고 긴 10개월이 지나고, 벌써 레벨4가 마무리되는 지금 우아한테크코스를 회고해보려 합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 30 Oct 2023 04:42:47 GMT</lastBuildDate><item><title><![CDATA[우아한테크코스 회고]]></title><description><![CDATA[길고 긴 10개월이 지나고, 벌써 레벨4가 마무리되는 지금 우아한테크코스를 회고해보려 합니다. 베로 위키 애독자들도 모를 수도 있는 올해 2월 6일 회고를 가져와 보겠습니다. 2월…]]></description><link>https://vero.wiki/woowacourse-retrospect/</link><guid isPermaLink="false">https://vero.wiki/woowacourse-retrospect/</guid><pubDate>Sun, 29 Oct 2023 06:48:53 GMT</pubDate><content:encoded>&lt;p&gt;길고 긴 10개월이 지나고, 벌써 레벨4가 마무리되는 지금 우아한테크코스를 회고해보려 합니다.&lt;/p&gt;
 &lt;p&gt;베로 위키 애독자들도 모를 수도 있는 올해 2월 6일 회고를 가져와 보겠습니다. 2월 6일이면 첫 등교 전 날이죠.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;md&quot;&gt;&lt;pre class=&quot;language-md&quot;&gt;&lt;code class=&quot;language-md&quot;&gt;사실 조금 걱정이 된다. 지금 마음가짐이 어떤지 모르겠다.  
 의욕도, 목적도, 목표도 모호한 상태라 그냥 잘 모르겠다. 우테코에서 찾을 수 있지 않을까라는 안일한 마음가짐으로 내일 등교(?)할 예정이다.  
@@ -39,80 +7,53 @@ short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;자, 그렇다면 베로의 될 대로 되라는 식의 우테코 도전, 어떻게 되었을까요? 과거의 베로에게 소개해보겠습니다.&lt;/p&gt;
 &lt;h2&gt;주변 사람들을 사랑하기&lt;/h2&gt;
 &lt;p&gt;예전의 저는 어쩌면 주위의 사람들을 두려워했던 것 같습니다.
-그들이 저보다 더 잘하게 되는 상황을 두려워했고,&lt;/p&gt;
+정확하게는 그들이 저보다 더 잘하게 되는 상황을 두려워했어요. 그래서 주변 사람들과 항상 경쟁하고 있다는 생각을 가지고 있었습니다. 친구들도 예외는 아니었죠.&lt;/p&gt;
+&lt;p&gt;그렇지만 우테코에 와보니, 저와 경쟁하고 싶어하는 사람들은 없었어요. 뭐든 알려주려 하고, 배워서 남주는 걸 가장 큰 미덕으로 생각하는 사람들밖에 없더라고요.&lt;/p&gt;
+&lt;p&gt;친절하고 열려있는 사람들 옆에서 저만 울타리 안에서 두려움에 떨고 있는 듯 했어요. 그래서 저도 한 번 용기 내서 다가가 봤습니다. 다들 멋진 사람들이었어요. 제가 열린 마음으로 다가가니 그들도 저에게 열린 마음으로 대해줘서 참 기뻤습니다.&lt;/p&gt;
+&lt;p&gt;주변에 멋진 사람들만 있으니, 사람들을 사랑할 수 있게 되었어요. 진심으로 잘 되었으면 좋겠고, 멋진 꿈을 이뤘으면 좋겠고, 그냥 뭐든 알려주고 싶었어요. 그 과정에서 저도 함께 많이 배웠고, 이젠 사람들과 함께 있는 시간 자체를 사랑하게 됐습니다. 제가 E라니, 과거의 베로는 믿겨지시나요?&lt;/p&gt;
+&lt;p&gt;우아한테크코스에 오지 않았다면 아마도 제가 만든 울타리에 들어가서 울타리 밖에 늑대만 있을 거라 생각하고 살았겠죠. 사실은 아무도 없는 허허벌판인데 말이에요.&lt;/p&gt;
+&lt;p&gt;우테코에서 주변 사람들을 사랑할 수 있게 되었다는 사실에 감사합니다. 주위 사람들이 베푸는 선함을 감사함으로 받아들일 수 있게 되었다는 사실이 가장 기쁩니다.&lt;/p&gt;
 &lt;h2&gt;나를 사랑하기&lt;/h2&gt;
-&lt;p&gt;다시 2월 6일 회고로 돌아와서, 이런 말을 적었었습니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;md&quot;&gt;&lt;pre class=&quot;language-md&quot;&gt;&lt;code class=&quot;language-md&quot;&gt;또 다른 목적은 나를 사랑해보기 위해서이다. 계속되는 실패(진짜 실패일지, 내 머릿속으로만 그렇게 생각하는 건지도 모르겠다) 때문에 나를 온전히 보기 쉽지 않다. 차라리 진짜 객관적인 문서로 남겨서 내가 지금 어떻게 살고 있는지 내가 봤으면 좋겠다는 생각이다. 최대한 꾸준히 쓰고 싶다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;다시 2월 6일 회고로 돌아와서, 또 이런 말을 적었었습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;md&quot;&gt;&lt;pre class=&quot;language-md&quot;&gt;&lt;code class=&quot;language-md&quot;&gt;또 다른 목적은 나를 사랑해보기 위해서이다. 
+계속되는 실패(진짜 실패일지, 내 머릿속으로만 그렇게 생각하는 건지도 모르겠다) 때문에 나를 온전히 보기 쉽지 않다. 
+차라리 진짜 객관적인 문서로 남겨서 내가 지금 어떻게 살고 있는지 내가 봤으면 좋겠다는 생각이다. 최대한 꾸준히 쓰고 싶다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;맞아요. 요즘 조금 해이해지기는 했지만, 저는 TIL 을 정말 꾸준히 썼습니다.&lt;br&gt;
-TIL도 좋고, 뭐든 기록해보자는 생각으로 적었던 글들이 벌써 약 370개 정도가 되었네요. 과거의 저도 이 정도로 제가 열심히 했을 줄은 몰랐겠죠.&lt;/p&gt;
-&lt;p&gt;과거의 베로에게 그거 하나 만은 말할 수 있습니다. 올해 저 정말 열심히 살았어요. 개인 공부를 하루에 3시간 이하로 한 날을 손에 꼽을 정도니까요. 글의 개수와 늘어난 자신감이 이 주장을 뒷받침 한다고 생각합니다.&lt;/p&gt;
-&lt;p&gt;조금 다른 점은 있습니다. 이제 저는 열심히 하지 않는 나도 사랑할 수 있어요. 매일 열심히 살기는 어려운 일이에요. 그럴 때마다 저를 미워하는 일은 더 이상 하지 않기로 했습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JPA 2차 캐시 적용하기]]></title><description><![CDATA[구글에 Spring Boot 3.x.x 버전의 JPA 2차 캐시 설정 방법이 없어서 하루를 삽질해서, 다른 분들은 쉽게 설정하셨으면 하는 마음에 정리하는 글입니다. 의존성 설정하기 gradle…]]></description><link>https://vero.wiki/ehcache-apply/</link><guid isPermaLink="false">https://vero.wiki/ehcache-apply/</guid><pubDate>Wed, 25 Oct 2023 03:02:13 GMT</pubDate><content:encoded>&lt;p&gt;구글에 Spring Boot 3.x.x 버전의 JPA 2차 캐시 설정 방법이 없어서 하루를 삽질해서, 다른 분들은 쉽게 설정하셨으면 하는 마음에 정리하는 글입니다.&lt;/p&gt;
-&lt;h2&gt;의존성 설정하기&lt;/h2&gt;
-&lt;p&gt;gradle 파일에 아래의 의존성을 추가해주어야 합니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;groovy&quot;&gt;&lt;pre class=&quot;language-groovy&quot;&gt;&lt;code class=&quot;language-groovy&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// cache  &lt;/span&gt;
-implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.hibernate.orm:hibernate-ehcache:6.0.0.Alpha7&apos;&lt;/span&gt;  
-implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.hibernate.orm:hibernate-jcache:6.3.1.Final&apos;&lt;/span&gt;  
-implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.ehcache:ehcache:3.10.8&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;application.yml&lt;/code&gt; 설정&lt;/h2&gt;
-&lt;p&gt;이전 버전에서는 &lt;code class=&quot;language-text&quot;&gt;region.factory_class&lt;/code&gt; 를 &lt;code class=&quot;language-text&quot;&gt;org.hibernate.cache.ehcache.EhCacheRegionFactory&lt;/code&gt; 라고 적으라는 글이 많은데, Spring Boot 3.x.x 버전에서는 다음과 같이 작성해야 합니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-	&lt;span class=&quot;token key atrule&quot;&gt;jpa&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
-	  &lt;span class=&quot;token key atrule&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
-	    &lt;span class=&quot;token key atrule&quot;&gt;javax&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
-	      &lt;span class=&quot;token key atrule&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
-	        &lt;span class=&quot;token key atrule&quot;&gt;provider&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; org.ehcache.jsr107.EhcacheCachingProvider  
-	      &lt;span class=&quot;token key atrule&quot;&gt;persistence&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
-	        &lt;span class=&quot;token key atrule&quot;&gt;sharedCache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
-	          &lt;span class=&quot;token key atrule&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ENABLE_SELECTIVE  
-	    &lt;span class=&quot;token key atrule&quot;&gt;hibernate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
-	      &lt;span class=&quot;token key atrule&quot;&gt;format_sql&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;  
-	      &lt;span class=&quot;token key atrule&quot;&gt;show-sql&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;  
-	      &lt;span class=&quot;token key atrule&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
-	        &lt;span class=&quot;token key atrule&quot;&gt;use_second_level_cache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;  
-	        &lt;span class=&quot;token key atrule&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
-	          &lt;span class=&quot;token key atrule&quot;&gt;factory_class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; jcache  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;factory_class&lt;/code&gt; 와 &lt;code class=&quot;language-text&quot;&gt;provider&lt;/code&gt; 가 추가되었습니다.&lt;/p&gt;
-&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;ehcache.xml&lt;/code&gt; 적용하기&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;config&lt;/span&gt;  
-  &lt;span class=&quot;token attr-name&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;http://www.ehcache.org/v3&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;&lt;/span&gt;  
-  &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xmlns:&lt;/span&gt;jsr107&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;http://www.ehcache.org/v3/jsr107&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
-  
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;service&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;    
-	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token namespace&quot;&gt;jsr107:&lt;/span&gt;defaults&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;enable-statistics&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;true&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;  
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;service&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;cache&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;songCache&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
-	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;key-type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;java.lang.Long&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;key-type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
-	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;value-type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;shook.shook.song.domain.Song&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;value-type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
-	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;expiry&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;      
-		  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ttl&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;seconds&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;10000&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ttl&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
-	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;expiry&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;    
-	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;resources&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;      
-		  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;offheap&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;MB&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;100&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;offheap&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
-	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;resources&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
-    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;cache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;config&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;EhCache 3.x 버전을 위한 캐시 설정 파일입니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;enable-statistics&lt;/code&gt;: 캐시 통계 수집을 활성화 / 비활성화할 수 있습니다. true 면 캐시 동작에 대한 통계를 수집합니다.&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;alias&lt;/code&gt;: 캐시의 이름(별칭)을 지정합니다.&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;value-type&lt;/code&gt;: 캐싱하려는 클래스의 상대 경로를 적어줍니다.&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;key-type&lt;/code&gt;: 캐시 키의 자료형을 지정합니다.&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;expiry&lt;/code&gt;: 캐시 항목의 만료 시간을 설정합니다. (초 단위)&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;resources&lt;/code&gt;: 캐시가 사용하는 리소스를 지정합니다.
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;offheap&gt;&lt;/code&gt;: 캐시 데이터를 JVM 힙 외부에 저장하도록 설정합니다. JVM 가비지 컬렉션에 영향을 받지 않아, 성능 향상을 기대할 수 있습니다. 현재는 100MB 의 오프힙 메모리를 사용하도록 설정되어 있습니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;캐싱 적용을 위해서는 &lt;code class=&quot;language-text&quot;&gt;Application.java&lt;/code&gt; 에 다음과 같은 코드를 추가하면 됩니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@EnableCaching&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;// 이 부분!&lt;/span&gt;
-&lt;span class=&quot;token annotation punctuation&quot;&gt;@SpringBootApplication&lt;/span&gt;  
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ShookApplication&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;  
-  
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;  
-        &lt;span class=&quot;token class-name&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ShookApplication&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[로컬 캐시 개선기]]></title><description><![CDATA[개요 S-HOOK 은 메인 화면에서 전체 노래를 '좋아요 순으로' 정렬해서 10개의 노래만 보여주고 있다. 장르별 노래도 마찬가지로 좋아요 순으로 정렬 후, 10개의 노래만 클라이언트로 전달한다.  전체 노래를 좋아요 순으로 정렬할 때 DB…]]></description><link>https://vero.wiki/inmemory-cache-removal/</link><guid isPermaLink="false">https://vero.wiki/inmemory-cache-removal/</guid><pubDate>Tue, 24 Oct 2023 04:29:21 GMT</pubDate><content:encoded>&lt;h2&gt;개요&lt;/h2&gt;
+TIL도 좋고, 뭐든 기록해보자는 생각으로 적었던 글들이 벌써 약 380개 정도가 되었네요. 과거의 저도 이 정도로 열심히 했을 줄은 몰랐겠죠.&lt;/p&gt;
+&lt;p&gt;과거의 베로에게 딱 하나만은 말해줄 수 있습니다.&lt;br&gt;
+올해 저 정말 열심히 살았어요. 개인 공부를 하루에 3시간 이하로 한 날을 손에 꼽을 수 있을 정도니까요. 글의 개수와 늘어난 자신감이 이 주장을 뒷받침 한다고 생각합니다.&lt;/p&gt;
+&lt;p&gt;조금 다른 점은 있습니다. 지금의 저는 열심히 하지 않는 나도 사랑할 수 있어요.&lt;br&gt;
+매일 열심히 살기는 어려운 일이에요. 그럴 때마다 저를 미워하는 일은 더 이상 하지 않기로 했습니다.&lt;/p&gt;
+&lt;p&gt;그래서 그런지 요즘 들어 자책하는 일이 줄었습니다.&lt;br&gt;
+오늘 못하면 내일 하면 돼요.&lt;br&gt;
+지금은 못해도 내일 잘하면 돼요.&lt;br&gt;
+오늘은 안 좋은 일이 있었지만 앞으로는 좋은 일이 있을거에요.&lt;/p&gt;
+&lt;p&gt;이런 마음가짐들이 또 다시 제게 힘이 됩니다.&lt;/p&gt;
+&lt;h2&gt;베로, 우아한테크코스는 어떠셨나요?&lt;/h2&gt;
+&lt;p&gt;저는 감히 &apos;제 인생의 &lt;strong&gt;터닝포인트&lt;/strong&gt;였다&apos;, 라고 단언하겠습니다.&lt;br&gt;
+사실 제겐 기술적으로 얼마나 성장했는지가 중요한 게 아니에요. 기술은 밖에서도 얼마든지 배울 수 있었을거에요. 비효율적이지만 말이죠.&lt;/p&gt;
+&lt;p&gt;가장 크게 변한 건 공부를 대하는 태도입니다. &lt;a href=&quot;/level4-writing&quot; data-wiki-link=&quot;true&quot;&gt;레벨 4 글쓰기&lt;/a&gt; 에도 적었지만, 동료들과 함께 하는 공부가 가장 효율이 좋다는 걸 알게 됐거든요.
+나와 같은 길을 가는 사람은 도전자나 경쟁자가 아니라 동행인이에요. 배척하고 견제해봤자 소용없죠. 같이 가는 길에 혼자 남겨져서 좋을 일은 없을테니까요. 저도 아는 지식을 최대한 공유하고 싶고, 제 지식이 남에게 도움이 될 때가 훨씬 기분 좋습니다.&lt;/p&gt;
+&lt;p&gt;제게 맞는 공부를 하는 방법도 알게 됐어요. 전 원래 책이나 인강을 보며 공부했었습니다. 제 집중력은 간장 종지만 해서 금방 흐트러졌지만요.&lt;br&gt;
+우테코에 와서 열정있는 사람들과 스터디를 해보니, 왜 사람들이 스터디를 하는지 알 것 같았어요. 내가 모르는 건 스터디원이 알려줄 거고, 스터디원이 모르는 건 내가 알려주면 돼요. 먼저 경험해본 사람에게 물어보는 게 가장 효과적이라는 걸 수많은 미션과 페어프로그래밍을 하면서 알게 됐어요. 내가 막히는 부분을 미션을 먼저 구현하면서 막혀본 사람에게 물어보는 게 가장 빠르고, 정확했으니까요.&lt;br&gt;
+그래서 어떤 게 가장 효과적이냐! 새로운 걸 공부할 땐, 주위 사람들에게 마구 물어보고 함께 공부하는 게 제게 가장 효과적이라는 걸 알게 됐습니다. 학교로 돌아가더라도 모르는 지식에 대한 스터디를 하나 만들어서 진행하려고 해요.&lt;/p&gt;
+&lt;p&gt;가장 신기했던 점은 세상에 궁금한 게 많아졌다는 점입니다.&lt;br&gt;
+예전부터 저는 궁금한 게 없었어요. 남에 대해서도 궁금하지 않고, 그냥 모르면 모르는 거지.. 라고 생각하며 살았어요. 그래서 그런지 먼저 다가가는 것도 힘들었고, 새로운 기술이 나와도 피하려고만 했어요. 굳이 알아야 할 필요가 없다고 생각했거든요.&lt;/p&gt;
+&lt;p&gt;그렇지만 지금은 뭐든지 궁금해요. 이건 왜 좋고, 왜 써야 하고, 당신은 왜 이렇게 생각했으며, 어떤 부분에서 장점 / 단점이 있고, 어떨 때 사용하면 좋은지 등등... 무수한 질문들이 떠오릅니다. 질문이 많아진 이유는 제가 세상을 사랑할 수 있게 되어서라고 생각해요. 사랑하지 않으면 궁금하지도 않으니까요. 이런 Question Driven Study가 제겐 매우 도움이 됐습니다. 여러분도 한 번 시도해보세요.&lt;/p&gt;
+&lt;h2&gt;내일, 그리고 또 내일&lt;/h2&gt;
+&lt;p&gt;최근에 어떤 웹툰을 보다가 매우 인상 깊은 글을 보게 되었습니다. 저는 이 문장들에 굉장한 감명을 받았어요. 마치 제 인생을 설명하는 것 같았죠.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;사람의 생은 참 허무하고, 가볍고, 보잘 것 없습니다.&lt;br&gt;
+그런 허무에도 불구하고 우리의 생을 이 땅에 붙어있게 만드는 중력은 무엇일까...
+전 사랑이라고 생각합니다.&lt;br&gt;
+...
+그렇게 세상에 사랑하는 것들이 많아지면 생은 점점 무거워지고, 그 무게에 짓눌릴 때 허무 같은 건 자연스럽게 잊게 됩니다.
+인내심을 갖고 당신에게 작용하는 중력을 계속 찾아보십시오. 그리고 그것에 마음껏 집착하고 욕망해 보십시오.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;지금까지의 제 삶은 깃털보다도 가벼웠습니다. 하고 싶은 건 없었고, 목표는 당연하게도 없었어요.&lt;br&gt;
+그나마 좋아하던 개발에 매달려 우테코까지 떠밀려 왔습니다.&lt;/p&gt;
+&lt;p&gt;저는 우테코에서 세상을 사랑하는 법을 배웠고, 어떻게 하면 세상을 더 올바른 관점으로 바라볼 수 있는지 알게 됐어요. 결론적으로 말하자면 저도 &apos;누군가를 사랑할 수 있는 사람&apos; 이 되었다고 생각합니다. 그 사실이 제 생을 끌어당기는 가장 큰 중력이라는 생각이 드네요.&lt;/p&gt;
+&lt;p&gt;우테코에서 저만 많은 걸 얻어가는 것 같아 양심의 가책이 들기도 합니다. 제가 사랑하는 만큼 더 나누지 못한 것이 조금은 아쉬워요. 그래도 여러분 모두 행복하기를 바랍니다. 이제 저는 충분히 행복해요.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[로컬 캐시 개선기]]></title><description><![CDATA[개요 S-HOOK 은 메인 화면에서 전체 노래를 '좋아요 순으로' 정렬해서 10개의 노래만 보여주고 있다. 장르별 노래도 마찬가지로 좋아요 순으로 정렬 후, 10개의 노래만 클라이언트로 전달한다.  전체 노래를 좋아요 순으로 정렬할 때 DB…]]></description><link>https://vero.wiki/inmemory-cache-develop/</link><guid isPermaLink="false">https://vero.wiki/inmemory-cache-develop/</guid><pubDate>Tue, 24 Oct 2023 04:29:21 GMT</pubDate><content:encoded>&lt;h2&gt;개요&lt;/h2&gt;
 &lt;p&gt;S-HOOK 은 메인 화면에서 전체 노래를 &apos;좋아요 순으로&apos; 정렬해서 10개의 노래만 보여주고 있다. 장르별 노래도 마찬가지로 좋아요 순으로 정렬 후, 10개의 노래만 클라이언트로 전달한다.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&apos;gatsby-resp-image-figure&apos; style=&apos;margin-bottom: 16px;&apos;&gt;
     &lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; &apos;&gt;
@@ -151,23 +92,93 @@ implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.ehcache:ehca
         inMemorySongs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;recreate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;songRepository&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;findAllWithKillingParts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;  
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;특정 시간마다 &lt;code class=&quot;language-text&quot;&gt;SongRepository&lt;/code&gt; 에서 한 번에 노래와 노래의 킬링파트를 조회해서 로컬 캐시를 생성한다. 해당 노래를 Map 으로 저장한 뒤 데이터베이스가 아닌 로컬 캐시에서 노래를 조회하는 방식이다.&lt;/p&gt;
-&lt;p&gt;이때 문제점은 특정 노래만 저장하는 것이 아닌 &lt;strong&gt;전체 노래&lt;/strong&gt;를 저장한다는 것이다.&lt;br&gt;
-즉, 노래 개수가 늘어날수록 저장해야 하는 메모리가 많아지는 비효율적인 구조가 될 수 있다.&lt;/p&gt;
-&lt;p&gt;따라서 전체 노래를 저장하지 않고 사용자가 가장 많이 쓸 것으로 예상되는 첫 스와이프 화면에서 불리는 API 에서 사용될 데이터를 미리 캐싱해놓기로 했다.&lt;/p&gt;
-&lt;p&gt;첫 스와이프 화면에서 위 또는 아래로 스와이프를 수행하면 실제로 데이터베이스에 쿼리를 보내는 API 가 호출될 것이다. 그러나 프론트엔드에서 사용자가 위, 아래에서 5번째 노래에 도달했을 때 백그라운드에서 호출하기 때문에, 오래 걸려도 상대적으로 사용자 경험에 영향을 덜 줄 것으로 예상했다.&lt;/p&gt;
-&lt;p&gt;또한 서비스 특성 상 사용자의 좋아요 실시간성이 중요한 만큼, 사용자가 좋아요를 눌렀을 때 기존 캐시와 대조하여 순위를 변경해주는 기능을 추가했다.&lt;/p&gt;
-&lt;h2&gt;영향을 받는 API&lt;/h2&gt;
-&lt;p&gt;전체 노래를 캐싱하고 있기 때문에, 노래 정보를 가져오는 모든 API 는 캐싱의 영향을 받고 있다.&lt;/p&gt;
+&lt;p&gt;특정 시간마다 &lt;code class=&quot;language-text&quot;&gt;SongRepository&lt;/code&gt; 에서 한 번에 노래와 노래의 킬링파트를 조회해서 로컬 캐시를 생성한다. 해당 노래를 Map 으로 저장한 뒤 데이터베이스가 아닌 로컬 캐시에서 노래를 조회하는 방식이다. 로컬 캐시는 하루에 한 번 데이터베이스에서 데이터를 조회하고, 기존 로컬 캐시 데이터를 모두 삭제하는 방식으로 갱신된다.&lt;/p&gt;
+&lt;p&gt;이때 문제점은 저장한 캐시 데이터의 좋아요 데이터가 갱신되지 않는다는 점이다. S-HOOK은 사용자의 좋아요 데이터가 차트에 사용되기 때문에 실시간성이 중요한데, 기존 캐싱 방법에서는 좋아요 데이터에 따라 데이터가 변화하지 않기 때문에 서비스가 추구하는 방향성과 맞지 않다.&lt;/p&gt;
+&lt;p&gt;따라서 실시간으로 좋아요 데이터를 반영하기 위해 로컬 캐싱을 개선하기로 했다.&lt;/p&gt;
 &lt;h2&gt;개선 방법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;로컬 캐싱에 좋아요를 실시간으로 반영하고, 좋아요로 인해 순위 변동이 생긴 경우 변경된 순위를 반영하는 코드를 작성한다.&lt;/li&gt;
+&lt;li&gt;구현체를 LinkedHashMap 으로 구현했을 때 성능 테스트&lt;/li&gt;
+&lt;li&gt;구현체를 TreeMap 으로 변경했을 때 성능 테스트&lt;/li&gt;
+&lt;li&gt;DTO 프로젝션을 사용했을 때 성능 테스트&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;좋아요 데이터를 실시간으로 순위에 반영하기&lt;/h3&gt;
 &lt;h2&gt;테스트&lt;/h2&gt;
 &lt;h3&gt;환경&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;로컬에서 실행&lt;/li&gt;
+&lt;li&gt;로컬에서 실행
+&lt;ul&gt;
+&lt;li&gt;Apple M1 Pro 기준 메모리 16GB, CPU 8코어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;노래 데이터 10000개&lt;/li&gt;
 &lt;li&gt;킬링파트 데이터 30000개&lt;/li&gt;
+&lt;li&gt;조회 시 사용하는 멤버는 모든 킬링파트에 좋아요를 누른 상태&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;먼저 로컬 캐싱되지 않은 데이터를 조회할 때의 속도를 측정하기 위해 전체 노래를 조회해서 정렬한 뒤, 상위 10개의 노래를 반환하는 API 를 기준으로 테스트를 진행했다.&lt;/p&gt;
+&lt;p&gt;S-HOOK 에서 가장 시간이 오래걸리는 쿼리인 &quot;노래를 스와이프할 때 현재 노래, 현재 노래보다 좋아요가 많거나 같은 노래 10개 (좋아요 내림차순 정렬, 좋아요가 같을 경우 id 내림차순 정렬), 현재 노래보다 좋아요가 적거나 같은 노래 10개 (좋아요 내림차순 정렬, 좋아요가 같을 경우 id 내림차순 정렬) 를 조회하는 API&quot; 를 기준으로 테스트하였다. 지금부터는 스와이프 API 라고 짧게 부르도록 하겠다.&lt;/p&gt;
+&lt;p&gt;테스트 시 호출된 API 순서이다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;10번 노래에서 스와이프 API 호출&lt;/li&gt;
+&lt;li&gt;18번 노래의 좋아요 증가&lt;/li&gt;
+&lt;li&gt;10번 노래에서 스와이프 API 호출&lt;/li&gt;
+&lt;li&gt;18번 노래 좋아요 취소&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;18번의 순위가 계속해서 변경될 때를 테스트한다.&lt;/p&gt;
+&lt;p&gt;사용되는 쿼리는 다음과 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Query&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;SELECT s FROM Song s &quot;&lt;/span&gt;  
+    &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;LEFT JOIN s.killingParts.killingParts kp &quot;&lt;/span&gt;  
+    &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;GROUP BY s.id &quot;&lt;/span&gt;  
+    &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;HAVING SUM(COALESCE(kp.likeCount, 0)) &amp;lt; (SELECT SUM(COALESCE(kp2.likeCount, 0)) FROM KillingPart kp2 WHERE kp2.song.id = :id) &quot;&lt;/span&gt;  
+    &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;OR (SUM(COALESCE(kp.likeCount, 0)) = (SELECT SUM(COALESCE(kp3.likeCount, 0)) FROM KillingPart kp3 WHERE kp3.song.id = :id) AND s.id &amp;lt; :id) &quot;&lt;/span&gt;  
+    &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ORDER BY SUM(COALESCE(kp.likeCount, 0)) DESC, s.id DESC&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;token class-name&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Song&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;findSongsWithLessLikeCountThanSongWithId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;  
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@Param&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Long&lt;/span&gt; songId&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  
+    &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Pageable&lt;/span&gt; pageable  
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+  
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Query&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;SELECT s FROM Song s &quot;&lt;/span&gt;  
+    &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;LEFT JOIN s.killingParts.killingParts kp &quot;&lt;/span&gt;  
+    &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;GROUP BY s.id &quot;&lt;/span&gt;  
+    &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;HAVING (SUM(COALESCE(kp.likeCount, 0)) &gt; (SELECT SUM(COALESCE(kp2.likeCount, 0)) FROM KillingPart kp2 WHERE kp2.song.id = :id) &quot;&lt;/span&gt;  
+    &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;OR (SUM(COALESCE(kp.likeCount, 0)) = (SELECT SUM(COALESCE(kp3.likeCount, 0)) FROM KillingPart kp3 WHERE kp3.song.id = :id) AND s.id &gt; :id)) &quot;&lt;/span&gt;  
+    &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ORDER BY SUM(COALESCE(kp.likeCount, 0)), s.id&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;token class-name&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Song&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;findSongsWithMoreLikeCountThanSongWithId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;  
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@Param&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Long&lt;/span&gt; songId&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  
+    &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Pageable&lt;/span&gt; pageable  
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;DB 에서 직접 조회하는 경우&lt;/h3&gt;
+&lt;p&gt;18번의 순위가 계속해서 변경될 때, 조회 시 평균적으로 310ms 정도의 성능이 나오는 것을 확인할 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&apos;gatsby-resp-image-figure&apos; style=&apos;margin-bottom: 16px;&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; &apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/14054dbbf2f2e5e678a1ba2423d6e065/0b782/query-direct-find.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 62.94117647058823%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA4klEQVR42r1SCQrDMAzr/5+6Jm6O3pcXeXNJy2gHZTOIhGDLlpXCe89N0/C6rnw3wFE8qGSyxMYYJiJBVVUcQhDg7pzjGOOuKe7zPPOyLBuEMKREFCgJCoFpmqQgRx7jOHLXddz3vaBt2xchEvEwDIN0uS25pJimIyEFISYDrshVci5bCH1IkpNcNQej40SDswARciEb6oDfSDae0oSOrbXisJ6Y+FuXVfpHl+u6luI8WXd0lPwvl0P62FaMyF0+/rsrlzfJkOfee1KXgSuXQaKSoU6/XaG7AI5ToeMZ8hwESJ8sNv8dNGELkAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;query-direct-find.png&apos; title=&apos;&apos; src=&apos;/static/14054dbbf2f2e5e678a1ba2423d6e065/ca1dc/query-direct-find.png&apos; srcset=&apos;/static/14054dbbf2f2e5e678a1ba2423d6e065/e7570/query-direct-find.png 170w,
+/static/14054dbbf2f2e5e678a1ba2423d6e065/f46e7/query-direct-find.png 340w,
+/static/14054dbbf2f2e5e678a1ba2423d6e065/ca1dc/query-direct-find.png 680w,
+/static/14054dbbf2f2e5e678a1ba2423d6e065/02d09/query-direct-find.png 1020w,
+/static/14054dbbf2f2e5e678a1ba2423d6e065/9d567/query-direct-find.png 1360w,
+/static/14054dbbf2f2e5e678a1ba2423d6e065/0b782/query-direct-find.png 1370w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&apos;gatsby-resp-image-figcaption&apos;&gt;query-direct-find.png&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;LinkedHashMap&lt;/code&gt; 을 사용하여 좋아요 실시간 반영&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&apos;gatsby-resp-image-figure&apos; style=&apos;margin-bottom: 16px;&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; &apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/f691a782a5fc412f176bb42219a0f3e9/622c8/linked-hash-map-local-cache.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 118.82352941176471%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAABYlAAAWJQFJUiTwAAACNklEQVR42qVVSY7bMBDkx3PPL3LMN4L8YHLNLQhgaLEkSyRFaquwWtMeRvCMZhIBZVIk1V3VC21utxvqusb1ekVRFIgxAtsGPtvvn9i+fAK+fsZa/IINE7yzWJYF0zTBOYcQArz3MudoOKFRom1bOeCsxeA8lrYCnr4BP75jszesycm6rsnfJtA5HSgMrdIQmY3jiKZp5J3rY1prfIRfVszpcN/34pjsCL6T0DzP8s7R2MSmLEthRoNVVcnIA947XKu0N3p5Z1gulwv4DQnQYBiDzBXCkDGkZ87Vux7I50c82jM2Ua6T59cOU8YRMSUnhijjNFFuZnDsO9imFpkKxoUjGTPwx8cPEa4PgjkusG4PW9d1MPO0l4KmnbEkmLG3HmY3ZsxIgM4NNyhDDf3vY242Za/pUrnscSQzjdX2XOCvMczrj+CaCZH1NIh+lgFlK96SLZITAarSBIpk/mgNcuNfnlyJsd6i7VJnOP+XXIXWJaGyFGosn5vW9ahT/OqqltSzyAm2IDuCBc9QELkCfqztpo7F4Jq8jqm1hmEQA8rmUf0dZeY9fDcYlw1+3GP4nto7LZt2GFGUu0wy1LuNUAePDHEtTybnz4W9Ykop11Lhot5zZ2y1/nj+pQ7n1HrhpY+PlwTX3tuOu2TboUh3HjPMvwCOBLNM2cxunrCcoZLQv4F7L/Ogbn60oI8wYVoly3urracfnkruUpbL6ioyKU0zTIlnvax3pmb7LjlmWf4Im+NZhu4PvGVZEw89+rwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;linked-hash-map-local-cache.png&apos; title=&apos;&apos; src=&apos;/static/f691a782a5fc412f176bb42219a0f3e9/ca1dc/linked-hash-map-local-cache.png&apos; srcset=&apos;/static/f691a782a5fc412f176bb42219a0f3e9/e7570/linked-hash-map-local-cache.png 170w,
+/static/f691a782a5fc412f176bb42219a0f3e9/f46e7/linked-hash-map-local-cache.png 340w,
+/static/f691a782a5fc412f176bb42219a0f3e9/ca1dc/linked-hash-map-local-cache.png 680w,
+/static/f691a782a5fc412f176bb42219a0f3e9/02d09/linked-hash-map-local-cache.png 1020w,
+/static/f691a782a5fc412f176bb42219a0f3e9/9d567/linked-hash-map-local-cache.png 1360w,
+/static/f691a782a5fc412f176bb42219a0f3e9/622c8/linked-hash-map-local-cache.png 1384w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&apos;gatsby-resp-image-figcaption&apos;&gt;linked-hash-map-local-cache.png&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;조회 속도가 평균 28~31ms 로 DB 에서 쿼리하여 정렬했을 때보다 10배 가량 성능 개선이 이루어진 것을 볼 수 있다.&lt;/p&gt;
+&lt;h3&gt;&lt;/h3&gt;
 &lt;h3&gt;기존 방식 - 로컬 캐시 사용&lt;/h3&gt;
 &lt;p&gt;&lt;figure class=&apos;gatsby-resp-image-figure&apos; style=&apos;margin-bottom: 16px;&apos;&gt;
     &lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; &apos;&gt;
@@ -256,7 +267,210 @@ implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.ehcache:ehca
 &lt;h2&gt;참고&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.baeldung.com/hibernate-second-level-cache&quot;&gt;https://www.baeldung.com/hibernate-second-level-cache&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Cache vs Cacheable]]></title><description><![CDATA[…]]></description><link>https://vero.wiki/cache-and-cacheable/</link><guid isPermaLink="false">https://vero.wiki/cache-and-cacheable/</guid><pubDate>Fri, 27 Oct 2023 09:05:45 GMT</pubDate><content:encoded>&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;@Cache&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;@Cachable&lt;/code&gt; 은 어떤 차이점이 있을까?&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2023년 10월 29일]]></title><description><![CDATA[TODO 17:00 - 18:00 캐싱 테스트하기  [priority:: high]  [due:: 2023-10-28] 리뷰어 피드백 완료  [priority:: highest]  [due:: 2023-10-28]  [completion:: 202…]]></description><link>https://vero.wiki/2023-10-29/</link><guid isPermaLink="false">https://vero.wiki/2023-10-29/</guid><pubDate>Sun, 29 Oct 2023 07:15:10 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due today
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 17:00 - 18:00 캐싱 테스트하기  [priority:: high]  [due:: 2023-10-28]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 리뷰어 피드백 완료  [priority:: highest]  [due:: 2023-10-28]  [completion:: 2023-10-29]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 20:00 - 20:30 우테코 회고 작성하기  [due:: 2023-11-05]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;블루 자이언트를 봤다. 되게 감명깊게 봐서 느낀 점도 많았다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;예전부터 나는 &apos;뛰어난 것이 좋은 것&apos; 이라고 생각해왔다. 정확히는 처음부터/원래부터 잘한다, 천재라는 말을 동경했다. 그런데 블루 자이언트에서 본 주인공들은 달랐다. 처음부터 혹평을 받던 타마다가 대단하다고 생각되는 이유는 그 사람이 성장하는 과정이 존재하기 때문이다. 처음부터 잘했다면, 그 사람이 성장하고 잘하게 되는 건 &apos;당연한 것&apos; 으로 치부되었을 가능성이 높다. 그걸 대변하는 사람이 다이라고 생각한다. 재능도 있고, 열정도 있는 사람. 그렇지만 꼭 그것만이 전부는 아니다. 내가 노력하는 과정은 미래의 내가 빛나는 순간을 위해 존재한다는 거다. 그게 지금이 아니라도 괜찮다. 언젠가 나는 높은 곳에서 빛날 테니까. 그래서 기나긴 노력의 과정을 견딜 수 있는 거였다. 끝이 없는 게 아니라서. 결국 처음에 못하는 건 부끄러운 게 아니라 내가 그만큼 가야 할 길이 멀다는 거고, 그 길을 착실하게 가다보면 언젠가는 도착한다는 걸 알아야 노력할 수 있는 거구나. 아니면 그에 상응하는 열정이 있거나.
+&lt;ul&gt;
+&lt;li&gt;사실 유키노리에게서 내 모습을 본 것 같았다. 언젠지는 기억이 안 나지만, 나는 예전부터 내가 틀에 박힌 사고만 한다고 생각했다. 그 바운더리 밖으로는 나가지 못하고, 남들이 하는 생각만 겨우 따라하는 사람이라고 생각했었다. 배운 대로, 규칙대로 하던 유키노리가 &apos;형편없다&apos; 라는 평을 받을 때, 왠지 그 때의 기억이 났다. 다이처럼, 멋진 재능은 존재한다. 아쉽게도 그런 재능을 배워서 익힐 수는 없다. 즉흥도 재능이고, 표현도, 노력도 재능이니까. 그렇지만 그게 뭐 어떤가. 그건 나랑은 별개인데. 나는 내 재능을 사랑하고 갈고 닦으면 된다. 그들만의 길이 깨끗하고 포장되어 있다고 해서 나도 따라가기만 하는 건 재미없잖아. 나는 울퉁불퉁한 비포장 도로를 발에 물집이 잡히도록 즐겁게 걸으면 되는 거다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[JPA 2차 캐시 적용하기]]></title><description><![CDATA[구글에 Spring Boot 3.x.x 버전의 JPA 2차 캐시 설정 방법이 없어서 하루를 삽질해서, 다른 분들은 쉽게 설정하셨으면 하는 마음에 정리하는 글입니다. 의존성 설정하기 gradle…]]></description><link>https://vero.wiki/ehcache-apply/</link><guid isPermaLink="false">https://vero.wiki/ehcache-apply/</guid><pubDate>Wed, 25 Oct 2023 03:02:13 GMT</pubDate><content:encoded>&lt;p&gt;구글에 Spring Boot 3.x.x 버전의 JPA 2차 캐시 설정 방법이 없어서 하루를 삽질해서, 다른 분들은 쉽게 설정하셨으면 하는 마음에 정리하는 글입니다.&lt;/p&gt;
+&lt;h2&gt;의존성 설정하기&lt;/h2&gt;
+&lt;p&gt;gradle 파일에 아래의 의존성을 추가해주어야 합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;groovy&quot;&gt;&lt;pre class=&quot;language-groovy&quot;&gt;&lt;code class=&quot;language-groovy&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// cache  &lt;/span&gt;
+implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.hibernate.orm:hibernate-ehcache:6.0.0.Alpha7&apos;&lt;/span&gt;  
+implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.hibernate.orm:hibernate-jcache:6.3.1.Final&apos;&lt;/span&gt;  
+implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.ehcache:ehcache:3.10.8&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;application.yml&lt;/code&gt; 설정&lt;/h2&gt;
+&lt;p&gt;이전 버전에서는 &lt;code class=&quot;language-text&quot;&gt;region.factory_class&lt;/code&gt; 를 &lt;code class=&quot;language-text&quot;&gt;org.hibernate.cache.ehcache.EhCacheRegionFactory&lt;/code&gt; 라고 적으라는 글이 많은데, Spring Boot 3.x.x 버전에서는 다음과 같이 작성해야 합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;token key atrule&quot;&gt;jpa&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
+	  &lt;span class=&quot;token key atrule&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
+	    &lt;span class=&quot;token key atrule&quot;&gt;javax&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
+	      &lt;span class=&quot;token key atrule&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
+	        &lt;span class=&quot;token key atrule&quot;&gt;provider&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; org.ehcache.jsr107.EhcacheCachingProvider  
+	        &lt;span class=&quot;token key atrule&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; classpath&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;ehcache.xml
+	      &lt;span class=&quot;token key atrule&quot;&gt;persistence&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
+	        &lt;span class=&quot;token key atrule&quot;&gt;sharedCache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
+	          &lt;span class=&quot;token key atrule&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ENABLE_SELECTIVE  
+	    &lt;span class=&quot;token key atrule&quot;&gt;hibernate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
+	      &lt;span class=&quot;token key atrule&quot;&gt;format_sql&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;  
+	      &lt;span class=&quot;token key atrule&quot;&gt;show-sql&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;  
+	      &lt;span class=&quot;token key atrule&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
+	        &lt;span class=&quot;token key atrule&quot;&gt;use_second_level_cache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;  
+	        &lt;span class=&quot;token key atrule&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
+	          &lt;span class=&quot;token key atrule&quot;&gt;factory_class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; jcache  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;factory_class&lt;/code&gt; 와 &lt;code class=&quot;language-text&quot;&gt;provider&lt;/code&gt; 가 추가되었습니다.
+&lt;code class=&quot;language-text&quot;&gt;uri&lt;/code&gt; 에는 ehcache 설정이 있는 xml 경로를 지정합니다.&lt;/p&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;ehcache.xml&lt;/code&gt; 작성하기&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;config&lt;/span&gt;  
+  &lt;span class=&quot;token attr-name&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;http://www.ehcache.org/v3&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;&lt;/span&gt;  
+  &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xmlns:&lt;/span&gt;jsr107&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;http://www.ehcache.org/v3/jsr107&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
+  
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;service&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;    
+	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token namespace&quot;&gt;jsr107:&lt;/span&gt;defaults&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;enable-statistics&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;true&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;  
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;service&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;cache&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;songCache&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
+	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;key-type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;java.lang.Long&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;key-type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
+	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;value-type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;shook.shook.song.domain.Song&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;value-type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
+	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;expiry&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;      
+		  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ttl&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;seconds&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;10000&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ttl&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
+	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;expiry&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;    
+	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;resources&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;      
+		  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;offheap&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;MB&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;100&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;offheap&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
+	  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;resources&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;cache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;config&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;EhCache 3.x 버전을 위한 캐시 설정 파일입니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;enable-statistics&lt;/code&gt;: 캐시 통계 수집을 활성화 / 비활성화할 수 있습니다. true 면 캐시 동작에 대한 통계를 수집합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;alias&lt;/code&gt;: 캐시의 이름(별칭)을 지정합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;value-type&lt;/code&gt;: 캐싱하려는 클래스의 상대 경로를 적어줍니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;key-type&lt;/code&gt;: 캐시 키의 자료형을 지정합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;expiry&lt;/code&gt;: 캐시 항목의 만료 시간을 설정합니다. (초 단위)&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;resources&lt;/code&gt;: 캐시가 사용하는 리소스를 지정합니다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;offheap&gt;&lt;/code&gt;: 캐시 데이터를 JVM 힙 외부에 저장하도록 설정합니다. JVM 가비지 컬렉션에 영향을 받지 않아, 성능 향상을 기대할 수 있습니다. 현재는 100MB 의 오프힙 메모리를 사용하도록 설정되어 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;캐싱 적용을 위해서는 &lt;code class=&quot;language-text&quot;&gt;Application.java&lt;/code&gt; 에 다음과 같은 코드를 추가하면 됩니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@EnableCaching&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;// 이 부분!&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@SpringBootApplication&lt;/span&gt;  
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ShookApplication&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;  
+  
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;  
+        &lt;span class=&quot;token class-name&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ShookApplication&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;  
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;@Cache&lt;/code&gt; 어노테이션&lt;/h2&gt;
+&lt;p&gt;캐싱을 원하는 엔티티 위에 &lt;code class=&quot;language-text&quot;&gt;@Cache&lt;/code&gt; 어노테이션을 달아줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Cache&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;usage &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;CacheConcurrencyStrategy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;READ_ONLY&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Entity&lt;/span&gt;  
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Song&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;usage&lt;/code&gt; 에는 동시성 전략을 명시해줄 수 있습니다.&lt;/p&gt;
+&lt;p&gt;자세한 설정은 &lt;a href=&quot;/cache-and-cacheable&quot; data-wiki-link=&quot;true&quot;&gt;cache-and-cacheable&lt;/a&gt; 에서 확인하실 수 있습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 13일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-13/</link><guid isPermaLink="false">https://vero.wiki/2023-08-13/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 14일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-14/</link><guid isPermaLink="false">https://vero.wiki/2023-08-14/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 15일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-15/</link><guid isPermaLink="false">https://vero.wiki/2023-08-15/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 08일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-08/</link><guid isPermaLink="false">https://vero.wiki/2023-08-08/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 11일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-11/</link><guid isPermaLink="false">https://vero.wiki/2023-08-11/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 12일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-12/</link><guid isPermaLink="false">https://vero.wiki/2023-08-12/</guid><pubDate>Sun, 29 Oct 2023 07:48:27 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 07월 31일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-07-31/</link><guid isPermaLink="false">https://vero.wiki/2023-07-31/</guid><pubDate>Sun, 29 Oct 2023 07:48:25 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 08월 02일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-08-02/</link><guid isPermaLink="false">https://vero.wiki/2023-08-02/</guid><pubDate>Sun, 29 Oct 2023 07:48:26 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 07월 28일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-07-28/</link><guid isPermaLink="false">https://vero.wiki/2023-07-28/</guid><pubDate>Sun, 29 Oct 2023 07:48:25 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 07월 29일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-07-29/</link><guid isPermaLink="false">https://vero.wiki/2023-07-29/</guid><pubDate>Sun, 29 Oct 2023 07:48:25 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년 07월 30일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-07-30/</link><guid isPermaLink="false">https://vero.wiki/2023-07-30/</guid><pubDate>Sun, 29 Oct 2023 07:48:25 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년]]></title><description><![CDATA[2023년 1분기 2023-02 2023-03 2023년 2분기 2023-04 2023-05 2023-06 2023년 3분기 2023-07 2023-08 2023-09 2023년 4분기 2023-10]]></description><link>https://vero.wiki/2023/</link><guid isPermaLink="false">https://vero.wiki/2023/</guid><pubDate>Mon, 06 Feb 2023 14:02:45 GMT</pubDate><content:encoded>&lt;h1&gt;2023년 1분기&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-02&quot; data-wiki-link=&quot;true&quot;&gt;2023-02&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-03&quot; data-wiki-link=&quot;true&quot;&gt;2023-03&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;2023년 2분기&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-04&quot; data-wiki-link=&quot;true&quot;&gt;2023-04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-05&quot; data-wiki-link=&quot;true&quot;&gt;2023-05&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-06&quot; data-wiki-link=&quot;true&quot;&gt;2023-06&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;2023년 3분기&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-07&quot; data-wiki-link=&quot;true&quot;&gt;2023-07&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-08&quot; data-wiki-link=&quot;true&quot;&gt;2023-08&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-09&quot; data-wiki-link=&quot;true&quot;&gt;2023-09&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;2023년 4분기&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-10&quot; data-wiki-link=&quot;true&quot;&gt;2023-10&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2023년 10월 28일]]></title><description><![CDATA[TODO 미션 4단계 제출  [priority:: highest]  [created:: 2023-10-28]  [due:: 2023-10-28]  [completion:: 2023-10-28] 팀 피드백 완료  [priority:: highest…]]></description><link>https://vero.wiki/2023-10-28/</link><guid isPermaLink="false">https://vero.wiki/2023-10-28/</guid><pubDate>Sat, 28 Oct 2023 03:05:31 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due today
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 미션 4단계 제출  [priority:: highest]  [created:: 2023-10-28]  [due:: 2023-10-28]  [completion:: 2023-10-28]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 팀 피드백 완료  [priority:: highest]  [due:: 2023-10-28]  [completion:: 2023-10-28]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 캐싱 테스트하기  [priority:: high]  [due:: 2023-10-28]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 베베 리뷰 완료  [priority:: highest]  [due:: 2023-10-28]  [completion:: 2023-10-28]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 리뷰어 피드백 완료  [priority:: highest]  [due:: 2023-10-28]&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 리뷰이 피드백 완료  [priority:: highest]  [due:: 2023-10-28]  [completion:: 2023-10-28]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;T1 이 녹아웃 스테이지에 진출했다. 갑자기 각성해서 BLG 를 씹어먹어버렸는데 왤까...&lt;/li&gt;
+&lt;li&gt;여전히 캐싱 처리 테스트를 하고 있다. 결론적으로 어떤 테스트를 해야 할 지부터 생각하는 게 좋을 거 같다. 대강 정리는 했는데 글 대제목으로 적으면서 더 정리해봐야겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;백준 13713 번을 풀었다. 실패 함수를 응용해서 가장 긴 접두사를 항상 지정해두고 O(N) 안에 전체 문자열을 탐색하는 어마어마한 알고리즘을 배웠다. 고마워요.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Cache vs Cacheable]]></title><description><![CDATA[…]]></description><link>https://vero.wiki/cache-and-cacheable/</link><guid isPermaLink="false">https://vero.wiki/cache-and-cacheable/</guid><pubDate>Fri, 27 Oct 2023 09:05:45 GMT</pubDate><content:encoded>&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;@Cache&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;@Cachable&lt;/code&gt; 은 어떤 차이점이 있을까?&lt;/p&gt;
 &lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;@Cacheable&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;메서드 (또는 클래스의 모든 메서드) 를 호출한 결과를 캐시할 수 있음을 나타내는 어노테이션이다.&lt;br&gt;
 메서드가 호출될 때마다 캐싱 동작이 적용되어 주어진 인자에 대해 메서드가 이미 호출되었는지 여부를 확인한다. 단순히 메서드 매개변수를 사용하여 키를 계산하는 것이지만, &lt;code class=&quot;language-text&quot;&gt;key()&lt;/code&gt; 속성을 사용하여 SpEL 표현식을 제공하거나, 사용자 정의 &lt;code class=&quot;language-text&quot;&gt;KeyGenerator&lt;/code&gt; 구현으로 기본값을 대체할 수 있다.&lt;/p&gt;
@@ -404,13 +618,7 @@ implementation &lt;span class=&quot;token string&quot;&gt;&apos;org.ehcache:ehca
 &lt;li&gt;&lt;a href=&quot;https://backtony.github.io/java/2022-05-04-java-50/&quot;&gt;https://backtony.github.io/java/2022-05-04-java-50/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://happinessoncode.com/2017/10/04/java-intrinsic-lock/&quot;&gt;http://happinessoncode.com/2017/10/04/java-intrinsic-lock/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.baeldung.com/java-synchronized&quot;&gt;https://www.baeldung.com/java-synchronized&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2023년 10월 27일]]></title><description><![CDATA[TODO LOG 배운 것 느낀 것]]></description><link>https://vero.wiki/2023-10-27/</link><guid isPermaLink="false">https://vero.wiki/2023-10-27/</guid><pubDate>Fri, 27 Oct 2023 08:52:58 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
-due today
-short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;TODO&lt;/h2&gt;
-&lt;h2&gt;LOG&lt;/h2&gt;
-&lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[최소 정점 커버 (Minimum Vertex Cover)]]></title><description><![CDATA[Vertex Cover 정점 집합 S가 있을 때, 모든 간선은 양 끝점 중 하나가 S 에 포함되어야 한다. 최소 정점 커버란? 정점 집합 S가 있을 때, 모든 간선은 양 끝점 중 적어도 하나가 S 에 포함되어야 한다.
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[최소 정점 커버 (Minimum Vertex Cover)]]></title><description><![CDATA[Vertex Cover 정점 집합 S가 있을 때, 모든 간선은 양 끝점 중 하나가 S 에 포함되어야 한다. 최소 정점 커버란? 정점 집합 S가 있을 때, 모든 간선은 양 끝점 중 적어도 하나가 S 에 포함되어야 한다.
 여러 Vertex Cover…]]></description><link>https://vero.wiki/minimum-vertex-cover/</link><guid isPermaLink="false">https://vero.wiki/minimum-vertex-cover/</guid><pubDate>Fri, 27 Oct 2023 02:21:11 GMT</pubDate><content:encoded>&lt;p&gt;&lt;figure class=&apos;gatsby-resp-image-figure&apos; style=&apos;margin-bottom: 16px;&apos;&gt;
     &lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; &apos;&gt;
       &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/f194de5839684737295b0bbfa2f3f2e4/69083/feedback.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
@@ -8230,24 +8438,7 @@ due today&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;다시 고쳤다. 하 너무 디버깅이 힘들다. 후디 테마 블로그로 갈아타서 거기서 커스터마이징 하는 게 더 좋을 것 같아서 지속적으로 사이드로 개발해둬야 겠다. 어제 한 7시간 동안 개츠비만 봤더니 개츠비 마스터 된 듯...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;배운 것&lt;/h2&gt;
-&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[2023년]]></title><description><![CDATA[2023년 1분기 2023-02 2023-03 2023년 2분기 2023-04 2023-05 2023-06 2023년 3분기 2023-07 2023-08 2023-09 2023년 4분기]]></description><link>https://vero.wiki/2023/</link><guid isPermaLink="false">https://vero.wiki/2023/</guid><pubDate>Mon, 06 Feb 2023 14:02:45 GMT</pubDate><content:encoded>&lt;h1&gt;2023년 1분기&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-02&quot; data-wiki-link=&quot;true&quot;&gt;2023-02&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-03&quot; data-wiki-link=&quot;true&quot;&gt;2023-03&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;2023년 2분기&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-04&quot; data-wiki-link=&quot;true&quot;&gt;2023-04&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-05&quot; data-wiki-link=&quot;true&quot;&gt;2023-05&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-06&quot; data-wiki-link=&quot;true&quot;&gt;2023-06&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;2023년 3분기&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-07&quot; data-wiki-link=&quot;true&quot;&gt;2023-07&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-08&quot; data-wiki-link=&quot;true&quot;&gt;2023-08&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2023-09&quot; data-wiki-link=&quot;true&quot;&gt;2023-09&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;2023년 4분기&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[중단점이 있을 때 동시성 이슈가 더 잘 발생하는 이유는?]]></title><description><![CDATA[개요 학습 테스트를 하면서 개별 스레드를 일시 중지하면 if 절 조건이 true 가 되고 크기가 2가 된다는 게 무슨 말인지 이해가 안 돼서  에 있는 if 문에 중단점을 걸어봤다. 그런데 기존의 테스트를 7…]]></description><link>https://vero.wiki/concurrency-test/</link><guid isPermaLink="false">https://vero.wiki/concurrency-test/</guid><pubDate>Sat, 09 Sep 2023 08:17:23 GMT</pubDate><content:encoded>&lt;h2&gt;개요&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[중단점이 있을 때 동시성 이슈가 더 잘 발생하는 이유는?]]></title><description><![CDATA[개요 학습 테스트를 하면서 개별 스레드를 일시 중지하면 if 절 조건이 true 가 되고 크기가 2가 된다는 게 무슨 말인지 이해가 안 돼서  에 있는 if 문에 중단점을 걸어봤다. 그런데 기존의 테스트를 7…]]></description><link>https://vero.wiki/concurrency-test/</link><guid isPermaLink="false">https://vero.wiki/concurrency-test/</guid><pubDate>Sat, 09 Sep 2023 08:17:23 GMT</pubDate><content:encoded>&lt;h2&gt;개요&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;thread&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stage1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
   
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;junit&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jupiter&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Test&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
