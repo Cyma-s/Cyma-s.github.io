@@ -4,8 +4,15 @@ import reset from "styled-reset"
 const GlobalStyles = createGlobalStyle`
   ${reset}
 
+  @font-face {
+    font-family: 'Pretendard'; 
+    src: url('../fonts/Pretendard-Medium.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+  }
+
   body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Pretendard', sans-serif;
     background: ${props => props.theme.colors.bodyBackground};
   }
 `
