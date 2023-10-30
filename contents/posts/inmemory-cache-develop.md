@@ -1,7 +1,7 @@
 ---
 title: 로컬 캐시 개선기
 date: 2023-10-24 13:29:21 +0900
-updated: 2023-10-29 21:59:07 +0900
+updated: 2023-10-30 14:55:38 +0900
 tags:
   - shook
 ---
@@ -59,6 +59,44 @@ public class InMemorySongsScheduler {
 
 
 ### 좋아요 데이터를 실시간으로 순위에 반영하기
+
+두 가지 컬렉션을 FETCH 해올 때, 처음에는 `KillingPartLikes` 가 `List` 였기 때문에 다음과 같은 에러가 발생했다. 
+
+```java
+@Query("SELECT s AS song "  
+    + "FROM Song s "  
+    + "LEFT JOIN FETCH s.killingParts.killingParts kp "  
+    + "LEFT JOIN FETCH kp.killingPartLikes.likes kpl "  
+    + "GROUP BY s.id, kp.id, kpl.id")  
+List<Song> findAllWithKillingPartsAndLikes();
+```
+
+```bash
+Caused by: org.hibernate.loader.MultipleBagFetchException: cannot simultaneously fetch multiple bags: [shook.shook.song.domain.killingpart.KillingPart.killingPartLikes.likes, shook.shook.song.domain.Song.killingParts.killingParts]
+	at org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter.createFetch(BaseSqmToSqlAstConverter.java:7971)
+	at org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter.visitFetches(BaseSqmToSqlAstConverter.java:8065)
+	at org.hibernate.sql.results.graph.AbstractFetchParent.afterInitialize(AbstractFetchParent.java:32)
+	at org.hibernate.sql.results.graph.embeddable.internal.EmbeddableFetchImpl.<init>(EmbeddableFetchImpl.java:75)
+	at org.hibernate.metamodel.mapping.internal.EmbeddedAttributeMapping.generateFetch(EmbeddedAttributeMapping.java:269)
+	at org.hibernate.sql.results.graph.FetchParent.generateFetchableFetch(FetchParent.java:108)
+	at org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter.buildFetch(BaseSqmToSqlAstConverter.java:8108)
+```
+
+`KillingPartLikes` 를 `Set` 으로 변경하면 MultiBagFetchException 을 해결할 수 있다.
+
+```java
+@OneToMany(mappedBy = "killingPart")  
+@Where(clause = "is_deleted = false")  
+private Set<KillingPartLike> likes = new HashSet<>();
+```
+
+기존에 노래 id 를 키로 갖고, 노래를 value 로 갖던 Map 외에 노래 Id 를 키로 갖고 좋아요 개수를 키로 갖는 Map 을 추가했다.
+
+```java
+private Map<Long, AtomicInteger> songLikeCountById = new LinkedHashMap<>();
+```
+
+유저의 좋아요가 갱신될 때마다 노래를 다시 정렬해주는 로직을 추가한다. 
 
 ## 테스트
 

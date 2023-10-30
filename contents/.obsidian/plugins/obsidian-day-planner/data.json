@@ -1,9 +1,9 @@
 {
   "circularProgress": true,
-  "nowAndNextInStatusBar": false,
+  "nowAndNextInStatusBar": true,
   "showTaskNotification": true,
   "zoomLevel": 1,
-  "timelineIcon": "broken-link",
+  "timelineIcon": "create-new",
   "endLabel": "All done",
   "startHour": 6,
   "timelineDateFormat": "MM월 DD일 dd요일 A HH:mm",
@@ -17,9 +17,9 @@
   "timestampFormat": "HH:mm",
   "dataviewSource": "",
   "showDataviewMigrationWarning": false,
-  "extendDurationUntilNext": true,
+  "extendDurationUntilNext": false,
   "defaultDurationMinutes": 30,
-  "showTimestampInTaskBlock": false,
+  "showTimestampInTaskBlock": true,
   "unscheduledTasksHeight": 100,
   "showUncheduledTasks": false,
   "showUnscheduledNestedTasks": true

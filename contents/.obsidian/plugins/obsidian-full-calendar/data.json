@@ -1,0 +1,16 @@
+{
+  "calendarSources": [
+    {
+      "type": "dailynote",
+      "color": "#ff007b",
+      "heading": "TODO"
+    }
+  ],
+  "defaultCalendar": 0,
+  "firstDay": 0,
+  "initialView": {
+    "desktop": "listWeek",
+    "mobile": "timeGrid3Days"
+  },
+  "timeFormat24h": false
+}
