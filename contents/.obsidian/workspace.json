@@ -58,9 +58,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a6146faac719e438",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/english-speaking-oct-4week.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -135,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-10-31.md",
+                "file": "posts/english-speaking-oct-4week.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-10-31.md",
+                "file": "posts/english-speaking-oct-4week.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -223,10 +236,11 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "1fb313241c8e3391",
+  "active": "a6146faac719e438",
   "lastOpenFiles": [
-    "posts/inmemory-cache-develop.md",
+    "posts/english-speaking-oct-4week.md",
     "posts/2023-10-31.md",
+    "posts/inmemory-cache-develop.md",
     "posts/delivery-hero-employment.md",
     "posts/inmemory-cache-develop-reason.md",
     "posts/2023-10-30.md",
@@ -255,7 +269,6 @@
     "posts/2023-07-31.md",
     "posts/2023-07-30.md",
     "posts/2023-07-29.md",
-    "posts/2023-07-28.md",
     "posts/attachments/linked-hash-map-local-cache.png",
     "posts/attachments/query-direct-find.png",
     "posts/attachments/db-direct-find.png",
