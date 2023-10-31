@@ -1,7 +1,7 @@
 ---
 title: 로컬 캐시 개선기
 date: 2023-10-24 13:29:21 +0900
-updated: 2023-10-30 17:49:59 +0900
+updated: 2023-10-31 11:14:18 +0900
 tags:
   - shook
 ---
@@ -117,6 +117,13 @@ List<Song> findSongsWithMoreLikeCountThanSongWithId(
 ### `LinkedHashMap` 을 사용하여 좋아요 실시간 반영
 
 ![[linked-hash-map-local-cache-develop.png]]
+
+### `TreeMap` 으로 좋아요 실시간 반영
+
+
+
+![[tree-map-develop.png]]
+
 ### 노래 하나의 순서만 바꾸기
 
 사실상 변경되는 부분은 18번의 순위뿐이다. 

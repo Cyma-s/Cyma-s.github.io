@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 const StyledMarkdown = styled.div`
   & {
-    font-family: "Pretendard";
     font-size: 16.7px;
     color: ${props => props.theme.colors.text};
     line-height: 1.73;
