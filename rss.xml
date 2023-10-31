@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 31 Oct 2023 04:51:16 GMT</lastBuildDate><item><title><![CDATA[로컬 캐시 개선기]]></title><description><![CDATA[개요 S-HOOK 은 메인 화면에서 전체 노래를 '좋아요 순으로' 정렬해서 10개의 노래만 보여주고 있다. 장르별 노래도 마찬가지로 좋아요 순으로 정렬 후, 10개의 노래만 클라이언트로 전달한다.  전체 노래를 좋아요 순으로 정렬할 때 DB…]]></description><link>https://vero.wiki/inmemory-cache-develop/</link><guid isPermaLink="false">https://vero.wiki/inmemory-cache-develop/</guid><pubDate>Tue, 24 Oct 2023 04:29:21 GMT</pubDate><content:encoded>&lt;h2&gt;개요&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 31 Oct 2023 15:44:49 GMT</lastBuildDate><item><title><![CDATA[10월 넷째주 영어 회화]]></title><description><![CDATA[Ringle 표현 contemplate == think simple to == easy to come with: Phrase that something is included or provided with another item / something…]]></description><link>https://vero.wiki/english-speaking-oct-4week/</link><guid isPermaLink="false">https://vero.wiki/english-speaking-oct-4week/</guid><pubDate>Tue, 31 Oct 2023 11:19:32 GMT</pubDate><content:encoded>&lt;h2&gt;Ringle&lt;/h2&gt;
+&lt;h3&gt;표현&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;contemplate == think&lt;/li&gt;
+&lt;li&gt;simple to == easy to&lt;/li&gt;
+&lt;li&gt;come with: Phrase that something is included or provided with another item / something else&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;will vs would&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;will
+&lt;ul&gt;
+&lt;li&gt;미래의 행동이나 사건을 표현할 때 자주 사용된다.&lt;/li&gt;
+&lt;li&gt;사실, 약속, 추측에 사용&lt;/li&gt;
+&lt;li&gt;ex. I will meet you at the cafe at 3 p.m&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;would
+&lt;ul&gt;
+&lt;li&gt;조건부 미래의 행동
+&lt;ul&gt;
+&lt;li&gt;I would go to the party if I had time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;무언가를 요청하거나 제공할 때 공손하게 표현하기
+&lt;ul&gt;
+&lt;li&gt;Would you like to go to the restaurant with me?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;과거의 습관이나 행동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;회화 수업&lt;/h2&gt;
+&lt;h3&gt;표현&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;make a resume: 이력서를 쓰다.&lt;/li&gt;
+&lt;li&gt;rough: 요즘 사람들은 hard 보다는 rough 를 사용한다고 한다.
+&lt;ul&gt;
+&lt;li&gt;Ex. I&apos;m having a rough time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;fudge: 적당히 꾸며내다.. 라고 영어 사전에 적혀있는데 뭐랄까 좀 더 멋진 말로 표현하다? 거짓말은 아니고 그럴듯하게 표현하다 이런 느낌으로 사용하셨던 거 같다.&lt;/li&gt;
+&lt;li&gt;work smarter&lt;/li&gt;
+&lt;li&gt;a letter of recommendation == a recommendation letter: 추천서&lt;/li&gt;
+&lt;li&gt;There only needs to be 1: 오직 하나만 필요하다.&lt;/li&gt;
+&lt;li&gt;a portfolio of projects&lt;/li&gt;
+&lt;li&gt;There is no format&lt;/li&gt;
+&lt;li&gt;has been working: 일해오다&lt;/li&gt;
+&lt;li&gt;pandemic hit: 펜데믹이 발생하다.&lt;/li&gt;
+&lt;li&gt;versatility: 다재다능, 다용도, 다목적
+&lt;ul&gt;
+&lt;li&gt;You can show versatility in that case.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;조언&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;the 는 object 에 사용한다.
+&lt;ul&gt;
+&lt;li&gt;다음과 같이는 사용하지 않는다.
+&lt;ul&gt;
+&lt;li&gt;the 배달의 민족 (x) =&gt; 배달의 민족&lt;/li&gt;
+&lt;li&gt;the 강남대로 (x) =&gt; 강남대로&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;noun&lt;/strong&gt; is &lt;strong&gt;noun&lt;/strong&gt; =&gt; noun 은 둘 다 동일한 뜻을 갖는다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2023년 10월 31일]]></title><description><![CDATA[TODO 캐싱 테스트 [startTime:: 15:00]  [endTime:: 18:00] LOG 배운 것  로 빌드하지 않으면 가끔 아무런 문제가 없는데도 Response 객체가 파싱이 안 된다. ( 상태에서 파싱 불가능. 속성이…]]></description><link>https://vero.wiki/2023-10-31/</link><guid isPermaLink="false">https://vero.wiki/2023-10-31/</guid><pubDate>Tue, 31 Oct 2023 08:15:13 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 캐싱 테스트 [startTime:: 15:00]  [endTime:: 18:00]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gradle&lt;/code&gt; 로 빌드하지 않으면 가끔 아무런 문제가 없는데도 Response 객체가 파싱이 안 된다. (&lt;code class=&quot;language-text&quot;&gt;@AllArgsConstructor(PRIVATE)&lt;/code&gt; 상태에서 파싱 불가능. 속성이 1개가 아니어도 안 됨) 해결하기 위해서는 프로젝트를 &lt;code class=&quot;language-text&quot;&gt;gradle&lt;/code&gt; 로 빌드하면 된다.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;단어가 아닌 문장으로 말하려고 노력하자.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[로컬 캐시 개선기]]></title><description><![CDATA[개요 S-HOOK 은 메인 화면에서 전체 노래를 '좋아요 순으로' 정렬해서 10개의 노래만 보여주고 있다. 장르별 노래도 마찬가지로 좋아요 순으로 정렬 후, 10개의 노래만 클라이언트로 전달한다.  전체 노래를 좋아요 순으로 정렬할 때 DB…]]></description><link>https://vero.wiki/inmemory-cache-develop/</link><guid isPermaLink="false">https://vero.wiki/inmemory-cache-develop/</guid><pubDate>Tue, 24 Oct 2023 04:29:21 GMT</pubDate><content:encoded>&lt;h2&gt;개요&lt;/h2&gt;
 &lt;p&gt;S-HOOK 은 메인 화면에서 전체 노래를 &apos;좋아요 순으로&apos; 정렬해서 10개의 노래만 보여주고 있다. 장르별 노래도 마찬가지로 좋아요 순으로 정렬 후, 10개의 노래만 클라이언트로 전달한다.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&apos;gatsby-resp-image-figure&apos; style=&apos;margin-bottom: 16px;&apos;&gt;
     &lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; &apos;&gt;
