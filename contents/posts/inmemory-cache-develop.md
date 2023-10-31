@@ -1,7 +1,7 @@
 ---
 title: 로컬 캐시 개선기
 date: 2023-10-24 13:29:21 +0900
-updated: 2023-10-31 11:14:18 +0900
+updated: 2023-10-31 13:37:20 +0900
 tags:
   - shook
 ---
@@ -69,7 +69,7 @@ public class InMemorySongsScheduler {
 	- Apple M1 Pro 기준 메모리 16GB, CPU 8코어
 - 노래 데이터 10000개
 - 킬링파트 데이터 30000개
-- 조회 시 사용하는 멤버는 모든 킬링파트에 좋아요를 누른 상태
+- 조회 시 사용하는 멤버는 모든 킬링파트에 좋아요를 누른 상태 (좋아요 데이터 30000개)
 
 S-HOOK 에서 가장 시간이 오래걸리는 쿼리인 "노래를 스와이프할 때 현재 노래, 현재 노래보다 좋아요가 많거나 같은 노래 10개 (좋아요 내림차순 정렬, 좋아요가 같을 경우 id 내림차순 정렬), 현재 노래보다 좋아요가 적거나 같은 노래 10개 (좋아요 내림차순 정렬, 좋아요가 같을 경우 id 내림차순 정렬) 를 조회하는 API" 를 기준으로 테스트하였다. 지금부터는 스와이프 API 라고 짧게 부르도록 하겠다.
 
@@ -116,88 +116,104 @@ List<Song> findSongsWithMoreLikeCountThanSongWithId(
 
 ### `LinkedHashMap` 을 사용하여 좋아요 실시간 반영
 
-![[linked-hash-map-local-cache-develop.png]]
+노래 Id 를 정렬된 상태로 유지하고, 노래를 저장한다.  
+좋아요가 변경되면 전체 `LinkedHashMap` 을 정렬한다.  
+
+```java
+public void recreate(final List<Song> songs) {  
+    sortedIds = new ArrayList<>(songsSortedInLikeCountById.keySet().stream()  
+.sorted(Comparator.comparing(songsSortedInLikeCountById::get, COMPARATOR))  
+                                    .toList());  
+    ...
+}
+
+private void sortSongIds() {  
+    sortedIds.sort(Comparator.comparing(songsSortedInLikeCountById::get, COMPARATOR));  
+}
+```
+
+DB 에서 조회했을 때보다 10배의 성능 개선이 된 것을 볼 수 있다.
+
+![[linked-hash-map-all-sort.png]]
 
 ### `TreeMap` 으로 좋아요 실시간 반영
 
+삽입, 삭제에 $log(N)$ 의 시간복잡도를 갖는 `TreeMap` 을 사용하면 성능이 개선될 것이라고 생각했다. 
 
+그러나 `TreeMap` 의 특성 상 `LinkedHashMap` 보다 조회 속도가 느렸다. 또한 `TreeMap` 은 삽입, 삭제에서 정렬이 발생하기 때문에 기존에 있는 Map 의 키를 삭제해야만 했는데, 삭제 후 삽입하는 속도가 `LinkedHashMap` 에 비해 크게 개선되지 않았다. 
+
+따라서 `LinkedHashMap` 을 사용하는 것이 더 좋은 성능을 보여준다는 결론을 내렸다.
+
+아래 테스트 결과에서도 `LinkedHashMap` 에 비해 성능이 20% 정도 악화된 것을 볼 수 있다.  
 
 ![[tree-map-develop.png]]
 
-### 노래 하나의 순서만 바꾸기
+### 삽입 정렬로 거의 정렬된 데이터 순서 바꾸기
 
-사실상 변경되는 부분은 18번의 순위뿐이다. 
+데이터가 거의 정렬된 데이터이고, 단 하나의 노래 데이터의 순서만 바뀌기 때문에 삽입 정렬이 더 효율적이라고 생각했다.
 
-### 기존 방식 - 로컬 캐시 사용
-
-![[not-fit-local-cache.png]]
-
-응답 시간은 평균 Avg Time 8ms 이다. 굉장히 빠른 속도지만 모든 노래를 캐싱한다는 점에서 최적화가 필요하다.
-
-### 최적화되지 않은 쿼리 - 전체 조회
-
-노래 좋아요와 노래를 전체 조회한 뒤, 애플리케이션에서 정렬을 수행했다.
+`List.sort` 대신 좋아요가 증가한 경우 앞 쪽으로 swap 하고, 좋아요가 감소한 경우 뒷 쪽으로 swap 을 진행했다.
 
 ```java
-@Query("SELECT s AS song, SUM(COALESCE(kp.likeCount, 0)) AS totalLikeCount "  
-    + "FROM Song s LEFT JOIN s.killingParts.killingParts kp "  
-    + "GROUP BY s.id ")
-List<SongTotalLikeCountDto> findAllWithTotalLikeCount();
-```
-
-DTO 를 반환하여 LAZY 로딩으로 데이터를 가져오지 않도록 방지했다.
-
-```java
-public List<HighLikedSongResponse> showHighLikedSongs() {  
-	final List<SongTotalLikeCountDto> songTotalLikeCountDtos = songRepository.findAllWithTotalLikeCount().stream()  
-		.sorted((s1, s2) -> {  
-			if (Objects.equals(s1.getTotalLikeCount(), s2.getTotalLikeCount())) {  
-				return s2.getSong().getId().compareTo(s1.getSong().getId());  
-			}  
-			return s2.getTotalLikeCount().compareTo(s1.getTotalLikeCount());  
-		}).toList();  
-
-	return HighLikedSongResponse.ofSongs(songTotalLikeCountDtos);  
+public void pressLike(final KillingPart killingPart, final KillingPartLike likeOnKillingPart) {  
+    final Song song = songsSortedInLikeCountById.get(killingPart.getSong().getId());  
+    final KillingPart killingPartById = findKillingPart(killingPart, song);  
+    final boolean updated = killingPartById.like(likeOnKillingPart);  
+    if (updated) {  
+        adjustSongPosition(song);  
+    }  
+}  
+  
+public void adjustSongPosition(Song changedSong) {  
+    int currentIndex = sortedIds.indexOf(changedSong.getId());  
+  
+    if (currentIndex == -1) {  
+        return; // 노래를 찾지 못했을 경우  
+    }  
+  
+    // 좋아요가 증가한 경우 (높은 좋아요 순으로 앞으로 이동)  
+    if (shouldMoveForward(changedSong, currentIndex)) {  
+        while (currentIndex > 0 &&  
+            shouldSwapWithPrevious(changedSong, songsSortedInLikeCountById.get(sortedIds.get(currentIndex - 1)))) {  
+            // 이전 노래와 위치 교환  
+            swap(sortedIds, currentIndex, currentIndex - 1);  
+            currentIndex--;  
+        }  
+    }    // 좋아요가 감소한 경우 (낮은 좋아요 순으로 뒤로 이동)  
+    else {  
+        while (currentIndex < sortedIds.size() - 1  
+            && shouldSwapWithNext(changedSong, songsSortedInLikeCountById.get(sortedIds.get(currentIndex - 1)))) {  
+            // 다음 노래와 위치 교환  
+            swap(sortedIds, currentIndex, currentIndex + 1);  
+            currentIndex++;  
+        }  
+    }}  
+  
+private boolean shouldMoveForward(Song song, int index) {  
+    return index > 0 && shouldSwapWithPrevious(song, songsSortedInLikeCountById.get(sortedIds.get(index - 1)));  
+}  
+  
+private boolean shouldSwapWithPrevious(Song song, Song previousSong) {  
+    return song.getTotalLikeCount() > previousSong.getTotalLikeCount() ||  
+        (song.getTotalLikeCount() == previousSong.getTotalLikeCount() && song.getId() > previousSong.getId());  
+}  
+  
+private boolean shouldSwapWithNext(Song song, Song nextSong) {  
+    return song.getTotalLikeCount() < nextSong.getTotalLikeCount() ||  
+        (song.getTotalLikeCount() == nextSong.getTotalLikeCount() && song.getId() < nextSong.getId());  
+}  
+  
+private void swap(List<Long> list, int i, int j) {  
+    Long temp = list.get(i);  
+    list.set(i, list.get(j));  
+    list.set(j, temp);  
 }
 ```
 
-![[not-fit-query.png]]
+그 결과 좋아요를 수행하는 연산의 성능이 약 17% 개선되었다.  
+비교해야 하는 데이터가 많을수록 시간 복잡도가 증가하기 때문에, 비교해야 하는 데이터가 많은 좋아요 true 의 연산 속도보다 좋아요 false 의 연산 속도가 더 빠른 것을 볼 수 있다. 
 
-평균 응답 시간이 594ms 로, 데이터 개수에 비해 느린 속도를 보여주고 있다.
-
-hibernate statistics 를 확인해보았을 때, 총 2개의 쿼리가 발생한 것을 볼 수 있다.
-
-```shell
-2023-10-28T16:37:15.385+09:00  INFO 61413 --- [nio-8080-exec-5] i.StatisticalLoggingSessionEventListener : Session Metrics {
-    17250 nanoseconds spent acquiring 1 JDBC connections;
-    0 nanoseconds spent releasing 0 JDBC connections;
-    114041 nanoseconds spent preparing 2 JDBC statements;
-    90312958 nanoseconds spent executing 2 JDBC statements;
-    0 nanoseconds spent executing 0 JDBC batches;
-    0 nanoseconds spent performing 0 L2C puts;
-    0 nanoseconds spent performing 0 L2C hits;
-    0 nanoseconds spent performing 0 L2C misses;
-    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
-    2125 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
-}
-```
-
-### 최적화되지 않은 쿼리 - DB 정렬
-
-DB 에서 정렬하는 쿼리이다.
-
-```java
-@Query("SELECT s AS song, SUM(COALESCE(kp.likeCount, 0)) AS totalLikeCount "  
-    + "FROM Song s LEFT JOIN s.killingParts.killingParts kp "  
-    + "GROUP BY s.id "  
-    + "ORDER BY totalLikeCount DESC, s.id DESC")  
-List<SongTotalLikeCountDto> findAllWithTotalLikeCount();
-```
-
-![[not-fit-query-db-sort.png]]
-
-DB 정렬만으로 200% 성능 개선이 된 것을 확인할 수 있다.  
-쿼리 개수는 이전과 동일하다.
+![[insertions-sort-like-sort.png]]
 
 ## 참고
 

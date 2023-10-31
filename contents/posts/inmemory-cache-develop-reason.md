@@ -1,7 +1,7 @@
 ---
 title: 로컬 캐싱 개선 진행 과정
 date: 2023-10-30 17:06:48 +0900
-updated: 2023-10-30 17:44:07 +0900
+updated: 2023-10-31 13:35:01 +0900
 tags:
   - shook
   - 개발
@@ -157,3 +157,90 @@ private void sortSongsByLikeCount() {
 }
 ```
 
+### `Map` 을 생성하는 오버헤드 줄이기
+
+노래 데이터가 바뀔 때마다 정렬이 수행되어야 한다. 전체 노래에 대한 정보가 있어야 하므로 `Song` 엔티티를 `Map` 으로 갖고 있어야 한다.  
+
+이때 `Map` 을 정렬하기 위해서는 새로운 `Map` 을 만들 수 밖에 없다. 이 부분을 효율적으로 변경할 수 없을까?
+
+결론적으로 노래는 id 로 찾을 수 있는 `Map` 을 따로 두고, 노래의 좋아요와 id 내림차순으로 정렬된 상태인 노래 id `List` 를 두어 새롭게 정렬된 `Map` 을 생성하지 않도록 했다.
+
+이렇게 하면 노래 id 만 정렬된 상태로 유지하면 되고, `List` 로 저장하기 때문에 `List.sort` 메서드를 사용할 수 있게 된다. 즉, 새롭게 `List` 를 생성하는 오버헤드를 줄일 수 있다. 
+
+변경된 구조는 다음과 같이 구성된다.
+
+```java
+private static final Comparator<Song> COMPARATOR = Comparator.comparing(Song::getTotalLikeCount,  
+                                                                        Comparator.reverseOrder())  
+    .thenComparing(Song::getId, Comparator.reverseOrder());  
+private Map<Long, Song> songsSortedInLikeCountById;  
+private List<Long> sortedIds;
+```
+
+### 삽입 정렬로 좋아요 정렬 로직 개선
+
+좋아요를 누르거나 취소했을 때 리스트에서 변경되는 값은 노래 하나이다. 즉, 다른 값들은 모두 정렬이 되어 있는데, 노래 하나의 데이터의 위치가 변경되어야 한다는 뜻이다. 대부분이 정렬되어 있는 리스트에서는 삽입 정렬을 사용했을 때 성능이 좋다.
+
+좋아요 개수가 변경되었을 때 노래 아이디를 갖는 리스트를 정렬한다. 
+
+```java
+public void pressLike(final KillingPart killingPart, final KillingPartLike likeOnKillingPart) {  
+    final Song song = songsSortedInLikeCountById.get(killingPart.getSong().getId());  
+    final KillingPart killingPartById = findKillingPart(killingPart, song);  
+    final boolean updated = killingPartById.like(likeOnKillingPart);  
+    if (updated) {  
+        adjustSongPosition(song);  
+    }  
+}
+```
+
+```java
+public void adjustSongPosition(Song changedSong) {  
+    int currentIndex = sortedIds.indexOf(changedSong.getId());  
+  
+    if (currentIndex == -1) {  
+        return; // 노래를 찾지 못했을 경우  
+    }  
+  
+    // 좋아요가 증가한 경우 (높은 좋아요 순으로 앞으로 이동)  
+    if (shouldMoveForward(changedSong, currentIndex)) {  
+        while (currentIndex > 0 &&  
+            shouldSwapWithPrevious(changedSong, songsSortedInLikeCountById.get(sortedIds.get(currentIndex - 1)))) {  
+            // 이전 노래와 위치 교환  
+            swap(sortedIds, currentIndex, currentIndex - 1);  
+            currentIndex--;  
+        }  
+    }    // 좋아요가 감소한 경우 (낮은 좋아요 순으로 뒤로 이동)  
+    else {  
+        while (currentIndex < sortedIds.size() - 1  
+            && shouldSwapWithNext(changedSong, songsSortedInLikeCountById.get(sortedIds.get(currentIndex - 1)))) {  
+            // 다음 노래와 위치 교환  
+            swap(sortedIds, currentIndex, currentIndex + 1);  
+            currentIndex++;  
+        }  
+    }}  
+  
+private boolean shouldMoveForward(Song song, int index) {  
+    return index > 0 && shouldSwapWithPrevious(song, songsSortedInLikeCountById.get(sortedIds.get(index - 1)));  
+}  
+  
+private boolean shouldSwapWithPrevious(Song song, Song previousSong) {  
+    return song.getTotalLikeCount() > previousSong.getTotalLikeCount() ||  
+        (song.getTotalLikeCount() == previousSong.getTotalLikeCount() && song.getId() > previousSong.getId());  
+}  
+  
+private boolean shouldSwapWithNext(Song song, Song nextSong) {  
+    return song.getTotalLikeCount() < nextSong.getTotalLikeCount() ||  
+        (song.getTotalLikeCount() == nextSong.getTotalLikeCount() && song.getId() < nextSong.getId());  
+}  
+  
+private void swap(List<Long> list, int i, int j) {  
+    Long temp = list.get(i);  
+    list.set(i, list.get(j));  
+    list.set(j, temp);  
+}
+```
+
+## 참고
+
+실제 성능 개선이 된 부분은 [[inmemory-cache-develop]] 에서 확인할 수 있다.
