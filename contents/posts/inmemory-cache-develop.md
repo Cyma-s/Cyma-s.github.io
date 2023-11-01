@@ -1,7 +1,7 @@
 ---
 title: 로컬 캐시 개선기
 date: 2023-10-24 13:29:21 +0900
-updated: 2023-10-31 13:37:20 +0900
+updated: 2023-11-01 15:18:39 +0900
 tags:
   - shook
 ---
@@ -214,7 +214,3 @@ private void swap(List<Long> list, int i, int j) {
 비교해야 하는 데이터가 많을수록 시간 복잡도가 증가하기 때문에, 비교해야 하는 데이터가 많은 좋아요 true 의 연산 속도보다 좋아요 false 의 연산 속도가 더 빠른 것을 볼 수 있다. 
 
 ![[insertions-sort-like-sort.png]]
-
-## 참고
-
-- https://www.baeldung.com/hibernate-second-level-cache

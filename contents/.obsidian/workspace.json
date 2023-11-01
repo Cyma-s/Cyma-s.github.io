@@ -52,20 +52,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/inmemory-cache-develop-reason.md",
-                "mode": "preview",
+                "file": "posts/inmemory-cache-develop.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           },
           {
-            "id": "a6146faac719e438",
+            "id": "664d8982cf1a3131",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/english-speaking-oct-4week.md",
+                "file": "posts/interview-questions.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e3e0f13bf5a1dd02",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/shook-my-page-query-improve.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +86,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -148,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/english-speaking-oct-4week.md",
+                "file": "posts/shook-my-page-query-improve.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +178,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/english-speaking-oct-4week.md",
+                "file": "posts/shook-my-page-query-improve.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -236,13 +249,19 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "a6146faac719e438",
+  "active": "e3e0f13bf5a1dd02",
   "lastOpenFiles": [
+    "posts/attachments/Pasted image 20231101162946.png",
+    "posts/mysql-explain.md",
+    "posts/shook-my-page-query-improve.md",
+    "posts/attachments/remove-dto-projection-memberpart-find.png",
+    "posts/attachments/previous-my-part-find.png",
+    "posts/interview-questions.md",
+    "posts/inmemory-cache-develop.md",
+    "posts/inmemory-cache-develop-reason.md",
+    "posts/delivery-hero-employment.md",
     "posts/english-speaking-oct-4week.md",
     "posts/2023-10-31.md",
-    "posts/inmemory-cache-develop.md",
-    "posts/delivery-hero-employment.md",
-    "posts/inmemory-cache-develop-reason.md",
     "posts/2023-10-30.md",
     "posts/attachments/linked-hash-map-all-sort.png",
     "posts/attachments/insertions-sort-like-sort.png",
@@ -265,17 +284,11 @@
     "posts/2023-08-03.md",
     "posts/2023-08-01.md",
     "posts/2023-08-02.md",
-    "posts/2023-07-27.md",
-    "posts/2023-07-31.md",
-    "posts/2023-07-30.md",
-    "posts/2023-07-29.md",
     "posts/attachments/linked-hash-map-local-cache.png",
     "posts/attachments/query-direct-find.png",
     "posts/attachments/db-direct-find.png",
     "dictionary",
     "posts/attachments/not-fit-local-cache.png",
-    "posts/attachments/not-fit-query-db-sort.png",
-    "posts/attachments/not-fit-query.png",
     "template",
     "무제 파일.canvas"
   ]
