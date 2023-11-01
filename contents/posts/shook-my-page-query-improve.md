@@ -1,7 +1,7 @@
 ---
 title: 마이페이지 쿼리 개선
 date: 2023-11-01 16:03:15 +0900
-updated: 2023-11-01 16:52:30 +0900
+updated: 2023-11-01 16:57:35 +0900
 tags:
   - shook
 ---
@@ -14,7 +14,7 @@ tags:
 
 ## 기존 API 성능
 
-기존 쿼리는 DTO Projection 을 사용하여 `Song` 객체를 FETCH JOIN 한다.
+기존 쿼리는 DTO Projection 을 사용하여 Song 객체를 FETCH JOIN 한다.
 
 ```java
 @Query("SELECT s as song, mp as memberPart "  
@@ -125,8 +125,21 @@ public static MyPartsResponse of(final Song song, final MemberPart memberPart) {
 }
 ```
 
-여기에서는 Song 의 artist name 만 사용된다. 필요한 데이터만 가져오기 위해 필요한 정보만 DTO Projection 을 사용했다.
+여기에서는 Song 의 artist name 만 사용된다. 필요한 데이터만 가져오기 위해 필요한 정보만 DTO Projection 을 사용했다. 
 
+그러나 오히려 성능이 악화되었다.  
+
+![[all-property-dto-projection.png]]
+
+실행 계획을 확인해본 결과, Artist 테이블에 대한 전체 테이블 스캔이 발생하고 있었다.  
+
+| id | select\_type | table | partitions | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | SIMPLE | member\_part | null | ref | member\_part\_member\_id | member\_part\_member\_id | 8 | const | 4999 | 100 | null |
+| 1 | SIMPLE | s | null | eq\_ref | PRIMARY | PRIMARY | 8 | shook.member\_part.song\_id | 1 | 100 | null |
+| 1 | SIMPLE | a | null | ALL | PRIMARY | null | null | null | 1 | 100 | Using where; Using join buffer \(hash join\) |
+
+### Artist song_id 컬럼 인덱싱
 
 
 
