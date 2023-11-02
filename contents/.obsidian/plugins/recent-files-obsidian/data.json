@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "inmemory-cache-develop",
+      "path": "posts/inmemory-cache-develop.md"
+    },
+    {
+      "basename": "shook-my-page-query-improve",
+      "path": "posts/shook-my-page-query-improve.md"
+    },
+    {
+      "basename": "obsidian-plugin",
+      "path": "posts/obsidian-plugin.md"
+    },
+    {
+      "basename": "delivery-hero-employment",
+      "path": "posts/delivery-hero-employment.md"
+    },
+    {
       "basename": "interview-questions",
       "path": "posts/interview-questions.md"
     },
@@ -9,8 +25,8 @@
       "path": "posts/2023-11-02.md"
     },
     {
-      "basename": "shook-my-page-query-improve",
-      "path": "posts/shook-my-page-query-improve.md"
+      "basename": "tomcat-thread-pool",
+      "path": "posts/tomcat-thread-pool.md"
     },
     {
       "basename": "Pasted image 20231101222556",
@@ -31,14 +47,6 @@
     {
       "basename": "my-page-my-part-n-plus-one",
       "path": "posts/attachments/my-page-my-part-n-plus-one.png"
-    },
-    {
-      "basename": "delivery-hero-employment",
-      "path": "posts/delivery-hero-employment.md"
-    },
-    {
-      "basename": "inmemory-cache-develop",
-      "path": "posts/inmemory-cache-develop.md"
     },
     {
       "basename": "mysql-explain",
@@ -191,14 +199,6 @@
     {
       "basename": "2023-02-06",
       "path": "posts/2023-02-06.md"
-    },
-    {
-      "basename": "TIL",
-      "path": "template/TIL.md"
-    },
-    {
-      "basename": "2023-02",
-      "path": "posts/2023-02.md"
     }
   ],
   "omittedPaths": [

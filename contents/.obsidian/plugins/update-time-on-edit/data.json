@@ -15,7 +15,7 @@
   "fileHashMap": {
     "posts/2023.md": "53020aa1990cbdeed119f034afc227d8d76f3959ed28a9b7d760ddeb5abd374a",
     "posts/2023-10-29.md": "694ece18ce61a035a8b35696a95895e70f5bbf37639868784d60d878f1785e8c",
-    "posts/inmemory-cache-develop.md": "a83b90657ee8192297cdc4c1759cab3ef8e32f780682f40f6b4dc13924c06c46",
+    "posts/inmemory-cache-develop.md": "f8c510bd0336e4b4ce57089a3eb0f0ad72c0a997ab89170d7942c37b416c59c5",
     "posts/ehcache-apply.md": "9bdb3acb8a62d7dcccc842ce41bee9d17e58790b3cd15ed23f624f941e4555b7",
     "posts/woowacourse-retrospect.md": "49f0d8bf1ea681475d5627e654f204fcc70294cd55ac09c305eea1a1433b2838",
     "posts/2023-10-30.md": "cc42047ce9d9b2f91ad20e60d686cbc606181303d80b77d6f4eebba726bedb93",
@@ -33,6 +33,7 @@
     "posts/english-speaking-oct-4week.md": "3aecd1f5bc601904df24d5bd9cad769e9d0788a2f22ea9569988cb0910f87f33",
     "posts/interview-questions.md": "5614ab9fcee9f4a0c5bd1e583e62882cf936c99f779ceb42d4d9782c76bffc06",
     "posts/shook-my-page-query-improve.md": "2d543dd1d5fda8b48757113fba8e33c124bcf9ff373a064aa24af85d64108e0e",
-    "posts/2023-11-02.md": "9cec457c39b82abfe0a775e35e364691bc480e4126b938c82168138b7d678fd5"
+    "posts/2023-11-02.md": "9cec457c39b82abfe0a775e35e364691bc480e4126b938c82168138b7d678fd5",
+    "posts/obsidian-plugin.md": "9ea027bd50cae20bd7dfb679ec63079ba7aaafcbbc4b488d5871eaf2d2ba8c33"
   }
 }

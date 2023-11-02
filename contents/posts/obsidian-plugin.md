@@ -1,7 +1,7 @@
 ---
 title: Obsidian Plugin 추천
 date: 2023-09-19 12:44:41 +0900
-updated: 2023-09-19 13:26:21 +0900
+updated: 2023-11-02 15:45:55 +0900
 tags:
   - obsidian
 ---
