@@ -1,7 +1,7 @@
 ---
 title: 마이페이지 쿼리 개선
 date: 2023-11-01 16:03:15 +0900
-updated: 2023-11-02 00:00:12 +0900
+updated: 2023-11-02 10:58:42 +0900
 tags:
   - shook
 ---
@@ -82,114 +82,45 @@ List<MemberPart> findByMemberId(
 
 ![[my-page-my-part-artist-fetch-join.png]]
 
-### DB 정렬 
-
-### DTO Projection 제거
-
-확인해본 결과, MemberPart 는 Song 을 LAZY 로딩으로 가져올 수 있다. 
-
-즉, FETCH JOIN 을 사용하면 Song 을 직접 가져올 수 있을 것이라고 생각해서 DTO Projection 을 제거하고 LEFT JOIN FETCH 를 수행해보았다.
-
-```java
-@Query("SELECT mp "  
-    + "FROM MemberPart mp "  
-    + "LEFT JOIN FETCH mp.song s "  
-    + "WHERE mp.member.id = :memberId")  
-List<MemberPart> findByMemberId(  
-    @Param("memberId") final Long memberId  
-);
-```
-
-DTO Projection 만 제거했는데도 성능이 약 35% 개선되었다.
-
-![[remove-dto-projection-memberpart-find.png]]
-
-### N + 1 문제 해결
-
-확인해보니 MyPartsResponse 에서 Song 내부에서 LAZY 하게 로딩되는 Artist 객체를 가져오기 위해 N + 1 문제가 발생하고 있었다.
-
-```java
-public static MyPartsResponse of(final Song song, final MemberPart memberPart) {  
-    return new MyPartsResponse(  
-        song.getId(),  
-        song.getTitle(),  
-        song.getVideoId(),  
-        song.getArtistName(),  // here!
-        song.getAlbumCoverUrl(),  
-        memberPart.getId(),  
-        memberPart.getStartSecond(),  
-        memberPart.getEndSecond()  
-    );  
-}
-```
-
-이를 해결하기 위해 `Artist` 의 정보를 LEFT JOIN FETCH 로 가져왔다.  
-
-```java
-@Query("SELECT mp "  
-    + "FROM MemberPart mp "  
-    + "LEFT JOIN FETCH mp.song s "  
-    + "LEFT JOIN FETCH s.artist a "  
-    + "WHERE mp.member.id = :memberId")  
-List<MemberPart> findByMemberId(  
-    @Param("memberId") final Long memberId  
-);
-```
-
-N + 1 문제가 해결되어 7% 의 성능 개선이 된 것을 확인할 수 있다.
-
-![[Pasted image 20231101222556.png]]
-
 ### 인덱스 적용
 
-실행 계획을 확인한 결과, 어떤 column 에도 인덱스가 걸려있지 않아 제일row 수가 적은 artist 가 hash table 을 만들 때 선택되었다.  
-Nested loop left join 으로 member 테이블을 full scan 한 뒤, member 를 찾아온다. 그 다음 member_part 별로 song 의 row 를 primary key 로 비교하며 찾는다. 이렇게 song 을 가져오고  artist hash table 에 통과시켜 결과를 반환하고 있다. 
+실행 계획을 확인해보면 member_part 를 찾을 때 Table All Scan 이 발생하고 있다. 
+
+| id | select\_type | table | partitions | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | SIMPLE | member\_part | null | ALL | null | null | null | null | 9679 | 10 | Using where |
+| 1 | SIMPLE | s | null | eq\_ref | PRIMARY | PRIMARY | 8 | shook.member\_part.song\_id | 1 | 100 | null |
+| 1 | SIMPLE | a | null | eq\_ref | PRIMARY | PRIMARY | 8 | shook.s.artist\_id | 1 | 100 | null |
 
 ```bash
-| -> Left hash join (a.id = s.artist_id)  (cost=102 rows=1000) (actual time=0.365..27.4 rows=10000 loops=1)
-    -> Nested loop left join  (cost=1374 rows=1000) (actual time=0.231..25 rows=10000 loops=1)
-        -> Filter: (member_part.member_id = 1)  (cost=1024 rows=1000) (actual time=0.15..4.62 rows=10000 loops=1)
-            -> Table scan on member_part  (cost=1024 rows=9999) (actual time=0.149..3.83 rows=10000 loops=1)
-        -> Single-row index lookup on s using PRIMARY (id=member_part.song_id)  (cost=0.25 rows=1) (actual time=0.00184..0.00187 rows=1 loops=10000)
-    -> Hash
-        -> Table scan on a  (cost=0.00205 rows=1) (actual time=0.102..0.106 rows=1 loops=1)
- |
+-> Nested loop left join  (cost=1670 rows=968) (actual time=0.301..7.45 rows=100 loops=1)  
+    -> Nested loop left join  (cost=1331 rows=968) (actual time=0.261..7.37 rows=100 loops=1)  
+        -> Filter: (member_part.member_id = 1)  (cost=992 rows=968) (actual time=0.173..6.29 rows=100 loops=1)  
+            -> Table scan on member_part  (cost=992 rows=9679) (actual time=0.172..5.67 rows=10000 loops=1)  
+        -> Single-row index lookup on s using PRIMARY (id=member_part.song_id)  (cost=0.25 rows=1) (actual time=0.0105..0.0106 rows=1 loops=100)  
+    -> Single-row index lookup on a using PRIMARY (id=s.artist_id)  (cost=0.25 rows=1) (actual time=588e-6..627e-6 rows=1 loops=100)
 ```
 
-hash join 을 방지하기 위해 artist_id 에 인덱스를 걸어주었다. 
+이를 방지하기 위해 member_part 의 member_id 에 인덱스를 걸어주었다.
 
-```sql
-create index member_part_member_id on member_part(member_id);  
-```
-
-측정 결과, 쿼리 속도는 113ms 이고, 실행 계획도 인덱스를 사용하여 조인을 수행한 것을 볼 수 있다.
+쿼리 실행 계획에서 member_id 인덱스를 가지고 쿼리를 실행하는 것을 확인할 수 있다. 
 
 | id | select\_type | table | partitions | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | SIMPLE | member\_part | null | ref | member\_part\_member\_id | member\_part\_member\_id | 8 | const | 4999 | 100 | null |
+| 1 | SIMPLE | member\_part | null | ref | member\_part\_member\_id | member\_part\_member\_id | 8 | const | 100 | 100 | null |
 | 1 | SIMPLE | s | null | eq\_ref | PRIMARY | PRIMARY | 8 | shook.member\_part.song\_id | 1 | 100 | null |
+| 1 | SIMPLE | a | null | eq\_ref | PRIMARY | PRIMARY | 8 | shook.s.artist\_id | 1 | 100 | null |
 
-그렇지만 성능이 향상되지는 않았다. 
+분석에서도 Table Scan 항목이 사라졌다.
 
-![[Pasted image 20231101162946.png]]
+```bash
+-> Nested loop left join  (cost=105 rows=100) (actual time=0.267..0.532 rows=100 loops=1)  
+    -> Nested loop left join  (cost=70 rows=100) (actual time=0.261..0.49 rows=100 loops=1)  
+        -> Index lookup on member_part using member_part_member_id (member_id=1)  (cost=35 rows=100) (actual time=0.251..0.272 rows=100 loops=1)  
+        -> Single-row index lookup on s using PRIMARY (id=member_part.song_id)  (cost=0.251 rows=1) (actual time=0.00194..0.00197 rows=1 loops=100)  
+    -> Single-row index lookup on a using PRIMARY (id=s.artist_id)  (cost=0.251 rows=1) (actual time=200e-6..237e-6 rows=1 loops=100)
+```
 
+응답 속도도 평균 13ms 로 성능이 약 43% 개선된 것을 확인할 수 있다.
 
-
-그러나 오히려 성능이 악화되었다.  
-
-![[all-property-dto-projection.png]]
-
-실행 계획을 확인해본 결과, Artist 테이블에 대한 전체 테이블 스캔이 발생하고 있었다.  
-
-| id | select\_type | table | partitions | type | possible\_keys | key | key\_len | ref | rows | filtered | Extra |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | SIMPLE | member\_part | null | ref | member\_part\_member\_id | member\_part\_member\_id | 8 | const | 4999 | 100 | null |
-| 1 | SIMPLE | s | null | eq\_ref | PRIMARY | PRIMARY | 8 | shook.member\_part.song\_id | 1 | 100 | null |
-| 1 | SIMPLE | a | null | ALL | PRIMARY | null | null | null | 1 | 100 | Using where; Using join buffer \(hash join\) |
-
-### Artist song_id 컬럼 인덱싱
-
-
-
-### 데이터베이스에서 정렬된 데이터를 쿼리하도록 변경
-
+![[member-id-indexing.png]]

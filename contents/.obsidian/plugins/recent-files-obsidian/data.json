@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "interview-questions",
+      "path": "posts/interview-questions.md"
+    },
+    {
+      "basename": "2023-11-02",
+      "path": "posts/2023-11-02.md"
+    },
+    {
       "basename": "shook-my-page-query-improve",
       "path": "posts/shook-my-page-query-improve.md"
+    },
+    {
+      "basename": "Pasted image 20231101222556",
+      "path": "posts/attachments/Pasted image 20231101222556.png"
     },
     {
       "basename": "linked-hash-map-local-cache-develop",
@@ -27,10 +39,6 @@
     {
       "basename": "inmemory-cache-develop",
       "path": "posts/inmemory-cache-develop.md"
-    },
-    {
-      "basename": "interview-questions",
-      "path": "posts/interview-questions.md"
     },
     {
       "basename": "mysql-explain",
@@ -191,10 +199,6 @@
     {
       "basename": "2023-02",
       "path": "posts/2023-02.md"
-    },
-    {
-      "basename": "cache-and-cacheable",
-      "path": "posts/cache-and-cacheable.md"
     }
   ],
   "omittedPaths": [

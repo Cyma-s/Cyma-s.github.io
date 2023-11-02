@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/shook-my-page-query-improve.md",
+                "file": "posts/2023-11-02.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/shook-my-page-query-improve.md",
+                "file": "posts/interview-questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/shook-my-page-query-improve.md",
+                "file": "posts/interview-questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,8 +198,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 693.5,
-    "collapsed": true
+    "width": 693.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -223,8 +222,13 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "e3e0f13bf5a1dd02",
+  "active": "664d8982cf1a3131",
   "lastOpenFiles": [
+    "posts/2023-11-02.md",
+    "posts/shook-my-page-query-improve.md",
+    "posts/attachments/member-id-indexing.png",
+    "posts/attachments/Pasted image 20231101222556.png",
+    "posts/attachments/Pasted image 20231101162946.png",
     "posts/attachments/my-page-my-part-artist-fetch-join.png",
     "posts/attachments/linked-hash-map-local-cache-develop.png",
     "posts/attachments/linked-hash-map-all-sort.png",
@@ -234,13 +238,8 @@
     "posts/delivery-hero-employment.md",
     "posts/inmemory-cache-develop.md",
     "posts/interview-questions.md",
-    "posts/shook-my-page-query-improve.md",
-    "posts/attachments/Pasted image 20231101222556.png",
     "posts/attachments/all-property-dto-projection.png",
-    "posts/attachments/Pasted image 20231101162946.png",
     "posts/mysql-explain.md",
-    "posts/attachments/remove-dto-projection-memberpart-find.png",
-    "posts/attachments/previous-my-part-find.png",
     "posts/inmemory-cache-develop-reason.md",
     "posts/english-speaking-oct-4week.md",
     "posts/2023-10-31.md",
