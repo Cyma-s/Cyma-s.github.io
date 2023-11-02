@@ -5,24 +5,40 @@
       "path": "posts/shook-my-page-query-improve.md"
     },
     {
-      "basename": "mysql-explain",
-      "path": "posts/mysql-explain.md"
+      "basename": "linked-hash-map-local-cache-develop",
+      "path": "posts/attachments/linked-hash-map-local-cache-develop.png"
     },
     {
-      "basename": "interview-questions",
-      "path": "posts/interview-questions.md"
+      "basename": "linked-hash-map-all-sort",
+      "path": "posts/attachments/linked-hash-map-all-sort.png"
+    },
+    {
+      "basename": "my-page-my-part-find",
+      "path": "posts/attachments/my-page-my-part-find.png"
+    },
+    {
+      "basename": "my-page-my-part-n-plus-one",
+      "path": "posts/attachments/my-page-my-part-n-plus-one.png"
+    },
+    {
+      "basename": "delivery-hero-employment",
+      "path": "posts/delivery-hero-employment.md"
     },
     {
       "basename": "inmemory-cache-develop",
       "path": "posts/inmemory-cache-develop.md"
     },
     {
-      "basename": "inmemory-cache-develop-reason",
-      "path": "posts/inmemory-cache-develop-reason.md"
+      "basename": "interview-questions",
+      "path": "posts/interview-questions.md"
     },
     {
-      "basename": "delivery-hero-employment",
-      "path": "posts/delivery-hero-employment.md"
+      "basename": "mysql-explain",
+      "path": "posts/mysql-explain.md"
+    },
+    {
+      "basename": "inmemory-cache-develop-reason",
+      "path": "posts/inmemory-cache-develop-reason.md"
     },
     {
       "basename": "english-speaking-oct-4week",
@@ -179,14 +195,6 @@
     {
       "basename": "cache-and-cacheable",
       "path": "posts/cache-and-cacheable.md"
-    },
-    {
-      "basename": "shook-like-concurrency-issue",
-      "path": "posts/shook-like-concurrency-issue.md"
-    },
-    {
-      "basename": "singleton-vs-static",
-      "path": "posts/singleton-vs-static.md"
     }
   ],
   "omittedPaths": [
