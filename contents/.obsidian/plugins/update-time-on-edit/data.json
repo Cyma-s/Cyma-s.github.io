@@ -37,6 +37,7 @@
     "posts/obsidian-plugin.md": "9ea027bd50cae20bd7dfb679ec63079ba7aaafcbbc4b488d5871eaf2d2ba8c33",
     "posts/2023-11-03.md": "96298213b5d08c3f633ca3cfc4d1b4494e53503c5f820067ad433f919d636ebe",
     "posts/entity-manager-readonly.md": "2448a28b25e037e88ce53c06e85c68e11779c3d734f61549d7d88957e3b1ee7f",
-    "posts/transaction.md": "89fceddd42fb2d627ddeaca7185475f97eec0a343a419d6b54357f55b4a34d6e"
+    "posts/transaction.md": "9dc32050ebb570899d347cefcb7dabbe0f9e45a54f3b63b6ee6b92835b2de093",
+    "posts/mysql-execution-plan.md": "b42db6ecadd1e251c55cfea3c104c011b1f77c6748f2a895efad356dd028c9b3"
   }
 }

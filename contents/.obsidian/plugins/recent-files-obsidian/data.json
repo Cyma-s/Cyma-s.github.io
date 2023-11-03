@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "mysql-execution-plan",
+      "path": "posts/mysql-execution-plan.md"
+    },
+    {
       "basename": "transaction",
       "path": "posts/transaction.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "api-docs-search",
       "path": "posts/api-docs-search.md"
-    },
-    {
-      "basename": "2023-04-28",
-      "path": "posts/2023-04-28.md"
     }
   ],
   "omittedPaths": [
