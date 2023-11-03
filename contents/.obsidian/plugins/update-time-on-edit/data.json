@@ -29,11 +29,14 @@
     "posts/2023-10-21.md": "b854e19171c5a0964dd11438a5fb03f369439bf9e6fa2573809c9ff87fb1ae62",
     "posts/2023-10-23.md": "5cf6b30cfe8dfa84cd3e3a1cc70430978ca820503dafbe1f8667003614e24e0a",
     "posts/inmemory-cache-develop-reason.md": "1d888013d1662ef1b17791ac0b73ee7a97e942231f0b4ab1a1e915dd65818316",
-    "posts/2023-10-31.md": "0530e2c54593846abb9a8811f4bef7749f95d58aae694062f5418d84348a4298",
+    "posts/2023-10-31.md": "0b077b69c75c185f1eea68509186d06b17a6bc161ebf6508f143f0e265517842",
     "posts/english-speaking-oct-4week.md": "3aecd1f5bc601904df24d5bd9cad769e9d0788a2f22ea9569988cb0910f87f33",
-    "posts/interview-questions.md": "5614ab9fcee9f4a0c5bd1e583e62882cf936c99f779ceb42d4d9782c76bffc06",
+    "posts/interview-questions.md": "a9c6ce3abf842aa22c16df796f302ebacc628c5764e868e5ba60580b0adb996f",
     "posts/shook-my-page-query-improve.md": "2d543dd1d5fda8b48757113fba8e33c124bcf9ff373a064aa24af85d64108e0e",
     "posts/2023-11-02.md": "9cec457c39b82abfe0a775e35e364691bc480e4126b938c82168138b7d678fd5",
-    "posts/obsidian-plugin.md": "9ea027bd50cae20bd7dfb679ec63079ba7aaafcbbc4b488d5871eaf2d2ba8c33"
+    "posts/obsidian-plugin.md": "9ea027bd50cae20bd7dfb679ec63079ba7aaafcbbc4b488d5871eaf2d2ba8c33",
+    "posts/2023-11-03.md": "96298213b5d08c3f633ca3cfc4d1b4494e53503c5f820067ad433f919d636ebe",
+    "posts/entity-manager-readonly.md": "2448a28b25e037e88ce53c06e85c68e11779c3d734f61549d7d88957e3b1ee7f",
+    "posts/transaction.md": "89fceddd42fb2d627ddeaca7185475f97eec0a343a419d6b54357f55b4a34d6e"
   }
 }
