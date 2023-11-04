@@ -23,6 +23,19 @@
             }
           },
           {
+            "id": "41377914b7e20340",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/readme.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "664d8982cf1a3131",
             "type": "leaf",
             "state": {
@@ -47,9 +60,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e1bf033876e59787",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2023-11.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/mysql-execution-plan.md",
+                "file": "posts/readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/mysql-execution-plan.md",
+                "file": "posts/readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -212,13 +238,15 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "d1146765ef3d19a7",
+  "active": "41377914b7e20340",
   "lastOpenFiles": [
+    "posts/2023-11.md",
+    "posts/readme.md",
     "posts/2023-11-04.md",
+    "posts/mysql-execution-plan.md",
     "posts/delivery-hero-employment.md",
     "posts/interview-questions.md",
     "posts/inmemory-cache-develop.md",
-    "posts/mysql-execution-plan.md",
     "posts/shook-my-page-query-improve.md",
     "posts/tomcat-thread-pool.md",
     "posts/transaction.md",
@@ -249,8 +277,6 @@
     "posts/2023-10-29.md",
     "posts/woowacourse-retrospect.md",
     "posts/2023-08-04.md",
-    "posts/2023-08-08.md",
-    "posts/2023-08-11.md",
     "dictionary",
     "template",
     "무제 파일.canvas"

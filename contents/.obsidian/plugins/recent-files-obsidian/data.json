@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "mysql-execution-plan",
-      "path": "posts/mysql-execution-plan.md"
+      "basename": "readme",
+      "path": "posts/readme.md"
+    },
+    {
+      "basename": "2023-11",
+      "path": "posts/2023-11.md"
     },
     {
       "basename": "2023-11-04",
       "path": "posts/2023-11-04.md"
+    },
+    {
+      "basename": "mysql-execution-plan",
+      "path": "posts/mysql-execution-plan.md"
     },
     {
       "basename": "delivery-hero-employment",
@@ -191,14 +199,6 @@
     {
       "basename": "shook-third-demoday-retrospect",
       "path": "posts/shook-third-demoday-retrospect.md"
-    },
-    {
-      "basename": "shook-five-minute-speech",
-      "path": "posts/shook-five-minute-speech.md"
-    },
-    {
-      "basename": "meeting-process-refactoring-request",
-      "path": "posts/meeting-process-refactoring-request.md"
     }
   ],
   "omittedPaths": [
