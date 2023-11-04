@@ -23,38 +23,12 @@
             }
           },
           {
-            "id": "d76519f45696dfac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/delivery-hero-employment.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "664d8982cf1a3131",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "posts/interview-questions.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c78e813bc2e8fbe6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/inmemory-cache-develop.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -75,7 +49,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -240,10 +214,10 @@
   },
   "active": "d1146765ef3d19a7",
   "lastOpenFiles": [
-    "posts/inmemory-cache-develop.md",
-    "posts/interview-questions.md",
-    "posts/delivery-hero-employment.md",
     "posts/2023-11-04.md",
+    "posts/delivery-hero-employment.md",
+    "posts/interview-questions.md",
+    "posts/inmemory-cache-develop.md",
     "posts/mysql-execution-plan.md",
     "posts/shook-my-page-query-improve.md",
     "posts/tomcat-thread-pool.md",

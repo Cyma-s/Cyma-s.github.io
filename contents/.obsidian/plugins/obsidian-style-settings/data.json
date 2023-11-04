@@ -48,5 +48,13 @@
   "anuppuccin-theme-settings@@anp-background-image-toggle": false,
   "anuppuccin-theme-settings@@anp-canvas-dark-bg": false,
   "catppuccin-theme-settings@@catppuccin-theme-dark": "ctp-mocha",
-  "catppuccin-icon-styles@@ctp-icon-hide": true
+  "catppuccin-icon-styles@@ctp-icon-hide": true,
+  "things-style@@active-line": false,
+  "things-style@@fancy-highlight": true,
+  "things-style@@link-decoration": "None",
+  "things-style@@strong-color": "#00ACFF",
+  "things-style@@h4-color": "#44AD24",
+  "things-style@@h2-color": "#E31D56",
+  "things-style@@em-color": "#828EFF",
+  "things-style@@quote-color": "#413EBF"
 }
