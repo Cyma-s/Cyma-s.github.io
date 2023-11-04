@@ -46,5 +46,7 @@
   "anuppuccin-theme-settings@@anp-rainbow-file-toggle": false,
   "anuppuccin-theme-settings@@anp-colorful-frame-icon-toggle-dark": false,
   "anuppuccin-theme-settings@@anp-background-image-toggle": false,
-  "anuppuccin-theme-settings@@anp-canvas-dark-bg": false
+  "anuppuccin-theme-settings@@anp-canvas-dark-bg": false,
+  "catppuccin-theme-settings@@catppuccin-theme-dark": "ctp-mocha",
+  "catppuccin-icon-styles@@ctp-icon-hide": true
 }

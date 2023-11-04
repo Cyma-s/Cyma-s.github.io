@@ -5,6 +5,30 @@
       "path": "posts/mysql-execution-plan.md"
     },
     {
+      "basename": "inmemory-cache-develop",
+      "path": "posts/inmemory-cache-develop.md"
+    },
+    {
+      "basename": "interview-questions",
+      "path": "posts/interview-questions.md"
+    },
+    {
+      "basename": "delivery-hero-employment",
+      "path": "posts/delivery-hero-employment.md"
+    },
+    {
+      "basename": "2023-11-04",
+      "path": "posts/2023-11-04.md"
+    },
+    {
+      "basename": "shook-my-page-query-improve",
+      "path": "posts/shook-my-page-query-improve.md"
+    },
+    {
+      "basename": "tomcat-thread-pool",
+      "path": "posts/tomcat-thread-pool.md"
+    },
+    {
       "basename": "transaction",
       "path": "posts/transaction.md"
     },
@@ -13,16 +37,8 @@
       "path": "posts/entity-manager-readonly.md"
     },
     {
-      "basename": "interview-questions",
-      "path": "posts/interview-questions.md"
-    },
-    {
       "basename": "2023-11-02",
       "path": "posts/2023-11-02.md"
-    },
-    {
-      "basename": "tomcat-thread-pool",
-      "path": "posts/tomcat-thread-pool.md"
     },
     {
       "basename": "2023-11-03",
@@ -31,18 +47,6 @@
     {
       "basename": "2023-10-31",
       "path": "posts/2023-10-31.md"
-    },
-    {
-      "basename": "delivery-hero-employment",
-      "path": "posts/delivery-hero-employment.md"
-    },
-    {
-      "basename": "inmemory-cache-develop",
-      "path": "posts/inmemory-cache-develop.md"
-    },
-    {
-      "basename": "shook-my-page-query-improve",
-      "path": "posts/shook-my-page-query-improve.md"
     },
     {
       "basename": "obsidian-plugin",
@@ -195,10 +199,6 @@
     {
       "basename": "meeting-process-refactoring-request",
       "path": "posts/meeting-process-refactoring-request.md"
-    },
-    {
-      "basename": "api-docs-search",
-      "path": "posts/api-docs-search.md"
     }
   ],
   "omittedPaths": [

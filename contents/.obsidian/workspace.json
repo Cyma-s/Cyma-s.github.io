@@ -8,16 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1fb313241c8e3391",
+            "id": "9bfb8f03bfb3c0a6",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-03.md",
+                "file": "posts/2023-11-04.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
+              },
+              "pinned": true
             }
           },
           {
@@ -47,38 +49,12 @@
             }
           },
           {
-            "id": "9bfb8f03bfb3c0a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/tomcat-thread-pool.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c78e813bc2e8fbe6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "posts/inmemory-cache-develop.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ec87ae6133e037bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/transaction.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +75,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -264,17 +240,18 @@
   },
   "active": "d1146765ef3d19a7",
   "lastOpenFiles": [
+    "posts/inmemory-cache-develop.md",
+    "posts/interview-questions.md",
+    "posts/delivery-hero-employment.md",
+    "posts/2023-11-04.md",
     "posts/mysql-execution-plan.md",
+    "posts/shook-my-page-query-improve.md",
+    "posts/tomcat-thread-pool.md",
     "posts/transaction.md",
     "posts/entity-manager-readonly.md",
-    "posts/interview-questions.md",
     "posts/2023-11-02.md",
-    "posts/tomcat-thread-pool.md",
     "posts/2023-11-03.md",
     "posts/2023-10-31.md",
-    "posts/delivery-hero-employment.md",
-    "posts/inmemory-cache-develop.md",
-    "posts/shook-my-page-query-improve.md",
     "posts/obsidian-plugin.md",
     "posts/attachments/member-id-indexing.png",
     "posts/attachments/Pasted image 20231101222556.png",
@@ -300,7 +277,6 @@
     "posts/2023-08-04.md",
     "posts/2023-08-08.md",
     "posts/2023-08-11.md",
-    "posts/2023-08-15.md",
     "dictionary",
     "template",
     "무제 파일.canvas"
