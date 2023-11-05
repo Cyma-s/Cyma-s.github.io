@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "avl-tree",
+      "path": "posts/avl-tree.md"
+    },
+    {
+      "basename": "binary-search-tree",
+      "path": "posts/binary-search-tree.md"
+    },
+    {
+      "basename": "interview-questions",
+      "path": "posts/interview-questions.md"
+    },
+    {
+      "basename": "2023-11-04",
+      "path": "posts/2023-11-04.md"
+    },
+    {
       "basename": "readme",
       "path": "posts/readme.md"
     },
@@ -9,20 +25,12 @@
       "path": "posts/2023-11.md"
     },
     {
-      "basename": "2023-11-04",
-      "path": "posts/2023-11-04.md"
-    },
-    {
       "basename": "mysql-execution-plan",
       "path": "posts/mysql-execution-plan.md"
     },
     {
       "basename": "delivery-hero-employment",
       "path": "posts/delivery-hero-employment.md"
-    },
-    {
-      "basename": "interview-questions",
-      "path": "posts/interview-questions.md"
     },
     {
       "basename": "inmemory-cache-develop",
@@ -191,14 +199,6 @@
     {
       "basename": "wiki-index",
       "path": "posts/wiki-index.md"
-    },
-    {
-      "basename": "matzip_pair",
-      "path": "posts/matzip_pair.md"
-    },
-    {
-      "basename": "shook-third-demoday-retrospect",
-      "path": "posts/shook-third-demoday-retrospect.md"
     }
   ],
   "omittedPaths": [

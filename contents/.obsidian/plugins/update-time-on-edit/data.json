@@ -31,7 +31,7 @@
     "posts/inmemory-cache-develop-reason.md": "1d888013d1662ef1b17791ac0b73ee7a97e942231f0b4ab1a1e915dd65818316",
     "posts/2023-10-31.md": "0b077b69c75c185f1eea68509186d06b17a6bc161ebf6508f143f0e265517842",
     "posts/english-speaking-oct-4week.md": "3aecd1f5bc601904df24d5bd9cad769e9d0788a2f22ea9569988cb0910f87f33",
-    "posts/interview-questions.md": "a9c6ce3abf842aa22c16df796f302ebacc628c5764e868e5ba60580b0adb996f",
+    "posts/interview-questions.md": "173e268ba35424fbd34b9e180125ae6a3df812af8f2abe198f303f5405104121",
     "posts/shook-my-page-query-improve.md": "2d543dd1d5fda8b48757113fba8e33c124bcf9ff373a064aa24af85d64108e0e",
     "posts/2023-11-02.md": "9cec457c39b82abfe0a775e35e364691bc480e4126b938c82168138b7d678fd5",
     "posts/obsidian-plugin.md": "9ea027bd50cae20bd7dfb679ec63079ba7aaafcbbc4b488d5871eaf2d2ba8c33",
@@ -41,6 +41,8 @@
     "posts/mysql-execution-plan.md": "b612ccb9452e4cd012cb0d2a03cd85166fcc733f6d84f94add25266248683d30",
     "posts/2023-11-04.md": "5a80f5679375d6fc3e01c061c7de45e1bbbcd669fe5fa7b776d1f7cf05364736",
     "posts/2023-11.md": "1290ecb872246bca03d2af2caba20681d34fb742354a4f172010cc51661f940b",
-    "posts/readme.md": "0eb69d2c7df30b331716fe61f52a3787f752982756091bf532f9eca69a68f746"
+    "posts/readme.md": "0eb69d2c7df30b331716fe61f52a3787f752982756091bf532f9eca69a68f746",
+    "posts/binary-search-tree.md": "0d338a7f19a0fdfa82d2dc421ddda820de253d052d7634e203c8795049c518ab",
+    "posts/avl-tree.md": "250c6de422a9884a75c213d9e0ab0caa2eb00f1635bf6adac0a07dcc2ad79ad3"
   }
 }
