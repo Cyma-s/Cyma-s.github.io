@@ -47,9 +47,48 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "dd817afbd4101e85",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/segment-tree.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5a28405c68204e97",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/dh-interview-study.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "704cb24727309d46",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/dh-interview-study-11-07.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -124,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/avl-tree.md",
+                "file": "posts/dh-interview-study-11-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +180,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/avl-tree.md",
+                "file": "posts/dh-interview-study-11-07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +227,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/avl-tree.md"
+                "file": "posts/dh-interview-study-11-07.md"
               }
             }
           }
@@ -222,21 +261,24 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0c6d07a717475e7e",
+  "active": "704cb24727309d46",
   "lastOpenFiles": [
+    "posts/dh-interview-study.md",
+    "posts/dh-interview-study-11-07.md",
+    "posts/segment-tree.md",
+    "posts/binary-search-tree.md",
+    "posts/avl-tree.md",
     "posts/attachments/right-left-right-left.png",
     "posts/attachments/left-right-left-right.png",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/right-right-left-rotation.png",
     "posts/attachments/Pasted image 20231101222556.png",
     "posts/attachments/Pasted image 20231024151645.png",
-    "posts/avl-tree.md",
     "posts/left-left-right-rotation.png.md",
     "posts/attachments/Pasted image 20231106153648.png",
     "posts/attachments/linked-hash-map-local-cache-develop.png",
     "posts/attachments/right-right-left-rotation.png",
     "posts/attachments/left-left-case.png",
-    "posts/binary-search-tree.md",
     "posts/2023-11-05.md",
     "posts/interview-questions.md",
     "posts/2023-11-04.md",
@@ -253,13 +295,10 @@
     "posts/2023-11-03.md",
     "posts/2023-10-31.md",
     "posts/obsidian-plugin.md",
-    "posts/attachments/member-id-indexing.png",
     "posts/mysql-explain.md",
     "posts/inmemory-cache-develop-reason.md",
     "posts/english-speaking-oct-4week.md",
     "posts/2023-10-30.md",
-    "posts/ehcache-apply.md",
-    "posts/2023-08-05.md",
     "calendar",
     "dictionary",
     "template",

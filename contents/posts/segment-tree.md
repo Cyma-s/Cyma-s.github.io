@@ -1,7 +1,7 @@
 ---
 title: 세그먼트 트리
 date: 2023-10-16 08:19:20 +0900
-updated: 2023-10-16 08:39:56 +0900
+updated: 2023-11-06 18:13:34 +0900
 tags:
   - algorithm
 ---
@@ -33,6 +33,23 @@ def init(start, end, index):
 	return tree[index]
 ```
 
+```java
+public void init(int[] tree, int[] input) { // tree 는 이미 0으로 초기화된 상태 (덧셈 세그먼트 트리에서)
+	int treeSize = 2;
+	while (treeSize <= input.length * 2) {
+		treeSize *= 2;
+	}
+
+	for(int i = 0; i<input.length; i++) {
+		tree[(treeSize / 2 + i)] = input[i];
+	}
+
+	for(int i = treeSize / 2 - 1; i >= 1; i--) {
+		tree[i] = tree[i *2] + tree[i *2 + 1];
+	}
+}
+```
+
 세그먼트 트리의 인덱스와 구간 합은 별개의 값이다.
 
 ## 세그먼트 트리로 구간 합 구하기
@@ -49,6 +66,28 @@ def interval_sum(start, end, index, left, right):
 	return interval_sum(start, mid, index * 2, left, right) + interval_sum(mid + 1, end, index*2 + 1, left, right)
 ```
 
+```java
+public static int sum(int[] tree, int l, int r) {
+	int leaf = tree.size / 2;
+	l += leaf;
+	r += leaf;
+
+	int sum = 0;
+
+	while(l <= r) {
+		if(l % 2 != 0) { // 왼쪽 포인터가 오른쪽 노드일 때
+			sum += tree[l];
+		}
+		if(r % 2 == 0) {
+			sum += tree[r];
+		}
+		l = (l + 1) % 2;
+		r = (r + 1) % 2;
+	}
+	return sum;
+}
+```
+
 ## 특정 원소의 값을 수정하기
 
 ```python
@@ -63,3 +102,14 @@ def update(start, end, index, what, value):  # what: 구간 합을 수정할 노
     update(mid + 1, end, index * 2 + 1, what, value)
 ```
 
+```java
+public void update(int[] tree, int index, int value) {
+	int leaf = tree.length / 2;
+	index += leaf;
+	int gap = value - tree[index];
+	while(index > 0) {
+		tree[index] += gap;
+		index /= 2;
+	}
+}
+```
