@@ -9,6 +9,10 @@
       "path": "posts/binary-search-tree.md"
     },
     {
+      "basename": "2023-11-05",
+      "path": "posts/2023-11-05.md"
+    },
+    {
       "basename": "interview-questions",
       "path": "posts/interview-questions.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "2023",
       "path": "posts/2023.md"
-    },
-    {
-      "basename": "wiki-index",
-      "path": "posts/wiki-index.md"
     }
   ],
   "omittedPaths": [

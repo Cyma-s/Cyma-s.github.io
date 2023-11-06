@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3f2f629c159469ef",
+        "id": "e17b05dbfa931707",
         "type": "tabs",
         "children": [
           {
-            "id": "9bfb8f03bfb3c0a6",
+            "id": "8b0cbc5a09ae940a",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-04.md",
+                "file": "posts/2023-11-05.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -23,72 +23,7 @@
             }
           },
           {
-            "id": "41377914b7e20340",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/readme.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "664d8982cf1a3131",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/interview-questions.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d1146765ef3d19a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/mysql-execution-plan.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e1bf033876e59787",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-11.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a0503534e3bcbcdc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/binary-search-tree.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6dc16a4600ee6d66",
+            "id": "0c6d07a717475e7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -99,9 +34,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c125cad80667caba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/binary-search-tree.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -233,6 +181,16 @@
               "type": "full-calendar-view",
               "state": {}
             }
+          },
+          {
+            "id": "56df0e599aa3db2b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "posts/avl-tree.md"
+              }
+            }
           }
         ],
         "currentTab": 5
@@ -259,15 +217,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "meld-encrypt:New encrypted note": false,
       "meld-encrypt:Convert to or from an Encrypted note": false,
-      "periodic-notes:Open today": false,
       "obsidian-day-planner:Timeline": false,
-      "homepage:Open homepage": false
+      "homepage:Open homepage": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "6dc16a4600ee6d66",
+  "active": "0c6d07a717475e7e",
   "lastOpenFiles": [
-    "posts/avl-tree.md",
+    "posts/attachments/left-left-right-rotation.png",
+    "posts/attachments/left-left-case.png",
     "posts/binary-search-tree.md",
+    "posts/avl-tree.md",
+    "posts/2023-11-05.md",
     "posts/interview-questions.md",
     "posts/2023-11-04.md",
     "posts/readme.md",
@@ -292,7 +253,6 @@
     "posts/attachments/my-page-my-part-artist-fetch-join.png",
     "posts/attachments/my-page-my-part-find.png",
     "posts/attachments/my-page-my-part-n-plus-one.png",
-    "posts/attachments/all-property-dto-projection.png",
     "posts/mysql-explain.md",
     "posts/inmemory-cache-develop-reason.md",
     "posts/english-speaking-oct-4week.md",
@@ -301,8 +261,6 @@
     "posts/2023-08-05.md",
     "calendar/2023-10-30 캐싱 테스트 글쓰기.md",
     "calendar",
-    "posts/무제 파일.md",
-    "posts/2023-10-29.md",
     "dictionary",
     "template",
     "무제 파일.canvas"
