@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 04 Nov 2023 07:21:09 GMT</lastBuildDate><item><title><![CDATA[2023년 11월 04일]]></title><description><![CDATA[TODO 실행 계획 정리 [startTime:: 15:00]  [endTime:: 16:00] 면접 키워드 작성하기 [startTime:: 16:00] [endTime:: 18:00] LOG…]]></description><link>https://vero.wiki/2023-11-04/</link><guid isPermaLink="false">https://vero.wiki/2023-11-04/</guid><pubDate>Sat, 04 Nov 2023 06:08:53 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of VERO WIKI]]></title><description><![CDATA[내가 몰랐던 지식은 모두 VERO WIKI에]]></description><link>https://vero.wiki</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Nov 2023 04:35:20 GMT</lastBuildDate><item><title><![CDATA[이진 탐색 트리]]></title><description><![CDATA[…]]></description><link>https://vero.wiki/binary-search-tree/</link><guid isPermaLink="false">https://vero.wiki/binary-search-tree/</guid><pubDate>Sun, 05 Nov 2023 07:12:33 GMT</pubDate><content:encoded>&lt;h2&gt;이진 탐색 트리란&lt;/h2&gt;
+&lt;p&gt;이진 탐색과 연결 리스트를 결합한 자료구조의 일종이다.&lt;/p&gt;
+&lt;p&gt;다음과 같은 속성을 갖는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;각 노드의 왼쪽 서브트리에는 해당 노드의 값보다 작은 값을 지닌 노드들로 이루어져 있다.&lt;/li&gt;
+&lt;li&gt;각 노드의 오른쪽 서브트리에는 해당 노드의 값보다 큰 값을 지닌 노드들로 이루어져 있다.&lt;/li&gt;
+&lt;li&gt;이 경우, 중복된 값을 가질 수 없다. (위 정의가 변경된다면 가능)&lt;/li&gt;
+&lt;li&gt;왼쪽 서브트리, 오른쪽 서브트리 또한 이진탐색트리이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이진탐색트리를 순회할 때는 중위순회 방식을 사용한다. 이렇게 하면 이진탐색트리 내에 있는 모든 값들을 정렬된 순서대로 읽을 수 있다.&lt;/p&gt;
+&lt;h2&gt;복잡도&lt;/h2&gt;
+&lt;p&gt;탐색, 삽입, 삭제의 계산 복잡도는 모두 O(h) 이다. 트리의 높이에 의해 수행 시간이 결정된다.&lt;/p&gt;
+&lt;p&gt;그러나 균형이 맞지 않는 이진탐색트리의 경우 시간복잡도가 O(N) 이 된다. 이를 해결하기 위해 AVL Tree 가 제안되었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2023년 11월 05일]]></title><description><![CDATA[TODO 면접 키워드 작성하기 [startTime:: 16:00] [endTime:: 18:00] LOG 급발진으로…]]></description><link>https://vero.wiki/2023-11-05/</link><guid isPermaLink="false">https://vero.wiki/2023-11-05/</guid><pubDate>Sun, 05 Nov 2023 07:22:07 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+due this week
+short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TODO&lt;/h2&gt;
+&lt;ul class=&quot;contains-task-list&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 면접 키워드 작성하기 [startTime:: 16:00] [endTime:: 18:00]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;LOG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;급발진으로 8강 경기를 보러갔다. 사실 부산인줄 모르고 예매했는데 부산이어서 부랴부랴 부산으로 떠났다..ㅋㅋㅋㅋ 그래도 다 매진되기 전에 표를 구할 수 있어서 다행이었다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;배운 것&lt;/h2&gt;
+&lt;h2&gt;느낀 것&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[AVL Tree]]></title><description><![CDATA[AVL Tree 란 트리의 높이가 h 일 때 이진탐색트리의 시간복잡도는 O(h) 이기 때문에 균형된 트리를 만들어 h 를 줄이고자 하는 발상에서 시작했다. Balance Factor…]]></description><link>https://vero.wiki/avl-tree/</link><guid isPermaLink="false">https://vero.wiki/avl-tree/</guid><pubDate>Sun, 05 Nov 2023 07:17:35 GMT</pubDate><content:encoded>&lt;h2&gt;AVL Tree 란&lt;/h2&gt;
+&lt;p&gt;트리의 높이가 h 일 때 이진탐색트리의 시간복잡도는 O(h) 이기 때문에 균형된 트리를 만들어 h 를 줄이고자 하는 발상에서 시작했다.&lt;/p&gt;
+&lt;h2&gt;Balance Factor&lt;/h2&gt;
+&lt;p&gt;왼쪽 서브트리의 높이에서 오른쪽 서브트리의 높이를 뺀 것. 두 서브트리의 높이가 같거나 리프 노드라면 BF 는 0이다.&lt;/p&gt;
+&lt;p&gt;즉, BF 가 클수록 불균형 트리라고 할 수 있다.&lt;/p&gt;
+&lt;p&gt;AVL 트리는 요소를 삽입하거나 삭제하는 과정에서 서브트리를 재구성해 트리 전체의 균형을 맞춘다. 삽입 삭제 연산시 BF 가 일정&lt;/p&gt;</content:encoded></item><item><title><![CDATA[인터뷰 질문 준비]]></title><description><![CDATA[기본 질문 자기소개 기술 백엔드 JPA N+1 문제란 무엇이고 언제 발생하는가? 어떻게 해결할 수 있는가? Fetch Join 의 단점은 없는지? 어떤 경우에 효과적으로 작동하는지? REST 란 무엇인가요? Restful 한 API 란? CI…]]></description><link>https://vero.wiki/interview-questions/</link><guid isPermaLink="false">https://vero.wiki/interview-questions/</guid><pubDate>Wed, 01 Nov 2023 06:14:04 GMT</pubDate><content:encoded>&lt;h2&gt;기본 질문&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;자기소개&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;기술&lt;/h2&gt;
+&lt;h3&gt;백엔드&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;JPA&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;N+1 문제란 무엇이고 언제 발생하는가? 어떻게 해결할 수 있는가?
+&lt;ul&gt;
+&lt;li&gt;Fetch Join 의 단점은 없는지? 어떤 경우에 효과적으로 작동하는지?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;REST 란 무엇인가요?&lt;/li&gt;
+&lt;li&gt;Restful 한 API 란?&lt;/li&gt;
+&lt;li&gt;CI 란?
+&lt;ul&gt;
+&lt;li&gt;CI 가 필요한 이유&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CD 란?
+&lt;ul&gt;
+&lt;li&gt;CD 가 필요한 이유&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;클라우드 서비스란?&lt;/li&gt;
+&lt;li&gt;시스템 scalability 란?&lt;/li&gt;
+&lt;li&gt;메시지 큐잉이란?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;서비스&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;S-HOOK 이 어떤 서비스인지 간략하게 소개&lt;/li&gt;
+&lt;li&gt;프로젝트를 진행하면서 어려웠던 점과 해결한 방식
+&lt;ul&gt;
+&lt;li&gt;삽입 정렬을 사용한 이유는 무엇인가? 다른 효과적인 방법은 없었나?&lt;/li&gt;
+&lt;li&gt;이분 탐색이 더 효과적이었을 것 같은데, 채택하지 않은 이유는?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;소프트웨어 공학&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;애자일 방법론이란?
+&lt;ul&gt;
+&lt;li&gt;애자일을 경험해본 적이 있는지?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OOP 를 경험해본 적이 있는지?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;자료구조&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;삽입 정렬이란?&lt;/li&gt;
+&lt;li&gt;이진 탐색 트리란?&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;OS&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;스레드란 무엇인가?&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;기술 외 경험&lt;/h2&gt;
+&lt;h3&gt;동아리&lt;/h3&gt;
+&lt;h3&gt;우아한테크코스&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;기술적으로 어떤 것을 배웠는가&lt;/li&gt;
+&lt;li&gt;수료한 소감&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[VERO WIKI]]></title><description><![CDATA[⚖️ 알게 된 것들을 종류 가리지 않고 적는 개인 위키입니다. 이번 달의 TIL: 2023년 11월의 TIL✨
+현재 자주 쓰는 글들: 우아한테크코스, S-HOOK 개발기]]></description><link>https://vero.wiki/readme/</link><guid isPermaLink="false">https://vero.wiki/readme/</guid><pubDate>Tue, 01 Aug 2023 13:38:31 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;⚖️ 알게 된 것들을 종류 가리지 않고 적는 개인 위키입니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;이번 달의 TIL: &lt;a href=&quot;/2023-11&quot; data-wiki-link=&quot;true&quot;&gt;2023년 11월의 TIL✨&lt;/a&gt;
+현재 자주 쓰는 글들: &lt;a href=&quot;/wooteco&quot; data-wiki-link=&quot;true&quot;&gt;우아한테크코스&lt;/a&gt;, &lt;a href=&quot;/shook&quot; data-wiki-link=&quot;true&quot;&gt;S-HOOK 개발기&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2023년 11월]]></title><description><![CDATA[2023-11-02 2023-11-03 2023-11-04]]></description><link>https://vero.wiki/2023-11/</link><guid isPermaLink="false">https://vero.wiki/2023-11/</guid><pubDate>Sat, 04 Nov 2023 08:10:45 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-11-02&quot; data-wiki-link=&quot;true&quot;&gt;2023-11-02&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-11-03&quot; data-wiki-link=&quot;true&quot;&gt;2023-11-03&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2023-11-04&quot; data-wiki-link=&quot;true&quot;&gt;2023-11-04&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2023년 11월 04일]]></title><description><![CDATA[TODO 실행 계획 정리 [startTime:: 15:00]  [endTime:: 16:00] 면접 키워드 작성하기 [startTime:: 16:00] [endTime:: 18:00] LOG…]]></description><link>https://vero.wiki/2023-11-04/</link><guid isPermaLink="false">https://vero.wiki/2023-11-04/</guid><pubDate>Sat, 04 Nov 2023 06:08:53 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
 due this week
 short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;TODO&lt;/h2&gt;
@@ -459,61 +560,7 @@ short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;작동 방식&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;트랜잭션이 레코드를 변경할 때, 원래 레코드 값을 undo log 에 기록한다. 트랜잭션이 실패하거나 롤백되는 경우 undo log 의 내용을 사용하여 해당 레코드를 원래 상태로 되돌린다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[EntityManager 의 readonly]]></title><description><![CDATA[주의 entitymanager 의 flush mode 는  으로 설정되지만, 실제로 insert, update, delete 가 발생하는 경우 예외를 던진다.]]></description><link>https://vero.wiki/entity-manager-readonly/</link><guid isPermaLink="false">https://vero.wiki/entity-manager-readonly/</guid><pubDate>Fri, 03 Nov 2023 04:58:59 GMT</pubDate><content:encoded>&lt;h2&gt;주의&lt;/h2&gt;
-&lt;p&gt;entitymanager 의 flush mode 는 &lt;code class=&quot;language-text&quot;&gt;COMMIT&lt;/code&gt; 으로 설정되지만, 실제로 insert, update, delete 가 발생하는 경우 예외를 던진다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[인터뷰 질문 준비]]></title><description><![CDATA[기본 질문 자기소개 기술 백엔드 JPA N+1 문제란 무엇이고 언제 발생하는가? 어떻게 해결할 수 있는가? Fetch Join 의 단점은 없는지? 어떤 경우에 효과적으로 작동하는지? REST 란 무엇인가요? Restful 한 API 란? CI…]]></description><link>https://vero.wiki/interview-questions/</link><guid isPermaLink="false">https://vero.wiki/interview-questions/</guid><pubDate>Wed, 01 Nov 2023 06:14:04 GMT</pubDate><content:encoded>&lt;h2&gt;기본 질문&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;자기소개&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;기술&lt;/h2&gt;
-&lt;h3&gt;백엔드&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;JPA&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;N+1 문제란 무엇이고 언제 발생하는가? 어떻게 해결할 수 있는가?
-&lt;ul&gt;
-&lt;li&gt;Fetch Join 의 단점은 없는지? 어떤 경우에 효과적으로 작동하는지?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;REST 란 무엇인가요?&lt;/li&gt;
-&lt;li&gt;Restful 한 API 란?&lt;/li&gt;
-&lt;li&gt;CI 란?
-&lt;ul&gt;
-&lt;li&gt;CI 가 필요한 이유&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;CD 란?
-&lt;ul&gt;
-&lt;li&gt;CD 가 필요한 이유&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;클라우드 서비스란?&lt;/li&gt;
-&lt;li&gt;시스템 scalability 란?&lt;/li&gt;
-&lt;li&gt;메시지 큐잉이란?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;서비스&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;S-HOOK 이 어떤 서비스인지 간략하게 소개&lt;/li&gt;
-&lt;li&gt;프로젝트를 진행하면서 어려웠던 점과 해결한 방식
-&lt;ul&gt;
-&lt;li&gt;선택 정렬을 사용한 이유는 무엇인가? 다른 효과적인 방법은 없었나?&lt;/li&gt;
-&lt;li&gt;이분 탐색이 더 효과적이었을 것 같은데, 채택하지 않은 이유는?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;소프트웨어 공학&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;애자일 방법론이란?
-&lt;ul&gt;
-&lt;li&gt;애자일을 경험해본 적이 있는지?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;OOP 를 경험해보신 적이 있는지?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;기술 외 경험&lt;/h2&gt;
-&lt;h3&gt;동아리&lt;/h3&gt;
-&lt;h3&gt;우아한테크코스&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;기술적으로 어떤 것을 배웠는가&lt;/li&gt;
-&lt;li&gt;수료한 소감&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2023년 11월 03일]]></title><description><![CDATA[TODO 포트폴리오 작성하기 [startTime:: 14:00]  [endTime:: 18:00] 면접 키워드 작성하기 [startTime:: 16:00] [endTime:: 18:00] LOG DH…]]></description><link>https://vero.wiki/2023-11-03/</link><guid isPermaLink="false">https://vero.wiki/2023-11-03/</guid><pubDate>Fri, 03 Nov 2023 03:45:05 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
+&lt;p&gt;entitymanager 의 flush mode 는 &lt;code class=&quot;language-text&quot;&gt;COMMIT&lt;/code&gt; 으로 설정되지만, 실제로 insert, update, delete 가 발생하는 경우 예외를 던진다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2023년 11월 03일]]></title><description><![CDATA[TODO 포트폴리오 작성하기 [startTime:: 14:00]  [endTime:: 18:00] 면접 키워드 작성하기 [startTime:: 16:00] [endTime:: 18:00] LOG DH…]]></description><link>https://vero.wiki/2023-11-03/</link><guid isPermaLink="false">https://vero.wiki/2023-11-03/</guid><pubDate>Fri, 03 Nov 2023 03:45:05 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tasks&quot;&gt;&lt;pre class=&quot;language-tasks&quot;&gt;&lt;code class=&quot;language-tasks&quot;&gt;not done 
 due this week
 short mode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;TODO&lt;/h2&gt;
@@ -8083,12 +8130,7 @@ comment 4만개 기준으로 테스트&lt;/p&gt;
 &lt;td align=&quot;left&quot;&gt;34000000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</content:encoded></item><item><title><![CDATA[VERO WIKI]]></title><description><![CDATA[⚖️ 공부한 것, 일기를 적는 개인 위키입니다 인덱스 페이지: wiki-index 이번 달의 TIL: 2023년 10월의 TIL✨ 현재 자주 쓰는 글들: 우아한테크코스, S-HOOK 개발기]]></description><link>https://vero.wiki/readme/</link><guid isPermaLink="false">https://vero.wiki/readme/</guid><pubDate>Tue, 01 Aug 2023 13:38:31 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;⚖️ 공부한 것, 일기를 적는 개인 위키입니다&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;인덱스 페이지: &lt;a href=&quot;/wiki-index&quot; data-wiki-link=&quot;true&quot;&gt;wiki-index&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;이번 달의 TIL: &lt;a href=&quot;/2023-10&quot; data-wiki-link=&quot;true&quot;&gt;2023년 10월의 TIL✨&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;현재 자주 쓰는 글들: &lt;a href=&quot;/wooteco&quot; data-wiki-link=&quot;true&quot;&gt;우아한테크코스&lt;/a&gt;, &lt;a href=&quot;/shook&quot; data-wiki-link=&quot;true&quot;&gt;S-HOOK 개발기&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Portfolio]]></title><description><![CDATA[어떤 내용을 적을까 기획 프로젝트 기획을 고민한 내용 + 왜 이 프로젝트를 하게 되었는가? 기획 회의 discussion 에 정리 협업 협업과 관련해서 회의 제안한 것들 페르소나 재정의 회의 스쿼드 분리 논의 회의 기술 참고할 링크 레벨3,…]]></description><link>https://vero.wiki/portfolio/</link><guid isPermaLink="false">https://vero.wiki/portfolio/</guid><pubDate>Sat, 07 Oct 2023 07:56:22 GMT</pubDate><content:encoded>&lt;h2&gt;어떤 내용을 적을까&lt;/h2&gt;
+&lt;/table&gt;</content:encoded></item><item><title><![CDATA[Portfolio]]></title><description><![CDATA[어떤 내용을 적을까 기획 프로젝트 기획을 고민한 내용 + 왜 이 프로젝트를 하게 되었는가? 기획 회의 discussion 에 정리 협업 협업과 관련해서 회의 제안한 것들 페르소나 재정의 회의 스쿼드 분리 논의 회의 기술 참고할 링크 레벨3,…]]></description><link>https://vero.wiki/portfolio/</link><guid isPermaLink="false">https://vero.wiki/portfolio/</guid><pubDate>Sat, 07 Oct 2023 07:56:22 GMT</pubDate><content:encoded>&lt;h2&gt;어떤 내용을 적을까&lt;/h2&gt;
 &lt;h3&gt;기획&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;프로젝트 기획을 고민한 내용 + 왜 이 프로젝트를 하게 되었는가?
