@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import _ from "lodash"
 import styled from "styled-components"
 import SEO from "components/SEO"
@@ -41,6 +41,8 @@ const TagsPage = ({ data }) => {
   const [selected, setSelected] = useState()
   const [filteredPosts, setFilteredPosts] = useState([])
 
+  const firstItemRef = useRef(null);
+
   let query = null
   if (typeof document !== "undefined") {
     query = document.location.search
@@ -60,6 +62,10 @@ const TagsPage = ({ data }) => {
     const q = decodeURIComponent(queryString.parse(query)["q"] || "")
     setSelected(q)
   }, [query])
+
+  useEffect(()=> {
+    firstItemRef.current?.scrollIntoView({behavior: 'smooth', block: "start"});
+  }, [selected])
 
   return (
     <Layout>
@@ -93,7 +99,7 @@ const TagsPage = ({ data }) => {
         />
       </TagListWrapper>
 
-      <VerticleSpace size={32} />
+      <VerticleSpace size={32} ref={firstItemRef}/>
 
       <PostList postList={filteredPosts} />
     </Layout>
