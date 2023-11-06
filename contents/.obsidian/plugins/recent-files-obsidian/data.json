@@ -5,6 +5,26 @@
       "path": "posts/avl-tree.md"
     },
     {
+      "basename": "right-right-left-rotation",
+      "path": "posts/attachments/right-right-left-rotation.png"
+    },
+    {
+      "basename": "Pasted image 20231101222556",
+      "path": "posts/attachments/Pasted image 20231101222556.png"
+    },
+    {
+      "basename": "Pasted image 20231024151645",
+      "path": "posts/attachments/Pasted image 20231024151645.png"
+    },
+    {
+      "basename": "left-left-right-rotation.png",
+      "path": "posts/left-left-right-rotation.png.md"
+    },
+    {
+      "basename": "linked-hash-map-local-cache-develop",
+      "path": "posts/attachments/linked-hash-map-local-cache-develop.png"
+    },
+    {
       "basename": "binary-search-tree",
       "path": "posts/binary-search-tree.md"
     },
@@ -71,14 +91,6 @@
     {
       "basename": "obsidian-plugin",
       "path": "posts/obsidian-plugin.md"
-    },
-    {
-      "basename": "Pasted image 20231101222556",
-      "path": "posts/attachments/Pasted image 20231101222556.png"
-    },
-    {
-      "basename": "linked-hash-map-local-cache-develop",
-      "path": "posts/attachments/linked-hash-map-local-cache-develop.png"
     },
     {
       "basename": "linked-hash-map-all-sort",
@@ -187,18 +199,6 @@
     {
       "basename": "2023-05-28",
       "path": "posts/2023-05-28.md"
-    },
-    {
-      "basename": "algorithm-tips",
-      "path": "posts/algorithm-tips.md"
-    },
-    {
-      "basename": "shook-level4",
-      "path": "posts/shook-level4.md"
-    },
-    {
-      "basename": "2023",
-      "path": "posts/2023.md"
     }
   ],
   "omittedPaths": [
