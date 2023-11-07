@@ -23,38 +23,12 @@
             }
           },
           {
-            "id": "dd817afbd4101e85",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/dh-interview-study-11-07.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "6e9f465337adf708",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "posts/bipartite-matching.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8a2f37f256935444",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2024-school-activity-plan.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -101,7 +75,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -176,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/dh-interview-study-11-07.md",
+                "file": "posts/sort-algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -193,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/dh-interview-study-11-07.md",
+                "file": "posts/sort-algorithm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -240,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/dh-interview-study-11-07.md"
+                "file": "posts/sort-algorithm.md"
               }
             }
           }
@@ -274,18 +248,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "dd817afbd4101e85",
+  "active": "169aa8b81da6a25c",
   "lastOpenFiles": [
-    "posts/dh-interview-study.md",
-    "posts/dh-interview-study-11-07.md",
-    "posts/segment-tree.md",
-    "posts/complexity.md",
-    "posts/interview-questions.md",
-    "posts/sort-algorithm.md",
+    "posts/bipartite-matching.md",
     "posts/2024-school-activity-plan.md",
     "posts/2023-11-07.md",
+    "posts/sort-algorithm.md",
+    "posts/dh-interview-study-11-07.md",
+    "posts/complexity.md",
+    "posts/dh-interview-study.md",
+    "posts/segment-tree.md",
+    "posts/interview-questions.md",
     "posts/binary-search-tree.md",
-    "posts/bipartite-matching.md",
     "posts/network-flow.md",
     "posts/binary-.md",
     "posts/2023-11-05.md",

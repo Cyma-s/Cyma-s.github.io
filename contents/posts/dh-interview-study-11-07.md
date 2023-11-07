@@ -1,7 +1,7 @@
 ---
 title: 11/7 인터뷰 질문 준비
 date: 2023-11-06 22:30:43 +0900
-updated: 2023-11-07 15:31:56 +0900
+updated: 2023-11-07 17:14:04 +0900
 tags: 
 ---
 
@@ -11,7 +11,7 @@ tags:
 2. Expand the first function such that it returns True if the edit distance between s1 and s2 is 1 or lower. 
 	- So are you familiar with edit distance?
 	- edit distance is a way of quantifying how dissimilar two strings are to one another, that is measured by counting the minimum number of opertaion required to transform one string into the other. You can insert, delete, or modify a single character in a string. For example, the abc and the abcd have an edit distance of 1 because the character d was inserted.
-3. Expand the function to take a third parameter designating the comparison tolerance between s1 and s3 to be 'n' edit distances or lower. 
+3. Expand the function to take a third parameter designating the comparison tolerance between s1 and s2 to be 'n' edit distances or lower. 
 
 유니코드의 경우에도 동일하게 동작할까요?
 -> Would it behave the same when comparing Unicode?
@@ -39,4 +39,6 @@ what is the best and worst case runtime and space complexity of this one?
 케이스를 여러 개 만들어서 테스트 해주세요.
 -> Please create multiple cases and test them.
 
+## 피드백
 
+- 
