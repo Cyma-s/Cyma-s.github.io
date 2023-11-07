@@ -1,7 +1,7 @@
 ---
 title: 세그먼트 트리
 date: 2023-10-16 08:19:20 +0900
-updated: 2023-11-07 10:18:55 +0900
+updated: 2023-11-07 13:50:41 +0900
 tags:
   - algorithm
 ---
@@ -113,4 +113,6 @@ public void update(int[] tree, int index, int value) {
 	}
 }
 ```
+
+## 복잡도
 
