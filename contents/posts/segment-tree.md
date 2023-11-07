@@ -1,7 +1,7 @@
 ---
 title: 세그먼트 트리
 date: 2023-10-16 08:19:20 +0900
-updated: 2023-11-06 18:13:34 +0900
+updated: 2023-11-07 10:18:55 +0900
 tags:
   - algorithm
 ---
@@ -113,3 +113,4 @@ public void update(int[] tree, int index, int value) {
 	}
 }
 ```
+

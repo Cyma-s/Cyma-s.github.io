@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8b0cbc5a09ae940a",
+            "id": "a8d3da55bfc52f97",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-05.md",
+                "file": "posts/2023-11-07.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "pinned": true
-            }
-          },
-          {
-            "id": "0c6d07a717475e7e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/avl-tree.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
             }
           },
           {
@@ -81,6 +68,32 @@
               "type": "markdown",
               "state": {
                 "file": "posts/dh-interview-study-11-07.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6e9f465337adf708",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/bipartite-matching.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e9dac3a95f9d1a7d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/network-flow.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -163,7 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/dh-interview-study-11-07.md",
+                "file": "posts/bipartite-matching.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,7 +193,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/dh-interview-study-11-07.md",
+                "file": "posts/bipartite-matching.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -227,7 +240,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/dh-interview-study-11-07.md"
+                "file": "posts/bipartite-matching.md"
               }
             }
           }
@@ -261,13 +274,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "704cb24727309d46",
+  "active": "6e9f465337adf708",
   "lastOpenFiles": [
-    "posts/dh-interview-study.md",
-    "posts/dh-interview-study-11-07.md",
+    "posts/network-flow.md",
+    "posts/bipartite-matching.md",
     "posts/segment-tree.md",
-    "posts/binary-search-tree.md",
+    "posts/binary-.md",
+    "posts/dh-interview-study-11-07.md",
+    "posts/2023-11-07.md",
+    "posts/2023-11-05.md",
     "posts/avl-tree.md",
+    "posts/dh-interview-study.md",
+    "posts/binary-search-tree.md",
     "posts/attachments/right-left-right-left.png",
     "posts/attachments/left-right-left-right.png",
     "posts/attachments/left-left-left-rotation.png",
@@ -279,7 +297,6 @@
     "posts/attachments/linked-hash-map-local-cache-develop.png",
     "posts/attachments/right-right-left-rotation.png",
     "posts/attachments/left-left-case.png",
-    "posts/2023-11-05.md",
     "posts/interview-questions.md",
     "posts/2023-11-04.md",
     "posts/readme.md",
@@ -295,10 +312,6 @@
     "posts/2023-11-03.md",
     "posts/2023-10-31.md",
     "posts/obsidian-plugin.md",
-    "posts/mysql-explain.md",
-    "posts/inmemory-cache-develop-reason.md",
-    "posts/english-speaking-oct-4week.md",
-    "posts/2023-10-30.md",
     "calendar",
     "dictionary",
     "template",
