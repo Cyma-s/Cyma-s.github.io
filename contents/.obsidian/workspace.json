@@ -72,7 +72,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -147,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-11-08.md",
+                "file": "posts/dh-interview-study-11-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-11-08.md",
+                "file": "posts/dh-interview-study-11-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -211,7 +212,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-11-08.md"
+                "file": "posts/dh-interview-study-11-08.md"
               }
             }
           }
@@ -220,7 +221,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 626.5
+    "width": 626.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -244,13 +246,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "23eb30d8ec8a16e6",
+  "active": "12da6a6567c85e43",
   "lastOpenFiles": [
-    "posts/2023-11.md",
+    "posts/dh-interview-study.md",
     "posts/2023-11-08.md",
+    "posts/2023-11.md",
     "posts/2023-11-07.md",
     "posts/dh-interview-study-11-08.md",
-    "posts/dh-interview-study.md",
     "posts/bipartite-matching.md",
     "posts/complexity.md",
     "posts/sort-algorithm.md",
