@@ -1,7 +1,7 @@
 ---
 title: DH 인터뷰 스터디
 date: 2023-11-06 22:29:33 +0900
-updated: 2023-11-07 15:30:51 +0900
+updated: 2023-11-08 10:07:39 +0900
 tags:
   - study
 ---
@@ -9,6 +9,7 @@ tags:
 ## 스터디
 
 - [[dh-interview-study-11-07]]
+- [[dh-interview-study-11-08]]
 
 ## 표현
 

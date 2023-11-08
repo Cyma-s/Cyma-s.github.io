@@ -1,7 +1,7 @@
 ---
 title: 정렬 알고리즘
 date: 2023-11-07 13:49:20 +0900
-updated: 2023-11-07 20:39:12 +0900
+updated: 2023-11-07 20:56:52 +0900
 tags:
   - algorithms
 ---
@@ -83,3 +83,40 @@ for(int i = 1; i<size; i++) {
 1. 역순에 가까울수록 비효율적이다. 최악의 경우 $O(N^2)$ 의 시간 복잡도를 갖는다.
 2. 데이터의 상태에 따라 성능 편차가 매우 크다.
 
+### 시간 복잡도
+
+타겟 숫자가 이전 숫자보다 크기 전까지 반복하기 때문에 이미 정렬이 되어 있는 경우 항상 타겟 숫자가 이전 숫자보다 크다. 즉, 최선의 경우 $O(N)$ 의 복잡도를 갖는다.
+
+최악의 경우는 타겟 숫자가 이전 숫자보다 항상 작기 때문에 결국 N 번째 숫자에 대해 N-1 번을 비교해야 한다. 즉, 최악의 경우 $O(N^2)$ 의 시간 복잡도를 보인다.
+
+## 계수 정렬
+
+
+
+### 구현
+
+```java
+public void radix_sort(int[] arr, int[] counting, int[] result) { // counting 배열은 0으로 초기화되어 있다.
+	for(int i = 0; i<arr.length; i++) {
+		counting[arr[i]]++;
+	}
+	for(int i = 1; i<counting.length; i++) {
+		counting[i] += counting[i-1];
+	}
+
+	for(int i = arr.length - 1; i >= 0; i--) {
+		int value = arr[i];
+		counting[value]--;
+		result[counting[value]] = value;
+	}
+}
+```
+
+### 단점
+
+- counting 배열이라는 새로운 배열을 선언해야 하기 때문에, max 값의 범위에 따라 counting 배열의 길이가 달라진다. 
+	- 수열의 길이보다 수의 범위가 극단적으로 크면 메모리가 낭비될 수 있다.
+
+### 시간 복잡도
+
+$O(N)$

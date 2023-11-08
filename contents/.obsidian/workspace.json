@@ -8,18 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a8d3da55bfc52f97",
+            "id": "23eb30d8ec8a16e6",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-07.md",
+                "file": "posts/2023-11-08.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              },
-              "pinned": true
+              }
             }
           },
           {
@@ -54,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/complexity.md",
+                "file": "posts/dh-interview-study.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -67,15 +65,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/dh-interview-study.md",
+                "file": "posts/dh-interview-study-11-08.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -150,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/sort-algorithm.md",
+                "file": "posts/2023-11-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/sort-algorithm.md",
+                "file": "posts/2023-11-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,7 +211,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/sort-algorithm.md"
+                "file": "posts/2023-11-08.md"
               }
             }
           }
@@ -223,8 +220,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 693.5,
-    "collapsed": true
+    "width": 626.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -248,15 +244,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "169aa8b81da6a25c",
+  "active": "23eb30d8ec8a16e6",
   "lastOpenFiles": [
-    "posts/bipartite-matching.md",
-    "posts/2024-school-activity-plan.md",
+    "posts/2023-11.md",
+    "posts/2023-11-08.md",
     "posts/2023-11-07.md",
-    "posts/sort-algorithm.md",
-    "posts/dh-interview-study-11-07.md",
-    "posts/complexity.md",
+    "posts/dh-interview-study-11-08.md",
     "posts/dh-interview-study.md",
+    "posts/bipartite-matching.md",
+    "posts/complexity.md",
+    "posts/sort-algorithm.md",
+    "posts/2024-school-activity-plan.md",
+    "posts/dh-interview-study-11-07.md",
     "posts/segment-tree.md",
     "posts/interview-questions.md",
     "posts/binary-search-tree.md",
@@ -277,15 +276,12 @@
     "posts/attachments/left-left-case.png",
     "posts/2023-11-04.md",
     "posts/readme.md",
-    "posts/2023-11.md",
     "posts/mysql-execution-plan.md",
     "posts/delivery-hero-employment.md",
     "posts/inmemory-cache-develop.md",
     "posts/shook-my-page-query-improve.md",
     "posts/tomcat-thread-pool.md",
     "posts/transaction.md",
-    "posts/entity-manager-readonly.md",
-    "posts/2023-11-02.md",
     "calendar",
     "dictionary",
     "template",
