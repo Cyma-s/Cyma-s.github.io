@@ -1,0 +1,55 @@
+{
+  "filterEmpty": true,
+  "excludePaths": [],
+  "includePaths": [],
+  "useIncludeTags": false,
+  "taskIncludeTags": [],
+  "fileIncludeTags": [],
+  "useExcludeTags": false,
+  "taskExcludeTags": [],
+  "fileExcludeTags": [],
+  "styles": [
+    "style1"
+  ],
+  "dailyNoteFolder": "posts",
+  "dailyNoteFormat": "YYYY-MM-DD",
+  "sectionForNewTasks": "## TODO",
+  "hideTags": [],
+  "forward": true,
+  "sort": "(t1, t2) => t1.due <= t2.due ? -1 : 1",
+  "taskStatusOrder": [
+    "overdue",
+    "due",
+    "scheduled",
+    "start",
+    "process",
+    "unplanned",
+    "done",
+    "cancelled"
+  ],
+  "dateFormat": "YYYY-MM-dd",
+  "inbox": "Inbox.md",
+  "taskFiles": [],
+  "tagColorPalette": {
+    "#TODO": "#339988"
+  },
+  "useCounters": true,
+  "counterBehavior": "Filter",
+  "useQuickEntry": true,
+  "entryPosition": "today",
+  "useYearHeader": true,
+  "useRelative": true,
+  "useRecurrence": true,
+  "usePriority": true,
+  "useTags": true,
+  "useFileBadge": true,
+  "useSection": true,
+  "hideStatusTasks": [
+    "x",
+    "-"
+  ],
+  "defaultTodayFocus": false,
+  "defaultFilters": "",
+  "useBuiltinStyle": true,
+  "convert24HourTimePrefix": false
+}

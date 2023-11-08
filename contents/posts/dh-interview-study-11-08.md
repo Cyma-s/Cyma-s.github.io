@@ -1,7 +1,7 @@
 ---
 title: 11/8 DH 인터뷰 스터디
 date: 2023-11-08 10:07:11 +0900
-updated: 2023-11-08 13:21:06 +0900
+updated: 2023-11-08 16:29:09 +0900
 tags: 
 ---
 
@@ -21,6 +21,11 @@ tags:
 
 ### 조건
 
+### 추가 질문
+
+- What is the time complexity and space complexity of Arrays.sort?
+- How do we find the max value? 
+
 ## 말
 
 - 일단 시도해보고, 더 효율적인 해결책을 생각해보죠 
@@ -31,4 +36,3 @@ tags:
 	- all of the integers are non-negative and you can also assume that n is positive.
 - 테스트하고 싶은 다른 엣지 케이스가 있나요?
 	- can you think of any other edge cases that we might want to test?
-- 
