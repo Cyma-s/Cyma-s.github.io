@@ -8,12 +8,27 @@
         "type": "tabs",
         "children": [
           {
+            "id": "f439fdbaa5484da2",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2023-11-08.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
             "id": "23eb30d8ec8a16e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-08.md",
+                "file": "posts/transaction-and-spring-transaction.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -40,19 +55,6 @@
               "type": "markdown",
               "state": {
                 "file": "posts/sort-algorithm.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f439fdbaa5484da2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-11-07.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -117,7 +119,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 370.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -187,7 +190,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 541.5
+    "width": 489.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -211,9 +214,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "643e7a155641309c",
+  "active": "f439fdbaa5484da2",
   "lastOpenFiles": [
     "posts/2023-11-07.md",
+    "posts/transaction-and-spring-transaction.md",
+    "posts/spring-data-jdbc.md",
+    "posts/2023-11-08.md",
     "posts/2023-11-05.md",
     "posts/2023-11-04.md",
     "posts/2023-11-03.md",
@@ -236,9 +242,6 @@
     "posts/2023-10-03.md",
     "posts/2023-10-01.md",
     "posts/2023-09-27.md",
-    "posts/2023-09-21.md",
-    "posts/2023-09-20.md",
-    "posts/dh-interview-study-11-08.md",
     "posts/attachments/right-left-right-left.png",
     "posts/attachments/left-right-left-right.png",
     "posts/attachments/left-left-left-rotation.png",

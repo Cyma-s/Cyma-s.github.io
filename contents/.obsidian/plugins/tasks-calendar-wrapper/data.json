@@ -27,7 +27,7 @@
     "done",
     "cancelled"
   ],
-  "dateFormat": "YYYY-MM-dd",
+  "dateFormat": "YYYY-MM-DD",
   "inbox": "Inbox.md",
   "taskFiles": [],
   "tagColorPalette": {

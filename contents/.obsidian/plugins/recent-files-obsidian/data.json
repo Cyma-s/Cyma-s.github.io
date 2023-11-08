@@ -9,6 +9,14 @@
       "path": "posts/2023-11-07.md"
     },
     {
+      "basename": "transaction-and-spring-transaction",
+      "path": "posts/transaction-and-spring-transaction.md"
+    },
+    {
+      "basename": "spring-data-jdbc",
+      "path": "posts/spring-data-jdbc.md"
+    },
+    {
       "basename": "2023-11-05",
       "path": "posts/2023-11-05.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "entity-manager-readonly",
       "path": "posts/entity-manager-readonly.md"
-    },
-    {
-      "basename": "obsidian-plugin",
-      "path": "posts/obsidian-plugin.md"
-    },
-    {
-      "basename": "linked-hash-map-all-sort",
-      "path": "posts/attachments/linked-hash-map-all-sort.png"
     }
   ],
   "omittedPaths": [
