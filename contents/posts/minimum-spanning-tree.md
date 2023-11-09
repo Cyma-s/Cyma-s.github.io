@@ -1,9 +1,9 @@
 ---
-title   : 최소 신장 트리 (MST)
-date    : 2023-09-05 22:12:20 +0900
-updated : 2023-09-05 22:12:30 +0900
-tags     : 
-- algorithm
+title: 최소 신장 트리 (MST)
+date: 2023-09-05 22:12:20 +0900
+updated: 2023-11-09 14:39:38 +0900
+tags:
+  - algorithms
 ---
 
 ## Spanning Tree

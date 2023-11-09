@@ -1,9 +1,9 @@
 ---
-title   : 알고리즘 Tips
-date    : 2023-08-30 17:18:33 +0900
-updated : 2023-08-30 17:18:41 +0900
-tags     : 
-- algorithm
+title: 알고리즘 Tips
+date: 2023-08-30 17:18:33 +0900
+updated: 2023-11-09 14:39:34 +0900
+tags:
+  - algorithms
 ---
 
 ## 그래프

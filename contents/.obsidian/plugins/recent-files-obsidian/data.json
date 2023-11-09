@@ -1,20 +1,84 @@
 {
   "recentFiles": [
     {
-      "basename": "2023-11-09",
-      "path": "posts/2023-11-09.md"
+      "basename": "java-algorithm-tips",
+      "path": "posts/java-algorithm-tips.md"
     },
     {
-      "basename": "2023-11-08",
-      "path": "posts/2023-11-08.md"
+      "basename": "k-most-frequent-value",
+      "path": "posts/k-most-frequent-value.md"
     },
     {
       "basename": "avl-tree",
       "path": "posts/avl-tree.md"
     },
     {
+      "basename": "level1-level-log",
+      "path": "posts/level1-level-log.md"
+    },
+    {
+      "basename": "sort-algorithm",
+      "path": "posts/sort-algorithm.md"
+    },
+    {
+      "basename": "minimum-spanning-tree",
+      "path": "posts/minimum-spanning-tree.md"
+    },
+    {
+      "basename": "dh-interview-study-11-09",
+      "path": "posts/dh-interview-study-11-09.md"
+    },
+    {
+      "basename": "bellman-ford-algorithm",
+      "path": "posts/bellman-ford-algorithm.md"
+    },
+    {
+      "basename": "bitmasking",
+      "path": "posts/bitmasking.md"
+    },
+    {
+      "basename": "segment-tree",
+      "path": "posts/segment-tree.md"
+    },
+    {
+      "basename": "tsp",
+      "path": "posts/tsp.md"
+    },
+    {
+      "basename": "floyd-warshall-algorithm",
+      "path": "posts/floyd-warshall-algorithm.md"
+    },
+    {
+      "basename": "minimum-vertex-cover",
+      "path": "posts/minimum-vertex-cover.md"
+    },
+    {
+      "basename": "algorithm-tips",
+      "path": "posts/algorithm-tips.md"
+    },
+    {
+      "basename": "kruskal-algorithm",
+      "path": "posts/kruskal-algorithm.md"
+    },
+    {
+      "basename": "2023-11-09",
+      "path": "posts/2023-11-09.md"
+    },
+    {
       "basename": "bipartite-matching",
       "path": "posts/bipartite-matching.md"
+    },
+    {
+      "basename": "level2-level-log",
+      "path": "posts/level2-level-log.md"
+    },
+    {
+      "basename": "functional-interface",
+      "path": "posts/functional-interface.md"
+    },
+    {
+      "basename": "2023-11-08",
+      "path": "posts/2023-11-08.md"
     },
     {
       "basename": "transaction-and-spring-transaction",
@@ -27,10 +91,6 @@
     {
       "basename": "left-right-left-right",
       "path": "posts/attachments/left-right-left-right.png"
-    },
-    {
-      "basename": "sort-algorithm",
-      "path": "posts/sort-algorithm.md"
     },
     {
       "basename": "2023-11-07",
@@ -139,66 +199,6 @@
     {
       "basename": "2024-school-activity-plan",
       "path": "posts/2024-school-activity-plan.md"
-    },
-    {
-      "basename": "dh-interview-study-11-07",
-      "path": "posts/dh-interview-study-11-07.md"
-    },
-    {
-      "basename": "segment-tree",
-      "path": "posts/segment-tree.md"
-    },
-    {
-      "basename": "interview-questions",
-      "path": "posts/interview-questions.md"
-    },
-    {
-      "basename": "binary-search-tree",
-      "path": "posts/binary-search-tree.md"
-    },
-    {
-      "basename": "network-flow",
-      "path": "posts/network-flow.md"
-    },
-    {
-      "basename": "right-right-left-rotation",
-      "path": "posts/attachments/right-right-left-rotation.png"
-    },
-    {
-      "basename": "Pasted image 20231101222556",
-      "path": "posts/attachments/Pasted image 20231101222556.png"
-    },
-    {
-      "basename": "Pasted image 20231024151645",
-      "path": "posts/attachments/Pasted image 20231024151645.png"
-    },
-    {
-      "basename": "linked-hash-map-local-cache-develop",
-      "path": "posts/attachments/linked-hash-map-local-cache-develop.png"
-    },
-    {
-      "basename": "readme",
-      "path": "posts/readme.md"
-    },
-    {
-      "basename": "mysql-execution-plan",
-      "path": "posts/mysql-execution-plan.md"
-    },
-    {
-      "basename": "delivery-hero-employment",
-      "path": "posts/delivery-hero-employment.md"
-    },
-    {
-      "basename": "inmemory-cache-develop",
-      "path": "posts/inmemory-cache-develop.md"
-    },
-    {
-      "basename": "shook-my-page-query-improve",
-      "path": "posts/shook-my-page-query-improve.md"
-    },
-    {
-      "basename": "tomcat-thread-pool",
-      "path": "posts/tomcat-thread-pool.md"
     }
   ],
   "omittedPaths": [

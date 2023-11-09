@@ -1,7 +1,7 @@
 ---
 title: 정렬 알고리즘
 date: 2023-11-07 13:49:20 +0900
-updated: 2023-11-07 20:56:52 +0900
+updated: 2023-11-09 13:38:19 +0900
 tags:
   - algorithms
 ---
@@ -120,3 +120,7 @@ public void radix_sort(int[] arr, int[] counting, int[] result) { // counting �
 ### 시간 복잡도
 
 $O(N)$
+
+## Merge Sort
+
+분할 정복 알고리즘이다. 
