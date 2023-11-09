@@ -8,9 +8,8 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8c281707cfbc08a3",
+            "id": "eb14c1d618b0dd41",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
@@ -18,90 +17,10 @@
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "6e9f465337adf708",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/sort-algorithm.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "169aa8b81da6a25c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/avl-tree.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7e57ff1139c38009",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/k-most-frequent-value.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e08e6d6d859e413b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/minimum-spanning-tree.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9a9299b643928edb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/dh-interview-study-11-09.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "553a672be7d7ec7e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/java-algorithm-tips.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
               }
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -172,14 +91,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "643e7a155641309c",
-            "type": "leaf",
-            "state": {
-              "type": "tasks_timeline_view",
-              "state": {}
-            }
-          },
-          {
             "id": "4ca53cfec1b4f55e",
             "type": "leaf",
             "state": {
@@ -193,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/java-algorithm-tips.md",
+                "file": "posts/2023-11-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -210,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/java-algorithm-tips.md",
+                "file": "posts/2023-11-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,14 +137,39 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "49401136649a95ec",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "0c913a0673d25394",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "posts/2023-11-09.md"
+              }
+            }
+          },
+          {
+            "id": "1eec353a1b337643",
+            "type": "leaf",
+            "state": {
+              "type": "tasks_timeline_view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 489.5,
-    "collapsed": true
+    "width": 489.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -257,8 +193,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "553a672be7d7ec7e",
+  "active": "eb14c1d618b0dd41",
   "lastOpenFiles": [
+    "posts/2023-11-08.md",
+    "posts/2023-11-09.md",
     "posts/java-algorithm-tips.md",
     "posts/k-most-frequent-value.md",
     "posts/avl-tree.md",
@@ -274,11 +212,9 @@
     "posts/minimum-vertex-cover.md",
     "posts/algorithm-tips.md",
     "posts/kruskal-algorithm.md",
-    "posts/2023-11-09.md",
     "posts/bipartite-matching.md",
     "posts/level2-level-log.md",
     "posts/functional-interface.md",
-    "posts/2023-11-08.md",
     "posts/transaction-and-spring-transaction.md",
     "posts/left-left-right-rotation.png.md",
     "posts/attachments/left-left-left-rotation.png",
