@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f439fdbaa5484da2",
+            "id": "8c281707cfbc08a3",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-08.md",
+                "file": "posts/2023-11-09.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "pinned": true
-            }
-          },
-          {
-            "id": "23eb30d8ec8a16e6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/transaction-and-spring-transaction.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
             }
           },
           {
@@ -54,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/sort-algorithm.md",
+                "file": "posts/avl-tree.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -152,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-11-08.md",
+                "file": "posts/2023-11-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-11-08.md",
+                "file": "posts/2023-11-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,11 +173,13 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 489.5
+    "width": 489.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -214,12 +203,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "f439fdbaa5484da2",
+  "active": "8c281707cfbc08a3",
   "lastOpenFiles": [
-    "posts/2023-11-07.md",
-    "posts/transaction-and-spring-transaction.md",
-    "posts/spring-data-jdbc.md",
     "posts/2023-11-08.md",
+    "posts/2023-11-09.md",
+    "posts/avl-tree.md",
+    "posts/bipartite-matching.md",
+    "posts/transaction-and-spring-transaction.md",
+    "posts/left-left-right-rotation.png.md",
+    "posts/attachments/left-left-left-rotation.png",
+    "posts/attachments/left-right-left-right.png",
+    "posts/sort-algorithm.md",
+    "posts/2023-11-07.md",
+    "posts/spring-data-jdbc.md",
     "posts/2023-11-05.md",
     "posts/2023-11-04.md",
     "posts/2023-11-03.md",
@@ -237,14 +233,7 @@
     "posts/2023-10-17.md",
     "posts/2023-10-16.md",
     "posts/2023-10-08.md",
-    "posts/2023-10-15.md",
-    "posts/2023-10-02.md",
-    "posts/2023-10-03.md",
-    "posts/2023-10-01.md",
-    "posts/2023-09-27.md",
     "posts/attachments/right-left-right-left.png",
-    "posts/attachments/left-right-left-right.png",
-    "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/right-right-left-rotation.png",
     "posts/attachments/Pasted image 20231101222556.png",
     "posts/attachments/Pasted image 20231024151645.png",

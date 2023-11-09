@@ -98,15 +98,6 @@
       "key": "O"
     }
   ],
-  "daily-notes": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "D"
-    }
-  ],
   "daily-notes:goto-prev": [
     {
       "modifiers": [
@@ -175,6 +166,15 @@
         "Mod"
       ],
       "key": "R"
+    }
+  ],
+  "homepage:open-homepage": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "D"
     }
   ]
 }
