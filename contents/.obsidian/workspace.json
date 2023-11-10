@@ -4,23 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "e17b05dbfa931707",
+        "id": "3b54da0cf99b62c2",
         "type": "tabs",
         "children": [
           {
-            "id": "eb14c1d618b0dd41",
+            "id": "c45d978aff4f7fb5",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2023-11-10.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "0258bff10371bfc3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-09.md",
+                "file": "posts/dh-interview-study-uber.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -104,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-11-09.md",
+                "file": "posts/dh-interview-study-uber.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-11-09.md",
+                "file": "posts/dh-interview-study-uber.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,12 +168,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-11-09.md"
+                "file": "posts/dh-interview-study-uber.md"
               }
             }
           },
           {
-            "id": "1eec353a1b337643",
+            "id": "c54cf17949997ef9",
             "type": "leaf",
             "state": {
               "type": "tasks_timeline_view",
@@ -194,10 +210,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "eb14c1d618b0dd41",
+  "active": "0258bff10371bfc3",
   "lastOpenFiles": [
-    "posts/2023-11-08.md",
+    "posts/dh-interview-study-uber.md",
+    "posts/2023-11-10.md",
     "posts/2023-11-09.md",
+    "posts/2023-11-08.md",
     "posts/java-algorithm-tips.md",
     "posts/k-most-frequent-value.md",
     "posts/avl-tree.md",
@@ -222,8 +240,6 @@
     "posts/attachments/left-right-left-right.png",
     "posts/2023-11-07.md",
     "posts/spring-data-jdbc.md",
-    "posts/2023-11-05.md",
-    "posts/2023-11-04.md",
     "posts/attachments/right-left-right-left.png",
     "posts/attachments/right-right-left-rotation.png",
     "posts/attachments/Pasted image 20231101222556.png",

@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "dh-interview-study-uber",
+      "path": "posts/dh-interview-study-uber.md"
+    },
+    {
+      "basename": "2023-11-10",
+      "path": "posts/2023-11-10.md"
+    },
+    {
       "basename": "2023-11-09",
       "path": "posts/2023-11-09.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "2023-11",
       "path": "posts/2023-11.md"
-    },
-    {
-      "basename": "complexity",
-      "path": "posts/complexity.md"
-    },
-    {
-      "basename": "2024-school-activity-plan",
-      "path": "posts/2024-school-activity-plan.md"
     }
   ],
   "omittedPaths": [
