@@ -8,21 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c45d978aff4f7fb5",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-11-10.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
             "id": "0258bff10371bfc3",
             "type": "leaf",
             "state": {
@@ -35,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
