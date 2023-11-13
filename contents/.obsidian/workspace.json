@@ -10,17 +10,33 @@
           {
             "id": "0258bff10371bfc3",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/dh-interview-study-uber.md",
+                "file": "posts/2023-11-13.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "2d8126f0a189dfcc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/mit-ocw-data-structure.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,8 +90,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -104,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/dh-interview-study-uber.md",
+                "file": "posts/mit-ocw-data-structure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/dh-interview-study-uber.md",
+                "file": "posts/mit-ocw-data-structure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/dh-interview-study-uber.md"
+                "file": "posts/mit-ocw-data-structure.md"
               }
             }
           },
@@ -194,8 +209,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0258bff10371bfc3",
+  "active": "2d8126f0a189dfcc",
   "lastOpenFiles": [
+    "posts/Untitled 20231113 041648.mdenc",
+    "posts/mit-ocw-data-structure.md",
+    "posts/2023-11-13.md",
     "posts/dh-interview-study-uber.md",
     "posts/2023-11-10.md",
     "posts/2023-11-09.md",
@@ -219,11 +237,8 @@
     "posts/level2-level-log.md",
     "posts/functional-interface.md",
     "posts/transaction-and-spring-transaction.md",
-    "posts/left-left-right-rotation.png.md",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",
-    "posts/2023-11-07.md",
-    "posts/spring-data-jdbc.md",
     "posts/attachments/right-left-right-left.png",
     "posts/attachments/right-right-left-rotation.png",
     "posts/attachments/Pasted image 20231101222556.png",

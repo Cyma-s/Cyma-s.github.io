@@ -1,8 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "dh-interview-study-uber",
-      "path": "posts/dh-interview-study-uber.md"
+      "basename": "mit-ocw-data-structure",
+      "path": "posts/mit-ocw-data-structure.md"
+    },
+    {
+      "basename": "2023-11-13",
+      "path": "posts/2023-11-13.md"
     },
     {
       "basename": "2023-11-09",
@@ -191,10 +195,6 @@
     {
       "basename": "dh-interview-study-11-08",
       "path": "posts/dh-interview-study-11-08.md"
-    },
-    {
-      "basename": "2023-11",
-      "path": "posts/2023-11.md"
     }
   ],
   "omittedPaths": [
