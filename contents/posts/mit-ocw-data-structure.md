@@ -1,7 +1,7 @@
 ---
 title: MIT 2. Data Structures and Dynamic Arrays
 date: 2023-11-13 15:03:20 +0900
-updated: 2023-11-13 16:24:19 +0900
+updated: 2023-11-13 17:53:34 +0900
 tags: 
 ---
 
@@ -61,7 +61,7 @@ You can access any of them equally quickly.
 - array access is constant time.
 
 ---
-Assume $w >=  log n$, w is the machine word size.
+Assume $w >=  log n$, w is the machine promise size.
 we don't usually think of the machine as getting bigger over time, but you should think of the machine as getting bigger over time.
 
 Because if I have n things that I"m dealing with -- n, here, is the problem size -- at the very least, I need to be able to address them.
@@ -135,3 +135,18 @@ the algorithm for supporting get-first or set-first or in particular, insert-fir
 	- get and set_at need $O(i)$, in the worst case, $O(n)$
 	- If I want to get the 10th item in a linked list, I have to follow these pointers 10 times. 
 	- accessing the ith item is going to take order i time.
+
+### amortization
+
+operation takes T(n) amortized time, if any k of those operations take k <= k * T(n) time.
+(averaging over operation sequence)
+
+## Questions
+
+1. Can we do insert and delete last in constant time in a static array?
+
+## Feedback
+
+- length constant time 을 말할 때 문장 구조 점검하기
+- 차근차근
+- 2 to the k
