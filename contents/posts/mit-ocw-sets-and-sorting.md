@@ -1,7 +1,7 @@
 ---
 title: 
 date: 2023-11-14 10:04:05 +0900
-updated: 2023-11-14 15:08:07 +0900
+updated: 2023-11-14 17:55:05 +0900
 tags:
   - mit
   - algorithms
@@ -106,7 +106,7 @@ Base case: i = 0
 if my runtime is a function s, well, for one thing, if my array has one element in it, it returns i.
 So in other words, it's $\theta(1)$ 
 S of n ($S(n)$) is equal to S of n minus 1 ($S(n-1)$) plus theta of 1 ($\theta(1)$)
-S of n maybe look something like $cn$ for some constant c that doesn't depend on m.
+S of n maybe look something like $cn$ for some constant c that doesn't depend on n.
 
 I've guessed that s of n is theta of n.
 $cn = c(n-1) + \theta(1)$ (I can subtract cn from both sides)
@@ -124,6 +124,7 @@ def selection_sort(A, i = None):
 the first thing I'm going to do find is find the max element between 0 and i. And then I'm going to swap it into place. Then step3 is I still have to sort everything to the left of index i and that's that recursive call.
 
 let's call that t for time. 
+
 $T(n) = T(n-1) + \theta(n)$ => $\theta(n^2)$
 $T(n)^{2}= cn^2$
 $cn^{2} = c(n-1)^{2}+ \theta(n) = cn^{2}- 2cn + c + \theta(n)$
@@ -166,14 +167,18 @@ $cnlogn = 2c\frac{n}{2}log\frac{n}{2}+ \theta(n) = cn(logn - log2) + \theta(n)$
 ## 질문
 
 - What is the time complexity of implementing set with a sorted array?
-	- 
+	- When I build a set using sorted array, It takes order N log N. And If I want to get element in a set, It takes order log N because of the binary search to find the element. If I insert or delete an element in the set, it takes order n time because the time that copy the original array exists. If I want to find the minimum or the maximum value in the array, It takes O of 1 
 - Can you explain destructive in sorting?
 	- The destructive sort is to sort original array. So the original array is not preserved. That's the destructive sorting.
 - Can you explain the process of merge sort?
-	- Merge sort is to sort the array using divide and conquer method. First, I'm going to split the range of the array into half. And then do it again and again until the splitted range size is one. Next, I can sort the size 1 array easily. And next, I'm going to merge two arrays into one array. In this case, I
+	- Merge sort is to sort the array using divide and conquer method. First, I'm going to split the range of the array into half. And then do it again and again until the splitted range size is one. Next, I can sort the size 1 array easily. And next, I'm going to merge two arrays into one array until the merged array size equals the original array. That's the process of the merge sort.
 	- Can you describe the process of the merge function?
 		- First, I have two pointers to point the ends of two arrays. I call two arrays A and B, and call two pointers p1 and p2. If p1 of a is bigger than p2 of b, I'm going to put it into the end of another array, C. Next, I'll subtract one from p1 and the pointer of C. If p2 of b is bigger than p1 of a, I'm going to put it into the left on the end of C. Then I'll call the method recursively, terminating the recursion when the pointer to C arrives at the beginning of C.
-- 
+- Can you explain the process of selection sort?
+	- First, I'm going to divide it into two chunks. Next, I'll find the biggest thing in the first i elements of my array. And the next, I will swap it into place and then sort everything to the left.
+	- What is the time complexity of the selection sort?
+		- let's call that t for time. T of one is theta of one. And T of n is t of n minus one plus theta n.
+
 ## 단어
 
 - intuition: 직관
@@ -186,3 +191,7 @@ $cnlogn = 2c\frac{n}{2}log\frac{n}{2}+ \theta(n) = cn(logn - log2) + \theta(n)$
 - recitation: 구답
 - tautology: 동어 반복
 - put together: 합치다.
+
+delete 는 insert 와 같이 취급함.
+is equal to
+replace to

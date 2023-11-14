@@ -34,9 +34,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "605cc083c813b6b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/english-speaking-pattern.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "270235c9ac7d8f3d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/english-speaking-nov-3week.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -119,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/mit-ocw-sets-and-sorting.md",
+                "file": "posts/english-speaking-nov-3week.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +162,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/mit-ocw-sets-and-sorting.md",
+                "file": "posts/english-speaking-nov-3week.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +193,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/mit-ocw-sets-and-sorting.md"
+                "file": "posts/english-speaking-nov-3week.md"
               }
             }
           },
@@ -186,9 +212,17 @@
               "type": "tasks_timeline_view",
               "state": {}
             }
+          },
+          {
+            "id": "4c3b927f9c0fc305",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -217,48 +251,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "floating": {
-    "id": "bf0f87d163b936eb",
-    "type": "floating",
-    "children": [
-      {
-        "id": "15988a3681481404",
-        "type": "window",
-        "children": [
-          {
-            "id": "6c3f6e31258eb7d1",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "49bab6337763d1c1",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "posts/mit-ocw-sets-and-sorting.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 38,
-        "width": 756,
-        "height": 944,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "2c59ffce03a8c2f0",
+  "active": "270235c9ac7d8f3d",
   "lastOpenFiles": [
     "posts/2023-11-14.md",
     "posts/mit-ocw-sets-and-sorting.md",
+    "posts/english-speaking-pattern.md",
+    "posts/english-speaking-nov-3week.md",
     "posts/mit-ocw-data-structure.md",
     "posts/Untitled 20231113 041648.mdenc",
     "posts/2023-11-13.md",
@@ -282,8 +280,6 @@
     "posts/algorithm-tips.md",
     "posts/kruskal-algorithm.md",
     "posts/bipartite-matching.md",
-    "posts/level2-level-log.md",
-    "posts/functional-interface.md",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",
     "posts/attachments/right-left-right-left.png",

@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "mit-ocw-sets-and-sorting",
-      "path": "posts/mit-ocw-sets-and-sorting.md"
+      "basename": "english-speaking-nov-3week",
+      "path": "posts/english-speaking-nov-3week.md"
     },
     {
       "basename": "2023-11-14",
       "path": "posts/2023-11-14.md"
+    },
+    {
+      "basename": "mit-ocw-sets-and-sorting",
+      "path": "posts/mit-ocw-sets-and-sorting.md"
+    },
+    {
+      "basename": "english-speaking-pattern",
+      "path": "posts/english-speaking-pattern.md"
     },
     {
       "basename": "mit-ocw-data-structure",
@@ -191,14 +199,6 @@
     {
       "basename": "2023-09-27",
       "path": "posts/2023-09-27.md"
-    },
-    {
-      "basename": "2023-09-21",
-      "path": "posts/2023-09-21.md"
-    },
-    {
-      "basename": "2023-09-20",
-      "path": "posts/2023-09-20.md"
     }
   ],
   "omittedPaths": [
