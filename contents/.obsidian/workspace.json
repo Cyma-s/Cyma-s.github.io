@@ -34,9 +34,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e2394780024642c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/mit-ocw-sets-and-sorting.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -119,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/mit-ocw-data-structure.md",
+                "file": "posts/mit-ocw-sets-and-sorting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/mit-ocw-data-structure.md",
+                "file": "posts/mit-ocw-sets-and-sorting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/mit-ocw-data-structure.md"
+                "file": "posts/mit-ocw-sets-and-sorting.md"
               }
             }
           },
@@ -209,10 +222,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "2d8126f0a189dfcc",
+  "active": "e2394780024642c5",
   "lastOpenFiles": [
-    "posts/Untitled 20231113 041648.mdenc",
     "posts/mit-ocw-data-structure.md",
+    "posts/mit-ocw-sets-and-sorting.md",
+    "posts/Untitled 20231113 041648.mdenc",
     "posts/2023-11-13.md",
     "posts/dh-interview-study-uber.md",
     "posts/2023-11-10.md",

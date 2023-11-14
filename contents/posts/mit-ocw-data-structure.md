@@ -1,8 +1,10 @@
 ---
 title: MIT 2. Data Structures and Dynamic Arrays
 date: 2023-11-13 15:03:20 +0900
-updated: 2023-11-13 17:53:34 +0900
-tags: 
+updated: 2023-11-14 10:37:17 +0900
+tags:
+  - algorithms
+  - mit
 ---
 
 ## Interface (API / ADT) vs Data Structure
