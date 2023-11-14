@@ -5,6 +5,10 @@
       "path": "posts/mit-ocw-sets-and-sorting.md"
     },
     {
+      "basename": "2023-11-14",
+      "path": "posts/2023-11-14.md"
+    },
+    {
       "basename": "mit-ocw-data-structure",
       "path": "posts/mit-ocw-data-structure.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "2023-09-20",
       "path": "posts/2023-09-20.md"
-    },
-    {
-      "basename": "dh-interview-study-11-08",
-      "path": "posts/dh-interview-study-11-08.md"
     }
   ],
   "omittedPaths": [
