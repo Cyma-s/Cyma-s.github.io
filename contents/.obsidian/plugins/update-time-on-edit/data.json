@@ -64,11 +64,9 @@
     "posts/2023-10-28.md": "2312154acc1f1f000cf2544146206ddb14e8bb1cd19a637007f858ddd7946244",
     "posts/2023-11-09.md": "be723273c20b1c8ec44d44fdba58fce5b56a6d83ca14a595b0d18b5e1aac55b9",
     "posts/dh-interview-study-11-09.md": "d28a12f948c8229108a088d76cfa901b0765b82580998f8e7caf9aed58e54b75",
-    "posts/k-most-frequent-value.md": "d6444c5ed9a593c70415b413c785017975a3f160de00e49a5c1333ef75e416ea",
-    "posts/kruskal-algorithm.md": "e564c04632f8eaacd7d26404eeccf1c1ddde88055586852d30d8a77e15f80433",
     "posts/algorithm-tips.md": "f959a012b4bce401d43eb43c8559f607efec365619103bed1535e66d28491e35",
     "posts/minimum-spanning-tree.md": "504de6bb3d8aa5dedbcdb69c17b5c1ac85ec756a0d90709d1a7179836bdbc7f7",
-    "posts/minimum-vertex-cover.md": "9f3337dea9917f683b3ccf78f66401e966d950a7c3da46f3baa929053f3b54c9",
+    "posts/minimum-vertex-cover.md": "ceac301002474f69a81073936b40a541ef12301e5d415410b94212087201fa0c",
     "posts/floyd-warshall-algorithm.md": "64d22fb62fbaffaf3c3faa241924cfccc20c32d4300e7046ccefd9f2662ea095",
     "posts/tsp.md": "b046f218dc159d49f88a987918c0a4625a40d89218c78d14db6c1caba82dde00",
     "posts/bitmasking.md": "ce810ca323dbfcced7246e310d292ff32888302fd947f87bb3b94aba8190cb0d",
@@ -76,9 +74,11 @@
     "posts/java-algorithm-tips.md": "0479dca484a13c3d69b9d64bb20fe6738d86f9949aced5b45748f700f0de15cd",
     "posts/2023-11-13.md": "ae1a8394e9080d3ab196d6d2a38e4ff860b02ce83af8e3279a73499612bc95e8",
     "posts/mit-ocw-data-structure.md": "08b310df1cb5531c758fa8ffa9ddbd588299222924f104c2c61fc3107c3da605",
-    "posts/mit-ocw-sets-and-sorting.md": "9243ae494123626a7fe3fedca475f49160f47ad199b18c343239b9df4a6176ed",
+    "posts/mit-ocw-sets-and-sorting.md": "315b80f1674f3549f355669f4d9e3b749cc8425e7efcdd9ac4f71d238ccdc06a",
     "posts/2023-11-14.md": "ee8734448f44113ae9b5ee9bb90e8858b2a9b638eef8186c9b484de1a910896d",
     "posts/english-speaking-pattern.md": "7f9f6450daf75dcb14f14edef855c1104aede9aedc63cb4d7c2cde2b5de18720",
-    "posts/english-speaking-nov-3week.md": "e3e82a7618026d4d7fb6ded90c30b249c38dfe30e70b65a8c9d7ff66bd0e194d"
+    "posts/english-speaking-nov-3week.md": "e3e82a7618026d4d7fb6ded90c30b249c38dfe30e70b65a8c9d7ff66bd0e194d",
+    "posts/jpa.md": "2ebde892595d6704c738195cdd26ce123f2d0da5a36b2474f4475fe1c79c0b50",
+    "posts/matzip-aws-s3-cloudfront.md": "3d9918184310af114a2922fe1ea9f7dc9a4e9f885f65a8dd50c2874d990fd187"
   }
 }

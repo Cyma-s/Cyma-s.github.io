@@ -54,7 +54,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/english-speaking-nov-3week.md",
+                "file": "posts/mit-ocw-sets-and-sorting.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -120,8 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5,
-    "collapsed": true
+    "width": 370.5
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -145,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/english-speaking-nov-3week.md",
+                "file": "posts/mit-ocw-sets-and-sorting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -162,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/english-speaking-nov-3week.md",
+                "file": "posts/mit-ocw-sets-and-sorting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -193,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/english-speaking-nov-3week.md"
+                "file": "posts/mit-ocw-sets-and-sorting.md"
               }
             }
           },
@@ -253,33 +252,33 @@
   },
   "active": "270235c9ac7d8f3d",
   "lastOpenFiles": [
-    "posts/2023-11-14.md",
-    "posts/mit-ocw-sets-and-sorting.md",
-    "posts/english-speaking-pattern.md",
-    "posts/english-speaking-nov-3week.md",
     "posts/mit-ocw-data-structure.md",
-    "posts/Untitled 20231113 041648.mdenc",
-    "posts/2023-11-13.md",
-    "posts/dh-interview-study-uber.md",
-    "posts/2023-11-10.md",
-    "posts/2023-11-09.md",
-    "posts/2023-11-08.md",
-    "posts/java-algorithm-tips.md",
-    "posts/k-most-frequent-value.md",
-    "posts/avl-tree.md",
-    "posts/level1-level-log.md",
-    "posts/sort-algorithm.md",
-    "posts/minimum-spanning-tree.md",
-    "posts/dh-interview-study-11-09.md",
-    "posts/bellman-ford-algorithm.md",
-    "posts/bitmasking.md",
-    "posts/segment-tree.md",
-    "posts/tsp.md",
-    "posts/floyd-warshall-algorithm.md",
+    "posts/mit-ocw-sets-and-sorting.md",
     "posts/minimum-vertex-cover.md",
-    "posts/algorithm-tips.md",
-    "posts/kruskal-algorithm.md",
-    "posts/bipartite-matching.md",
+    "posts/mock-vs-mockbean.md",
+    "posts/mysql-execution-plan.md",
+    "posts/monitor-lock-and-java-synchoronized.md",
+    "posts/mockito.md",
+    "posts/minimum-spanning-tree.md",
+    "posts/mime.md",
+    "posts/meeting-process-refactoring-request.md",
+    "posts/matzip-vpc-setting.md",
+    "posts/matzip-summer-vacation-meeting.md",
+    "posts/matzip-jpa.md",
+    "posts/matzip-issue.md",
+    "posts/matzip-feature-develop.md",
+    "posts/matzip-aws-s3-cloudfront.md",
+    "posts/matzip-aws-iam.md",
+    "posts/matzip-aws.md",
+    "posts/matzip_pair.md",
+    "posts/matzip.md",
+    "posts/lower-bound-and-upper-bound.md",
+    "posts/locust.md",
+    "posts/lis.md",
+    "posts/level4-writing.md",
+    "posts/level1-week3.md",
+    "posts/level1-week2.md",
+    "posts/Untitled 20231113 041648.mdenc",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",
     "posts/attachments/right-left-right-left.png",

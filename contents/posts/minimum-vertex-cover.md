@@ -1,12 +1,10 @@
 ---
 title: 최소 정점 커버 (Minimum Vertex Cover)
 date: 2023-10-27 11:21:11 +0900
-updated: 2023-11-09 14:39:40 +0900
+updated: 2023-11-15 16:11:14 +0900
 tags:
   - algorithms
 ---
-
-![[feedback.png]]
 
 ##  Vertex Cover
 
