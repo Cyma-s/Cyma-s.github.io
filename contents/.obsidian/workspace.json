@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/dh-interview-answer.md",
+                "file": "posts/level4-writing.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -133,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/dh-interview-answer.md",
+                "file": "posts/level4-writing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/dh-interview-answer.md",
+                "file": "posts/level4-writing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -181,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/dh-interview-answer.md"
+                "file": "posts/level4-writing.md"
               }
             }
           },
@@ -241,6 +241,7 @@
   },
   "active": "0da0a4526ef4d282",
   "lastOpenFiles": [
+    "posts/level2-writing.md",
     "posts/dh-interview-answer.md",
     "posts/english-speaking-pattern.md",
     "posts/attachments/shook-main-page.png",
@@ -267,7 +268,6 @@
     "posts/level1-eighth-retrospect.md",
     "posts/level1-seventh-retrospect.md",
     "posts/level1-fifth-retrospect.md",
-    "posts/level1-fourth-retrospect.md",
     "posts/Untitled 20231113 041648.mdenc",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",

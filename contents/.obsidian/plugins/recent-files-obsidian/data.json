@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "level4-writing",
+      "path": "posts/level4-writing.md"
+    },
+    {
+      "basename": "level2-writing",
+      "path": "posts/level2-writing.md"
+    },
+    {
       "basename": "dh-interview-answer",
       "path": "posts/dh-interview-answer.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "mockito",
       "path": "posts/mockito.md"
-    },
-    {
-      "basename": "minimum-spanning-tree",
-      "path": "posts/minimum-spanning-tree.md"
-    },
-    {
-      "basename": "mime",
-      "path": "posts/mime.md"
     }
   ],
   "omittedPaths": [
