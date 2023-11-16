@@ -23,12 +23,12 @@
             }
           },
           {
-            "id": "9575097584e7fc60",
+            "id": "5494b612ebb8c614",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-02-20.md",
+                "file": "posts/inmemory-cache-develop.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -36,33 +36,17 @@
             }
           },
           {
-            "id": "66b3305416ec87a4",
+            "id": "b94404f3376f833f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "posts/level2-eighth-retrospect.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5f6cda28ed8a7cf6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/level2-week7-retrospect.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "posts/attachments/shook-main-page.png"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -146,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/level2-eighth-retrospect.md",
+                "file": "posts/inmemory-cache-develop.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/level2-eighth-retrospect.md",
+                "file": "posts/inmemory-cache-develop.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/level2-eighth-retrospect.md"
+                "file": "posts/inmemory-cache-develop.md"
               }
             }
           },
@@ -252,34 +236,34 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "66b3305416ec87a4",
+  "active": "5494b612ebb8c614",
   "lastOpenFiles": [
-    "posts/level2-sixth-retrospect.md",
-    "posts/level2-eighth-retrospect.md",
-    "posts/level2-fifth-retrospect.md",
-    "posts/level2-fourth-retrospect.md",
-    "posts/level2-third-retrospect.md",
-    "posts/level2-second-retrospect.md",
-    "posts/level2-first-retrospect.md",
+    "posts/attachments/shook-main-page.png",
+    "posts/inmemory-cache-develop.md",
+    "posts/2023-11-16.md",
+    "posts/2023-09-21.md",
+    "posts/dh-interview-study-11-07.md",
+    "posts/forwarded-header-filter.md",
+    "posts/2023-08-24.md",
+    "posts/writing-subject-candidate.md",
+    "posts/2023-08-01.md",
+    "posts/2023-03-17.md",
+    "posts/assertj.md",
+    "posts/2023-03-26.md",
+    "posts/2023-04-14.md",
+    "posts/2023-09-05.md",
+    "posts/state-pattern.md",
+    "posts/2023-05-20.md",
+    "posts/shook-api-doc.md",
+    "posts/Predicate.md",
+    "posts/2023-02-12.md",
+    "posts/level1-sixth-retrospect.md",
+    "posts/2023-02-20.md",
     "posts/level1-eighth-retrospect.md",
     "posts/level1-seventh-retrospect.md",
-    "posts/level1-sixth-retrospect.md",
     "posts/level1-fifth-retrospect.md",
-    "posts/level2-week7-retrospect.md",
     "posts/level1-fourth-retrospect.md",
     "posts/level1-third-retrospect.md",
-    "posts/2023-02-20.md",
-    "posts/mock-vs-mockbean.md",
-    "posts/shook-webclient-reason.md",
-    "posts/application-context.md",
-    "posts/forwarded-header-filter.md",
-    "posts/2023-11-16.md",
-    "posts/nginx.md",
-    "posts/handler-adapter.md",
-    "posts/jdk-synchronizer.md",
-    "posts/mit-ocw-sets-and-sorting.md",
-    "posts/mit-ocw-data-structure.md",
-    "posts/minimum-vertex-cover.md",
     "posts/Untitled 20231113 041648.mdenc",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",
