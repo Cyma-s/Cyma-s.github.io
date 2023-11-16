@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "62e944f8ff6bd6d9",
+        "id": "deb23ec49aad9422",
         "type": "tabs",
         "children": [
           {
-            "id": "543c6699eb2d45ec",
+            "id": "1b024882a16be90a",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-14.md",
+                "file": "posts/2023-11-16.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -23,12 +23,12 @@
             }
           },
           {
-            "id": "2c59ffce03a8c2f0",
+            "id": "9575097584e7fc60",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/mit-ocw-sets-and-sorting.md",
+                "file": "posts/2023-02-20.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -36,12 +36,12 @@
             }
           },
           {
-            "id": "605cc083c813b6b5",
+            "id": "66b3305416ec87a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/english-speaking-pattern.md",
+                "file": "posts/level2-eighth-retrospect.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,12 +49,12 @@
             }
           },
           {
-            "id": "270235c9ac7d8f3d",
+            "id": "5f6cda28ed8a7cf6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/mit-ocw-sets-and-sorting.md",
+                "file": "posts/level2-week7-retrospect.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -62,7 +62,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -116,11 +116,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 370.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -144,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/mit-ocw-sets-and-sorting.md",
+                "file": "posts/level2-eighth-retrospect.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/mit-ocw-sets-and-sorting.md",
+                "file": "posts/level2-eighth-retrospect.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/mit-ocw-sets-and-sorting.md"
+                "file": "posts/level2-eighth-retrospect.md"
               }
             }
           },
@@ -205,18 +207,18 @@
             }
           },
           {
-            "id": "7ca72603f08b437c",
-            "type": "leaf",
-            "state": {
-              "type": "tasks_timeline_view",
-              "state": {}
-            }
-          },
-          {
             "id": "4c3b927f9c0fc305",
             "type": "leaf",
             "state": {
               "type": "timeline",
+              "state": {}
+            }
+          },
+          {
+            "id": "66f1e369ca902205",
+            "type": "leaf",
+            "state": {
+              "type": "tasks_timeline_view",
               "state": {}
             }
           }
@@ -250,34 +252,34 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "270235c9ac7d8f3d",
+  "active": "66b3305416ec87a4",
   "lastOpenFiles": [
-    "posts/mit-ocw-data-structure.md",
-    "posts/mit-ocw-sets-and-sorting.md",
-    "posts/minimum-vertex-cover.md",
+    "posts/level2-sixth-retrospect.md",
+    "posts/level2-eighth-retrospect.md",
+    "posts/level2-fifth-retrospect.md",
+    "posts/level2-fourth-retrospect.md",
+    "posts/level2-third-retrospect.md",
+    "posts/level2-second-retrospect.md",
+    "posts/level2-first-retrospect.md",
+    "posts/level1-eighth-retrospect.md",
+    "posts/level1-seventh-retrospect.md",
+    "posts/level1-sixth-retrospect.md",
+    "posts/level1-fifth-retrospect.md",
+    "posts/level2-week7-retrospect.md",
+    "posts/level1-fourth-retrospect.md",
+    "posts/level1-third-retrospect.md",
+    "posts/2023-02-20.md",
     "posts/mock-vs-mockbean.md",
-    "posts/mysql-execution-plan.md",
-    "posts/monitor-lock-and-java-synchoronized.md",
-    "posts/mockito.md",
-    "posts/minimum-spanning-tree.md",
-    "posts/mime.md",
-    "posts/meeting-process-refactoring-request.md",
-    "posts/matzip-vpc-setting.md",
-    "posts/matzip-summer-vacation-meeting.md",
-    "posts/matzip-jpa.md",
-    "posts/matzip-issue.md",
-    "posts/matzip-feature-develop.md",
-    "posts/matzip-aws-s3-cloudfront.md",
-    "posts/matzip-aws-iam.md",
-    "posts/matzip-aws.md",
-    "posts/matzip_pair.md",
-    "posts/matzip.md",
-    "posts/lower-bound-and-upper-bound.md",
-    "posts/locust.md",
-    "posts/lis.md",
-    "posts/level4-writing.md",
-    "posts/level1-week3.md",
-    "posts/level1-week2.md",
+    "posts/shook-webclient-reason.md",
+    "posts/application-context.md",
+    "posts/forwarded-header-filter.md",
+    "posts/2023-11-16.md",
+    "posts/nginx.md",
+    "posts/handler-adapter.md",
+    "posts/jdk-synchronizer.md",
+    "posts/mit-ocw-sets-and-sorting.md",
+    "posts/mit-ocw-data-structure.md",
+    "posts/minimum-vertex-cover.md",
     "posts/Untitled 20231113 041648.mdenc",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",

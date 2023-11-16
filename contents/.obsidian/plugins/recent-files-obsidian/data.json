@@ -1,6 +1,98 @@
 {
   "recentFiles": [
     {
+      "basename": "level2-eighth-retrospect",
+      "path": "posts/level2-eighth-retrospect.md"
+    },
+    {
+      "basename": "level2-sixth-retrospect",
+      "path": "posts/level2-sixth-retrospect.md"
+    },
+    {
+      "basename": "level2-fifth-retrospect",
+      "path": "posts/level2-fifth-retrospect.md"
+    },
+    {
+      "basename": "level2-fourth-retrospect",
+      "path": "posts/level2-fourth-retrospect.md"
+    },
+    {
+      "basename": "level2-third-retrospect",
+      "path": "posts/level2-third-retrospect.md"
+    },
+    {
+      "basename": "level2-second-retrospect",
+      "path": "posts/level2-second-retrospect.md"
+    },
+    {
+      "basename": "level2-first-retrospect",
+      "path": "posts/level2-first-retrospect.md"
+    },
+    {
+      "basename": "level1-eighth-retrospect",
+      "path": "posts/level1-eighth-retrospect.md"
+    },
+    {
+      "basename": "level1-seventh-retrospect",
+      "path": "posts/level1-seventh-retrospect.md"
+    },
+    {
+      "basename": "level1-sixth-retrospect",
+      "path": "posts/level1-sixth-retrospect.md"
+    },
+    {
+      "basename": "level1-fifth-retrospect",
+      "path": "posts/level1-fifth-retrospect.md"
+    },
+    {
+      "basename": "level2-week7-retrospect",
+      "path": "posts/level2-week7-retrospect.md"
+    },
+    {
+      "basename": "level1-fourth-retrospect",
+      "path": "posts/level1-fourth-retrospect.md"
+    },
+    {
+      "basename": "level1-third-retrospect",
+      "path": "posts/level1-third-retrospect.md"
+    },
+    {
+      "basename": "2023-02-20",
+      "path": "posts/2023-02-20.md"
+    },
+    {
+      "basename": "mock-vs-mockbean",
+      "path": "posts/mock-vs-mockbean.md"
+    },
+    {
+      "basename": "shook-webclient-reason",
+      "path": "posts/shook-webclient-reason.md"
+    },
+    {
+      "basename": "application-context",
+      "path": "posts/application-context.md"
+    },
+    {
+      "basename": "forwarded-header-filter",
+      "path": "posts/forwarded-header-filter.md"
+    },
+    {
+      "basename": "2023-11-16",
+      "path": "posts/2023-11-16.md"
+    },
+    {
+      "basename": "nginx",
+      "path": "posts/nginx.md"
+    },
+    {
+      "basename": "handler-adapter",
+      "path": "posts/handler-adapter.md"
+    },
+    {
+      "basename": "jdk-synchronizer",
+      "path": "posts/jdk-synchronizer.md"
+    },
+    {
       "basename": "mit-ocw-sets-and-sorting",
       "path": "posts/mit-ocw-sets-and-sorting.md"
     },
@@ -11,10 +103,6 @@
     {
       "basename": "minimum-vertex-cover",
       "path": "posts/minimum-vertex-cover.md"
-    },
-    {
-      "basename": "mock-vs-mockbean",
-      "path": "posts/mock-vs-mockbean.md"
     },
     {
       "basename": "mysql-execution-plan",
@@ -111,94 +199,6 @@
     {
       "basename": "level1-chess",
       "path": "posts/level1-chess.md"
-    },
-    {
-      "basename": "level1-blackjack",
-      "path": "posts/level1-blackjack.md"
-    },
-    {
-      "basename": "jpa-second-cache",
-      "path": "posts/jpa-second-cache.md"
-    },
-    {
-      "basename": "jpa-dynamic-update",
-      "path": "posts/jpa-dynamic-update.md"
-    },
-    {
-      "basename": "jpa-dto-projection",
-      "path": "posts/jpa-dto-projection.md"
-    },
-    {
-      "basename": "jpa-dirty-checking",
-      "path": "posts/jpa-dirty-checking.md"
-    },
-    {
-      "basename": "jpa",
-      "path": "posts/jpa.md"
-    },
-    {
-      "basename": "jdk-synchronizer",
-      "path": "posts/jdk-synchronizer.md"
-    },
-    {
-      "basename": "jdbctemplate",
-      "path": "posts/jdbctemplate.md"
-    },
-    {
-      "basename": "java-synchoronized",
-      "path": "posts/java-synchoronized.md"
-    },
-    {
-      "basename": "java-algorithm-tips",
-      "path": "posts/java-algorithm-tips.md"
-    },
-    {
-      "basename": "ioc-container-and-di",
-      "path": "posts/ioc-container-and-di.md"
-    },
-    {
-      "basename": "interview-special-lecture",
-      "path": "posts/interview-special-lecture.md"
-    },
-    {
-      "basename": "interview-questions",
-      "path": "posts/interview-questions.md"
-    },
-    {
-      "basename": "interceptor-argument-resolver-authenticated",
-      "path": "posts/interceptor-argument-resolver-authenticated.md"
-    },
-    {
-      "basename": "interceptor",
-      "path": "posts/interceptor.md"
-    },
-    {
-      "basename": "inmemory-cache-develop-reason",
-      "path": "posts/inmemory-cache-develop-reason.md"
-    },
-    {
-      "basename": "inmemory-cache-develop",
-      "path": "posts/inmemory-cache-develop.md"
-    },
-    {
-      "basename": "inbox",
-      "path": "posts/inbox.md"
-    },
-    {
-      "basename": "hikaricp",
-      "path": "posts/hikaricp.md"
-    },
-    {
-      "basename": "handler-mapping",
-      "path": "posts/handler-mapping.md"
-    },
-    {
-      "basename": "handler-adapter",
-      "path": "posts/handler-adapter.md"
-    },
-    {
-      "basename": "grasp",
-      "path": "posts/grasp.md"
     }
   ],
   "omittedPaths": [
