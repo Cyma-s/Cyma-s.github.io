@@ -28,7 +28,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/inmemory-cache-develop.md",
+                "file": "posts/english-speaking-pattern.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -36,17 +36,20 @@
             }
           },
           {
-            "id": "b94404f3376f833f",
+            "id": "0da0a4526ef4d282",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "posts/attachments/shook-main-page.png"
+                "file": "posts/dh-interview-answer.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -130,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/inmemory-cache-develop.md",
+                "file": "posts/dh-interview-answer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/inmemory-cache-develop.md",
+                "file": "posts/dh-interview-answer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/inmemory-cache-develop.md"
+                "file": "posts/dh-interview-answer.md"
               }
             }
           },
@@ -236,8 +239,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5494b612ebb8c614",
+  "active": "0da0a4526ef4d282",
   "lastOpenFiles": [
+    "posts/dh-interview-answer.md",
+    "posts/english-speaking-pattern.md",
     "posts/attachments/shook-main-page.png",
     "posts/inmemory-cache-develop.md",
     "posts/2023-11-16.md",
@@ -263,7 +268,6 @@
     "posts/level1-seventh-retrospect.md",
     "posts/level1-fifth-retrospect.md",
     "posts/level1-fourth-retrospect.md",
-    "posts/level1-third-retrospect.md",
     "posts/Untitled 20231113 041648.mdenc",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",
@@ -274,7 +278,6 @@
     "posts/attachments/Pasted image 20231106153648.png",
     "posts/attachments/linked-hash-map-local-cache-develop.png",
     "posts/attachments/right-right-left-rotation.png",
-    "posts/attachments/left-left-case.png",
     "calendar",
     "dictionary",
     "template",
