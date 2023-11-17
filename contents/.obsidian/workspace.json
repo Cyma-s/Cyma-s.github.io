@@ -34,22 +34,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "0da0a4526ef4d282",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/level4-writing.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -133,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/level4-writing.md",
+                "file": "posts/english-speaking-pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/level4-writing.md",
+                "file": "posts/english-speaking-pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -181,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/level4-writing.md"
+                "file": "posts/english-speaking-pattern.md"
               }
             }
           },
@@ -239,8 +226,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0da0a4526ef4d282",
+  "active": "5494b612ebb8c614",
   "lastOpenFiles": [
+    "posts/level4-writing.md",
     "posts/level2-writing.md",
     "posts/dh-interview-answer.md",
     "posts/english-speaking-pattern.md",
@@ -267,7 +255,6 @@
     "posts/2023-02-20.md",
     "posts/level1-eighth-retrospect.md",
     "posts/level1-seventh-retrospect.md",
-    "posts/level1-fifth-retrospect.md",
     "posts/Untitled 20231113 041648.mdenc",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",
