@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "local-cache-concurrency-problem",
+      "path": "posts/local-cache-concurrency-problem.md"
+    },
+    {
       "basename": "segment-tree",
       "path": "posts/segment-tree.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "minimum-vertex-cover",
       "path": "posts/minimum-vertex-cover.md"
-    },
-    {
-      "basename": "mysql-execution-plan",
-      "path": "posts/mysql-execution-plan.md"
     }
   ],
   "omittedPaths": [

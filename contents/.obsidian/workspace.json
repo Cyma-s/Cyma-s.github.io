@@ -34,9 +34,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "be33566d6fbf83a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/local-cache-concurrency-problem.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -120,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/segment-tree.md",
+                "file": "posts/local-cache-concurrency-problem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/segment-tree.md",
+                "file": "posts/local-cache-concurrency-problem.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/segment-tree.md"
+                "file": "posts/local-cache-concurrency-problem.md"
               }
             }
           },
@@ -226,8 +239,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "259bf6b619759bb0",
+  "active": "be33566d6fbf83a4",
   "lastOpenFiles": [
+    "posts/attachments/inmemory-songs-concurrency-sort.png",
+    "posts/local-cache-concurrency-problem.md",
+    "posts/segment-tree.md",
+    "posts/english-speaking-11-.md",
     "posts/2023-11-20.md",
     "posts/english-speaking-pattern.md",
     "posts/level4-writing.md",
@@ -251,10 +268,6 @@
     "posts/2023-05-20.md",
     "posts/shook-api-doc.md",
     "posts/Predicate.md",
-    "posts/2023-02-12.md",
-    "posts/level1-sixth-retrospect.md",
-    "posts/2023-02-20.md",
-    "posts/level1-eighth-retrospect.md",
     "posts/Untitled 20231113 041648.mdenc",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",

@@ -96,6 +96,7 @@
     "posts/level2-eighth-retrospect.md": "18e5e87611dbdd1fdf6f5475cc28d82fd6aa01de88066ca0d2b6511254fda174",
     "posts/dh-interview-answer.md": "521a9a51dd064427608c2f5555c1182208568b48c6f846e7b26b26f5736f8b81",
     "posts/level4-writing.md": "ce1cf0ed9de0087dfe873428d0bb82b215967ebde1dc03f9596b875dd351f271",
-    "posts/2023-11-20.md": "fec05771f4c7241f3b4b214cd074078257831202c7aa49cfbb8667d727f6d5dd"
+    "posts/2023-11-20.md": "6fa18705a83bd72e6f919f12c72900f3718e82b0b89817adf5b5c8ba8e9f4e2e",
+    "posts/local-cache-concurrency-problem.md": "cfc06397a7d38c66cc47ef3bc669272be39b6f1043a8d82fb222902709266847"
   }
 }
