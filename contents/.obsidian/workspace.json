@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "deb23ec49aad9422",
+        "id": "da56bfef87b40e63",
         "type": "tabs",
         "children": [
           {
-            "id": "1b024882a16be90a",
+            "id": "375b3c13c61a07a3",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-16.md",
+                "file": "posts/2023-11-20.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -23,12 +23,12 @@
             }
           },
           {
-            "id": "5494b612ebb8c614",
+            "id": "259bf6b619759bb0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/english-speaking-pattern.md",
+                "file": "posts/segment-tree.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/english-speaking-pattern.md",
+                "file": "posts/segment-tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/english-speaking-pattern.md",
+                "file": "posts/segment-tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/english-speaking-pattern.md"
+                "file": "posts/segment-tree.md"
               }
             }
           },
@@ -189,7 +189,7 @@
             }
           },
           {
-            "id": "66f1e369ca902205",
+            "id": "a09dc4f26f4a3ae1",
             "type": "leaf",
             "state": {
               "type": "tasks_timeline_view",
@@ -226,12 +226,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5494b612ebb8c614",
+  "active": "259bf6b619759bb0",
   "lastOpenFiles": [
+    "posts/2023-11-20.md",
+    "posts/english-speaking-pattern.md",
     "posts/level4-writing.md",
     "posts/level2-writing.md",
     "posts/dh-interview-answer.md",
-    "posts/english-speaking-pattern.md",
     "posts/attachments/shook-main-page.png",
     "posts/inmemory-cache-develop.md",
     "posts/2023-11-16.md",
@@ -254,7 +255,6 @@
     "posts/level1-sixth-retrospect.md",
     "posts/2023-02-20.md",
     "posts/level1-eighth-retrospect.md",
-    "posts/level1-seventh-retrospect.md",
     "posts/Untitled 20231113 041648.mdenc",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",

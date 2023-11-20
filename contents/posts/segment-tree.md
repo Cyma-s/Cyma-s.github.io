@@ -1,7 +1,7 @@
 ---
 title: 세그먼트 트리
 date: 2023-10-16 08:19:20 +0900
-updated: 2023-11-09 14:39:46 +0900
+updated: 2023-11-20 13:45:34 +0900
 tags:
   - algorithms
 ---
@@ -23,6 +23,8 @@ tags:
 
 index 는 자식 노드를 계산하기 쉽게 (좌측 노드: 부모 노드 index * 2, 우측 노드: 부모 노드 index * 2 + 1) 1 부터 시작한다.
 
+- python version - recursion
+
 ```python
 def init(start, end, index):
 	if start == end: # leaf node 
@@ -32,6 +34,8 @@ def init(start, end, index):
 	tree[index] = init(start, mid, index * 2) + init(mid + 1, end, index * 2 + 1)   # 좌측 노드, 우측 노드를 채운다.
 	return tree[index]
 ```
+
+- java version
 
 ```java
 public void init(int[] tree, int[] input) { // tree 는 이미 0으로 초기화된 상태 (덧셈 세그먼트 트리에서)
@@ -56,6 +60,8 @@ public void init(int[] tree, int[] input) { // tree 는 이미 0으로 초기화
 
 구간의 합은 범위 안에 있는 경우만 더해주면 된다.
 
+- python version - recursion
+
 ```python
 def interval_sum(start, end, index, left, right):
 	if left > end or right < start:
@@ -66,6 +72,8 @@ def interval_sum(start, end, index, left, right):
 	return interval_sum(start, mid, index * 2, left, right) + interval_sum(mid + 1, end, index*2 + 1, left, right)
 ```
 
+- java version
+
 ```java
 public static int sum(int[] tree, int l, int r) {
 	int leaf = tree.size / 2;
@@ -75,20 +83,22 @@ public static int sum(int[] tree, int l, int r) {
 	int sum = 0;
 
 	while(l <= r) {
-		if(l % 2 != 0) { // 왼쪽 포인터가 오른쪽 노드일 때
+		if(l % 2 != 0) { // 왼쪽 포인터가 오른쪽 노드일 때 (범위에 포함되지 않을 때 더한다.)
 			sum += tree[l];
 		}
-		if(r % 2 == 0) {
+		if(r % 2 == 0) { // 오른쪽 포인터가 왼쪽 노드일 때 (범위에 포함되지 않을 때 더한다.)
 			sum += tree[r];
 		}
-		l = (l + 1) % 2;
-		r = (r + 1) % 2;
+		l = (l + 1) % 2;  // 오른쪽으로 이동
+		r = (r - 1) % 2;  // 왼쪽으로 이동
 	}
 	return sum;
 }
 ```
 
 ## 특정 원소의 값을 수정하기
+
+- python
 
 ```python
 def update(start, end, index, what, value):  # what: 구간 합을 수정할 노드 인덱스  
@@ -101,6 +111,8 @@ def update(start, end, index, what, value):  # what: 구간 합을 수정할 노
     update(start, mid, index * 2, what, value)  
     update(mid + 1, end, index * 2 + 1, what, value)
 ```
+
+- java
 
 ```java
 public void update(int[] tree, int index, int value) {
@@ -116,3 +128,9 @@ public void update(int[] tree, int index, int value) {
 
 ## 복잡도
 
+- 초기값 설정: java 반복문 기준 $O(N)$
+- 값 업데이트, 값 조회: $O(logN)$
+
+## 참고
+
+- https://pseong.tistory.com/18

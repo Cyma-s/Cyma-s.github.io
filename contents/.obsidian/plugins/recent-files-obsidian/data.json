@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "segment-tree",
+      "path": "posts/segment-tree.md"
+    },
+    {
+      "basename": "2023-11-20",
+      "path": "posts/2023-11-20.md"
+    },
+    {
       "basename": "english-speaking-pattern",
       "path": "posts/english-speaking-pattern.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "mysql-execution-plan",
       "path": "posts/mysql-execution-plan.md"
-    },
-    {
-      "basename": "monitor-lock-and-java-synchoronized",
-      "path": "posts/monitor-lock-and-java-synchoronized.md"
-    },
-    {
-      "basename": "mockito",
-      "path": "posts/mockito.md"
     }
   ],
   "omittedPaths": [
