@@ -67,7 +67,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/matzip-vpc-setting.md",
+                "file": "posts/vpc.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -75,7 +75,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -159,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/matzip-vpc-setting.md",
+                "file": "posts/top-down-approach-ch1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/matzip-vpc-setting.md",
+                "file": "posts/top-down-approach-ch1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -207,7 +207,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/matzip-vpc-setting.md"
+                "file": "posts/top-down-approach-ch1.md"
               }
             }
           },
@@ -265,8 +265,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "91e27e2ae8f227e2",
+  "active": "2d52f8dbaeaf0633",
   "lastOpenFiles": [
+    "posts/vpc.md",
+    "posts/2023-05-26.md",
+    "posts/matzip-vpc-setting.md",
     "posts/java-algorithm-tips.md",
     "posts/top-down-approach-ch1.md",
     "posts/local-cache-concurrency-problem.md",
@@ -292,9 +295,6 @@
     "posts/2023-03-26.md",
     "posts/2023-04-14.md",
     "posts/2023-09-05.md",
-    "posts/state-pattern.md",
-    "posts/2023-05-20.md",
-    "posts/shook-api-doc.md",
     "posts/Untitled 20231113 041648.mdenc",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",
