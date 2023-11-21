@@ -5,6 +5,22 @@
       "path": "posts/top-down-approach-ch1.md"
     },
     {
+      "basename": "local-cache-concurrency-problem",
+      "path": "posts/local-cache-concurrency-problem.md"
+    },
+    {
+      "basename": "2023-11-20",
+      "path": "posts/2023-11-20.md"
+    },
+    {
+      "basename": "segment-tree",
+      "path": "posts/segment-tree.md"
+    },
+    {
+      "basename": "english-speaking-pattern",
+      "path": "posts/english-speaking-pattern.md"
+    },
+    {
       "basename": "vpc",
       "path": "posts/vpc.md"
     },
@@ -19,22 +35,6 @@
     {
       "basename": "java-algorithm-tips",
       "path": "posts/java-algorithm-tips.md"
-    },
-    {
-      "basename": "local-cache-concurrency-problem",
-      "path": "posts/local-cache-concurrency-problem.md"
-    },
-    {
-      "basename": "segment-tree",
-      "path": "posts/segment-tree.md"
-    },
-    {
-      "basename": "2023-11-20",
-      "path": "posts/2023-11-20.md"
-    },
-    {
-      "basename": "english-speaking-pattern",
-      "path": "posts/english-speaking-pattern.md"
     },
     {
       "basename": "level4-writing",
