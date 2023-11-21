@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "top-down-approach",
+      "path": "posts/top-down-approach.md"
+    },
+    {
       "basename": "local-cache-concurrency-problem",
       "path": "posts/local-cache-concurrency-problem.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "mit-ocw-data-structure",
       "path": "posts/mit-ocw-data-structure.md"
-    },
-    {
-      "basename": "minimum-vertex-cover",
-      "path": "posts/minimum-vertex-cover.md"
     }
   ],
   "omittedPaths": [

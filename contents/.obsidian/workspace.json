@@ -47,9 +47,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2d52f8dbaeaf0633",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/top-down-approach.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -133,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/local-cache-concurrency-problem.md",
+                "file": "posts/top-down-approach.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/local-cache-concurrency-problem.md",
+                "file": "posts/top-down-approach.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -181,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/local-cache-concurrency-problem.md"
+                "file": "posts/top-down-approach.md"
               }
             }
           },
@@ -239,10 +252,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "be33566d6fbf83a4",
+  "active": "2d52f8dbaeaf0633",
   "lastOpenFiles": [
-    "posts/attachments/inmemory-songs-concurrency-sort.png",
+    "posts/top-down-approach.md",
     "posts/local-cache-concurrency-problem.md",
+    "posts/attachments/inmemory-songs-concurrency-sort.png",
     "posts/segment-tree.md",
     "posts/english-speaking-11-.md",
     "posts/2023-11-20.md",
@@ -277,7 +291,6 @@
     "posts/attachments/Pasted image 20231024151645.png",
     "posts/attachments/Pasted image 20231106153648.png",
     "posts/attachments/linked-hash-map-local-cache-develop.png",
-    "posts/attachments/right-right-left-rotation.png",
     "calendar",
     "dictionary",
     "template",
