@@ -71,7 +71,7 @@
     "posts/tsp.md": "b046f218dc159d49f88a987918c0a4625a40d89218c78d14db6c1caba82dde00",
     "posts/bitmasking.md": "ce810ca323dbfcced7246e310d292ff32888302fd947f87bb3b94aba8190cb0d",
     "posts/bellman-ford-algorithm.md": "227ffbcf98aee1f0bc8dfb10fbc17df352ae4ce42bcb17dd73df6a9d8e08c541",
-    "posts/java-algorithm-tips.md": "0479dca484a13c3d69b9d64bb20fe6738d86f9949aced5b45748f700f0de15cd",
+    "posts/java-algorithm-tips.md": "01369533641de99c97a05a303af5ec25dcc8734ef2cc5d1a3e513ec1e28edfea",
     "posts/2023-11-13.md": "ae1a8394e9080d3ab196d6d2a38e4ff860b02ce83af8e3279a73499612bc95e8",
     "posts/mit-ocw-data-structure.md": "08b310df1cb5531c758fa8ffa9ddbd588299222924f104c2c61fc3107c3da605",
     "posts/mit-ocw-sets-and-sorting.md": "315b80f1674f3549f355669f4d9e3b749cc8425e7efcdd9ac4f71d238ccdc06a",
@@ -98,6 +98,6 @@
     "posts/level4-writing.md": "ce1cf0ed9de0087dfe873428d0bb82b215967ebde1dc03f9596b875dd351f271",
     "posts/2023-11-20.md": "6fa18705a83bd72e6f919f12c72900f3718e82b0b89817adf5b5c8ba8e9f4e2e",
     "posts/local-cache-concurrency-problem.md": "cfc06397a7d38c66cc47ef3bc669272be39b6f1043a8d82fb222902709266847",
-    "posts/top-down-approach.md": "7535a16a9f59b1691c38a2ec629de06e359a801c846ba5ba0b501490e91b688e"
+    "posts/top-down-approach-ch1.md": "b78fb272c18d71f92b92e91f634a30701fa03e4a023ae05fe3e825be04830d29"
   }
 }

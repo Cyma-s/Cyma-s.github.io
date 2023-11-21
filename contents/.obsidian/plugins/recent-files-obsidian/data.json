@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "top-down-approach",
-      "path": "posts/top-down-approach.md"
+      "basename": "matzip-vpc-setting",
+      "path": "posts/matzip-vpc-setting.md"
+    },
+    {
+      "basename": "java-algorithm-tips",
+      "path": "posts/java-algorithm-tips.md"
+    },
+    {
+      "basename": "top-down-approach-ch1",
+      "path": "posts/top-down-approach-ch1.md"
     },
     {
       "basename": "local-cache-concurrency-problem",
@@ -191,14 +199,6 @@
     {
       "basename": "jdk-synchronizer",
       "path": "posts/jdk-synchronizer.md"
-    },
-    {
-      "basename": "mit-ocw-sets-and-sorting",
-      "path": "posts/mit-ocw-sets-and-sorting.md"
-    },
-    {
-      "basename": "mit-ocw-data-structure",
-      "path": "posts/mit-ocw-data-structure.md"
     }
   ],
   "omittedPaths": [
