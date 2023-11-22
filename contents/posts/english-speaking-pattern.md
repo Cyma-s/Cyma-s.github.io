@@ -1,7 +1,7 @@
 ---
 title: 영어 문장 패턴
 date: 2023-11-14 15:48:51 +0900
-updated: 2023-11-21 22:29:11 +0900
+updated: 2023-11-22 22:38:56 +0900
 tags:
   - english
 ---
@@ -85,6 +85,35 @@ tags:
 - 날씨가 추워져서 옷을 껴입어야 해.
 	- 내 문장: As the weather is cold, I need to put on more clothes.
 	- It's getting cold and I need to bundle up.
+- 지금부터 공부를 하자.
+	- 내 문장 Let's study from now.
+	- Let's get to work
+- 내일은 젠킨스에 대해 공부해올게
+	- I'll study about jenkins tomorrow
+	- Tomorrow I'll study jenkins
+- 우리는 오늘까지 이 일을 마무리해야 해.
+	- We need to finish this work today.
+	- We need to wrap this up by today
+- 여러 가지 일이 있었지만 결국 우리는 해냈다.
+	- There were many things but finally we accomplished.
+	- It was a lot of work, but we did it.
+- 방금 질문은 멍청한 질문이었어요.
+	- I think previous question is dumb question.
+	- That was a dumb question to ask.
+- 알고리즘을 공부하는 것은 어렵지만 흥미롭다. 
+	- Studying algorithms is difficult but interesting.
+	- Studying algorithms is challenging but interesting.
+- 우리는 우리 서비스의 쿼리를 최적화해야 해.
+	- We need to optimize our service's queries.
+	- We need to optimize the queries of our service.
+- 나는 그 부분에서 문제가 발생할 것이라고 예측했다.
+	- I guessed the part can make the problem.
+	- I predicted that's where I would run into trouble.
+- 나는 그 문제를 해결하기 위해 fetch join 을 사용했다.
+	- I used the fetch join to solve the problem. / I used fetch join to fix the problem.
+- 나는 영어 공부를 하는 것은 긴 터널을 걷는 것과 같다고 생각한다.
+	- I think studying english is the same as walking into the long tunnel.
+	- I believe that learning English is like walking through a long tunnel.
 
 ## 참고
 

@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "english-speaking-pattern",
+      "path": "posts/english-speaking-pattern.md"
+    },
+    {
+      "basename": "shook-prod-server-setting",
+      "path": "posts/shook-prod-server-setting.md"
+    },
+    {
+      "basename": "shook-migration",
+      "path": "posts/shook-migration.md"
+    },
+    {
       "basename": "lower-bound-and-upper-bound",
       "path": "posts/lower-bound-and-upper-bound.md"
     },
@@ -23,10 +35,6 @@
     {
       "basename": "segment-tree",
       "path": "posts/segment-tree.md"
-    },
-    {
-      "basename": "english-speaking-pattern",
-      "path": "posts/english-speaking-pattern.md"
     },
     {
       "basename": "2023-05-26",
@@ -191,14 +199,6 @@
     {
       "basename": "mock-vs-mockbean",
       "path": "posts/mock-vs-mockbean.md"
-    },
-    {
-      "basename": "shook-webclient-reason",
-      "path": "posts/shook-webclient-reason.md"
-    },
-    {
-      "basename": "application-context",
-      "path": "posts/application-context.md"
     }
   ],
   "omittedPaths": [

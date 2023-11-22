@@ -76,7 +76,7 @@
     "posts/mit-ocw-data-structure.md": "08b310df1cb5531c758fa8ffa9ddbd588299222924f104c2c61fc3107c3da605",
     "posts/mit-ocw-sets-and-sorting.md": "315b80f1674f3549f355669f4d9e3b749cc8425e7efcdd9ac4f71d238ccdc06a",
     "posts/2023-11-14.md": "ee8734448f44113ae9b5ee9bb90e8858b2a9b638eef8186c9b484de1a910896d",
-    "posts/english-speaking-pattern.md": "11bf2d354df88eb3d38818651c280a08eb1a3de3c25edc2f38d659455f110a71",
+    "posts/english-speaking-pattern.md": "6d5a07007d7f6daf923411b974187e3347c71e3d040518f6b290d2bde67f89cd",
     "posts/english-speaking-nov-3week.md": "e3e82a7618026d4d7fb6ded90c30b249c38dfe30e70b65a8c9d7ff66bd0e194d",
     "posts/jpa.md": "2ebde892595d6704c738195cdd26ce123f2d0da5a36b2474f4475fe1c79c0b50",
     "posts/matzip-aws-s3-cloudfront.md": "3d9918184310af114a2922fe1ea9f7dc9a4e9f885f65a8dd50c2874d990fd187",
@@ -98,6 +98,8 @@
     "posts/level4-writing.md": "ce1cf0ed9de0087dfe873428d0bb82b215967ebde1dc03f9596b875dd351f271",
     "posts/2023-11-20.md": "6fa18705a83bd72e6f919f12c72900f3718e82b0b89817adf5b5c8ba8e9f4e2e",
     "posts/local-cache-concurrency-problem.md": "cfc06397a7d38c66cc47ef3bc669272be39b6f1043a8d82fb222902709266847",
-    "posts/top-down-approach-ch1.md": "fa01a6ec27b3f2520da96da52d83e28c61e87c1fc64870d3c03fb106ad3d6609"
+    "posts/top-down-approach-ch1.md": "fa01a6ec27b3f2520da96da52d83e28c61e87c1fc64870d3c03fb106ad3d6609",
+    "posts/shook-prod-server-setting.md": "db7075770cea2ba3d3aa1d3537c89b9b0ec41bbc87544ed50769d0b39d9a48b1",
+    "posts/shook-migration.md": "1f12865fd4347d0656072e600ffbcc691b43a7512d03db856946309c90018614"
   }
 }
