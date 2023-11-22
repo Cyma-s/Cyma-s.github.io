@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "lower-bound-and-upper-bound",
+      "path": "posts/lower-bound-and-upper-bound.md"
+    },
+    {
+      "basename": "vpc",
+      "path": "posts/vpc.md"
+    },
+    {
       "basename": "top-down-approach-ch1",
       "path": "posts/top-down-approach-ch1.md"
     },
@@ -19,10 +27,6 @@
     {
       "basename": "english-speaking-pattern",
       "path": "posts/english-speaking-pattern.md"
-    },
-    {
-      "basename": "vpc",
-      "path": "posts/vpc.md"
     },
     {
       "basename": "2023-05-26",
@@ -195,10 +199,6 @@
     {
       "basename": "application-context",
       "path": "posts/application-context.md"
-    },
-    {
-      "basename": "nginx",
-      "path": "posts/nginx.md"
     }
   ],
   "omittedPaths": [
