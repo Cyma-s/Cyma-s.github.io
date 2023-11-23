@@ -1,7 +1,7 @@
 ---
 title: 영어 문장 패턴
 date: 2023-11-14 15:48:51 +0900
-updated: 2023-11-22 22:38:56 +0900
+updated: 2023-11-22 23:41:58 +0900
 tags:
   - english
 ---
@@ -114,6 +114,9 @@ tags:
 - 나는 영어 공부를 하는 것은 긴 터널을 걷는 것과 같다고 생각한다.
 	- I think studying english is the same as walking into the long tunnel.
 	- I believe that learning English is like walking through a long tunnel.
+- 불변식은 여기서 성립해야 한다.
+	- The invariant should be established here.
+- 
 
 ## 참고
 
