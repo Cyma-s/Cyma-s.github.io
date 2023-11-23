@@ -1,32 +1,40 @@
 {
   "recentFiles": [
     {
+      "basename": "top-down-approach-ch1",
+      "path": "posts/top-down-approach-ch1.md"
+    },
+    {
+      "basename": "transaction",
+      "path": "posts/transaction.md"
+    },
+    {
       "basename": "english-speaking-pattern",
       "path": "posts/english-speaking-pattern.md"
     },
     {
-      "basename": "shook-prod-server-setting",
-      "path": "posts/shook-prod-server-setting.md"
+      "basename": "what-is-index",
+      "path": "posts/what-is-index.md"
     },
     {
-      "basename": "shook-migration",
-      "path": "posts/shook-migration.md"
+      "basename": "local-cache-concurrency-problem",
+      "path": "posts/local-cache-concurrency-problem.md"
     },
     {
       "basename": "lower-bound-and-upper-bound",
       "path": "posts/lower-bound-and-upper-bound.md"
     },
     {
+      "basename": "shook-migration",
+      "path": "posts/shook-migration.md"
+    },
+    {
+      "basename": "shook-prod-server-setting",
+      "path": "posts/shook-prod-server-setting.md"
+    },
+    {
       "basename": "vpc",
       "path": "posts/vpc.md"
-    },
-    {
-      "basename": "top-down-approach-ch1",
-      "path": "posts/top-down-approach-ch1.md"
-    },
-    {
-      "basename": "local-cache-concurrency-problem",
-      "path": "posts/local-cache-concurrency-problem.md"
     },
     {
       "basename": "2023-11-20",
@@ -191,14 +199,6 @@
     {
       "basename": "level2-eighth-retrospect",
       "path": "posts/level2-eighth-retrospect.md"
-    },
-    {
-      "basename": "level2-week7-retrospect",
-      "path": "posts/level2-week7-retrospect.md"
-    },
-    {
-      "basename": "mock-vs-mockbean",
-      "path": "posts/mock-vs-mockbean.md"
     }
   ],
   "omittedPaths": [
