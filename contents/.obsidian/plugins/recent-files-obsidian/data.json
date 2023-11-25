@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "minimum-spanning-tree",
+      "path": "posts/minimum-spanning-tree.md"
+    },
+    {
+      "basename": "algorithm-tips",
+      "path": "posts/algorithm-tips.md"
+    },
+    {
+      "basename": "2023-11-23",
+      "path": "posts/2023-11-23.md"
+    },
+    {
+      "basename": "2023-11-20",
+      "path": "posts/2023-11-20.md"
+    },
+    {
       "basename": "top-down-approach-ch1",
       "path": "posts/top-down-approach-ch1.md"
     },
@@ -35,10 +51,6 @@
     {
       "basename": "vpc",
       "path": "posts/vpc.md"
-    },
-    {
-      "basename": "2023-11-20",
-      "path": "posts/2023-11-20.md"
     },
     {
       "basename": "segment-tree",
@@ -187,18 +199,6 @@
     {
       "basename": "level2-fourth-retrospect",
       "path": "posts/level2-fourth-retrospect.md"
-    },
-    {
-      "basename": "level2-fifth-retrospect",
-      "path": "posts/level2-fifth-retrospect.md"
-    },
-    {
-      "basename": "level2-sixth-retrospect",
-      "path": "posts/level2-sixth-retrospect.md"
-    },
-    {
-      "basename": "level2-eighth-retrospect",
-      "path": "posts/level2-eighth-retrospect.md"
     }
   ],
   "omittedPaths": [
