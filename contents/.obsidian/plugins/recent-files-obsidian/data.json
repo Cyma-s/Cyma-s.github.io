@@ -1,12 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "minimum-spanning-tree",
-      "path": "posts/minimum-spanning-tree.md"
+      "basename": "english-speaking-pattern",
+      "path": "posts/english-speaking-pattern.md"
+    },
+    {
+      "basename": "english-speaking-theme",
+      "path": "posts/english-speaking-theme.md"
+    },
+    {
+      "basename": "local-cache-concurrency-problem",
+      "path": "posts/local-cache-concurrency-problem.md"
+    },
+    {
+      "basename": "top-down-approach-ch1",
+      "path": "posts/top-down-approach-ch1.md"
+    },
+    {
+      "basename": "what-is-index",
+      "path": "posts/what-is-index.md"
+    },
+    {
+      "basename": "transaction",
+      "path": "posts/transaction.md"
     },
     {
       "basename": "algorithm-tips",
       "path": "posts/algorithm-tips.md"
+    },
+    {
+      "basename": "minimum-spanning-tree",
+      "path": "posts/minimum-spanning-tree.md"
     },
     {
       "basename": "2023-11-23",
@@ -15,26 +39,6 @@
     {
       "basename": "2023-11-20",
       "path": "posts/2023-11-20.md"
-    },
-    {
-      "basename": "top-down-approach-ch1",
-      "path": "posts/top-down-approach-ch1.md"
-    },
-    {
-      "basename": "transaction",
-      "path": "posts/transaction.md"
-    },
-    {
-      "basename": "english-speaking-pattern",
-      "path": "posts/english-speaking-pattern.md"
-    },
-    {
-      "basename": "what-is-index",
-      "path": "posts/what-is-index.md"
-    },
-    {
-      "basename": "local-cache-concurrency-problem",
-      "path": "posts/local-cache-concurrency-problem.md"
     },
     {
       "basename": "lower-bound-and-upper-bound",
@@ -195,10 +199,6 @@
     {
       "basename": "level2-third-retrospect",
       "path": "posts/level2-third-retrospect.md"
-    },
-    {
-      "basename": "level2-fourth-retrospect",
-      "path": "posts/level2-fourth-retrospect.md"
     }
   ],
   "omittedPaths": [

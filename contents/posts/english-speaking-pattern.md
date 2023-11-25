@@ -1,7 +1,7 @@
 ---
 title: 영어 문장 패턴
 date: 2023-11-14 15:48:51 +0900
-updated: 2023-11-23 14:48:27 +0900
+updated: 2023-11-25 19:54:21 +0900
 tags:
   - english
 ---
@@ -116,6 +116,16 @@ tags:
 	- I believe that learning English is like walking through a long tunnel.
 - 불변식은 여기서 성립해야 한다.
 	- The invariant should be established here.
+- 나는 코딩 테스트 공부를 열심히 해야 한다.
+	- I need to study hard coding test.
+	- I need to study hard for my coding test.
+- 삽입 정렬은 거의 정렬된 배열을 정렬할 때 효과적이다.
+	- Insertion sort is effective when I sort the nearly sorted array.
+	- Insertion sorting works well for sorting nearly sorted arrays.
+- 우리 회의 언제해야 할까?
+	- When should we get meeting?
+	- When should we have our meeting?
+- 
 
 
 ## 참고
