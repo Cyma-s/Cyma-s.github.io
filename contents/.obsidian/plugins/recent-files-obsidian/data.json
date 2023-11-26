@@ -1,20 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "2023-11-25",
+      "path": "posts/2023-11-25.md"
+    },
+    {
       "basename": "english-speaking-pattern",
       "path": "posts/english-speaking-pattern.md"
     },
     {
-      "basename": "english-speaking-theme",
-      "path": "posts/english-speaking-theme.md"
+      "basename": "2023-11-04",
+      "path": "posts/2023-11-04.md"
+    },
+    {
+      "basename": "top-down-approach-ch1",
+      "path": "posts/top-down-approach-ch1.md"
+    },
+    {
+      "basename": "book-love-skill",
+      "path": "posts/book-love-skill.md"
     },
     {
       "basename": "local-cache-concurrency-problem",
       "path": "posts/local-cache-concurrency-problem.md"
     },
     {
-      "basename": "top-down-approach-ch1",
-      "path": "posts/top-down-approach-ch1.md"
+      "basename": "2023-11-20",
+      "path": "posts/2023-11-20.md"
+    },
+    {
+      "basename": "english-speaking-theme",
+      "path": "posts/english-speaking-theme.md"
     },
     {
       "basename": "what-is-index",
@@ -31,14 +47,6 @@
     {
       "basename": "minimum-spanning-tree",
       "path": "posts/minimum-spanning-tree.md"
-    },
-    {
-      "basename": "2023-11-23",
-      "path": "posts/2023-11-23.md"
-    },
-    {
-      "basename": "2023-11-20",
-      "path": "posts/2023-11-20.md"
     },
     {
       "basename": "lower-bound-and-upper-bound",
@@ -191,14 +199,6 @@
     {
       "basename": "level2-first-retrospect",
       "path": "posts/level2-first-retrospect.md"
-    },
-    {
-      "basename": "level2-second-retrospect",
-      "path": "posts/level2-second-retrospect.md"
-    },
-    {
-      "basename": "level2-third-retrospect",
-      "path": "posts/level2-third-retrospect.md"
     }
   ],
   "omittedPaths": [

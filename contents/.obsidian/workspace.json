@@ -8,28 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "375b3c13c61a07a3",
+            "id": "65c2bb2ee52f7dd2",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-20.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "98deb2c3ab256a74",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-11-23.md",
+                "file": "posts/2023-11-25.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -62,9 +47,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c0d3bba0bfbf9d56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/top-down-approach-ch1.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -148,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/english-speaking-pattern.md",
+                "file": "posts/2023-11-25.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +162,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/english-speaking-pattern.md",
+                "file": "posts/2023-11-25.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,7 +193,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/english-speaking-pattern.md"
+                "file": "posts/2023-11-25.md"
               }
             }
           },
@@ -254,18 +251,21 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "66a57e24650a6bcc",
+  "active": "65c2bb2ee52f7dd2",
   "lastOpenFiles": [
-    "posts/english-speaking-theme.md",
-    "posts/local-cache-concurrency-problem.md",
-    "posts/top-down-approach-ch1.md",
     "posts/english-speaking-pattern.md",
+    "posts/2023-11-04.md",
+    "posts/top-down-approach-ch1.md",
+    "posts/book-love-skill.md",
+    "posts/2023-11-25.md",
+    "posts/local-cache-concurrency-problem.md",
+    "posts/2023-11-23.md",
+    "posts/2023-11-20.md",
+    "posts/english-speaking-theme.md",
     "posts/what-is-index.md",
     "posts/transaction.md",
     "posts/algorithm-tips.md",
     "posts/minimum-spanning-tree.md",
-    "posts/2023-11-23.md",
-    "posts/2023-11-20.md",
     "posts/lower-bound-and-upper-bound.md",
     "posts/shook-migration.md",
     "posts/shook-prod-server-setting.md",
@@ -281,9 +281,6 @@
     "posts/dh-interview-answer.md",
     "posts/attachments/shook-main-page.png",
     "posts/inmemory-cache-develop.md",
-    "posts/2023-11-16.md",
-    "posts/2023-09-21.md",
-    "posts/dh-interview-study-11-07.md",
     "posts/Untitled 20231113 041648.mdenc",
     "posts/attachments/left-left-left-rotation.png",
     "posts/attachments/left-right-left-right.png",
