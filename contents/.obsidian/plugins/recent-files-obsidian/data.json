@@ -1,12 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "2023-11-25",
-      "path": "posts/2023-11-25.md"
+      "basename": "jenkins-migration",
+      "path": "posts/jenkins-migration.md"
+    },
+    {
+      "basename": "shook-function-develop",
+      "path": "posts/shook-function-develop.md"
     },
     {
       "basename": "english-speaking-pattern",
       "path": "posts/english-speaking-pattern.md"
+    },
+    {
+      "basename": "local-cache-concurrency-problem",
+      "path": "posts/local-cache-concurrency-problem.md"
+    },
+    {
+      "basename": "kmp-algorithm",
+      "path": "posts/kmp-algorithm.md"
+    },
+    {
+      "basename": "2023-11-26",
+      "path": "posts/2023-11-26.md"
+    },
+    {
+      "basename": "2023-11-25",
+      "path": "posts/2023-11-25.md"
+    },
+    {
+      "basename": "bitmasking",
+      "path": "posts/bitmasking.md"
+    },
+    {
+      "basename": "minimum-vertex-cover",
+      "path": "posts/minimum-vertex-cover.md"
     },
     {
       "basename": "2023-11-04",
@@ -19,10 +47,6 @@
     {
       "basename": "book-love-skill",
       "path": "posts/book-love-skill.md"
-    },
-    {
-      "basename": "local-cache-concurrency-problem",
-      "path": "posts/local-cache-concurrency-problem.md"
     },
     {
       "basename": "2023-11-20",
@@ -175,30 +199,6 @@
     {
       "basename": "2023-02-20",
       "path": "posts/2023-02-20.md"
-    },
-    {
-      "basename": "level1-eighth-retrospect",
-      "path": "posts/level1-eighth-retrospect.md"
-    },
-    {
-      "basename": "level1-seventh-retrospect",
-      "path": "posts/level1-seventh-retrospect.md"
-    },
-    {
-      "basename": "level1-fifth-retrospect",
-      "path": "posts/level1-fifth-retrospect.md"
-    },
-    {
-      "basename": "level1-fourth-retrospect",
-      "path": "posts/level1-fourth-retrospect.md"
-    },
-    {
-      "basename": "level1-third-retrospect",
-      "path": "posts/level1-third-retrospect.md"
-    },
-    {
-      "basename": "level2-first-retrospect",
-      "path": "posts/level2-first-retrospect.md"
     }
   ],
   "omittedPaths": [
