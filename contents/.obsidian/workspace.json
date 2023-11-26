@@ -86,9 +86,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "87516dc8d1f7826f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/english-speaking-pattern.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -172,7 +184,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/jenkins-migration.md",
+                "file": "posts/2023-11-26.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,7 +201,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/jenkins-migration.md",
+                "file": "posts/2023-11-26.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +232,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/jenkins-migration.md"
+                "file": "posts/2023-11-26.md"
               }
             }
           },
@@ -278,11 +290,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "66a57e24650a6bcc",
+  "active": "949799af3a0113fa",
   "lastOpenFiles": [
-    "posts/shook-function-develop.md",
-    "posts/jenkins-migration.md",
     "posts/english-speaking-pattern.md",
+    "posts/jenkins-migration.md",
+    "posts/shook-function-develop.md",
     "posts/local-cache-concurrency-problem.md",
     "posts/kmp-algorithm.md",
     "posts/2023-11-26.md",
