@@ -1,7 +1,7 @@
 ---
 title: 젠킨스 마이그레이션
 date: 2023-11-26 17:50:19 +0900
-updated: 2023-11-26 18:25:38 +0900
+updated: 2023-11-27 21:21:39 +0900
 tags:
   - shook
 ---
@@ -82,7 +82,7 @@ sudo docker run hello-world
 Jenkins LTS 버전 이미지를 다운로드한다. 
 
 ```bash
-docker pull jenkins/jenkins:lts
+sudo docker pull jenkins/jenkins:lts
 ```
 
 #### docker-compose 로 젠킨스 실행하기
@@ -126,3 +126,8 @@ sudo docker-compose up -d
 sudo docker logs jenkins
 ```
 
+추천하는 플러그인들을 설치했다. 
+
+### Jenkins 
+
+새로운 Item 

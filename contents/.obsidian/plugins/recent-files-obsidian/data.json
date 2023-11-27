@@ -1,28 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "dh-recruiter-call",
-      "path": "posts/dh-recruiter-call.md"
+      "basename": "jenkins-migration",
+      "path": "posts/jenkins-migration.md"
     },
     {
-      "basename": "english-speaking-pattern",
-      "path": "posts/english-speaking-pattern.md"
+      "basename": "top-down-approach-ch2",
+      "path": "posts/top-down-approach-ch2.md"
+    },
+    {
+      "basename": "top-down-approach-ch1",
+      "path": "posts/top-down-approach-ch1.md"
     },
     {
       "basename": "local-cache-concurrency-problem",
       "path": "posts/local-cache-concurrency-problem.md"
     },
     {
-      "basename": "jenkins-migration",
-      "path": "posts/jenkins-migration.md"
-    },
-    {
       "basename": "kmp-algorithm",
       "path": "posts/kmp-algorithm.md"
     },
     {
-      "basename": "top-down-approach-ch1",
-      "path": "posts/top-down-approach-ch1.md"
+      "basename": "english-speaking-pattern",
+      "path": "posts/english-speaking-pattern.md"
+    },
+    {
+      "basename": "dh-recruiter-call",
+      "path": "posts/dh-recruiter-call.md"
     },
     {
       "basename": "shook-function-develop",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-02-12",
       "path": "posts/2023-02-12.md"
-    },
-    {
-      "basename": "level1-sixth-retrospect",
-      "path": "posts/level1-sixth-retrospect.md"
     }
   ],
   "omittedPaths": [

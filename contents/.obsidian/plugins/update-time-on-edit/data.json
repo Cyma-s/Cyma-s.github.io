@@ -98,17 +98,18 @@
     "posts/level4-writing.md": "ce1cf0ed9de0087dfe873428d0bb82b215967ebde1dc03f9596b875dd351f271",
     "posts/2023-11-20.md": "6fa18705a83bd72e6f919f12c72900f3718e82b0b89817adf5b5c8ba8e9f4e2e",
     "posts/local-cache-concurrency-problem.md": "cfc06397a7d38c66cc47ef3bc669272be39b6f1043a8d82fb222902709266847",
-    "posts/top-down-approach-ch1.md": "b4d67e0102c778058144b8404fa958756c9ef7c88f8dfd2e86d6894e752ff4f2",
+    "posts/top-down-approach-ch1.md": "f63ea52d0a17ca698691de0777acd42fd39cda0603409da97fdefd1a88a31227",
     "posts/shook-prod-server-setting.md": "db7075770cea2ba3d3aa1d3537c89b9b0ec41bbc87544ed50769d0b39d9a48b1",
     "posts/shook-migration.md": "1f12865fd4347d0656072e600ffbcc691b43a7512d03db856946309c90018614",
     "posts/what-is-index.md": "0b52e2ed39f45f91cb1da668adc94b3428338ae09347b2713efddda5bdd3cddd",
     "posts/2023-11-25.md": "deb9d18211cd93f9b51b7160f726041c2262dec5fa25775e7a6e4bf2cde4b0e0",
     "posts/book-love-skill.md": "4341b6effd6f7e79a903b8fafd08ddac375debdc9fa40f7ccdb9f73dee1c874f",
-    "posts/kmp-algorithm.md": "bb64a32c136cf8015dba1cd2eabd620cc490bbf2cf73e2e6ea926b0b6706fc53",
+    "posts/kmp-algorithm.md": "1c6320ac481a7438ef7395ec24c43abca91cdefe893b0959a5c20b9e2b8c9513",
     "posts/2023-11-26.md": "3d0b324649349ffffc3f4a684ef7ebed290c10fa3e8707d876c38bd234ae690f",
-    "posts/jenkins-migration.md": "ca3b4e248857a0c131da5e7394822abf69963e39598759d127b9fcabd5355610",
+    "posts/jenkins-migration.md": "95631d8cb76cb69dc15fd0f1b2984e00d8e8f16eab52c381c065150788c698d5",
     "posts/shook-function-develop.md": "56fe6d8f4e39c1a45b6e764eb9b183677b057ca0067918031f60ce6f0578fbd6",
     "posts/lower-bound-and-upper-bound.md": "a15b61d3913b0db34a672839d02d2395f86709fc3fe1daf9019151c7c7d7995a",
-    "posts/dh-recruiter-call.md": "eb827a1f7b2f1bd27c4445a8bdf5555c3d472e585af81abccf09c83dcf38ea2f"
+    "posts/dh-recruiter-call.md": "eb827a1f7b2f1bd27c4445a8bdf5555c3d472e585af81abccf09c83dcf38ea2f",
+    "posts/top-down-approach-ch2.md": "24b928a6f48ed859457f7100216ba4631c49818875475e7c6df209079ff5ae99"
   }
 }

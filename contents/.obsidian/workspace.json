@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/jenkins-migration.md",
+                "file": "posts/top-down-approach-ch2.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -62,25 +62,12 @@
             }
           },
           {
-            "id": "87516dc8d1f7826f",
+            "id": "5c325d4b30c3ac84",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/english-speaking-pattern.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "505a0a7a2f178bc0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/dh-recruiter-call.md",
+                "file": "posts/jenkins-migration.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -88,7 +75,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -172,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/dh-recruiter-call.md",
+                "file": "posts/jenkins-migration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/dh-recruiter-call.md",
+                "file": "posts/jenkins-migration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +207,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/dh-recruiter-call.md"
+                "file": "posts/jenkins-migration.md"
               }
             }
           },
@@ -278,14 +265,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "505a0a7a2f178bc0",
+  "active": "5c325d4b30c3ac84",
   "lastOpenFiles": [
+    "posts/top-down-approach-ch2.md",
+    "posts/top-down-approach-ch1.md",
+    "posts/jenkins-migration.md",
+    "posts/local-cache-concurrency-problem.md",
+    "posts/kmp-algorithm.md",
     "posts/english-speaking-pattern.md",
     "posts/dh-recruiter-call.md",
-    "posts/local-cache-concurrency-problem.md",
-    "posts/jenkins-migration.md",
-    "posts/kmp-algorithm.md",
-    "posts/top-down-approach-ch1.md",
     "posts/shook-function-develop.md",
     "posts/lower-bound-and-upper-bound.md",
     "posts/2023-11-26.md",
@@ -305,7 +293,6 @@
     "posts/shook-prod-server-setting.md",
     "posts/vpc.md",
     "posts/segment-tree.md",
-    "posts/2023-05-26.md",
     "posts/attachments/inmemory-songs-concurrency-sort.png",
     "posts/attachments/shook-main-page.png",
     "posts/Untitled 20231113 041648.mdenc",
