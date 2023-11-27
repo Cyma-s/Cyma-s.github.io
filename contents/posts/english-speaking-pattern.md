@@ -1,7 +1,7 @@
 ---
 title: 영어 문장 패턴
 date: 2023-11-14 15:48:51 +0900
-updated: 2023-11-26 22:44:23 +0900
+updated: 2023-11-27 16:02:32 +0900
 tags:
   - english
 ---
@@ -232,6 +232,12 @@ tags:
 - 그렇지만 나는 내일 링글 수업 예습을 해야 한다.
 	- But I need to preview for the tomorrow Ringle class.
 	- I have to do some preliminary work for my Ringle class tomorrow.
+- 난 이제부터 물도 마시면 안 된다.
+	- I shouldn't drink water since now.
+	- I shouldn't even drink water from now on.
+- 나는 내일 병원 예약을 취소해야 한다.
+	- I need to cancel the reservation of hospital tomorrow.
+	- I need to cancel my doctor's appointment tomorrow.
 
 ## 참고
 

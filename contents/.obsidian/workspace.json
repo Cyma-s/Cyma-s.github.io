@@ -100,7 +100,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -184,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-11-26.md",
+                "file": "posts/kmp-algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,7 +202,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-11-26.md",
+                "file": "posts/kmp-algorithm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -232,7 +233,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-11-26.md"
+                "file": "posts/kmp-algorithm.md"
               }
             }
           },
@@ -290,14 +291,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "949799af3a0113fa",
+  "active": "a27a87783f510b3d",
   "lastOpenFiles": [
     "posts/english-speaking-pattern.md",
+    "posts/2023-11-26.md",
     "posts/jenkins-migration.md",
     "posts/shook-function-develop.md",
     "posts/local-cache-concurrency-problem.md",
     "posts/kmp-algorithm.md",
-    "posts/2023-11-26.md",
     "posts/2023-11-25.md",
     "posts/bitmasking.md",
     "posts/minimum-vertex-cover.md",
