@@ -1,7 +1,7 @@
 ---
 title: S-HOOK EC2 마이그레이션하기
 date: 2023-11-22 16:50:48 +0900
-updated: 2023-11-22 17:58:56 +0900
+updated: 2023-11-28 14:49:43 +0900
 tags:
   - shook
   - 우테코
@@ -91,3 +91,28 @@ nginx 의 권한이 root 가 아니기 때문에 발생하는 문제다.
 ### certbot 설정하기
 
 기존 운영 서버에서 인증서를 삭제한다.  
+
+### 서버 시간 설정하기
+
+`timedatectl list-timezones` 로 변경 가능한 Time Zone 들을 리스트업 할 수 있다.
+
+`Asia/Seoul` 로 TZ 을 변경한다. 
+
+```bash
+sudo timedatectl set-timezone Asia/Seoul
+```
+
+`timedatectl` 로 변경된 TZ 를 볼 수 있다.
+
+```bash
+               Local time: Tue 2023-11-28 14:11:46 KST
+           Universal time: Tue 2023-11-28 05:11:46 UTC
+                 RTC time: Tue 2023-11-28 05:11:47
+                Time zone: Asia/Seoul (KST, +0900)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+```
+
+### MySQL 서버 시간 설정하기
+
