@@ -36,19 +36,6 @@
             }
           },
           {
-            "id": "66a57e24650a6bcc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/top-down-approach-ch2.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "a27a87783f510b3d",
             "type": "leaf",
             "state": {
@@ -172,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/kmp-algorithm.md",
+                "file": "posts/jenkins-migration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/kmp-algorithm.md",
+                "file": "posts/jenkins-migration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +207,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/kmp-algorithm.md"
+                "file": "posts/jenkins-migration.md"
               }
             }
           },
@@ -278,17 +265,28 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a27a87783f510b3d",
+  "active": "5c325d4b30c3ac84",
   "lastOpenFiles": [
-    "posts/attachments/failure-function.png",
+    "posts/local-cache-concurrency-problem.md",
+    "posts/kmp-algorithm.md",
+    "posts/english-speaking-pattern.md",
+    "posts/english-speaking-theme.md",
+    "posts/top-down-approach-ch2.md",
     "posts/shook-migration.md",
+    "posts/jenkins-migration.md",
+    "posts/attachments/jenkins-ssh-transfers.png",
+    "posts/attachments/jenkins-ssh-server.png",
+    "posts/attachments/jenkins-publish-over-ssh.png",
+    "posts/floyd-warshall-algorithm.md",
+    "posts/attachments/jenkins-build-gradle-file.png",
+    "posts/attachments/jenkins-gradle-script.png",
+    "posts/attachments/jenkins-submodule-settings.png",
+    "posts/attachments/jenkins-repositories-branches.png",
+    "posts/attachments/jenkins-project-url.png",
+    "posts/attachments/jenkins-freestyle-project.png",
+    "posts/attachments/failure-function.png",
     "posts/2023-05-28.md",
     "posts/top-down-approach-ch1.md",
-    "posts/jenkins-migration.md",
-    "posts/kmp-algorithm.md",
-    "posts/local-cache-concurrency-problem.md",
-    "posts/top-down-approach-ch2.md",
-    "posts/english-speaking-pattern.md",
     "posts/dh-recruiter-call.md",
     "posts/shook-function-develop.md",
     "posts/lower-bound-and-upper-bound.md",
@@ -300,23 +298,11 @@
     "posts/book-love-skill.md",
     "posts/2023-11-23.md",
     "posts/2023-11-20.md",
-    "posts/english-speaking-theme.md",
     "posts/what-is-index.md",
     "posts/transaction.md",
     "posts/algorithm-tips.md",
     "posts/minimum-spanning-tree.md",
-    "posts/shook-prod-server-setting.md",
-    "posts/attachments/inmemory-songs-concurrency-sort.png",
-    "posts/attachments/shook-main-page.png",
     "posts/Untitled 20231113 041648.mdenc",
-    "posts/attachments/left-left-left-rotation.png",
-    "posts/attachments/left-right-left-right.png",
-    "posts/attachments/right-left-right-left.png",
-    "posts/attachments/right-right-left-rotation.png",
-    "posts/attachments/Pasted image 20231101222556.png",
-    "posts/attachments/Pasted image 20231024151645.png",
-    "posts/attachments/Pasted image 20231106153648.png",
-    "posts/attachments/linked-hash-map-local-cache-develop.png",
     "calendar",
     "dictionary",
     "template",

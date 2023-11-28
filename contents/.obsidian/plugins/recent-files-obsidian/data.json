@@ -1,22 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "kmp-algorithm",
-      "path": "posts/kmp-algorithm.md"
-    },
-    {
-      "basename": "shook-migration",
-      "path": "posts/shook-migration.md"
-    },
-    {
-      "basename": "2023-05-28",
-      "path": "posts/2023-05-28.md"
-    },
-    {
-      "basename": "top-down-approach-ch1",
-      "path": "posts/top-down-approach-ch1.md"
-    },
-    {
       "basename": "jenkins-migration",
       "path": "posts/jenkins-migration.md"
     },
@@ -25,12 +9,36 @@
       "path": "posts/local-cache-concurrency-problem.md"
     },
     {
-      "basename": "top-down-approach-ch2",
-      "path": "posts/top-down-approach-ch2.md"
+      "basename": "kmp-algorithm",
+      "path": "posts/kmp-algorithm.md"
     },
     {
       "basename": "english-speaking-pattern",
       "path": "posts/english-speaking-pattern.md"
+    },
+    {
+      "basename": "english-speaking-theme",
+      "path": "posts/english-speaking-theme.md"
+    },
+    {
+      "basename": "top-down-approach-ch2",
+      "path": "posts/top-down-approach-ch2.md"
+    },
+    {
+      "basename": "shook-migration",
+      "path": "posts/shook-migration.md"
+    },
+    {
+      "basename": "floyd-warshall-algorithm",
+      "path": "posts/floyd-warshall-algorithm.md"
+    },
+    {
+      "basename": "2023-05-28",
+      "path": "posts/2023-05-28.md"
+    },
+    {
+      "basename": "top-down-approach-ch1",
+      "path": "posts/top-down-approach-ch1.md"
     },
     {
       "basename": "dh-recruiter-call",
@@ -71,10 +79,6 @@
     {
       "basename": "2023-11-20",
       "path": "posts/2023-11-20.md"
-    },
-    {
-      "basename": "english-speaking-theme",
-      "path": "posts/english-speaking-theme.md"
     },
     {
       "basename": "what-is-index",
@@ -195,10 +199,6 @@
     {
       "basename": "shook-api-doc",
       "path": "posts/shook-api-doc.md"
-    },
-    {
-      "basename": "Predicate",
-      "path": "posts/Predicate.md"
     }
   ],
   "omittedPaths": [

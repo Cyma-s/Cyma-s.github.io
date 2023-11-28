@@ -1,7 +1,7 @@
 ---
 title: S-HOOK EC2 마이그레이션하기
 date: 2023-11-22 16:50:48 +0900
-updated: 2023-11-28 14:49:43 +0900
+updated: 2023-11-28 17:53:57 +0900
 tags:
   - shook
   - 우테코
@@ -113,6 +113,3 @@ System clock synchronized: yes
               NTP service: active
           RTC in local TZ: no
 ```
-
-### MySQL 서버 시간 설정하기
-

@@ -1,7 +1,7 @@
 ---
 title: 젠킨스 마이그레이션
 date: 2023-11-26 17:50:19 +0900
-updated: 2023-11-27 21:21:39 +0900
+updated: 2023-11-28 20:13:09 +0900
 tags:
   - shook
 ---
@@ -128,6 +128,91 @@ sudo docker logs jenkins
 
 추천하는 플러그인들을 설치했다. 
 
-### Jenkins 
+### Project 생성하기
 
-새로운 Item 
+Freestyle project 로 생성했다.
+item 이름은 경로에도 포함되므로 영어로 적는 것이 좋다.
+
+![[jenkins-freestyle-project.png]]
+
+우리는 Github Project 로 생성할 것이기 때문에 Github project 를 체크해준다. 
+
+project url 에는 팀 깃허브 주소를 넣어준다.
+
+![[jenkins-project-url.png]]
+
+소스 코드 관리는 Git 으로 하게 되는데, Repositories 에 Github .git 주소를 넣어주고, Username 과 password 로 Credentials 를 설정해준다. password 에는 token 을 넣어주면 된다. 
+
+어떤 브랜치를 빌드할 때 사용할 것인지 정해준다.
+
+![[jenkins-repositories-branches.png]]
+
+### submodule 설정
+
+S-HOOK 에서는 submodule 을 사용하기 때문에 Additional Behaviours 에 submodule 관련 설정을 추가해주었다. 
+
+![[jenkins-submodule-settings.png]]
+
+### 빌드 유발
+
+현재 S-HOOK 은 main 에 머지된 커밋들이 바로 빌드되어도 되는 변경 사항들이 아니기 때문에 설정해주지 않았다. 
+
+### Build Steps
+
+Invoke Gradle script 를 생성해서, gradlew 을 사용하도록 설정해준다.  
+어떤 명령어로 실행할 것인지도 아래에 적어준다. 
+
+![[jenkins-gradle-script.png]]
+
+그리고 아래 고급 설정에서 Build file 이 어디에 있는지 명시해준다. 
+
+![[jenkins-build-gradle-file.png]]
+
+### Send files or execute commands over SSH 설정
+
+젠킨스 서버에서 빌드한 jar 파일을 prod 서버로 보내야 하기 때문에 아래의 설정이 반드시 필요하다. 
+
+먼저 Publish Over SSH 라는 플러그인을 설치해야 한다. 
+
+![[jenkins-publish-over-ssh.png]]
+
+그다음 Jenkins 관리 > System 의 맨 아래에 있는 Publish over SSH 설정을 적어준다. 
+
+Key 에는 SSH 접속 시 필요한 pem 키를 적어주면 되고, SSH Servers 에 설정을 적어주면 된다. 
+- Hostname: 보낼 서버 IP 주소
+- Username: 연결할 username (우리는 ubuntu 를 적어주었다.)
+- Remote Directory: 연결 될 디렉터리 위치. 반드시 존재해야 되고 생성되지 않는다. 기본 디렉터리라고 생각하면 된다. 우리는 /home/ubuntu 로 설정해주었다.
+
+이제 다시 구성으로 돌아와서 아까 설정해둔 Server Name 으로 연결할 서버를 찾는다.
+
+![[jenkins-ssh-server.png]]
+
+그런 다음 transfers 에 다음과 같이 적는다.
+
+![[jenkins-ssh-transfers.png]]
+
+- Source files: 보낼 파일의 경로를 적어준다.
+- Remove prefix: 파일의 경로를 삭제하고 실제 파일 이름만 남게 한다.
+- Remote directory: 어떤 폴더에 파일을 저장할 지 지정한다. 기본 링크는 /home/ubuntu 로 지정되어 있다. (즉, /application-jar 는 ~/application-jar 에 저장될 것이다.)
+- Exec command: 파일을 옮긴 뒤 어떤 것을 실행할 지 정한다. 우리는 bash 파일을 실행하고, bash 를 실행하며 발생한 로그를 파일에 기록한 뒤 띄우는 방식을 선택했다. 이러면 배포가 완료되면 Jenkins 에 로그 파일 내용이 출력된다.
+
+전체 스크립트는 다음과 같다.
+
+```shell
+# 로그 파일 경로 설정
+LOG_FILE="/home/ubuntu/application-jar/deployment.log"
+
+# 배포 로그 저장
+bash /home/ubuntu/backend-deploy.sh > $LOG_FILE
+
+# 배포 완료 후 로그 파일 내용을 출력하고 삭제
+cat $LOG_FILE
+rm $LOG_FILE
+```
+
+### bash로 파일을 실행하지 않은 이유
+
+그렇다면 `bash ./deploy.sh` 처럼 바로 파일을 실행하면 되는 거 아닐까? 나도 그렇게 생각했다.  
+그러나 이렇게 하면 bash 명령이 끝나지 않아서 배포가 종료되지 않는 문제가 있었다.  
+
+따라서 로그를 다른 파일에 저장해두고, 배포가 끝나면 파일을 출력한 다음 로그 파일을 삭제하는 방식으로 실행했다. 
