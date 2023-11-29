@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "949799af3a0113fa",
+            "id": "2d320ee02272515e",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-26.md",
+                "file": "posts/2023-11-29.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -42,32 +42,6 @@
               "type": "markdown",
               "state": {
                 "file": "posts/kmp-algorithm.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9757b5782accec63",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/top-down-approach-ch2.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "858f070359edb1a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-10.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -266,10 +240,11 @@
   },
   "active": "a27a87783f510b3d",
   "lastOpenFiles": [
-    "posts/local-cache-concurrency-problem.md",
     "posts/top-down-approach-ch2.md",
-    "posts/2023-11-26.md",
     "posts/2023-10.md",
+    "posts/local-cache-concurrency-problem.md",
+    "posts/2023-11-29.md",
+    "posts/2023-11-26.md",
     "posts/kmp-algorithm.md",
     "posts/2023-11.md",
     "posts/2023-10-23.md",
@@ -301,7 +276,6 @@
     "posts/2023-11-23.md",
     "posts/2023-11-20.md",
     "posts/what-is-index.md",
-    "posts/transaction.md",
     "posts/Untitled 20231113 041648.mdenc",
     "calendar",
     "dictionary",
