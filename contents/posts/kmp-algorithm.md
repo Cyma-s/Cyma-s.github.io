@@ -1,7 +1,7 @@
 ---
 title: KMP 알고리즘
 date: 2023-11-26 17:13:00 +0900
-updated: 2023-11-28 15:58:25 +0900
+updated: 2023-11-29 15:42:53 +0900
 tags:
   - algorithms
 ---
@@ -70,6 +70,12 @@ def kmp(failure, a, b):
 count 배열은 i에서 최대로 일치하는 문자열의 길이가 담겨있다.  
 즉, `len(b)` 가 count 에서 몇 번 나타나는지 알면 문자열이 최대 몇 개가 일치하는지 알 수 있는 것이다. 
 
+## 실패 함수의 성질
+
+### 순회를 통한 모든 공통 접두사 - 접미사의 탐색
+
+
+
 ## 시간 복잡도
 
 시간 복잡도는 $O(N + M)$ 이다. 
@@ -77,3 +83,4 @@ count 배열은 i에서 최대로 일치하는 문자열의 길이가 담겨있�
 ## 참고
 
 - https://www.youtube.com/watch?v=9bkbV-VANQ0
+- https://ps.mjstudio.net/kmp
