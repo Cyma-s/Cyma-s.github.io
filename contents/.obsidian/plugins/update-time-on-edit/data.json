@@ -40,7 +40,7 @@
     "posts/transaction.md": "9dc32050ebb570899d347cefcb7dabbe0f9e45a54f3b63b6ee6b92835b2de093",
     "posts/mysql-execution-plan.md": "b612ccb9452e4cd012cb0d2a03cd85166fcc733f6d84f94add25266248683d30",
     "posts/2023-11-04.md": "82b8549832e0ff5d4c97f1b2493f8c8d930370457d57b6104a54584ddfc34dfa",
-    "posts/2023-11.md": "d37b1382c20fbd213e5ab8865464fada26cdfbc02d729b4c04a6c294954fca4b",
+    "posts/2023-11.md": "5599b39b05999eb2f958f3c09cd11003a610a5e9efba34e12057ba714f9d9ef7",
     "posts/readme.md": "0eb69d2c7df30b331716fe61f52a3787f752982756091bf532f9eca69a68f746",
     "posts/binary-search-tree.md": "183f4e44cf90b581748c09d0390ba0e99a996c46056a2882a5ce4c6bc973c117",
     "posts/avl-tree.md": "e20e96c46843b694b3c9fe4fc6b28bac608759769e4303639071899dabb4efcc",
@@ -98,7 +98,7 @@
     "posts/level4-writing.md": "ce1cf0ed9de0087dfe873428d0bb82b215967ebde1dc03f9596b875dd351f271",
     "posts/2023-11-20.md": "6fa18705a83bd72e6f919f12c72900f3718e82b0b89817adf5b5c8ba8e9f4e2e",
     "posts/local-cache-concurrency-problem.md": "7abd01361fea7bba1cc5a6d84a157b5fd59b27d69b4e3074fb68dddea7cf8c92",
-    "posts/top-down-approach-ch1.md": "f63ea52d0a17ca698691de0777acd42fd39cda0603409da97fdefd1a88a31227",
+    "posts/top-down-approach-ch1.md": "4b8d799f4f5c22d4ae6a058ef2698d371e8dd676f07a5949b31d92e0ebd86064",
     "posts/shook-prod-server-setting.md": "db7075770cea2ba3d3aa1d3537c89b9b0ec41bbc87544ed50769d0b39d9a48b1",
     "posts/shook-migration.md": "089ec5dc2ff3c07b92cb6cbfa0638fa6b12652ba9198e9439a55ba74969731ed",
     "posts/what-is-index.md": "0b52e2ed39f45f91cb1da668adc94b3428338ae09347b2713efddda5bdd3cddd",
@@ -110,6 +110,7 @@
     "posts/shook-function-develop.md": "56fe6d8f4e39c1a45b6e764eb9b183677b057ca0067918031f60ce6f0578fbd6",
     "posts/lower-bound-and-upper-bound.md": "a15b61d3913b0db34a672839d02d2395f86709fc3fe1daf9019151c7c7d7995a",
     "posts/dh-recruiter-call.md": "eb827a1f7b2f1bd27c4445a8bdf5555c3d472e585af81abccf09c83dcf38ea2f",
-    "posts/top-down-approach-ch2.md": "7652d9475e5fafd1f9f38607964b29c2fb0829debb0e93017fb98264bfbe42a0"
+    "posts/top-down-approach-ch2.md": "d8a7642912ae32b19515a58cbaf0ef50a100b67a85a2a2bdc37ab5fa877512ae",
+    "posts/2023-10.md": "3040a6553089b676972661862b2c835a1ac6bd672c823af86414ed435bbcae1f"
   }
 }
