@@ -1,7 +1,7 @@
 ---
 title: 로컬 캐싱 동시성 문제 해결기
 date: 2023-11-20 18:16:11 +0900
-updated: 2023-11-28 20:30:58 +0900
+updated: 2023-11-30 17:02:01 +0900
 tags:
   - shook
   - trouble-shooting
@@ -148,10 +148,51 @@ public class InMemorySongs {
     }}
 ```
 
-조금 복잡해보이지만, 좋아요 요청의 대략적인 플로우만 설명하면 다음과 같다.
+매우 복잡한 로직이다. 좋아요 요청의 대략적인 플로우만 설명하면 다음과 같다.
 
 좋아요 요청인 경우
 1. 좋아요를 누른 킬링파트로 캐싱된 노래를 찾는다.
 2. 캐싱된 노래의 좋아요를 누를 킬링파트를 찾는다.
 3. 만약 킬링파트 좋아요가 업데이트된 경우, 전체 노래를 재정렬한다.
 
+## 테스트 환경
+
+동시 유저는 총 유저 수보다 조금 적은 100명으로 가정하였다.  
+
+지금까지 애널리틱스로 분석한 결과 노래 조회 요청은 약 2800회 요청되었고, 좋아요 요청은 90회 요청되었다.   
+
+이는 약 30:1의 비율이므로, locust 의 task 가중치를 30과 1로 설정하였다. 
+
+
+## 해결 방법
+
+이를 해결하기 위해서는 동시성을 보장하기 위한 락을 사용해야 한다.  
+
+어떤 락이 우리의 상황에 가장 적합할 지 알아보도록 하자.
+
+### synchronized
+
+로직은 정말 간단하게 변경될 수 있다.
+
+```java
+private void reorder(final Song updatedSong) {  
+    synchronized (sortedSongIds) {  
+        int currentSongIndex = sortedSongIds.indexOf(updatedSong.getId());  
+  
+        if (currentSongIndex == -1) {  
+            return;  
+        }  
+  
+        moveForward(updatedSong, currentSongIndex);  
+        moveBackward(updatedSong, currentSongIndex);  
+    }  
+}
+```
+
+#### 장점
+
+synchronized 의 장점은 무엇보다 간단하다는 것이다. 또한 lock 관리를 Java 가 해주기 때문에 복잡성이 줄어든다. 
+
+#### 단점
+
+그러나 `sortedSongIds` 라는 데이터에 단 하나의 스레드만 접근할 수 있기 때문에, 읽기 요청이 많은 우리 서비스에서 성능 저하가 일어날 가능성이 매우 높다. 
