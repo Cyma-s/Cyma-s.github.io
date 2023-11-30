@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "local-cache-concurrency-problem",
-      "path": "posts/local-cache-concurrency-problem.md"
+      "basename": "english-speaking-pattern-11-30",
+      "path": "posts/english-speaking-pattern-11-30.md"
+    },
+    {
+      "basename": "2023-11-30",
+      "path": "posts/2023-11-30.md"
+    },
+    {
+      "basename": "english-speaking-pattern",
+      "path": "posts/english-speaking-pattern.md"
     },
     {
       "basename": "locust",
@@ -11,6 +19,10 @@
     {
       "basename": "kmp-algorithm",
       "path": "posts/kmp-algorithm.md"
+    },
+    {
+      "basename": "local-cache-concurrency-problem",
+      "path": "posts/local-cache-concurrency-problem.md"
     },
     {
       "basename": "top-down-approach-ch2",
@@ -47,10 +59,6 @@
     {
       "basename": "shook-migration",
       "path": "posts/shook-migration.md"
-    },
-    {
-      "basename": "english-speaking-pattern",
-      "path": "posts/english-speaking-pattern.md"
     },
     {
       "basename": "english-speaking-theme",
@@ -191,14 +199,6 @@
     {
       "basename": "2023-03-17",
       "path": "posts/2023-03-17.md"
-    },
-    {
-      "basename": "assertj",
-      "path": "posts/assertj.md"
-    },
-    {
-      "basename": "2023-03-26",
-      "path": "posts/2023-03-26.md"
     }
   ],
   "omittedPaths": [

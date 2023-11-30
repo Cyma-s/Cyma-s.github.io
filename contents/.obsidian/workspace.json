@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "da56bfef87b40e63",
+        "id": "33c4569c0ef71611",
         "type": "tabs",
         "children": [
           {
-            "id": "2d320ee02272515e",
+            "id": "8ef6f0ff7a9db007",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-29.md",
+                "file": "posts/2023-11-30.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -23,38 +23,12 @@
             }
           },
           {
-            "id": "be33566d6fbf83a4",
+            "id": "1624dfdf9f6e93b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/local-cache-concurrency-problem.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a27a87783f510b3d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/kmp-algorithm.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d0d89ec134cf86bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/locust.md",
+                "file": "posts/english-speaking-pattern-11-30.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -145,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/local-cache-concurrency-problem.md",
+                "file": "posts/english-speaking-pattern-11-30.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -162,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/local-cache-concurrency-problem.md",
+                "file": "posts/english-speaking-pattern-11-30.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -193,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/local-cache-concurrency-problem.md"
+                "file": "posts/english-speaking-pattern-11-30.md"
               }
             }
           },
@@ -214,7 +188,7 @@
             }
           },
           {
-            "id": "a09dc4f26f4a3ae1",
+            "id": "bff6146316eec6f9",
             "type": "leaf",
             "state": {
               "type": "tasks_timeline_view",
@@ -251,11 +225,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "be33566d6fbf83a4",
+  "active": "1624dfdf9f6e93b6",
   "lastOpenFiles": [
+    "posts/2023-11-30.md",
+    "posts/english-speaking-pattern-11-30.md",
+    "posts/english-speaking-pattern.md",
     "posts/locust.md",
-    "posts/local-cache-concurrency-problem.md",
     "posts/kmp-algorithm.md",
+    "posts/local-cache-concurrency-problem.md",
     "posts/top-down-approach-ch2.md",
     "posts/2023-10.md",
     "posts/2023-11-29.md",
@@ -266,7 +243,6 @@
     "posts/attachments/inmemory-concurrency.png",
     "posts/jenkins-migration.md",
     "posts/shook-migration.md",
-    "posts/english-speaking-pattern.md",
     "posts/english-speaking-theme.md",
     "posts/attachments/jenkins-ssh-transfers.png",
     "posts/attachments/jenkins-ssh-server.png",
@@ -287,8 +263,6 @@
     "posts/minimum-vertex-cover.md",
     "posts/2023-11-04.md",
     "posts/book-love-skill.md",
-    "posts/2023-11-23.md",
-    "posts/2023-11-20.md",
     "posts/Untitled 20231113 041648.mdenc",
     "calendar",
     "dictionary",
