@@ -1,7 +1,7 @@
 ---
 title: 11/30 영어 문장 구조 연습
 date: 2023-11-30 18:31:18 +0900
-updated: 2023-11-30 22:57:33 +0900
+updated: 2023-12-01 16:55:59 +0900
 tags:
   - english
 ---
@@ -46,10 +46,12 @@ tags:
 	- We are still solving the problem. We plan to address the concurrency issue by using the syncrhonized keyword or by employing ReentrantLock.
 - 정확한 원리는 모르지만 아는 대로 설명하겠습니다.
 	- I don’t know the exact principle, but I will explain as much as I know.
+- 물어보고 싶은 게 있습니다. I have something I would like to ask.
 
 ## etc
 
 - I want to work for a company with passionate coworkers and with whom I can actively communicate.
+- I’m looking forward to this interview
 
 ## 질문
 
@@ -57,3 +59,4 @@ tags:
 	- What do you do at Delivery Hero?
 - 어떤 문제들을 주로 해결하시나요?
 	- What kinds of problems do you primarily solve?
+- 

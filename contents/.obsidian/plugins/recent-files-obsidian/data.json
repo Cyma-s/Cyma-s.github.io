@@ -1,24 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "java-algorithm-tips",
-      "path": "posts/java-algorithm-tips.md"
-    },
-    {
-      "basename": "algorithm-tips",
-      "path": "posts/algorithm-tips.md"
-    },
-    {
-      "basename": "sort-algorithm",
-      "path": "posts/sort-algorithm.md"
-    },
-    {
       "basename": "english-speaking-pattern-11-30",
       "path": "posts/english-speaking-pattern-11-30.md"
     },
     {
       "basename": "english-speaking-pattern-11-28",
       "path": "posts/english-speaking-pattern-11-28.md"
+    },
+    {
+      "basename": "sort-algorithm",
+      "path": "posts/sort-algorithm.md"
+    },
+    {
+      "basename": "mit-ocw-sets-and-sorting",
+      "path": "posts/mit-ocw-sets-and-sorting.md"
+    },
+    {
+      "basename": "java-algorithm-tips",
+      "path": "posts/java-algorithm-tips.md"
+    },
+    {
+      "basename": "algorithm-tips",
+      "path": "posts/algorithm-tips.md"
     },
     {
       "basename": "english-speaking-pattern",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-11-16",
       "path": "posts/2023-11-16.md"
-    },
-    {
-      "basename": "2023-09-21",
-      "path": "posts/2023-09-21.md"
     }
   ],
   "omittedPaths": [
