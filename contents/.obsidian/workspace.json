@@ -34,9 +34,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "05d44df1a5cff842",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/english-speaking-pattern-11-28.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6ab8856ac3c2c070",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/java-algorithm-tips.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -119,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/english-speaking-pattern-11-30.md",
+                "file": "posts/java-algorithm-tips.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +162,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/english-speaking-pattern-11-30.md",
+                "file": "posts/java-algorithm-tips.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +193,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/english-speaking-pattern-11-30.md"
+                "file": "posts/java-algorithm-tips.md"
               }
             }
           },
@@ -225,11 +251,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "1624dfdf9f6e93b6",
+  "active": "6ab8856ac3c2c070",
   "lastOpenFiles": [
-    "posts/2023-11-30.md",
+    "posts/algorithm-tips.md",
+    "posts/sort-algorithm.md",
     "posts/english-speaking-pattern-11-30.md",
+    "posts/english-speaking-pattern-11-28.md",
     "posts/english-speaking-pattern.md",
+    "posts/english-speaking-nov-3week.md",
+    "posts/english-speaking-oct-4week.md",
+    "posts/english-speaking-nov-4week.md",
+    "posts/2023-11-30.md",
+    "posts/english-speaking-10-17.md",
     "posts/locust.md",
     "posts/kmp-algorithm.md",
     "posts/local-cache-concurrency-problem.md",
@@ -256,13 +289,6 @@
     "posts/attachments/jenkins-freestyle-project.png",
     "posts/2023-05-28.md",
     "posts/dh-recruiter-call.md",
-    "posts/shook-function-develop.md",
-    "posts/lower-bound-and-upper-bound.md",
-    "posts/2023-11-25.md",
-    "posts/bitmasking.md",
-    "posts/minimum-vertex-cover.md",
-    "posts/2023-11-04.md",
-    "posts/book-love-skill.md",
     "posts/Untitled 20231113 041648.mdenc",
     "calendar",
     "dictionary",

@@ -52,7 +52,7 @@
     "posts/bipartite-matching.md": "83cda65bd0bac85e80762ea64bf633b43fdd7e51ef33b3f6d925edddeed48c64",
     "posts/network-flow.md": "838c9844a3b66eda5616496ecf9bc16d38b703205f9e61e6b40be72250128656",
     "posts/2024-school-activity-plan.md": "23c561023b4c0ac941c9ae838192999a758d872078752150a09eb7df019200aa",
-    "posts/sort-algorithm.md": "8c8dc18d9014ff4a51dcb90e78e79c606cc14dab90888b6ecb44d78c90713b41",
+    "posts/sort-algorithm.md": "074d06cb3f5c5c54aef228f7636c2eb8691a06502f5cb42b85132943cb15a472",
     "posts/complexity.md": "df2e878337d27c1db4157f94f96b6757d4a0d03e3876abb181fb52278f161757",
     "posts/dh-interview-study-11-08.md": "54e2b5bb704c3845c4d6862db3ddeb5d8cdcc3b1ee65e00d7a351ce4360a5e8e",
     "posts/2023-11-08.md": "ef68f0d70ade8cd8ad83a9602a8737e3b53e36be9d42125898fb33a6a8029594",
@@ -71,12 +71,12 @@
     "posts/tsp.md": "b046f218dc159d49f88a987918c0a4625a40d89218c78d14db6c1caba82dde00",
     "posts/bitmasking.md": "ce810ca323dbfcced7246e310d292ff32888302fd947f87bb3b94aba8190cb0d",
     "posts/bellman-ford-algorithm.md": "227ffbcf98aee1f0bc8dfb10fbc17df352ae4ce42bcb17dd73df6a9d8e08c541",
-    "posts/java-algorithm-tips.md": "01369533641de99c97a05a303af5ec25dcc8734ef2cc5d1a3e513ec1e28edfea",
+    "posts/java-algorithm-tips.md": "1b9c8ae1ffd502ddaaeba52f22eb2993a70ca540bfd3a03b0bb632fdc5fe5e7f",
     "posts/2023-11-13.md": "ae1a8394e9080d3ab196d6d2a38e4ff860b02ce83af8e3279a73499612bc95e8",
     "posts/mit-ocw-data-structure.md": "08b310df1cb5531c758fa8ffa9ddbd588299222924f104c2c61fc3107c3da605",
     "posts/mit-ocw-sets-and-sorting.md": "315b80f1674f3549f355669f4d9e3b749cc8425e7efcdd9ac4f71d238ccdc06a",
     "posts/2023-11-14.md": "ee8734448f44113ae9b5ee9bb90e8858b2a9b638eef8186c9b484de1a910896d",
-    "posts/english-speaking-pattern.md": "636a72e5a44a744827e4f35ef04898df47dfd69b8fd1f5e8c05cd1b2239ae2b6",
+    "posts/english-speaking-pattern.md": "db7c43a7a2787a64f9b40872c4a3700e8636a0cc5d996cf5c60fb849c30a4f9f",
     "posts/english-speaking-nov-3week.md": "e3e82a7618026d4d7fb6ded90c30b249c38dfe30e70b65a8c9d7ff66bd0e194d",
     "posts/jpa.md": "2ebde892595d6704c738195cdd26ce123f2d0da5a36b2474f4475fe1c79c0b50",
     "posts/matzip-aws-s3-cloudfront.md": "3d9918184310af114a2922fe1ea9f7dc9a4e9f885f65a8dd50c2874d990fd187",
@@ -113,7 +113,9 @@
     "posts/top-down-approach-ch2.md": "d8a7642912ae32b19515a58cbaf0ef50a100b67a85a2a2bdc37ab5fa877512ae",
     "posts/2023-10.md": "3040a6553089b676972661862b2c835a1ac6bd672c823af86414ed435bbcae1f",
     "posts/2023-11-29.md": "582324dbd254a7edc2a7edc6dc942753c3ce9faa6bd651279881ead70a4808e9",
-    "posts/english-speaking-pattern-11-30.md": "0baa8a90fb2648705dcfa0959f0329289009c72e37cf573b6efe3cd7928ce979",
-    "posts/2023-11-30.md": "71725dcd17a503964949915be87e0382f2a1d6872096bdcc70c14f1156b114b8"
+    "posts/english-speaking-pattern-11-30.md": "ff0f47d1aedb373538cb0c59ecc944646ee1ba1946bf12c2c5c91f4c62a287f1",
+    "posts/2023-11-30.md": "fe80b2a489778f74692d621b2a1d712bf605fde31b3a578b2f0c12c5eb69476b",
+    "posts/english-speaking-pattern-11-28.md": "aa343eac2448393198d16cd6589eae9a0c0c8f6b65753063c3e32c8aa9ff1dbc",
+    "posts/english-speaking-nov-4week.md": "f43769acb5d8f937c8a930008e5dcb4f261f89d56d3fbbd24b6b0c7885e6817f"
   }
 }

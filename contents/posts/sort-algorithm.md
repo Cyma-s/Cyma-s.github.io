@@ -1,7 +1,7 @@
 ---
 title: 정렬 알고리즘
 date: 2023-11-07 13:49:20 +0900
-updated: 2023-11-09 13:38:19 +0900
+updated: 2023-12-01 00:55:31 +0900
 tags:
   - algorithms
 ---
@@ -124,3 +124,71 @@ $O(N)$
 ## Merge Sort
 
 분할 정복 알고리즘이다. 
+
+1. 분할: 배열을 반으로 나누어 두 부분으로 분할한다. 하나의 요소가 남을 때까지 계속한다.
+2. 정복: 각 부분을 재귀적으로 정렬한다. 단일 요소 배열은 정렬된 것으로 간주한다. 
+3. 결합: 정렬된 부분 배열들을 하나의 배열로 합친다. 이 과정에서 두 배열의 가장 작은 요소들을 비교하면서, 작은 순서대로 새 배열에 복사하여 전체 배열이 정렬된다. 
+
+### 구현
+
+```java
+public class MergeSort {
+
+    // 배열을 정렬하는 메인 메서드
+    public static void sort(int[] array) {
+        if (array.length < 2) {
+            return; // 배열의 크기가 1이하면 정렬할 필요가 없음
+        }
+
+        // 배열을 두 부분으로 나눔
+        int mid = array.length / 2;
+        int[] leftHalf = new int[mid];
+        int[] rightHalf = new int[array.length - mid];
+
+        // 데이터를 두 부분으로 복사
+        System.arraycopy(array, 0, leftHalf, 0, mid);
+        System.arraycopy(array, mid, rightHalf, 0, array.length - mid);
+
+        // 각 부분을 재귀적으로 정렬
+        sort(leftHalf);
+        sort(rightHalf);
+
+        // 정렬된 부분을 합침
+        merge(array, leftHalf, rightHalf);
+    }
+
+    // 두 부분 배열을 합치는 메서드
+    public static void merge(int[] array, int[] leftHalf, int[] rightHalf) {
+        int i = 0, j = 0, k = 0;
+
+        // 왼쪽과 오른쪽 배열을 비교하며 정렬하여 병합
+        while (i < leftHalf.length && j < rightHalf.length) {
+            if (leftHalf[i] <= rightHalf[j]) {
+                array[k++] = leftHalf[i++];
+            } else {
+                array[k++] = rightHalf[j++];
+            }
+        }
+
+        // 남은 요소들을 복사
+        while (i < leftHalf.length) {
+            array[k++] = leftHalf[i++];
+        }
+
+        while (j < rightHalf.length) {
+            array[k++] = rightHalf[j++];
+        }
+    }
+}
+
+```
+
+### 장점
+
+- 안정 정렬이 가능하다. 
+- 최악, 평균, 최선의 경우 모두 $O(nlogn)$ 의 시간 복잡도를 갖는다. 대규모 데이터 정렬에 효율적인 알고리즘이다.
+
+### 단점
+
+- 추가적인 배열이 필요하므로, 제자리 정렬 알고리즘보다 더 많은 메모리를 요구한다. 
+- 작은 배열에 대해서는 다른 정렬 알고리즘이 더 빠를 수 있다.
