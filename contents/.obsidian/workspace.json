@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8ef6f0ff7a9db007",
+            "id": "da5ae1661a17fae4",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-11-30.md",
+                "file": "posts/2023-12-01.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,9 +73,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "412027de87b93f6c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/trie.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -158,7 +171,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/english-speaking-pattern-11-30.md",
+                "file": "posts/trie.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +188,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/english-speaking-pattern-11-30.md",
+                "file": "posts/trie.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +219,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/english-speaking-pattern-11-30.md"
+                "file": "posts/trie.md"
               }
             }
           },
@@ -264,19 +277,22 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "1624dfdf9f6e93b6",
+  "active": "412027de87b93f6c",
   "lastOpenFiles": [
+    "posts/dynamic-programming.md",
+    "posts/trie.md",
+    "posts/2023-12-01.md",
+    "posts/2023-11-30.md",
+    "posts/english-speaking-pattern-11-30.md",
     "posts/english-speaking-pattern-11-28.md",
     "posts/sort-algorithm.md",
     "posts/mit-ocw-sets-and-sorting.md",
-    "posts/english-speaking-pattern-11-30.md",
     "posts/java-algorithm-tips.md",
     "posts/algorithm-tips.md",
     "posts/english-speaking-pattern.md",
     "posts/english-speaking-nov-3week.md",
     "posts/english-speaking-oct-4week.md",
     "posts/english-speaking-nov-4week.md",
-    "posts/2023-11-30.md",
     "posts/english-speaking-10-17.md",
     "posts/locust.md",
     "posts/kmp-algorithm.md",
@@ -290,12 +306,9 @@
     "posts/top-down-approach-ch1.md",
     "posts/attachments/inmemory-concurrency.png",
     "posts/jenkins-migration.md",
-    "posts/shook-migration.md",
-    "posts/english-speaking-theme.md",
     "posts/attachments/jenkins-ssh-transfers.png",
     "posts/attachments/jenkins-ssh-server.png",
     "posts/attachments/jenkins-publish-over-ssh.png",
-    "posts/floyd-warshall-algorithm.md",
     "posts/attachments/jenkins-build-gradle-file.png",
     "posts/attachments/jenkins-gradle-script.png",
     "posts/attachments/jenkins-submodule-settings.png",

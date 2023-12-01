@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "trie",
+      "path": "posts/trie.md"
+    },
+    {
+      "basename": "2023-12-01",
+      "path": "posts/2023-12-01.md"
+    },
+    {
+      "basename": "2023-11-30",
+      "path": "posts/2023-11-30.md"
+    },
+    {
       "basename": "english-speaking-pattern-11-30",
       "path": "posts/english-speaking-pattern-11-30.md"
     },
@@ -39,10 +51,6 @@
     {
       "basename": "english-speaking-nov-4week",
       "path": "posts/english-speaking-nov-4week.md"
-    },
-    {
-      "basename": "2023-11-30",
-      "path": "posts/2023-11-30.md"
     },
     {
       "basename": "english-speaking-10-17",
@@ -187,18 +195,6 @@
     {
       "basename": "dh-interview-answer",
       "path": "posts/dh-interview-answer.md"
-    },
-    {
-      "basename": "shook-main-page",
-      "path": "posts/attachments/shook-main-page.png"
-    },
-    {
-      "basename": "inmemory-cache-develop",
-      "path": "posts/inmemory-cache-develop.md"
-    },
-    {
-      "basename": "2023-11-16",
-      "path": "posts/2023-11-16.md"
     }
   ],
   "omittedPaths": [
