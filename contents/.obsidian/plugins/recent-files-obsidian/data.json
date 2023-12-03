@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "topological-sorting",
+      "path": "posts/topological-sorting.md"
+    },
+    {
       "basename": "trie",
       "path": "posts/trie.md"
     },

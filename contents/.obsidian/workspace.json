@@ -86,9 +86,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6bb311578ed667f5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/topological-sorting.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -171,7 +184,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/trie.md",
+                "file": "posts/topological-sorting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,7 +201,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/trie.md",
+                "file": "posts/topological-sorting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -219,7 +232,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/trie.md"
+                "file": "posts/topological-sorting.md"
               }
             }
           },
@@ -277,10 +290,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "412027de87b93f6c",
+  "active": "6bb311578ed667f5",
   "lastOpenFiles": [
-    "posts/dynamic-programming.md",
+    "posts/topological-sorting.md",
     "posts/trie.md",
+    "posts/dynamic-programming.md",
     "posts/2023-12-01.md",
     "posts/2023-11-30.md",
     "posts/english-speaking-pattern-11-30.md",
@@ -305,7 +319,6 @@
     "posts/2023-10-23.md",
     "posts/top-down-approach-ch1.md",
     "posts/attachments/inmemory-concurrency.png",
-    "posts/jenkins-migration.md",
     "posts/attachments/jenkins-ssh-transfers.png",
     "posts/attachments/jenkins-ssh-server.png",
     "posts/attachments/jenkins-publish-over-ssh.png",
