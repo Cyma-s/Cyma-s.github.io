@@ -1,0 +1,166 @@
+{
+  "main": {
+    "id": "6b76b7ea192c5276",
+    "type": "split",
+    "children": [
+      {
+        "id": "a7ae571e7abc308f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9674ecb25980a3f3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1551ee54eb86fd67",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "57f46769143fb4a5",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "d71f3eaae77a0d25",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "97ac4f5dfbbdf677",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "6e88d81575d08009",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "8cfc3b3e304a173f",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "0fb542d1841187e3",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "ad98187aa213a994",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "4069beebd9673585",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "57f46769143fb4a5",
+  "lastOpenFiles": [
+    "node_modules/ast-types/def/es2021.d.ts",
+    "node_modules/lit/directives/until.js",
+    "node_modules/lit/directives/cache.js",
+    "node_modules/ast-types/gen/kinds.js",
+    "node_modules/ast-types/def/es-proposals.d.ts",
+    "node_modules/react-shallow-renderer/index.js",
+    "node_modules/ast-types/def/jsx.d.ts",
+    "node_modules/lit/directives/guard.js",
+    "node_modules/prismjs/components/prism-t4-vb.min.js",
+    "node_modules/ast-types/def/babel-core.d.ts",
+    "node_modules/react-native/template/babel.config.js",
+    "contents/posts/english-speaking-theme.md",
+    "contents/posts/2023-10-31.md",
+    "contents/posts/2023-10-21.md",
+    "contents/posts/programming-book.md",
+    "contents/posts/2023-10-04.md",
+    "contents/posts/2023-11-16.md",
+    "contents/posts/jpa.md",
+    "contents/posts/2023-11-30.md",
+    "contents/posts/lis.md",
+    "node_modules/unpipe/HISTORY.md",
+    "node_modules/workbox-build/README.md",
+    "node_modules/proto-list/README.md",
+    "node_modules/is-valid-domain/CHANGELOG.md",
+    "node_modules/hermes-estree/README.md",
+    "node_modules/bluebird/changelog.md",
+    "node_modules/ob1/README.md",
+    "contents/template/template.md",
+    "node_modules/react-server-dom-webpack/README.md",
+    "node_modules/workbox-sw/README.md",
+    "node_modules/metro-core/README.md",
+    "node_modules/workbox-core/README.md",
+    "node_modules/metro-resolver/README.md",
+    "node_modules/workbox-routing/README.md",
+    "contents/posts/2023-11-13.md",
+    "contents/posts/2023-04-05.md",
+    "mockup.png"
+  ]
+}

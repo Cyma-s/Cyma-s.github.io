@@ -90,7 +90,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -197,7 +198,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-full-calendar:Open Full Calendar": false,
       "switcher:퀵 스위처 열기": true,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": true,
@@ -207,17 +207,13 @@
       "random-note:랜덤 노트 열기": false,
       "markdown-importer:마크다운 형식 가져오기 열기": false,
       "smart-random-note:Open Random Note from Search": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "homepage:Open homepage": false,
-      "obsidian-day-planner:Timeline": false,
-      "templater-obsidian:Templater": false,
-      "meld-encrypt:New encrypted note": false,
-      "meld-encrypt:Convert to or from an Encrypted note": false,
       "omnisearch:Omnisearch": false,
+      "templater-obsidian:Templater": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "fd62fa932c27101e",
+  "active": "ccb9b22fe9fc492c",
   "lastOpenFiles": [
     "posts/2023-12-04.md",
     "posts/2023-12-01.md",
