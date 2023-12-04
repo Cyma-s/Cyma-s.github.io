@@ -1,7 +1,7 @@
 ---
 title: 11/30 영어 문장 구조 연습
 date: 2023-11-30 18:31:18 +0900
-updated: 2023-12-04 17:18:32 +0900
+updated: 2023-12-04 19:53:14 +0900
 tags:
   - english
 ---
@@ -19,7 +19,7 @@ tags:
 - 만약 내가 이분 탐색을 사용한다면 시간 복잡도를 줄일 수 있습니다.
 	- If I use binary search, I can reduce the time complexity.
 - 만약 값이 커진다면 문제가 발생할 수도 있습니다.
-	- If the size of the array increseas, it could lead to problems.
+	- If the size of the array increases, it could lead to problems.
 - Java 의 ArrayList 의 삽입은 O(1) 의 시간 복잡도를 갖습니다.
 	- The insertion in Java’s ArrayList has a time complexity of O of one.
 - 간단한 자기소개를 해주세요.
@@ -36,9 +36,10 @@ tags:
 	- A key advantage of Java is its compatibility across various environments, and its adoption of object-oriented programming provides benefits in terms of code reusability, maintainability, and scalability. Additionally, its extensive references make debugging more easy. That’s why we chose to use Java.
 - Spring 을 사용하신 이유는 무엇인가요?
 	- Spring 은 IoC나 DI 같은 개발자가 기능을 편하게 개발할 수 있는 기능들을 제공해줍니다. 그리고 무엇보다 팀원들이 스프링에 가장 익숙하다는 점이 선택하게 된 가장 큰 이유입니다.
-	- Spring provides us the funcionalities that the developers can develop functions like IoC or DI. And most of all, my teammates are more familiar with Spring framework than other things. That’s the biggest reason why I chose Spring Framework.
+	- Spring provides features like IoC and DI that make it convenient for developers to build functionalities. Moreover, the most significant reason for choosing it is that our team members are most familiar with Spring.
 - DBMS 란 무엇인가요?
 	- 데이터베이스를 운영하고 관리하는 소프트웨어이다. 
+	- DBMS is the software to operate and manage databases.
 - 트랜잭션이란 무엇인가요?
 	- 하나의 논리적인 작업 단위를 의미한다. 트랜잭션을 통해 데이터의 정확성과 신뢰성을 보장할 수 있다.
 	- It represents a single logical unit of work. Through transactions, the accuracy and reliability of data can be ensured. 
@@ -49,6 +50,8 @@ tags:
 	- 어떤 지점의 변화가 다른 지점에 영향을 끼치는 것을 줄일 수 있다. 
 	- It can reduce the impact of changes at one point affecting other points. 
 - OOP 의 단점은 무엇인가요?
+	- 우리는 객체지향을 지키기 위해 과도하게 복잡한 설계를 할 수도 있으니 주의해야 한다. 또한 확장성을 높이기 위해 복잡성을 증가시킬 수 있다는 단점도 있다.
+	- We need to be careful not to adopt excessively complex designs in our effort to adhere to object-oriented principles. Additionally, there is a disadvantage in that increasing complexity to enhance scailability is also possible.
 
 ## 프로젝트
 
@@ -75,6 +78,12 @@ tags:
 - 정확한 원리는 모르지만 아는 대로 설명하겠습니다.
 	- I don’t know the exact principle, but I will explain as much as I know.
 - 물어보고 싶은 게 있습니다. I have something I would like to ask.
+- 팀에서 갈등 상황이 있었을 때 어떻게 해결했나요?
+	- 팀원들이 프로젝트에 쏟을 수 있는 시간이 다르다는 문제가 있었습니다. 그런 문제가 있었을 때 다른 팀원들은 이 주제에 대해 말하기 망설였습니다. 저는 이 문제가 심각하다고 생각했고, 그래서 적극적으로 회의를 주최했습니다. 회의를 하는 동안 이 문제에 대해 깊게 이야기했습니다. 회의가 끝나고 나서, 우리는 합의할 수 있었습니다. 많은 문제가 있을 때는 솔직하게 대화하는 것이 중요하다고 생각합니다.
+	- "There was an issue where team members had different amounts of time they could dedicate to the project. When such a problem arose, other team members hesitated to speak about this topic. I thought this issue was serious, so I proactively organized a meeting. During the meeting, we discussed this issue in depth. After the meeting, we were able to reach an agreement. I believe that honest communication is important when there are many problems.
+- 우아한테크코스에서 뭘 배웠나요?
+	- 개발을 공부하는 방법을 알 수 있었습니다. 또한 주위의 사람들과 대화하면서 다양한 관점을 배울 수 있었다는 것이 가장 큽니다.
+	- I learned how to study programming, and most importantly, I learned different perspectives by talking to people around me.
 
 ## etc
 

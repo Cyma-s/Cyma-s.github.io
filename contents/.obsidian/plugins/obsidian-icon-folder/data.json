@@ -20,7 +20,9 @@
     },
     "iconInTabsEnabled": false,
     "iconInTitleEnabled": false,
-    "iconsBackgroundCheckEnabled": false
+    "iconsBackgroundCheckEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsInNotesEnabled": true
   },
   "2023.md": {
     "iconName": "📚",

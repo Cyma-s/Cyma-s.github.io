@@ -40,7 +40,7 @@ var require_main = __commonJS({
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var obsidian = require("obsidian");
-    var DEFAULT_DAILY_NOTE_FORMAT2 = "YYYY-MM-DD";
+    var DEFAULT_DAILY_NOTE_FORMAT3 = "YYYY-MM-DD";
     var DEFAULT_WEEKLY_NOTE_FORMAT = "gggg-[W]ww";
     var DEFAULT_MONTHLY_NOTE_FORMAT = "YYYY-MM";
     var DEFAULT_QUARTERLY_NOTE_FORMAT = "YYYY-[Q]Q";
@@ -53,18 +53,18 @@ var require_main = __commonJS({
     function getDailyNoteSettings() {
       var _a, _b, _c, _d;
       try {
-        const { internalPlugins, plugins } = window.app;
+        const { internalPlugins, plugins: plugins2 } = window.app;
         if (shouldUsePeriodicNotesSettings("daily")) {
-          const { format: format2, folder: folder2, template: template2 } = ((_b = (_a = plugins.getPlugin("periodic-notes")) == null ? void 0 : _a.settings) == null ? void 0 : _b.daily) || {};
+          const { format: format2, folder: folder2, template: template2 } = ((_b = (_a = plugins2.getPlugin("periodic-notes")) == null ? void 0 : _a.settings) == null ? void 0 : _b.daily) || {};
           return {
-            format: format2 || DEFAULT_DAILY_NOTE_FORMAT2,
+            format: format2 || DEFAULT_DAILY_NOTE_FORMAT3,
             folder: (folder2 == null ? void 0 : folder2.trim()) || "",
             template: (template2 == null ? void 0 : template2.trim()) || ""
           };
         }
         const { folder, format, template } = ((_d = (_c = internalPlugins.getPluginById("daily-notes")) == null ? void 0 : _c.instance) == null ? void 0 : _d.options) || {};
         return {
-          format: format || DEFAULT_DAILY_NOTE_FORMAT2,
+          format: format || DEFAULT_DAILY_NOTE_FORMAT3,
           folder: (folder == null ? void 0 : folder.trim()) || "",
           template: (template == null ? void 0 : template.trim()) || ""
         };
@@ -195,8 +195,8 @@ var require_main = __commonJS({
         return ["", null];
       }
     }
-    function getDateUID(date, granularity = "day") {
-      const ts = date.clone().startOf(granularity).format();
+    function getDateUID(date2, granularity = "day") {
+      const ts = date2.clone().startOf(granularity).format();
       return `${granularity}-${ts}`;
     }
     function removeEscapedCharacters(format) {
@@ -212,7 +212,7 @@ var require_main = __commonJS({
     function getDateFromFile2(file, granularity) {
       return getDateFromFilename(file.basename, granularity);
     }
-    function getDateFromPath(path, granularity) {
+    function getDateFromPath2(path, granularity) {
       return getDateFromFilename(basename(path), granularity);
     }
     function getDateFromFilename(filename, granularity) {
@@ -245,18 +245,18 @@ var require_main = __commonJS({
     }
     var DailyNotesFolderMissingError = class extends Error {
     };
-    async function createDailyNote3(date) {
+    async function createDailyNote3(date2) {
       const app = window.app;
       const { vault } = app;
       const moment2 = window.moment;
       const { template, format, folder } = getDailyNoteSettings();
       const [templateContents, IFoldInfo] = await getTemplateInfo(template);
-      const filename = date.format(format);
+      const filename = date2.format(format);
       const normalizedPath = await getNotePath(folder, filename);
       try {
         const createdFile = await vault.create(normalizedPath, templateContents.replace(/{{\s*date\s*}}/gi, filename).replace(/{{\s*time\s*}}/gi, moment2().format("HH:mm")).replace(/{{\s*title\s*}}/gi, filename).replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
           const now = moment2();
-          const currentDate = date.clone().set({
+          const currentDate = date2.clone().set({
             hour: now.get("hour"),
             minute: now.get("minute"),
             second: now.get("second")
@@ -268,7 +268,7 @@ var require_main = __commonJS({
             return currentDate.format(momentFormat.substring(1).trim());
           }
           return currentDate.format(format);
-        }).replace(/{{\s*yesterday\s*}}/gi, date.clone().subtract(1, "day").format(format)).replace(/{{\s*tomorrow\s*}}/gi, date.clone().add(1, "d").format(format)));
+        }).replace(/{{\s*yesterday\s*}}/gi, date2.clone().subtract(1, "day").format(format)).replace(/{{\s*tomorrow\s*}}/gi, date2.clone().add(1, "d").format(format)));
         app.foldManager.save(createdFile, IFoldInfo);
         return createdFile;
       } catch (err) {
@@ -276,9 +276,9 @@ var require_main = __commonJS({
         new obsidian.Notice("Unable to create new file.");
       }
     }
-    function getDailyNote4(date, dailyNotes) {
+    function getDailyNote4(date2, dailyNotes) {
       var _a;
-      return (_a = dailyNotes[getDateUID(date, "day")]) != null ? _a : null;
+      return (_a = dailyNotes[getDateUID(date2, "day")]) != null ? _a : null;
     }
     function getAllDailyNotes4() {
       const { vault } = window.app;
@@ -290,9 +290,9 @@ var require_main = __commonJS({
       const dailyNotes = {};
       obsidian.Vault.recurseChildren(dailyNotesFolder, (note) => {
         if (note instanceof obsidian.TFile) {
-          const date = getDateFromFile2(note, "day");
-          if (date) {
-            const dateString = getDateUID(date, "day");
+          const date2 = getDateFromFile2(note, "day");
+          if (date2) {
+            const dateString = getDateUID(date2, "day");
             dailyNotes[dateString] = note;
           }
         }
@@ -322,16 +322,16 @@ var require_main = __commonJS({
     function getDayOfWeekNumericalValue(dayOfWeekName) {
       return getDaysOfWeek2().indexOf(dayOfWeekName.toLowerCase());
     }
-    async function createWeeklyNote(date) {
+    async function createWeeklyNote(date2) {
       const { vault } = window.app;
       const { template, format, folder } = getWeeklyNoteSettings();
       const [templateContents, IFoldInfo] = await getTemplateInfo(template);
-      const filename = date.format(format);
+      const filename = date2.format(format);
       const normalizedPath = await getNotePath(folder, filename);
       try {
         const createdFile = await vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
           const now = window.moment();
-          const currentDate = date.clone().set({
+          const currentDate = date2.clone().set({
             hour: now.get("hour"),
             minute: now.get("minute"),
             second: now.get("second")
@@ -345,7 +345,7 @@ var require_main = __commonJS({
           return currentDate.format(format);
         }).replace(/{{\s*title\s*}}/gi, filename).replace(/{{\s*time\s*}}/gi, window.moment().format("HH:mm")).replace(/{{\s*(sunday|monday|tuesday|wednesday|thursday|friday|saturday)\s*:(.*?)}}/gi, (_, dayOfWeek, momentFormat) => {
           const day = getDayOfWeekNumericalValue(dayOfWeek);
-          return date.weekday(day).format(momentFormat.trim());
+          return date2.weekday(day).format(momentFormat.trim());
         }));
         window.app.foldManager.save(createdFile, IFoldInfo);
         return createdFile;
@@ -354,9 +354,9 @@ var require_main = __commonJS({
         new obsidian.Notice("Unable to create new file.");
       }
     }
-    function getWeeklyNote(date, weeklyNotes) {
+    function getWeeklyNote(date2, weeklyNotes) {
       var _a;
-      return (_a = weeklyNotes[getDateUID(date, "week")]) != null ? _a : null;
+      return (_a = weeklyNotes[getDateUID(date2, "week")]) != null ? _a : null;
     }
     function getAllWeeklyNotes() {
       const weeklyNotes = {};
@@ -371,9 +371,9 @@ var require_main = __commonJS({
       }
       obsidian.Vault.recurseChildren(weeklyNotesFolder, (note) => {
         if (note instanceof obsidian.TFile) {
-          const date = getDateFromFile2(note, "week");
-          if (date) {
-            const dateString = getDateUID(date, "week");
+          const date2 = getDateFromFile2(note, "week");
+          if (date2) {
+            const dateString = getDateUID(date2, "week");
             weeklyNotes[dateString] = note;
           }
         }
@@ -382,16 +382,16 @@ var require_main = __commonJS({
     }
     var MonthlyNotesFolderMissingError = class extends Error {
     };
-    async function createMonthlyNote(date) {
+    async function createMonthlyNote(date2) {
       const { vault } = window.app;
       const { template, format, folder } = getMonthlyNoteSettings();
       const [templateContents, IFoldInfo] = await getTemplateInfo(template);
-      const filename = date.format(format);
+      const filename = date2.format(format);
       const normalizedPath = await getNotePath(folder, filename);
       try {
         const createdFile = await vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
           const now = window.moment();
-          const currentDate = date.clone().set({
+          const currentDate = date2.clone().set({
             hour: now.get("hour"),
             minute: now.get("minute"),
             second: now.get("second")
@@ -411,9 +411,9 @@ var require_main = __commonJS({
         new obsidian.Notice("Unable to create new file.");
       }
     }
-    function getMonthlyNote(date, monthlyNotes) {
+    function getMonthlyNote(date2, monthlyNotes) {
       var _a;
-      return (_a = monthlyNotes[getDateUID(date, "month")]) != null ? _a : null;
+      return (_a = monthlyNotes[getDateUID(date2, "month")]) != null ? _a : null;
     }
     function getAllMonthlyNotes() {
       const monthlyNotes = {};
@@ -428,9 +428,9 @@ var require_main = __commonJS({
       }
       obsidian.Vault.recurseChildren(monthlyNotesFolder, (note) => {
         if (note instanceof obsidian.TFile) {
-          const date = getDateFromFile2(note, "month");
-          if (date) {
-            const dateString = getDateUID(date, "month");
+          const date2 = getDateFromFile2(note, "month");
+          if (date2) {
+            const dateString = getDateUID(date2, "month");
             monthlyNotes[dateString] = note;
           }
         }
@@ -439,16 +439,16 @@ var require_main = __commonJS({
     }
     var QuarterlyNotesFolderMissingError = class extends Error {
     };
-    async function createQuarterlyNote(date) {
+    async function createQuarterlyNote(date2) {
       const { vault } = window.app;
       const { template, format, folder } = getQuarterlyNoteSettings();
       const [templateContents, IFoldInfo] = await getTemplateInfo(template);
-      const filename = date.format(format);
+      const filename = date2.format(format);
       const normalizedPath = await getNotePath(folder, filename);
       try {
         const createdFile = await vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
           const now = window.moment();
-          const currentDate = date.clone().set({
+          const currentDate = date2.clone().set({
             hour: now.get("hour"),
             minute: now.get("minute"),
             second: now.get("second")
@@ -468,9 +468,9 @@ var require_main = __commonJS({
         new obsidian.Notice("Unable to create new file.");
       }
     }
-    function getQuarterlyNote(date, quarterly) {
+    function getQuarterlyNote(date2, quarterly) {
       var _a;
-      return (_a = quarterly[getDateUID(date, "quarter")]) != null ? _a : null;
+      return (_a = quarterly[getDateUID(date2, "quarter")]) != null ? _a : null;
     }
     function getAllQuarterlyNotes() {
       const quarterly = {};
@@ -485,9 +485,9 @@ var require_main = __commonJS({
       }
       obsidian.Vault.recurseChildren(quarterlyFolder, (note) => {
         if (note instanceof obsidian.TFile) {
-          const date = getDateFromFile2(note, "quarter");
-          if (date) {
-            const dateString = getDateUID(date, "quarter");
+          const date2 = getDateFromFile2(note, "quarter");
+          if (date2) {
+            const dateString = getDateUID(date2, "quarter");
             quarterly[dateString] = note;
           }
         }
@@ -496,16 +496,16 @@ var require_main = __commonJS({
     }
     var YearlyNotesFolderMissingError = class extends Error {
     };
-    async function createYearlyNote(date) {
+    async function createYearlyNote(date2) {
       const { vault } = window.app;
       const { template, format, folder } = getYearlyNoteSettings();
       const [templateContents, IFoldInfo] = await getTemplateInfo(template);
-      const filename = date.format(format);
+      const filename = date2.format(format);
       const normalizedPath = await getNotePath(folder, filename);
       try {
         const createdFile = await vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
           const now = window.moment();
-          const currentDate = date.clone().set({
+          const currentDate = date2.clone().set({
             hour: now.get("hour"),
             minute: now.get("minute"),
             second: now.get("second")
@@ -525,9 +525,9 @@ var require_main = __commonJS({
         new obsidian.Notice("Unable to create new file.");
       }
     }
-    function getYearlyNote(date, yearlyNotes) {
+    function getYearlyNote(date2, yearlyNotes) {
       var _a;
-      return (_a = yearlyNotes[getDateUID(date, "year")]) != null ? _a : null;
+      return (_a = yearlyNotes[getDateUID(date2, "year")]) != null ? _a : null;
     }
     function getAllYearlyNotes() {
       const yearlyNotes = {};
@@ -542,9 +542,9 @@ var require_main = __commonJS({
       }
       obsidian.Vault.recurseChildren(yearlyNotesFolder, (note) => {
         if (note instanceof obsidian.TFile) {
-          const date = getDateFromFile2(note, "year");
-          if (date) {
-            const dateString = getDateUID(date, "year");
+          const date2 = getDateFromFile2(note, "year");
+          if (date2) {
+            const dateString = getDateUID(date2, "year");
             yearlyNotes[dateString] = note;
           }
         }
@@ -598,15 +598,15 @@ var require_main = __commonJS({
       }[granularity];
       return getSettings();
     }
-    function createPeriodicNote(granularity, date) {
+    function createPeriodicNote(granularity, date2) {
       const createFn = {
         day: createDailyNote3,
         month: createMonthlyNote,
         week: createWeeklyNote
       };
-      return createFn[granularity](date);
+      return createFn[granularity](date2);
     }
-    exports.DEFAULT_DAILY_NOTE_FORMAT = DEFAULT_DAILY_NOTE_FORMAT2;
+    exports.DEFAULT_DAILY_NOTE_FORMAT = DEFAULT_DAILY_NOTE_FORMAT3;
     exports.DEFAULT_MONTHLY_NOTE_FORMAT = DEFAULT_MONTHLY_NOTE_FORMAT;
     exports.DEFAULT_QUARTERLY_NOTE_FORMAT = DEFAULT_QUARTERLY_NOTE_FORMAT;
     exports.DEFAULT_WEEKLY_NOTE_FORMAT = DEFAULT_WEEKLY_NOTE_FORMAT;
@@ -630,7 +630,7 @@ var require_main = __commonJS({
     exports.getDailyNote = getDailyNote4;
     exports.getDailyNoteSettings = getDailyNoteSettings;
     exports.getDateFromFile = getDateFromFile2;
-    exports.getDateFromPath = getDateFromPath;
+    exports.getDateFromPath = getDateFromPath2;
     exports.getDateUID = getDateUID;
     exports.getMonthlyNote = getMonthlyNote;
     exports.getMonthlyNoteSettings = getMonthlyNoteSettings;
@@ -981,12 +981,12 @@ var require_lib = __commonJS({
       minute: 5,
       second: 6
     };
-    function hackyOffset(dtf, date) {
-      const formatted = dtf.format(date).replace(/\u200E/g, ""), parsed = /(\d+)\/(\d+)\/(\d+) (AD|BC),? (\d+):(\d+):(\d+)/.exec(formatted), [, fMonth, fDay, fYear, fadOrBc, fHour, fMinute, fSecond] = parsed;
+    function hackyOffset(dtf, date2) {
+      const formatted = dtf.format(date2).replace(/\u200E/g, ""), parsed = /(\d+)\/(\d+)\/(\d+) (AD|BC),? (\d+):(\d+):(\d+)/.exec(formatted), [, fMonth, fDay, fYear, fadOrBc, fHour, fMinute, fSecond] = parsed;
       return [fYear, fMonth, fDay, fadOrBc, fHour, fMinute, fSecond];
     }
-    function partsOffset(dtf, date) {
-      const formatted = dtf.formatToParts(date);
+    function partsOffset(dtf, date2) {
+      const formatted = dtf.formatToParts(date2);
       const filled = [];
       for (let i = 0; i < formatted.length; i++) {
         const { type, value } = formatted[i];
@@ -1076,11 +1076,11 @@ var require_lib = __commonJS({
       }
       /** @override **/
       offset(ts) {
-        const date = new Date(ts);
-        if (isNaN(date))
+        const date2 = new Date(ts);
+        if (isNaN(date2))
           return NaN;
         const dtf = makeDTF(this.name);
-        let [year, month, day, adOrBc, hour, minute, second] = dtf.formatToParts ? partsOffset(dtf, date) : hackyOffset(dtf, date);
+        let [year, month, day, adOrBc, hour, minute, second] = dtf.formatToParts ? partsOffset(dtf, date2) : hackyOffset(dtf, date2);
         if (adOrBc === "BC") {
           year = -Math.abs(year) + 1;
         }
@@ -1094,7 +1094,7 @@ var require_lib = __commonJS({
           second,
           millisecond: 0
         });
-        let asTS = +date;
+        let asTS = +date2;
         const over = asTS % 1e3;
         asTS -= over >= 0 ? over : 1e3 + over;
         return (asUTC - asTS) / (60 * 1e3);
@@ -1843,7 +1843,7 @@ var require_lib = __commonJS({
         return year > Settings2.twoDigitCutoffYear ? 1900 + year : 2e3 + year;
     }
     function parseZoneInfo(ts, offsetFormat, locale, timeZone = null) {
-      const date = new Date(ts), intlOpts = {
+      const date2 = new Date(ts), intlOpts = {
         hourCycle: "h23",
         year: "numeric",
         month: "2-digit",
@@ -1855,7 +1855,7 @@ var require_lib = __commonJS({
         intlOpts.timeZone = timeZone;
       }
       const modified = { timeZoneName: offsetFormat, ...intlOpts };
-      const parsed = new Intl.DateTimeFormat(locale, modified).formatToParts(date).find((m) => m.type.toLowerCase() === "timezonename");
+      const parsed = new Intl.DateTimeFormat(locale, modified).formatToParts(date2).find((m) => m.type.toLowerCase() === "timezonename");
       return parsed ? parsed.value : null;
     }
     function signedOffset(offHourStr, offMinuteStr) {
@@ -2062,7 +2062,7 @@ var require_lib = __commonJS({
         return new _Formatter(locale, opts);
       }
       static parseFormat(fmt) {
-        let current = null, currentFull = "", bracketed = false;
+        let current2 = null, currentFull = "", bracketed = false;
         const splits = [];
         for (let i = 0; i < fmt.length; i++) {
           const c = fmt.charAt(i);
@@ -2070,19 +2070,19 @@ var require_lib = __commonJS({
             if (currentFull.length > 0) {
               splits.push({ literal: bracketed, val: currentFull });
             }
-            current = null;
+            current2 = null;
             currentFull = "";
             bracketed = !bracketed;
           } else if (bracketed) {
             currentFull += c;
-          } else if (c === current) {
+          } else if (c === current2) {
             currentFull += c;
           } else {
             if (currentFull.length > 0) {
               splits.push({ literal: false, val: currentFull });
             }
             currentFull = c;
-            current = c;
+            current2 = c;
           }
         }
         if (currentFull.length > 0) {
@@ -2662,12 +2662,12 @@ var require_lib = __commonJS({
       fromMap[fromUnit] -= added * conv;
     }
     function normalizeValues(matrix, vals) {
-      reverseUnits.reduce((previous, current) => {
-        if (!isUndefined(vals[current])) {
+      reverseUnits.reduce((previous, current2) => {
+        if (!isUndefined(vals[current2])) {
           if (previous) {
-            convert(matrix, vals, previous, vals, current);
+            convert(matrix, vals, previous, vals, current2);
           }
-          return current;
+          return current2;
         } else {
           return previous;
         }
@@ -3727,13 +3727,13 @@ var require_lib = __commonJS({
        */
       static merge(intervals) {
         const [found, final] = intervals.sort((a, b) => a.s - b.s).reduce(
-          ([sofar, current], item) => {
-            if (!current) {
+          ([sofar, current2], item) => {
+            if (!current2) {
               return [sofar, item];
-            } else if (current.overlaps(item) || current.abutsStart(item)) {
-              return [sofar, current.union(item)];
+            } else if (current2.overlaps(item) || current2.abutsStart(item)) {
+              return [sofar, current2.union(item)];
             } else {
-              return [sofar.concat([current]), item];
+              return [sofar.concat([current2]), item];
             }
           },
           [[], null]
@@ -4612,7 +4612,7 @@ var require_lib = __commonJS({
       return dt.weekData;
     }
     function clone(inst, alts) {
-      const current = {
+      const current2 = {
         ts: inst.ts,
         zone: inst.zone,
         c: inst.c,
@@ -4620,7 +4620,7 @@ var require_lib = __commonJS({
         loc: inst.loc,
         invalid: inst.invalid
       };
-      return new DateTime({ ...current, ...alts, old: current });
+      return new DateTime({ ...current2, ...alts, old: current2 });
     }
     function fixOffset(localTS, o, tz) {
       let utcGuess = localTS - o * 60 * 1e3;
@@ -4973,8 +4973,8 @@ var require_lib = __commonJS({
        * @param {string|Zone} [options.zone='local'] - the zone to place the DateTime into
        * @return {DateTime}
        */
-      static fromJSDate(date, options = {}) {
-        const ts = isDate(date) ? date.valueOf() : NaN;
+      static fromJSDate(date2, options = {}) {
+        const ts = isDate(date2) ? date2.valueOf() : NaN;
         if (Number.isNaN(ts)) {
           return _DateTime.invalid("invalid input");
         }
@@ -7932,7 +7932,7 @@ var require_lib = __commonJS({
       numberField: (q) => q.number.map((val) => Fields.literal(val)).desc("number"),
       stringField: (q) => q.string.map((val) => Fields.literal(val)).desc("string"),
       boolField: (q) => q.bool.map((val) => Fields.literal(val)).desc("boolean"),
-      dateField: (q) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("date("), parsimmon_umd_min.exports.optWhitespace, q.datePlus, parsimmon_umd_min.exports.optWhitespace, parsimmon_umd_min.exports.string(")"), (prefix, _1, date, _2, postfix) => Fields.literal(date)).desc("date"),
+      dateField: (q) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("date("), parsimmon_umd_min.exports.optWhitespace, q.datePlus, parsimmon_umd_min.exports.optWhitespace, parsimmon_umd_min.exports.string(")"), (prefix, _1, date2, _2, postfix) => Fields.literal(date2)).desc("date"),
       durationField: (q) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("dur("), parsimmon_umd_min.exports.optWhitespace, q.duration, parsimmon_umd_min.exports.optWhitespace, parsimmon_umd_min.exports.string(")"), (prefix, _1, dur, _2, postfix) => Fields.literal(dur)).desc("duration"),
       nullField: (q) => q.rawNull.map((_) => Fields.NULL),
       linkField: (q) => q.link.map((f) => Fields.literal(f)),
@@ -8017,10 +8017,10 @@ var require_lib = __commonJS({
         return { name, field };
       }
       QueryFields2.named = named;
-      function sortBy(field, dir) {
+      function sortBy2(field, dir) {
         return { field, direction: dir };
       }
-      QueryFields2.sortBy = sortBy;
+      QueryFields2.sortBy = sortBy2;
     })(QueryFields || (QueryFields = {}));
     function captureRaw(base) {
       return parsimmon_umd_min.exports.custom((success, failure) => {
@@ -8165,10 +8165,10 @@ var require_build = __commonJS({
       (0, exports.assert)(input !== void 0, message);
     }
     exports.isNotUndefined = isNotUndefined;
-    function isNotVoid(input, message = expectedToBe("neither null nor undefined")) {
+    function isNotVoid2(input, message = expectedToBe("neither null nor undefined")) {
       (0, exports.assert)(input !== null && input !== void 0, message);
     }
-    exports.isNotVoid = isNotVoid;
+    exports.isNotVoid = isNotVoid2;
     function isExactly(input, value, message = expectedToBe(`exactly ${value}`)) {
       (0, exports.assert)(input === value, message);
     }
@@ -8796,7 +8796,7 @@ var require_lodash_min = __commonJS({
           }
         }
         function nr2() {
-          this.__data__ = is ? is(null) : {}, this.size = 0;
+          this.__data__ = is2 ? is2(null) : {}, this.size = 0;
         }
         function tr2(n2) {
           var t2 = this.has(n2) && delete this.__data__[n2];
@@ -8804,7 +8804,7 @@ var require_lodash_min = __commonJS({
         }
         function rr2(n2) {
           var t2 = this.__data__;
-          if (is) {
+          if (is2) {
             var r2 = t2[n2];
             return r2 === on ? X : r2;
           }
@@ -8812,11 +8812,11 @@ var require_lodash_min = __commonJS({
         }
         function er2(n2) {
           var t2 = this.__data__;
-          return is ? t2[n2] !== X : bl.call(t2, n2);
+          return is2 ? t2[n2] !== X : bl.call(t2, n2);
         }
         function ur2(n2, t2) {
           var r2 = this.__data__;
-          return this.size += this.has(n2) ? 0 : 1, r2[n2] = is && t2 === X ? on : t2, this;
+          return this.size += this.has(n2) ? 0 : 1, r2[n2] = is2 && t2 === X ? on : t2, this;
         }
         function ir2(n2) {
           var t2 = -1, r2 = null == n2 ? 0 : n2.length;
@@ -11261,7 +11261,7 @@ var require_lodash_min = __commonJS({
             return n2({}, "", {}), n2;
           } catch (n3) {
           }
-        }(), $l = x2.clearTimeout !== re.clearTimeout && x2.clearTimeout, Dl = ol && ol.now !== re.Date.now && ol.now, Ml = x2.setTimeout !== re.setTimeout && x2.setTimeout, Fl = al.ceil, Nl = al.floor, Pl = ll.getOwnPropertySymbols, ql = Ol ? Ol.isBuffer : X, Zl = x2.isFinite, Kl = _l.join, Vl = F(ll.keys, ll), Gl = al.max, Hl = al.min, Jl = ol.now, Yl = x2.parseInt, Ql = al.random, Xl = _l.reverse, ns = Ai(x2, "DataView"), ts = Ai(x2, "Map"), rs = Ai(x2, "Promise"), es = Ai(x2, "Set"), us = Ai(x2, "WeakMap"), is = Ai(ll, "create"), os = us && new us(), fs = {}, cs = to(ns), as = to(ts), ls = to(rs), ss = to(es), hs = to(us), ps = Il ? Il.prototype : X, _s = ps ? ps.valueOf : X, vs = ps ? ps.toString : X, gs = function() {
+        }(), $l = x2.clearTimeout !== re.clearTimeout && x2.clearTimeout, Dl = ol && ol.now !== re.Date.now && ol.now, Ml = x2.setTimeout !== re.setTimeout && x2.setTimeout, Fl = al.ceil, Nl = al.floor, Pl = ll.getOwnPropertySymbols, ql = Ol ? Ol.isBuffer : X, Zl = x2.isFinite, Kl = _l.join, Vl = F(ll.keys, ll), Gl = al.max, Hl = al.min, Jl = ol.now, Yl = x2.parseInt, Ql = al.random, Xl = _l.reverse, ns = Ai(x2, "DataView"), ts = Ai(x2, "Map"), rs = Ai(x2, "Promise"), es = Ai(x2, "Set"), us = Ai(x2, "WeakMap"), is2 = Ai(ll, "create"), os = us && new us(), fs = {}, cs = to(ns), as = to(ts), ls = to(rs), ss = to(es), hs = to(us), ps = Il ? Il.prototype : X, _s = ps ? ps.valueOf : X, vs = ps ? ps.toString : X, gs = function() {
           function n2() {
           }
           return function(t2) {
@@ -12240,7 +12240,7 @@ var require_baseConvert = __commonJS({
         "toInteger": util.toInteger,
         "toPath": util.toPath
       };
-      var ary = helpers.ary, assign2 = helpers.assign, clone = helpers.clone, curry = helpers.curry, each = helpers.forEach, isArray = helpers.isArray, isError = helpers.isError, isFunction = helpers.isFunction, isWeakMap = helpers.isWeakMap, keys = helpers.keys, rearg = helpers.rearg, toInteger = helpers.toInteger, toPath = helpers.toPath;
+      var ary = helpers.ary, assign2 = helpers.assign, clone = helpers.clone, curry = helpers.curry, each2 = helpers.forEach, isArray = helpers.isArray, isError = helpers.isError, isFunction = helpers.isFunction, isWeakMap = helpers.isWeakMap, keys = helpers.keys, rearg = helpers.rearg, toInteger = helpers.toInteger, toPath = helpers.toPath;
       var aryMethodKeys = keys(mapping.aryMethod);
       var wrappers = {
         "castArray": function(castArray) {
@@ -12266,13 +12266,13 @@ var require_baseConvert = __commonJS({
               return mixin(func2, Object(source));
             }
             var pairs2 = [];
-            each(keys(source), function(key) {
+            each2(keys(source), function(key) {
               if (isFunction(source[key])) {
                 pairs2.push([key, func2.prototype[key]]);
               }
             });
             mixin(func2, Object(source));
-            each(pairs2, function(pair) {
+            each2(pairs2, function(pair) {
               var value = pair[1];
               if (isFunction(value)) {
                 func2.prototype[pair[0]] = value;
@@ -12388,8 +12388,8 @@ var require_baseConvert = __commonJS({
             wrapped = wrapImmutable(func2, cloneByPath);
           }
         }
-        each(aryMethodKeys, function(aryKey) {
-          each(mapping.aryMethod[aryKey], function(otherName) {
+        each2(aryMethodKeys, function(aryKey) {
+          each2(mapping.aryMethod[aryKey], function(otherName) {
             if (realName == otherName) {
               var data = mapping.methodSpread[realName], afterRearg = data && data.afterRearg;
               result = afterRearg ? castFixed(realName, castRearg(realName, wrapped, aryKey), aryKey) : castRearg(realName, castFixed(realName, wrapped, aryKey), aryKey);
@@ -12415,15 +12415,15 @@ var require_baseConvert = __commonJS({
       }
       var _ = func;
       var pairs = [];
-      each(aryMethodKeys, function(aryKey) {
-        each(mapping.aryMethod[aryKey], function(key) {
+      each2(aryMethodKeys, function(aryKey) {
+        each2(mapping.aryMethod[aryKey], function(key) {
           var func2 = _[mapping.remap[key] || key];
           if (func2) {
             pairs.push([key, wrap(key, func2, _)]);
           }
         });
       });
-      each(keys(_), function(key) {
+      each2(keys(_), function(key) {
         var func2 = _[key];
         if (typeof func2 == "function") {
           var length = pairs.length;
@@ -12436,13 +12436,13 @@ var require_baseConvert = __commonJS({
           pairs.push([key, func2]);
         }
       });
-      each(pairs, function(pair) {
+      each2(pairs, function(pair) {
         _[pair[0]] = pair[1];
       });
       _.convert = convertLib;
       _.placeholder = _;
-      each(keys(_), function(key) {
-        each(mapping.realToAlias[key] || [], function(alias) {
+      each2(keys(_), function(key) {
+        each2(mapping.realToAlias[key] || [], function(alias) {
           _[alias] = _[key];
         });
       });
@@ -12991,9 +12991,9 @@ var require_lodash = __commonJS({
       function baseSum(array, iteratee) {
         var result, index = -1, length = array.length;
         while (++index < length) {
-          var current = iteratee(array[index]);
-          if (current !== undefined2) {
-            result = result === undefined2 ? current : result + current;
+          var current2 = iteratee(array[index]);
+          if (current2 !== undefined2) {
+            result = result === undefined2 ? current2 : result + current2;
           }
         }
         return result;
@@ -13091,16 +13091,16 @@ var require_lodash = __commonJS({
         }
         return result;
       }
-      function setToArray(set) {
-        var index = -1, result = Array(set.size);
-        set.forEach(function(value) {
+      function setToArray(set2) {
+        var index = -1, result = Array(set2.size);
+        set2.forEach(function(value) {
           result[++index] = value;
         });
         return result;
       }
-      function setToPairs(set) {
-        var index = -1, result = Array(set.size);
-        set.forEach(function(value) {
+      function setToPairs(set2) {
+        var index = -1, result = Array(set2.size);
+        set2.forEach(function(value) {
           result[++index] = [value, value];
         });
         return result;
@@ -13162,7 +13162,7 @@ var require_lodash = __commonJS({
           return uid ? "Symbol(src)_1." + uid : "";
         }();
         var nativeObjectToString = objectProto.toString;
-        var objectCtorString = funcToString.call(Object2);
+        var objectCtorString2 = funcToString.call(Object2);
         var oldDash = root._;
         var reIsNative = RegExp2(
           "^" + funcToString.call(hasOwnProperty).replace(reRegExpChar, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"
@@ -13632,11 +13632,11 @@ var require_lodash = __commonJS({
             return stacked;
           }
           stack.set(value, result2);
-          if (isSet(value)) {
+          if (isSet2(value)) {
             value.forEach(function(subValue) {
               result2.add(baseClone(subValue, bitmask, customizer, subValue, value, stack));
             });
-          } else if (isMap(value)) {
+          } else if (isMap2(value)) {
             value.forEach(function(subValue, key2) {
               result2.set(key2, baseClone(subValue, bitmask, customizer, key2, value, stack));
             });
@@ -13727,9 +13727,9 @@ var require_lodash = __commonJS({
         function baseExtremum(array, iteratee2, comparator) {
           var index = -1, length = array.length;
           while (++index < length) {
-            var value = array[index], current = iteratee2(value);
-            if (current != null && (computed === undefined2 ? current === current && !isSymbol(current) : comparator(current, computed))) {
-              var computed = current, result2 = value;
+            var value = array[index], current2 = iteratee2(value);
+            if (current2 != null && (computed === undefined2 ? current2 === current2 && !isSymbol(current2) : comparator(current2, computed))) {
+              var computed = current2, result2 = value;
             }
           }
           return result2;
@@ -14068,7 +14068,7 @@ var require_lodash = __commonJS({
               } else {
                 newValue = [];
               }
-            } else if (isPlainObject(srcValue) || isArguments(srcValue)) {
+            } else if (isPlainObject2(srcValue) || isArguments(srcValue)) {
               newValue = objValue;
               if (isArguments(objValue)) {
                 newValue = toPlainObject(objValue);
@@ -14357,9 +14357,9 @@ var require_lodash = __commonJS({
             isCommon = false;
             includes2 = arrayIncludesWith;
           } else if (length >= LARGE_ARRAY_SIZE) {
-            var set2 = iteratee2 ? null : createSet(array);
-            if (set2) {
-              return setToArray(set2);
+            var set3 = iteratee2 ? null : createSet(array);
+            if (set3) {
+              return setToArray(set3);
             }
             isCommon = false;
             includes2 = cacheHas;
@@ -15019,7 +15019,7 @@ var require_lodash = __commonJS({
           return objValue;
         }
         function customOmitClone(value) {
-          return isPlainObject(value) ? undefined2 : value;
+          return isPlainObject2(value) ? undefined2 : value;
         }
         function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
           var isPartial = bitmask & COMPARE_PARTIAL_FLAG, arrLength = array.length, othLength = other.length;
@@ -15630,7 +15630,7 @@ var require_lodash = __commonJS({
         var difference2 = baseRest(function(array, values2) {
           return isArrayLikeObject(array) ? baseDifference(array, baseFlatten(values2, 1, isArrayLikeObject, true)) : [];
         });
-        var differenceBy = baseRest(function(array, values2) {
+        var differenceBy2 = baseRest(function(array, values2) {
           var iteratee2 = last3(values2);
           if (isArrayLikeObject(iteratee2)) {
             iteratee2 = undefined2;
@@ -15919,7 +15919,7 @@ var require_lodash = __commonJS({
         function uniq(array) {
           return array && array.length ? baseUniq(array) : [];
         }
-        function uniqBy(array, iteratee2) {
+        function uniqBy3(array, iteratee2) {
           return array && array.length ? baseUniq(array, getIteratee(iteratee2, 2)) : [];
         }
         function uniqWith(array, comparator) {
@@ -16149,7 +16149,7 @@ var require_lodash = __commonJS({
           }
           return baseOrderBy(collection, iteratees, orders);
         }
-        var partition4 = createAggregator(function(result2, value, key) {
+        var partition3 = createAggregator(function(result2, value, key) {
           result2[key ? 0 : 1].push(value);
         }, function() {
           return [[], []];
@@ -16203,7 +16203,7 @@ var require_lodash = __commonJS({
           }
           return func(collection, getIteratee(predicate, 3));
         }
-        var sortBy = baseRest(function(collection, iteratees) {
+        var sortBy2 = baseRest(function(collection, iteratees) {
           if (collection == null) {
             return [];
           }
@@ -16520,9 +16520,9 @@ var require_lodash = __commonJS({
         var isBuffer = nativeIsBuffer || stubFalse;
         var isDate = nodeIsDate ? baseUnary(nodeIsDate) : baseIsDate;
         function isElement(value) {
-          return isObjectLike(value) && value.nodeType === 1 && !isPlainObject(value);
+          return isObjectLike(value) && value.nodeType === 1 && !isPlainObject2(value);
         }
-        function isEmpty(value) {
+        function isEmpty2(value) {
           if (value == null) {
             return true;
           }
@@ -16543,7 +16543,7 @@ var require_lodash = __commonJS({
           }
           return true;
         }
-        function isEqual(value, other) {
+        function isEqual2(value, other) {
           return baseIsEqual(value, other);
         }
         function isEqualWith(value, other, customizer) {
@@ -16556,9 +16556,9 @@ var require_lodash = __commonJS({
             return false;
           }
           var tag = baseGetTag(value);
-          return tag == errorTag || tag == domExcTag || typeof value.message == "string" && typeof value.name == "string" && !isPlainObject(value);
+          return tag == errorTag || tag == domExcTag || typeof value.message == "string" && typeof value.name == "string" && !isPlainObject2(value);
         }
-        function isFinite(value) {
+        function isFinite2(value) {
           return typeof value == "number" && nativeIsFinite(value);
         }
         function isFunction(value) {
@@ -16581,7 +16581,7 @@ var require_lodash = __commonJS({
         function isObjectLike(value) {
           return value != null && typeof value == "object";
         }
-        var isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
+        var isMap2 = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
         function isMatch(object, source) {
           return object === source || baseIsMatch(object, source, getMatchData(source));
         }
@@ -16607,7 +16607,7 @@ var require_lodash = __commonJS({
         function isNumber(value) {
           return typeof value == "number" || isObjectLike(value) && baseGetTag(value) == numberTag;
         }
-        function isPlainObject(value) {
+        function isPlainObject2(value) {
           if (!isObjectLike(value) || baseGetTag(value) != objectTag) {
             return false;
           }
@@ -16616,13 +16616,13 @@ var require_lodash = __commonJS({
             return true;
           }
           var Ctor = hasOwnProperty.call(proto, "constructor") && proto.constructor;
-          return typeof Ctor == "function" && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
+          return typeof Ctor == "function" && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString2;
         }
         var isRegExp = nodeIsRegExp ? baseUnary(nodeIsRegExp) : baseIsRegExp;
         function isSafeInteger(value) {
           return isInteger(value) && value >= -MAX_SAFE_INTEGER && value <= MAX_SAFE_INTEGER;
         }
-        var isSet = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;
+        var isSet2 = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;
         function isString(value) {
           return typeof value == "string" || !isArray(value) && isObjectLike(value) && baseGetTag(value) == stringTag;
         }
@@ -16781,7 +16781,7 @@ var require_lodash = __commonJS({
           var result2 = object == null ? undefined2 : baseGet(object, path);
           return result2 === undefined2 ? defaultValue : result2;
         }
-        function has(object, path) {
+        function has2(object, path) {
           return object != null && hasPath(object, path, baseHas);
         }
         function hasIn(object, path) {
@@ -16888,7 +16888,7 @@ var require_lodash = __commonJS({
           }
           return object;
         }
-        function set(object, path, value) {
+        function set2(object, path, value) {
           return object == null ? object : baseSet(object, path, value);
         }
         function setWith(object, path, value, customizer) {
@@ -17478,7 +17478,7 @@ var require_lodash = __commonJS({
         lodash.defer = defer;
         lodash.delay = delay;
         lodash.difference = difference2;
-        lodash.differenceBy = differenceBy;
+        lodash.differenceBy = differenceBy2;
         lodash.differenceWith = differenceWith;
         lodash.drop = drop;
         lodash.dropRight = dropRight;
@@ -17533,7 +17533,7 @@ var require_lodash = __commonJS({
         lodash.overSome = overSome;
         lodash.partial = partial;
         lodash.partialRight = partialRight;
-        lodash.partition = partition4;
+        lodash.partition = partition3;
         lodash.pick = pick;
         lodash.pickBy = pickBy;
         lodash.property = property;
@@ -17551,11 +17551,11 @@ var require_lodash = __commonJS({
         lodash.rest = rest;
         lodash.reverse = reverse;
         lodash.sampleSize = sampleSize;
-        lodash.set = set;
+        lodash.set = set2;
         lodash.setWith = setWith;
         lodash.shuffle = shuffle;
         lodash.slice = slice;
-        lodash.sortBy = sortBy;
+        lodash.sortBy = sortBy2;
         lodash.sortedUniq = sortedUniq;
         lodash.sortedUniqBy = sortedUniqBy;
         lodash.split = split;
@@ -17579,7 +17579,7 @@ var require_lodash = __commonJS({
         lodash.unionBy = unionBy;
         lodash.unionWith = unionWith;
         lodash.uniq = uniq;
-        lodash.uniqBy = uniqBy;
+        lodash.uniqBy = uniqBy3;
         lodash.uniqWith = uniqWith;
         lodash.unset = unset;
         lodash.unzip = unzip;
@@ -17638,7 +17638,7 @@ var require_lodash = __commonJS({
         lodash.get = get;
         lodash.gt = gt;
         lodash.gte = gte;
-        lodash.has = has;
+        lodash.has = has2;
         lodash.hasIn = hasIn;
         lodash.head = head;
         lodash.identity = identity2;
@@ -17655,15 +17655,15 @@ var require_lodash = __commonJS({
         lodash.isBuffer = isBuffer;
         lodash.isDate = isDate;
         lodash.isElement = isElement;
-        lodash.isEmpty = isEmpty;
-        lodash.isEqual = isEqual;
+        lodash.isEmpty = isEmpty2;
+        lodash.isEqual = isEqual2;
         lodash.isEqualWith = isEqualWith;
         lodash.isError = isError;
-        lodash.isFinite = isFinite;
+        lodash.isFinite = isFinite2;
         lodash.isFunction = isFunction;
         lodash.isInteger = isInteger;
         lodash.isLength = isLength;
-        lodash.isMap = isMap;
+        lodash.isMap = isMap2;
         lodash.isMatch = isMatch;
         lodash.isMatchWith = isMatchWith;
         lodash.isNaN = isNaN2;
@@ -17673,10 +17673,10 @@ var require_lodash = __commonJS({
         lodash.isNumber = isNumber;
         lodash.isObject = isObject;
         lodash.isObjectLike = isObjectLike;
-        lodash.isPlainObject = isPlainObject;
+        lodash.isPlainObject = isPlainObject2;
         lodash.isRegExp = isRegExp;
         lodash.isSafeInteger = isSafeInteger;
-        lodash.isSet = isSet;
+        lodash.isSet = isSet2;
         lodash.isString = isString;
         lodash.isSymbol = isSymbol;
         lodash.isTypedArray = isTypedArray;
@@ -18596,6 +18596,3935 @@ var require_fraction = __commonJS({
         root["Fraction"] = Fraction2;
       }
     })(exports);
+  }
+});
+
+// node_modules/moment/moment.js
+var require_moment = __commonJS({
+  "node_modules/moment/moment.js"(exports, module2) {
+    (function(global2, factory) {
+      typeof exports === "object" && typeof module2 !== "undefined" ? module2.exports = factory() : typeof define === "function" && define.amd ? define(factory) : global2.moment = factory();
+    })(exports, function() {
+      "use strict";
+      var hookCallback;
+      function hooks() {
+        return hookCallback.apply(null, arguments);
+      }
+      function setHookCallback(callback) {
+        hookCallback = callback;
+      }
+      function isArray(input) {
+        return input instanceof Array || Object.prototype.toString.call(input) === "[object Array]";
+      }
+      function isObject(input) {
+        return input != null && Object.prototype.toString.call(input) === "[object Object]";
+      }
+      function hasOwnProp(a, b) {
+        return Object.prototype.hasOwnProperty.call(a, b);
+      }
+      function isObjectEmpty(obj) {
+        if (Object.getOwnPropertyNames) {
+          return Object.getOwnPropertyNames(obj).length === 0;
+        } else {
+          var k;
+          for (k in obj) {
+            if (hasOwnProp(obj, k)) {
+              return false;
+            }
+          }
+          return true;
+        }
+      }
+      function isUndefined(input) {
+        return input === void 0;
+      }
+      function isNumber(input) {
+        return typeof input === "number" || Object.prototype.toString.call(input) === "[object Number]";
+      }
+      function isDate(input) {
+        return input instanceof Date || Object.prototype.toString.call(input) === "[object Date]";
+      }
+      function map(arr, fn) {
+        var res = [], i, arrLen = arr.length;
+        for (i = 0; i < arrLen; ++i) {
+          res.push(fn(arr[i], i));
+        }
+        return res;
+      }
+      function extend(a, b) {
+        for (var i in b) {
+          if (hasOwnProp(b, i)) {
+            a[i] = b[i];
+          }
+        }
+        if (hasOwnProp(b, "toString")) {
+          a.toString = b.toString;
+        }
+        if (hasOwnProp(b, "valueOf")) {
+          a.valueOf = b.valueOf;
+        }
+        return a;
+      }
+      function createUTC(input, format2, locale2, strict) {
+        return createLocalOrUTC(input, format2, locale2, strict, true).utc();
+      }
+      function defaultParsingFlags() {
+        return {
+          empty: false,
+          unusedTokens: [],
+          unusedInput: [],
+          overflow: -2,
+          charsLeftOver: 0,
+          nullInput: false,
+          invalidEra: null,
+          invalidMonth: null,
+          invalidFormat: false,
+          userInvalidated: false,
+          iso: false,
+          parsedDateParts: [],
+          era: null,
+          meridiem: null,
+          rfc2822: false,
+          weekdayMismatch: false
+        };
+      }
+      function getParsingFlags(m) {
+        if (m._pf == null) {
+          m._pf = defaultParsingFlags();
+        }
+        return m._pf;
+      }
+      var some;
+      if (Array.prototype.some) {
+        some = Array.prototype.some;
+      } else {
+        some = function(fun) {
+          var t = Object(this), len = t.length >>> 0, i;
+          for (i = 0; i < len; i++) {
+            if (i in t && fun.call(this, t[i], i, t)) {
+              return true;
+            }
+          }
+          return false;
+        };
+      }
+      function isValid(m) {
+        if (m._isValid == null) {
+          var flags = getParsingFlags(m), parsedParts = some.call(flags.parsedDateParts, function(i) {
+            return i != null;
+          }), isNowValid = !isNaN(m._d.getTime()) && flags.overflow < 0 && !flags.empty && !flags.invalidEra && !flags.invalidMonth && !flags.invalidWeekday && !flags.weekdayMismatch && !flags.nullInput && !flags.invalidFormat && !flags.userInvalidated && (!flags.meridiem || flags.meridiem && parsedParts);
+          if (m._strict) {
+            isNowValid = isNowValid && flags.charsLeftOver === 0 && flags.unusedTokens.length === 0 && flags.bigHour === void 0;
+          }
+          if (Object.isFrozen == null || !Object.isFrozen(m)) {
+            m._isValid = isNowValid;
+          } else {
+            return isNowValid;
+          }
+        }
+        return m._isValid;
+      }
+      function createInvalid(flags) {
+        var m = createUTC(NaN);
+        if (flags != null) {
+          extend(getParsingFlags(m), flags);
+        } else {
+          getParsingFlags(m).userInvalidated = true;
+        }
+        return m;
+      }
+      var momentProperties = hooks.momentProperties = [], updateInProgress = false;
+      function copyConfig(to2, from2) {
+        var i, prop, val, momentPropertiesLen = momentProperties.length;
+        if (!isUndefined(from2._isAMomentObject)) {
+          to2._isAMomentObject = from2._isAMomentObject;
+        }
+        if (!isUndefined(from2._i)) {
+          to2._i = from2._i;
+        }
+        if (!isUndefined(from2._f)) {
+          to2._f = from2._f;
+        }
+        if (!isUndefined(from2._l)) {
+          to2._l = from2._l;
+        }
+        if (!isUndefined(from2._strict)) {
+          to2._strict = from2._strict;
+        }
+        if (!isUndefined(from2._tzm)) {
+          to2._tzm = from2._tzm;
+        }
+        if (!isUndefined(from2._isUTC)) {
+          to2._isUTC = from2._isUTC;
+        }
+        if (!isUndefined(from2._offset)) {
+          to2._offset = from2._offset;
+        }
+        if (!isUndefined(from2._pf)) {
+          to2._pf = getParsingFlags(from2);
+        }
+        if (!isUndefined(from2._locale)) {
+          to2._locale = from2._locale;
+        }
+        if (momentPropertiesLen > 0) {
+          for (i = 0; i < momentPropertiesLen; i++) {
+            prop = momentProperties[i];
+            val = from2[prop];
+            if (!isUndefined(val)) {
+              to2[prop] = val;
+            }
+          }
+        }
+        return to2;
+      }
+      function Moment(config) {
+        copyConfig(this, config);
+        this._d = new Date(config._d != null ? config._d.getTime() : NaN);
+        if (!this.isValid()) {
+          this._d = /* @__PURE__ */ new Date(NaN);
+        }
+        if (updateInProgress === false) {
+          updateInProgress = true;
+          hooks.updateOffset(this);
+          updateInProgress = false;
+        }
+      }
+      function isMoment(obj) {
+        return obj instanceof Moment || obj != null && obj._isAMomentObject != null;
+      }
+      function warn(msg) {
+        if (hooks.suppressDeprecationWarnings === false && typeof console !== "undefined" && console.warn) {
+          console.warn("Deprecation warning: " + msg);
+        }
+      }
+      function deprecate(msg, fn) {
+        var firstTime = true;
+        return extend(function() {
+          if (hooks.deprecationHandler != null) {
+            hooks.deprecationHandler(null, msg);
+          }
+          if (firstTime) {
+            var args = [], arg, i, key, argLen = arguments.length;
+            for (i = 0; i < argLen; i++) {
+              arg = "";
+              if (typeof arguments[i] === "object") {
+                arg += "\n[" + i + "] ";
+                for (key in arguments[0]) {
+                  if (hasOwnProp(arguments[0], key)) {
+                    arg += key + ": " + arguments[0][key] + ", ";
+                  }
+                }
+                arg = arg.slice(0, -2);
+              } else {
+                arg = arguments[i];
+              }
+              args.push(arg);
+            }
+            warn(
+              msg + "\nArguments: " + Array.prototype.slice.call(args).join("") + "\n" + new Error().stack
+            );
+            firstTime = false;
+          }
+          return fn.apply(this, arguments);
+        }, fn);
+      }
+      var deprecations = {};
+      function deprecateSimple(name, msg) {
+        if (hooks.deprecationHandler != null) {
+          hooks.deprecationHandler(name, msg);
+        }
+        if (!deprecations[name]) {
+          warn(msg);
+          deprecations[name] = true;
+        }
+      }
+      hooks.suppressDeprecationWarnings = false;
+      hooks.deprecationHandler = null;
+      function isFunction(input) {
+        return typeof Function !== "undefined" && input instanceof Function || Object.prototype.toString.call(input) === "[object Function]";
+      }
+      function set2(config) {
+        var prop, i;
+        for (i in config) {
+          if (hasOwnProp(config, i)) {
+            prop = config[i];
+            if (isFunction(prop)) {
+              this[i] = prop;
+            } else {
+              this["_" + i] = prop;
+            }
+          }
+        }
+        this._config = config;
+        this._dayOfMonthOrdinalParseLenient = new RegExp(
+          (this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) + "|" + /\d{1,2}/.source
+        );
+      }
+      function mergeConfigs(parentConfig, childConfig) {
+        var res = extend({}, parentConfig), prop;
+        for (prop in childConfig) {
+          if (hasOwnProp(childConfig, prop)) {
+            if (isObject(parentConfig[prop]) && isObject(childConfig[prop])) {
+              res[prop] = {};
+              extend(res[prop], parentConfig[prop]);
+              extend(res[prop], childConfig[prop]);
+            } else if (childConfig[prop] != null) {
+              res[prop] = childConfig[prop];
+            } else {
+              delete res[prop];
+            }
+          }
+        }
+        for (prop in parentConfig) {
+          if (hasOwnProp(parentConfig, prop) && !hasOwnProp(childConfig, prop) && isObject(parentConfig[prop])) {
+            res[prop] = extend({}, res[prop]);
+          }
+        }
+        return res;
+      }
+      function Locale(config) {
+        if (config != null) {
+          this.set(config);
+        }
+      }
+      var keys;
+      if (Object.keys) {
+        keys = Object.keys;
+      } else {
+        keys = function(obj) {
+          var i, res = [];
+          for (i in obj) {
+            if (hasOwnProp(obj, i)) {
+              res.push(i);
+            }
+          }
+          return res;
+        };
+      }
+      var defaultCalendar = {
+        sameDay: "[Today at] LT",
+        nextDay: "[Tomorrow at] LT",
+        nextWeek: "dddd [at] LT",
+        lastDay: "[Yesterday at] LT",
+        lastWeek: "[Last] dddd [at] LT",
+        sameElse: "L"
+      };
+      function calendar(key, mom, now2) {
+        var output = this._calendar[key] || this._calendar["sameElse"];
+        return isFunction(output) ? output.call(mom, now2) : output;
+      }
+      function zeroFill(number, targetLength, forceSign) {
+        var absNumber = "" + Math.abs(number), zerosToFill = targetLength - absNumber.length, sign2 = number >= 0;
+        return (sign2 ? forceSign ? "+" : "" : "-") + Math.pow(10, Math.max(0, zerosToFill)).toString().substr(1) + absNumber;
+      }
+      var formattingTokens = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g, localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g, formatFunctions = {}, formatTokenFunctions = {};
+      function addFormatToken(token2, padded, ordinal2, callback) {
+        var func = callback;
+        if (typeof callback === "string") {
+          func = function() {
+            return this[callback]();
+          };
+        }
+        if (token2) {
+          formatTokenFunctions[token2] = func;
+        }
+        if (padded) {
+          formatTokenFunctions[padded[0]] = function() {
+            return zeroFill(func.apply(this, arguments), padded[1], padded[2]);
+          };
+        }
+        if (ordinal2) {
+          formatTokenFunctions[ordinal2] = function() {
+            return this.localeData().ordinal(
+              func.apply(this, arguments),
+              token2
+            );
+          };
+        }
+      }
+      function removeFormattingTokens(input) {
+        if (input.match(/\[[\s\S]/)) {
+          return input.replace(/^\[|\]$/g, "");
+        }
+        return input.replace(/\\/g, "");
+      }
+      function makeFormatFunction(format2) {
+        var array = format2.match(formattingTokens), i, length;
+        for (i = 0, length = array.length; i < length; i++) {
+          if (formatTokenFunctions[array[i]]) {
+            array[i] = formatTokenFunctions[array[i]];
+          } else {
+            array[i] = removeFormattingTokens(array[i]);
+          }
+        }
+        return function(mom) {
+          var output = "", i2;
+          for (i2 = 0; i2 < length; i2++) {
+            output += isFunction(array[i2]) ? array[i2].call(mom, format2) : array[i2];
+          }
+          return output;
+        };
+      }
+      function formatMoment(m, format2) {
+        if (!m.isValid()) {
+          return m.localeData().invalidDate();
+        }
+        format2 = expandFormat(format2, m.localeData());
+        formatFunctions[format2] = formatFunctions[format2] || makeFormatFunction(format2);
+        return formatFunctions[format2](m);
+      }
+      function expandFormat(format2, locale2) {
+        var i = 5;
+        function replaceLongDateFormatTokens(input) {
+          return locale2.longDateFormat(input) || input;
+        }
+        localFormattingTokens.lastIndex = 0;
+        while (i >= 0 && localFormattingTokens.test(format2)) {
+          format2 = format2.replace(
+            localFormattingTokens,
+            replaceLongDateFormatTokens
+          );
+          localFormattingTokens.lastIndex = 0;
+          i -= 1;
+        }
+        return format2;
+      }
+      var defaultLongDateFormat = {
+        LTS: "h:mm:ss A",
+        LT: "h:mm A",
+        L: "MM/DD/YYYY",
+        LL: "MMMM D, YYYY",
+        LLL: "MMMM D, YYYY h:mm A",
+        LLLL: "dddd, MMMM D, YYYY h:mm A"
+      };
+      function longDateFormat(key) {
+        var format2 = this._longDateFormat[key], formatUpper = this._longDateFormat[key.toUpperCase()];
+        if (format2 || !formatUpper) {
+          return format2;
+        }
+        this._longDateFormat[key] = formatUpper.match(formattingTokens).map(function(tok) {
+          if (tok === "MMMM" || tok === "MM" || tok === "DD" || tok === "dddd") {
+            return tok.slice(1);
+          }
+          return tok;
+        }).join("");
+        return this._longDateFormat[key];
+      }
+      var defaultInvalidDate = "Invalid date";
+      function invalidDate() {
+        return this._invalidDate;
+      }
+      var defaultOrdinal = "%d", defaultDayOfMonthOrdinalParse = /\d{1,2}/;
+      function ordinal(number) {
+        return this._ordinal.replace("%d", number);
+      }
+      var defaultRelativeTime = {
+        future: "in %s",
+        past: "%s ago",
+        s: "a few seconds",
+        ss: "%d seconds",
+        m: "a minute",
+        mm: "%d minutes",
+        h: "an hour",
+        hh: "%d hours",
+        d: "a day",
+        dd: "%d days",
+        w: "a week",
+        ww: "%d weeks",
+        M: "a month",
+        MM: "%d months",
+        y: "a year",
+        yy: "%d years"
+      };
+      function relativeTime(number, withoutSuffix, string, isFuture) {
+        var output = this._relativeTime[string];
+        return isFunction(output) ? output(number, withoutSuffix, string, isFuture) : output.replace(/%d/i, number);
+      }
+      function pastFuture(diff2, output) {
+        var format2 = this._relativeTime[diff2 > 0 ? "future" : "past"];
+        return isFunction(format2) ? format2(output) : format2.replace(/%s/i, output);
+      }
+      var aliases = {};
+      function addUnitAlias(unit, shorthand) {
+        var lowerCase = unit.toLowerCase();
+        aliases[lowerCase] = aliases[lowerCase + "s"] = aliases[shorthand] = unit;
+      }
+      function normalizeUnits(units) {
+        return typeof units === "string" ? aliases[units] || aliases[units.toLowerCase()] : void 0;
+      }
+      function normalizeObjectUnits(inputObject) {
+        var normalizedInput = {}, normalizedProp, prop;
+        for (prop in inputObject) {
+          if (hasOwnProp(inputObject, prop)) {
+            normalizedProp = normalizeUnits(prop);
+            if (normalizedProp) {
+              normalizedInput[normalizedProp] = inputObject[prop];
+            }
+          }
+        }
+        return normalizedInput;
+      }
+      var priorities = {};
+      function addUnitPriority(unit, priority) {
+        priorities[unit] = priority;
+      }
+      function getPrioritizedUnits(unitsObj) {
+        var units = [], u;
+        for (u in unitsObj) {
+          if (hasOwnProp(unitsObj, u)) {
+            units.push({ unit: u, priority: priorities[u] });
+          }
+        }
+        units.sort(function(a, b) {
+          return a.priority - b.priority;
+        });
+        return units;
+      }
+      function isLeapYear(year) {
+        return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
+      }
+      function absFloor(number) {
+        if (number < 0) {
+          return Math.ceil(number) || 0;
+        } else {
+          return Math.floor(number);
+        }
+      }
+      function toInt(argumentForCoercion) {
+        var coercedNumber = +argumentForCoercion, value = 0;
+        if (coercedNumber !== 0 && isFinite(coercedNumber)) {
+          value = absFloor(coercedNumber);
+        }
+        return value;
+      }
+      function makeGetSet(unit, keepTime) {
+        return function(value) {
+          if (value != null) {
+            set$1(this, unit, value);
+            hooks.updateOffset(this, keepTime);
+            return this;
+          } else {
+            return get(this, unit);
+          }
+        };
+      }
+      function get(mom, unit) {
+        return mom.isValid() ? mom._d["get" + (mom._isUTC ? "UTC" : "") + unit]() : NaN;
+      }
+      function set$1(mom, unit, value) {
+        if (mom.isValid() && !isNaN(value)) {
+          if (unit === "FullYear" && isLeapYear(mom.year()) && mom.month() === 1 && mom.date() === 29) {
+            value = toInt(value);
+            mom._d["set" + (mom._isUTC ? "UTC" : "") + unit](
+              value,
+              mom.month(),
+              daysInMonth(value, mom.month())
+            );
+          } else {
+            mom._d["set" + (mom._isUTC ? "UTC" : "") + unit](value);
+          }
+        }
+      }
+      function stringGet(units) {
+        units = normalizeUnits(units);
+        if (isFunction(this[units])) {
+          return this[units]();
+        }
+        return this;
+      }
+      function stringSet(units, value) {
+        if (typeof units === "object") {
+          units = normalizeObjectUnits(units);
+          var prioritized = getPrioritizedUnits(units), i, prioritizedLen = prioritized.length;
+          for (i = 0; i < prioritizedLen; i++) {
+            this[prioritized[i].unit](units[prioritized[i].unit]);
+          }
+        } else {
+          units = normalizeUnits(units);
+          if (isFunction(this[units])) {
+            return this[units](value);
+          }
+        }
+        return this;
+      }
+      var match1 = /\d/, match2 = /\d\d/, match3 = /\d{3}/, match4 = /\d{4}/, match6 = /[+-]?\d{6}/, match1to2 = /\d\d?/, match3to4 = /\d\d\d\d?/, match5to6 = /\d\d\d\d\d\d?/, match1to3 = /\d{1,3}/, match1to4 = /\d{1,4}/, match1to6 = /[+-]?\d{1,6}/, matchUnsigned = /\d+/, matchSigned = /[+-]?\d+/, matchOffset = /Z|[+-]\d\d:?\d\d/gi, matchShortOffset = /Z|[+-]\d\d(?::?\d\d)?/gi, matchTimestamp = /[+-]?\d+(\.\d{1,3})?/, matchWord = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i, regexes;
+      regexes = {};
+      function addRegexToken(token2, regex, strictRegex) {
+        regexes[token2] = isFunction(regex) ? regex : function(isStrict, localeData2) {
+          return isStrict && strictRegex ? strictRegex : regex;
+        };
+      }
+      function getParseRegexForToken(token2, config) {
+        if (!hasOwnProp(regexes, token2)) {
+          return new RegExp(unescapeFormat(token2));
+        }
+        return regexes[token2](config._strict, config._locale);
+      }
+      function unescapeFormat(s) {
+        return regexEscape(
+          s.replace("\\", "").replace(
+            /\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g,
+            function(matched, p1, p2, p3, p4) {
+              return p1 || p2 || p3 || p4;
+            }
+          )
+        );
+      }
+      function regexEscape(s) {
+        return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+      }
+      var tokens = {};
+      function addParseToken(token2, callback) {
+        var i, func = callback, tokenLen;
+        if (typeof token2 === "string") {
+          token2 = [token2];
+        }
+        if (isNumber(callback)) {
+          func = function(input, array) {
+            array[callback] = toInt(input);
+          };
+        }
+        tokenLen = token2.length;
+        for (i = 0; i < tokenLen; i++) {
+          tokens[token2[i]] = func;
+        }
+      }
+      function addWeekParseToken(token2, callback) {
+        addParseToken(token2, function(input, array, config, token3) {
+          config._w = config._w || {};
+          callback(input, config._w, config, token3);
+        });
+      }
+      function addTimeToArrayFromToken(token2, input, config) {
+        if (input != null && hasOwnProp(tokens, token2)) {
+          tokens[token2](input, config._a, config, token2);
+        }
+      }
+      var YEAR = 0, MONTH = 1, DATE = 2, HOUR = 3, MINUTE = 4, SECOND = 5, MILLISECOND = 6, WEEK = 7, WEEKDAY = 8;
+      function mod(n, x) {
+        return (n % x + x) % x;
+      }
+      var indexOf;
+      if (Array.prototype.indexOf) {
+        indexOf = Array.prototype.indexOf;
+      } else {
+        indexOf = function(o) {
+          var i;
+          for (i = 0; i < this.length; ++i) {
+            if (this[i] === o) {
+              return i;
+            }
+          }
+          return -1;
+        };
+      }
+      function daysInMonth(year, month) {
+        if (isNaN(year) || isNaN(month)) {
+          return NaN;
+        }
+        var modMonth = mod(month, 12);
+        year += (month - modMonth) / 12;
+        return modMonth === 1 ? isLeapYear(year) ? 29 : 28 : 31 - modMonth % 7 % 2;
+      }
+      addFormatToken("M", ["MM", 2], "Mo", function() {
+        return this.month() + 1;
+      });
+      addFormatToken("MMM", 0, 0, function(format2) {
+        return this.localeData().monthsShort(this, format2);
+      });
+      addFormatToken("MMMM", 0, 0, function(format2) {
+        return this.localeData().months(this, format2);
+      });
+      addUnitAlias("month", "M");
+      addUnitPriority("month", 8);
+      addRegexToken("M", match1to2);
+      addRegexToken("MM", match1to2, match2);
+      addRegexToken("MMM", function(isStrict, locale2) {
+        return locale2.monthsShortRegex(isStrict);
+      });
+      addRegexToken("MMMM", function(isStrict, locale2) {
+        return locale2.monthsRegex(isStrict);
+      });
+      addParseToken(["M", "MM"], function(input, array) {
+        array[MONTH] = toInt(input) - 1;
+      });
+      addParseToken(["MMM", "MMMM"], function(input, array, config, token2) {
+        var month = config._locale.monthsParse(input, token2, config._strict);
+        if (month != null) {
+          array[MONTH] = month;
+        } else {
+          getParsingFlags(config).invalidMonth = input;
+        }
+      });
+      var defaultLocaleMonths = "January_February_March_April_May_June_July_August_September_October_November_December".split(
+        "_"
+      ), defaultLocaleMonthsShort = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"), MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/, defaultMonthsShortRegex = matchWord, defaultMonthsRegex = matchWord;
+      function localeMonths(m, format2) {
+        if (!m) {
+          return isArray(this._months) ? this._months : this._months["standalone"];
+        }
+        return isArray(this._months) ? this._months[m.month()] : this._months[(this._months.isFormat || MONTHS_IN_FORMAT).test(format2) ? "format" : "standalone"][m.month()];
+      }
+      function localeMonthsShort(m, format2) {
+        if (!m) {
+          return isArray(this._monthsShort) ? this._monthsShort : this._monthsShort["standalone"];
+        }
+        return isArray(this._monthsShort) ? this._monthsShort[m.month()] : this._monthsShort[MONTHS_IN_FORMAT.test(format2) ? "format" : "standalone"][m.month()];
+      }
+      function handleStrictParse(monthName, format2, strict) {
+        var i, ii, mom, llc = monthName.toLocaleLowerCase();
+        if (!this._monthsParse) {
+          this._monthsParse = [];
+          this._longMonthsParse = [];
+          this._shortMonthsParse = [];
+          for (i = 0; i < 12; ++i) {
+            mom = createUTC([2e3, i]);
+            this._shortMonthsParse[i] = this.monthsShort(
+              mom,
+              ""
+            ).toLocaleLowerCase();
+            this._longMonthsParse[i] = this.months(mom, "").toLocaleLowerCase();
+          }
+        }
+        if (strict) {
+          if (format2 === "MMM") {
+            ii = indexOf.call(this._shortMonthsParse, llc);
+            return ii !== -1 ? ii : null;
+          } else {
+            ii = indexOf.call(this._longMonthsParse, llc);
+            return ii !== -1 ? ii : null;
+          }
+        } else {
+          if (format2 === "MMM") {
+            ii = indexOf.call(this._shortMonthsParse, llc);
+            if (ii !== -1) {
+              return ii;
+            }
+            ii = indexOf.call(this._longMonthsParse, llc);
+            return ii !== -1 ? ii : null;
+          } else {
+            ii = indexOf.call(this._longMonthsParse, llc);
+            if (ii !== -1) {
+              return ii;
+            }
+            ii = indexOf.call(this._shortMonthsParse, llc);
+            return ii !== -1 ? ii : null;
+          }
+        }
+      }
+      function localeMonthsParse(monthName, format2, strict) {
+        var i, mom, regex;
+        if (this._monthsParseExact) {
+          return handleStrictParse.call(this, monthName, format2, strict);
+        }
+        if (!this._monthsParse) {
+          this._monthsParse = [];
+          this._longMonthsParse = [];
+          this._shortMonthsParse = [];
+        }
+        for (i = 0; i < 12; i++) {
+          mom = createUTC([2e3, i]);
+          if (strict && !this._longMonthsParse[i]) {
+            this._longMonthsParse[i] = new RegExp(
+              "^" + this.months(mom, "").replace(".", "") + "$",
+              "i"
+            );
+            this._shortMonthsParse[i] = new RegExp(
+              "^" + this.monthsShort(mom, "").replace(".", "") + "$",
+              "i"
+            );
+          }
+          if (!strict && !this._monthsParse[i]) {
+            regex = "^" + this.months(mom, "") + "|^" + this.monthsShort(mom, "");
+            this._monthsParse[i] = new RegExp(regex.replace(".", ""), "i");
+          }
+          if (strict && format2 === "MMMM" && this._longMonthsParse[i].test(monthName)) {
+            return i;
+          } else if (strict && format2 === "MMM" && this._shortMonthsParse[i].test(monthName)) {
+            return i;
+          } else if (!strict && this._monthsParse[i].test(monthName)) {
+            return i;
+          }
+        }
+      }
+      function setMonth(mom, value) {
+        var dayOfMonth;
+        if (!mom.isValid()) {
+          return mom;
+        }
+        if (typeof value === "string") {
+          if (/^\d+$/.test(value)) {
+            value = toInt(value);
+          } else {
+            value = mom.localeData().monthsParse(value);
+            if (!isNumber(value)) {
+              return mom;
+            }
+          }
+        }
+        dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
+        mom._d["set" + (mom._isUTC ? "UTC" : "") + "Month"](value, dayOfMonth);
+        return mom;
+      }
+      function getSetMonth(value) {
+        if (value != null) {
+          setMonth(this, value);
+          hooks.updateOffset(this, true);
+          return this;
+        } else {
+          return get(this, "Month");
+        }
+      }
+      function getDaysInMonth() {
+        return daysInMonth(this.year(), this.month());
+      }
+      function monthsShortRegex(isStrict) {
+        if (this._monthsParseExact) {
+          if (!hasOwnProp(this, "_monthsRegex")) {
+            computeMonthsParse.call(this);
+          }
+          if (isStrict) {
+            return this._monthsShortStrictRegex;
+          } else {
+            return this._monthsShortRegex;
+          }
+        } else {
+          if (!hasOwnProp(this, "_monthsShortRegex")) {
+            this._monthsShortRegex = defaultMonthsShortRegex;
+          }
+          return this._monthsShortStrictRegex && isStrict ? this._monthsShortStrictRegex : this._monthsShortRegex;
+        }
+      }
+      function monthsRegex(isStrict) {
+        if (this._monthsParseExact) {
+          if (!hasOwnProp(this, "_monthsRegex")) {
+            computeMonthsParse.call(this);
+          }
+          if (isStrict) {
+            return this._monthsStrictRegex;
+          } else {
+            return this._monthsRegex;
+          }
+        } else {
+          if (!hasOwnProp(this, "_monthsRegex")) {
+            this._monthsRegex = defaultMonthsRegex;
+          }
+          return this._monthsStrictRegex && isStrict ? this._monthsStrictRegex : this._monthsRegex;
+        }
+      }
+      function computeMonthsParse() {
+        function cmpLenRev(a, b) {
+          return b.length - a.length;
+        }
+        var shortPieces = [], longPieces = [], mixedPieces = [], i, mom;
+        for (i = 0; i < 12; i++) {
+          mom = createUTC([2e3, i]);
+          shortPieces.push(this.monthsShort(mom, ""));
+          longPieces.push(this.months(mom, ""));
+          mixedPieces.push(this.months(mom, ""));
+          mixedPieces.push(this.monthsShort(mom, ""));
+        }
+        shortPieces.sort(cmpLenRev);
+        longPieces.sort(cmpLenRev);
+        mixedPieces.sort(cmpLenRev);
+        for (i = 0; i < 12; i++) {
+          shortPieces[i] = regexEscape(shortPieces[i]);
+          longPieces[i] = regexEscape(longPieces[i]);
+        }
+        for (i = 0; i < 24; i++) {
+          mixedPieces[i] = regexEscape(mixedPieces[i]);
+        }
+        this._monthsRegex = new RegExp("^(" + mixedPieces.join("|") + ")", "i");
+        this._monthsShortRegex = this._monthsRegex;
+        this._monthsStrictRegex = new RegExp(
+          "^(" + longPieces.join("|") + ")",
+          "i"
+        );
+        this._monthsShortStrictRegex = new RegExp(
+          "^(" + shortPieces.join("|") + ")",
+          "i"
+        );
+      }
+      addFormatToken("Y", 0, 0, function() {
+        var y = this.year();
+        return y <= 9999 ? zeroFill(y, 4) : "+" + y;
+      });
+      addFormatToken(0, ["YY", 2], 0, function() {
+        return this.year() % 100;
+      });
+      addFormatToken(0, ["YYYY", 4], 0, "year");
+      addFormatToken(0, ["YYYYY", 5], 0, "year");
+      addFormatToken(0, ["YYYYYY", 6, true], 0, "year");
+      addUnitAlias("year", "y");
+      addUnitPriority("year", 1);
+      addRegexToken("Y", matchSigned);
+      addRegexToken("YY", match1to2, match2);
+      addRegexToken("YYYY", match1to4, match4);
+      addRegexToken("YYYYY", match1to6, match6);
+      addRegexToken("YYYYYY", match1to6, match6);
+      addParseToken(["YYYYY", "YYYYYY"], YEAR);
+      addParseToken("YYYY", function(input, array) {
+        array[YEAR] = input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
+      });
+      addParseToken("YY", function(input, array) {
+        array[YEAR] = hooks.parseTwoDigitYear(input);
+      });
+      addParseToken("Y", function(input, array) {
+        array[YEAR] = parseInt(input, 10);
+      });
+      function daysInYear(year) {
+        return isLeapYear(year) ? 366 : 365;
+      }
+      hooks.parseTwoDigitYear = function(input) {
+        return toInt(input) + (toInt(input) > 68 ? 1900 : 2e3);
+      };
+      var getSetYear = makeGetSet("FullYear", true);
+      function getIsLeapYear() {
+        return isLeapYear(this.year());
+      }
+      function createDate(y, m, d, h, M, s, ms) {
+        var date2;
+        if (y < 100 && y >= 0) {
+          date2 = new Date(y + 400, m, d, h, M, s, ms);
+          if (isFinite(date2.getFullYear())) {
+            date2.setFullYear(y);
+          }
+        } else {
+          date2 = new Date(y, m, d, h, M, s, ms);
+        }
+        return date2;
+      }
+      function createUTCDate(y) {
+        var date2, args;
+        if (y < 100 && y >= 0) {
+          args = Array.prototype.slice.call(arguments);
+          args[0] = y + 400;
+          date2 = new Date(Date.UTC.apply(null, args));
+          if (isFinite(date2.getUTCFullYear())) {
+            date2.setUTCFullYear(y);
+          }
+        } else {
+          date2 = new Date(Date.UTC.apply(null, arguments));
+        }
+        return date2;
+      }
+      function firstWeekOffset(year, dow, doy) {
+        var fwd = 7 + dow - doy, fwdlw = (7 + createUTCDate(year, 0, fwd).getUTCDay() - dow) % 7;
+        return -fwdlw + fwd - 1;
+      }
+      function dayOfYearFromWeeks(year, week, weekday, dow, doy) {
+        var localWeekday = (7 + weekday - dow) % 7, weekOffset = firstWeekOffset(year, dow, doy), dayOfYear = 1 + 7 * (week - 1) + localWeekday + weekOffset, resYear, resDayOfYear;
+        if (dayOfYear <= 0) {
+          resYear = year - 1;
+          resDayOfYear = daysInYear(resYear) + dayOfYear;
+        } else if (dayOfYear > daysInYear(year)) {
+          resYear = year + 1;
+          resDayOfYear = dayOfYear - daysInYear(year);
+        } else {
+          resYear = year;
+          resDayOfYear = dayOfYear;
+        }
+        return {
+          year: resYear,
+          dayOfYear: resDayOfYear
+        };
+      }
+      function weekOfYear(mom, dow, doy) {
+        var weekOffset = firstWeekOffset(mom.year(), dow, doy), week = Math.floor((mom.dayOfYear() - weekOffset - 1) / 7) + 1, resWeek, resYear;
+        if (week < 1) {
+          resYear = mom.year() - 1;
+          resWeek = week + weeksInYear(resYear, dow, doy);
+        } else if (week > weeksInYear(mom.year(), dow, doy)) {
+          resWeek = week - weeksInYear(mom.year(), dow, doy);
+          resYear = mom.year() + 1;
+        } else {
+          resYear = mom.year();
+          resWeek = week;
+        }
+        return {
+          week: resWeek,
+          year: resYear
+        };
+      }
+      function weeksInYear(year, dow, doy) {
+        var weekOffset = firstWeekOffset(year, dow, doy), weekOffsetNext = firstWeekOffset(year + 1, dow, doy);
+        return (daysInYear(year) - weekOffset + weekOffsetNext) / 7;
+      }
+      addFormatToken("w", ["ww", 2], "wo", "week");
+      addFormatToken("W", ["WW", 2], "Wo", "isoWeek");
+      addUnitAlias("week", "w");
+      addUnitAlias("isoWeek", "W");
+      addUnitPriority("week", 5);
+      addUnitPriority("isoWeek", 5);
+      addRegexToken("w", match1to2);
+      addRegexToken("ww", match1to2, match2);
+      addRegexToken("W", match1to2);
+      addRegexToken("WW", match1to2, match2);
+      addWeekParseToken(
+        ["w", "ww", "W", "WW"],
+        function(input, week, config, token2) {
+          week[token2.substr(0, 1)] = toInt(input);
+        }
+      );
+      function localeWeek(mom) {
+        return weekOfYear(mom, this._week.dow, this._week.doy).week;
+      }
+      var defaultLocaleWeek = {
+        dow: 0,
+        // Sunday is the first day of the week.
+        doy: 6
+        // The week that contains Jan 6th is the first week of the year.
+      };
+      function localeFirstDayOfWeek() {
+        return this._week.dow;
+      }
+      function localeFirstDayOfYear() {
+        return this._week.doy;
+      }
+      function getSetWeek(input) {
+        var week = this.localeData().week(this);
+        return input == null ? week : this.add((input - week) * 7, "d");
+      }
+      function getSetISOWeek(input) {
+        var week = weekOfYear(this, 1, 4).week;
+        return input == null ? week : this.add((input - week) * 7, "d");
+      }
+      addFormatToken("d", 0, "do", "day");
+      addFormatToken("dd", 0, 0, function(format2) {
+        return this.localeData().weekdaysMin(this, format2);
+      });
+      addFormatToken("ddd", 0, 0, function(format2) {
+        return this.localeData().weekdaysShort(this, format2);
+      });
+      addFormatToken("dddd", 0, 0, function(format2) {
+        return this.localeData().weekdays(this, format2);
+      });
+      addFormatToken("e", 0, 0, "weekday");
+      addFormatToken("E", 0, 0, "isoWeekday");
+      addUnitAlias("day", "d");
+      addUnitAlias("weekday", "e");
+      addUnitAlias("isoWeekday", "E");
+      addUnitPriority("day", 11);
+      addUnitPriority("weekday", 11);
+      addUnitPriority("isoWeekday", 11);
+      addRegexToken("d", match1to2);
+      addRegexToken("e", match1to2);
+      addRegexToken("E", match1to2);
+      addRegexToken("dd", function(isStrict, locale2) {
+        return locale2.weekdaysMinRegex(isStrict);
+      });
+      addRegexToken("ddd", function(isStrict, locale2) {
+        return locale2.weekdaysShortRegex(isStrict);
+      });
+      addRegexToken("dddd", function(isStrict, locale2) {
+        return locale2.weekdaysRegex(isStrict);
+      });
+      addWeekParseToken(["dd", "ddd", "dddd"], function(input, week, config, token2) {
+        var weekday = config._locale.weekdaysParse(input, token2, config._strict);
+        if (weekday != null) {
+          week.d = weekday;
+        } else {
+          getParsingFlags(config).invalidWeekday = input;
+        }
+      });
+      addWeekParseToken(["d", "e", "E"], function(input, week, config, token2) {
+        week[token2] = toInt(input);
+      });
+      function parseWeekday(input, locale2) {
+        if (typeof input !== "string") {
+          return input;
+        }
+        if (!isNaN(input)) {
+          return parseInt(input, 10);
+        }
+        input = locale2.weekdaysParse(input);
+        if (typeof input === "number") {
+          return input;
+        }
+        return null;
+      }
+      function parseIsoWeekday(input, locale2) {
+        if (typeof input === "string") {
+          return locale2.weekdaysParse(input) % 7 || 7;
+        }
+        return isNaN(input) ? null : input;
+      }
+      function shiftWeekdays(ws, n) {
+        return ws.slice(n, 7).concat(ws.slice(0, n));
+      }
+      var defaultLocaleWeekdays = "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"), defaultLocaleWeekdaysShort = "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"), defaultLocaleWeekdaysMin = "Su_Mo_Tu_We_Th_Fr_Sa".split("_"), defaultWeekdaysRegex = matchWord, defaultWeekdaysShortRegex = matchWord, defaultWeekdaysMinRegex = matchWord;
+      function localeWeekdays(m, format2) {
+        var weekdays = isArray(this._weekdays) ? this._weekdays : this._weekdays[m && m !== true && this._weekdays.isFormat.test(format2) ? "format" : "standalone"];
+        return m === true ? shiftWeekdays(weekdays, this._week.dow) : m ? weekdays[m.day()] : weekdays;
+      }
+      function localeWeekdaysShort(m) {
+        return m === true ? shiftWeekdays(this._weekdaysShort, this._week.dow) : m ? this._weekdaysShort[m.day()] : this._weekdaysShort;
+      }
+      function localeWeekdaysMin(m) {
+        return m === true ? shiftWeekdays(this._weekdaysMin, this._week.dow) : m ? this._weekdaysMin[m.day()] : this._weekdaysMin;
+      }
+      function handleStrictParse$1(weekdayName, format2, strict) {
+        var i, ii, mom, llc = weekdayName.toLocaleLowerCase();
+        if (!this._weekdaysParse) {
+          this._weekdaysParse = [];
+          this._shortWeekdaysParse = [];
+          this._minWeekdaysParse = [];
+          for (i = 0; i < 7; ++i) {
+            mom = createUTC([2e3, 1]).day(i);
+            this._minWeekdaysParse[i] = this.weekdaysMin(
+              mom,
+              ""
+            ).toLocaleLowerCase();
+            this._shortWeekdaysParse[i] = this.weekdaysShort(
+              mom,
+              ""
+            ).toLocaleLowerCase();
+            this._weekdaysParse[i] = this.weekdays(mom, "").toLocaleLowerCase();
+          }
+        }
+        if (strict) {
+          if (format2 === "dddd") {
+            ii = indexOf.call(this._weekdaysParse, llc);
+            return ii !== -1 ? ii : null;
+          } else if (format2 === "ddd") {
+            ii = indexOf.call(this._shortWeekdaysParse, llc);
+            return ii !== -1 ? ii : null;
+          } else {
+            ii = indexOf.call(this._minWeekdaysParse, llc);
+            return ii !== -1 ? ii : null;
+          }
+        } else {
+          if (format2 === "dddd") {
+            ii = indexOf.call(this._weekdaysParse, llc);
+            if (ii !== -1) {
+              return ii;
+            }
+            ii = indexOf.call(this._shortWeekdaysParse, llc);
+            if (ii !== -1) {
+              return ii;
+            }
+            ii = indexOf.call(this._minWeekdaysParse, llc);
+            return ii !== -1 ? ii : null;
+          } else if (format2 === "ddd") {
+            ii = indexOf.call(this._shortWeekdaysParse, llc);
+            if (ii !== -1) {
+              return ii;
+            }
+            ii = indexOf.call(this._weekdaysParse, llc);
+            if (ii !== -1) {
+              return ii;
+            }
+            ii = indexOf.call(this._minWeekdaysParse, llc);
+            return ii !== -1 ? ii : null;
+          } else {
+            ii = indexOf.call(this._minWeekdaysParse, llc);
+            if (ii !== -1) {
+              return ii;
+            }
+            ii = indexOf.call(this._weekdaysParse, llc);
+            if (ii !== -1) {
+              return ii;
+            }
+            ii = indexOf.call(this._shortWeekdaysParse, llc);
+            return ii !== -1 ? ii : null;
+          }
+        }
+      }
+      function localeWeekdaysParse(weekdayName, format2, strict) {
+        var i, mom, regex;
+        if (this._weekdaysParseExact) {
+          return handleStrictParse$1.call(this, weekdayName, format2, strict);
+        }
+        if (!this._weekdaysParse) {
+          this._weekdaysParse = [];
+          this._minWeekdaysParse = [];
+          this._shortWeekdaysParse = [];
+          this._fullWeekdaysParse = [];
+        }
+        for (i = 0; i < 7; i++) {
+          mom = createUTC([2e3, 1]).day(i);
+          if (strict && !this._fullWeekdaysParse[i]) {
+            this._fullWeekdaysParse[i] = new RegExp(
+              "^" + this.weekdays(mom, "").replace(".", "\\.?") + "$",
+              "i"
+            );
+            this._shortWeekdaysParse[i] = new RegExp(
+              "^" + this.weekdaysShort(mom, "").replace(".", "\\.?") + "$",
+              "i"
+            );
+            this._minWeekdaysParse[i] = new RegExp(
+              "^" + this.weekdaysMin(mom, "").replace(".", "\\.?") + "$",
+              "i"
+            );
+          }
+          if (!this._weekdaysParse[i]) {
+            regex = "^" + this.weekdays(mom, "") + "|^" + this.weekdaysShort(mom, "") + "|^" + this.weekdaysMin(mom, "");
+            this._weekdaysParse[i] = new RegExp(regex.replace(".", ""), "i");
+          }
+          if (strict && format2 === "dddd" && this._fullWeekdaysParse[i].test(weekdayName)) {
+            return i;
+          } else if (strict && format2 === "ddd" && this._shortWeekdaysParse[i].test(weekdayName)) {
+            return i;
+          } else if (strict && format2 === "dd" && this._minWeekdaysParse[i].test(weekdayName)) {
+            return i;
+          } else if (!strict && this._weekdaysParse[i].test(weekdayName)) {
+            return i;
+          }
+        }
+      }
+      function getSetDayOfWeek(input) {
+        if (!this.isValid()) {
+          return input != null ? this : NaN;
+        }
+        var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
+        if (input != null) {
+          input = parseWeekday(input, this.localeData());
+          return this.add(input - day, "d");
+        } else {
+          return day;
+        }
+      }
+      function getSetLocaleDayOfWeek(input) {
+        if (!this.isValid()) {
+          return input != null ? this : NaN;
+        }
+        var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
+        return input == null ? weekday : this.add(input - weekday, "d");
+      }
+      function getSetISODayOfWeek(input) {
+        if (!this.isValid()) {
+          return input != null ? this : NaN;
+        }
+        if (input != null) {
+          var weekday = parseIsoWeekday(input, this.localeData());
+          return this.day(this.day() % 7 ? weekday : weekday - 7);
+        } else {
+          return this.day() || 7;
+        }
+      }
+      function weekdaysRegex(isStrict) {
+        if (this._weekdaysParseExact) {
+          if (!hasOwnProp(this, "_weekdaysRegex")) {
+            computeWeekdaysParse.call(this);
+          }
+          if (isStrict) {
+            return this._weekdaysStrictRegex;
+          } else {
+            return this._weekdaysRegex;
+          }
+        } else {
+          if (!hasOwnProp(this, "_weekdaysRegex")) {
+            this._weekdaysRegex = defaultWeekdaysRegex;
+          }
+          return this._weekdaysStrictRegex && isStrict ? this._weekdaysStrictRegex : this._weekdaysRegex;
+        }
+      }
+      function weekdaysShortRegex(isStrict) {
+        if (this._weekdaysParseExact) {
+          if (!hasOwnProp(this, "_weekdaysRegex")) {
+            computeWeekdaysParse.call(this);
+          }
+          if (isStrict) {
+            return this._weekdaysShortStrictRegex;
+          } else {
+            return this._weekdaysShortRegex;
+          }
+        } else {
+          if (!hasOwnProp(this, "_weekdaysShortRegex")) {
+            this._weekdaysShortRegex = defaultWeekdaysShortRegex;
+          }
+          return this._weekdaysShortStrictRegex && isStrict ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex;
+        }
+      }
+      function weekdaysMinRegex(isStrict) {
+        if (this._weekdaysParseExact) {
+          if (!hasOwnProp(this, "_weekdaysRegex")) {
+            computeWeekdaysParse.call(this);
+          }
+          if (isStrict) {
+            return this._weekdaysMinStrictRegex;
+          } else {
+            return this._weekdaysMinRegex;
+          }
+        } else {
+          if (!hasOwnProp(this, "_weekdaysMinRegex")) {
+            this._weekdaysMinRegex = defaultWeekdaysMinRegex;
+          }
+          return this._weekdaysMinStrictRegex && isStrict ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex;
+        }
+      }
+      function computeWeekdaysParse() {
+        function cmpLenRev(a, b) {
+          return b.length - a.length;
+        }
+        var minPieces = [], shortPieces = [], longPieces = [], mixedPieces = [], i, mom, minp, shortp, longp;
+        for (i = 0; i < 7; i++) {
+          mom = createUTC([2e3, 1]).day(i);
+          minp = regexEscape(this.weekdaysMin(mom, ""));
+          shortp = regexEscape(this.weekdaysShort(mom, ""));
+          longp = regexEscape(this.weekdays(mom, ""));
+          minPieces.push(minp);
+          shortPieces.push(shortp);
+          longPieces.push(longp);
+          mixedPieces.push(minp);
+          mixedPieces.push(shortp);
+          mixedPieces.push(longp);
+        }
+        minPieces.sort(cmpLenRev);
+        shortPieces.sort(cmpLenRev);
+        longPieces.sort(cmpLenRev);
+        mixedPieces.sort(cmpLenRev);
+        this._weekdaysRegex = new RegExp("^(" + mixedPieces.join("|") + ")", "i");
+        this._weekdaysShortRegex = this._weekdaysRegex;
+        this._weekdaysMinRegex = this._weekdaysRegex;
+        this._weekdaysStrictRegex = new RegExp(
+          "^(" + longPieces.join("|") + ")",
+          "i"
+        );
+        this._weekdaysShortStrictRegex = new RegExp(
+          "^(" + shortPieces.join("|") + ")",
+          "i"
+        );
+        this._weekdaysMinStrictRegex = new RegExp(
+          "^(" + minPieces.join("|") + ")",
+          "i"
+        );
+      }
+      function hFormat() {
+        return this.hours() % 12 || 12;
+      }
+      function kFormat() {
+        return this.hours() || 24;
+      }
+      addFormatToken("H", ["HH", 2], 0, "hour");
+      addFormatToken("h", ["hh", 2], 0, hFormat);
+      addFormatToken("k", ["kk", 2], 0, kFormat);
+      addFormatToken("hmm", 0, 0, function() {
+        return "" + hFormat.apply(this) + zeroFill(this.minutes(), 2);
+      });
+      addFormatToken("hmmss", 0, 0, function() {
+        return "" + hFormat.apply(this) + zeroFill(this.minutes(), 2) + zeroFill(this.seconds(), 2);
+      });
+      addFormatToken("Hmm", 0, 0, function() {
+        return "" + this.hours() + zeroFill(this.minutes(), 2);
+      });
+      addFormatToken("Hmmss", 0, 0, function() {
+        return "" + this.hours() + zeroFill(this.minutes(), 2) + zeroFill(this.seconds(), 2);
+      });
+      function meridiem(token2, lowercase) {
+        addFormatToken(token2, 0, 0, function() {
+          return this.localeData().meridiem(
+            this.hours(),
+            this.minutes(),
+            lowercase
+          );
+        });
+      }
+      meridiem("a", true);
+      meridiem("A", false);
+      addUnitAlias("hour", "h");
+      addUnitPriority("hour", 13);
+      function matchMeridiem(isStrict, locale2) {
+        return locale2._meridiemParse;
+      }
+      addRegexToken("a", matchMeridiem);
+      addRegexToken("A", matchMeridiem);
+      addRegexToken("H", match1to2);
+      addRegexToken("h", match1to2);
+      addRegexToken("k", match1to2);
+      addRegexToken("HH", match1to2, match2);
+      addRegexToken("hh", match1to2, match2);
+      addRegexToken("kk", match1to2, match2);
+      addRegexToken("hmm", match3to4);
+      addRegexToken("hmmss", match5to6);
+      addRegexToken("Hmm", match3to4);
+      addRegexToken("Hmmss", match5to6);
+      addParseToken(["H", "HH"], HOUR);
+      addParseToken(["k", "kk"], function(input, array, config) {
+        var kInput = toInt(input);
+        array[HOUR] = kInput === 24 ? 0 : kInput;
+      });
+      addParseToken(["a", "A"], function(input, array, config) {
+        config._isPm = config._locale.isPM(input);
+        config._meridiem = input;
+      });
+      addParseToken(["h", "hh"], function(input, array, config) {
+        array[HOUR] = toInt(input);
+        getParsingFlags(config).bigHour = true;
+      });
+      addParseToken("hmm", function(input, array, config) {
+        var pos = input.length - 2;
+        array[HOUR] = toInt(input.substr(0, pos));
+        array[MINUTE] = toInt(input.substr(pos));
+        getParsingFlags(config).bigHour = true;
+      });
+      addParseToken("hmmss", function(input, array, config) {
+        var pos1 = input.length - 4, pos2 = input.length - 2;
+        array[HOUR] = toInt(input.substr(0, pos1));
+        array[MINUTE] = toInt(input.substr(pos1, 2));
+        array[SECOND] = toInt(input.substr(pos2));
+        getParsingFlags(config).bigHour = true;
+      });
+      addParseToken("Hmm", function(input, array, config) {
+        var pos = input.length - 2;
+        array[HOUR] = toInt(input.substr(0, pos));
+        array[MINUTE] = toInt(input.substr(pos));
+      });
+      addParseToken("Hmmss", function(input, array, config) {
+        var pos1 = input.length - 4, pos2 = input.length - 2;
+        array[HOUR] = toInt(input.substr(0, pos1));
+        array[MINUTE] = toInt(input.substr(pos1, 2));
+        array[SECOND] = toInt(input.substr(pos2));
+      });
+      function localeIsPM(input) {
+        return (input + "").toLowerCase().charAt(0) === "p";
+      }
+      var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i, getSetHour = makeGetSet("Hours", true);
+      function localeMeridiem(hours3, minutes3, isLower) {
+        if (hours3 > 11) {
+          return isLower ? "pm" : "PM";
+        } else {
+          return isLower ? "am" : "AM";
+        }
+      }
+      var baseConfig = {
+        calendar: defaultCalendar,
+        longDateFormat: defaultLongDateFormat,
+        invalidDate: defaultInvalidDate,
+        ordinal: defaultOrdinal,
+        dayOfMonthOrdinalParse: defaultDayOfMonthOrdinalParse,
+        relativeTime: defaultRelativeTime,
+        months: defaultLocaleMonths,
+        monthsShort: defaultLocaleMonthsShort,
+        week: defaultLocaleWeek,
+        weekdays: defaultLocaleWeekdays,
+        weekdaysMin: defaultLocaleWeekdaysMin,
+        weekdaysShort: defaultLocaleWeekdaysShort,
+        meridiemParse: defaultLocaleMeridiemParse
+      };
+      var locales = {}, localeFamilies = {}, globalLocale;
+      function commonPrefix(arr1, arr2) {
+        var i, minl = Math.min(arr1.length, arr2.length);
+        for (i = 0; i < minl; i += 1) {
+          if (arr1[i] !== arr2[i]) {
+            return i;
+          }
+        }
+        return minl;
+      }
+      function normalizeLocale(key) {
+        return key ? key.toLowerCase().replace("_", "-") : key;
+      }
+      function chooseLocale(names) {
+        var i = 0, j, next, locale2, split;
+        while (i < names.length) {
+          split = normalizeLocale(names[i]).split("-");
+          j = split.length;
+          next = normalizeLocale(names[i + 1]);
+          next = next ? next.split("-") : null;
+          while (j > 0) {
+            locale2 = loadLocale(split.slice(0, j).join("-"));
+            if (locale2) {
+              return locale2;
+            }
+            if (next && next.length >= j && commonPrefix(split, next) >= j - 1) {
+              break;
+            }
+            j--;
+          }
+          i++;
+        }
+        return globalLocale;
+      }
+      function isLocaleNameSane(name) {
+        return name.match("^[^/\\\\]*$") != null;
+      }
+      function loadLocale(name) {
+        var oldLocale = null, aliasedRequire;
+        if (locales[name] === void 0 && typeof module2 !== "undefined" && module2 && module2.exports && isLocaleNameSane(name)) {
+          try {
+            oldLocale = globalLocale._abbr;
+            aliasedRequire = require;
+            aliasedRequire("./locale/" + name);
+            getSetGlobalLocale(oldLocale);
+          } catch (e) {
+            locales[name] = null;
+          }
+        }
+        return locales[name];
+      }
+      function getSetGlobalLocale(key, values) {
+        var data;
+        if (key) {
+          if (isUndefined(values)) {
+            data = getLocale(key);
+          } else {
+            data = defineLocale(key, values);
+          }
+          if (data) {
+            globalLocale = data;
+          } else {
+            if (typeof console !== "undefined" && console.warn) {
+              console.warn(
+                "Locale " + key + " not found. Did you forget to load it?"
+              );
+            }
+          }
+        }
+        return globalLocale._abbr;
+      }
+      function defineLocale(name, config) {
+        if (config !== null) {
+          var locale2, parentConfig = baseConfig;
+          config.abbr = name;
+          if (locales[name] != null) {
+            deprecateSimple(
+              "defineLocaleOverride",
+              "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."
+            );
+            parentConfig = locales[name]._config;
+          } else if (config.parentLocale != null) {
+            if (locales[config.parentLocale] != null) {
+              parentConfig = locales[config.parentLocale]._config;
+            } else {
+              locale2 = loadLocale(config.parentLocale);
+              if (locale2 != null) {
+                parentConfig = locale2._config;
+              } else {
+                if (!localeFamilies[config.parentLocale]) {
+                  localeFamilies[config.parentLocale] = [];
+                }
+                localeFamilies[config.parentLocale].push({
+                  name,
+                  config
+                });
+                return null;
+              }
+            }
+          }
+          locales[name] = new Locale(mergeConfigs(parentConfig, config));
+          if (localeFamilies[name]) {
+            localeFamilies[name].forEach(function(x) {
+              defineLocale(x.name, x.config);
+            });
+          }
+          getSetGlobalLocale(name);
+          return locales[name];
+        } else {
+          delete locales[name];
+          return null;
+        }
+      }
+      function updateLocale(name, config) {
+        if (config != null) {
+          var locale2, tmpLocale, parentConfig = baseConfig;
+          if (locales[name] != null && locales[name].parentLocale != null) {
+            locales[name].set(mergeConfigs(locales[name]._config, config));
+          } else {
+            tmpLocale = loadLocale(name);
+            if (tmpLocale != null) {
+              parentConfig = tmpLocale._config;
+            }
+            config = mergeConfigs(parentConfig, config);
+            if (tmpLocale == null) {
+              config.abbr = name;
+            }
+            locale2 = new Locale(config);
+            locale2.parentLocale = locales[name];
+            locales[name] = locale2;
+          }
+          getSetGlobalLocale(name);
+        } else {
+          if (locales[name] != null) {
+            if (locales[name].parentLocale != null) {
+              locales[name] = locales[name].parentLocale;
+              if (name === getSetGlobalLocale()) {
+                getSetGlobalLocale(name);
+              }
+            } else if (locales[name] != null) {
+              delete locales[name];
+            }
+          }
+        }
+        return locales[name];
+      }
+      function getLocale(key) {
+        var locale2;
+        if (key && key._locale && key._locale._abbr) {
+          key = key._locale._abbr;
+        }
+        if (!key) {
+          return globalLocale;
+        }
+        if (!isArray(key)) {
+          locale2 = loadLocale(key);
+          if (locale2) {
+            return locale2;
+          }
+          key = [key];
+        }
+        return chooseLocale(key);
+      }
+      function listLocales() {
+        return keys(locales);
+      }
+      function checkOverflow(m) {
+        var overflow, a = m._a;
+        if (a && getParsingFlags(m).overflow === -2) {
+          overflow = a[MONTH] < 0 || a[MONTH] > 11 ? MONTH : a[DATE] < 1 || a[DATE] > daysInMonth(a[YEAR], a[MONTH]) ? DATE : a[HOUR] < 0 || a[HOUR] > 24 || a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0) ? HOUR : a[MINUTE] < 0 || a[MINUTE] > 59 ? MINUTE : a[SECOND] < 0 || a[SECOND] > 59 ? SECOND : a[MILLISECOND] < 0 || a[MILLISECOND] > 999 ? MILLISECOND : -1;
+          if (getParsingFlags(m)._overflowDayOfYear && (overflow < YEAR || overflow > DATE)) {
+            overflow = DATE;
+          }
+          if (getParsingFlags(m)._overflowWeeks && overflow === -1) {
+            overflow = WEEK;
+          }
+          if (getParsingFlags(m)._overflowWeekday && overflow === -1) {
+            overflow = WEEKDAY;
+          }
+          getParsingFlags(m).overflow = overflow;
+        }
+        return m;
+      }
+      var extendedIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/, basicIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d|))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/, tzRegex = /Z|[+-]\d\d(?::?\d\d)?/, isoDates = [
+        ["YYYYYY-MM-DD", /[+-]\d{6}-\d\d-\d\d/],
+        ["YYYY-MM-DD", /\d{4}-\d\d-\d\d/],
+        ["GGGG-[W]WW-E", /\d{4}-W\d\d-\d/],
+        ["GGGG-[W]WW", /\d{4}-W\d\d/, false],
+        ["YYYY-DDD", /\d{4}-\d{3}/],
+        ["YYYY-MM", /\d{4}-\d\d/, false],
+        ["YYYYYYMMDD", /[+-]\d{10}/],
+        ["YYYYMMDD", /\d{8}/],
+        ["GGGG[W]WWE", /\d{4}W\d{3}/],
+        ["GGGG[W]WW", /\d{4}W\d{2}/, false],
+        ["YYYYDDD", /\d{7}/],
+        ["YYYYMM", /\d{6}/, false],
+        ["YYYY", /\d{4}/, false]
+      ], isoTimes = [
+        ["HH:mm:ss.SSSS", /\d\d:\d\d:\d\d\.\d+/],
+        ["HH:mm:ss,SSSS", /\d\d:\d\d:\d\d,\d+/],
+        ["HH:mm:ss", /\d\d:\d\d:\d\d/],
+        ["HH:mm", /\d\d:\d\d/],
+        ["HHmmss.SSSS", /\d\d\d\d\d\d\.\d+/],
+        ["HHmmss,SSSS", /\d\d\d\d\d\d,\d+/],
+        ["HHmmss", /\d\d\d\d\d\d/],
+        ["HHmm", /\d\d\d\d/],
+        ["HH", /\d\d/]
+      ], aspNetJsonRegex = /^\/?Date\((-?\d+)/i, rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/, obsOffsets = {
+        UT: 0,
+        GMT: 0,
+        EDT: -4 * 60,
+        EST: -5 * 60,
+        CDT: -5 * 60,
+        CST: -6 * 60,
+        MDT: -6 * 60,
+        MST: -7 * 60,
+        PDT: -7 * 60,
+        PST: -8 * 60
+      };
+      function configFromISO(config) {
+        var i, l, string = config._i, match = extendedIsoRegex.exec(string) || basicIsoRegex.exec(string), allowTime, dateFormat, timeFormat, tzFormat, isoDatesLen = isoDates.length, isoTimesLen = isoTimes.length;
+        if (match) {
+          getParsingFlags(config).iso = true;
+          for (i = 0, l = isoDatesLen; i < l; i++) {
+            if (isoDates[i][1].exec(match[1])) {
+              dateFormat = isoDates[i][0];
+              allowTime = isoDates[i][2] !== false;
+              break;
+            }
+          }
+          if (dateFormat == null) {
+            config._isValid = false;
+            return;
+          }
+          if (match[3]) {
+            for (i = 0, l = isoTimesLen; i < l; i++) {
+              if (isoTimes[i][1].exec(match[3])) {
+                timeFormat = (match[2] || " ") + isoTimes[i][0];
+                break;
+              }
+            }
+            if (timeFormat == null) {
+              config._isValid = false;
+              return;
+            }
+          }
+          if (!allowTime && timeFormat != null) {
+            config._isValid = false;
+            return;
+          }
+          if (match[4]) {
+            if (tzRegex.exec(match[4])) {
+              tzFormat = "Z";
+            } else {
+              config._isValid = false;
+              return;
+            }
+          }
+          config._f = dateFormat + (timeFormat || "") + (tzFormat || "");
+          configFromStringAndFormat(config);
+        } else {
+          config._isValid = false;
+        }
+      }
+      function extractFromRFC2822Strings(yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr) {
+        var result = [
+          untruncateYear(yearStr),
+          defaultLocaleMonthsShort.indexOf(monthStr),
+          parseInt(dayStr, 10),
+          parseInt(hourStr, 10),
+          parseInt(minuteStr, 10)
+        ];
+        if (secondStr) {
+          result.push(parseInt(secondStr, 10));
+        }
+        return result;
+      }
+      function untruncateYear(yearStr) {
+        var year = parseInt(yearStr, 10);
+        if (year <= 49) {
+          return 2e3 + year;
+        } else if (year <= 999) {
+          return 1900 + year;
+        }
+        return year;
+      }
+      function preprocessRFC2822(s) {
+        return s.replace(/\([^()]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "").replace(/\s\s*$/, "");
+      }
+      function checkWeekday(weekdayStr, parsedInput, config) {
+        if (weekdayStr) {
+          var weekdayProvided = defaultLocaleWeekdaysShort.indexOf(weekdayStr), weekdayActual = new Date(
+            parsedInput[0],
+            parsedInput[1],
+            parsedInput[2]
+          ).getDay();
+          if (weekdayProvided !== weekdayActual) {
+            getParsingFlags(config).weekdayMismatch = true;
+            config._isValid = false;
+            return false;
+          }
+        }
+        return true;
+      }
+      function calculateOffset(obsOffset, militaryOffset, numOffset) {
+        if (obsOffset) {
+          return obsOffsets[obsOffset];
+        } else if (militaryOffset) {
+          return 0;
+        } else {
+          var hm = parseInt(numOffset, 10), m = hm % 100, h = (hm - m) / 100;
+          return h * 60 + m;
+        }
+      }
+      function configFromRFC2822(config) {
+        var match = rfc2822.exec(preprocessRFC2822(config._i)), parsedArray;
+        if (match) {
+          parsedArray = extractFromRFC2822Strings(
+            match[4],
+            match[3],
+            match[2],
+            match[5],
+            match[6],
+            match[7]
+          );
+          if (!checkWeekday(match[1], parsedArray, config)) {
+            return;
+          }
+          config._a = parsedArray;
+          config._tzm = calculateOffset(match[8], match[9], match[10]);
+          config._d = createUTCDate.apply(null, config._a);
+          config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
+          getParsingFlags(config).rfc2822 = true;
+        } else {
+          config._isValid = false;
+        }
+      }
+      function configFromString(config) {
+        var matched = aspNetJsonRegex.exec(config._i);
+        if (matched !== null) {
+          config._d = /* @__PURE__ */ new Date(+matched[1]);
+          return;
+        }
+        configFromISO(config);
+        if (config._isValid === false) {
+          delete config._isValid;
+        } else {
+          return;
+        }
+        configFromRFC2822(config);
+        if (config._isValid === false) {
+          delete config._isValid;
+        } else {
+          return;
+        }
+        if (config._strict) {
+          config._isValid = false;
+        } else {
+          hooks.createFromInputFallback(config);
+        }
+      }
+      hooks.createFromInputFallback = deprecate(
+        "value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.",
+        function(config) {
+          config._d = /* @__PURE__ */ new Date(config._i + (config._useUTC ? " UTC" : ""));
+        }
+      );
+      function defaults(a, b, c) {
+        if (a != null) {
+          return a;
+        }
+        if (b != null) {
+          return b;
+        }
+        return c;
+      }
+      function currentDateArray(config) {
+        var nowValue = new Date(hooks.now());
+        if (config._useUTC) {
+          return [
+            nowValue.getUTCFullYear(),
+            nowValue.getUTCMonth(),
+            nowValue.getUTCDate()
+          ];
+        }
+        return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
+      }
+      function configFromArray(config) {
+        var i, date2, input = [], currentDate, expectedWeekday, yearToUse;
+        if (config._d) {
+          return;
+        }
+        currentDate = currentDateArray(config);
+        if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
+          dayOfYearFromWeekInfo(config);
+        }
+        if (config._dayOfYear != null) {
+          yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
+          if (config._dayOfYear > daysInYear(yearToUse) || config._dayOfYear === 0) {
+            getParsingFlags(config)._overflowDayOfYear = true;
+          }
+          date2 = createUTCDate(yearToUse, 0, config._dayOfYear);
+          config._a[MONTH] = date2.getUTCMonth();
+          config._a[DATE] = date2.getUTCDate();
+        }
+        for (i = 0; i < 3 && config._a[i] == null; ++i) {
+          config._a[i] = input[i] = currentDate[i];
+        }
+        for (; i < 7; i++) {
+          config._a[i] = input[i] = config._a[i] == null ? i === 2 ? 1 : 0 : config._a[i];
+        }
+        if (config._a[HOUR] === 24 && config._a[MINUTE] === 0 && config._a[SECOND] === 0 && config._a[MILLISECOND] === 0) {
+          config._nextDay = true;
+          config._a[HOUR] = 0;
+        }
+        config._d = (config._useUTC ? createUTCDate : createDate).apply(
+          null,
+          input
+        );
+        expectedWeekday = config._useUTC ? config._d.getUTCDay() : config._d.getDay();
+        if (config._tzm != null) {
+          config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
+        }
+        if (config._nextDay) {
+          config._a[HOUR] = 24;
+        }
+        if (config._w && typeof config._w.d !== "undefined" && config._w.d !== expectedWeekday) {
+          getParsingFlags(config).weekdayMismatch = true;
+        }
+      }
+      function dayOfYearFromWeekInfo(config) {
+        var w, weekYear, week, weekday, dow, doy, temp, weekdayOverflow, curWeek;
+        w = config._w;
+        if (w.GG != null || w.W != null || w.E != null) {
+          dow = 1;
+          doy = 4;
+          weekYear = defaults(
+            w.GG,
+            config._a[YEAR],
+            weekOfYear(createLocal(), 1, 4).year
+          );
+          week = defaults(w.W, 1);
+          weekday = defaults(w.E, 1);
+          if (weekday < 1 || weekday > 7) {
+            weekdayOverflow = true;
+          }
+        } else {
+          dow = config._locale._week.dow;
+          doy = config._locale._week.doy;
+          curWeek = weekOfYear(createLocal(), dow, doy);
+          weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
+          week = defaults(w.w, curWeek.week);
+          if (w.d != null) {
+            weekday = w.d;
+            if (weekday < 0 || weekday > 6) {
+              weekdayOverflow = true;
+            }
+          } else if (w.e != null) {
+            weekday = w.e + dow;
+            if (w.e < 0 || w.e > 6) {
+              weekdayOverflow = true;
+            }
+          } else {
+            weekday = dow;
+          }
+        }
+        if (week < 1 || week > weeksInYear(weekYear, dow, doy)) {
+          getParsingFlags(config)._overflowWeeks = true;
+        } else if (weekdayOverflow != null) {
+          getParsingFlags(config)._overflowWeekday = true;
+        } else {
+          temp = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy);
+          config._a[YEAR] = temp.year;
+          config._dayOfYear = temp.dayOfYear;
+        }
+      }
+      hooks.ISO_8601 = function() {
+      };
+      hooks.RFC_2822 = function() {
+      };
+      function configFromStringAndFormat(config) {
+        if (config._f === hooks.ISO_8601) {
+          configFromISO(config);
+          return;
+        }
+        if (config._f === hooks.RFC_2822) {
+          configFromRFC2822(config);
+          return;
+        }
+        config._a = [];
+        getParsingFlags(config).empty = true;
+        var string = "" + config._i, i, parsedInput, tokens2, token2, skipped, stringLength = string.length, totalParsedInputLength = 0, era, tokenLen;
+        tokens2 = expandFormat(config._f, config._locale).match(formattingTokens) || [];
+        tokenLen = tokens2.length;
+        for (i = 0; i < tokenLen; i++) {
+          token2 = tokens2[i];
+          parsedInput = (string.match(getParseRegexForToken(token2, config)) || [])[0];
+          if (parsedInput) {
+            skipped = string.substr(0, string.indexOf(parsedInput));
+            if (skipped.length > 0) {
+              getParsingFlags(config).unusedInput.push(skipped);
+            }
+            string = string.slice(
+              string.indexOf(parsedInput) + parsedInput.length
+            );
+            totalParsedInputLength += parsedInput.length;
+          }
+          if (formatTokenFunctions[token2]) {
+            if (parsedInput) {
+              getParsingFlags(config).empty = false;
+            } else {
+              getParsingFlags(config).unusedTokens.push(token2);
+            }
+            addTimeToArrayFromToken(token2, parsedInput, config);
+          } else if (config._strict && !parsedInput) {
+            getParsingFlags(config).unusedTokens.push(token2);
+          }
+        }
+        getParsingFlags(config).charsLeftOver = stringLength - totalParsedInputLength;
+        if (string.length > 0) {
+          getParsingFlags(config).unusedInput.push(string);
+        }
+        if (config._a[HOUR] <= 12 && getParsingFlags(config).bigHour === true && config._a[HOUR] > 0) {
+          getParsingFlags(config).bigHour = void 0;
+        }
+        getParsingFlags(config).parsedDateParts = config._a.slice(0);
+        getParsingFlags(config).meridiem = config._meridiem;
+        config._a[HOUR] = meridiemFixWrap(
+          config._locale,
+          config._a[HOUR],
+          config._meridiem
+        );
+        era = getParsingFlags(config).era;
+        if (era !== null) {
+          config._a[YEAR] = config._locale.erasConvertYear(era, config._a[YEAR]);
+        }
+        configFromArray(config);
+        checkOverflow(config);
+      }
+      function meridiemFixWrap(locale2, hour, meridiem2) {
+        var isPm;
+        if (meridiem2 == null) {
+          return hour;
+        }
+        if (locale2.meridiemHour != null) {
+          return locale2.meridiemHour(hour, meridiem2);
+        } else if (locale2.isPM != null) {
+          isPm = locale2.isPM(meridiem2);
+          if (isPm && hour < 12) {
+            hour += 12;
+          }
+          if (!isPm && hour === 12) {
+            hour = 0;
+          }
+          return hour;
+        } else {
+          return hour;
+        }
+      }
+      function configFromStringAndArray(config) {
+        var tempConfig, bestMoment, scoreToBeat, i, currentScore, validFormatFound, bestFormatIsValid = false, configfLen = config._f.length;
+        if (configfLen === 0) {
+          getParsingFlags(config).invalidFormat = true;
+          config._d = /* @__PURE__ */ new Date(NaN);
+          return;
+        }
+        for (i = 0; i < configfLen; i++) {
+          currentScore = 0;
+          validFormatFound = false;
+          tempConfig = copyConfig({}, config);
+          if (config._useUTC != null) {
+            tempConfig._useUTC = config._useUTC;
+          }
+          tempConfig._f = config._f[i];
+          configFromStringAndFormat(tempConfig);
+          if (isValid(tempConfig)) {
+            validFormatFound = true;
+          }
+          currentScore += getParsingFlags(tempConfig).charsLeftOver;
+          currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
+          getParsingFlags(tempConfig).score = currentScore;
+          if (!bestFormatIsValid) {
+            if (scoreToBeat == null || currentScore < scoreToBeat || validFormatFound) {
+              scoreToBeat = currentScore;
+              bestMoment = tempConfig;
+              if (validFormatFound) {
+                bestFormatIsValid = true;
+              }
+            }
+          } else {
+            if (currentScore < scoreToBeat) {
+              scoreToBeat = currentScore;
+              bestMoment = tempConfig;
+            }
+          }
+        }
+        extend(config, bestMoment || tempConfig);
+      }
+      function configFromObject(config) {
+        if (config._d) {
+          return;
+        }
+        var i = normalizeObjectUnits(config._i), dayOrDate = i.day === void 0 ? i.date : i.day;
+        config._a = map(
+          [i.year, i.month, dayOrDate, i.hour, i.minute, i.second, i.millisecond],
+          function(obj) {
+            return obj && parseInt(obj, 10);
+          }
+        );
+        configFromArray(config);
+      }
+      function createFromConfig(config) {
+        var res = new Moment(checkOverflow(prepareConfig(config)));
+        if (res._nextDay) {
+          res.add(1, "d");
+          res._nextDay = void 0;
+        }
+        return res;
+      }
+      function prepareConfig(config) {
+        var input = config._i, format2 = config._f;
+        config._locale = config._locale || getLocale(config._l);
+        if (input === null || format2 === void 0 && input === "") {
+          return createInvalid({ nullInput: true });
+        }
+        if (typeof input === "string") {
+          config._i = input = config._locale.preparse(input);
+        }
+        if (isMoment(input)) {
+          return new Moment(checkOverflow(input));
+        } else if (isDate(input)) {
+          config._d = input;
+        } else if (isArray(format2)) {
+          configFromStringAndArray(config);
+        } else if (format2) {
+          configFromStringAndFormat(config);
+        } else {
+          configFromInput(config);
+        }
+        if (!isValid(config)) {
+          config._d = null;
+        }
+        return config;
+      }
+      function configFromInput(config) {
+        var input = config._i;
+        if (isUndefined(input)) {
+          config._d = new Date(hooks.now());
+        } else if (isDate(input)) {
+          config._d = new Date(input.valueOf());
+        } else if (typeof input === "string") {
+          configFromString(config);
+        } else if (isArray(input)) {
+          config._a = map(input.slice(0), function(obj) {
+            return parseInt(obj, 10);
+          });
+          configFromArray(config);
+        } else if (isObject(input)) {
+          configFromObject(config);
+        } else if (isNumber(input)) {
+          config._d = new Date(input);
+        } else {
+          hooks.createFromInputFallback(config);
+        }
+      }
+      function createLocalOrUTC(input, format2, locale2, strict, isUTC) {
+        var c = {};
+        if (format2 === true || format2 === false) {
+          strict = format2;
+          format2 = void 0;
+        }
+        if (locale2 === true || locale2 === false) {
+          strict = locale2;
+          locale2 = void 0;
+        }
+        if (isObject(input) && isObjectEmpty(input) || isArray(input) && input.length === 0) {
+          input = void 0;
+        }
+        c._isAMomentObject = true;
+        c._useUTC = c._isUTC = isUTC;
+        c._l = locale2;
+        c._i = input;
+        c._f = format2;
+        c._strict = strict;
+        return createFromConfig(c);
+      }
+      function createLocal(input, format2, locale2, strict) {
+        return createLocalOrUTC(input, format2, locale2, strict, false);
+      }
+      var prototypeMin = deprecate(
+        "moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/",
+        function() {
+          var other = createLocal.apply(null, arguments);
+          if (this.isValid() && other.isValid()) {
+            return other < this ? this : other;
+          } else {
+            return createInvalid();
+          }
+        }
+      ), prototypeMax = deprecate(
+        "moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/",
+        function() {
+          var other = createLocal.apply(null, arguments);
+          if (this.isValid() && other.isValid()) {
+            return other > this ? this : other;
+          } else {
+            return createInvalid();
+          }
+        }
+      );
+      function pickBy(fn, moments) {
+        var res, i;
+        if (moments.length === 1 && isArray(moments[0])) {
+          moments = moments[0];
+        }
+        if (!moments.length) {
+          return createLocal();
+        }
+        res = moments[0];
+        for (i = 1; i < moments.length; ++i) {
+          if (!moments[i].isValid() || moments[i][fn](res)) {
+            res = moments[i];
+          }
+        }
+        return res;
+      }
+      function min() {
+        var args = [].slice.call(arguments, 0);
+        return pickBy("isBefore", args);
+      }
+      function max() {
+        var args = [].slice.call(arguments, 0);
+        return pickBy("isAfter", args);
+      }
+      var now = function() {
+        return Date.now ? Date.now() : +/* @__PURE__ */ new Date();
+      };
+      var ordering = [
+        "year",
+        "quarter",
+        "month",
+        "week",
+        "day",
+        "hour",
+        "minute",
+        "second",
+        "millisecond"
+      ];
+      function isDurationValid(m) {
+        var key, unitHasDecimal = false, i, orderLen = ordering.length;
+        for (key in m) {
+          if (hasOwnProp(m, key) && !(indexOf.call(ordering, key) !== -1 && (m[key] == null || !isNaN(m[key])))) {
+            return false;
+          }
+        }
+        for (i = 0; i < orderLen; ++i) {
+          if (m[ordering[i]]) {
+            if (unitHasDecimal) {
+              return false;
+            }
+            if (parseFloat(m[ordering[i]]) !== toInt(m[ordering[i]])) {
+              unitHasDecimal = true;
+            }
+          }
+        }
+        return true;
+      }
+      function isValid$1() {
+        return this._isValid;
+      }
+      function createInvalid$1() {
+        return createDuration(NaN);
+      }
+      function Duration(duration) {
+        var normalizedInput = normalizeObjectUnits(duration), years2 = normalizedInput.year || 0, quarters = normalizedInput.quarter || 0, months2 = normalizedInput.month || 0, weeks2 = normalizedInput.week || normalizedInput.isoWeek || 0, days2 = normalizedInput.day || 0, hours3 = normalizedInput.hour || 0, minutes3 = normalizedInput.minute || 0, seconds2 = normalizedInput.second || 0, milliseconds2 = normalizedInput.millisecond || 0;
+        this._isValid = isDurationValid(normalizedInput);
+        this._milliseconds = +milliseconds2 + seconds2 * 1e3 + // 1000
+        minutes3 * 6e4 + // 1000 * 60
+        hours3 * 1e3 * 60 * 60;
+        this._days = +days2 + weeks2 * 7;
+        this._months = +months2 + quarters * 3 + years2 * 12;
+        this._data = {};
+        this._locale = getLocale();
+        this._bubble();
+      }
+      function isDuration(obj) {
+        return obj instanceof Duration;
+      }
+      function absRound(number) {
+        if (number < 0) {
+          return Math.round(-1 * number) * -1;
+        } else {
+          return Math.round(number);
+        }
+      }
+      function compareArrays(array1, array2, dontConvert) {
+        var len = Math.min(array1.length, array2.length), lengthDiff = Math.abs(array1.length - array2.length), diffs = 0, i;
+        for (i = 0; i < len; i++) {
+          if (dontConvert && array1[i] !== array2[i] || !dontConvert && toInt(array1[i]) !== toInt(array2[i])) {
+            diffs++;
+          }
+        }
+        return diffs + lengthDiff;
+      }
+      function offset(token2, separator) {
+        addFormatToken(token2, 0, 0, function() {
+          var offset2 = this.utcOffset(), sign2 = "+";
+          if (offset2 < 0) {
+            offset2 = -offset2;
+            sign2 = "-";
+          }
+          return sign2 + zeroFill(~~(offset2 / 60), 2) + separator + zeroFill(~~offset2 % 60, 2);
+        });
+      }
+      offset("Z", ":");
+      offset("ZZ", "");
+      addRegexToken("Z", matchShortOffset);
+      addRegexToken("ZZ", matchShortOffset);
+      addParseToken(["Z", "ZZ"], function(input, array, config) {
+        config._useUTC = true;
+        config._tzm = offsetFromString(matchShortOffset, input);
+      });
+      var chunkOffset = /([\+\-]|\d\d)/gi;
+      function offsetFromString(matcher, string) {
+        var matches = (string || "").match(matcher), chunk, parts, minutes3;
+        if (matches === null) {
+          return null;
+        }
+        chunk = matches[matches.length - 1] || [];
+        parts = (chunk + "").match(chunkOffset) || ["-", 0, 0];
+        minutes3 = +(parts[1] * 60) + toInt(parts[2]);
+        return minutes3 === 0 ? 0 : parts[0] === "+" ? minutes3 : -minutes3;
+      }
+      function cloneWithOffset(input, model) {
+        var res, diff2;
+        if (model._isUTC) {
+          res = model.clone();
+          diff2 = (isMoment(input) || isDate(input) ? input.valueOf() : createLocal(input).valueOf()) - res.valueOf();
+          res._d.setTime(res._d.valueOf() + diff2);
+          hooks.updateOffset(res, false);
+          return res;
+        } else {
+          return createLocal(input).local();
+        }
+      }
+      function getDateOffset(m) {
+        return -Math.round(m._d.getTimezoneOffset());
+      }
+      hooks.updateOffset = function() {
+      };
+      function getSetOffset(input, keepLocalTime, keepMinutes) {
+        var offset2 = this._offset || 0, localAdjust;
+        if (!this.isValid()) {
+          return input != null ? this : NaN;
+        }
+        if (input != null) {
+          if (typeof input === "string") {
+            input = offsetFromString(matchShortOffset, input);
+            if (input === null) {
+              return this;
+            }
+          } else if (Math.abs(input) < 16 && !keepMinutes) {
+            input = input * 60;
+          }
+          if (!this._isUTC && keepLocalTime) {
+            localAdjust = getDateOffset(this);
+          }
+          this._offset = input;
+          this._isUTC = true;
+          if (localAdjust != null) {
+            this.add(localAdjust, "m");
+          }
+          if (offset2 !== input) {
+            if (!keepLocalTime || this._changeInProgress) {
+              addSubtract(
+                this,
+                createDuration(input - offset2, "m"),
+                1,
+                false
+              );
+            } else if (!this._changeInProgress) {
+              this._changeInProgress = true;
+              hooks.updateOffset(this, true);
+              this._changeInProgress = null;
+            }
+          }
+          return this;
+        } else {
+          return this._isUTC ? offset2 : getDateOffset(this);
+        }
+      }
+      function getSetZone(input, keepLocalTime) {
+        if (input != null) {
+          if (typeof input !== "string") {
+            input = -input;
+          }
+          this.utcOffset(input, keepLocalTime);
+          return this;
+        } else {
+          return -this.utcOffset();
+        }
+      }
+      function setOffsetToUTC(keepLocalTime) {
+        return this.utcOffset(0, keepLocalTime);
+      }
+      function setOffsetToLocal(keepLocalTime) {
+        if (this._isUTC) {
+          this.utcOffset(0, keepLocalTime);
+          this._isUTC = false;
+          if (keepLocalTime) {
+            this.subtract(getDateOffset(this), "m");
+          }
+        }
+        return this;
+      }
+      function setOffsetToParsedOffset() {
+        if (this._tzm != null) {
+          this.utcOffset(this._tzm, false, true);
+        } else if (typeof this._i === "string") {
+          var tZone = offsetFromString(matchOffset, this._i);
+          if (tZone != null) {
+            this.utcOffset(tZone);
+          } else {
+            this.utcOffset(0, true);
+          }
+        }
+        return this;
+      }
+      function hasAlignedHourOffset(input) {
+        if (!this.isValid()) {
+          return false;
+        }
+        input = input ? createLocal(input).utcOffset() : 0;
+        return (this.utcOffset() - input) % 60 === 0;
+      }
+      function isDaylightSavingTime() {
+        return this.utcOffset() > this.clone().month(0).utcOffset() || this.utcOffset() > this.clone().month(5).utcOffset();
+      }
+      function isDaylightSavingTimeShifted() {
+        if (!isUndefined(this._isDSTShifted)) {
+          return this._isDSTShifted;
+        }
+        var c = {}, other;
+        copyConfig(c, this);
+        c = prepareConfig(c);
+        if (c._a) {
+          other = c._isUTC ? createUTC(c._a) : createLocal(c._a);
+          this._isDSTShifted = this.isValid() && compareArrays(c._a, other.toArray()) > 0;
+        } else {
+          this._isDSTShifted = false;
+        }
+        return this._isDSTShifted;
+      }
+      function isLocal() {
+        return this.isValid() ? !this._isUTC : false;
+      }
+      function isUtcOffset() {
+        return this.isValid() ? this._isUTC : false;
+      }
+      function isUtc() {
+        return this.isValid() ? this._isUTC && this._offset === 0 : false;
+      }
+      var aspNetRegex = /^(-|\+)?(?:(\d*)[. ])?(\d+):(\d+)(?::(\d+)(\.\d*)?)?$/, isoRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
+      function createDuration(input, key) {
+        var duration = input, match = null, sign2, ret, diffRes;
+        if (isDuration(input)) {
+          duration = {
+            ms: input._milliseconds,
+            d: input._days,
+            M: input._months
+          };
+        } else if (isNumber(input) || !isNaN(+input)) {
+          duration = {};
+          if (key) {
+            duration[key] = +input;
+          } else {
+            duration.milliseconds = +input;
+          }
+        } else if (match = aspNetRegex.exec(input)) {
+          sign2 = match[1] === "-" ? -1 : 1;
+          duration = {
+            y: 0,
+            d: toInt(match[DATE]) * sign2,
+            h: toInt(match[HOUR]) * sign2,
+            m: toInt(match[MINUTE]) * sign2,
+            s: toInt(match[SECOND]) * sign2,
+            ms: toInt(absRound(match[MILLISECOND] * 1e3)) * sign2
+            // the millisecond decimal point is included in the match
+          };
+        } else if (match = isoRegex.exec(input)) {
+          sign2 = match[1] === "-" ? -1 : 1;
+          duration = {
+            y: parseIso(match[2], sign2),
+            M: parseIso(match[3], sign2),
+            w: parseIso(match[4], sign2),
+            d: parseIso(match[5], sign2),
+            h: parseIso(match[6], sign2),
+            m: parseIso(match[7], sign2),
+            s: parseIso(match[8], sign2)
+          };
+        } else if (duration == null) {
+          duration = {};
+        } else if (typeof duration === "object" && ("from" in duration || "to" in duration)) {
+          diffRes = momentsDifference(
+            createLocal(duration.from),
+            createLocal(duration.to)
+          );
+          duration = {};
+          duration.ms = diffRes.milliseconds;
+          duration.M = diffRes.months;
+        }
+        ret = new Duration(duration);
+        if (isDuration(input) && hasOwnProp(input, "_locale")) {
+          ret._locale = input._locale;
+        }
+        if (isDuration(input) && hasOwnProp(input, "_isValid")) {
+          ret._isValid = input._isValid;
+        }
+        return ret;
+      }
+      createDuration.fn = Duration.prototype;
+      createDuration.invalid = createInvalid$1;
+      function parseIso(inp, sign2) {
+        var res = inp && parseFloat(inp.replace(",", "."));
+        return (isNaN(res) ? 0 : res) * sign2;
+      }
+      function positiveMomentsDifference(base, other) {
+        var res = {};
+        res.months = other.month() - base.month() + (other.year() - base.year()) * 12;
+        if (base.clone().add(res.months, "M").isAfter(other)) {
+          --res.months;
+        }
+        res.milliseconds = +other - +base.clone().add(res.months, "M");
+        return res;
+      }
+      function momentsDifference(base, other) {
+        var res;
+        if (!(base.isValid() && other.isValid())) {
+          return { milliseconds: 0, months: 0 };
+        }
+        other = cloneWithOffset(other, base);
+        if (base.isBefore(other)) {
+          res = positiveMomentsDifference(base, other);
+        } else {
+          res = positiveMomentsDifference(other, base);
+          res.milliseconds = -res.milliseconds;
+          res.months = -res.months;
+        }
+        return res;
+      }
+      function createAdder(direction, name) {
+        return function(val, period) {
+          var dur, tmp;
+          if (period !== null && !isNaN(+period)) {
+            deprecateSimple(
+              name,
+              "moment()." + name + "(period, number) is deprecated. Please use moment()." + name + "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."
+            );
+            tmp = val;
+            val = period;
+            period = tmp;
+          }
+          dur = createDuration(val, period);
+          addSubtract(this, dur, direction);
+          return this;
+        };
+      }
+      function addSubtract(mom, duration, isAdding, updateOffset) {
+        var milliseconds2 = duration._milliseconds, days2 = absRound(duration._days), months2 = absRound(duration._months);
+        if (!mom.isValid()) {
+          return;
+        }
+        updateOffset = updateOffset == null ? true : updateOffset;
+        if (months2) {
+          setMonth(mom, get(mom, "Month") + months2 * isAdding);
+        }
+        if (days2) {
+          set$1(mom, "Date", get(mom, "Date") + days2 * isAdding);
+        }
+        if (milliseconds2) {
+          mom._d.setTime(mom._d.valueOf() + milliseconds2 * isAdding);
+        }
+        if (updateOffset) {
+          hooks.updateOffset(mom, days2 || months2);
+        }
+      }
+      var add = createAdder(1, "add"), subtract = createAdder(-1, "subtract");
+      function isString(input) {
+        return typeof input === "string" || input instanceof String;
+      }
+      function isMomentInput(input) {
+        return isMoment(input) || isDate(input) || isString(input) || isNumber(input) || isNumberOrStringArray(input) || isMomentInputObject(input) || input === null || input === void 0;
+      }
+      function isMomentInputObject(input) {
+        var objectTest = isObject(input) && !isObjectEmpty(input), propertyTest = false, properties = [
+          "years",
+          "year",
+          "y",
+          "months",
+          "month",
+          "M",
+          "days",
+          "day",
+          "d",
+          "dates",
+          "date",
+          "D",
+          "hours",
+          "hour",
+          "h",
+          "minutes",
+          "minute",
+          "m",
+          "seconds",
+          "second",
+          "s",
+          "milliseconds",
+          "millisecond",
+          "ms"
+        ], i, property, propertyLen = properties.length;
+        for (i = 0; i < propertyLen; i += 1) {
+          property = properties[i];
+          propertyTest = propertyTest || hasOwnProp(input, property);
+        }
+        return objectTest && propertyTest;
+      }
+      function isNumberOrStringArray(input) {
+        var arrayTest = isArray(input), dataTypeTest = false;
+        if (arrayTest) {
+          dataTypeTest = input.filter(function(item) {
+            return !isNumber(item) && isString(input);
+          }).length === 0;
+        }
+        return arrayTest && dataTypeTest;
+      }
+      function isCalendarSpec(input) {
+        var objectTest = isObject(input) && !isObjectEmpty(input), propertyTest = false, properties = [
+          "sameDay",
+          "nextDay",
+          "lastDay",
+          "nextWeek",
+          "lastWeek",
+          "sameElse"
+        ], i, property;
+        for (i = 0; i < properties.length; i += 1) {
+          property = properties[i];
+          propertyTest = propertyTest || hasOwnProp(input, property);
+        }
+        return objectTest && propertyTest;
+      }
+      function getCalendarFormat(myMoment, now2) {
+        var diff2 = myMoment.diff(now2, "days", true);
+        return diff2 < -6 ? "sameElse" : diff2 < -1 ? "lastWeek" : diff2 < 0 ? "lastDay" : diff2 < 1 ? "sameDay" : diff2 < 2 ? "nextDay" : diff2 < 7 ? "nextWeek" : "sameElse";
+      }
+      function calendar$1(time2, formats) {
+        if (arguments.length === 1) {
+          if (!arguments[0]) {
+            time2 = void 0;
+            formats = void 0;
+          } else if (isMomentInput(arguments[0])) {
+            time2 = arguments[0];
+            formats = void 0;
+          } else if (isCalendarSpec(arguments[0])) {
+            formats = arguments[0];
+            time2 = void 0;
+          }
+        }
+        var now2 = time2 || createLocal(), sod = cloneWithOffset(now2, this).startOf("day"), format2 = hooks.calendarFormat(this, sod) || "sameElse", output = formats && (isFunction(formats[format2]) ? formats[format2].call(this, now2) : formats[format2]);
+        return this.format(
+          output || this.localeData().calendar(format2, this, createLocal(now2))
+        );
+      }
+      function clone() {
+        return new Moment(this);
+      }
+      function isAfter(input, units) {
+        var localInput = isMoment(input) ? input : createLocal(input);
+        if (!(this.isValid() && localInput.isValid())) {
+          return false;
+        }
+        units = normalizeUnits(units) || "millisecond";
+        if (units === "millisecond") {
+          return this.valueOf() > localInput.valueOf();
+        } else {
+          return localInput.valueOf() < this.clone().startOf(units).valueOf();
+        }
+      }
+      function isBefore(input, units) {
+        var localInput = isMoment(input) ? input : createLocal(input);
+        if (!(this.isValid() && localInput.isValid())) {
+          return false;
+        }
+        units = normalizeUnits(units) || "millisecond";
+        if (units === "millisecond") {
+          return this.valueOf() < localInput.valueOf();
+        } else {
+          return this.clone().endOf(units).valueOf() < localInput.valueOf();
+        }
+      }
+      function isBetween(from2, to2, units, inclusivity) {
+        var localFrom = isMoment(from2) ? from2 : createLocal(from2), localTo = isMoment(to2) ? to2 : createLocal(to2);
+        if (!(this.isValid() && localFrom.isValid() && localTo.isValid())) {
+          return false;
+        }
+        inclusivity = inclusivity || "()";
+        return (inclusivity[0] === "(" ? this.isAfter(localFrom, units) : !this.isBefore(localFrom, units)) && (inclusivity[1] === ")" ? this.isBefore(localTo, units) : !this.isAfter(localTo, units));
+      }
+      function isSame(input, units) {
+        var localInput = isMoment(input) ? input : createLocal(input), inputMs;
+        if (!(this.isValid() && localInput.isValid())) {
+          return false;
+        }
+        units = normalizeUnits(units) || "millisecond";
+        if (units === "millisecond") {
+          return this.valueOf() === localInput.valueOf();
+        } else {
+          inputMs = localInput.valueOf();
+          return this.clone().startOf(units).valueOf() <= inputMs && inputMs <= this.clone().endOf(units).valueOf();
+        }
+      }
+      function isSameOrAfter(input, units) {
+        return this.isSame(input, units) || this.isAfter(input, units);
+      }
+      function isSameOrBefore(input, units) {
+        return this.isSame(input, units) || this.isBefore(input, units);
+      }
+      function diff(input, units, asFloat) {
+        var that, zoneDelta, output;
+        if (!this.isValid()) {
+          return NaN;
+        }
+        that = cloneWithOffset(input, this);
+        if (!that.isValid()) {
+          return NaN;
+        }
+        zoneDelta = (that.utcOffset() - this.utcOffset()) * 6e4;
+        units = normalizeUnits(units);
+        switch (units) {
+          case "year":
+            output = monthDiff(this, that) / 12;
+            break;
+          case "month":
+            output = monthDiff(this, that);
+            break;
+          case "quarter":
+            output = monthDiff(this, that) / 3;
+            break;
+          case "second":
+            output = (this - that) / 1e3;
+            break;
+          case "minute":
+            output = (this - that) / 6e4;
+            break;
+          case "hour":
+            output = (this - that) / 36e5;
+            break;
+          case "day":
+            output = (this - that - zoneDelta) / 864e5;
+            break;
+          case "week":
+            output = (this - that - zoneDelta) / 6048e5;
+            break;
+          default:
+            output = this - that;
+        }
+        return asFloat ? output : absFloor(output);
+      }
+      function monthDiff(a, b) {
+        if (a.date() < b.date()) {
+          return -monthDiff(b, a);
+        }
+        var wholeMonthDiff = (b.year() - a.year()) * 12 + (b.month() - a.month()), anchor = a.clone().add(wholeMonthDiff, "months"), anchor2, adjust;
+        if (b - anchor < 0) {
+          anchor2 = a.clone().add(wholeMonthDiff - 1, "months");
+          adjust = (b - anchor) / (anchor - anchor2);
+        } else {
+          anchor2 = a.clone().add(wholeMonthDiff + 1, "months");
+          adjust = (b - anchor) / (anchor2 - anchor);
+        }
+        return -(wholeMonthDiff + adjust) || 0;
+      }
+      hooks.defaultFormat = "YYYY-MM-DDTHH:mm:ssZ";
+      hooks.defaultFormatUtc = "YYYY-MM-DDTHH:mm:ss[Z]";
+      function toString() {
+        return this.clone().locale("en").format("ddd MMM DD YYYY HH:mm:ss [GMT]ZZ");
+      }
+      function toISOString(keepOffset) {
+        if (!this.isValid()) {
+          return null;
+        }
+        var utc = keepOffset !== true, m = utc ? this.clone().utc() : this;
+        if (m.year() < 0 || m.year() > 9999) {
+          return formatMoment(
+            m,
+            utc ? "YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]" : "YYYYYY-MM-DD[T]HH:mm:ss.SSSZ"
+          );
+        }
+        if (isFunction(Date.prototype.toISOString)) {
+          if (utc) {
+            return this.toDate().toISOString();
+          } else {
+            return new Date(this.valueOf() + this.utcOffset() * 60 * 1e3).toISOString().replace("Z", formatMoment(m, "Z"));
+          }
+        }
+        return formatMoment(
+          m,
+          utc ? "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]" : "YYYY-MM-DD[T]HH:mm:ss.SSSZ"
+        );
+      }
+      function inspect() {
+        if (!this.isValid()) {
+          return "moment.invalid(/* " + this._i + " */)";
+        }
+        var func = "moment", zone = "", prefix, year, datetime, suffix;
+        if (!this.isLocal()) {
+          func = this.utcOffset() === 0 ? "moment.utc" : "moment.parseZone";
+          zone = "Z";
+        }
+        prefix = "[" + func + '("]';
+        year = 0 <= this.year() && this.year() <= 9999 ? "YYYY" : "YYYYYY";
+        datetime = "-MM-DD[T]HH:mm:ss.SSS";
+        suffix = zone + '[")]';
+        return this.format(prefix + year + datetime + suffix);
+      }
+      function format(inputString) {
+        if (!inputString) {
+          inputString = this.isUtc() ? hooks.defaultFormatUtc : hooks.defaultFormat;
+        }
+        var output = formatMoment(this, inputString);
+        return this.localeData().postformat(output);
+      }
+      function from(time2, withoutSuffix) {
+        if (this.isValid() && (isMoment(time2) && time2.isValid() || createLocal(time2).isValid())) {
+          return createDuration({ to: this, from: time2 }).locale(this.locale()).humanize(!withoutSuffix);
+        } else {
+          return this.localeData().invalidDate();
+        }
+      }
+      function fromNow(withoutSuffix) {
+        return this.from(createLocal(), withoutSuffix);
+      }
+      function to(time2, withoutSuffix) {
+        if (this.isValid() && (isMoment(time2) && time2.isValid() || createLocal(time2).isValid())) {
+          return createDuration({ from: this, to: time2 }).locale(this.locale()).humanize(!withoutSuffix);
+        } else {
+          return this.localeData().invalidDate();
+        }
+      }
+      function toNow(withoutSuffix) {
+        return this.to(createLocal(), withoutSuffix);
+      }
+      function locale(key) {
+        var newLocaleData;
+        if (key === void 0) {
+          return this._locale._abbr;
+        } else {
+          newLocaleData = getLocale(key);
+          if (newLocaleData != null) {
+            this._locale = newLocaleData;
+          }
+          return this;
+        }
+      }
+      var lang = deprecate(
+        "moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.",
+        function(key) {
+          if (key === void 0) {
+            return this.localeData();
+          } else {
+            return this.locale(key);
+          }
+        }
+      );
+      function localeData() {
+        return this._locale;
+      }
+      var MS_PER_SECOND = 1e3, MS_PER_MINUTE = 60 * MS_PER_SECOND, MS_PER_HOUR = 60 * MS_PER_MINUTE, MS_PER_400_YEARS = (365 * 400 + 97) * 24 * MS_PER_HOUR;
+      function mod$1(dividend, divisor) {
+        return (dividend % divisor + divisor) % divisor;
+      }
+      function localStartOfDate(y, m, d) {
+        if (y < 100 && y >= 0) {
+          return new Date(y + 400, m, d) - MS_PER_400_YEARS;
+        } else {
+          return new Date(y, m, d).valueOf();
+        }
+      }
+      function utcStartOfDate(y, m, d) {
+        if (y < 100 && y >= 0) {
+          return Date.UTC(y + 400, m, d) - MS_PER_400_YEARS;
+        } else {
+          return Date.UTC(y, m, d);
+        }
+      }
+      function startOf(units) {
+        var time2, startOfDate;
+        units = normalizeUnits(units);
+        if (units === void 0 || units === "millisecond" || !this.isValid()) {
+          return this;
+        }
+        startOfDate = this._isUTC ? utcStartOfDate : localStartOfDate;
+        switch (units) {
+          case "year":
+            time2 = startOfDate(this.year(), 0, 1);
+            break;
+          case "quarter":
+            time2 = startOfDate(
+              this.year(),
+              this.month() - this.month() % 3,
+              1
+            );
+            break;
+          case "month":
+            time2 = startOfDate(this.year(), this.month(), 1);
+            break;
+          case "week":
+            time2 = startOfDate(
+              this.year(),
+              this.month(),
+              this.date() - this.weekday()
+            );
+            break;
+          case "isoWeek":
+            time2 = startOfDate(
+              this.year(),
+              this.month(),
+              this.date() - (this.isoWeekday() - 1)
+            );
+            break;
+          case "day":
+          case "date":
+            time2 = startOfDate(this.year(), this.month(), this.date());
+            break;
+          case "hour":
+            time2 = this._d.valueOf();
+            time2 -= mod$1(
+              time2 + (this._isUTC ? 0 : this.utcOffset() * MS_PER_MINUTE),
+              MS_PER_HOUR
+            );
+            break;
+          case "minute":
+            time2 = this._d.valueOf();
+            time2 -= mod$1(time2, MS_PER_MINUTE);
+            break;
+          case "second":
+            time2 = this._d.valueOf();
+            time2 -= mod$1(time2, MS_PER_SECOND);
+            break;
+        }
+        this._d.setTime(time2);
+        hooks.updateOffset(this, true);
+        return this;
+      }
+      function endOf(units) {
+        var time2, startOfDate;
+        units = normalizeUnits(units);
+        if (units === void 0 || units === "millisecond" || !this.isValid()) {
+          return this;
+        }
+        startOfDate = this._isUTC ? utcStartOfDate : localStartOfDate;
+        switch (units) {
+          case "year":
+            time2 = startOfDate(this.year() + 1, 0, 1) - 1;
+            break;
+          case "quarter":
+            time2 = startOfDate(
+              this.year(),
+              this.month() - this.month() % 3 + 3,
+              1
+            ) - 1;
+            break;
+          case "month":
+            time2 = startOfDate(this.year(), this.month() + 1, 1) - 1;
+            break;
+          case "week":
+            time2 = startOfDate(
+              this.year(),
+              this.month(),
+              this.date() - this.weekday() + 7
+            ) - 1;
+            break;
+          case "isoWeek":
+            time2 = startOfDate(
+              this.year(),
+              this.month(),
+              this.date() - (this.isoWeekday() - 1) + 7
+            ) - 1;
+            break;
+          case "day":
+          case "date":
+            time2 = startOfDate(this.year(), this.month(), this.date() + 1) - 1;
+            break;
+          case "hour":
+            time2 = this._d.valueOf();
+            time2 += MS_PER_HOUR - mod$1(
+              time2 + (this._isUTC ? 0 : this.utcOffset() * MS_PER_MINUTE),
+              MS_PER_HOUR
+            ) - 1;
+            break;
+          case "minute":
+            time2 = this._d.valueOf();
+            time2 += MS_PER_MINUTE - mod$1(time2, MS_PER_MINUTE) - 1;
+            break;
+          case "second":
+            time2 = this._d.valueOf();
+            time2 += MS_PER_SECOND - mod$1(time2, MS_PER_SECOND) - 1;
+            break;
+        }
+        this._d.setTime(time2);
+        hooks.updateOffset(this, true);
+        return this;
+      }
+      function valueOf() {
+        return this._d.valueOf() - (this._offset || 0) * 6e4;
+      }
+      function unix() {
+        return Math.floor(this.valueOf() / 1e3);
+      }
+      function toDate() {
+        return new Date(this.valueOf());
+      }
+      function toArray() {
+        var m = this;
+        return [
+          m.year(),
+          m.month(),
+          m.date(),
+          m.hour(),
+          m.minute(),
+          m.second(),
+          m.millisecond()
+        ];
+      }
+      function toObject() {
+        var m = this;
+        return {
+          years: m.year(),
+          months: m.month(),
+          date: m.date(),
+          hours: m.hours(),
+          minutes: m.minutes(),
+          seconds: m.seconds(),
+          milliseconds: m.milliseconds()
+        };
+      }
+      function toJSON() {
+        return this.isValid() ? this.toISOString() : null;
+      }
+      function isValid$2() {
+        return isValid(this);
+      }
+      function parsingFlags() {
+        return extend({}, getParsingFlags(this));
+      }
+      function invalidAt() {
+        return getParsingFlags(this).overflow;
+      }
+      function creationData() {
+        return {
+          input: this._i,
+          format: this._f,
+          locale: this._locale,
+          isUTC: this._isUTC,
+          strict: this._strict
+        };
+      }
+      addFormatToken("N", 0, 0, "eraAbbr");
+      addFormatToken("NN", 0, 0, "eraAbbr");
+      addFormatToken("NNN", 0, 0, "eraAbbr");
+      addFormatToken("NNNN", 0, 0, "eraName");
+      addFormatToken("NNNNN", 0, 0, "eraNarrow");
+      addFormatToken("y", ["y", 1], "yo", "eraYear");
+      addFormatToken("y", ["yy", 2], 0, "eraYear");
+      addFormatToken("y", ["yyy", 3], 0, "eraYear");
+      addFormatToken("y", ["yyyy", 4], 0, "eraYear");
+      addRegexToken("N", matchEraAbbr);
+      addRegexToken("NN", matchEraAbbr);
+      addRegexToken("NNN", matchEraAbbr);
+      addRegexToken("NNNN", matchEraName);
+      addRegexToken("NNNNN", matchEraNarrow);
+      addParseToken(
+        ["N", "NN", "NNN", "NNNN", "NNNNN"],
+        function(input, array, config, token2) {
+          var era = config._locale.erasParse(input, token2, config._strict);
+          if (era) {
+            getParsingFlags(config).era = era;
+          } else {
+            getParsingFlags(config).invalidEra = input;
+          }
+        }
+      );
+      addRegexToken("y", matchUnsigned);
+      addRegexToken("yy", matchUnsigned);
+      addRegexToken("yyy", matchUnsigned);
+      addRegexToken("yyyy", matchUnsigned);
+      addRegexToken("yo", matchEraYearOrdinal);
+      addParseToken(["y", "yy", "yyy", "yyyy"], YEAR);
+      addParseToken(["yo"], function(input, array, config, token2) {
+        var match;
+        if (config._locale._eraYearOrdinalRegex) {
+          match = input.match(config._locale._eraYearOrdinalRegex);
+        }
+        if (config._locale.eraYearOrdinalParse) {
+          array[YEAR] = config._locale.eraYearOrdinalParse(input, match);
+        } else {
+          array[YEAR] = parseInt(input, 10);
+        }
+      });
+      function localeEras(m, format2) {
+        var i, l, date2, eras = this._eras || getLocale("en")._eras;
+        for (i = 0, l = eras.length; i < l; ++i) {
+          switch (typeof eras[i].since) {
+            case "string":
+              date2 = hooks(eras[i].since).startOf("day");
+              eras[i].since = date2.valueOf();
+              break;
+          }
+          switch (typeof eras[i].until) {
+            case "undefined":
+              eras[i].until = Infinity;
+              break;
+            case "string":
+              date2 = hooks(eras[i].until).startOf("day").valueOf();
+              eras[i].until = date2.valueOf();
+              break;
+          }
+        }
+        return eras;
+      }
+      function localeErasParse(eraName, format2, strict) {
+        var i, l, eras = this.eras(), name, abbr, narrow;
+        eraName = eraName.toUpperCase();
+        for (i = 0, l = eras.length; i < l; ++i) {
+          name = eras[i].name.toUpperCase();
+          abbr = eras[i].abbr.toUpperCase();
+          narrow = eras[i].narrow.toUpperCase();
+          if (strict) {
+            switch (format2) {
+              case "N":
+              case "NN":
+              case "NNN":
+                if (abbr === eraName) {
+                  return eras[i];
+                }
+                break;
+              case "NNNN":
+                if (name === eraName) {
+                  return eras[i];
+                }
+                break;
+              case "NNNNN":
+                if (narrow === eraName) {
+                  return eras[i];
+                }
+                break;
+            }
+          } else if ([name, abbr, narrow].indexOf(eraName) >= 0) {
+            return eras[i];
+          }
+        }
+      }
+      function localeErasConvertYear(era, year) {
+        var dir = era.since <= era.until ? 1 : -1;
+        if (year === void 0) {
+          return hooks(era.since).year();
+        } else {
+          return hooks(era.since).year() + (year - era.offset) * dir;
+        }
+      }
+      function getEraName() {
+        var i, l, val, eras = this.localeData().eras();
+        for (i = 0, l = eras.length; i < l; ++i) {
+          val = this.clone().startOf("day").valueOf();
+          if (eras[i].since <= val && val <= eras[i].until) {
+            return eras[i].name;
+          }
+          if (eras[i].until <= val && val <= eras[i].since) {
+            return eras[i].name;
+          }
+        }
+        return "";
+      }
+      function getEraNarrow() {
+        var i, l, val, eras = this.localeData().eras();
+        for (i = 0, l = eras.length; i < l; ++i) {
+          val = this.clone().startOf("day").valueOf();
+          if (eras[i].since <= val && val <= eras[i].until) {
+            return eras[i].narrow;
+          }
+          if (eras[i].until <= val && val <= eras[i].since) {
+            return eras[i].narrow;
+          }
+        }
+        return "";
+      }
+      function getEraAbbr() {
+        var i, l, val, eras = this.localeData().eras();
+        for (i = 0, l = eras.length; i < l; ++i) {
+          val = this.clone().startOf("day").valueOf();
+          if (eras[i].since <= val && val <= eras[i].until) {
+            return eras[i].abbr;
+          }
+          if (eras[i].until <= val && val <= eras[i].since) {
+            return eras[i].abbr;
+          }
+        }
+        return "";
+      }
+      function getEraYear() {
+        var i, l, dir, val, eras = this.localeData().eras();
+        for (i = 0, l = eras.length; i < l; ++i) {
+          dir = eras[i].since <= eras[i].until ? 1 : -1;
+          val = this.clone().startOf("day").valueOf();
+          if (eras[i].since <= val && val <= eras[i].until || eras[i].until <= val && val <= eras[i].since) {
+            return (this.year() - hooks(eras[i].since).year()) * dir + eras[i].offset;
+          }
+        }
+        return this.year();
+      }
+      function erasNameRegex(isStrict) {
+        if (!hasOwnProp(this, "_erasNameRegex")) {
+          computeErasParse.call(this);
+        }
+        return isStrict ? this._erasNameRegex : this._erasRegex;
+      }
+      function erasAbbrRegex(isStrict) {
+        if (!hasOwnProp(this, "_erasAbbrRegex")) {
+          computeErasParse.call(this);
+        }
+        return isStrict ? this._erasAbbrRegex : this._erasRegex;
+      }
+      function erasNarrowRegex(isStrict) {
+        if (!hasOwnProp(this, "_erasNarrowRegex")) {
+          computeErasParse.call(this);
+        }
+        return isStrict ? this._erasNarrowRegex : this._erasRegex;
+      }
+      function matchEraAbbr(isStrict, locale2) {
+        return locale2.erasAbbrRegex(isStrict);
+      }
+      function matchEraName(isStrict, locale2) {
+        return locale2.erasNameRegex(isStrict);
+      }
+      function matchEraNarrow(isStrict, locale2) {
+        return locale2.erasNarrowRegex(isStrict);
+      }
+      function matchEraYearOrdinal(isStrict, locale2) {
+        return locale2._eraYearOrdinalRegex || matchUnsigned;
+      }
+      function computeErasParse() {
+        var abbrPieces = [], namePieces = [], narrowPieces = [], mixedPieces = [], i, l, eras = this.eras();
+        for (i = 0, l = eras.length; i < l; ++i) {
+          namePieces.push(regexEscape(eras[i].name));
+          abbrPieces.push(regexEscape(eras[i].abbr));
+          narrowPieces.push(regexEscape(eras[i].narrow));
+          mixedPieces.push(regexEscape(eras[i].name));
+          mixedPieces.push(regexEscape(eras[i].abbr));
+          mixedPieces.push(regexEscape(eras[i].narrow));
+        }
+        this._erasRegex = new RegExp("^(" + mixedPieces.join("|") + ")", "i");
+        this._erasNameRegex = new RegExp("^(" + namePieces.join("|") + ")", "i");
+        this._erasAbbrRegex = new RegExp("^(" + abbrPieces.join("|") + ")", "i");
+        this._erasNarrowRegex = new RegExp(
+          "^(" + narrowPieces.join("|") + ")",
+          "i"
+        );
+      }
+      addFormatToken(0, ["gg", 2], 0, function() {
+        return this.weekYear() % 100;
+      });
+      addFormatToken(0, ["GG", 2], 0, function() {
+        return this.isoWeekYear() % 100;
+      });
+      function addWeekYearFormatToken(token2, getter) {
+        addFormatToken(0, [token2, token2.length], 0, getter);
+      }
+      addWeekYearFormatToken("gggg", "weekYear");
+      addWeekYearFormatToken("ggggg", "weekYear");
+      addWeekYearFormatToken("GGGG", "isoWeekYear");
+      addWeekYearFormatToken("GGGGG", "isoWeekYear");
+      addUnitAlias("weekYear", "gg");
+      addUnitAlias("isoWeekYear", "GG");
+      addUnitPriority("weekYear", 1);
+      addUnitPriority("isoWeekYear", 1);
+      addRegexToken("G", matchSigned);
+      addRegexToken("g", matchSigned);
+      addRegexToken("GG", match1to2, match2);
+      addRegexToken("gg", match1to2, match2);
+      addRegexToken("GGGG", match1to4, match4);
+      addRegexToken("gggg", match1to4, match4);
+      addRegexToken("GGGGG", match1to6, match6);
+      addRegexToken("ggggg", match1to6, match6);
+      addWeekParseToken(
+        ["gggg", "ggggg", "GGGG", "GGGGG"],
+        function(input, week, config, token2) {
+          week[token2.substr(0, 2)] = toInt(input);
+        }
+      );
+      addWeekParseToken(["gg", "GG"], function(input, week, config, token2) {
+        week[token2] = hooks.parseTwoDigitYear(input);
+      });
+      function getSetWeekYear(input) {
+        return getSetWeekYearHelper.call(
+          this,
+          input,
+          this.week(),
+          this.weekday(),
+          this.localeData()._week.dow,
+          this.localeData()._week.doy
+        );
+      }
+      function getSetISOWeekYear(input) {
+        return getSetWeekYearHelper.call(
+          this,
+          input,
+          this.isoWeek(),
+          this.isoWeekday(),
+          1,
+          4
+        );
+      }
+      function getISOWeeksInYear() {
+        return weeksInYear(this.year(), 1, 4);
+      }
+      function getISOWeeksInISOWeekYear() {
+        return weeksInYear(this.isoWeekYear(), 1, 4);
+      }
+      function getWeeksInYear() {
+        var weekInfo = this.localeData()._week;
+        return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
+      }
+      function getWeeksInWeekYear() {
+        var weekInfo = this.localeData()._week;
+        return weeksInYear(this.weekYear(), weekInfo.dow, weekInfo.doy);
+      }
+      function getSetWeekYearHelper(input, week, weekday, dow, doy) {
+        var weeksTarget;
+        if (input == null) {
+          return weekOfYear(this, dow, doy).year;
+        } else {
+          weeksTarget = weeksInYear(input, dow, doy);
+          if (week > weeksTarget) {
+            week = weeksTarget;
+          }
+          return setWeekAll.call(this, input, week, weekday, dow, doy);
+        }
+      }
+      function setWeekAll(weekYear, week, weekday, dow, doy) {
+        var dayOfYearData = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy), date2 = createUTCDate(dayOfYearData.year, 0, dayOfYearData.dayOfYear);
+        this.year(date2.getUTCFullYear());
+        this.month(date2.getUTCMonth());
+        this.date(date2.getUTCDate());
+        return this;
+      }
+      addFormatToken("Q", 0, "Qo", "quarter");
+      addUnitAlias("quarter", "Q");
+      addUnitPriority("quarter", 7);
+      addRegexToken("Q", match1);
+      addParseToken("Q", function(input, array) {
+        array[MONTH] = (toInt(input) - 1) * 3;
+      });
+      function getSetQuarter(input) {
+        return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
+      }
+      addFormatToken("D", ["DD", 2], "Do", "date");
+      addUnitAlias("date", "D");
+      addUnitPriority("date", 9);
+      addRegexToken("D", match1to2);
+      addRegexToken("DD", match1to2, match2);
+      addRegexToken("Do", function(isStrict, locale2) {
+        return isStrict ? locale2._dayOfMonthOrdinalParse || locale2._ordinalParse : locale2._dayOfMonthOrdinalParseLenient;
+      });
+      addParseToken(["D", "DD"], DATE);
+      addParseToken("Do", function(input, array) {
+        array[DATE] = toInt(input.match(match1to2)[0]);
+      });
+      var getSetDayOfMonth = makeGetSet("Date", true);
+      addFormatToken("DDD", ["DDDD", 3], "DDDo", "dayOfYear");
+      addUnitAlias("dayOfYear", "DDD");
+      addUnitPriority("dayOfYear", 4);
+      addRegexToken("DDD", match1to3);
+      addRegexToken("DDDD", match3);
+      addParseToken(["DDD", "DDDD"], function(input, array, config) {
+        config._dayOfYear = toInt(input);
+      });
+      function getSetDayOfYear(input) {
+        var dayOfYear = Math.round(
+          (this.clone().startOf("day") - this.clone().startOf("year")) / 864e5
+        ) + 1;
+        return input == null ? dayOfYear : this.add(input - dayOfYear, "d");
+      }
+      addFormatToken("m", ["mm", 2], 0, "minute");
+      addUnitAlias("minute", "m");
+      addUnitPriority("minute", 14);
+      addRegexToken("m", match1to2);
+      addRegexToken("mm", match1to2, match2);
+      addParseToken(["m", "mm"], MINUTE);
+      var getSetMinute = makeGetSet("Minutes", false);
+      addFormatToken("s", ["ss", 2], 0, "second");
+      addUnitAlias("second", "s");
+      addUnitPriority("second", 15);
+      addRegexToken("s", match1to2);
+      addRegexToken("ss", match1to2, match2);
+      addParseToken(["s", "ss"], SECOND);
+      var getSetSecond = makeGetSet("Seconds", false);
+      addFormatToken("S", 0, 0, function() {
+        return ~~(this.millisecond() / 100);
+      });
+      addFormatToken(0, ["SS", 2], 0, function() {
+        return ~~(this.millisecond() / 10);
+      });
+      addFormatToken(0, ["SSS", 3], 0, "millisecond");
+      addFormatToken(0, ["SSSS", 4], 0, function() {
+        return this.millisecond() * 10;
+      });
+      addFormatToken(0, ["SSSSS", 5], 0, function() {
+        return this.millisecond() * 100;
+      });
+      addFormatToken(0, ["SSSSSS", 6], 0, function() {
+        return this.millisecond() * 1e3;
+      });
+      addFormatToken(0, ["SSSSSSS", 7], 0, function() {
+        return this.millisecond() * 1e4;
+      });
+      addFormatToken(0, ["SSSSSSSS", 8], 0, function() {
+        return this.millisecond() * 1e5;
+      });
+      addFormatToken(0, ["SSSSSSSSS", 9], 0, function() {
+        return this.millisecond() * 1e6;
+      });
+      addUnitAlias("millisecond", "ms");
+      addUnitPriority("millisecond", 16);
+      addRegexToken("S", match1to3, match1);
+      addRegexToken("SS", match1to3, match2);
+      addRegexToken("SSS", match1to3, match3);
+      var token, getSetMillisecond;
+      for (token = "SSSS"; token.length <= 9; token += "S") {
+        addRegexToken(token, matchUnsigned);
+      }
+      function parseMs(input, array) {
+        array[MILLISECOND] = toInt(("0." + input) * 1e3);
+      }
+      for (token = "S"; token.length <= 9; token += "S") {
+        addParseToken(token, parseMs);
+      }
+      getSetMillisecond = makeGetSet("Milliseconds", false);
+      addFormatToken("z", 0, 0, "zoneAbbr");
+      addFormatToken("zz", 0, 0, "zoneName");
+      function getZoneAbbr() {
+        return this._isUTC ? "UTC" : "";
+      }
+      function getZoneName() {
+        return this._isUTC ? "Coordinated Universal Time" : "";
+      }
+      var proto = Moment.prototype;
+      proto.add = add;
+      proto.calendar = calendar$1;
+      proto.clone = clone;
+      proto.diff = diff;
+      proto.endOf = endOf;
+      proto.format = format;
+      proto.from = from;
+      proto.fromNow = fromNow;
+      proto.to = to;
+      proto.toNow = toNow;
+      proto.get = stringGet;
+      proto.invalidAt = invalidAt;
+      proto.isAfter = isAfter;
+      proto.isBefore = isBefore;
+      proto.isBetween = isBetween;
+      proto.isSame = isSame;
+      proto.isSameOrAfter = isSameOrAfter;
+      proto.isSameOrBefore = isSameOrBefore;
+      proto.isValid = isValid$2;
+      proto.lang = lang;
+      proto.locale = locale;
+      proto.localeData = localeData;
+      proto.max = prototypeMax;
+      proto.min = prototypeMin;
+      proto.parsingFlags = parsingFlags;
+      proto.set = stringSet;
+      proto.startOf = startOf;
+      proto.subtract = subtract;
+      proto.toArray = toArray;
+      proto.toObject = toObject;
+      proto.toDate = toDate;
+      proto.toISOString = toISOString;
+      proto.inspect = inspect;
+      if (typeof Symbol !== "undefined" && Symbol.for != null) {
+        proto[Symbol.for("nodejs.util.inspect.custom")] = function() {
+          return "Moment<" + this.format() + ">";
+        };
+      }
+      proto.toJSON = toJSON;
+      proto.toString = toString;
+      proto.unix = unix;
+      proto.valueOf = valueOf;
+      proto.creationData = creationData;
+      proto.eraName = getEraName;
+      proto.eraNarrow = getEraNarrow;
+      proto.eraAbbr = getEraAbbr;
+      proto.eraYear = getEraYear;
+      proto.year = getSetYear;
+      proto.isLeapYear = getIsLeapYear;
+      proto.weekYear = getSetWeekYear;
+      proto.isoWeekYear = getSetISOWeekYear;
+      proto.quarter = proto.quarters = getSetQuarter;
+      proto.month = getSetMonth;
+      proto.daysInMonth = getDaysInMonth;
+      proto.week = proto.weeks = getSetWeek;
+      proto.isoWeek = proto.isoWeeks = getSetISOWeek;
+      proto.weeksInYear = getWeeksInYear;
+      proto.weeksInWeekYear = getWeeksInWeekYear;
+      proto.isoWeeksInYear = getISOWeeksInYear;
+      proto.isoWeeksInISOWeekYear = getISOWeeksInISOWeekYear;
+      proto.date = getSetDayOfMonth;
+      proto.day = proto.days = getSetDayOfWeek;
+      proto.weekday = getSetLocaleDayOfWeek;
+      proto.isoWeekday = getSetISODayOfWeek;
+      proto.dayOfYear = getSetDayOfYear;
+      proto.hour = proto.hours = getSetHour;
+      proto.minute = proto.minutes = getSetMinute;
+      proto.second = proto.seconds = getSetSecond;
+      proto.millisecond = proto.milliseconds = getSetMillisecond;
+      proto.utcOffset = getSetOffset;
+      proto.utc = setOffsetToUTC;
+      proto.local = setOffsetToLocal;
+      proto.parseZone = setOffsetToParsedOffset;
+      proto.hasAlignedHourOffset = hasAlignedHourOffset;
+      proto.isDST = isDaylightSavingTime;
+      proto.isLocal = isLocal;
+      proto.isUtcOffset = isUtcOffset;
+      proto.isUtc = isUtc;
+      proto.isUTC = isUtc;
+      proto.zoneAbbr = getZoneAbbr;
+      proto.zoneName = getZoneName;
+      proto.dates = deprecate(
+        "dates accessor is deprecated. Use date instead.",
+        getSetDayOfMonth
+      );
+      proto.months = deprecate(
+        "months accessor is deprecated. Use month instead",
+        getSetMonth
+      );
+      proto.years = deprecate(
+        "years accessor is deprecated. Use year instead",
+        getSetYear
+      );
+      proto.zone = deprecate(
+        "moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/",
+        getSetZone
+      );
+      proto.isDSTShifted = deprecate(
+        "isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information",
+        isDaylightSavingTimeShifted
+      );
+      function createUnix(input) {
+        return createLocal(input * 1e3);
+      }
+      function createInZone() {
+        return createLocal.apply(null, arguments).parseZone();
+      }
+      function preParsePostFormat(string) {
+        return string;
+      }
+      var proto$1 = Locale.prototype;
+      proto$1.calendar = calendar;
+      proto$1.longDateFormat = longDateFormat;
+      proto$1.invalidDate = invalidDate;
+      proto$1.ordinal = ordinal;
+      proto$1.preparse = preParsePostFormat;
+      proto$1.postformat = preParsePostFormat;
+      proto$1.relativeTime = relativeTime;
+      proto$1.pastFuture = pastFuture;
+      proto$1.set = set2;
+      proto$1.eras = localeEras;
+      proto$1.erasParse = localeErasParse;
+      proto$1.erasConvertYear = localeErasConvertYear;
+      proto$1.erasAbbrRegex = erasAbbrRegex;
+      proto$1.erasNameRegex = erasNameRegex;
+      proto$1.erasNarrowRegex = erasNarrowRegex;
+      proto$1.months = localeMonths;
+      proto$1.monthsShort = localeMonthsShort;
+      proto$1.monthsParse = localeMonthsParse;
+      proto$1.monthsRegex = monthsRegex;
+      proto$1.monthsShortRegex = monthsShortRegex;
+      proto$1.week = localeWeek;
+      proto$1.firstDayOfYear = localeFirstDayOfYear;
+      proto$1.firstDayOfWeek = localeFirstDayOfWeek;
+      proto$1.weekdays = localeWeekdays;
+      proto$1.weekdaysMin = localeWeekdaysMin;
+      proto$1.weekdaysShort = localeWeekdaysShort;
+      proto$1.weekdaysParse = localeWeekdaysParse;
+      proto$1.weekdaysRegex = weekdaysRegex;
+      proto$1.weekdaysShortRegex = weekdaysShortRegex;
+      proto$1.weekdaysMinRegex = weekdaysMinRegex;
+      proto$1.isPM = localeIsPM;
+      proto$1.meridiem = localeMeridiem;
+      function get$1(format2, index, field, setter) {
+        var locale2 = getLocale(), utc = createUTC().set(setter, index);
+        return locale2[field](utc, format2);
+      }
+      function listMonthsImpl(format2, index, field) {
+        if (isNumber(format2)) {
+          index = format2;
+          format2 = void 0;
+        }
+        format2 = format2 || "";
+        if (index != null) {
+          return get$1(format2, index, field, "month");
+        }
+        var i, out = [];
+        for (i = 0; i < 12; i++) {
+          out[i] = get$1(format2, i, field, "month");
+        }
+        return out;
+      }
+      function listWeekdaysImpl(localeSorted, format2, index, field) {
+        if (typeof localeSorted === "boolean") {
+          if (isNumber(format2)) {
+            index = format2;
+            format2 = void 0;
+          }
+          format2 = format2 || "";
+        } else {
+          format2 = localeSorted;
+          index = format2;
+          localeSorted = false;
+          if (isNumber(format2)) {
+            index = format2;
+            format2 = void 0;
+          }
+          format2 = format2 || "";
+        }
+        var locale2 = getLocale(), shift = localeSorted ? locale2._week.dow : 0, i, out = [];
+        if (index != null) {
+          return get$1(format2, (index + shift) % 7, field, "day");
+        }
+        for (i = 0; i < 7; i++) {
+          out[i] = get$1(format2, (i + shift) % 7, field, "day");
+        }
+        return out;
+      }
+      function listMonths(format2, index) {
+        return listMonthsImpl(format2, index, "months");
+      }
+      function listMonthsShort(format2, index) {
+        return listMonthsImpl(format2, index, "monthsShort");
+      }
+      function listWeekdays(localeSorted, format2, index) {
+        return listWeekdaysImpl(localeSorted, format2, index, "weekdays");
+      }
+      function listWeekdaysShort(localeSorted, format2, index) {
+        return listWeekdaysImpl(localeSorted, format2, index, "weekdaysShort");
+      }
+      function listWeekdaysMin(localeSorted, format2, index) {
+        return listWeekdaysImpl(localeSorted, format2, index, "weekdaysMin");
+      }
+      getSetGlobalLocale("en", {
+        eras: [
+          {
+            since: "0001-01-01",
+            until: Infinity,
+            offset: 1,
+            name: "Anno Domini",
+            narrow: "AD",
+            abbr: "AD"
+          },
+          {
+            since: "0000-12-31",
+            until: -Infinity,
+            offset: 1,
+            name: "Before Christ",
+            narrow: "BC",
+            abbr: "BC"
+          }
+        ],
+        dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/,
+        ordinal: function(number) {
+          var b = number % 10, output = toInt(number % 100 / 10) === 1 ? "th" : b === 1 ? "st" : b === 2 ? "nd" : b === 3 ? "rd" : "th";
+          return number + output;
+        }
+      });
+      hooks.lang = deprecate(
+        "moment.lang is deprecated. Use moment.locale instead.",
+        getSetGlobalLocale
+      );
+      hooks.langData = deprecate(
+        "moment.langData is deprecated. Use moment.localeData instead.",
+        getLocale
+      );
+      var mathAbs = Math.abs;
+      function abs() {
+        var data = this._data;
+        this._milliseconds = mathAbs(this._milliseconds);
+        this._days = mathAbs(this._days);
+        this._months = mathAbs(this._months);
+        data.milliseconds = mathAbs(data.milliseconds);
+        data.seconds = mathAbs(data.seconds);
+        data.minutes = mathAbs(data.minutes);
+        data.hours = mathAbs(data.hours);
+        data.months = mathAbs(data.months);
+        data.years = mathAbs(data.years);
+        return this;
+      }
+      function addSubtract$1(duration, input, value, direction) {
+        var other = createDuration(input, value);
+        duration._milliseconds += direction * other._milliseconds;
+        duration._days += direction * other._days;
+        duration._months += direction * other._months;
+        return duration._bubble();
+      }
+      function add$1(input, value) {
+        return addSubtract$1(this, input, value, 1);
+      }
+      function subtract$1(input, value) {
+        return addSubtract$1(this, input, value, -1);
+      }
+      function absCeil(number) {
+        if (number < 0) {
+          return Math.floor(number);
+        } else {
+          return Math.ceil(number);
+        }
+      }
+      function bubble2() {
+        var milliseconds2 = this._milliseconds, days2 = this._days, months2 = this._months, data = this._data, seconds2, minutes3, hours3, years2, monthsFromDays;
+        if (!(milliseconds2 >= 0 && days2 >= 0 && months2 >= 0 || milliseconds2 <= 0 && days2 <= 0 && months2 <= 0)) {
+          milliseconds2 += absCeil(monthsToDays(months2) + days2) * 864e5;
+          days2 = 0;
+          months2 = 0;
+        }
+        data.milliseconds = milliseconds2 % 1e3;
+        seconds2 = absFloor(milliseconds2 / 1e3);
+        data.seconds = seconds2 % 60;
+        minutes3 = absFloor(seconds2 / 60);
+        data.minutes = minutes3 % 60;
+        hours3 = absFloor(minutes3 / 60);
+        data.hours = hours3 % 24;
+        days2 += absFloor(hours3 / 24);
+        monthsFromDays = absFloor(daysToMonths(days2));
+        months2 += monthsFromDays;
+        days2 -= absCeil(monthsToDays(monthsFromDays));
+        years2 = absFloor(months2 / 12);
+        months2 %= 12;
+        data.days = days2;
+        data.months = months2;
+        data.years = years2;
+        return this;
+      }
+      function daysToMonths(days2) {
+        return days2 * 4800 / 146097;
+      }
+      function monthsToDays(months2) {
+        return months2 * 146097 / 4800;
+      }
+      function as(units) {
+        if (!this.isValid()) {
+          return NaN;
+        }
+        var days2, months2, milliseconds2 = this._milliseconds;
+        units = normalizeUnits(units);
+        if (units === "month" || units === "quarter" || units === "year") {
+          days2 = this._days + milliseconds2 / 864e5;
+          months2 = this._months + daysToMonths(days2);
+          switch (units) {
+            case "month":
+              return months2;
+            case "quarter":
+              return months2 / 3;
+            case "year":
+              return months2 / 12;
+          }
+        } else {
+          days2 = this._days + Math.round(monthsToDays(this._months));
+          switch (units) {
+            case "week":
+              return days2 / 7 + milliseconds2 / 6048e5;
+            case "day":
+              return days2 + milliseconds2 / 864e5;
+            case "hour":
+              return days2 * 24 + milliseconds2 / 36e5;
+            case "minute":
+              return days2 * 1440 + milliseconds2 / 6e4;
+            case "second":
+              return days2 * 86400 + milliseconds2 / 1e3;
+            case "millisecond":
+              return Math.floor(days2 * 864e5) + milliseconds2;
+            default:
+              throw new Error("Unknown unit " + units);
+          }
+        }
+      }
+      function valueOf$1() {
+        if (!this.isValid()) {
+          return NaN;
+        }
+        return this._milliseconds + this._days * 864e5 + this._months % 12 * 2592e6 + toInt(this._months / 12) * 31536e6;
+      }
+      function makeAs(alias) {
+        return function() {
+          return this.as(alias);
+        };
+      }
+      var asMilliseconds = makeAs("ms"), asSeconds = makeAs("s"), asMinutes = makeAs("m"), asHours = makeAs("h"), asDays = makeAs("d"), asWeeks = makeAs("w"), asMonths = makeAs("M"), asQuarters = makeAs("Q"), asYears = makeAs("y");
+      function clone$1() {
+        return createDuration(this);
+      }
+      function get$2(units) {
+        units = normalizeUnits(units);
+        return this.isValid() ? this[units + "s"]() : NaN;
+      }
+      function makeGetter(name) {
+        return function() {
+          return this.isValid() ? this._data[name] : NaN;
+        };
+      }
+      var milliseconds = makeGetter("milliseconds"), seconds = makeGetter("seconds"), minutes2 = makeGetter("minutes"), hours2 = makeGetter("hours"), days = makeGetter("days"), months = makeGetter("months"), years = makeGetter("years");
+      function weeks() {
+        return absFloor(this.days() / 7);
+      }
+      var round = Math.round, thresholds = {
+        ss: 44,
+        // a few seconds to seconds
+        s: 45,
+        // seconds to minute
+        m: 45,
+        // minutes to hour
+        h: 22,
+        // hours to day
+        d: 26,
+        // days to month/week
+        w: null,
+        // weeks to month
+        M: 11
+        // months to year
+      };
+      function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale2) {
+        return locale2.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
+      }
+      function relativeTime$1(posNegDuration, withoutSuffix, thresholds2, locale2) {
+        var duration = createDuration(posNegDuration).abs(), seconds2 = round(duration.as("s")), minutes3 = round(duration.as("m")), hours3 = round(duration.as("h")), days2 = round(duration.as("d")), months2 = round(duration.as("M")), weeks2 = round(duration.as("w")), years2 = round(duration.as("y")), a = seconds2 <= thresholds2.ss && ["s", seconds2] || seconds2 < thresholds2.s && ["ss", seconds2] || minutes3 <= 1 && ["m"] || minutes3 < thresholds2.m && ["mm", minutes3] || hours3 <= 1 && ["h"] || hours3 < thresholds2.h && ["hh", hours3] || days2 <= 1 && ["d"] || days2 < thresholds2.d && ["dd", days2];
+        if (thresholds2.w != null) {
+          a = a || weeks2 <= 1 && ["w"] || weeks2 < thresholds2.w && ["ww", weeks2];
+        }
+        a = a || months2 <= 1 && ["M"] || months2 < thresholds2.M && ["MM", months2] || years2 <= 1 && ["y"] || ["yy", years2];
+        a[2] = withoutSuffix;
+        a[3] = +posNegDuration > 0;
+        a[4] = locale2;
+        return substituteTimeAgo.apply(null, a);
+      }
+      function getSetRelativeTimeRounding(roundingFunction) {
+        if (roundingFunction === void 0) {
+          return round;
+        }
+        if (typeof roundingFunction === "function") {
+          round = roundingFunction;
+          return true;
+        }
+        return false;
+      }
+      function getSetRelativeTimeThreshold(threshold, limit) {
+        if (thresholds[threshold] === void 0) {
+          return false;
+        }
+        if (limit === void 0) {
+          return thresholds[threshold];
+        }
+        thresholds[threshold] = limit;
+        if (threshold === "s") {
+          thresholds.ss = limit - 1;
+        }
+        return true;
+      }
+      function humanize(argWithSuffix, argThresholds) {
+        if (!this.isValid()) {
+          return this.localeData().invalidDate();
+        }
+        var withSuffix = false, th = thresholds, locale2, output;
+        if (typeof argWithSuffix === "object") {
+          argThresholds = argWithSuffix;
+          argWithSuffix = false;
+        }
+        if (typeof argWithSuffix === "boolean") {
+          withSuffix = argWithSuffix;
+        }
+        if (typeof argThresholds === "object") {
+          th = Object.assign({}, thresholds, argThresholds);
+          if (argThresholds.s != null && argThresholds.ss == null) {
+            th.ss = argThresholds.s - 1;
+          }
+        }
+        locale2 = this.localeData();
+        output = relativeTime$1(this, !withSuffix, th, locale2);
+        if (withSuffix) {
+          output = locale2.pastFuture(+this, output);
+        }
+        return locale2.postformat(output);
+      }
+      var abs$1 = Math.abs;
+      function sign(x) {
+        return (x > 0) - (x < 0) || +x;
+      }
+      function toISOString$1() {
+        if (!this.isValid()) {
+          return this.localeData().invalidDate();
+        }
+        var seconds2 = abs$1(this._milliseconds) / 1e3, days2 = abs$1(this._days), months2 = abs$1(this._months), minutes3, hours3, years2, s, total = this.asSeconds(), totalSign, ymSign, daysSign, hmsSign;
+        if (!total) {
+          return "P0D";
+        }
+        minutes3 = absFloor(seconds2 / 60);
+        hours3 = absFloor(minutes3 / 60);
+        seconds2 %= 60;
+        minutes3 %= 60;
+        years2 = absFloor(months2 / 12);
+        months2 %= 12;
+        s = seconds2 ? seconds2.toFixed(3).replace(/\.?0+$/, "") : "";
+        totalSign = total < 0 ? "-" : "";
+        ymSign = sign(this._months) !== sign(total) ? "-" : "";
+        daysSign = sign(this._days) !== sign(total) ? "-" : "";
+        hmsSign = sign(this._milliseconds) !== sign(total) ? "-" : "";
+        return totalSign + "P" + (years2 ? ymSign + years2 + "Y" : "") + (months2 ? ymSign + months2 + "M" : "") + (days2 ? daysSign + days2 + "D" : "") + (hours3 || minutes3 || seconds2 ? "T" : "") + (hours3 ? hmsSign + hours3 + "H" : "") + (minutes3 ? hmsSign + minutes3 + "M" : "") + (seconds2 ? hmsSign + s + "S" : "");
+      }
+      var proto$2 = Duration.prototype;
+      proto$2.isValid = isValid$1;
+      proto$2.abs = abs;
+      proto$2.add = add$1;
+      proto$2.subtract = subtract$1;
+      proto$2.as = as;
+      proto$2.asMilliseconds = asMilliseconds;
+      proto$2.asSeconds = asSeconds;
+      proto$2.asMinutes = asMinutes;
+      proto$2.asHours = asHours;
+      proto$2.asDays = asDays;
+      proto$2.asWeeks = asWeeks;
+      proto$2.asMonths = asMonths;
+      proto$2.asQuarters = asQuarters;
+      proto$2.asYears = asYears;
+      proto$2.valueOf = valueOf$1;
+      proto$2._bubble = bubble2;
+      proto$2.clone = clone$1;
+      proto$2.get = get$2;
+      proto$2.milliseconds = milliseconds;
+      proto$2.seconds = seconds;
+      proto$2.minutes = minutes2;
+      proto$2.hours = hours2;
+      proto$2.days = days;
+      proto$2.weeks = weeks;
+      proto$2.months = months;
+      proto$2.years = years;
+      proto$2.humanize = humanize;
+      proto$2.toISOString = toISOString$1;
+      proto$2.toString = toISOString$1;
+      proto$2.toJSON = toISOString$1;
+      proto$2.locale = locale;
+      proto$2.localeData = localeData;
+      proto$2.toIsoString = deprecate(
+        "toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)",
+        toISOString$1
+      );
+      proto$2.lang = lang;
+      addFormatToken("X", 0, 0, "unix");
+      addFormatToken("x", 0, 0, "valueOf");
+      addRegexToken("x", matchSigned);
+      addRegexToken("X", matchTimestamp);
+      addParseToken("X", function(input, array, config) {
+        config._d = new Date(parseFloat(input) * 1e3);
+      });
+      addParseToken("x", function(input, array, config) {
+        config._d = new Date(toInt(input));
+      });
+      hooks.version = "2.29.4";
+      setHookCallback(createLocal);
+      hooks.fn = proto;
+      hooks.min = min;
+      hooks.max = max;
+      hooks.now = now;
+      hooks.utc = createUTC;
+      hooks.unix = createUnix;
+      hooks.months = listMonths;
+      hooks.isDate = isDate;
+      hooks.locale = getSetGlobalLocale;
+      hooks.invalid = createInvalid;
+      hooks.duration = createDuration;
+      hooks.isMoment = isMoment;
+      hooks.weekdays = listWeekdays;
+      hooks.parseZone = createInZone;
+      hooks.localeData = getLocale;
+      hooks.isDuration = isDuration;
+      hooks.monthsShort = listMonthsShort;
+      hooks.weekdaysMin = listWeekdaysMin;
+      hooks.defineLocale = defineLocale;
+      hooks.updateLocale = updateLocale;
+      hooks.locales = listLocales;
+      hooks.weekdaysShort = listWeekdaysShort;
+      hooks.normalizeUnits = normalizeUnits;
+      hooks.relativeTimeRounding = getSetRelativeTimeRounding;
+      hooks.relativeTimeThreshold = getSetRelativeTimeThreshold;
+      hooks.calendarFormat = getCalendarFormat;
+      hooks.prototype = proto;
+      hooks.HTML5_FMT = {
+        DATETIME_LOCAL: "YYYY-MM-DDTHH:mm",
+        // <input type="datetime-local" />
+        DATETIME_LOCAL_SECONDS: "YYYY-MM-DDTHH:mm:ss",
+        // <input type="datetime-local" step="1" />
+        DATETIME_LOCAL_MS: "YYYY-MM-DDTHH:mm:ss.SSS",
+        // <input type="datetime-local" step="0.001" />
+        DATE: "YYYY-MM-DD",
+        // <input type="date" />
+        TIME: "HH:mm",
+        // <input type="time" />
+        TIME_SECONDS: "HH:mm:ss",
+        // <input type="time" step="1" />
+        TIME_MS: "HH:mm:ss.SSS",
+        // <input type="time" step="0.001" />
+        WEEK: "GGGG-[W]WW",
+        // <input type="week" />
+        MONTH: "YYYY-MM"
+        // <input type="month" />
+      };
+      return hooks;
+    });
   }
 });
 
@@ -21172,7 +25101,7 @@ var require_chroma = __commonJS({
           return chroma$3.rgb(f(c0, c1));
         };
       };
-      var each = function(f) {
+      var each2 = function(f) {
         return function(c0, c1) {
           var out = [];
           out[0] = f(c0[0], c1[0]);
@@ -21209,14 +25138,14 @@ var require_chroma = __commonJS({
         a = 255 * (b / 255) / (1 - a / 255);
         return a > 255 ? 255 : a;
       };
-      blend.normal = blend_f(each(normal));
-      blend.multiply = blend_f(each(multiply));
-      blend.screen = blend_f(each(screen));
-      blend.overlay = blend_f(each(overlay));
-      blend.darken = blend_f(each(darken));
-      blend.lighten = blend_f(each(lighten));
-      blend.dodge = blend_f(each(dodge));
-      blend.burn = blend_f(each(burn));
+      blend.normal = blend_f(each2(normal));
+      blend.multiply = blend_f(each2(multiply));
+      blend.screen = blend_f(each2(screen));
+      blend.overlay = blend_f(each2(overlay));
+      blend.darken = blend_f(each2(darken));
+      blend.lighten = blend_f(each2(lighten));
+      blend.dodge = blend_f(each2(dodge));
+      blend.burn = blend_f(each2(burn));
       var blend_1 = blend;
       var type$1 = utils.type;
       var clip_rgb = utils.clip_rgb;
@@ -21684,7 +25613,7 @@ __export(main_exports, {
 });
 module.exports = __toCommonJS(main_exports);
 var import_obsidian6 = require("obsidian");
-var import_obsidian_daily_notes_interface5 = __toESM(require_main());
+var import_obsidian_daily_notes_interface7 = __toESM(require_main());
 var import_obsidian_dataview = __toESM(require_lib());
 
 // node_modules/svelte/internal/index.mjs
@@ -21858,8 +25787,8 @@ function init_hydrate(target) {
   m[0] = -1;
   let longest = 0;
   for (let i = 0; i < children2.length; i++) {
-    const current = children2[i].claim_order;
-    const seqLen = (longest > 0 && children2[m[longest]].claim_order <= current ? longest + 1 : upper_bound(1, longest, (idx) => children2[m[idx]].claim_order, current)) - 1;
+    const current2 = children2[i].claim_order;
+    const seqLen = (longest > 0 && children2[m[longest]].claim_order <= current2 ? longest + 1 : upper_bound(1, longest, (idx) => children2[m[idx]].claim_order, current2)) - 1;
     p[i] = m[seqLen] + 1;
     const newLen = seqLen + 1;
     m[newLen] = i;
@@ -22397,7 +26326,7 @@ function make_dirty(component, i) {
   }
   component.$$.dirty[i / 31 | 0] |= 1 << i % 31;
 }
-function init(component, options, instance36, create_fragment37, not_equal, props, append_styles2, dirty = [-1]) {
+function init(component, options, instance35, create_fragment35, not_equal, props, append_styles2, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -22423,7 +26352,7 @@ function init(component, options, instance36, create_fragment37, not_equal, prop
   };
   append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance36 ? instance36(component, options.props || {}, (i, ret, ...rest) => {
+  $$.ctx = instance35 ? instance35(component, options.props || {}, (i, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
       if (!$$.skip_bound && $$.bound[i])
@@ -22436,7 +26365,7 @@ function init(component, options, instance36, create_fragment37, not_equal, prop
   $$.update();
   ready = true;
   run_all($$.before_update);
-  $$.fragment = create_fragment37 ? create_fragment37($$.ctx) : false;
+  $$.fragment = create_fragment35 ? create_fragment35($$.ctx) : false;
   if (options.target) {
     if (options.hydrate) {
       start_hydrating();
@@ -22535,7 +26464,7 @@ function readable(value, start) {
 function writable(value, start = noop) {
   let stop;
   const subscribers = /* @__PURE__ */ new Set();
-  function set(new_value) {
+  function set2(new_value) {
     if (safe_not_equal(value, new_value)) {
       value = new_value;
       if (stop) {
@@ -22554,13 +26483,13 @@ function writable(value, start = noop) {
     }
   }
   function update2(fn) {
-    set(fn(value));
+    set2(fn(value));
   }
   function subscribe2(run2, invalidate = noop) {
     const subscriber = [run2, invalidate];
     subscribers.add(subscriber);
     if (subscribers.size === 1) {
-      stop = start(set) || noop;
+      stop = start(set2) || noop;
     }
     run2(value);
     return () => {
@@ -22571,13 +26500,13 @@ function writable(value, start = noop) {
       }
     };
   }
-  return { set, update: update2, subscribe: subscribe2 };
+  return { set: set2, update: update2, subscribe: subscribe2 };
 }
 function derived(stores, fn, initial_value) {
   const single = !Array.isArray(stores);
   const stores_array = single ? [stores] : stores;
   const auto = fn.length < 2;
-  return readable(initial_value, (set) => {
+  return readable(initial_value, (set2) => {
     let started = false;
     const values = [];
     let pending = 0;
@@ -22587,9 +26516,9 @@ function derived(stores, fn, initial_value) {
         return;
       }
       cleanup();
-      const result = fn(single ? values[0] : values, set);
+      const result = fn(single ? values[0] : values, set2);
       if (auto) {
-        set(result);
+        set2(result);
       } else {
         cleanup = is_function(result) ? result : noop;
       }
@@ -22618,7 +26547,7 @@ var viewTypeTimeline = "timeline";
 var viewTypeWeekly = "weekly";
 var obsidianContext = "obsidian";
 var defaultDurationMinutes = 30;
-var snapStepMinutes = 10;
+var statusBarTextLimit = 15;
 var icons = [
   "any-key",
   "audio-file",
@@ -22683,11 +26612,21 @@ var icons = [
   "vertical-three-dots"
 ];
 
+// src/global-store/current-time.ts
+var currentTime = readable(window.moment(), (set2) => {
+  const interval = setInterval(() => {
+    set2(window.moment());
+  }, 1e3);
+  return () => {
+    clearInterval(interval);
+  };
+});
+
 // src/settings.ts
 var import_obsidian_daily_notes_interface = __toESM(require_main());
 var defaultSettings = {
-  circularProgress: false,
-  nowAndNextInStatusBar: false,
+  snapStepMinutes: 10,
+  progressIndicator: "bar",
   showTaskNotification: false,
   zoomLevel: 2,
   timelineIcon: "calendar-with-checkmark",
@@ -22695,13 +26634,13 @@ var defaultSettings = {
   startHour: 6,
   timelineDateFormat: import_obsidian_daily_notes_interface.DEFAULT_DAILY_NOTE_FORMAT,
   centerNeedle: false,
-  showHelp: true,
   plannerHeading: "Day planner",
   plannerHeadingLevel: 1,
   timelineColored: false,
   timelineStartColor: "#006466",
   timelineEndColor: "#4d194d",
   timestampFormat: "HH:mm",
+  hourFormat: "H",
   dataviewSource: "",
   showDataviewMigrationWarning: true,
   extendDurationUntilNext: false,
@@ -22709,7 +26648,9 @@ var defaultSettings = {
   showTimestampInTaskBlock: false,
   unscheduledTasksHeight: 100,
   showUncheduledTasks: true,
-  showUnscheduledNestedTasks: true
+  showUnscheduledNestedTasks: true,
+  showNow: true,
+  showNext: true
 };
 var defaultSettingsForTests = {
   ...defaultSettings,
@@ -22767,7 +26708,7 @@ var ObsidianFacade = class {
 };
 
 // src/service/plan-editor.ts
-var import_fp3 = __toESM(require_fp());
+var import_fp = __toESM(require_fp());
 
 // node_modules/ts-dedent/esm/index.js
 function dedent(templ) {
@@ -22819,6 +26760,7 @@ var durationSeparator = `\\s*-{1,2}\\s*`;
 var hours = `\\d{1,2}`;
 var minutes = `\\d{2}`;
 var hourMinuteSeparator = `[:. ]`;
+var date = "\\d{4}-\\d{2}-\\d{2}";
 var time = `(${hours})(?:${hourMinuteSeparator}?(${minutes}))?\\s*([apAP][mM])?`;
 var timeRegExp = new RegExp(time);
 var timeFromStartRegExp = new RegExp(`^${time}`);
@@ -22830,6 +26772,13 @@ var sTaskTimestampRegExp = new RegExp(
   `^(?<start>${time})(?:${durationSeparator}(?<end>${time}))?$`,
   "im"
 );
+var scheduledPropRegExp = new RegExp(
+  `(\\[scheduled\\s*::\\s*)${date}(\\])`
+);
+var keylessScheduledPropRegExp = new RegExp(
+  `(\\(scheduled\\s*::\\s*)${date}(\\))`
+);
+var shortScheduledPropRegExp = new RegExp(`(\u231B\\s*)${date}`);
 
 // src/util/id.ts
 function getId() {
@@ -22930,11 +26879,121 @@ ${linesAfterFirst}`;
 ${formattedLinesAfterFirst}`;
 }
 
-// src/util/task-utils.ts
-var import_fp2 = __toESM(require_fp());
+// src/util/daily-notes.ts
+var import_obsidian_daily_notes_interface3 = __toESM(require_main());
+async function createDailyNoteIfNeeded(moment2) {
+  return (0, import_obsidian_daily_notes_interface3.getDailyNote)(moment2, (0, import_obsidian_daily_notes_interface3.getAllDailyNotes)()) || (0, import_obsidian_daily_notes_interface3.createDailyNote)(moment2);
+}
+
+// src/service/plan-editor.ts
+var PlanEditor = class {
+  constructor(settings2, obsidianFacade) {
+    this.settings = settings2;
+    this.obsidianFacade = obsidianFacade;
+    this.syncTasksWithFile = async ({
+      updated,
+      created
+    }) => {
+      if (created.length > 1) {
+        throw new Error("Creating more than 1 task is not supported");
+      }
+      if (updated.length > 0 && created.length > 0) {
+        throw new Error(
+          "Creating and editing at the same time is not supported and might cause inconsistent behaviors due to race conditions"
+        );
+      }
+      if (created.length > 0) {
+        const [task] = await this.ensureFilesForTasks(created);
+        await this.obsidianFacade.editFile(task.location.path, (contents) => {
+          return this.writeTaskToFileContents(task, contents);
+        });
+      }
+      const pathToEditedTasksLookup = (0, import_fp.groupBy)(
+        (task) => task.location.path,
+        updated
+      );
+      const editPromises = Object.keys(pathToEditedTasksLookup).map(
+        async (path) => await this.obsidianFacade.editFile(
+          path,
+          (contents) => pathToEditedTasksLookup[path].reduce(
+            (result, current2) => this.updateTaskInFileContents(result, current2),
+            contents
+          )
+        )
+      );
+      await Promise.all(editPromises);
+    };
+  }
+  async ensureFilesForTasks(tasks) {
+    return Promise.all(
+      tasks.map(async (task) => {
+        var _a;
+        if ((_a = task.location) == null ? void 0 : _a.path) {
+          return task;
+        }
+        const { path } = await createDailyNoteIfNeeded(task.startTime);
+        return { ...task, location: { path } };
+      })
+    );
+  }
+  writeTaskToFileContents(task, contents) {
+    const metadata = this.obsidianFacade.getMetadataForPath(task.location.path) || {};
+    const [planEndLine, splitContents] = this.getPlanEndLine(
+      contents.split("\n"),
+      metadata
+    );
+    const result = [...splitContents];
+    result.splice(planEndLine + 1, 0, task.firstLineText);
+    return result.join("\n");
+  }
+  createPlannerHeading() {
+    const { plannerHeading, plannerHeadingLevel } = this.settings();
+    const headingTokens = "#".repeat(plannerHeadingLevel);
+    return `${headingTokens} ${plannerHeading}`;
+  }
+  updateTaskInFileContents(contents, task) {
+    return contents.split("\n").map((line, index) => {
+      var _a;
+      if (index === ((_a = task.location) == null ? void 0 : _a.line)) {
+        return line.substring(0, task.location.position.start.col) + task.firstLineText;
+      }
+      return line;
+    }).join("\n");
+  }
+  getPlanEndLine(contents, metadata) {
+    const planHeading = getHeadingByText(
+      metadata,
+      this.settings().plannerHeading
+    );
+    const planListItems = getListItemsUnderHeading(
+      metadata,
+      this.settings().plannerHeading
+    );
+    if ((planListItems == null ? void 0 : planListItems.length) > 0) {
+      const lastListItem = planListItems[planListItems.length - 1];
+      return [lastListItem.position.start.line, contents];
+    }
+    if (planHeading) {
+      return [planHeading.position.start.line, contents];
+    }
+    const withNewPlan = [...contents, "", this.createPlannerHeading(), ""];
+    return [withNewPlan.length, withNewPlan];
+  }
+};
+
+// src/ui/hooks/use-status-bar-widget.ts
+var import_fp4 = __toESM(require_fp());
+
+// src/util/ellipsis.ts
+function ellipsis(input, limit) {
+  if (input.length <= limit) {
+    return input;
+  }
+  return input.substring(0, limit) + "...";
+}
 
 // src/util/moment.ts
-var import_fp = __toESM(require_fp());
+var import_fp2 = __toESM(require_fp());
 var moment = window.moment;
 function getMinutesSinceMidnight(moment2) {
   return moment2.diff(moment2.clone().startOf("day"), "minutes");
@@ -22947,7 +27006,7 @@ function getDaysOfCurrentWeek() {
 }
 function getDaysOfWeek(moment2) {
   const firstDay = moment2.clone().startOf("isoWeek");
-  return (0, import_fp.range)(1, 7).reduce(
+  return (0, import_fp2.range)(1, 7).reduce(
     (result, dayIndex) => {
       const nextDay = firstDay.clone().add(dayIndex, "day");
       return [...result, nextDay];
@@ -22960,6 +27019,9 @@ function minutesToMomentOfDay(minutesSinceMidnight, moment2) {
 }
 function minutesToMoment(minutesSinceMidnight) {
   return moment().startOf("day").add(minutesSinceMidnight, "minutes");
+}
+function hoursToMoment(hoursSinceMidnight) {
+  return moment().startOf("day").add(hoursSinceMidnight, "hours");
 }
 function addMinutes(moment2, minutes2) {
   return moment2.clone().add(minutes2, "minutes");
@@ -22978,6 +27040,7 @@ function isToday(moment2) {
 }
 
 // src/util/task-utils.ts
+var import_fp3 = __toESM(require_fp());
 function isEqualTask(a, b) {
   return a.id === b.id && a.startMinutes === b.startMinutes && a.durationMinutes === b.durationMinutes;
 }
@@ -23005,560 +27068,37 @@ function createTimestamp(startMinutes, durationMinutes, format) {
   const end = addMinutes(start, durationMinutes);
   return `${start.format(format)} - ${end.format(format)}`;
 }
-function findUpdated(baseline, updated) {
-  const pristine = updated.filter(
-    (task) => baseline.find((baselineTask) => isEqualTask(task, baselineTask))
-  );
-  return (0, import_fp2.difference)(updated, pristine);
+function areValuesEmpty(record) {
+  return Object.values(record).every(import_fp3.isEmpty);
 }
-
-// src/service/plan-editor.ts
-var PlanEditor = class {
-  constructor(settings2, obsidianFacade) {
-    this.settings = settings2;
-    this.obsidianFacade = obsidianFacade;
-    this.syncTasksWithFile = async (tasks) => {
-      const [edited, created] = (0, import_fp3.partition)(
-        (task) => task.location.line !== void 0,
-        tasks
-      );
-      if (created.length > 1) {
-        throw new Error("Creating more than 1 task is not supported");
-      }
-      if (edited.length > 0 && created.length > 0) {
-        throw new Error(
-          "Creating and editing at the same time is not supported and might cause inconsistent behaviors due to race conditions"
-        );
-      }
-      if (created.length > 0) {
-        const task = created[0];
-        await this.obsidianFacade.editFile(task.location.path, (contents) => {
-          return this.writeTaskToFileContents(task, contents);
-        });
-      }
-      const pathToEditedTasksLookup = (0, import_fp3.groupBy)(
-        (task) => task.location.path,
-        edited
-      );
-      const editPromises = Object.keys(pathToEditedTasksLookup).map(
-        async (path) => await this.obsidianFacade.editFile(
-          path,
-          (contents) => pathToEditedTasksLookup[path].reduce(
-            (result, current) => this.updateTaskInFileContents(result, current),
-            contents
-          )
-        )
-      );
-      await Promise.all(editPromises);
-    };
-  }
-  writeTaskToFileContents(task, contents) {
-    const metadata = this.obsidianFacade.getMetadataForPath(task.location.path) || {};
-    const [planEndLine, splitContents] = this.getPlanEndLine(
-      contents.split("\n"),
-      metadata
-    );
-    const result = [...splitContents];
-    result.splice(planEndLine + 1, 0, this.taskLineToString(task, { ...task }));
-    return result.join("\n");
-  }
-  createPlannerHeading() {
-    const { plannerHeading, plannerHeadingLevel } = this.settings();
-    const headingTokens = "#".repeat(plannerHeadingLevel);
-    return `${headingTokens} ${plannerHeading}`;
-  }
-  updateTaskInFileContents(contents, task) {
-    return contents.split("\n").map((line, index) => {
-      var _a;
-      if (index === ((_a = task.location) == null ? void 0 : _a.line)) {
-        const taskAsString = this.taskLineToString(task, {
-          startMinutes: task.startMinutes,
-          durationMinutes: task.durationMinutes
-        });
-        return line.substring(0, task.location.position.start.col) + taskAsString;
-      }
-      return line;
-    }).join("\n");
-  }
-  getPlanEndLine(contents, metadata) {
-    const planHeading = getHeadingByText(
-      metadata,
-      this.settings().plannerHeading
-    );
-    const planListItems = getListItemsUnderHeading(
-      metadata,
-      this.settings().plannerHeading
-    );
-    if ((planListItems == null ? void 0 : planListItems.length) > 0) {
-      const lastListItem = planListItems[planListItems.length - 1];
-      return [lastListItem.position.start.line, contents];
-    }
-    if (planHeading) {
-      return [planHeading.position.start.line, contents];
-    }
-    const withNewPlan = [...contents, "", this.createPlannerHeading(), ""];
-    return [withNewPlan.length, withNewPlan];
-  }
-  taskLineToString(task, { startMinutes, durationMinutes }) {
-    return `${task.listTokens}${createTimestamp(
-      startMinutes,
-      durationMinutes,
-      this.settings().timestampFormat
-    )} ${task.firstLineText}`;
-  }
-};
-
-// src/ui/settings-tab.ts
-var import_obsidian2 = require("obsidian");
-var DayPlannerSettingsTab = class extends import_obsidian2.PluginSettingTab {
-  constructor(plugin, settingsStore) {
-    super(plugin.app, plugin);
-    this.plugin = plugin;
-    this.settingsStore = settingsStore;
-  }
-  update(patch) {
-    this.settingsStore.update((previous) => ({ ...previous, ...patch }));
-  }
-  display() {
-    const { containerEl } = this;
-    containerEl.empty();
-    new import_obsidian2.Setting(containerEl).setName("Status Bar - Circular Progress").setDesc("Display a circular progress bar in the status bar").addToggle(
-      (toggle) => toggle.setValue(this.plugin.settings().circularProgress).onChange((value) => {
-        this.update({ circularProgress: value });
-      })
-    );
-    new import_obsidian2.Setting(containerEl).setName("Status Bar - Now and Next").setDesc("Display now and next tasks in the status bar").addToggle(
-      (toggle) => toggle.setValue(this.plugin.settings().nowAndNextInStatusBar).onChange((value) => {
-        this.update({
-          nowAndNextInStatusBar: value
-        });
-      })
-    );
-    new import_obsidian2.Setting(containerEl).setName("Task Notification").setDesc("Display a notification when a new task is started").addToggle(
-      (toggle) => toggle.setValue(this.plugin.settings().showTaskNotification).onChange((value) => {
-        this.update({ showTaskNotification: value });
-      })
-    );
-    new import_obsidian2.Setting(containerEl).setName("Timeline Zoom Level").setDesc(
-      "The zoom level to display the timeline. The higher the number, the more vertical space each task will take up."
-    ).addSlider(
-      (slider) => {
-        var _a;
-        return slider.setLimits(1, 5, 1).setValue((_a = Number(this.plugin.settings().zoomLevel)) != null ? _a : 4).setDynamicTooltip().onChange((value) => {
-          this.update({ zoomLevel: value });
-        });
-      }
-    );
-    new import_obsidian2.Setting(containerEl).setName("Timeline Icon").setDesc(
-      "The icon of the timeline pane. Reopen timeline pane or restart obsidian to see the change."
-    ).addDropdown((dropdown) => {
-      var _a;
-      icons.forEach((icon) => dropdown.addOption(icon, icon));
-      return dropdown.setValue(
-        (_a = this.plugin.settings().timelineIcon) != null ? _a : "calendar-with-checkmark"
-      ).onChange((value) => {
-        this.update({ timelineIcon: value });
-      });
-    });
-    new import_obsidian2.Setting(containerEl).setName("Start Hour").setDesc("The planner is going to start at this hour each day").addDropdown(
-      (component) => component.addOptions({
-        "0": "0",
-        "1": "1",
-        "2": "2",
-        "3": "3",
-        "4": "4",
-        "5": "5",
-        "6": "6",
-        "7": "7",
-        "8": "8",
-        "9": "9",
-        "10": "10",
-        "11": "11",
-        "12": "12"
-      }).setValue(String(this.plugin.settings().startHour)).onChange((value) => {
-        const asNumber = Number(value);
-        this.update({ startHour: asNumber });
-      })
-    );
-    new import_obsidian2.Setting(containerEl).setName("Default timestamp format").then((component) => {
-      component.setDesc(
-        createFragment((fragment) => {
-          fragment.appendText(
-            "When you create or edit tasks with drag-and-drop, the plugin use this format. Your current syntax looks like this: "
-          );
-          component.addMomentFormat(
-            (momentFormat) => momentFormat.setValue(this.plugin.settings().timestampFormat).setSampleEl(fragment.createSpan()).onChange((value) => {
-              this.update({ timestampFormat: value.trim() });
-            })
-          );
-          fragment.append(
-            createEl("br"),
-            createEl(
-              "a",
-              {
-                text: "format reference",
-                href: "https://momentjs.com/docs/#/displaying/format/"
-              },
-              (a) => {
-                a.setAttr("target", "_blank");
-              }
-            )
-          );
-        })
-      );
-    });
-    new import_obsidian2.Setting(containerEl).setName("Date Format in Timeline Header").then((component) => {
-      component.setDesc(
-        createFragment((fragment) => {
-          fragment.appendText("Your current syntax looks like this: ");
-          component.addMomentFormat(
-            (momentFormat) => momentFormat.setValue(this.plugin.settings().timelineDateFormat).setSampleEl(fragment.createSpan()).onChange((value) => {
-              this.update({ timelineDateFormat: value });
-            })
-          );
-          fragment.append(
-            createEl("br"),
-            createEl(
-              "a",
-              {
-                text: "format reference",
-                href: "https://momentjs.com/docs/#/displaying/format/"
-              },
-              (a) => {
-                a.setAttr("target", "_blank");
-              }
-            )
-          );
-        })
-      );
-    });
-    new import_obsidian2.Setting(containerEl).setName("Center the Pointer in the Timeline View").setDesc(
-      "Should the pointer continuously get scrolled to the center of the view"
-    ).addToggle((component) => {
-      component.setValue(this.plugin.settings().centerNeedle).onChange((value) => {
-        this.update({ centerNeedle: value });
-      });
-    });
-    new import_obsidian2.Setting(containerEl).setName("Planner Heading").setDesc(
-      `When you create a planner, this text is going to be in the heading.
-When you open a file, the plugin will search for this heading to detect a day plan`
-    ).addText(
-      (component) => component.setValue(this.plugin.settings().plannerHeading).onChange((value) => {
-        this.update({ plannerHeading: value });
-      })
-    );
-    new import_obsidian2.Setting(containerEl).setName("Planner heading level").setDesc(
-      "When you create a planner in a file, this level of heading is going to be used"
-    ).addSlider(
-      (component) => component.setLimits(1, 6, 1).setDynamicTooltip().setValue(this.plugin.settings().plannerHeadingLevel).onChange((value) => {
-        this.update({ plannerHeadingLevel: value });
-      })
-    );
-    containerEl.createEl("h2", { text: "Task decoration" });
-    new import_obsidian2.Setting(containerEl).setName("Show a timestamp next to task text in timeline").addToggle((component) => {
-      component.setValue(this.plugin.settings().showTimestampInTaskBlock).onChange((value) => {
-        this.update({ showTimestampInTaskBlock: value });
-      });
-    });
-    containerEl.createEl("h2", { text: "Duration" });
-    new import_obsidian2.Setting(containerEl).setName("Stretch task until next one in timeline if it has no end time").setDesc(
-      'By "no end time" we mean "- [ ] 10:00 Wake up" instead of "- [ ] 10:00 - 11:00 Wake up"'
-    ).addToggle((component) => {
-      component.setValue(this.plugin.settings().extendDurationUntilNext).onChange((value) => {
-        this.update({ extendDurationUntilNext: value });
-      });
-    });
-    new import_obsidian2.Setting(containerEl).setName("Default task duration").setDesc(
-      "Used when you create a task with drag-and-drop & when you don't specify an end time"
-    ).addSlider(
-      (slider) => slider.setLimits(20, 120, 10).setValue(Number(this.plugin.settings().defaultDurationMinutes)).setDynamicTooltip().onChange((value) => {
-        this.update({ defaultDurationMinutes: value });
-      })
-    );
-    containerEl.createEl("h2", { text: "Colors" });
-    new import_obsidian2.Setting(containerEl).setName("Colorful Timeline").setDesc(
-      "If the planner timeline should be monochrome or color tasks based on time of day"
-    ).addToggle((component) => {
-      component.setValue(this.plugin.settings().timelineColored).onChange((value) => {
-        this.update({ timelineColored: value });
-      });
-    });
-    new import_obsidian2.Setting(containerEl).setName("Colorful Timeline - Start Color").addColorPicker((component) => {
-      component.setValue(this.plugin.settings().timelineStartColor).onChange((value) => {
-        this.update({ timelineStartColor: value });
-      });
-    });
-    new import_obsidian2.Setting(containerEl).setName("Colorful Timeline - End Color").addColorPicker((component) => {
-      component.setValue(this.plugin.settings().timelineEndColor).onChange((value) => {
-        this.update({ timelineEndColor: value });
-      });
-    });
-  }
-};
-
-// src/util/ellipsis.ts
-function ellipsis(input, limit) {
-  if (input.length <= limit) {
-    return input;
-  }
-  return input.substring(0, limit) + "...";
+function taskLineToString(task) {
+  return `${task.listTokens}${createTimestamp(
+    task.startMinutes,
+    task.durationMinutes,
+    get_store_value(settings).timestampFormat
+  )} ${task.firstLineText}`;
 }
-
-// src/ui/status-bar.ts
-var StatusBar = class {
-  constructor(settings2, containerEl, onClick) {
-    this.settings = settings2;
-    this.containerEl = containerEl;
-    this.onClick = onClick;
-    this.containerEl.addClass("day-planner");
-    this.setupCard();
-    this.statusBarText = this.containerEl.createEl("span", {
-      cls: ["status-bar-item-segment", "day-planner-status-bar-text"]
-    });
-    this.setupCircularProgressBar();
-    this.setupHorizontalProgressBar();
-    this.nextText = this.containerEl.createEl("span", {
-      cls: ["status-bar-item-segment", "day-planner-status-bar-text"]
-    });
-    this.setupStatusBarEvents();
+function updateScheduledPropInText(text2, dayKey) {
+  const updated = text2.replace(shortScheduledPropRegExp, `$1${dayKey}`).replace(scheduledPropRegExp, `$1${dayKey}$2`).replace(keylessScheduledPropRegExp, `$1${dayKey}$2`);
+  if (updated !== text2) {
+    return updated;
   }
-  async update(tasks) {
-    this.containerEl.show();
-    if (tasks.length > 0) {
-      this.updateProgress(tasks);
-    } else {
-      this.setEmpty();
-    }
-  }
-  setEmpty() {
-    this.setText("No plan for today");
-  }
-  setText(text2) {
-    this.statusBarText.textContent = text2;
-  }
-  setupStatusBarEvents() {
-    this.containerEl.onClickEvent(async () => {
-      await this.onClick();
-    });
-    this.containerEl.on("mouseenter", ".day-planner", () => {
-      this.card.show();
-    });
-    this.containerEl.on("mouseleave", ".day-planner", () => {
-      this.card.hide();
-    });
-  }
-  hideProgress() {
-    this.statusBarProgress.hide();
-    this.circle.hide();
-    this.nextText.hide();
-  }
-  updateProgress(tasks) {
-    const now = window.moment();
-    const currentItemIndex = tasks.findIndex(
-      (item) => item.startTime.isBefore(now) && getEndTime(item).isAfter(now)
-    );
-    if (currentItemIndex < 0) {
-      this.hideProgress();
-      this.statusBarText.innerText = this.settings().endLabel;
-      return;
-    }
-    const currentItem = tasks[currentItemIndex];
-    const nextItem = tasks[currentItemIndex + 1];
-    const minutesFromStart = getDiffInMinutes(currentItem.startTime, now);
-    const percentageComplete = minutesFromStart / (currentItem.durationMinutes / 100);
-    this.updateStatusBarText(currentItem, nextItem);
-    if (nextItem) {
-      this.setStatusText(
-        getDiffInMinutes(now, nextItem.startTime),
-        currentItem,
-        nextItem,
-        percentageComplete
-      );
-    }
-    if (this.settings().circularProgress) {
-      this.statusBarProgress.hide();
-      this.progressCircle(percentageComplete);
-    } else {
-      this.circle.hide();
-      this.progressBar(percentageComplete);
-    }
-  }
-  progressBar(percentageComplete) {
-    this.statusBarCurrentProgress.style.width = `${percentageComplete}%`;
-    this.statusBarProgress.show();
-  }
-  progressCircle(percentageComplete) {
-    this.circle.setAttr("data-value", percentageComplete.toFixed(0));
-    this.circle.show();
-  }
-  setStatusText(minsUntilNext, current, next, percentageComplete) {
-    const minsUntilNextText = minsUntilNext === 0 ? "1" : minsUntilNext;
-    const minsText = `${minsUntilNextText} min${minsUntilNextText === "1" ? "" : "s"}`;
-    const percent = percentageComplete.toFixed(0);
-    const currentTaskStatus = `Current Task (${percent}% complete)`;
-    const currentTaskTimeAndText = current.text;
-    const nextTask = `Next Task (in ${minsText})`;
-    const nextTaskTimeAndText = next.text;
-    this.cardCurrent.textContent = `${currentTaskStatus}: ${currentTaskTimeAndText}`;
-    this.cardNext.textContent = `${nextTask}: ${nextTaskTimeAndText}`;
-    this.taskNotification(
-      current,
-      currentTaskTimeAndText,
-      nextTask,
-      nextTaskTimeAndText
-    );
-  }
-  updateStatusBarText(currentItem, nextItem) {
-    const minutesLeft = getDiffInMinutes(
-      getEndTime(currentItem),
-      window.moment()
-    );
-    const timeLeft = window.moment.utc(window.moment.duration(minutesLeft, "minutes").asMilliseconds()).format("HH:mm");
-    this.statusBarText.textContent = `-${timeLeft}`;
-    this.nextText.hide();
-    const trimmedNow = ellipsis(currentItem.firstLineText, 15);
-    const trimmedNext = nextItem ? ellipsis(nextItem.firstLineText, 15) : "";
-    this.statusBarText.textContent = `Now: ${trimmedNow} (-${timeLeft})` + (trimmedNext.length > 0 ? " Next: " + trimmedNext : "");
-  }
-  taskNotification(current, currentTaskTimeAndText, nextTask, nextTaskText) {
-    if (this.settings().showTaskNotification && this.currentTime !== void 0 && this.currentTime !== current.startTime.toString()) {
-      new Notification(`Task started, ${currentTaskTimeAndText}`, {
-        body: `${nextTask}: ${nextTaskText}`,
-        requireInteraction: true
-      });
-    }
-    this.currentTime = current.startTime.toString();
-  }
-  setupHorizontalProgressBar() {
-    this.statusBarProgress = this.containerEl.createEl("div", {
-      cls: ["status-bar-item-segment", "day-planner-progress-bar"]
-    });
-    this.statusBarProgress.hide();
-    this.statusBarCurrentProgress = this.statusBarProgress.createEl("div", {
-      cls: "day-planner-progress-value"
-    });
-  }
-  setupCircularProgressBar() {
-    this.circle = this.containerEl.createEl("div", {
-      cls: ["status-bar-item-segment", "progress-pie day-planner"]
-    });
-  }
-  setupCard() {
-    this.card = this.containerEl.createEl("div", {
-      cls: "day-planner-status-card"
-    });
-    this.cardCurrent = this.card.createEl("span");
-    this.card.createEl("br");
-    this.card.createEl("br");
-    this.cardNext = this.card.createEl("span");
-    this.card.createEl("div", { cls: "arrow-down" });
-  }
-};
-
-// src/ui/timeline-view.ts
-var import_obsidian4 = require("obsidian");
-
-// node_modules/tslib/tslib.es6.mjs
-function __awaiter(thisArg, _arguments, P, generator) {
-  function adopt(value) {
-    return value instanceof P ? value : new P(function(resolve) {
-      resolve(value);
-    });
-  }
-  return new (P || (P = Promise))(function(resolve, reject) {
-    function fulfilled(value) {
-      try {
-        step(generator.next(value));
-      } catch (e) {
-        reject(e);
-      }
-    }
-    function rejected(value) {
-      try {
-        step(generator["throw"](value));
-      } catch (e) {
-        reject(e);
-      }
-    }
-    function step(result) {
-      result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-    }
-    step((generator = generator.apply(thisArg, _arguments || [])).next());
-  });
+  return `${text2} \u231B ${dayKey}`;
 }
-
-// src/global-store/derived-settings.ts
-function getHourSize(settings2) {
-  return settings2.zoomLevel * 60;
+function updateTaskText(task) {
+  return { ...task, firstLineText: taskLineToString(task) };
 }
-function getHiddenHoursSize(settings2) {
-  return settings2.startHour * getHourSize(settings2);
-}
-function getVisibleHours(settings2) {
-  return [...Array(24).keys()].slice(settings2.startHour);
-}
-function timeToTimelineOffset(minutes2, settings2) {
-  return minutes2 * settings2.zoomLevel - getHiddenHoursSize(settings2);
-}
-function snap(coords, zoomLevel) {
-  return coords - coords % (snapStepMinutes * zoomLevel);
-}
-
-// src/ui/actions/styled-cursor.ts
-function styledCursor(el, cursor) {
-  const initial = el.style.cursor;
-  el.style.cursor = cursor;
+function updateTaskScheduledDay(task, dayKey) {
   return {
-    update(newCursor) {
-      el.style.cursor = newCursor || initial;
-    },
-    destroy() {
-      el.style.cursor = initial;
-    }
+    ...task,
+    firstLineText: updateScheduledPropInText(task.firstLineText, dayKey)
   };
 }
-
-// src/ui/hooks/use-edit/cursor.ts
-function useCursor({ editMode, editBlocked }) {
-  if (editBlocked) {
-    return {
-      bodyCursor: "unset",
-      gripCursor: "wait",
-      containerCursor: "wait"
-    };
-  }
-  if (editMode === "CREATE" /* CREATE */ || editMode === "DRAG" /* DRAG */ || editMode === "DRAG_AND_SHIFT_OTHERS" /* DRAG_AND_SHIFT_OTHERS */) {
-    return {
-      bodyCursor: "grabbing",
-      gripCursor: "grabbing"
-    };
-  }
-  if (editMode === "RESIZE" /* RESIZE */ || editMode === "RESIZE_AND_SHIFT_OTHERS" /* RESIZE_AND_SHIFT_OTHERS */) {
-    return { bodyCursor: "row-resize", gripCursor: "grab" };
-  }
-  return {
-    bodyCursor: "unset",
-    gripCursor: "grab"
-  };
+function offsetYToMinutes(offsetY, zoomLevel, startHour) {
+  const hiddenHoursSize = startHour * 60 * zoomLevel;
+  return (offsetY + hiddenHoursSize) / zoomLevel;
 }
-
-// src/util/daily-notes.ts
-var import_obsidian_daily_notes_interface3 = __toESM(require_main());
-async function createDailyNoteIfNeeded(moment2) {
-  return (0, import_obsidian_daily_notes_interface3.getDailyNote)(moment2, (0, import_obsidian_daily_notes_interface3.getAllDailyNotes)()) || (0, import_obsidian_daily_notes_interface3.createDailyNote)(moment2);
-}
-
-// src/ui/hooks/use-edit/transform/create.ts
-function create(baseline, editTarget, cursorTime) {
-  const updated = {
-    ...editTarget,
-    durationMinutes: cursorTime - editTarget.startMinutes
-  };
-  return [...baseline, updated];
-}
-async function createTask2(day, startMinutes) {
-  const endMinutes = startMinutes + defaultDurationMinutes;
-  const { path } = await createDailyNoteIfNeeded(day);
+function createTask2(day, startMinutes) {
   return {
     id: getId(),
     startMinutes,
@@ -23566,13 +27106,7 @@ async function createTask2(day, startMinutes) {
     firstLineText: "New item",
     text: "New item",
     startTime: minutesToMomentOfDay(startMinutes, day),
-    endTime: minutesToMomentOfDay(endMinutes, day),
     listTokens: "- [ ] ",
-    // todo: fix this, do not check for newly created tasks using their location
-    // @ts-expect-error
-    location: {
-      path
-    },
     placing: {
       widthPercent: 100,
       xOffsetPercent: 0
@@ -23580,8 +27114,1317 @@ async function createTask2(day, startMinutes) {
   };
 }
 
+// src/ui/hooks/use-status-bar-widget.ts
+function minutesToTimestamp(minutes2) {
+  return window.moment.utc(window.moment.duration(minutes2, "minutes").asMilliseconds()).format("HH:mm");
+}
+function useStatusBarWidget({ tasksForToday }) {
+  return derived(
+    [tasksForToday, currentTime],
+    ([$tasksForToday, $currentTime]) => {
+      const currentItem = $tasksForToday.withTime.find(
+        (item) => item.startTime.isBefore($currentTime) && getEndTime(item).isAfter($currentTime)
+      );
+      const nextItem = (0, import_fp4.sortBy)(
+        (task) => task.startMinutes,
+        $tasksForToday.withTime
+      ).find((task) => task.startTime.isAfter($currentTime));
+      const widget = {};
+      if (currentItem) {
+        const minutesFromStart = getDiffInMinutes(
+          currentItem.startTime,
+          $currentTime
+        );
+        const percentageComplete = minutesFromStart / (currentItem.durationMinutes / 100);
+        const minutesLeft = getDiffInMinutes(
+          getEndTime(currentItem),
+          window.moment()
+        );
+        const timeLeft = minutesToTimestamp(minutesLeft);
+        const text2 = ellipsis(currentItem.firstLineText, statusBarTextLimit);
+        widget.current = {
+          percentageComplete: percentageComplete.toFixed(0),
+          timeLeft,
+          text: text2
+        };
+      }
+      if (nextItem) {
+        const minutesToNext = getDiffInMinutes(
+          $currentTime,
+          nextItem.startTime
+        );
+        const timeToNext = minutesToTimestamp(minutesToNext);
+        const text2 = ellipsis(nextItem.firstLineText, statusBarTextLimit);
+        widget.next = {
+          timeToNext,
+          text: text2
+        };
+      }
+      return widget;
+    }
+  );
+}
+
+// src/ui/components/status-bar-widget.svelte
+function add_css(target) {
+  append_styles(target, "svelte-1grib6a", ".root.svelte-1grib6a{display:contents}");
+}
+function create_else_block(ctx) {
+  let t;
+  let if_block1_anchor;
+  let if_block0 = (
+    /*showNow*/
+    ctx[5] && /*current*/
+    ctx[2] && create_if_block_2(ctx)
+  );
+  let if_block1 = (
+    /*showNext*/
+    ctx[4] && /*next*/
+    ctx[1] && create_if_block_1(ctx)
+  );
+  return {
+    c() {
+      if (if_block0)
+        if_block0.c();
+      t = space();
+      if (if_block1)
+        if_block1.c();
+      if_block1_anchor = empty();
+    },
+    m(target, anchor) {
+      if (if_block0)
+        if_block0.m(target, anchor);
+      insert(target, t, anchor);
+      if (if_block1)
+        if_block1.m(target, anchor);
+      insert(target, if_block1_anchor, anchor);
+    },
+    p(ctx2, dirty) {
+      if (
+        /*showNow*/
+        ctx2[5] && /*current*/
+        ctx2[2]
+      ) {
+        if (if_block0) {
+          if_block0.p(ctx2, dirty);
+        } else {
+          if_block0 = create_if_block_2(ctx2);
+          if_block0.c();
+          if_block0.m(t.parentNode, t);
+        }
+      } else if (if_block0) {
+        if_block0.d(1);
+        if_block0 = null;
+      }
+      if (
+        /*showNext*/
+        ctx2[4] && /*next*/
+        ctx2[1]
+      ) {
+        if (if_block1) {
+          if_block1.p(ctx2, dirty);
+        } else {
+          if_block1 = create_if_block_1(ctx2);
+          if_block1.c();
+          if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
+        }
+      } else if (if_block1) {
+        if_block1.d(1);
+        if_block1 = null;
+      }
+    },
+    d(detaching) {
+      if (if_block0)
+        if_block0.d(detaching);
+      if (detaching)
+        detach(t);
+      if (if_block1)
+        if_block1.d(detaching);
+      if (detaching)
+        detach(if_block1_anchor);
+    }
+  };
+}
+function create_if_block(ctx) {
+  let span;
+  return {
+    c() {
+      span = element("span");
+      span.textContent = "All done";
+      attr(span, "class", "status-bar-item-segment");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(span);
+    }
+  };
+}
+function create_if_block_2(ctx) {
+  let span;
+  let t0;
+  let t1_value = (
+    /*current*/
+    ctx[2].text + ""
+  );
+  let t1;
+  let t2;
+  let t3_value = (
+    /*current*/
+    ctx[2].timeLeft + ""
+  );
+  let t3;
+  let t4;
+  let t5;
+  let if_block_anchor;
+  function select_block_type_1(ctx2, dirty) {
+    if (
+      /*progressIndicator*/
+      ctx2[3] === "pie"
+    )
+      return create_if_block_3;
+    if (
+      /*progressIndicator*/
+      ctx2[3] === "bar"
+    )
+      return create_if_block_4;
+  }
+  let current_block_type = select_block_type_1(ctx, -1);
+  let if_block = current_block_type && current_block_type(ctx);
+  return {
+    c() {
+      span = element("span");
+      t0 = text("Now: ");
+      t1 = text(t1_value);
+      t2 = text(" (-");
+      t3 = text(t3_value);
+      t4 = text(")");
+      t5 = space();
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
+      attr(span, "class", "status-bar-item-segment");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+      append(span, t0);
+      append(span, t1);
+      append(span, t2);
+      append(span, t3);
+      append(span, t4);
+      insert(target, t5, anchor);
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*current*/
+      4 && t1_value !== (t1_value = /*current*/
+      ctx2[2].text + ""))
+        set_data(t1, t1_value);
+      if (dirty & /*current*/
+      4 && t3_value !== (t3_value = /*current*/
+      ctx2[2].timeLeft + ""))
+        set_data(t3, t3_value);
+      if (current_block_type === (current_block_type = select_block_type_1(ctx2, dirty)) && if_block) {
+        if_block.p(ctx2, dirty);
+      } else {
+        if (if_block)
+          if_block.d(1);
+        if_block = current_block_type && current_block_type(ctx2);
+        if (if_block) {
+          if_block.c();
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      }
+    },
+    d(detaching) {
+      if (detaching)
+        detach(span);
+      if (detaching)
+        detach(t5);
+      if (if_block) {
+        if_block.d(detaching);
+      }
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_if_block_4(ctx) {
+  let div1;
+  let div0;
+  return {
+    c() {
+      div1 = element("div");
+      div0 = element("div");
+      set_style(
+        div0,
+        "width",
+        /*current*/
+        ctx[2].percentageComplete + "%"
+      );
+      attr(div0, "class", "day-planner-progress-value");
+      attr(div1, "class", "status-bar-item-segment day-planner-progress-bar");
+    },
+    m(target, anchor) {
+      insert(target, div1, anchor);
+      append(div1, div0);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*current*/
+      4) {
+        set_style(
+          div0,
+          "width",
+          /*current*/
+          ctx2[2].percentageComplete + "%"
+        );
+      }
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div1);
+    }
+  };
+}
+function create_if_block_3(ctx) {
+  let div;
+  let div_data_value_value;
+  return {
+    c() {
+      div = element("div");
+      attr(div, "class", "status-bar-item-segment progress-pie day-planner");
+      attr(div, "data-value", div_data_value_value = /*current*/
+      ctx[2].percentageComplete);
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*current*/
+      4 && div_data_value_value !== (div_data_value_value = /*current*/
+      ctx2[2].percentageComplete)) {
+        attr(div, "data-value", div_data_value_value);
+      }
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+    }
+  };
+}
+function create_if_block_1(ctx) {
+  let span;
+  let t0;
+  let t1_value = (
+    /*next*/
+    ctx[1].text + ""
+  );
+  let t1;
+  let t2;
+  let t3_value = (
+    /*next*/
+    ctx[1].timeToNext + ""
+  );
+  let t3;
+  let t4;
+  return {
+    c() {
+      span = element("span");
+      t0 = text("Next: ");
+      t1 = text(t1_value);
+      t2 = text(" (in ");
+      t3 = text(t3_value);
+      t4 = text(")");
+      attr(span, "class", "status-bar-item-segment");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+      append(span, t0);
+      append(span, t1);
+      append(span, t2);
+      append(span, t3);
+      append(span, t4);
+    },
+    p(ctx2, dirty) {
+      if (dirty & /*next*/
+      2 && t1_value !== (t1_value = /*next*/
+      ctx2[1].text + ""))
+        set_data(t1, t1_value);
+      if (dirty & /*next*/
+      2 && t3_value !== (t3_value = /*next*/
+      ctx2[1].timeToNext + ""))
+        set_data(t3, t3_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(span);
+    }
+  };
+}
+function create_fragment(ctx) {
+  let div;
+  let mounted;
+  let dispose;
+  function select_block_type(ctx2, dirty) {
+    if (!/*current*/
+    ctx2[2] && !/*next*/
+    ctx2[1])
+      return create_if_block;
+    return create_else_block;
+  }
+  let current_block_type = select_block_type(ctx, -1);
+  let if_block = current_block_type(ctx);
+  return {
+    c() {
+      div = element("div");
+      if_block.c();
+      attr(div, "class", "root svelte-1grib6a");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if_block.m(div, null);
+      if (!mounted) {
+        dispose = listen(div, "click", function() {
+          if (is_function(
+            /*onClick*/
+            ctx[0]
+          ))
+            ctx[0].apply(this, arguments);
+        });
+        mounted = true;
+      }
+    },
+    p(new_ctx, [dirty]) {
+      ctx = new_ctx;
+      if (current_block_type === (current_block_type = select_block_type(ctx, dirty)) && if_block) {
+        if_block.p(ctx, dirty);
+      } else {
+        if_block.d(1);
+        if_block = current_block_type(ctx);
+        if (if_block) {
+          if_block.c();
+          if_block.m(div, null);
+        }
+      }
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if_block.d();
+      mounted = false;
+      dispose();
+    }
+  };
+}
+function instance($$self, $$props, $$invalidate) {
+  let showNow;
+  let showNext;
+  let progressIndicator;
+  let current2;
+  let next;
+  let $statusBarProps;
+  let $settings;
+  component_subscribe($$self, settings, ($$value) => $$invalidate(9, $settings = $$value));
+  let { onClick } = $$props;
+  let { tasksForToday } = $$props;
+  const statusBarProps = useStatusBarWidget({ tasksForToday });
+  component_subscribe($$self, statusBarProps, (value) => $$invalidate(8, $statusBarProps = value));
+  $$self.$$set = ($$props2) => {
+    if ("onClick" in $$props2)
+      $$invalidate(0, onClick = $$props2.onClick);
+    if ("tasksForToday" in $$props2)
+      $$invalidate(7, tasksForToday = $$props2.tasksForToday);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & /*$settings*/
+    512) {
+      $:
+        $$invalidate(5, { showNow, showNext, progressIndicator } = $settings, showNow, ($$invalidate(4, showNext), $$invalidate(9, $settings)), ($$invalidate(3, progressIndicator), $$invalidate(9, $settings)));
+    }
+    if ($$self.$$.dirty & /*$statusBarProps*/
+    256) {
+      $:
+        $$invalidate(2, { current: current2, next } = $statusBarProps, current2, ($$invalidate(1, next), $$invalidate(8, $statusBarProps)));
+    }
+  };
+  return [
+    onClick,
+    next,
+    current2,
+    progressIndicator,
+    showNext,
+    showNow,
+    statusBarProps,
+    tasksForToday,
+    $statusBarProps,
+    $settings
+  ];
+}
+var Status_bar_widget = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance, create_fragment, safe_not_equal, { onClick: 0, tasksForToday: 7 }, add_css);
+  }
+};
+var status_bar_widget_default = Status_bar_widget;
+
+// src/util/debounce-with-delay.ts
+function debounceWithDelay(cb, timeout) {
+  let lastTimeout;
+  let lastArgs;
+  function set2() {
+    lastTimeout = window.setTimeout(() => {
+      cb(...lastArgs);
+      lastTimeout = null;
+    }, timeout);
+  }
+  function debouncedFn(...args) {
+    lastArgs = args;
+    if (!lastTimeout) {
+      set2();
+    }
+  }
+  function delay() {
+    if (lastTimeout) {
+      clearTimeout(lastTimeout);
+      set2();
+    }
+  }
+  return [debouncedFn, delay];
+}
+
+// src/ui/hooks/use-debounced-dataview-tasks.ts
+function useDebouncedDataviewTasks({
+  metadataCache,
+  getAllTasks
+}) {
+  return readable(getAllTasks(), (set2) => {
+    const [updateTasks, delayUpdateTasks] = debounceWithDelay(() => {
+      set2(getAllTasks());
+    }, 1e3);
+    metadataCache.on(
+      // @ts-expect-error
+      "dataview:metadata-change",
+      updateTasks
+    );
+    document.addEventListener("keydown", delayUpdateTasks);
+    const source = derived(settings, ($settings) => {
+      return $settings.dataviewSource;
+    });
+    const unsubscribeFromSettings = source.subscribe(() => {
+      updateTasks();
+    });
+    return () => {
+      metadataCache.off("dataview:metadata-change", updateTasks);
+      document.removeEventListener("keydown", delayUpdateTasks);
+      unsubscribeFromSettings();
+    };
+  });
+}
+
+// src/ui/hooks/use-edit/use-cursor-minutes.ts
+function useCursorMinutes(pointerOffsetY, settings2) {
+  return derived(
+    pointerOffsetY,
+    ($pointerOffsetY) => offsetYToMinutes($pointerOffsetY, settings2.zoomLevel, settings2.startHour)
+  );
+}
+
+// node_modules/immer/dist/immer.mjs
+var NOTHING = Symbol.for("immer-nothing");
+var DRAFTABLE = Symbol.for("immer-draftable");
+var DRAFT_STATE = Symbol.for("immer-state");
+var errors = true ? [
+  // All error codes, starting by 0:
+  function(plugin) {
+    return `The plugin for '${plugin}' has not been loaded into Immer. To enable the plugin, import and call \`enable${plugin}()\` when initializing your application.`;
+  },
+  function(thing) {
+    return `produce can only be called on things that are draftable: plain objects, arrays, Map, Set or classes that are marked with '[immerable]: true'. Got '${thing}'`;
+  },
+  "This object has been frozen and should not be mutated",
+  function(data) {
+    return "Cannot use a proxy that has been revoked. Did you pass an object from inside an immer function to an async process? " + data;
+  },
+  "An immer producer returned a new value *and* modified its draft. Either return a new value *or* modify the draft.",
+  "Immer forbids circular references",
+  "The first or second argument to `produce` must be a function",
+  "The third argument to `produce` must be a function or undefined",
+  "First argument to `createDraft` must be a plain object, an array, or an immerable object",
+  "First argument to `finishDraft` must be a draft returned by `createDraft`",
+  function(thing) {
+    return `'current' expects a draft, got: ${thing}`;
+  },
+  "Object.defineProperty() cannot be used on an Immer draft",
+  "Object.setPrototypeOf() cannot be used on an Immer draft",
+  "Immer only supports deleting array indices",
+  "Immer only supports setting array indices and the 'length' property",
+  function(thing) {
+    return `'original' expects a draft, got: ${thing}`;
+  }
+  // Note: if more errors are added, the errorOffset in Patches.ts should be increased
+  // See Patches.ts for additional errors
+] : [];
+function die(error, ...args) {
+  if (true) {
+    const e = errors[error];
+    const msg = typeof e === "function" ? e.apply(null, args) : e;
+    throw new Error(`[Immer] ${msg}`);
+  }
+  throw new Error(
+    `[Immer] minified error nr: ${error}. Full error at: https://bit.ly/3cXEKWf`
+  );
+}
+var getPrototypeOf = Object.getPrototypeOf;
+function isDraft(value) {
+  return !!value && !!value[DRAFT_STATE];
+}
+function isDraftable(value) {
+  var _a;
+  if (!value)
+    return false;
+  return isPlainObject(value) || Array.isArray(value) || !!value[DRAFTABLE] || !!((_a = value.constructor) == null ? void 0 : _a[DRAFTABLE]) || isMap(value) || isSet(value);
+}
+var objectCtorString = Object.prototype.constructor.toString();
+function isPlainObject(value) {
+  if (!value || typeof value !== "object")
+    return false;
+  const proto = getPrototypeOf(value);
+  if (proto === null) {
+    return true;
+  }
+  const Ctor = Object.hasOwnProperty.call(proto, "constructor") && proto.constructor;
+  if (Ctor === Object)
+    return true;
+  return typeof Ctor == "function" && Function.toString.call(Ctor) === objectCtorString;
+}
+function each(obj, iter) {
+  if (getArchtype(obj) === 0) {
+    Object.entries(obj).forEach(([key, value]) => {
+      iter(key, value, obj);
+    });
+  } else {
+    obj.forEach((entry, index) => iter(index, entry, obj));
+  }
+}
+function getArchtype(thing) {
+  const state = thing[DRAFT_STATE];
+  return state ? state.type_ : Array.isArray(thing) ? 1 : isMap(thing) ? 2 : isSet(thing) ? 3 : 0;
+}
+function has(thing, prop) {
+  return getArchtype(thing) === 2 ? thing.has(prop) : Object.prototype.hasOwnProperty.call(thing, prop);
+}
+function set(thing, propOrOldValue, value) {
+  const t = getArchtype(thing);
+  if (t === 2)
+    thing.set(propOrOldValue, value);
+  else if (t === 3) {
+    thing.add(value);
+  } else
+    thing[propOrOldValue] = value;
+}
+function is(x, y) {
+  if (x === y) {
+    return x !== 0 || 1 / x === 1 / y;
+  } else {
+    return x !== x && y !== y;
+  }
+}
+function isMap(target) {
+  return target instanceof Map;
+}
+function isSet(target) {
+  return target instanceof Set;
+}
+function latest(state) {
+  return state.copy_ || state.base_;
+}
+function shallowCopy(base, strict) {
+  if (isMap(base)) {
+    return new Map(base);
+  }
+  if (isSet(base)) {
+    return new Set(base);
+  }
+  if (Array.isArray(base))
+    return Array.prototype.slice.call(base);
+  if (!strict && isPlainObject(base)) {
+    if (!getPrototypeOf(base)) {
+      const obj = /* @__PURE__ */ Object.create(null);
+      return Object.assign(obj, base);
+    }
+    return { ...base };
+  }
+  const descriptors = Object.getOwnPropertyDescriptors(base);
+  delete descriptors[DRAFT_STATE];
+  let keys = Reflect.ownKeys(descriptors);
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+    const desc = descriptors[key];
+    if (desc.writable === false) {
+      desc.writable = true;
+      desc.configurable = true;
+    }
+    if (desc.get || desc.set)
+      descriptors[key] = {
+        configurable: true,
+        writable: true,
+        // could live with !!desc.set as well here...
+        enumerable: desc.enumerable,
+        value: base[key]
+      };
+  }
+  return Object.create(getPrototypeOf(base), descriptors);
+}
+function freeze(obj, deep = false) {
+  if (isFrozen(obj) || isDraft(obj) || !isDraftable(obj))
+    return obj;
+  if (getArchtype(obj) > 1) {
+    obj.set = obj.add = obj.clear = obj.delete = dontMutateFrozenCollections;
+  }
+  Object.freeze(obj);
+  if (deep)
+    each(obj, (_key, value) => freeze(value, true), true);
+  return obj;
+}
+function dontMutateFrozenCollections() {
+  die(2);
+}
+function isFrozen(obj) {
+  return Object.isFrozen(obj);
+}
+var plugins = {};
+function getPlugin(pluginKey) {
+  const plugin = plugins[pluginKey];
+  if (!plugin) {
+    die(0, pluginKey);
+  }
+  return plugin;
+}
+var currentScope;
+function getCurrentScope() {
+  return currentScope;
+}
+function createScope(parent_, immer_) {
+  return {
+    drafts_: [],
+    parent_,
+    immer_,
+    // Whenever the modified draft contains a draft from another scope, we
+    // need to prevent auto-freezing so the unowned draft can be finalized.
+    canAutoFreeze_: true,
+    unfinalizedDrafts_: 0
+  };
+}
+function usePatchesInScope(scope, patchListener) {
+  if (patchListener) {
+    getPlugin("Patches");
+    scope.patches_ = [];
+    scope.inversePatches_ = [];
+    scope.patchListener_ = patchListener;
+  }
+}
+function revokeScope(scope) {
+  leaveScope(scope);
+  scope.drafts_.forEach(revokeDraft);
+  scope.drafts_ = null;
+}
+function leaveScope(scope) {
+  if (scope === currentScope) {
+    currentScope = scope.parent_;
+  }
+}
+function enterScope(immer2) {
+  return currentScope = createScope(currentScope, immer2);
+}
+function revokeDraft(draft) {
+  const state = draft[DRAFT_STATE];
+  if (state.type_ === 0 || state.type_ === 1)
+    state.revoke_();
+  else
+    state.revoked_ = true;
+}
+function processResult(result, scope) {
+  scope.unfinalizedDrafts_ = scope.drafts_.length;
+  const baseDraft = scope.drafts_[0];
+  const isReplaced = result !== void 0 && result !== baseDraft;
+  if (isReplaced) {
+    if (baseDraft[DRAFT_STATE].modified_) {
+      revokeScope(scope);
+      die(4);
+    }
+    if (isDraftable(result)) {
+      result = finalize(scope, result);
+      if (!scope.parent_)
+        maybeFreeze(scope, result);
+    }
+    if (scope.patches_) {
+      getPlugin("Patches").generateReplacementPatches_(
+        baseDraft[DRAFT_STATE].base_,
+        result,
+        scope.patches_,
+        scope.inversePatches_
+      );
+    }
+  } else {
+    result = finalize(scope, baseDraft, []);
+  }
+  revokeScope(scope);
+  if (scope.patches_) {
+    scope.patchListener_(scope.patches_, scope.inversePatches_);
+  }
+  return result !== NOTHING ? result : void 0;
+}
+function finalize(rootScope, value, path) {
+  if (isFrozen(value))
+    return value;
+  const state = value[DRAFT_STATE];
+  if (!state) {
+    each(
+      value,
+      (key, childValue) => finalizeProperty(rootScope, state, value, key, childValue, path),
+      true
+      // See #590, don't recurse into non-enumerable of non drafted objects
+    );
+    return value;
+  }
+  if (state.scope_ !== rootScope)
+    return value;
+  if (!state.modified_) {
+    maybeFreeze(rootScope, state.base_, true);
+    return state.base_;
+  }
+  if (!state.finalized_) {
+    state.finalized_ = true;
+    state.scope_.unfinalizedDrafts_--;
+    const result = state.copy_;
+    let resultEach = result;
+    let isSet2 = false;
+    if (state.type_ === 3) {
+      resultEach = new Set(result);
+      result.clear();
+      isSet2 = true;
+    }
+    each(
+      resultEach,
+      (key, childValue) => finalizeProperty(rootScope, state, result, key, childValue, path, isSet2)
+    );
+    maybeFreeze(rootScope, result, false);
+    if (path && rootScope.patches_) {
+      getPlugin("Patches").generatePatches_(
+        state,
+        path,
+        rootScope.patches_,
+        rootScope.inversePatches_
+      );
+    }
+  }
+  return state.copy_;
+}
+function finalizeProperty(rootScope, parentState, targetObject, prop, childValue, rootPath, targetIsSet) {
+  if (childValue === targetObject)
+    die(5);
+  if (isDraft(childValue)) {
+    const path = rootPath && parentState && parentState.type_ !== 3 && // Set objects are atomic since they have no keys.
+    !has(parentState.assigned_, prop) ? rootPath.concat(prop) : void 0;
+    const res = finalize(rootScope, childValue, path);
+    set(targetObject, prop, res);
+    if (isDraft(res)) {
+      rootScope.canAutoFreeze_ = false;
+    } else
+      return;
+  } else if (targetIsSet) {
+    targetObject.add(childValue);
+  }
+  if (isDraftable(childValue) && !isFrozen(childValue)) {
+    if (!rootScope.immer_.autoFreeze_ && rootScope.unfinalizedDrafts_ < 1) {
+      return;
+    }
+    finalize(rootScope, childValue);
+    if (!parentState || !parentState.scope_.parent_)
+      maybeFreeze(rootScope, childValue);
+  }
+}
+function maybeFreeze(scope, value, deep = false) {
+  if (!scope.parent_ && scope.immer_.autoFreeze_ && scope.canAutoFreeze_) {
+    freeze(value, deep);
+  }
+}
+function createProxyProxy(base, parent) {
+  const isArray = Array.isArray(base);
+  const state = {
+    type_: isArray ? 1 : 0,
+    // Track which produce call this is associated with.
+    scope_: parent ? parent.scope_ : getCurrentScope(),
+    // True for both shallow and deep changes.
+    modified_: false,
+    // Used during finalization.
+    finalized_: false,
+    // Track which properties have been assigned (true) or deleted (false).
+    assigned_: {},
+    // The parent draft state.
+    parent_: parent,
+    // The base state.
+    base_: base,
+    // The base proxy.
+    draft_: null,
+    // set below
+    // The base copy with any updated values.
+    copy_: null,
+    // Called by the `produce` function.
+    revoke_: null,
+    isManual_: false
+  };
+  let target = state;
+  let traps = objectTraps;
+  if (isArray) {
+    target = [state];
+    traps = arrayTraps;
+  }
+  const { revoke, proxy } = Proxy.revocable(target, traps);
+  state.draft_ = proxy;
+  state.revoke_ = revoke;
+  return proxy;
+}
+var objectTraps = {
+  get(state, prop) {
+    if (prop === DRAFT_STATE)
+      return state;
+    const source = latest(state);
+    if (!has(source, prop)) {
+      return readPropFromProto(state, source, prop);
+    }
+    const value = source[prop];
+    if (state.finalized_ || !isDraftable(value)) {
+      return value;
+    }
+    if (value === peek(state.base_, prop)) {
+      prepareCopy(state);
+      return state.copy_[prop] = createProxy(value, state);
+    }
+    return value;
+  },
+  has(state, prop) {
+    return prop in latest(state);
+  },
+  ownKeys(state) {
+    return Reflect.ownKeys(latest(state));
+  },
+  set(state, prop, value) {
+    const desc = getDescriptorFromProto(latest(state), prop);
+    if (desc == null ? void 0 : desc.set) {
+      desc.set.call(state.draft_, value);
+      return true;
+    }
+    if (!state.modified_) {
+      const current2 = peek(latest(state), prop);
+      const currentState = current2 == null ? void 0 : current2[DRAFT_STATE];
+      if (currentState && currentState.base_ === value) {
+        state.copy_[prop] = value;
+        state.assigned_[prop] = false;
+        return true;
+      }
+      if (is(value, current2) && (value !== void 0 || has(state.base_, prop)))
+        return true;
+      prepareCopy(state);
+      markChanged(state);
+    }
+    if (state.copy_[prop] === value && // special case: handle new props with value 'undefined'
+    (value !== void 0 || prop in state.copy_) || // special case: NaN
+    Number.isNaN(value) && Number.isNaN(state.copy_[prop]))
+      return true;
+    state.copy_[prop] = value;
+    state.assigned_[prop] = true;
+    return true;
+  },
+  deleteProperty(state, prop) {
+    if (peek(state.base_, prop) !== void 0 || prop in state.base_) {
+      state.assigned_[prop] = false;
+      prepareCopy(state);
+      markChanged(state);
+    } else {
+      delete state.assigned_[prop];
+    }
+    if (state.copy_) {
+      delete state.copy_[prop];
+    }
+    return true;
+  },
+  // Note: We never coerce `desc.value` into an Immer draft, because we can't make
+  // the same guarantee in ES5 mode.
+  getOwnPropertyDescriptor(state, prop) {
+    const owner = latest(state);
+    const desc = Reflect.getOwnPropertyDescriptor(owner, prop);
+    if (!desc)
+      return desc;
+    return {
+      writable: true,
+      configurable: state.type_ !== 1 || prop !== "length",
+      enumerable: desc.enumerable,
+      value: owner[prop]
+    };
+  },
+  defineProperty() {
+    die(11);
+  },
+  getPrototypeOf(state) {
+    return getPrototypeOf(state.base_);
+  },
+  setPrototypeOf() {
+    die(12);
+  }
+};
+var arrayTraps = {};
+each(objectTraps, (key, fn) => {
+  arrayTraps[key] = function() {
+    arguments[0] = arguments[0][0];
+    return fn.apply(this, arguments);
+  };
+});
+arrayTraps.deleteProperty = function(state, prop) {
+  if (isNaN(parseInt(prop)))
+    die(13);
+  return arrayTraps.set.call(this, state, prop, void 0);
+};
+arrayTraps.set = function(state, prop, value) {
+  if (prop !== "length" && isNaN(parseInt(prop)))
+    die(14);
+  return objectTraps.set.call(this, state[0], prop, value, state[0]);
+};
+function peek(draft, prop) {
+  const state = draft[DRAFT_STATE];
+  const source = state ? latest(state) : draft;
+  return source[prop];
+}
+function readPropFromProto(state, source, prop) {
+  var _a;
+  const desc = getDescriptorFromProto(source, prop);
+  return desc ? `value` in desc ? desc.value : (
+    // This is a very special case, if the prop is a getter defined by the
+    // prototype, we should invoke it with the draft as context!
+    (_a = desc.get) == null ? void 0 : _a.call(state.draft_)
+  ) : void 0;
+}
+function getDescriptorFromProto(source, prop) {
+  if (!(prop in source))
+    return void 0;
+  let proto = getPrototypeOf(source);
+  while (proto) {
+    const desc = Object.getOwnPropertyDescriptor(proto, prop);
+    if (desc)
+      return desc;
+    proto = getPrototypeOf(proto);
+  }
+  return void 0;
+}
+function markChanged(state) {
+  if (!state.modified_) {
+    state.modified_ = true;
+    if (state.parent_) {
+      markChanged(state.parent_);
+    }
+  }
+}
+function prepareCopy(state) {
+  if (!state.copy_) {
+    state.copy_ = shallowCopy(
+      state.base_,
+      state.scope_.immer_.useStrictShallowCopy_
+    );
+  }
+}
+var Immer2 = class {
+  constructor(config) {
+    this.autoFreeze_ = true;
+    this.useStrictShallowCopy_ = false;
+    this.produce = (base, recipe, patchListener) => {
+      if (typeof base === "function" && typeof recipe !== "function") {
+        const defaultBase = recipe;
+        recipe = base;
+        const self2 = this;
+        return function curriedProduce(base2 = defaultBase, ...args) {
+          return self2.produce(base2, (draft) => recipe.call(this, draft, ...args));
+        };
+      }
+      if (typeof recipe !== "function")
+        die(6);
+      if (patchListener !== void 0 && typeof patchListener !== "function")
+        die(7);
+      let result;
+      if (isDraftable(base)) {
+        const scope = enterScope(this);
+        const proxy = createProxy(base, void 0);
+        let hasError = true;
+        try {
+          result = recipe(proxy);
+          hasError = false;
+        } finally {
+          if (hasError)
+            revokeScope(scope);
+          else
+            leaveScope(scope);
+        }
+        usePatchesInScope(scope, patchListener);
+        return processResult(result, scope);
+      } else if (!base || typeof base !== "object") {
+        result = recipe(base);
+        if (result === void 0)
+          result = base;
+        if (result === NOTHING)
+          result = void 0;
+        if (this.autoFreeze_)
+          freeze(result, true);
+        if (patchListener) {
+          const p = [];
+          const ip = [];
+          getPlugin("Patches").generateReplacementPatches_(base, result, p, ip);
+          patchListener(p, ip);
+        }
+        return result;
+      } else
+        die(1, base);
+    };
+    this.produceWithPatches = (base, recipe) => {
+      if (typeof base === "function") {
+        return (state, ...args) => this.produceWithPatches(state, (draft) => base(draft, ...args));
+      }
+      let patches, inversePatches;
+      const result = this.produce(base, recipe, (p, ip) => {
+        patches = p;
+        inversePatches = ip;
+      });
+      return [result, patches, inversePatches];
+    };
+    if (typeof (config == null ? void 0 : config.autoFreeze) === "boolean")
+      this.setAutoFreeze(config.autoFreeze);
+    if (typeof (config == null ? void 0 : config.useStrictShallowCopy) === "boolean")
+      this.setUseStrictShallowCopy(config.useStrictShallowCopy);
+  }
+  createDraft(base) {
+    if (!isDraftable(base))
+      die(8);
+    if (isDraft(base))
+      base = current(base);
+    const scope = enterScope(this);
+    const proxy = createProxy(base, void 0);
+    proxy[DRAFT_STATE].isManual_ = true;
+    leaveScope(scope);
+    return proxy;
+  }
+  finishDraft(draft, patchListener) {
+    const state = draft && draft[DRAFT_STATE];
+    if (!state || !state.isManual_)
+      die(9);
+    const { scope_: scope } = state;
+    usePatchesInScope(scope, patchListener);
+    return processResult(void 0, scope);
+  }
+  /**
+   * Pass true to automatically freeze all copies created by Immer.
+   *
+   * By default, auto-freezing is enabled.
+   */
+  setAutoFreeze(value) {
+    this.autoFreeze_ = value;
+  }
+  /**
+   * Pass true to enable strict shallow copy.
+   *
+   * By default, immer does not copy the object descriptors such as getter, setter and non-enumrable properties.
+   */
+  setUseStrictShallowCopy(value) {
+    this.useStrictShallowCopy_ = value;
+  }
+  applyPatches(base, patches) {
+    let i;
+    for (i = patches.length - 1; i >= 0; i--) {
+      const patch = patches[i];
+      if (patch.path.length === 0 && patch.op === "replace") {
+        base = patch.value;
+        break;
+      }
+    }
+    if (i > -1) {
+      patches = patches.slice(i + 1);
+    }
+    const applyPatchesImpl = getPlugin("Patches").applyPatches_;
+    if (isDraft(base)) {
+      return applyPatchesImpl(base, patches);
+    }
+    return this.produce(
+      base,
+      (draft) => applyPatchesImpl(draft, patches)
+    );
+  }
+};
+function createProxy(value, parent) {
+  const draft = isMap(value) ? getPlugin("MapSet").proxyMap_(value, parent) : isSet(value) ? getPlugin("MapSet").proxySet_(value, parent) : createProxyProxy(value, parent);
+  const scope = parent ? parent.scope_ : getCurrentScope();
+  scope.drafts_.push(draft);
+  return draft;
+}
+function current(value) {
+  if (!isDraft(value))
+    die(10, value);
+  return currentImpl(value);
+}
+function currentImpl(value) {
+  if (!isDraftable(value) || isFrozen(value))
+    return value;
+  const state = value[DRAFT_STATE];
+  let copy2;
+  if (state) {
+    if (!state.modified_)
+      return state.base_;
+    state.finalized_ = true;
+    copy2 = shallowCopy(value, state.scope_.immer_.useStrictShallowCopy_);
+  } else {
+    copy2 = shallowCopy(value, true);
+  }
+  each(copy2, (key, childValue) => {
+    set(copy2, key, currentImpl(childValue));
+  });
+  if (state) {
+    state.finalized_ = false;
+  }
+  return copy2;
+}
+var immer = new Immer2();
+var produce = immer.produce;
+var produceWithPatches = immer.produceWithPatches.bind(
+  immer
+);
+var setAutoFreeze = immer.setAutoFreeze.bind(immer);
+var setUseStrictShallowCopy = immer.setUseStrictShallowCopy.bind(immer);
+var applyPatches = immer.applyPatches.bind(immer);
+var createDraft = immer.createDraft.bind(immer);
+var finishDraft = immer.finishDraft.bind(immer);
+
+// src/ui/hooks/use-edit/transform/transform.ts
+var import_typed_assert2 = __toESM(require_build());
+
+// src/util/tasks-utils.ts
+var import_fp5 = __toESM(require_fp());
+var import_obsidian_daily_notes_interface4 = __toESM(require_main());
+function getEmptyTasksForDay() {
+  return { withTime: [], noTime: [] };
+}
+function getTasksWithTime(tasks) {
+  return Object.values(tasks).flatMap(({ withTime }) => withTime);
+}
+function getFlatTasks(tasks) {
+  return Object.values(tasks).flatMap(({ withTime, noTime }) => [
+    ...withTime,
+    ...noTime
+  ]);
+}
+function removeTask(task, tasks) {
+  return {
+    ...tasks,
+    noTime: tasks.noTime.filter((t) => t.id !== task.id),
+    withTime: tasks.withTime.filter((t) => t.id !== task.id)
+  };
+}
+function addTaskWithTime(task, tasks) {
+  return {
+    ...tasks,
+    withTime: [...tasks.withTime, task]
+  };
+}
+function moveToTimed(task, tasks) {
+  const withRemoved = removeTask(task, tasks);
+  return { ...withRemoved, withTime: [...withRemoved.withTime, task] };
+}
+function getDayKey(day) {
+  return day.format(import_obsidian_daily_notes_interface4.DEFAULT_DAILY_NOTE_FORMAT);
+}
+function moveTaskToDay(baseline, task, day) {
+  const sourceKey = getDayKey(task.startTime);
+  const destKey = getDayKey(day);
+  const source = baseline[sourceKey];
+  const dest = baseline[destKey];
+  return {
+    ...baseline,
+    [sourceKey]: removeTask(task, source),
+    [destKey]: addTaskWithTime(task, dest)
+  };
+}
+function moveTaskToColumn(day, task, baseline) {
+  if (day.isSame(task.startTime, "day")) {
+    const key = getDayKey(task.startTime);
+    return {
+      ...baseline,
+      [key]: moveToTimed(task, baseline[key])
+    };
+  }
+  return moveTaskToDay(baseline, task, day);
+}
+function getTasksWithUpdatedDay(tasks) {
+  return Object.entries(tasks).flatMap(
+    ([dayKey, tasks2]) => tasks2.withTime.map((task) => ({ dayKey, task }))
+  ).filter(
+    ({ dayKey, task }) => !task.isGhost && dayKey !== getDayKey(task.startTime)
+  );
+}
+function getPristine(flatBaseline, flatNext) {
+  return flatNext.filter(
+    (task) => flatBaseline.find((baselineTask) => isEqualTask(task, baselineTask))
+  );
+}
+function getCreatedTasks(base, next) {
+  return (0, import_fp5.differenceBy)((task) => task.id, next, base);
+}
+function getTasksWithUpdatedTime(base, next) {
+  const pristine = getPristine(base, next);
+  return (0, import_fp5.difference)(next, pristine).filter((task) => !task.isGhost);
+}
+function getDiff(base, next) {
+  return {
+    updatedTime: getTasksWithUpdatedTime(
+      getTasksWithTime(base),
+      getTasksWithTime(next)
+    ),
+    updatedDay: getTasksWithUpdatedDay(next),
+    created: getCreatedTasks(getFlatTasks(base), getFlatTasks(next))
+  };
+}
+function updateText(diff) {
+  return {
+    created: diff.created.map(updateTaskText),
+    updated: [
+      ...diff.updatedTime.map(updateTaskText),
+      ...diff.updatedDay.map(
+        ({ dayKey, task }) => updateTaskText(updateTaskScheduledDay(task, dayKey))
+      )
+    ]
+  };
+}
+
+// src/ui/hooks/use-edit/transform/create.ts
+function create(baseline, editTarget, cursorTime) {
+  return baseline.map((task) => {
+    if (task.id === editTarget.id) {
+      return {
+        ...editTarget,
+        durationMinutes: cursorTime - editTarget.startMinutes
+      };
+    }
+    return task;
+  });
+}
+
 // src/util/to-spliced.ts
 function toSpliced(array, index, el) {
+  if (index < 0) {
+    throw new Error(`Cannot use negative indexes for splcing`);
+  }
   const copy2 = [...array];
   copy2[index] = el;
   return copy2;
@@ -23608,31 +28451,31 @@ function dragAndShiftOthers(baseline, editTarget, cursorTime) {
     ...editTarget,
     startMinutes: cursorTime
   };
-  const updatedFollowing = following.reduce((result, current) => {
+  const updatedFollowing = following.reduce((result, current2) => {
     const previous = (0, import_lodash.last)(result) || updated;
-    if (getEndMinutes(previous) > current.startMinutes) {
+    if (getEndMinutes(previous) > current2.startMinutes) {
       return [
         ...result,
         {
-          ...current,
+          ...current2,
           startMinutes: getEndMinutes(previous)
         }
       ];
     }
-    return [...result, current];
+    return [...result, current2];
   }, []);
-  const updatedPreceding = preceding.reverse().reduce((result, current) => {
+  const updatedPreceding = preceding.reverse().reduce((result, current2) => {
     const nextInTimeline = (0, import_lodash.last)(result) || updated;
-    if (nextInTimeline.startMinutes < getEndMinutes(current)) {
+    if (nextInTimeline.startMinutes < getEndMinutes(current2)) {
       return [
         ...result,
         {
-          ...current,
-          startMinutes: nextInTimeline.startMinutes - current.durationMinutes
+          ...current2,
+          startMinutes: nextInTimeline.startMinutes - current2.durationMinutes
         }
       ];
     }
-    return [...result, current];
+    return [...result, current2];
   }, []).reverse();
   return [...updatedPreceding, updated, ...updatedFollowing];
 }
@@ -23659,133 +28502,90 @@ function resizeAndShiftOthers(baseline, editTarget, cursorTime) {
     ...editTarget,
     durationMinutes
   };
-  const updatedFollowing = following.reduce((result, current) => {
+  const updatedFollowing = following.reduce((result, current2) => {
     const previous = (0, import_lodash2.last)(result) || updated;
-    if (getEndMinutes(previous) > current.startMinutes) {
+    if (getEndMinutes(previous) > current2.startMinutes) {
       return [
         ...result,
         {
-          ...current,
+          ...current2,
           startMinutes: getEndMinutes(previous)
         }
       ];
     }
-    return [...result, current];
+    return [...result, current2];
   }, []);
   return [...preceding, updated, ...updatedFollowing];
 }
 
-// src/ui/hooks/use-edit/transform/schedule.ts
-function schedule(baseline, editedTask, cursorTime) {
-  const scheduledTask = {
-    ...editedTask,
-    startMinutes: cursorTime,
-    isGhost: true
-  };
-  return {
-    noTime: baseline.noTime.filter((task) => task.id !== editedTask.id),
-    withTime: [...baseline.withTime, scheduledTask]
-  };
-}
-
 // src/ui/hooks/use-edit/transform/transform.ts
-function transform(baseline, cursorTime, { task, mode }) {
-  switch (mode) {
-    case "SCHEDULE" /* SCHEDULE */:
-      return schedule(baseline, task, cursorTime);
-    default:
-      return {
-        ...baseline,
-        withTime: transformTasksWithTime(baseline.withTime, cursorTime, {
-          task,
-          mode
-        })
-      };
-  }
+var transformers = {
+  ["DRAG" /* DRAG */]: drag,
+  ["DRAG_AND_SHIFT_OTHERS" /* DRAG_AND_SHIFT_OTHERS */]: dragAndShiftOthers,
+  ["CREATE" /* CREATE */]: create,
+  ["RESIZE" /* RESIZE */]: resize,
+  ["RESIZE_AND_SHIFT_OTHERS" /* RESIZE_AND_SHIFT_OTHERS */]: resizeAndShiftOthers
+};
+var multidayModes = [
+  "DRAG" /* DRAG */,
+  "DRAG_AND_SHIFT_OTHERS" /* DRAG_AND_SHIFT_OTHERS */
+];
+function isMultiday(mode) {
+  return multidayModes.includes(mode);
 }
-function transformTasksWithTime(baseline, cursorTime, { task, mode }) {
-  switch (mode) {
-    case "DRAG" /* DRAG */:
-      return drag(baseline, task, cursorTime);
-    case "DRAG_AND_SHIFT_OTHERS" /* DRAG_AND_SHIFT_OTHERS */:
-      return dragAndShiftOthers(baseline, task, cursorTime);
-    case "CREATE" /* CREATE */:
-      return create(baseline, task, cursorTime);
-    case "RESIZE" /* RESIZE */:
-      return resize(baseline, task, cursorTime);
-    case "RESIZE_AND_SHIFT_OTHERS" /* RESIZE_AND_SHIFT_OTHERS */:
-      return resizeAndShiftOthers(baseline, task, cursorTime);
-    default:
-      throw new Error(`Unknown edit mode: ${mode}`);
-  }
+function getDestDay(operation) {
+  return isMultiday(operation.mode) ? operation.day : operation.task.startTime;
+}
+function sortByStartMinutes(tasks) {
+  return produce(
+    tasks,
+    (draft) => draft.sort((a, b) => a.startMinutes - b.startMinutes)
+  );
+}
+function transform(baseline, cursorMinutes, operation) {
+  const destDay = getDestDay(operation);
+  const destKey = getDayKey(destDay);
+  const withTaskInRightColumn = moveTaskToColumn(
+    destDay,
+    operation.task,
+    baseline
+  );
+  const destTasks = withTaskInRightColumn[destKey];
+  const transformFn = transformers[operation.mode];
+  const withTimeSorted = sortByStartMinutes(destTasks.withTime);
+  (0, import_typed_assert2.isNotVoid)(transformFn, `No transformer for operation: ${operation.mode}`);
+  return {
+    ...withTaskInRightColumn,
+    [destKey]: {
+      ...destTasks,
+      withTime: transformFn(withTimeSorted, operation.task, cursorMinutes)
+    }
+  };
 }
 
-// src/ui/hooks/use-edit/use-edit.ts
-function offsetYToMinutes(offsetY, zoomLevel, startHour) {
-  const hiddenHoursSize = startHour * 60 * zoomLevel;
-  return (offsetY + hiddenHoursSize) / zoomLevel;
-}
-function useEdit({
-  tasks,
-  // todo: just pass time
-  pointerOffsetY,
-  settings: settings2,
-  fileSyncInProgress,
-  onUpdate
+// src/ui/hooks/use-edit/use-displayed-tasks.ts
+function useDisplayedTasks({
+  editOperation,
+  baselineTasks,
+  cursorMinutes
 }) {
-  const baselineTasks = writable(tasks);
-  const editOperation = writable();
-  const displayedTasks = derived(
-    [editOperation, pointerOffsetY, baselineTasks, settings2],
-    ([$editOperation, $pointerOffsetY, $baselineTasks, $settings]) => {
+  return derived(
+    [editOperation, cursorMinutes, baselineTasks],
+    ([$editOperation, $cursorMinutes, $baselineTasks]) => {
       if (!$editOperation) {
         return $baselineTasks;
       }
-      const cursorMinutes = offsetYToMinutes(
-        $pointerOffsetY,
-        $settings.zoomLevel,
-        $settings.startHour
-      );
-      return transform($baselineTasks, cursorMinutes, $editOperation);
+      return transform($baselineTasks, $cursorMinutes, $editOperation);
     }
   );
-  const editStatus = derived(
-    editOperation,
-    ($editOperation) => $editOperation == null ? void 0 : $editOperation.mode
-  );
-  function startEdit(operation) {
-    if (!get_store_value(fileSyncInProgress)) {
-      editOperation.set(operation);
-    }
-  }
-  async function confirmEdit() {
-    if (get_store_value(editOperation) === void 0) {
-      return;
-    }
-    const currentTasks = get_store_value(displayedTasks);
-    editOperation.set(void 0);
-    const dirty = findUpdated(tasks.withTime, currentTasks.withTime);
-    if (dirty.length === 0) {
-      return;
-    }
-    baselineTasks.set(currentTasks);
-    await onUpdate(dirty);
-  }
-  function cancelEdit() {
-    editOperation.set(void 0);
-  }
-  return {
-    startEdit,
-    confirmEdit,
-    cancelEdit,
-    displayedTasks,
-    editStatus
-  };
 }
+
+// src/ui/hooks/use-edit/use-displayed-tasks-for-day.ts
+var import_fp7 = __toESM(require_fp());
 
 // src/overlap/overlap.ts
 var import_fraction = __toESM(require_fraction());
-var import_fp4 = __toESM(require_fp());
+var import_fp6 = __toESM(require_fp());
 
 // src/overlap/horizontal-placing.ts
 function getHorizontalPlacing(overlap) {
@@ -23808,15 +28608,15 @@ function computeOverlap(items) {
 }
 function getItemsOverlappingItemAndEachOther(item, items) {
   return items.reduce(
-    (result, current) => {
-      if (current === item) {
+    (result, current2) => {
+      if (current2 === item) {
         return result;
       }
       const currentOverlapsWithPreviousItems = result.every(
-        (intersectingItem) => overlaps(intersectingItem, current)
+        (intersectingItem) => overlaps(intersectingItem, current2)
       );
       if (currentOverlapsWithPreviousItems) {
-        result.push(current);
+        result.push(current2);
       }
       return result;
     },
@@ -23825,15 +28625,15 @@ function getItemsOverlappingItemAndEachOther(item, items) {
 }
 function computeOverlapForGroup(overlapGroup, previousLookup) {
   const newLookup = new Map([...previousLookup]);
-  const [itemsPlacedPreviously, itemsToBePlaced] = (0, import_fp4.partition)(
+  const [itemsPlacedPreviously, itemsToBePlaced] = (0, import_fp6.partition)(
     ({ id }) => newLookup.has(id),
     overlapGroup
   );
   if (itemsToBePlaced.length === 0) {
     return newLookup;
   }
-  const fractionOfPlacedItems = itemsPlacedPreviously.reduce((sum, current) => {
-    const { span, columns } = newLookup.get(current.id);
+  const fractionOfPlacedItems = itemsPlacedPreviously.reduce((sum, current2) => {
+    const { span, columns } = newLookup.get(current2.id);
     return new import_fraction.default(span, columns).add(sum);
   }, new import_fraction.default(0));
   const fractionForNewItems = new import_fraction.default(1).sub(fractionOfPlacedItems);
@@ -23887,11 +28687,189 @@ function addHorizontalPlacing(tasks) {
   });
 }
 
-// src/util/get-tasks-for-day.ts
-var import_fp5 = __toESM(require_fp());
-var import_obsidian_daily_notes_interface4 = __toESM(require_main());
+// src/ui/hooks/use-edit/use-displayed-tasks-for-day.ts
+function useDisplayedTasksForDay(displayedTasks, day) {
+  return derived(displayedTasks, ($displayedTasks) => {
+    const tasksForDay = $displayedTasks[getDayKey(day)];
+    if (!tasksForDay) {
+      return getEmptyTasksForDay();
+    }
+    return {
+      ...tasksForDay,
+      withTime: addHorizontalPlacing(
+        (0, import_fp7.uniqBy)(getRenderKey, tasksForDay.withTime)
+      )
+    };
+  });
+}
+
+// src/ui/hooks/use-edit/use-edit-actions.ts
+function useEditActions({
+  editOperation,
+  baselineTasks,
+  displayedTasks,
+  onUpdate
+}) {
+  function startEdit(operation) {
+    editOperation.set(operation);
+  }
+  function cancelEdit() {
+    editOperation.set(void 0);
+  }
+  async function confirmEdit() {
+    if (get_store_value(editOperation) === void 0) {
+      return;
+    }
+    const currentTasks = get_store_value(displayedTasks);
+    editOperation.set(void 0);
+    const diff = getDiff(get_store_value(baselineTasks), currentTasks);
+    if (areValuesEmpty(diff)) {
+      return;
+    }
+    baselineTasks.set(currentTasks);
+    await onUpdate(updateText(diff));
+  }
+  return {
+    startEdit,
+    confirmEdit,
+    cancelEdit
+  };
+}
+
+// src/ui/hooks/use-edit/use-edit-handlers.ts
+function useEditHandlers({
+  day,
+  obsidianFacade,
+  startEdit,
+  cursorMinutes,
+  editOperation
+}) {
+  function handleContainerMouseDown() {
+    const newTask = createTask2(day, get_store_value(cursorMinutes));
+    startEdit({
+      task: { ...newTask, isGhost: true },
+      mode: "CREATE" /* CREATE */,
+      day
+    });
+  }
+  function handleResizerMouseDown(event, task) {
+    const mode = event.ctrlKey ? "RESIZE_AND_SHIFT_OTHERS" /* RESIZE_AND_SHIFT_OTHERS */ : "RESIZE" /* RESIZE */;
+    startEdit({ task, mode, day });
+  }
+  async function handleTaskMouseUp(task) {
+    if (get_store_value(editOperation)) {
+      return;
+    }
+    const { path, line } = task.location;
+    await obsidianFacade.revealLineInFile(path, line);
+  }
+  function handleGripMouseDown(event, task) {
+    if (event.ctrlKey) {
+      startEdit({ task, mode: "DRAG_AND_SHIFT_OTHERS" /* DRAG_AND_SHIFT_OTHERS */, day });
+    } else if (event.shiftKey) {
+      startEdit({ task: copy(task), mode: "CREATE" /* CREATE */, day });
+    } else {
+      startEdit({ task, mode: "DRAG" /* DRAG */, day });
+    }
+  }
+  function handleUnscheduledTaskGripMouseDown(task) {
+    const withAddedTime = {
+      ...task,
+      startMinutes: get_store_value(cursorMinutes),
+      startTime: window.moment()
+    };
+    startEdit({ task: withAddedTime, mode: "DRAG" /* DRAG */, day });
+  }
+  return {
+    handleGripMouseDown,
+    handleContainerMouseDown,
+    handleResizerMouseDown,
+    handleTaskMouseUp,
+    handleUnscheduledTaskGripMouseDown
+  };
+}
+
+// src/ui/hooks/use-edit/use-edit-context.ts
+function useEditContext({
+  obsidianFacade,
+  onUpdate,
+  settings: settings2,
+  visibleTasks
+}) {
+  const editOperation = writable();
+  const pointerOffsetY = writable(0);
+  const cursorMinutes = useCursorMinutes(pointerOffsetY, settings2);
+  const baselineTasks = writable(visibleTasks);
+  const displayedTasks = useDisplayedTasks({
+    baselineTasks,
+    editOperation,
+    cursorMinutes
+  });
+  const { startEdit, confirmEdit, cancelEdit } = useEditActions({
+    editOperation,
+    baselineTasks,
+    displayedTasks,
+    onUpdate
+  });
+  function getEditHandlers(day) {
+    const handlers = useEditHandlers({
+      day,
+      obsidianFacade,
+      startEdit,
+      cursorMinutes,
+      editOperation
+    });
+    function handleMouseEnter() {
+      editOperation.update(
+        (previous) => previous && {
+          ...previous,
+          day
+        }
+      );
+    }
+    return {
+      ...handlers,
+      handleMouseEnter,
+      cancelEdit,
+      pointerOffsetY,
+      displayedTasks: useDisplayedTasksForDay(displayedTasks, day)
+    };
+  }
+  return {
+    displayedTasks,
+    confirmEdit,
+    getEditHandlers,
+    editOperation
+  };
+}
+
+// src/global-store/visible-days.ts
+var import_fp8 = __toESM(require_fp());
+
+// src/global-store/visible-date-range.ts
+var visibleDateRange = writable(getDaysOfCurrentWeek());
+
+// src/global-store/visible-days.ts
+function useVisibleDays() {
+  let previousDayKeys;
+  return derived(
+    [visibleDayInTimeline, visibleDateRange, currentTime],
+    ([$visibleDayInTimeline, $visibleDateRange, $currentTime], set2) => {
+      const days = [$currentTime, $visibleDayInTimeline, ...$visibleDateRange];
+      const uniqDays = (0, import_fp8.uniqBy)(getDayKey, days);
+      const dayKeys = uniqDays.map(getDayKey).sort();
+      const areDaysSame = previousDayKeys && (0, import_fp8.isEqual)(dayKeys, previousDayKeys);
+      if (!areDaysSame) {
+        previousDayKeys = dayKeys;
+        set2(uniqDays);
+      }
+    }
+  );
+}
+var visibleDays = useVisibleDays();
 
 // src/service/dataview-facade.ts
+var import_obsidian_daily_notes_interface5 = __toESM(require_main());
 function sTaskLineToString(node) {
   const status = node.status ? `[${node.status}] ` : "";
   return `${node.symbol} ${status}${node.text}
@@ -23947,55 +28925,52 @@ function sTaskToTask(sTask, day) {
     id: getId()
   };
 }
+function getScheduledDay(sTask) {
+  var _a, _b, _c;
+  const scheduledPropDay = (_b = (_a = sTask.scheduled) == null ? void 0 : _a.toFormat) == null ? void 0 : _b.call(_a, "yyyy-MM-dd");
+  const dailyNoteDay = (_c = (0, import_obsidian_daily_notes_interface5.getDateFromPath)(sTask.path, "day")) == null ? void 0 : _c.format(
+    "YYYY-MM-DD"
+  );
+  return scheduledPropDay || dailyNoteDay;
+}
 
 // src/util/get-tasks-for-day.ts
-function isScheduledForThisDay(task, day) {
-  var _a;
-  if (!((_a = task == null ? void 0 : task.scheduled) == null ? void 0 : _a.toMillis)) {
-    return false;
-  }
-  const scheduledMoment = window.moment(task.scheduled.toMillis());
-  return scheduledMoment.isSame(day, "day");
-}
+var import_fp9 = __toESM(require_fp());
+var import_obsidian_daily_notes_interface6 = __toESM(require_main());
 function isTimeSetOnTask(task) {
   return timeFromStartRegExp.test(task.text);
 }
-function isTaskInFile(task, file) {
-  return task.path === (file == null ? void 0 : file.path);
-}
-function isScheduledForAnotherDay(task, day) {
-  return task.scheduled && !isScheduledForThisDay(task, day);
-}
 function calculateDuration(tasks, options) {
-  return tasks.map((current, i, array) => {
-    if (current.durationMinutes) {
-      return current;
+  return tasks.map((current2, i, array) => {
+    if (current2.durationMinutes) {
+      return current2;
     }
     const next = array[i + 1];
     const shouldExtendUntilNext = next && options.extendDurationUntilNext;
     if (shouldExtendUntilNext) {
-      const minutesUntilNext = next.startMinutes - current.startMinutes;
+      const minutesUntilNext = next.startMinutes - current2.startMinutes;
       return {
-        ...current,
+        ...current2,
         durationMinutes: minutesUntilNext
       };
     }
     return {
-      ...current,
+      ...current2,
       durationMinutes: options.defaultDurationMinutes
     };
   });
 }
-function getTasksForDay(day, dataviewTasks, settings2) {
-  if (dataviewTasks.length === 0) {
-    return { withTime: [], noTime: [] };
-  }
-  const noteForThisDay = (0, import_obsidian_daily_notes_interface4.getDailyNote)(day, (0, import_obsidian_daily_notes_interface4.getAllDailyNotes)());
-  const tasksForDay = dataviewTasks.where(
-    (task) => !isScheduledForAnotherDay(task, day) && (isScheduledForThisDay(task, day) || isTaskInFile(task, noteForThisDay))
-  ).array();
-  const [withTime, withoutTime] = (0, import_fp5.partition)(isTimeSetOnTask, tasksForDay);
-  const tasksWithTime = withTime.map((sTask) => sTaskToTask(sTask, day)).sort((a, b) => a.startMinutes - b.startMinutes);
+function mapToTasksForDay(day, tasksForDay, settings2) {
+  const [withTime, withoutTime] = (0, import_fp9.partition)(isTimeSetOnTask, tasksForDay);
+  const tasksWithTime = withTime.reduce((result, sTask) => {
+    try {
+      const task = sTaskToTask(sTask, day);
+      result.push(task);
+    } catch (error) {
+      console.error(`Could not parse Dataview task: ${error}`);
+    }
+    return result;
+  }, []).sort((a, b) => a.startMinutes - b.startMinutes);
   const noTime = withoutTime.filter(
     (sTask) => settings2.showUnscheduledNestedTasks ? true : !sTask.parent
   ).map((sTask) => sTaskToUnscheduledTask(sTask, day));
@@ -24003,47 +28978,317 @@ function getTasksForDay(day, dataviewTasks, settings2) {
   return { withTime: withTimeAndDuration, noTime };
 }
 
-// src/ui/hooks/use-tasks-for-day.ts
-function useTasksForDay({
-  day,
-  dataviewTasks,
-  settings: settings2
-}) {
-  const { withTime, noTime } = getTasksForDay(day, dataviewTasks, settings2);
-  return { withTime: addHorizontalPlacing(withTime), noTime };
+// src/ui/hooks/use-visible-tasks.ts
+function useVisibleTasks({ dataviewTasks }) {
+  return derived(
+    [visibleDays, dataviewTasks, settings],
+    ([$visibleDays, $dataviewTasks, $settings]) => {
+      if ($dataviewTasks.length === 0) {
+        return Object.fromEntries(
+          $visibleDays.map((day) => [getDayKey(day), getEmptyTasksForDay()])
+        );
+      }
+      const dayToSTasksLookup = Object.fromEntries(
+        $dataviewTasks.groupBy(getScheduledDay).map(({ key, rows }) => [key, rows.array()]).array()
+      );
+      return $visibleDays.reduce((result, day) => {
+        const key = getDayKey(day);
+        const sTasksForDay = dayToSTasksLookup[key];
+        if (sTasksForDay) {
+          result[key] = mapToTasksForDay(day, sTasksForDay, $settings);
+        } else {
+          result[key] = getEmptyTasksForDay();
+        }
+        return result;
+      }, {});
+    }
+  );
 }
 
-// src/ui/components/banner.svelte
-function add_css(target) {
-  append_styles(target, "svelte-yircn6", ".banner.svelte-yircn6{position:sticky;z-index:10;top:0;display:flex;align-items:center;justify-content:center;padding:var(--size-4-4);animation:pulse 1s infinite alternate}");
+// src/ui/settings-tab.ts
+var import_obsidian2 = require("obsidian");
+var DayPlannerSettingsTab = class extends import_obsidian2.PluginSettingTab {
+  constructor(plugin, settingsStore) {
+    super(plugin.app, plugin);
+    this.plugin = plugin;
+    this.settingsStore = settingsStore;
+  }
+  display() {
+    const { containerEl } = this;
+    containerEl.empty();
+    new import_obsidian2.Setting(containerEl).setName("Round time to minutes").setDesc("While editing, tasks are going to get rounded to this number").addSlider(
+      (slider) => slider.setLimits(5, 20, 5).setValue(this.plugin.settings().snapStepMinutes).setDynamicTooltip().onChange((value) => {
+        this.update({ snapStepMinutes: value });
+      })
+    );
+    new import_obsidian2.Setting(containerEl).setName("Task Notification").setDesc("Display a notification when a new task is started").addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings().showTaskNotification).onChange((value) => {
+        this.update({ showTaskNotification: value });
+      })
+    );
+    new import_obsidian2.Setting(containerEl).setName("Timeline Zoom Level").setDesc(
+      "The zoom level to display the timeline. The higher the number, the more vertical space each task will take up."
+    ).addSlider(
+      (slider) => {
+        var _a;
+        return slider.setLimits(1, 5, 1).setValue((_a = Number(this.plugin.settings().zoomLevel)) != null ? _a : 4).setDynamicTooltip().onChange((value) => {
+          this.update({ zoomLevel: value });
+        });
+      }
+    );
+    new import_obsidian2.Setting(containerEl).setName("Timeline Icon").setDesc(
+      "The icon of the timeline pane. Reopen timeline pane or restart obsidian to see the change."
+    ).addDropdown((dropdown) => {
+      var _a;
+      icons.forEach((icon) => dropdown.addOption(icon, icon));
+      return dropdown.setValue(
+        (_a = this.plugin.settings().timelineIcon) != null ? _a : "calendar-with-checkmark"
+      ).onChange((value) => {
+        this.update({ timelineIcon: value });
+      });
+    });
+    new import_obsidian2.Setting(containerEl).setName("Start Hour").setDesc("The planner is going to start at this hour each day").addDropdown(
+      (component) => component.addOptions({
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10",
+        "11": "11",
+        "12": "12"
+      }).setValue(String(this.plugin.settings().startHour)).onChange((value) => {
+        const asNumber = Number(value);
+        this.update({ startHour: asNumber });
+      })
+    );
+    new import_obsidian2.Setting(containerEl).setName("Center the Pointer in the Timeline View").setDesc(
+      "Should the pointer continuously get scrolled to the center of the view"
+    ).addToggle((component) => {
+      component.setValue(this.plugin.settings().centerNeedle).onChange((value) => {
+        this.update({ centerNeedle: value });
+      });
+    });
+    containerEl.createEl("h2", { text: "Date & Time Formats" });
+    new import_obsidian2.Setting(containerEl).setName("Hour format").then((component) => {
+      component.setDesc(
+        createFragment((fragment) => {
+          fragment.appendText(
+            "This is the format used in the time ruler. Use 'H' for 24 hours; use 'h' for 12 hours. Your current syntax looks like this: "
+          );
+          component.addMomentFormat(
+            (momentFormat) => momentFormat.setValue(this.plugin.settings().hourFormat).setSampleEl(fragment.createSpan()).onChange((value) => {
+              this.update({ hourFormat: value.trim() });
+            })
+          );
+          fragment.append(
+            createEl("br"),
+            createEl(
+              "a",
+              {
+                text: "format reference",
+                href: "https://momentjs.com/docs/#/displaying/format/"
+              },
+              (a) => {
+                a.setAttr("target", "_blank");
+              }
+            )
+          );
+        })
+      );
+    });
+    new import_obsidian2.Setting(containerEl).setName("Default timestamp format").then((component) => {
+      component.setDesc(
+        createFragment((fragment) => {
+          fragment.appendText(
+            "When you create or edit tasks with drag-and-drop, the plugin use this format. Use 'HH:mm' for 24 hours; use 'hh:mm' for 12 hours. Your current syntax looks like this: "
+          );
+          component.addMomentFormat(
+            (momentFormat) => momentFormat.setValue(this.plugin.settings().timestampFormat).setSampleEl(fragment.createSpan()).onChange((value) => {
+              this.update({ timestampFormat: value.trim() });
+            })
+          );
+          fragment.append(
+            createEl("br"),
+            createEl(
+              "a",
+              {
+                text: "format reference",
+                href: "https://momentjs.com/docs/#/displaying/format/"
+              },
+              (a) => {
+                a.setAttr("target", "_blank");
+              }
+            )
+          );
+        })
+      );
+    });
+    new import_obsidian2.Setting(containerEl).setName("Date Format in Timeline Header").then((component) => {
+      component.setDesc(
+        createFragment((fragment) => {
+          fragment.appendText("Your current syntax looks like this: ");
+          component.addMomentFormat(
+            (momentFormat) => momentFormat.setValue(this.plugin.settings().timelineDateFormat).setSampleEl(fragment.createSpan()).onChange((value) => {
+              this.update({ timelineDateFormat: value });
+            })
+          );
+          fragment.append(
+            createEl("br"),
+            createEl(
+              "a",
+              {
+                text: "format reference",
+                href: "https://momentjs.com/docs/#/displaying/format/"
+              },
+              (a) => {
+                a.setAttr("target", "_blank");
+              }
+            )
+          );
+        })
+      );
+    });
+    containerEl.createEl("h2", { text: "Planner Heading" });
+    new import_obsidian2.Setting(containerEl).setName("Planner Heading Text").setDesc(
+      `When you create a planner, this text is going to be in the heading`
+    ).addText(
+      (component) => component.setValue(this.plugin.settings().plannerHeading).onChange((value) => {
+        this.update({ plannerHeading: value });
+      })
+    );
+    new import_obsidian2.Setting(containerEl).setName("Planner heading level").setDesc(
+      "When you create a planner in a file, this level of heading is going to be used"
+    ).addSlider(
+      (component) => component.setLimits(1, 6, 1).setDynamicTooltip().setValue(this.plugin.settings().plannerHeadingLevel).onChange((value) => {
+        this.update({ plannerHeadingLevel: value });
+      })
+    );
+    containerEl.createEl("h2", { text: "Status bar widget" });
+    new import_obsidian2.Setting(containerEl).setName("Show active task").addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings().showNow).onChange((value) => {
+        this.update({ showNow: value });
+      })
+    );
+    new import_obsidian2.Setting(containerEl).setName("Show upcoming task").addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings().showNext).onChange((value) => {
+        this.update({ showNext: value });
+      })
+    );
+    new import_obsidian2.Setting(containerEl).setName("Current task progress indicator").addDropdown(
+      (component) => component.addOptions({
+        bar: "bar",
+        pie: "pie",
+        none: "none"
+      }).setValue(String(this.plugin.settings().progressIndicator)).onChange((value) => {
+        this.update({
+          progressIndicator: value
+        });
+      })
+    );
+    containerEl.createEl("h2", { text: "Task decoration" });
+    new import_obsidian2.Setting(containerEl).setName("Show a timestamp next to task text in timeline").addToggle((component) => {
+      component.setValue(this.plugin.settings().showTimestampInTaskBlock).onChange((value) => {
+        this.update({ showTimestampInTaskBlock: value });
+      });
+    });
+    containerEl.createEl("h2", { text: "Duration" });
+    new import_obsidian2.Setting(containerEl).setName("Stretch task until next one in timeline if it has no end time").setDesc(
+      'By "no end time" we mean "- [ ] 10:00 Wake up" instead of "- [ ] 10:00 - 11:00 Wake up"'
+    ).addToggle((component) => {
+      component.setValue(this.plugin.settings().extendDurationUntilNext).onChange((value) => {
+        this.update({ extendDurationUntilNext: value });
+      });
+    });
+    new import_obsidian2.Setting(containerEl).setName("Default task duration").setDesc(
+      "Used when you create a task with drag-and-drop & when you don't specify an end time"
+    ).addSlider(
+      (slider) => slider.setLimits(20, 120, 10).setValue(Number(this.plugin.settings().defaultDurationMinutes)).setDynamicTooltip().onChange((value) => {
+        this.update({ defaultDurationMinutes: value });
+      })
+    );
+    containerEl.createEl("h2", { text: "Colors" });
+    new import_obsidian2.Setting(containerEl).setName("Colorful Timeline").setDesc(
+      "If the planner timeline should be monochrome or color tasks based on time of day"
+    ).addToggle((component) => {
+      component.setValue(this.plugin.settings().timelineColored).onChange((value) => {
+        this.update({ timelineColored: value });
+      });
+    });
+    new import_obsidian2.Setting(containerEl).setName("Colorful Timeline - Start Color").addColorPicker((component) => {
+      component.setValue(this.plugin.settings().timelineStartColor).onChange((value) => {
+        this.update({ timelineStartColor: value });
+      });
+    });
+    new import_obsidian2.Setting(containerEl).setName("Colorful Timeline - End Color").addColorPicker((component) => {
+      component.setValue(this.plugin.settings().timelineEndColor).onChange((value) => {
+        this.update({ timelineEndColor: value });
+      });
+    });
+  }
+  update(patch) {
+    this.settingsStore.update((previous) => ({ ...previous, ...patch }));
+  }
+};
+
+// src/ui/timeline-view.ts
+var import_obsidian4 = require("obsidian");
+
+// src/ui/components/task-container.svelte
+var import_moment8 = __toESM(require_moment());
+
+// src/global-store/derived-settings.ts
+function getHourSize(settings2) {
+  return settings2.zoomLevel * 60;
 }
-function create_fragment(ctx) {
-  let div;
+function getHiddenHoursSize(settings2) {
+  return settings2.startHour * getHourSize(settings2);
+}
+function getVisibleHours(settings2) {
+  return [...Array(24).keys()].slice(settings2.startHour);
+}
+function timeToTimelineOffset(minutes2, settings2) {
+  return minutes2 * settings2.zoomLevel - getHiddenHoursSize(settings2);
+}
+function snap(coords, { zoomLevel, snapStepMinutes }) {
+  return coords - coords % (snapStepMinutes * zoomLevel);
+}
+
+// src/ui/actions/styled-cursor.ts
+function styledCursor(el, cursor) {
+  const initial = el.style.cursor;
+  el.style.cursor = cursor;
   return {
-    c() {
-      div = element("div");
-      div.textContent = "Release outside this column to cancel edit";
-      attr(div, "class", "banner svelte-yircn6");
+    update(newCursor) {
+      el.style.cursor = newCursor || initial;
     },
-    m(target, anchor) {
-      insert(target, div, anchor);
-    },
-    p: noop,
-    i: noop,
-    o: noop,
-    d(detaching) {
-      if (detaching)
-        detach(div);
+    destroy() {
+      el.style.cursor = initial;
     }
   };
 }
-var Banner = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, null, create_fragment, safe_not_equal, {}, add_css);
+
+// src/ui/hooks/use-edit/cursor.ts
+function useCursor({ editMode }) {
+  if (editMode === "CREATE" /* CREATE */ || editMode === "DRAG" /* DRAG */ || editMode === "DRAG_AND_SHIFT_OTHERS" /* DRAG_AND_SHIFT_OTHERS */) {
+    return {
+      bodyCursor: "grabbing",
+      gripCursor: "grabbing"
+    };
   }
-};
-var banner_default = Banner;
+  if (editMode === "RESIZE" /* RESIZE */ || editMode === "RESIZE_AND_SHIFT_OTHERS" /* RESIZE_AND_SHIFT_OTHERS */) {
+    return { bodyCursor: "row-resize", gripCursor: "grab" };
+  }
+  return {
+    bodyCursor: "unset",
+    gripCursor: "grab"
+  };
+}
 
 // src/ui/components/column.svelte
 function add_css2(target) {
@@ -24106,7 +29351,7 @@ function create_each_block(ctx) {
 function create_fragment2(ctx) {
   let div;
   let t;
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[3].default
@@ -24148,11 +29393,11 @@ function create_fragment2(ctx) {
           each_blocks[i].m(div, null);
         }
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         4)) {
           update_slot_base(
             default_slot,
@@ -24160,7 +29405,7 @@ function create_fragment2(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[2],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[2]
             ) : get_slot_changes(
@@ -24196,14 +29441,14 @@ function create_fragment2(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -24214,7 +29459,7 @@ function create_fragment2(ctx) {
     }
   };
 }
-function instance($$self, $$props, $$invalidate) {
+function instance2($$self, $$props, $$invalidate) {
   let $settings;
   component_subscribe($$self, settings, ($$value) => $$invalidate(1, $settings = $$value));
   let { $$slots: slots = {}, $$scope } = $$props;
@@ -24230,7 +29475,7 @@ function instance($$self, $$props, $$invalidate) {
 var Column = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance, create_fragment2, safe_not_equal, { visibleHours: 0 }, add_css2);
+    init(this, options, instance2, create_fragment2, safe_not_equal, { visibleHours: 0 }, add_css2);
   }
 };
 var column_default = Column;
@@ -24369,7 +29614,7 @@ function create_fragment3(ctx) {
   let each_1_anchor;
   let svg_stroke_width_value;
   let svg_class_value;
-  let current;
+  let current2;
   let each_value = (
     /*iconNode*/
     ctx[5]
@@ -24469,7 +29714,7 @@ function create_fragment3(ctx) {
       if (default_slot) {
         default_slot.m(svg, null);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       var _a2;
@@ -24494,7 +29739,7 @@ function create_fragment3(ctx) {
         each_blocks.length = each_value.length;
       }
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         256)) {
           update_slot_base(
             default_slot,
@@ -24502,7 +29747,7 @@ function create_fragment3(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[8],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[8]
             ) : get_slot_changes(
@@ -24521,22 +29766,22 @@ function create_fragment3(ctx) {
         dirty & /*$$restProps*/
         64 && /*$$restProps*/
         ctx2[6],
-        (!current || dirty & /*size*/
+        (!current2 || dirty & /*size*/
         4) && { width: (
           /*size*/
           ctx2[2]
         ) },
-        (!current || dirty & /*size*/
+        (!current2 || dirty & /*size*/
         4) && { height: (
           /*size*/
           ctx2[2]
         ) },
-        (!current || dirty & /*color*/
+        (!current2 || dirty & /*color*/
         2) && { stroke: (
           /*color*/
           ctx2[1]
         ) },
-        (!current || dirty & /*absoluteStrokeWidth, strokeWidth, size*/
+        (!current2 || dirty & /*absoluteStrokeWidth, strokeWidth, size*/
         28 && svg_stroke_width_value !== (svg_stroke_width_value = /*absoluteStrokeWidth*/
         ctx2[4] ? Number(
           /*strokeWidth*/
@@ -24548,21 +29793,21 @@ function create_fragment3(ctx) {
           /*strokeWidth*/
           ctx2[3]
         ))) && { "stroke-width": svg_stroke_width_value },
-        (!current || dirty & /*name, $$props*/
+        (!current2 || dirty & /*name, $$props*/
         129 && svg_class_value !== (svg_class_value = `lucide-icon lucide lucide-${/*name*/
         ctx2[0]} ${/*$$props*/
         (_a2 = ctx2[7].class) != null ? _a2 : ""}`)) && { class: svg_class_value }
       ]));
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -24573,7 +29818,7 @@ function create_fragment3(ctx) {
     }
   };
 }
-function instance2($$self, $$props, $$invalidate) {
+function instance3($$self, $$props, $$invalidate) {
   const omit_props_names = ["name", "color", "size", "strokeWidth", "absoluteStrokeWidth", "iconNode"];
   let $$restProps = compute_rest_props($$props, omit_props_names);
   let { $$slots: slots = {}, $$scope } = $$props;
@@ -24618,7 +29863,7 @@ function instance2($$self, $$props, $$invalidate) {
 var Icon = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance2, create_fragment3, safe_not_equal, {
+    init(this, options, instance3, create_fragment3, safe_not_equal, {
       name: 0,
       color: 1,
       size: 2,
@@ -24632,7 +29877,7 @@ var Icon$1 = Icon;
 
 // node_modules/lucide-svelte/dist/esm/icons/alert-triangle.svelte.js
 function create_default_slot(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -24657,11 +29902,11 @@ function create_default_slot(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -24669,7 +29914,7 @@ function create_default_slot(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -24685,14 +29930,14 @@ function create_default_slot(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -24702,7 +29947,7 @@ function create_default_slot(ctx) {
 }
 function create_fragment4(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "alert-triangle" },
     /*$$props*/
@@ -24729,7 +29974,7 @@ function create_fragment4(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -24753,21 +29998,21 @@ function create_fragment4(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance3($$self, $$props, $$invalidate) {
+function instance4($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     [
@@ -24790,14 +30035,14 @@ function instance3($$self, $$props, $$invalidate) {
 var Alert_triangle = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance3, create_fragment4, safe_not_equal, {});
+    init(this, options, instance4, create_fragment4, safe_not_equal, {});
   }
 };
 var Alert_triangle$1 = Alert_triangle;
 
 // node_modules/lucide-svelte/dist/esm/icons/arrow-left-to-line.svelte.js
 function create_default_slot2(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -24822,11 +30067,11 @@ function create_default_slot2(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -24834,7 +30079,7 @@ function create_default_slot2(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -24850,14 +30095,14 @@ function create_default_slot2(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -24867,7 +30112,7 @@ function create_default_slot2(ctx) {
 }
 function create_fragment5(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "arrow-left-to-line" },
     /*$$props*/
@@ -24894,7 +30139,7 @@ function create_fragment5(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -24918,21 +30163,21 @@ function create_fragment5(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance4($$self, $$props, $$invalidate) {
+function instance5($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     ["path", { "d": "M3 19V5" }],
@@ -24950,14 +30195,14 @@ function instance4($$self, $$props, $$invalidate) {
 var Arrow_left_to_line = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance4, create_fragment5, safe_not_equal, {});
+    init(this, options, instance5, create_fragment5, safe_not_equal, {});
   }
 };
 var Arrow_left_to_line$1 = Arrow_left_to_line;
 
 // node_modules/lucide-svelte/dist/esm/icons/arrow-left.svelte.js
 function create_default_slot3(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -24982,11 +30227,11 @@ function create_default_slot3(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -24994,7 +30239,7 @@ function create_default_slot3(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -25010,14 +30255,14 @@ function create_default_slot3(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -25027,7 +30272,7 @@ function create_default_slot3(ctx) {
 }
 function create_fragment6(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "arrow-left" },
     /*$$props*/
@@ -25054,7 +30299,7 @@ function create_fragment6(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -25078,21 +30323,21 @@ function create_fragment6(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance5($$self, $$props, $$invalidate) {
+function instance6($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [["path", { "d": "m12 19-7-7 7-7" }], ["path", { "d": "M19 12H5" }]];
   $$self.$$set = ($$new_props) => {
@@ -25106,14 +30351,14 @@ function instance5($$self, $$props, $$invalidate) {
 var Arrow_left = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance5, create_fragment6, safe_not_equal, {});
+    init(this, options, instance6, create_fragment6, safe_not_equal, {});
   }
 };
 var Arrow_left$1 = Arrow_left;
 
 // node_modules/lucide-svelte/dist/esm/icons/arrow-right-to-line.svelte.js
 function create_default_slot4(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -25138,11 +30383,11 @@ function create_default_slot4(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -25150,7 +30395,7 @@ function create_default_slot4(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -25166,14 +30411,14 @@ function create_default_slot4(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -25183,7 +30428,7 @@ function create_default_slot4(ctx) {
 }
 function create_fragment7(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "arrow-right-to-line" },
     /*$$props*/
@@ -25210,7 +30455,7 @@ function create_fragment7(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -25234,21 +30479,21 @@ function create_fragment7(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance6($$self, $$props, $$invalidate) {
+function instance7($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     ["path", { "d": "M17 12H3" }],
@@ -25266,14 +30511,14 @@ function instance6($$self, $$props, $$invalidate) {
 var Arrow_right_to_line = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance6, create_fragment7, safe_not_equal, {});
+    init(this, options, instance7, create_fragment7, safe_not_equal, {});
   }
 };
 var Arrow_right_to_line$1 = Arrow_right_to_line;
 
 // node_modules/lucide-svelte/dist/esm/icons/arrow-right.svelte.js
 function create_default_slot5(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -25298,11 +30543,11 @@ function create_default_slot5(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -25310,7 +30555,7 @@ function create_default_slot5(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -25326,14 +30571,14 @@ function create_default_slot5(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -25343,7 +30588,7 @@ function create_default_slot5(ctx) {
 }
 function create_fragment8(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "arrow-right" },
     /*$$props*/
@@ -25370,7 +30615,7 @@ function create_fragment8(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -25394,21 +30639,21 @@ function create_fragment8(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance7($$self, $$props, $$invalidate) {
+function instance8($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [["path", { "d": "M5 12h14" }], ["path", { "d": "m12 5 7 7-7 7" }]];
   $$self.$$set = ($$new_props) => {
@@ -25422,14 +30667,14 @@ function instance7($$self, $$props, $$invalidate) {
 var Arrow_right = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance7, create_fragment8, safe_not_equal, {});
+    init(this, options, instance8, create_fragment8, safe_not_equal, {});
   }
 };
 var Arrow_right$1 = Arrow_right;
 
 // node_modules/lucide-svelte/dist/esm/icons/circle-dot.svelte.js
 function create_default_slot6(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -25454,11 +30699,11 @@ function create_default_slot6(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -25466,7 +30711,7 @@ function create_default_slot6(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -25482,14 +30727,14 @@ function create_default_slot6(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -25499,7 +30744,7 @@ function create_default_slot6(ctx) {
 }
 function create_fragment9(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "circle-dot" },
     /*$$props*/
@@ -25526,7 +30771,7 @@ function create_fragment9(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -25550,21 +30795,21 @@ function create_fragment9(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance8($$self, $$props, $$invalidate) {
+function instance9($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     ["circle", { "cx": "12", "cy": "12", "r": "10" }],
@@ -25581,14 +30826,14 @@ function instance8($$self, $$props, $$invalidate) {
 var Circle_dot = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance8, create_fragment9, safe_not_equal, {});
+    init(this, options, instance9, create_fragment9, safe_not_equal, {});
   }
 };
 var Circle_dot$1 = Circle_dot;
 
 // node_modules/lucide-svelte/dist/esm/icons/file-input.svelte.js
 function create_default_slot7(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -25613,11 +30858,11 @@ function create_default_slot7(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -25625,7 +30870,7 @@ function create_default_slot7(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -25641,14 +30886,14 @@ function create_default_slot7(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -25658,7 +30903,7 @@ function create_default_slot7(ctx) {
 }
 function create_fragment10(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "file-input" },
     /*$$props*/
@@ -25685,7 +30930,7 @@ function create_fragment10(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -25709,21 +30954,21 @@ function create_fragment10(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance9($$self, $$props, $$invalidate) {
+function instance10($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     [
@@ -25747,14 +30992,14 @@ function instance9($$self, $$props, $$invalidate) {
 var File_input = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance9, create_fragment10, safe_not_equal, {});
+    init(this, options, instance10, create_fragment10, safe_not_equal, {});
   }
 };
 var File_input$1 = File_input;
 
 // node_modules/lucide-svelte/dist/esm/icons/filter-x.svelte.js
 function create_default_slot8(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -25779,11 +31024,11 @@ function create_default_slot8(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -25791,7 +31036,7 @@ function create_default_slot8(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -25807,14 +31052,14 @@ function create_default_slot8(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -25824,7 +31069,7 @@ function create_default_slot8(ctx) {
 }
 function create_fragment11(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "filter-x" },
     /*$$props*/
@@ -25851,7 +31096,7 @@ function create_fragment11(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -25875,21 +31120,21 @@ function create_fragment11(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance10($$self, $$props, $$invalidate) {
+function instance11($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     [
@@ -25912,14 +31157,14 @@ function instance10($$self, $$props, $$invalidate) {
 var Filter_x = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance10, create_fragment11, safe_not_equal, {});
+    init(this, options, instance11, create_fragment11, safe_not_equal, {});
   }
 };
 var Filter_x$1 = Filter_x;
 
 // node_modules/lucide-svelte/dist/esm/icons/filter.svelte.js
 function create_default_slot9(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -25944,11 +31189,11 @@ function create_default_slot9(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -25956,7 +31201,7 @@ function create_default_slot9(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -25972,14 +31217,14 @@ function create_default_slot9(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -25989,7 +31234,7 @@ function create_default_slot9(ctx) {
 }
 function create_fragment12(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "filter" },
     /*$$props*/
@@ -26016,7 +31261,7 @@ function create_fragment12(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -26040,21 +31285,21 @@ function create_fragment12(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance11($$self, $$props, $$invalidate) {
+function instance12($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     [
@@ -26075,14 +31320,14 @@ function instance11($$self, $$props, $$invalidate) {
 var Filter = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance11, create_fragment12, safe_not_equal, {});
+    init(this, options, instance12, create_fragment12, safe_not_equal, {});
   }
 };
 var Filter$1 = Filter;
 
 // node_modules/lucide-svelte/dist/esm/icons/grip-vertical.svelte.js
 function create_default_slot10(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -26107,11 +31352,11 @@ function create_default_slot10(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -26119,7 +31364,7 @@ function create_default_slot10(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -26135,14 +31380,14 @@ function create_default_slot10(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -26152,7 +31397,7 @@ function create_default_slot10(ctx) {
 }
 function create_fragment13(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "grip-vertical" },
     /*$$props*/
@@ -26179,7 +31424,7 @@ function create_fragment13(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -26203,21 +31448,21 @@ function create_fragment13(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance12($$self, $$props, $$invalidate) {
+function instance13($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     ["circle", { "cx": "9", "cy": "12", "r": "1" }],
@@ -26238,14 +31483,14 @@ function instance12($$self, $$props, $$invalidate) {
 var Grip_vertical = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance12, create_fragment13, safe_not_equal, {});
+    init(this, options, instance13, create_fragment13, safe_not_equal, {});
   }
 };
 var Grip_vertical$1 = Grip_vertical;
 
 // node_modules/lucide-svelte/dist/esm/icons/help-circle.svelte.js
 function create_default_slot11(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -26270,11 +31515,11 @@ function create_default_slot11(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -26282,7 +31527,7 @@ function create_default_slot11(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -26298,14 +31543,14 @@ function create_default_slot11(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -26315,7 +31560,7 @@ function create_default_slot11(ctx) {
 }
 function create_fragment14(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "help-circle" },
     /*$$props*/
@@ -26342,7 +31587,7 @@ function create_fragment14(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -26366,21 +31611,21 @@ function create_fragment14(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance13($$self, $$props, $$invalidate) {
+function instance14($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     ["circle", { "cx": "12", "cy": "12", "r": "10" }],
@@ -26403,14 +31648,14 @@ function instance13($$self, $$props, $$invalidate) {
 var Help_circle = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance13, create_fragment14, safe_not_equal, {});
+    init(this, options, instance14, create_fragment14, safe_not_equal, {});
   }
 };
 var Help_circle$1 = Help_circle;
 
 // node_modules/lucide-svelte/dist/esm/icons/info.svelte.js
 function create_default_slot12(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -26435,11 +31680,11 @@ function create_default_slot12(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -26447,7 +31692,7 @@ function create_default_slot12(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -26463,14 +31708,14 @@ function create_default_slot12(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -26480,7 +31725,7 @@ function create_default_slot12(ctx) {
 }
 function create_fragment15(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
     { name: "info" },
     /*$$props*/
@@ -26507,7 +31752,7 @@ function create_fragment15(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -26531,21 +31776,21 @@ function create_fragment15(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance14($$self, $$props, $$invalidate) {
+function instance15($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     ["circle", { "cx": "12", "cy": "12", "r": "10" }],
@@ -26563,14 +31808,14 @@ function instance14($$self, $$props, $$invalidate) {
 var Info = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance14, create_fragment15, safe_not_equal, {});
+    init(this, options, instance15, create_fragment15, safe_not_equal, {});
   }
 };
 var Info$1 = Info;
 
-// node_modules/lucide-svelte/dist/esm/icons/list-tree.svelte.js
+// node_modules/lucide-svelte/dist/esm/icons/settings.svelte.js
 function create_default_slot13(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -26595,11 +31840,11 @@ function create_default_slot13(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -26607,7 +31852,7 @@ function create_default_slot13(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -26623,14 +31868,14 @@ function create_default_slot13(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -26640,9 +31885,9 @@ function create_default_slot13(ctx) {
 }
 function create_fragment16(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
-    { name: "list-tree" },
+    { name: "settings" },
     /*$$props*/
     ctx[1],
     { iconNode: (
@@ -26667,7 +31912,7 @@ function create_fragment16(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -26691,28 +31936,30 @@ function create_fragment16(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
     }
   };
 }
-function instance15($$self, $$props, $$invalidate) {
+function instance16($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
-    ["path", { "d": "M21 12h-8" }],
-    ["path", { "d": "M21 6H8" }],
-    ["path", { "d": "M21 18h-8" }],
-    ["path", { "d": "M3 6v4c0 1.1.9 2 2 2h3" }],
-    ["path", { "d": "M3 10v6c0 1.1.9 2 2 2h3" }]
+    [
+      "path",
+      {
+        "d": "M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+      }
+    ],
+    ["circle", { "cx": "12", "cy": "12", "r": "3" }]
   ];
   $$self.$$set = ($$new_props) => {
     $$invalidate(1, $$props = assign(assign({}, $$props), exclude_internal_props($$new_props)));
@@ -26722,17 +31969,17 @@ function instance15($$self, $$props, $$invalidate) {
   $$props = exclude_internal_props($$props);
   return [iconNode, $$props, slots, $$scope];
 }
-var List_tree = class extends SvelteComponent {
+var Settings = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance15, create_fragment16, safe_not_equal, {});
+    init(this, options, instance16, create_fragment16, safe_not_equal, {});
   }
 };
-var List_tree$1 = List_tree;
+var Settings$1 = Settings;
 
-// node_modules/lucide-svelte/dist/esm/icons/panel-top-close.svelte.js
+// node_modules/lucide-svelte/dist/esm/icons/table-2.svelte.js
 function create_default_slot14(ctx) {
-  let current;
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[2].default
@@ -26757,11 +32004,11 @@ function create_default_slot14(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8)) {
           update_slot_base(
             default_slot,
@@ -26769,7 +32016,7 @@ function create_default_slot14(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -26785,14 +32032,14 @@ function create_default_slot14(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -26802,9 +32049,9 @@ function create_default_slot14(ctx) {
 }
 function create_fragment17(ctx) {
   let icon;
-  let current;
+  let current2;
   const icon_spread_levels = [
-    { name: "panel-top-close" },
+    { name: "table-2" },
     /*$$props*/
     ctx[1],
     { iconNode: (
@@ -26829,7 +32076,7 @@ function create_fragment17(ctx) {
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       const icon_changes = dirty & /*$$props, iconNode*/
@@ -26853,192 +32100,14 @@ function create_fragment17(ctx) {
       icon.$set(icon_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(icon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(icon, detaching);
-    }
-  };
-}
-function instance16($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  const iconNode = [
-    [
-      "rect",
-      {
-        "width": "18",
-        "height": "18",
-        "x": "3",
-        "y": "3",
-        "rx": "2",
-        "ry": "2"
-      }
-    ],
-    [
-      "line",
-      {
-        "x1": "3",
-        "x2": "21",
-        "y1": "9",
-        "y2": "9"
-      }
-    ],
-    ["path", { "d": "m9 16 3-3 3 3" }]
-  ];
-  $$self.$$set = ($$new_props) => {
-    $$invalidate(1, $$props = assign(assign({}, $$props), exclude_internal_props($$new_props)));
-    if ("$$scope" in $$new_props)
-      $$invalidate(3, $$scope = $$new_props.$$scope);
-  };
-  $$props = exclude_internal_props($$props);
-  return [iconNode, $$props, slots, $$scope];
-}
-var Panel_top_close = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance16, create_fragment17, safe_not_equal, {});
-  }
-};
-var Panel_top_close$1 = Panel_top_close;
-
-// node_modules/lucide-svelte/dist/esm/icons/settings.svelte.js
-function create_default_slot15(ctx) {
-  let current;
-  const default_slot_template = (
-    /*#slots*/
-    ctx[2].default
-  );
-  const default_slot = create_slot(
-    default_slot_template,
-    ctx,
-    /*$$scope*/
-    ctx[3],
-    null
-  );
-  return {
-    c() {
-      if (default_slot)
-        default_slot.c();
-    },
-    l(nodes) {
-      if (default_slot)
-        default_slot.l(nodes);
-    },
-    m(target, anchor) {
-      if (default_slot) {
-        default_slot.m(target, anchor);
-      }
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
-        8)) {
-          update_slot_base(
-            default_slot,
-            default_slot_template,
-            ctx2,
-            /*$$scope*/
-            ctx2[3],
-            !current ? get_all_dirty_from_scope(
-              /*$$scope*/
-              ctx2[3]
-            ) : get_slot_changes(
-              default_slot_template,
-              /*$$scope*/
-              ctx2[3],
-              dirty,
-              null
-            ),
-            null
-          );
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(default_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(default_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (default_slot)
-        default_slot.d(detaching);
-    }
-  };
-}
-function create_fragment18(ctx) {
-  let icon;
-  let current;
-  const icon_spread_levels = [
-    { name: "settings" },
-    /*$$props*/
-    ctx[1],
-    { iconNode: (
-      /*iconNode*/
-      ctx[0]
-    ) }
-  ];
-  let icon_props = {
-    $$slots: { default: [create_default_slot15] },
-    $$scope: { ctx }
-  };
-  for (let i = 0; i < icon_spread_levels.length; i += 1) {
-    icon_props = assign(icon_props, icon_spread_levels[i]);
-  }
-  icon = new Icon$1({ props: icon_props });
-  return {
-    c() {
-      create_component(icon.$$.fragment);
-    },
-    l(nodes) {
-      claim_component(icon.$$.fragment, nodes);
-    },
-    m(target, anchor) {
-      mount_component(icon, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const icon_changes = dirty & /*$$props, iconNode*/
-      3 ? get_spread_update(icon_spread_levels, [
-        icon_spread_levels[0],
-        dirty & /*$$props*/
-        2 && get_spread_object(
-          /*$$props*/
-          ctx2[1]
-        ),
-        dirty & /*iconNode*/
-        1 && { iconNode: (
-          /*iconNode*/
-          ctx2[0]
-        ) }
-      ]) : {};
-      if (dirty & /*$$scope*/
-      8) {
-        icon_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      icon.$set(icon_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(icon.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(icon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
@@ -27046,170 +32115,6 @@ function create_fragment18(ctx) {
   };
 }
 function instance17($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  const iconNode = [
-    [
-      "path",
-      {
-        "d": "M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
-      }
-    ],
-    ["circle", { "cx": "12", "cy": "12", "r": "3" }]
-  ];
-  $$self.$$set = ($$new_props) => {
-    $$invalidate(1, $$props = assign(assign({}, $$props), exclude_internal_props($$new_props)));
-    if ("$$scope" in $$new_props)
-      $$invalidate(3, $$scope = $$new_props.$$scope);
-  };
-  $$props = exclude_internal_props($$props);
-  return [iconNode, $$props, slots, $$scope];
-}
-var Settings = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance17, create_fragment18, safe_not_equal, {});
-  }
-};
-var Settings$1 = Settings;
-
-// node_modules/lucide-svelte/dist/esm/icons/table-2.svelte.js
-function create_default_slot16(ctx) {
-  let current;
-  const default_slot_template = (
-    /*#slots*/
-    ctx[2].default
-  );
-  const default_slot = create_slot(
-    default_slot_template,
-    ctx,
-    /*$$scope*/
-    ctx[3],
-    null
-  );
-  return {
-    c() {
-      if (default_slot)
-        default_slot.c();
-    },
-    l(nodes) {
-      if (default_slot)
-        default_slot.l(nodes);
-    },
-    m(target, anchor) {
-      if (default_slot) {
-        default_slot.m(target, anchor);
-      }
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
-        8)) {
-          update_slot_base(
-            default_slot,
-            default_slot_template,
-            ctx2,
-            /*$$scope*/
-            ctx2[3],
-            !current ? get_all_dirty_from_scope(
-              /*$$scope*/
-              ctx2[3]
-            ) : get_slot_changes(
-              default_slot_template,
-              /*$$scope*/
-              ctx2[3],
-              dirty,
-              null
-            ),
-            null
-          );
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(default_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(default_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (default_slot)
-        default_slot.d(detaching);
-    }
-  };
-}
-function create_fragment19(ctx) {
-  let icon;
-  let current;
-  const icon_spread_levels = [
-    { name: "table-2" },
-    /*$$props*/
-    ctx[1],
-    { iconNode: (
-      /*iconNode*/
-      ctx[0]
-    ) }
-  ];
-  let icon_props = {
-    $$slots: { default: [create_default_slot16] },
-    $$scope: { ctx }
-  };
-  for (let i = 0; i < icon_spread_levels.length; i += 1) {
-    icon_props = assign(icon_props, icon_spread_levels[i]);
-  }
-  icon = new Icon$1({ props: icon_props });
-  return {
-    c() {
-      create_component(icon.$$.fragment);
-    },
-    l(nodes) {
-      claim_component(icon.$$.fragment, nodes);
-    },
-    m(target, anchor) {
-      mount_component(icon, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const icon_changes = dirty & /*$$props, iconNode*/
-      3 ? get_spread_update(icon_spread_levels, [
-        icon_spread_levels[0],
-        dirty & /*$$props*/
-        2 && get_spread_object(
-          /*$$props*/
-          ctx2[1]
-        ),
-        dirty & /*iconNode*/
-        1 && { iconNode: (
-          /*iconNode*/
-          ctx2[0]
-        ) }
-      ]) : {};
-      if (dirty & /*$$scope*/
-      8) {
-        icon_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      icon.$set(icon_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(icon.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(icon.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(icon, detaching);
-    }
-  };
-}
-function instance18($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const iconNode = [
     [
@@ -27230,7 +32135,7 @@ function instance18($$self, $$props, $$invalidate) {
 var Table_2 = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance18, create_fragment19, safe_not_equal, {});
+    init(this, options, instance17, create_fragment17, safe_not_equal, {});
   }
 };
 var Table_2$1 = Table_2;
@@ -27239,10 +32144,10 @@ var Table_2$1 = Table_2;
 function add_css3(target) {
   append_styles(target, "svelte-1aph89j", ".grip.svelte-1aph89j{position:relative;right:-4px;grid-column:2;align-self:flex-start;color:var(--text-faint)}.grip.svelte-1aph89j:hover{color:var(--text-muted)}");
 }
-function create_fragment20(ctx) {
+function create_fragment18(ctx) {
   let div;
   let gripvertical;
-  let current;
+  let current2;
   let mounted;
   let dispose;
   gripvertical = new Grip_vertical$1({ props: { class: "svg-icon" } });
@@ -27261,7 +32166,7 @@ function create_fragment20(ctx) {
     m(target, anchor) {
       insert(target, div, anchor);
       mount_component(gripvertical, div, null);
-      current = true;
+      current2 = true;
       if (!mounted) {
         dispose = listen(div, "mousedown", stop_propagation(
           /*mousedown_handler*/
@@ -27282,14 +32187,14 @@ function create_fragment20(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(gripvertical.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(gripvertical.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -27300,7 +32205,7 @@ function create_fragment20(ctx) {
     }
   };
 }
-function instance19($$self, $$props, $$invalidate) {
+function instance18($$self, $$props, $$invalidate) {
   let { cursor } = $$props;
   function mousedown_handler2(event) {
     bubble.call(this, $$self, event);
@@ -27314,26 +32219,16 @@ function instance19($$self, $$props, $$invalidate) {
 var Grip = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance19, create_fragment20, safe_not_equal, { cursor: 0 }, add_css3);
+    init(this, options, instance18, create_fragment18, safe_not_equal, { cursor: 0 }, add_css3);
   }
 };
 var grip_default = Grip;
-
-// src/global-store/current-time.ts
-var currentTime = readable(window.moment(), (set) => {
-  const interval = setInterval(() => {
-    set(window.moment());
-  }, 1e3);
-  return () => {
-    clearInterval(interval);
-  };
-});
 
 // src/ui/components/needle.svelte
 function add_css4(target) {
   append_styles(target, "svelte-1rbwtw9", ".needle.svelte-1rbwtw9{height:2px;background-color:var(--color-accent)}");
 }
-function create_fragment21(ctx) {
+function create_fragment19(ctx) {
   let div;
   let style_transform = `translateY(${/*coords*/
   ctx[1]}px)`;
@@ -27363,7 +32258,7 @@ function create_fragment21(ctx) {
     }
   };
 }
-function instance20($$self, $$props, $$invalidate) {
+function instance19($$self, $$props, $$invalidate) {
   let $settings;
   let $currentTime;
   let $visibleDayInTimeline;
@@ -27402,7 +32297,7 @@ function instance20($$self, $$props, $$invalidate) {
 var Needle = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance20, create_fragment21, safe_not_equal, { autoScrollBlocked: 2 }, add_css4);
+    init(this, options, instance19, create_fragment19, safe_not_equal, { autoScrollBlocked: 2 }, add_css4);
   }
 };
 var needle_default = Needle;
@@ -27411,7 +32306,7 @@ var needle_default = Needle;
 function add_css5(target) {
   append_styles(target, "svelte-1jq2bgm", ":not(#dummy).workspace-leaf-resize-handle.svelte-1jq2bgm{cursor:row-resize;right:0;bottom:0;left:0;height:calc(var(--divider-width-hover) * 2);border-bottom-width:var(--divider-width)}");
 }
-function create_fragment22(ctx) {
+function create_fragment20(ctx) {
   let hr;
   let mounted;
   let dispose;
@@ -27457,7 +32352,7 @@ function create_fragment22(ctx) {
     }
   };
 }
-function instance21($$self, $$props, $$invalidate) {
+function instance20($$self, $$props, $$invalidate) {
   let { visible = true } = $$props;
   function mousedown_handler2(event) {
     bubble.call(this, $$self, event);
@@ -27471,7 +32366,7 @@ function instance21($$self, $$props, $$invalidate) {
 var Resize_handle = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance21, create_fragment22, safe_not_equal, { visible: 0 }, add_css5);
+    init(this, options, instance20, create_fragment20, safe_not_equal, { visible: 0 }, add_css5);
   }
 };
 var resize_handle_default = Resize_handle;
@@ -27488,10 +32383,13 @@ function get_each_context3(ctx, list, i) {
 function create_each_block3(ctx) {
   let div1;
   let div0;
-  let t0_value = (
+  let t0_value = hoursToMoment(
     /*hour*/
-    ctx[2] + ""
-  );
+    ctx[2]
+  ).format(
+    /*$settings*/
+    ctx[1].hourFormat
+  ) + "";
   let t0;
   let t1;
   let style_height = `${getHourSize(
@@ -27515,9 +32413,14 @@ function create_each_block3(ctx) {
       append(div1, t1);
     },
     p(ctx2, dirty) {
-      if (dirty & /*visibleHours*/
-      1 && t0_value !== (t0_value = /*hour*/
-      ctx2[2] + ""))
+      if (dirty & /*visibleHours, $settings*/
+      3 && t0_value !== (t0_value = hoursToMoment(
+        /*hour*/
+        ctx2[2]
+      ).format(
+        /*$settings*/
+        ctx2[1].hourFormat
+      ) + ""))
         set_data(t0, t0_value);
       if (dirty & /*$settings*/
       2 && style_height !== (style_height = `${getHourSize(
@@ -27533,7 +32436,7 @@ function create_each_block3(ctx) {
     }
   };
 }
-function create_fragment23(ctx) {
+function create_fragment21(ctx) {
   let div;
   let each_value = (
     /*visibleHours*/
@@ -27560,7 +32463,7 @@ function create_fragment23(ctx) {
       }
     },
     p(ctx2, [dirty]) {
-      if (dirty & /*getHourSize, $settings, visibleHours*/
+      if (dirty & /*getHourSize, $settings, hoursToMoment, visibleHours*/
       3) {
         each_value = /*visibleHours*/
         ctx2[0];
@@ -27590,7 +32493,7 @@ function create_fragment23(ctx) {
     }
   };
 }
-function instance22($$self, $$props, $$invalidate) {
+function instance21($$self, $$props, $$invalidate) {
   let $settings;
   component_subscribe($$self, settings, ($$value) => $$invalidate(1, $settings = $$value));
   let { visibleHours } = $$props;
@@ -27603,7 +32506,7 @@ function instance22($$self, $$props, $$invalidate) {
 var Ruler = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance22, create_fragment23, safe_not_equal, { visibleHours: 0 }, add_css6);
+    init(this, options, instance21, create_fragment21, safe_not_equal, { visibleHours: 0 }, add_css6);
   }
 };
 var ruler_default = Ruler;
@@ -27612,58 +32515,55 @@ var ruler_default = Ruler;
 function add_css7(target) {
   append_styles(target, "svelte-wfuxso", ".tasks.svelte-wfuxso{top:0;bottom:0;display:flex;flex-direction:column;margin-right:10px;margin-left:10px}");
 }
-function create_fragment24(ctx) {
-  let t;
+function create_fragment22(ctx) {
   let div;
-  let current;
+  let current2;
   let mounted;
   let dispose;
   const default_slot_template = (
     /*#slots*/
-    ctx[5].default
+    ctx[4].default
   );
   const default_slot = create_slot(
     default_slot_template,
     ctx,
     /*$$scope*/
-    ctx[4],
+    ctx[3],
     null
   );
   return {
     c() {
-      t = space();
       div = element("div");
       if (default_slot)
         default_slot.c();
       attr(div, "class", "tasks absolute-stretch-x svelte-wfuxso");
-      set_style(
-        div,
-        "cursor",
-        /*cursor*/
-        ctx[1]
-      );
     },
     m(target, anchor) {
-      insert(target, t, anchor);
       insert(target, div, anchor);
       if (default_slot) {
         default_slot.m(div, null);
       }
-      ctx[9](div);
-      current = true;
+      ctx[8](div);
+      current2 = true;
       if (!mounted) {
         dispose = [
-          listen(
-            document,
-            "mousemove",
-            /*mousemove_handler*/
-            ctx[8]
-          ),
           listen(
             div,
             "mousedown",
             /*mousedown_handler*/
+            ctx[5]
+          ),
+          listen(
+            div,
+            "mouseenter",
+            /*mouseenter_handler*/
             ctx[6]
+          ),
+          listen(
+            div,
+            "mousemove",
+            /*mousemove_handler*/
+            ctx[9]
           ),
           listen(div, "mouseup", stop_propagation(
             /*mouseup_handler*/
@@ -27675,21 +32575,21 @@ function create_fragment24(ctx) {
     },
     p(ctx2, [dirty]) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
-        16)) {
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
+        8)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
             /*$$scope*/
-            ctx2[4],
-            !current ? get_all_dirty_from_scope(
+            ctx2[3],
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
-              ctx2[4]
+              ctx2[3]
             ) : get_slot_changes(
               default_slot_template,
               /*$$scope*/
-              ctx2[4],
+              ctx2[3],
               dirty,
               null
             ),
@@ -27697,88 +32597,77 @@ function create_fragment24(ctx) {
           );
         }
       }
-      if (dirty & /*cursor*/
-      2) {
-        set_style(
-          div,
-          "cursor",
-          /*cursor*/
-          ctx2[1]
-        );
-      }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
-      if (detaching)
-        detach(t);
       if (detaching)
         detach(div);
       if (default_slot)
         default_slot.d(detaching);
-      ctx[9](null);
+      ctx[8](null);
       mounted = false;
       run_all(dispose);
     }
   };
 }
-function instance23($$self, $$props, $$invalidate) {
+function instance22($$self, $$props, $$invalidate) {
   let $settings;
-  component_subscribe($$self, settings, ($$value) => $$invalidate(3, $settings = $$value));
+  component_subscribe($$self, settings, ($$value) => $$invalidate(2, $settings = $$value));
   let { $$slots: slots = {}, $$scope } = $$props;
   let { pointerOffsetY } = $$props;
-  let { cursor } = $$props;
   let el;
   function mousedown_handler2(event) {
+    bubble.call(this, $$self, event);
+  }
+  function mouseenter_handler(event) {
     bubble.call(this, $$self, event);
   }
   function mouseup_handler(event) {
     bubble.call(this, $$self, event);
   }
-  const mousemove_handler = (event) => {
-    const viewportToElOffsetY = el.getBoundingClientRect().top;
-    const borderTopToPointerOffsetY = event.clientY - viewportToElOffsetY;
-    pointerOffsetY.set(snap(borderTopToPointerOffsetY, $settings.zoomLevel));
-  };
   function div_binding($$value) {
     binding_callbacks[$$value ? "unshift" : "push"](() => {
       el = $$value;
-      $$invalidate(2, el);
+      $$invalidate(1, el);
     });
   }
+  const mousemove_handler = (event) => {
+    const viewportToElOffsetY = el.getBoundingClientRect().top;
+    const borderTopToPointerOffsetY = event.clientY - viewportToElOffsetY;
+    pointerOffsetY.set(snap(borderTopToPointerOffsetY, $settings));
+  };
   $$self.$$set = ($$props2) => {
     if ("pointerOffsetY" in $$props2)
       $$invalidate(0, pointerOffsetY = $$props2.pointerOffsetY);
-    if ("cursor" in $$props2)
-      $$invalidate(1, cursor = $$props2.cursor);
     if ("$$scope" in $$props2)
-      $$invalidate(4, $$scope = $$props2.$$scope);
+      $$invalidate(3, $$scope = $$props2.$$scope);
   };
   return [
     pointerOffsetY,
-    cursor,
     el,
     $settings,
     $$scope,
     slots,
     mousedown_handler2,
+    mouseenter_handler,
     mouseup_handler,
-    mousemove_handler,
-    div_binding
+    div_binding,
+    mousemove_handler
   ];
 }
 var Scheduled_task_container = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance23, create_fragment24, safe_not_equal, { pointerOffsetY: 0, cursor: 1 }, add_css7);
+    init(this, options, instance22, create_fragment22, safe_not_equal, { pointerOffsetY: 0 }, add_css7);
   }
 };
 var scheduled_task_container_default = Scheduled_task_container;
@@ -27848,13 +32737,13 @@ function useTaskVisuals(task, { settings: settings2, currentTime: currentTime2 }
 }
 
 // src/ui/actions/memoize-props.ts
-var import_fp6 = __toESM(require_fp());
+var import_fp10 = __toESM(require_fp());
 function createMemo(initialProps, identityGetters) {
   let previousProps = initialProps;
   function shouldUpdate(newProps) {
     for (const [propKey, propValue] of Object.entries(newProps)) {
       const previousValue = previousProps[propKey];
-      const identityFn = (identityGetters == null ? void 0 : identityGetters[propKey]) || import_fp6.identity;
+      const identityFn = (identityGetters == null ? void 0 : identityGetters[propKey]) || import_fp10.identity;
       const propChanged = identityFn(propValue) !== identityFn(previousValue);
       if (propChanged) {
         previousProps = newProps;
@@ -27918,7 +32807,7 @@ function renderTaskMarkdown(el, initial) {
 function add_css8(target) {
   append_styles(target, "svelte-9hk5bl", '.day-planner-task-decoration{margin:0 0.25em;padding:0.1em 0.25em;font-size:var(--tag-size);font-weight:var(--tag-weight);line-height:1;color:var(--tag-color);text-decoration:var(--tag-decoration);background-color:var(--tag-background);border-radius:var(--radius-s)}.rendered-markdown.svelte-9hk5bl{--checkbox-size:var(--font-ui-small);flex:1 0 0;color:var(--text-normal)}.rendered-markdown.svelte-9hk5bl p,.rendered-markdown.svelte-9hk5bl ul{margin-block-start:0;margin-block-end:0}.rendered-markdown.svelte-9hk5bl ul,.rendered-markdown.svelte-9hk5bl ol{padding-inline-start:20px}.rendered-markdown.svelte-9hk5bl input[type="checkbox"]{top:2px;margin-inline-end:4px;border-color:var(--text-muted)}.rendered-markdown.svelte-9hk5bl li{color:var(--text-normal)}.rendered-markdown.svelte-9hk5bl li.task-list-item[data-task="x"],.rendered-markdown.svelte-9hk5bl li.task-list-item[data-task="X"]{color:var(--text-muted)}');
 }
-function create_fragment25(ctx) {
+function create_fragment23(ctx) {
   let div;
   let renderTaskMarkdown_action;
   let mounted;
@@ -27976,7 +32865,7 @@ function create_fragment25(ctx) {
     }
   };
 }
-function instance24($$self, $$props, $$invalidate) {
+function instance23($$self, $$props, $$invalidate) {
   let $settings;
   component_subscribe($$self, settings, ($$value) => $$invalidate(1, $settings = $$value));
   let { task } = $$props;
@@ -27990,16 +32879,16 @@ function instance24($$self, $$props, $$invalidate) {
 var Rendered_markdown = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance24, create_fragment25, safe_not_equal, { task: 0 }, add_css8);
+    init(this, options, instance23, create_fragment23, safe_not_equal, { task: 0 }, add_css8);
   }
 };
 var rendered_markdown_default = Rendered_markdown;
 
 // src/ui/components/task.svelte
 function add_css9(target) {
-  append_styles(target, "svelte-144gxaj", ".task-padding-box.svelte-144gxaj{position:var(--position, static);top:var(--offset);left:0;display:flex;width:100%;height:var(--task-height);padding:0 1px 2px;transition:0.05s linear}.task-block.svelte-144gxaj{position:relative;overflow:hidden;display:flex;flex:1 0 0;padding:4px 6px 6px;font-size:var(--font-ui-small);text-align:left;overflow-wrap:anywhere;white-space:normal;background-color:var(--task-background-color, var(--background-primary));border:1px solid var(--color-base-50);border-radius:var(--radius-s)}.past.svelte-144gxaj{background-color:var(--background-secondary)}.present.svelte-144gxaj{border-color:var(--color-accent)}.is-ghost.svelte-144gxaj{opacity:0.6}");
+  append_styles(target, "svelte-1yasx8p", ".task-padding-box.svelte-1yasx8p{position:var(--task-position, static);top:var(--task-offset);left:0;display:flex;width:100%;height:var(--task-height);padding:0 1px 2px;transition:0.05s linear}.task-block.svelte-1yasx8p{position:relative;overflow:hidden;display:flex;flex:1 0 0;padding:4px 6px 6px;font-size:var(--font-ui-small);text-align:left;overflow-wrap:anywhere;white-space:normal;background-color:var(--task-background-color, var(--background-primary));border:1px solid var(--color-base-50);border-radius:var(--radius-s)}.past.svelte-1yasx8p{background-color:var(--background-secondary)}.present.svelte-1yasx8p{border-color:var(--color-accent)}.is-ghost.svelte-1yasx8p{opacity:0.6}");
 }
-function create_fragment26(ctx) {
+function create_fragment24(ctx) {
   var _a, _b, _c, _d;
   let div1;
   let div0;
@@ -28010,7 +32899,7 @@ function create_fragment26(ctx) {
   ((_b = (_a = ctx[0]) == null ? void 0 : _a.placing) == null ? void 0 : _b.widthPercent) || 100}%`;
   let style_left = `${/*task*/
   ((_d = (_c = ctx[0]) == null ? void 0 : _c.placing) == null ? void 0 : _d.xOffsetPercent) || 0}%`;
-  let current;
+  let current2;
   let mounted;
   let dispose;
   renderedmarkdown = new rendered_markdown_default({ props: { task: (
@@ -28019,13 +32908,13 @@ function create_fragment26(ctx) {
   ) } });
   const default_slot_template = (
     /*#slots*/
-    ctx[5].default
+    ctx[3].default
   );
   const default_slot = create_slot(
     default_slot_template,
     ctx,
     /*$$scope*/
-    ctx[4],
+    ctx[2],
     null
   );
   return {
@@ -28037,15 +32926,14 @@ function create_fragment26(ctx) {
       if (default_slot)
         default_slot.c();
       attr(div0, "class", div0_class_value = "task-block " + /*relationToNow*/
-      ctx[1] + " svelte-144gxaj");
+      ctx[1] + " svelte-1yasx8p");
       toggle_class(
         div0,
         "is-ghost",
         /*task*/
-        ctx[0].isGhost || /*$fileSyncInProgress*/
-        ctx[2]
+        ctx[0].isGhost
       );
-      attr(div1, "class", "task-padding-box svelte-144gxaj");
+      attr(div1, "class", "task-padding-box svelte-1yasx8p");
       set_style(div1, "width", style_width);
       set_style(div1, "left", style_left);
     },
@@ -28057,7 +32945,7 @@ function create_fragment26(ctx) {
       if (default_slot) {
         default_slot.m(div0, null);
       }
-      current = true;
+      current2 = true;
       if (!mounted) {
         dispose = [
           listen(div0, "mousedown", mousedown_handler),
@@ -28065,7 +32953,7 @@ function create_fragment26(ctx) {
             div0,
             "mouseup",
             /*mouseup_handler*/
-            ctx[6]
+            ctx[4]
           )
         ];
         mounted = true;
@@ -28080,21 +32968,21 @@ function create_fragment26(ctx) {
         ctx2[0];
       renderedmarkdown.$set(renderedmarkdown_changes);
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
-        16)) {
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
+        4)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
             /*$$scope*/
-            ctx2[4],
-            !current ? get_all_dirty_from_scope(
+            ctx2[2],
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
-              ctx2[4]
+              ctx2[2]
             ) : get_slot_changes(
               default_slot_template,
               /*$$scope*/
-              ctx2[4],
+              ctx2[2],
               dirty,
               null
             ),
@@ -28102,19 +32990,18 @@ function create_fragment26(ctx) {
           );
         }
       }
-      if (!current || dirty & /*relationToNow*/
+      if (!current2 || dirty & /*relationToNow*/
       2 && div0_class_value !== (div0_class_value = "task-block " + /*relationToNow*/
-      ctx2[1] + " svelte-144gxaj")) {
+      ctx2[1] + " svelte-1yasx8p")) {
         attr(div0, "class", div0_class_value);
       }
-      if (!current || dirty & /*relationToNow, task, $fileSyncInProgress*/
-      7) {
+      if (!current2 || dirty & /*relationToNow, task*/
+      3) {
         toggle_class(
           div0,
           "is-ghost",
           /*task*/
-          ctx2[0].isGhost || /*$fileSyncInProgress*/
-          ctx2[2]
+          ctx2[0].isGhost
         );
       }
       if (dirty & /*task*/
@@ -28129,16 +33016,16 @@ function create_fragment26(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(renderedmarkdown.$$.fragment, local);
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(renderedmarkdown.$$.fragment, local);
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -28152,13 +33039,10 @@ function create_fragment26(ctx) {
   };
 }
 var mousedown_handler = (event) => event.stopPropagation();
-function instance25($$self, $$props, $$invalidate) {
-  let $fileSyncInProgress;
+function instance24($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { task } = $$props;
   let { relationToNow = "" } = $$props;
-  const { fileSyncInProgress } = getContext(obsidianContext);
-  component_subscribe($$self, fileSyncInProgress, (value) => $$invalidate(2, $fileSyncInProgress = value));
   function mouseup_handler(event) {
     bubble.call(this, $$self, event);
   }
@@ -28168,29 +33052,21 @@ function instance25($$self, $$props, $$invalidate) {
     if ("relationToNow" in $$props2)
       $$invalidate(1, relationToNow = $$props2.relationToNow);
     if ("$$scope" in $$props2)
-      $$invalidate(4, $$scope = $$props2.$$scope);
+      $$invalidate(2, $$scope = $$props2.$$scope);
   };
-  return [
-    task,
-    relationToNow,
-    $fileSyncInProgress,
-    fileSyncInProgress,
-    $$scope,
-    slots,
-    mouseup_handler
-  ];
+  return [task, relationToNow, $$scope, slots, mouseup_handler];
 }
 var Task = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance25, create_fragment26, safe_not_equal, { task: 0, relationToNow: 1 }, add_css9);
+    init(this, options, instance24, create_fragment24, safe_not_equal, { task: 0, relationToNow: 1 }, add_css9);
   }
 };
 var task_default = Task;
 
 // src/ui/components/scheduled-task.svelte
-function create_default_slot17(ctx) {
-  let current;
+function create_default_slot15(ctx) {
+  let current2;
   const default_slot_template = (
     /*#slots*/
     ctx[11].default
@@ -28211,11 +33087,11 @@ function create_default_slot17(ctx) {
       if (default_slot) {
         default_slot.m(target, anchor);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         8192)) {
           update_slot_base(
             default_slot,
@@ -28223,7 +33099,7 @@ function create_default_slot17(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[13],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[13]
             ) : get_slot_changes(
@@ -28239,14 +33115,14 @@ function create_default_slot17(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (default_slot)
@@ -28254,15 +33130,15 @@ function create_default_slot17(ctx) {
     }
   };
 }
-function create_fragment27(ctx) {
+function create_fragment25(ctx) {
   let taskcomponent;
   let div;
-  let __offset_last;
   let __task_height_last;
+  let __task_offset_last;
   let __text_faint_last;
   let __text_muted_last;
   let __text_normal_last;
-  let current;
+  let current2;
   taskcomponent = new task_default({
     props: {
       relationToNow: (
@@ -28273,7 +33149,7 @@ function create_fragment27(ctx) {
         /*task*/
         ctx[0]
       ),
-      $$slots: { default: [create_default_slot17] },
+      $$slots: { default: [create_default_slot15] },
       $$scope: { ctx }
     }
   });
@@ -28287,17 +33163,17 @@ function create_fragment27(ctx) {
       div = element("div");
       create_component(taskcomponent.$$.fragment);
       set_style(div, "display", "contents");
-      set_style(div, "--offset", __offset_last = /*$offset*/
-      ctx[6] + "px");
-      set_style(div, "--position", "absolute");
       set_style(
         div,
         "--task-background-color",
         /*$backgroundColor*/
-        ctx[7]
+        ctx[6]
       );
       set_style(div, "--task-height", __task_height_last = /*$height*/
+      ctx[7] + "px");
+      set_style(div, "--task-offset", __task_offset_last = /*$offset*/
       ctx[8] + "px");
+      set_style(div, "--task-position", "absolute");
       set_style(div, "--text-faint", __text_faint_last = /*$properContrastColors*/
       ctx[9].faint);
       set_style(div, "--text-muted", __text_muted_last = /*$properContrastColors*/
@@ -28308,27 +33184,27 @@ function create_fragment27(ctx) {
     m(target, anchor) {
       insert(target, div, anchor);
       mount_component(taskcomponent, div, null);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
-      if (dirty & /*$offset*/
-      64 && __offset_last !== (__offset_last = /*$offset*/
-      ctx2[6] + "px")) {
-        set_style(div, "--offset", __offset_last);
-      }
       if (dirty & /*$backgroundColor*/
-      128) {
+      64) {
         set_style(
           div,
           "--task-background-color",
           /*$backgroundColor*/
-          ctx2[7]
+          ctx2[6]
         );
       }
       if (dirty & /*$height*/
-      256 && __task_height_last !== (__task_height_last = /*$height*/
-      ctx2[8] + "px")) {
+      128 && __task_height_last !== (__task_height_last = /*$height*/
+      ctx2[7] + "px")) {
         set_style(div, "--task-height", __task_height_last);
+      }
+      if (dirty & /*$offset*/
+      256 && __task_offset_last !== (__task_offset_last = /*$offset*/
+      ctx2[8] + "px")) {
+        set_style(div, "--task-offset", __task_offset_last);
       }
       if (dirty & /*$properContrastColors*/
       512 && __text_faint_last !== (__text_faint_last = /*$properContrastColors*/
@@ -28361,14 +33237,14 @@ function create_fragment27(ctx) {
       taskcomponent.$set(taskcomponent_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(taskcomponent.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(taskcomponent.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching && taskcomponent)
@@ -28377,20 +33253,20 @@ function create_fragment27(ctx) {
     }
   };
 }
-function instance26($$self, $$props, $$invalidate) {
+function instance25($$self, $$props, $$invalidate) {
   let height;
   let offset;
   let relationToNow;
   let backgroundColor;
   let properContrastColors;
-  let $offset, $$unsubscribe_offset = noop, $$subscribe_offset = () => ($$unsubscribe_offset(), $$unsubscribe_offset = subscribe(offset, ($$value) => $$invalidate(6, $offset = $$value)), offset);
-  let $backgroundColor, $$unsubscribe_backgroundColor = noop, $$subscribe_backgroundColor = () => ($$unsubscribe_backgroundColor(), $$unsubscribe_backgroundColor = subscribe(backgroundColor, ($$value) => $$invalidate(7, $backgroundColor = $$value)), backgroundColor);
-  let $height, $$unsubscribe_height = noop, $$subscribe_height = () => ($$unsubscribe_height(), $$unsubscribe_height = subscribe(height, ($$value) => $$invalidate(8, $height = $$value)), height);
+  let $backgroundColor, $$unsubscribe_backgroundColor = noop, $$subscribe_backgroundColor = () => ($$unsubscribe_backgroundColor(), $$unsubscribe_backgroundColor = subscribe(backgroundColor, ($$value) => $$invalidate(6, $backgroundColor = $$value)), backgroundColor);
+  let $height, $$unsubscribe_height = noop, $$subscribe_height = () => ($$unsubscribe_height(), $$unsubscribe_height = subscribe(height, ($$value) => $$invalidate(7, $height = $$value)), height);
+  let $offset, $$unsubscribe_offset = noop, $$subscribe_offset = () => ($$unsubscribe_offset(), $$unsubscribe_offset = subscribe(offset, ($$value) => $$invalidate(8, $offset = $$value)), offset);
   let $properContrastColors, $$unsubscribe_properContrastColors = noop, $$subscribe_properContrastColors = () => ($$unsubscribe_properContrastColors(), $$unsubscribe_properContrastColors = subscribe(properContrastColors, ($$value) => $$invalidate(9, $properContrastColors = $$value)), properContrastColors);
   let $relationToNow, $$unsubscribe_relationToNow = noop, $$subscribe_relationToNow = () => ($$unsubscribe_relationToNow(), $$unsubscribe_relationToNow = subscribe(relationToNow, ($$value) => $$invalidate(10, $relationToNow = $$value)), relationToNow);
-  $$self.$$.on_destroy.push(() => $$unsubscribe_offset());
   $$self.$$.on_destroy.push(() => $$unsubscribe_backgroundColor());
   $$self.$$.on_destroy.push(() => $$unsubscribe_height());
+  $$self.$$.on_destroy.push(() => $$unsubscribe_offset());
   $$self.$$.on_destroy.push(() => $$unsubscribe_properContrastColors());
   $$self.$$.on_destroy.push(() => $$unsubscribe_relationToNow());
   let { $$slots: slots = {}, $$scope } = $$props;
@@ -28418,9 +33294,9 @@ function instance26($$self, $$props, $$invalidate) {
     relationToNow,
     offset,
     height,
-    $offset,
     $backgroundColor,
     $height,
+    $offset,
     $properContrastColors,
     $relationToNow,
     slots,
@@ -28431,7 +33307,7 @@ function instance26($$self, $$props, $$invalidate) {
 var Scheduled_task = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance26, create_fragment27, safe_not_equal, { task: 0 });
+    init(this, options, instance25, create_fragment25, safe_not_equal, { task: 0 });
   }
 };
 var scheduled_task_default = Scheduled_task;
@@ -28446,10 +33322,10 @@ var get_default_slot_context = (ctx) => ({ hovering: (
   /*hovering*/
   ctx[0]
 ) });
-function create_fragment28(ctx) {
+function create_fragment26(ctx) {
   let div1;
   let div0;
-  let current;
+  let current2;
   let mounted;
   let dispose;
   const default_slot_template = (
@@ -28478,7 +33354,7 @@ function create_fragment28(ctx) {
       if (default_slot) {
         default_slot.m(div0, null);
       }
-      current = true;
+      current2 = true;
       if (!mounted) {
         dispose = [
           listen(
@@ -28499,7 +33375,7 @@ function create_fragment28(ctx) {
     },
     p(ctx2, [dirty]) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope, hovering*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope, hovering*/
         9)) {
           update_slot_base(
             default_slot,
@@ -28507,7 +33383,7 @@ function create_fragment28(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[3],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[3]
             ) : get_slot_changes(
@@ -28523,14 +33399,14 @@ function create_fragment28(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -28542,7 +33418,7 @@ function create_fragment28(ctx) {
     }
   };
 }
-function instance27($$self, $$props, $$invalidate) {
+function instance26($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let hovering = false;
   function handleMouseEnter() {
@@ -28560,13 +33436,42 @@ function instance27($$self, $$props, $$invalidate) {
 var Scroller = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance27, create_fragment28, safe_not_equal, {}, add_css10);
+    init(this, options, instance26, create_fragment26, safe_not_equal, {}, add_css10);
   }
 };
 var scroller_default = Scroller;
 
+// node_modules/tslib/tslib.es6.mjs
+function __awaiter(thisArg, _arguments, P, generator) {
+  function adopt(value) {
+    return value instanceof P ? value : new P(function(resolve) {
+      resolve(value);
+    });
+  }
+  return new (P || (P = Promise))(function(resolve, reject) {
+    function fulfilled(value) {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    }
+    function rejected(value) {
+      try {
+        step(generator["throw"](value));
+      } catch (e) {
+        reject(e);
+      }
+    }
+    function step(result) {
+      result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+    }
+    step((generator = generator.apply(thisArg, _arguments || [])).next());
+  });
+}
+
 // src/ui/components/timeline-controls.svelte
-var import_fp7 = __toESM(require_fp());
+var import_fp11 = __toESM(require_fp());
 
 // src/ui/hooks/use-dataview-source.ts
 var import_obsidian3 = require("obsidian");
@@ -28610,10 +33515,10 @@ function useDataviewSource({ refreshTasks }) {
 function add_css11(target) {
   append_styles(target, "svelte-3xb39a", ".clickable-icon.svelte-3xb39a{grid-column-start:var(--grid-column-start, auto);flex-basis:var(--input-height);align-self:center;justify-self:var(--justify-self, auto);color:var(--color, var(--icon-color));white-space:nowrap}");
 }
-function create_fragment29(ctx) {
+function create_fragment27(ctx) {
   let div;
   let div_class_value;
-  let current;
+  let current2;
   let mounted;
   let dispose;
   const default_slot_template = (
@@ -28658,7 +33563,7 @@ function create_fragment29(ctx) {
       if (default_slot) {
         default_slot.m(div, null);
       }
-      current = true;
+      current2 = true;
       if (!mounted) {
         dispose = listen(
           div,
@@ -28671,7 +33576,7 @@ function create_fragment29(ctx) {
     },
     p(ctx2, [dirty]) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
         16)) {
           update_slot_base(
             default_slot,
@@ -28679,7 +33584,7 @@ function create_fragment29(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[4],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[4]
             ) : get_slot_changes(
@@ -28693,12 +33598,12 @@ function create_fragment29(ctx) {
           );
         }
       }
-      if (!current || dirty & /*classes*/
+      if (!current2 || dirty & /*classes*/
       8 && div_class_value !== (div_class_value = "clickable-icon " + /*classes*/
       ctx2[3] + " svelte-3xb39a")) {
         attr(div, "class", div_class_value);
       }
-      if (!current || dirty & /*disabled*/
+      if (!current2 || dirty & /*disabled*/
       4) {
         attr(
           div,
@@ -28707,7 +33612,7 @@ function create_fragment29(ctx) {
           ctx2[2]
         );
       }
-      if (!current || dirty & /*label*/
+      if (!current2 || dirty & /*label*/
       1) {
         attr(
           div,
@@ -28716,7 +33621,7 @@ function create_fragment29(ctx) {
           ctx2[0]
         );
       }
-      if (!current || dirty & /*classes, isActive*/
+      if (!current2 || dirty & /*classes, isActive*/
       10) {
         toggle_class(
           div,
@@ -28727,14 +33632,14 @@ function create_fragment29(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -28746,7 +33651,7 @@ function create_fragment29(ctx) {
     }
   };
 }
-function instance28($$self, $$props, $$invalidate) {
+function instance27($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { label } = $$props;
   let { isActive = false } = $$props;
@@ -28775,8 +33680,8 @@ var Control_button = class extends SvelteComponent {
     init(
       this,
       options,
-      instance28,
-      create_fragment29,
+      instance27,
+      create_fragment27,
       safe_not_equal,
       {
         label: 0,
@@ -28834,7 +33739,7 @@ function create_each_block4(ctx) {
     }
   };
 }
-function create_fragment30(ctx) {
+function create_fragment28(ctx) {
   let select;
   let mounted;
   let dispose;
@@ -28917,7 +33822,7 @@ function create_fragment30(ctx) {
     }
   };
 }
-function instance29($$self, $$props, $$invalidate) {
+function instance28($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { values } = $$props;
   function input_handler(event) {
@@ -28934,7 +33839,7 @@ function instance29($$self, $$props, $$invalidate) {
 var Dropdown = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance29, create_fragment30, safe_not_equal, { value: 1, values: 0 });
+    init(this, options, instance28, create_fragment28, safe_not_equal, { value: 1, values: 0 });
   }
 };
 var dropdown_default = Dropdown;
@@ -28947,13 +33852,13 @@ var get_control_slot_changes = (dirty) => ({});
 var get_control_slot_context = (ctx) => ({});
 var get_name_slot_changes = (dirty) => ({});
 var get_name_slot_context = (ctx) => ({});
-function create_fragment31(ctx) {
+function create_fragment29(ctx) {
   let div3;
   let div1;
   let div0;
   let t;
   let div2;
-  let current;
+  let current2;
   const name_slot_template = (
     /*#slots*/
     ctx[1].name
@@ -29004,11 +33909,11 @@ function create_fragment31(ctx) {
       if (control_slot) {
         control_slot.m(div2, null);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       if (name_slot) {
-        if (name_slot.p && (!current || dirty & /*$$scope*/
+        if (name_slot.p && (!current2 || dirty & /*$$scope*/
         1)) {
           update_slot_base(
             name_slot,
@@ -29016,7 +33921,7 @@ function create_fragment31(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[0],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[0]
             ) : get_slot_changes(
@@ -29031,7 +33936,7 @@ function create_fragment31(ctx) {
         }
       }
       if (control_slot) {
-        if (control_slot.p && (!current || dirty & /*$$scope*/
+        if (control_slot.p && (!current2 || dirty & /*$$scope*/
         1)) {
           update_slot_base(
             control_slot,
@@ -29039,7 +33944,7 @@ function create_fragment31(ctx) {
             ctx2,
             /*$$scope*/
             ctx2[0],
-            !current ? get_all_dirty_from_scope(
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
               ctx2[0]
             ) : get_slot_changes(
@@ -29055,16 +33960,16 @@ function create_fragment31(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(name_slot, local);
       transition_in(control_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(name_slot, local);
       transition_out(control_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -29076,7 +33981,7 @@ function create_fragment31(ctx) {
     }
   };
 }
-function instance30($$self, $$props, $$invalidate) {
+function instance29($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -29087,18 +33992,18 @@ function instance30($$self, $$props, $$invalidate) {
 var Setting_item = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance30, create_fragment31, safe_not_equal, {}, add_css12);
+    init(this, options, instance29, create_fragment29, safe_not_equal, {}, add_css12);
   }
 };
 var setting_item_default = Setting_item;
 
 // src/ui/components/timeline-controls.svelte
 function add_css13(target) {
-  append_styles(target, "svelte-sefqsf", ".active-filter{color:var(--text-success)}.migration-dialogue.svelte-sefqsf.svelte-sefqsf{display:flex;flex-direction:column;gap:var(--size-4-2);align-items:center;margin:var(--size-4-2)}.stretcher.svelte-sefqsf.svelte-sefqsf{display:flex;flex-direction:column;gap:var(--size-4-2);margin:var(--size-4-2);font-size:var(--font-ui-small);color:var(--text-muted)}.mod-error{color:var(--text-error)}.stretcher.svelte-sefqsf input.svelte-sefqsf{font-family:var(--font-monospace)}.info-container.svelte-sefqsf.svelte-sefqsf{display:flex;gap:var(--size-4-1);margin:var(--size-4-2)}.info-container.svelte-sefqsf .svg-icon{flex-shrink:0}.error-message.svelte-sefqsf.svelte-sefqsf{overflow-x:auto;padding:var(--size-4-1);border:1px solid var(--text-error);border-radius:var(--radius-s)}.help-item.svelte-sefqsf.svelte-sefqsf{margin:var(--size-2-3) var(--size-4-4);font-size:var(--font-ui-small);color:var(--text-muted)}.date.svelte-sefqsf.svelte-sefqsf{display:flex;align-items:center;justify-content:center;font-size:var(--font-ui-small);font-weight:var(--font-medium);color:var(--text-normal)}.settings.svelte-sefqsf.svelte-sefqsf{margin:var(--size-4-1) var(--size-4-4)}.controls.svelte-sefqsf.svelte-sefqsf{overflow:hidden;display:flex;flex:0 0 auto;flex-direction:column;border-bottom:1px solid var(--background-modifier-border)}.header.svelte-sefqsf.svelte-sefqsf{display:grid;grid-template-columns:repeat(3, var(--size-4-8)) repeat(3, 1fr) repeat(\n        3,\n        var(--size-4-8)\n      );margin:var(--size-4-2)}");
+  append_styles(target, "svelte-10ubq57", ".active-filter{color:var(--text-success)}.migration-dialogue.svelte-10ubq57.svelte-10ubq57{display:flex;flex-direction:column;gap:var(--size-4-2);align-items:center;margin:var(--size-4-2)}.stretcher.svelte-10ubq57.svelte-10ubq57{display:flex;flex-direction:column;gap:var(--size-4-2);margin:var(--size-4-2);font-size:var(--font-ui-small);color:var(--text-muted)}.mod-error{color:var(--text-error)}.stretcher.svelte-10ubq57 input.svelte-10ubq57{font-family:var(--font-monospace)}.info-container.svelte-10ubq57.svelte-10ubq57{display:flex;gap:var(--size-4-1);margin:var(--size-4-2)}.info-container.svelte-10ubq57 .svg-icon{flex-shrink:0}.error-message.svelte-10ubq57.svelte-10ubq57{overflow-x:auto;padding:var(--size-4-1);border:1px solid var(--text-error);border-radius:var(--radius-s)}.controls-section.svelte-10ubq57.svelte-10ubq57{margin:var(--size-4-2) 0;font-size:var(--font-ui-small);font-weight:var(--font-medium)}.help-item.svelte-10ubq57.svelte-10ubq57{margin:var(--size-2-3) var(--size-4-4);font-size:var(--font-ui-small);color:var(--text-muted)}.date.svelte-10ubq57.svelte-10ubq57{display:flex;align-items:center;justify-content:center;font-size:var(--font-ui-small);font-weight:var(--font-medium);color:var(--text-normal)}.settings.svelte-10ubq57.svelte-10ubq57{margin:var(--size-4-1) var(--size-4-4)}.controls.svelte-10ubq57.svelte-10ubq57{overflow:hidden;display:flex;flex:0 0 auto;flex-direction:column;border-bottom:1px solid var(--background-modifier-border)}.header.svelte-10ubq57.svelte-10ubq57{display:grid;grid-template-columns:repeat(3, var(--size-4-8)) repeat(3, 1fr) repeat(\n        3,\n        var(--size-4-8)\n      );margin:var(--size-4-2)}");
 }
 function create_default_slot_10(ctx) {
   let fileinput;
-  let current;
+  let current2;
   fileinput = new File_input$1({ props: { class: "svg-icon" } });
   return {
     c() {
@@ -29106,18 +34011,18 @@ function create_default_slot_10(ctx) {
     },
     m(target, anchor) {
       mount_component(fileinput, target, anchor);
-      current = true;
+      current2 = true;
     },
     p: noop,
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(fileinput.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(fileinput.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(fileinput, detaching);
@@ -29126,7 +34031,7 @@ function create_default_slot_10(ctx) {
 }
 function create_default_slot_9(ctx) {
   let table2;
-  let current;
+  let current2;
   table2 = new Table_2$1({ props: { class: "svg-icon" } });
   return {
     c() {
@@ -29134,18 +34039,18 @@ function create_default_slot_9(ctx) {
     },
     m(target, anchor) {
       mount_component(table2, target, anchor);
-      current = true;
+      current2 = true;
     },
     p: noop,
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(table2.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(table2.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(table2, detaching);
@@ -29154,7 +34059,7 @@ function create_default_slot_9(ctx) {
 }
 function create_default_slot_8(ctx) {
   let arrowleft;
-  let current;
+  let current2;
   arrowleft = new Arrow_left$1({ props: { class: "svg-icon" } });
   return {
     c() {
@@ -29162,18 +34067,18 @@ function create_default_slot_8(ctx) {
     },
     m(target, anchor) {
       mount_component(arrowleft, target, anchor);
-      current = true;
+      current2 = true;
     },
     p: noop,
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(arrowleft.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(arrowleft.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(arrowleft, detaching);
@@ -29183,10 +34088,10 @@ function create_default_slot_8(ctx) {
 function create_default_slot_7(ctx) {
   let span;
   let t_value = (
-    /*day*/
-    ctx[0].format(
+    /*$visibleDayInTimeline*/
+    ctx[4].format(
       /*$settings*/
-      ctx[4].timelineDateFormat
+      ctx[3].timelineDateFormat
     ) + ""
   );
   let t;
@@ -29194,18 +34099,18 @@ function create_default_slot_7(ctx) {
     c() {
       span = element("span");
       t = text(t_value);
-      attr(span, "class", "date svelte-sefqsf");
+      attr(span, "class", "date svelte-10ubq57");
     },
     m(target, anchor) {
       insert(target, span, anchor);
       append(span, t);
     },
     p(ctx2, dirty) {
-      if (dirty[0] & /*day, $settings*/
-      17 && t_value !== (t_value = /*day*/
-      ctx2[0].format(
+      if (dirty[0] & /*$visibleDayInTimeline, $settings*/
+      24 && t_value !== (t_value = /*$visibleDayInTimeline*/
+      ctx2[4].format(
         /*$settings*/
-        ctx2[4].timelineDateFormat
+        ctx2[3].timelineDateFormat
       ) + ""))
         set_data(t, t_value);
     },
@@ -29217,7 +34122,7 @@ function create_default_slot_7(ctx) {
 }
 function create_default_slot_6(ctx) {
   let arrowright;
-  let current;
+  let current2;
   arrowright = new Arrow_right$1({ props: { class: "svg-icon" } });
   return {
     c() {
@@ -29225,27 +34130,27 @@ function create_default_slot_6(ctx) {
     },
     m(target, anchor) {
       mount_component(arrowright, target, anchor);
-      current = true;
+      current2 = true;
     },
     p: noop,
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(arrowright.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(arrowright.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(arrowright, detaching);
     }
   };
 }
-function create_else_block(ctx) {
+function create_else_block2(ctx) {
   let filter;
-  let current;
+  let current2;
   filter = new Filter$1({
     props: { class: "svg-icon active-filter" }
   });
@@ -29255,17 +34160,17 @@ function create_else_block(ctx) {
     },
     m(target, anchor) {
       mount_component(filter, target, anchor);
-      current = true;
+      current2 = true;
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(filter.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(filter.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(filter, detaching);
@@ -29274,7 +34179,7 @@ function create_else_block(ctx) {
 }
 function create_if_block_8(ctx) {
   let filterx;
-  let current;
+  let current2;
   filterx = new Filter_x$1({ props: { class: "svg-icon" } });
   return {
     c() {
@@ -29282,17 +34187,17 @@ function create_if_block_8(ctx) {
     },
     m(target, anchor) {
       mount_component(filterx, target, anchor);
-      current = true;
+      current2 = true;
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(filterx.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(filterx.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(filterx, detaching);
@@ -29303,8 +34208,8 @@ function create_default_slot_5(ctx) {
   let current_block_type_index;
   let if_block;
   let if_block_anchor;
-  let current;
-  const if_block_creators = [create_if_block_8, create_else_block];
+  let current2;
+  const if_block_creators = [create_if_block_8, create_else_block2];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (
@@ -29324,7 +34229,7 @@ function create_default_slot_5(ctx) {
     m(target, anchor) {
       if_blocks[current_block_type_index].m(target, anchor);
       insert(target, if_block_anchor, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       let previous_block_index = current_block_type_index;
@@ -29346,14 +34251,14 @@ function create_default_slot_5(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(if_block);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(if_block);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if_blocks[current_block_type_index].d(detaching);
@@ -29364,7 +34269,7 @@ function create_default_slot_5(ctx) {
 }
 function create_default_slot_4(ctx) {
   let helpcircle;
-  let current;
+  let current2;
   helpcircle = new Help_circle$1({ props: { class: "svg-icon" } });
   return {
     c() {
@@ -29372,18 +34277,18 @@ function create_default_slot_4(ctx) {
     },
     m(target, anchor) {
       mount_component(helpcircle, target, anchor);
-      current = true;
+      current2 = true;
     },
     p: noop,
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(helpcircle.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(helpcircle.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(helpcircle, detaching);
@@ -29392,7 +34297,7 @@ function create_default_slot_4(ctx) {
 }
 function create_default_slot_3(ctx) {
   let settings_1;
-  let current;
+  let current2;
   settings_1 = new Settings$1({ props: { class: "svg-icon" } });
   return {
     c() {
@@ -29400,18 +34305,18 @@ function create_default_slot_3(ctx) {
     },
     m(target, anchor) {
       mount_component(settings_1, target, anchor);
-      current = true;
+      current2 = true;
     },
     p: noop,
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(settings_1.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(settings_1.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(settings_1, detaching);
@@ -29425,7 +34330,7 @@ function create_if_block_7(ctx) {
   let span;
   let t4;
   let button;
-  let current;
+  let current2;
   let mounted;
   let dispose;
   alerttriangle = new Alert_triangle$1({ props: { class: "svg-icon" } });
@@ -29440,7 +34345,7 @@ function create_if_block_7(ctx) {
       t4 = space();
       button = element("button");
       button.textContent = "Got it";
-      attr(div, "class", "migration-dialogue svelte-sefqsf");
+      attr(div, "class", "migration-dialogue svelte-10ubq57");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -29449,7 +34354,7 @@ function create_if_block_7(ctx) {
       append(div, span);
       append(div, t4);
       append(div, button);
-      current = true;
+      current2 = true;
       if (!mounted) {
         dispose = listen(
           button,
@@ -29462,14 +34367,14 @@ function create_if_block_7(ctx) {
     },
     p: noop,
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(alerttriangle.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(alerttriangle.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -29483,31 +34388,37 @@ function create_if_block_7(ctx) {
 function create_if_block_6(ctx) {
   let div;
   let alerttriangle;
-  let t;
-  let current;
+  let t0;
+  let span;
+  let current2;
   alerttriangle = new Alert_triangle$1({ props: { class: "svg-icon mod-error" } });
   return {
     c() {
       div = element("div");
       create_component(alerttriangle.$$.fragment);
-      t = text("\n      Dataview is not loaded, tasks won't be shown");
-      attr(div, "class", "info-container svelte-sefqsf");
+      t0 = space();
+      span = element("span");
+      span.innerHTML = `You need to install and enable
+        <a href="https://github.com/blacksmithgu/obsidian-dataview">Dataview</a>
+        for the day planner to work.`;
+      attr(div, "class", "info-container svelte-10ubq57");
     },
     m(target, anchor) {
       insert(target, div, anchor);
       mount_component(alerttriangle, div, null);
-      append(div, t);
-      current = true;
+      append(div, t0);
+      append(div, span);
+      current2 = true;
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(alerttriangle.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(alerttriangle.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -29516,7 +34427,7 @@ function create_if_block_6(ctx) {
     }
   };
 }
-function create_if_block_3(ctx) {
+function create_if_block_32(ctx) {
   let div1;
   let input;
   let input_placeholder_value;
@@ -29527,7 +34438,7 @@ function create_if_block_3(ctx) {
   let info;
   let t3;
   let a;
-  let current;
+  let current2;
   let mounted;
   let dispose;
   let if_block0 = (
@@ -29536,7 +34447,7 @@ function create_if_block_3(ctx) {
   );
   let if_block1 = (
     /*$dataviewErrorMessage*/
-    ctx[8].length > 0 && create_if_block_4(ctx)
+    ctx[8].length > 0 && create_if_block_42(ctx)
   );
   info = new Info$1({ props: { class: "svg-icon" } });
   return {
@@ -29558,10 +34469,10 @@ function create_if_block_3(ctx) {
       attr(input, "placeholder", input_placeholder_value = `-#archived and -"notes/personal"`);
       attr(input, "spellcheck", "false");
       attr(input, "type", "text");
-      attr(input, "class", "svelte-sefqsf");
+      attr(input, "class", "svelte-10ubq57");
       attr(a, "href", "https://blacksmithgu.github.io/obsidian-dataview/reference/sources/");
-      attr(div0, "class", "info-container svelte-sefqsf");
-      attr(div1, "class", "stretcher svelte-sefqsf");
+      attr(div0, "class", "info-container svelte-10ubq57");
+      attr(div1, "class", "stretcher svelte-10ubq57");
     },
     m(target, anchor) {
       insert(target, div1, anchor);
@@ -29582,7 +34493,7 @@ function create_if_block_3(ctx) {
       mount_component(info, div0, null);
       append(div0, t3);
       append(div0, a);
-      current = true;
+      current2 = true;
       if (!mounted) {
         dispose = listen(
           input,
@@ -29632,7 +34543,7 @@ function create_if_block_3(ctx) {
         if (if_block1) {
           if_block1.p(ctx2, dirty);
         } else {
-          if_block1 = create_if_block_4(ctx2);
+          if_block1 = create_if_block_42(ctx2);
           if_block1.c();
           if_block1.m(div1, t2);
         }
@@ -29642,16 +34553,16 @@ function create_if_block_3(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(if_block0);
       transition_in(info.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(if_block0);
       transition_out(info.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -29670,30 +34581,30 @@ function create_if_block_5(ctx) {
   let div;
   let alerttriangle;
   let t;
-  let current;
+  let current2;
   alerttriangle = new Alert_triangle$1({ props: { class: "svg-icon" } });
   return {
     c() {
       div = element("div");
       create_component(alerttriangle.$$.fragment);
       t = text("\n          Tasks are pulled from everywhere");
-      attr(div, "class", "info-container svelte-sefqsf");
+      attr(div, "class", "info-container svelte-10ubq57");
     },
     m(target, anchor) {
       insert(target, div, anchor);
       mount_component(alerttriangle, div, null);
       append(div, t);
-      current = true;
+      current2 = true;
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(alerttriangle.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(alerttriangle.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -29702,7 +34613,7 @@ function create_if_block_5(ctx) {
     }
   };
 }
-function create_if_block_4(ctx) {
+function create_if_block_42(ctx) {
   let div;
   let pre;
   let t;
@@ -29714,8 +34625,8 @@ function create_if_block_4(ctx) {
         /*$dataviewErrorMessage*/
         ctx[8]
       );
-      attr(pre, "class", "error-message svelte-sefqsf");
-      attr(div, "class", "info-container svelte-sefqsf");
+      attr(pre, "class", "error-message svelte-10ubq57");
+      attr(div, "class", "info-container svelte-10ubq57");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -29737,7 +34648,7 @@ function create_if_block_4(ctx) {
     }
   };
 }
-function create_if_block_2(ctx) {
+function create_if_block_22(ctx) {
   let p0;
   let t1;
   let p1;
@@ -29753,9 +34664,9 @@ function create_if_block_2(ctx) {
       t5 = space();
       p2 = element("p");
       p2.innerHTML = `Hold <strong>Control</strong> and drag/resize to push neighboring tasks`;
-      attr(p0, "class", "help-item svelte-sefqsf");
-      attr(p1, "class", "help-item svelte-sefqsf");
-      attr(p2, "class", "help-item svelte-sefqsf");
+      attr(p0, "class", "help-item svelte-10ubq57");
+      attr(p1, "class", "help-item svelte-10ubq57");
+      attr(p2, "class", "help-item svelte-10ubq57");
     },
     m(target, anchor) {
       insert(target, p0, anchor);
@@ -29778,19 +34689,19 @@ function create_if_block_2(ctx) {
     }
   };
 }
-function create_if_block(ctx) {
-  let div;
+function create_if_block2(ctx) {
+  let div1;
   let settingitem0;
   let t0;
   let settingitem1;
   let t1;
   let settingitem2;
   let t2;
-  let t3;
-  let settingitem3;
+  let div0;
   let t4;
-  let settingitem4;
-  let current;
+  let settingitem3;
+  let t5;
+  let current2;
   settingitem0 = new setting_item_default({
     props: {
       $$slots: {
@@ -29818,98 +34729,98 @@ function create_if_block(ctx) {
       $$scope: { ctx }
     }
   });
-  let if_block = (
-    /*$settings*/
-    ctx[4].showUncheduledTasks && create_if_block_1(ctx)
-  );
   settingitem3 = new setting_item_default({
     props: {
       $$slots: {
-        control: [create_control_slot_1],
-        name: [create_name_slot_1]
+        control: [create_control_slot_2],
+        name: [create_name_slot_2]
       },
       $$scope: { ctx }
     }
   });
-  settingitem4 = new setting_item_default({
-    props: {
-      $$slots: {
-        control: [create_control_slot],
-        name: [create_name_slot]
-      },
-      $$scope: { ctx }
-    }
-  });
+  let if_block = (
+    /*$settings*/
+    ctx[3].showUncheduledTasks && create_if_block_12(ctx)
+  );
   return {
     c() {
-      div = element("div");
+      div1 = element("div");
       create_component(settingitem0.$$.fragment);
       t0 = space();
       create_component(settingitem1.$$.fragment);
       t1 = space();
       create_component(settingitem2.$$.fragment);
       t2 = space();
+      div0 = element("div");
+      div0.textContent = "Unscheduled tasks";
+      t4 = space();
+      create_component(settingitem3.$$.fragment);
+      t5 = space();
       if (if_block)
         if_block.c();
-      t3 = space();
-      create_component(settingitem3.$$.fragment);
-      t4 = space();
-      create_component(settingitem4.$$.fragment);
-      attr(div, "class", "settings svelte-sefqsf");
+      attr(div0, "class", "controls-section svelte-10ubq57");
+      attr(div1, "class", "settings svelte-10ubq57");
     },
     m(target, anchor) {
-      insert(target, div, anchor);
-      mount_component(settingitem0, div, null);
-      append(div, t0);
-      mount_component(settingitem1, div, null);
-      append(div, t1);
-      mount_component(settingitem2, div, null);
-      append(div, t2);
+      insert(target, div1, anchor);
+      mount_component(settingitem0, div1, null);
+      append(div1, t0);
+      mount_component(settingitem1, div1, null);
+      append(div1, t1);
+      mount_component(settingitem2, div1, null);
+      append(div1, t2);
+      append(div1, div0);
+      append(div1, t4);
+      mount_component(settingitem3, div1, null);
+      append(div1, t5);
       if (if_block)
-        if_block.m(div, null);
-      append(div, t3);
-      mount_component(settingitem3, div, null);
-      append(div, t4);
-      mount_component(settingitem4, div, null);
-      current = true;
+        if_block.m(div1, null);
+      current2 = true;
     },
     p(ctx2, dirty) {
       const settingitem0_changes = {};
       if (dirty[0] & /*$settings*/
-      16 | dirty[1] & /*$$scope*/
-      8) {
+      8 | dirty[1] & /*$$scope*/
+      4) {
         settingitem0_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem0.$set(settingitem0_changes);
       const settingitem1_changes = {};
       if (dirty[0] & /*$settings*/
-      16 | dirty[1] & /*$$scope*/
-      8) {
+      8 | dirty[1] & /*$$scope*/
+      4) {
         settingitem1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem1.$set(settingitem1_changes);
       const settingitem2_changes = {};
       if (dirty[0] & /*$settings*/
-      16 | dirty[1] & /*$$scope*/
-      8) {
+      8 | dirty[1] & /*$$scope*/
+      4) {
         settingitem2_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem2.$set(settingitem2_changes);
+      const settingitem3_changes = {};
+      if (dirty[0] & /*$settings*/
+      8 | dirty[1] & /*$$scope*/
+      4) {
+        settingitem3_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      settingitem3.$set(settingitem3_changes);
       if (
         /*$settings*/
-        ctx2[4].showUncheduledTasks
+        ctx2[3].showUncheduledTasks
       ) {
         if (if_block) {
           if_block.p(ctx2, dirty);
           if (dirty[0] & /*$settings*/
-          16) {
+          8) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_1(ctx2);
+          if_block = create_if_block_12(ctx2);
           if_block.c();
           transition_in(if_block, 1);
-          if_block.m(div, t3);
+          if_block.m(div1, null);
         }
       } else if (if_block) {
         group_outros();
@@ -29918,51 +34829,34 @@ function create_if_block(ctx) {
         });
         check_outros();
       }
-      const settingitem3_changes = {};
-      if (dirty[0] & /*$settings*/
-      16 | dirty[1] & /*$$scope*/
-      8) {
-        settingitem3_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      settingitem3.$set(settingitem3_changes);
-      const settingitem4_changes = {};
-      if (dirty[0] & /*$settings*/
-      16 | dirty[1] & /*$$scope*/
-      8) {
-        settingitem4_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      settingitem4.$set(settingitem4_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(settingitem0.$$.fragment, local);
       transition_in(settingitem1.$$.fragment, local);
       transition_in(settingitem2.$$.fragment, local);
-      transition_in(if_block);
       transition_in(settingitem3.$$.fragment, local);
-      transition_in(settingitem4.$$.fragment, local);
-      current = true;
+      transition_in(if_block);
+      current2 = true;
     },
     o(local) {
       transition_out(settingitem0.$$.fragment, local);
       transition_out(settingitem1.$$.fragment, local);
       transition_out(settingitem2.$$.fragment, local);
-      transition_out(if_block);
       transition_out(settingitem3.$$.fragment, local);
-      transition_out(settingitem4.$$.fragment, local);
-      current = false;
+      transition_out(if_block);
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
-        detach(div);
+        detach(div1);
       destroy_component(settingitem0);
       destroy_component(settingitem1);
       destroy_component(settingitem2);
+      destroy_component(settingitem3);
       if (if_block)
         if_block.d();
-      destroy_component(settingitem3);
-      destroy_component(settingitem4);
     }
   };
 }
@@ -29983,13 +34877,13 @@ function create_name_slot_5(ctx) {
 }
 function create_control_slot_5(ctx) {
   let dropdown;
-  let current;
+  let current2;
   dropdown = new dropdown_default({
     props: {
       slot: "control",
       value: String(
         /*$settings*/
-        ctx[4].startHour
+        ctx[3].startHour
       ),
       values: (
         /*startHourOptions*/
@@ -30008,27 +34902,27 @@ function create_control_slot_5(ctx) {
     },
     m(target, anchor) {
       mount_component(dropdown, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       const dropdown_changes = {};
       if (dirty[0] & /*$settings*/
-      16)
+      8)
         dropdown_changes.value = String(
           /*$settings*/
-          ctx2[4].startHour
+          ctx2[3].startHour
         );
       dropdown.$set(dropdown_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(dropdown.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(dropdown.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(dropdown, detaching);
@@ -30052,13 +34946,13 @@ function create_name_slot_4(ctx) {
 }
 function create_control_slot_4(ctx) {
   let dropdown;
-  let current;
+  let current2;
   dropdown = new dropdown_default({
     props: {
       slot: "control",
       value: String(
         /*$settings*/
-        ctx[4].zoomLevel
+        ctx[3].zoomLevel
       ),
       values: (
         /*zoomLevelOptions*/
@@ -30077,27 +34971,27 @@ function create_control_slot_4(ctx) {
     },
     m(target, anchor) {
       mount_component(dropdown, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       const dropdown_changes = {};
       if (dirty[0] & /*$settings*/
-      16)
+      8)
         dropdown_changes.value = String(
           /*$settings*/
-          ctx2[4].zoomLevel
+          ctx2[3].zoomLevel
         );
       dropdown.$set(dropdown_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(dropdown.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(dropdown.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(dropdown, detaching);
@@ -30108,7 +35002,7 @@ function create_name_slot_3(ctx) {
   let t;
   return {
     c() {
-      t = text("Show unscheduled tasks");
+      t = text("Auto-scroll to now");
     },
     m(target, anchor) {
       insert(target, t, anchor);
@@ -30133,7 +35027,7 @@ function create_control_slot_3(ctx) {
         div,
         "is-enabled",
         /*$settings*/
-        ctx[4].showUncheduledTasks
+        ctx[3].centerNeedle
       );
     },
     m(target, anchor) {
@@ -30150,12 +35044,12 @@ function create_control_slot_3(ctx) {
     },
     p(ctx2, dirty) {
       if (dirty[0] & /*$settings*/
-      16) {
+      8) {
         toggle_class(
           div,
           "is-enabled",
           /*$settings*/
-          ctx2[4].showUncheduledTasks
+          ctx2[3].centerNeedle
         );
       }
     },
@@ -30167,55 +35061,11 @@ function create_control_slot_3(ctx) {
     }
   };
 }
-function create_if_block_1(ctx) {
-  let settingitem;
-  let current;
-  settingitem = new setting_item_default({
-    props: {
-      $$slots: {
-        control: [create_control_slot_2],
-        name: [create_name_slot_2]
-      },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(settingitem.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(settingitem, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const settingitem_changes = {};
-      if (dirty[0] & /*$settings*/
-      16 | dirty[1] & /*$$scope*/
-      8) {
-        settingitem_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      settingitem.$set(settingitem_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(settingitem.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(settingitem.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(settingitem, detaching);
-    }
-  };
-}
 function create_name_slot_2(ctx) {
   let t;
   return {
     c() {
-      t = text("Unscheduled tasks height limit");
+      t = text("Show unscheduled tasks");
     },
     m(target, anchor) {
       insert(target, t, anchor);
@@ -30227,53 +35077,121 @@ function create_name_slot_2(ctx) {
   };
 }
 function create_control_slot_2(ctx) {
-  let dropdown;
-  let current;
-  dropdown = new dropdown_default({
-    props: {
-      slot: "control",
-      value: String(
-        /*$settings*/
-        ctx[4].unscheduledTasksHeight
-      ),
-      values: ["50", "100", "150", "200", "250", "300", "350", "400"]
-    }
-  });
-  dropdown.$on(
-    "input",
-    /*handleUnscheduledTasksHeightInput*/
-    ctx[24]
-  );
+  let div;
+  let mounted;
+  let dispose;
   return {
     c() {
-      create_component(dropdown.$$.fragment);
+      div = element("div");
+      div.innerHTML = `<input tabindex="0" type="checkbox"/>`;
+      attr(div, "slot", "control");
+      attr(div, "class", "checkbox-container mod-small");
+      toggle_class(
+        div,
+        "is-enabled",
+        /*$settings*/
+        ctx[3].showUncheduledTasks
+      );
     },
     m(target, anchor) {
-      mount_component(dropdown, target, anchor);
-      current = true;
+      insert(target, div, anchor);
+      if (!mounted) {
+        dispose = listen(
+          div,
+          "click",
+          /*click_handler_3*/
+          ctx[30]
+        );
+        mounted = true;
+      }
     },
     p(ctx2, dirty) {
-      const dropdown_changes = {};
       if (dirty[0] & /*$settings*/
-      16)
-        dropdown_changes.value = String(
+      8) {
+        toggle_class(
+          div,
+          "is-enabled",
           /*$settings*/
-          ctx2[4].unscheduledTasksHeight
+          ctx2[3].showUncheduledTasks
         );
-      dropdown.$set(dropdown_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(dropdown.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(dropdown.$$.fragment, local);
-      current = false;
+      }
     },
     d(detaching) {
-      destroy_component(dropdown, detaching);
+      if (detaching)
+        detach(div);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+function create_if_block_12(ctx) {
+  let settingitem0;
+  let t;
+  let settingitem1;
+  let current2;
+  settingitem0 = new setting_item_default({
+    props: {
+      $$slots: {
+        control: [create_control_slot_1],
+        name: [create_name_slot_1]
+      },
+      $$scope: { ctx }
+    }
+  });
+  settingitem1 = new setting_item_default({
+    props: {
+      $$slots: {
+        control: [create_control_slot],
+        name: [create_name_slot]
+      },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(settingitem0.$$.fragment);
+      t = space();
+      create_component(settingitem1.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(settingitem0, target, anchor);
+      insert(target, t, anchor);
+      mount_component(settingitem1, target, anchor);
+      current2 = true;
+    },
+    p(ctx2, dirty) {
+      const settingitem0_changes = {};
+      if (dirty[0] & /*$settings*/
+      8 | dirty[1] & /*$$scope*/
+      4) {
+        settingitem0_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      settingitem0.$set(settingitem0_changes);
+      const settingitem1_changes = {};
+      if (dirty[0] & /*$settings*/
+      8 | dirty[1] & /*$$scope*/
+      4) {
+        settingitem1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      settingitem1.$set(settingitem1_changes);
+    },
+    i(local) {
+      if (current2)
+        return;
+      transition_in(settingitem0.$$.fragment, local);
+      transition_in(settingitem1.$$.fragment, local);
+      current2 = true;
+    },
+    o(local) {
+      transition_out(settingitem0.$$.fragment, local);
+      transition_out(settingitem1.$$.fragment, local);
+      current2 = false;
+    },
+    d(detaching) {
+      destroy_component(settingitem0, detaching);
+      if (detaching)
+        detach(t);
+      destroy_component(settingitem1, detaching);
     }
   };
 }
@@ -30281,7 +35199,7 @@ function create_name_slot_1(ctx) {
   let t;
   return {
     c() {
-      t = text("Auto-scroll to now");
+      t = text("Show unscheduled sub-tasks");
     },
     m(target, anchor) {
       insert(target, t, anchor);
@@ -30306,70 +35224,7 @@ function create_control_slot_1(ctx) {
         div,
         "is-enabled",
         /*$settings*/
-        ctx[4].centerNeedle
-      );
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      if (!mounted) {
-        dispose = listen(
-          div,
-          "click",
-          /*click_handler_3*/
-          ctx[30]
-        );
-        mounted = true;
-      }
-    },
-    p(ctx2, dirty) {
-      if (dirty[0] & /*$settings*/
-      16) {
-        toggle_class(
-          div,
-          "is-enabled",
-          /*$settings*/
-          ctx2[4].centerNeedle
-        );
-      }
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      mounted = false;
-      dispose();
-    }
-  };
-}
-function create_name_slot(ctx) {
-  let t;
-  return {
-    c() {
-      t = text("Show help while dragging");
-    },
-    m(target, anchor) {
-      insert(target, t, anchor);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t);
-    }
-  };
-}
-function create_control_slot(ctx) {
-  let div;
-  let mounted;
-  let dispose;
-  return {
-    c() {
-      div = element("div");
-      div.innerHTML = `<input tabindex="0" type="checkbox"/>`;
-      attr(div, "slot", "control");
-      attr(div, "class", "checkbox-container mod-small");
-      toggle_class(
-        div,
-        "is-enabled",
-        /*$settings*/
-        ctx[4].showHelp
+        ctx[3].showUnscheduledNestedTasks
       );
     },
     m(target, anchor) {
@@ -30386,12 +35241,12 @@ function create_control_slot(ctx) {
     },
     p(ctx2, dirty) {
       if (dirty[0] & /*$settings*/
-      16) {
+      8) {
         toggle_class(
           div,
           "is-enabled",
           /*$settings*/
-          ctx2[4].showHelp
+          ctx2[3].showUnscheduledNestedTasks
         );
       }
     },
@@ -30403,7 +35258,73 @@ function create_control_slot(ctx) {
     }
   };
 }
-function create_fragment32(ctx) {
+function create_name_slot(ctx) {
+  let t;
+  return {
+    c() {
+      t = text("Unscheduled tasks height limit");
+    },
+    m(target, anchor) {
+      insert(target, t, anchor);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t);
+    }
+  };
+}
+function create_control_slot(ctx) {
+  let dropdown;
+  let current2;
+  dropdown = new dropdown_default({
+    props: {
+      slot: "control",
+      value: String(
+        /*$settings*/
+        ctx[3].unscheduledTasksHeight
+      ),
+      values: ["50", "100", "150", "200", "250", "300", "350", "400"]
+    }
+  });
+  dropdown.$on(
+    "input",
+    /*handleUnscheduledTasksHeightInput*/
+    ctx[24]
+  );
+  return {
+    c() {
+      create_component(dropdown.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(dropdown, target, anchor);
+      current2 = true;
+    },
+    p(ctx2, dirty) {
+      const dropdown_changes = {};
+      if (dirty[0] & /*$settings*/
+      8)
+        dropdown_changes.value = String(
+          /*$settings*/
+          ctx2[3].unscheduledTasksHeight
+        );
+      dropdown.$set(dropdown_changes);
+    },
+    i(local) {
+      if (current2)
+        return;
+      transition_in(dropdown.$$.fragment, local);
+      current2 = true;
+    },
+    o(local) {
+      transition_out(dropdown.$$.fragment, local);
+      current2 = false;
+    },
+    d(detaching) {
+      destroy_component(dropdown, detaching);
+    }
+  };
+}
+function create_fragment30(ctx) {
   let div1;
   let div0;
   let controlbutton0;
@@ -30428,7 +35349,7 @@ function create_fragment32(ctx) {
   let t9;
   let t10;
   let t11;
-  let current;
+  let current2;
   controlbutton0 = new control_button_default({
     props: {
       label: "Open today's daily note",
@@ -30493,7 +35414,7 @@ function create_fragment32(ctx) {
     props: {
       isActive: (
         /*filterVisible*/
-        ctx[3]
+        ctx[2]
       ),
       label: "Dataview source",
       $$slots: { default: [create_default_slot_5] },
@@ -30509,7 +35430,7 @@ function create_fragment32(ctx) {
     props: {
       isActive: (
         /*helpVisible*/
-        ctx[2]
+        ctx[1]
       ),
       label: "Help",
       $$slots: { default: [create_default_slot_4] },
@@ -30525,7 +35446,7 @@ function create_fragment32(ctx) {
     props: {
       isActive: (
         /*settingsVisible*/
-        ctx[1]
+        ctx[0]
       ),
       label: "Settings",
       $$slots: { default: [create_default_slot_3] },
@@ -30539,21 +35460,21 @@ function create_fragment32(ctx) {
   );
   let if_block0 = (
     /*$settings*/
-    ctx[4].showDataviewMigrationWarning && create_if_block_7(ctx)
+    ctx[3].showDataviewMigrationWarning && create_if_block_7(ctx)
   );
   let if_block1 = !/*$dataviewLoaded*/
   ctx[6] && create_if_block_6(ctx);
   let if_block2 = (
     /*filterVisible*/
-    ctx[3] && create_if_block_3(ctx)
+    ctx[2] && create_if_block_32(ctx)
   );
   let if_block3 = (
     /*helpVisible*/
-    ctx[2] && create_if_block_2(ctx)
+    ctx[1] && create_if_block_22(ctx)
   );
   let if_block4 = (
     /*settingsVisible*/
-    ctx[1] && create_if_block(ctx)
+    ctx[0] && create_if_block2(ctx)
   );
   return {
     c() {
@@ -30596,8 +35517,8 @@ function create_fragment32(ctx) {
       set_style(div, "--justify-self", "flex-end");
       set_style(div_1, "display", "contents");
       set_style(div_1, "--justify-self", "flex-start");
-      attr(div0, "class", "header svelte-sefqsf");
-      attr(div1, "class", "controls svelte-sefqsf");
+      attr(div0, "class", "header svelte-10ubq57");
+      attr(div1, "class", "controls svelte-10ubq57");
     },
     m(target, anchor) {
       insert(target, div1, anchor);
@@ -30634,79 +35555,79 @@ function create_fragment32(ctx) {
       append(div1, t11);
       if (if_block4)
         if_block4.m(div1, null);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       const controlbutton0_changes = {};
       if (dirty[1] & /*$$scope*/
-      8) {
+      4) {
         controlbutton0_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton0.$set(controlbutton0_changes);
       const controlbutton1_changes = {};
       if (dirty[1] & /*$$scope*/
-      8) {
+      4) {
         controlbutton1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton1.$set(controlbutton1_changes);
       const controlbutton2_changes = {};
       if (dirty[1] & /*$$scope*/
-      8) {
+      4) {
         controlbutton2_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton2.$set(controlbutton2_changes);
       const controlbutton3_changes = {};
-      if (dirty[0] & /*day, $settings*/
-      17 | dirty[1] & /*$$scope*/
-      8) {
+      if (dirty[0] & /*$visibleDayInTimeline, $settings*/
+      24 | dirty[1] & /*$$scope*/
+      4) {
         controlbutton3_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton3.$set(controlbutton3_changes);
       const controlbutton4_changes = {};
       if (dirty[1] & /*$$scope*/
-      8) {
+      4) {
         controlbutton4_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton4.$set(controlbutton4_changes);
       const controlbutton5_changes = {};
       if (dirty[0] & /*filterVisible*/
-      8)
+      4)
         controlbutton5_changes.isActive = /*filterVisible*/
-        ctx2[3];
+        ctx2[2];
       if (dirty[0] & /*$sourceIsEmpty*/
       32 | dirty[1] & /*$$scope*/
-      8) {
+      4) {
         controlbutton5_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton5.$set(controlbutton5_changes);
       const controlbutton6_changes = {};
       if (dirty[0] & /*helpVisible*/
-      4)
+      2)
         controlbutton6_changes.isActive = /*helpVisible*/
-        ctx2[2];
+        ctx2[1];
       if (dirty[1] & /*$$scope*/
-      8) {
+      4) {
         controlbutton6_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton6.$set(controlbutton6_changes);
       const controlbutton7_changes = {};
       if (dirty[0] & /*settingsVisible*/
-      2)
+      1)
         controlbutton7_changes.isActive = /*settingsVisible*/
-        ctx2[1];
+        ctx2[0];
       if (dirty[1] & /*$$scope*/
-      8) {
+      4) {
         controlbutton7_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton7.$set(controlbutton7_changes);
       if (
         /*$settings*/
-        ctx2[4].showDataviewMigrationWarning
+        ctx2[3].showDataviewMigrationWarning
       ) {
         if (if_block0) {
           if_block0.p(ctx2, dirty);
           if (dirty[0] & /*$settings*/
-          16) {
+          8) {
             transition_in(if_block0, 1);
           }
         } else {
@@ -30744,16 +35665,16 @@ function create_fragment32(ctx) {
       }
       if (
         /*filterVisible*/
-        ctx2[3]
+        ctx2[2]
       ) {
         if (if_block2) {
           if_block2.p(ctx2, dirty);
           if (dirty[0] & /*filterVisible*/
-          8) {
+          4) {
             transition_in(if_block2, 1);
           }
         } else {
-          if_block2 = create_if_block_3(ctx2);
+          if_block2 = create_if_block_32(ctx2);
           if_block2.c();
           transition_in(if_block2, 1);
           if_block2.m(div1, t10);
@@ -30767,11 +35688,11 @@ function create_fragment32(ctx) {
       }
       if (
         /*helpVisible*/
-        ctx2[2]
+        ctx2[1]
       ) {
         if (if_block3) {
         } else {
-          if_block3 = create_if_block_2(ctx2);
+          if_block3 = create_if_block_22(ctx2);
           if_block3.c();
           if_block3.m(div1, t11);
         }
@@ -30781,16 +35702,16 @@ function create_fragment32(ctx) {
       }
       if (
         /*settingsVisible*/
-        ctx2[1]
+        ctx2[0]
       ) {
         if (if_block4) {
           if_block4.p(ctx2, dirty);
           if (dirty[0] & /*settingsVisible*/
-          2) {
+          1) {
             transition_in(if_block4, 1);
           }
         } else {
-          if_block4 = create_if_block(ctx2);
+          if_block4 = create_if_block2(ctx2);
           if_block4.c();
           transition_in(if_block4, 1);
           if_block4.m(div1, null);
@@ -30804,7 +35725,7 @@ function create_fragment32(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(controlbutton0.$$.fragment, local);
       transition_in(controlbutton1.$$.fragment, local);
@@ -30818,7 +35739,7 @@ function create_fragment32(ctx) {
       transition_in(if_block1);
       transition_in(if_block2);
       transition_in(if_block4);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(controlbutton0.$$.fragment, local);
@@ -30833,7 +35754,7 @@ function create_fragment32(ctx) {
       transition_out(if_block1);
       transition_out(if_block2);
       transition_out(if_block4);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -30859,35 +35780,34 @@ function create_fragment32(ctx) {
     }
   };
 }
-function instance31($$self, $$props, $$invalidate) {
+function instance30($$self, $$props, $$invalidate) {
   let $settings;
   let $visibleDayInTimeline;
   let $sourceIsEmpty;
   let $dataviewLoaded;
   let $dataviewSourceInput;
   let $dataviewErrorMessage;
-  component_subscribe($$self, settings, ($$value) => $$invalidate(4, $settings = $$value));
-  component_subscribe($$self, visibleDayInTimeline, ($$value) => $$invalidate(32, $visibleDayInTimeline = $$value));
-  let { day } = $$props;
+  component_subscribe($$self, settings, ($$value) => $$invalidate(3, $settings = $$value));
+  component_subscribe($$self, visibleDayInTimeline, ($$value) => $$invalidate(4, $visibleDayInTimeline = $$value));
   const { obsidianFacade, initWeeklyView, refreshTasks, dataviewLoaded } = getContext(obsidianContext);
   component_subscribe($$self, dataviewLoaded, (value) => $$invalidate(6, $dataviewLoaded = value));
   const { sourceIsEmpty, errorMessage: dataviewErrorMessage, dataviewSourceInput } = useDataviewSource({ refreshTasks });
   component_subscribe($$self, sourceIsEmpty, (value) => $$invalidate(5, $sourceIsEmpty = value));
   component_subscribe($$self, dataviewErrorMessage, (value) => $$invalidate(8, $dataviewErrorMessage = value));
   component_subscribe($$self, dataviewSourceInput, (value) => $$invalidate(7, $dataviewSourceInput = value));
-  const startHourOptions = (0, import_fp7.range)(0, 13).map(String);
-  const zoomLevelOptions = (0, import_fp7.range)(1, 5).map(String);
+  const startHourOptions = (0, import_fp11.range)(0, 13).map(String);
+  const zoomLevelOptions = (0, import_fp11.range)(1, 5).map(String);
   let settingsVisible = false;
   let helpVisible = false;
   let filterVisible = false;
   function toggleSettings() {
-    $$invalidate(1, settingsVisible = !settingsVisible);
+    $$invalidate(0, settingsVisible = !settingsVisible);
   }
   function toggleHelp() {
-    $$invalidate(2, helpVisible = !helpVisible);
+    $$invalidate(1, helpVisible = !helpVisible);
   }
   function toggleFilter() {
-    $$invalidate(3, filterVisible = !filterVisible);
+    $$invalidate(2, filterVisible = !filterVisible);
   }
   function goBack() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -30921,7 +35841,7 @@ function instance31($$self, $$props, $$invalidate) {
     set_store_value(settings, $settings.zoomLevel = Number(event.currentTarget.value), $settings);
   }
   const click_handler = async () => {
-    const note = await createDailyNoteIfNeeded(day);
+    const note = await createDailyNoteIfNeeded($visibleDayInTimeline);
     await obsidianFacade.openFileInEditor(note);
   };
   const click_handler_1 = () => {
@@ -30932,24 +35852,20 @@ function instance31($$self, $$props, $$invalidate) {
     dataviewSourceInput.set($dataviewSourceInput);
   }
   const click_handler_2 = () => {
-    set_store_value(settings, $settings.showUncheduledTasks = !$settings.showUncheduledTasks, $settings);
-  };
-  const click_handler_3 = () => {
     set_store_value(settings, $settings.centerNeedle = !$settings.centerNeedle, $settings);
   };
-  const click_handler_4 = () => {
-    set_store_value(settings, $settings.showHelp = !$settings.showHelp, $settings);
+  const click_handler_3 = () => {
+    set_store_value(settings, $settings.showUncheduledTasks = !$settings.showUncheduledTasks, $settings);
   };
-  $$self.$$set = ($$props2) => {
-    if ("day" in $$props2)
-      $$invalidate(0, day = $$props2.day);
+  const click_handler_4 = () => {
+    set_store_value(settings, $settings.showUnscheduledNestedTasks = !$settings.showUnscheduledNestedTasks, $settings);
   };
   return [
-    day,
     settingsVisible,
     helpVisible,
     filterVisible,
     $settings,
+    $visibleDayInTimeline,
     $sourceIsEmpty,
     $dataviewLoaded,
     $dataviewSourceInput,
@@ -30982,183 +35898,67 @@ function instance31($$self, $$props, $$invalidate) {
 var Timeline_controls = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance31, create_fragment32, safe_not_equal, { day: 0 }, add_css13, [-1, -1]);
+    init(this, options, instance30, create_fragment30, safe_not_equal, {}, add_css13, [-1, -1]);
   }
 };
 var timeline_controls_default = Timeline_controls;
 
 // src/ui/components/unscheduled-task-container.svelte
 function add_css14(target) {
-  append_styles(target, "svelte-475jde", ".unscheduled-task-container.svelte-475jde{overflow:auto;display:flex;gap:var(--size-4-1);padding:var(--size-4-1);border-bottom:1px solid var(--background-modifier-border)}.tasks.svelte-475jde{flex:1 0 0}.controls.svelte-475jde{display:flex;flex-direction:column;gap:var(--size-4-1)}");
+  append_styles(target, "svelte-6yewgv", ".unscheduled-task-container.svelte-6yewgv{overflow:auto;display:flex;gap:var(--size-4-1);padding:var(--size-4-1);border-bottom:1px solid var(--background-modifier-border)}.tasks.svelte-6yewgv{flex:1 0 0}");
 }
-function create_default_slot_1(ctx) {
-  let paneltopclose;
-  let current;
-  paneltopclose = new Panel_top_close$1({ props: { class: "svg-icon" } });
-  return {
-    c() {
-      create_component(paneltopclose.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(paneltopclose, target, anchor);
-      current = true;
-    },
-    p: noop,
-    i(local) {
-      if (current)
-        return;
-      transition_in(paneltopclose.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(paneltopclose.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(paneltopclose, detaching);
-    }
-  };
-}
-function create_default_slot18(ctx) {
-  let listtree;
-  let current;
-  listtree = new List_tree$1({ props: { class: "svg-icon" } });
-  return {
-    c() {
-      create_component(listtree.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(listtree, target, anchor);
-      current = true;
-    },
-    p: noop,
-    i(local) {
-      if (current)
-        return;
-      transition_in(listtree.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(listtree.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(listtree, detaching);
-    }
-  };
-}
-function create_fragment33(ctx) {
-  let div2;
-  let div0;
-  let controlbutton0;
-  let t0;
-  let controlbutton1;
-  let t1;
+function create_fragment31(ctx) {
   let div1;
+  let div0;
   let style_max_height = `${/*$settings*/
   ctx[0].unscheduledTasksHeight}px`;
-  let current;
-  controlbutton0 = new control_button_default({
-    props: {
-      label: "Hide unscheduled tasks",
-      $$slots: { default: [create_default_slot_1] },
-      $$scope: { ctx }
-    }
-  });
-  controlbutton0.$on(
-    "click",
-    /*click_handler*/
-    ctx[2]
-  );
-  controlbutton1 = new control_button_default({
-    props: {
-      isActive: (
-        /*$settings*/
-        ctx[0].showUnscheduledNestedTasks
-      ),
-      label: "Show subtasks without time",
-      $$slots: { default: [create_default_slot18] },
-      $$scope: { ctx }
-    }
-  });
-  controlbutton1.$on(
-    "click",
-    /*click_handler_1*/
-    ctx[3]
-  );
+  let current2;
   const default_slot_template = (
     /*#slots*/
-    ctx[1].default
+    ctx[2].default
   );
   const default_slot = create_slot(
     default_slot_template,
     ctx,
     /*$$scope*/
-    ctx[4],
+    ctx[1],
     null
   );
   return {
     c() {
-      div2 = element("div");
-      div0 = element("div");
-      create_component(controlbutton0.$$.fragment);
-      t0 = space();
-      create_component(controlbutton1.$$.fragment);
-      t1 = space();
       div1 = element("div");
+      div0 = element("div");
       if (default_slot)
         default_slot.c();
-      attr(div0, "class", "controls svelte-475jde");
-      attr(div1, "class", "tasks svelte-475jde");
-      attr(div2, "class", "unscheduled-task-container svelte-475jde");
-      set_style(div2, "max-height", style_max_height);
+      attr(div0, "class", "tasks svelte-6yewgv");
+      attr(div1, "class", "unscheduled-task-container svelte-6yewgv");
+      set_style(div1, "max-height", style_max_height);
     },
     m(target, anchor) {
-      insert(target, div2, anchor);
-      append(div2, div0);
-      mount_component(controlbutton0, div0, null);
-      append(div0, t0);
-      mount_component(controlbutton1, div0, null);
-      append(div2, t1);
-      append(div2, div1);
+      insert(target, div1, anchor);
+      append(div1, div0);
       if (default_slot) {
-        default_slot.m(div1, null);
+        default_slot.m(div0, null);
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
-      const controlbutton0_changes = {};
-      if (dirty & /*$$scope*/
-      16) {
-        controlbutton0_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      controlbutton0.$set(controlbutton0_changes);
-      const controlbutton1_changes = {};
-      if (dirty & /*$settings*/
-      1)
-        controlbutton1_changes.isActive = /*$settings*/
-        ctx2[0].showUnscheduledNestedTasks;
-      if (dirty & /*$$scope*/
-      16) {
-        controlbutton1_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      controlbutton1.$set(controlbutton1_changes);
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & /*$$scope*/
-        16)) {
+        if (default_slot.p && (!current2 || dirty & /*$$scope*/
+        2)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
             /*$$scope*/
-            ctx2[4],
-            !current ? get_all_dirty_from_scope(
+            ctx2[1],
+            !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
-              ctx2[4]
+              ctx2[1]
             ) : get_slot_changes(
               default_slot_template,
               /*$$scope*/
-              ctx2[4],
+              ctx2[1],
               dirty,
               null
             ),
@@ -31169,82 +35969,66 @@ function create_fragment33(ctx) {
       if (dirty & /*$settings*/
       1 && style_max_height !== (style_max_height = `${/*$settings*/
       ctx2[0].unscheduledTasksHeight}px`)) {
-        set_style(div2, "max-height", style_max_height);
+        set_style(div1, "max-height", style_max_height);
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
-      transition_in(controlbutton0.$$.fragment, local);
-      transition_in(controlbutton1.$$.fragment, local);
       transition_in(default_slot, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
-      transition_out(controlbutton0.$$.fragment, local);
-      transition_out(controlbutton1.$$.fragment, local);
       transition_out(default_slot, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
-        detach(div2);
-      destroy_component(controlbutton0);
-      destroy_component(controlbutton1);
+        detach(div1);
       if (default_slot)
         default_slot.d(detaching);
     }
   };
 }
-function instance32($$self, $$props, $$invalidate) {
+function instance31($$self, $$props, $$invalidate) {
   let $settings;
   component_subscribe($$self, settings, ($$value) => $$invalidate(0, $settings = $$value));
   let { $$slots: slots = {}, $$scope } = $$props;
-  const click_handler = () => {
-    set_store_value(settings, $settings.showUncheduledTasks = false, $settings);
-  };
-  const click_handler_1 = () => {
-    set_store_value(settings, $settings.showUnscheduledNestedTasks = !$settings.showUnscheduledNestedTasks, $settings);
-  };
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
-      $$invalidate(4, $$scope = $$props2.$$scope);
+      $$invalidate(1, $$scope = $$props2.$$scope);
   };
-  return [$settings, slots, click_handler, click_handler_1, $$scope];
+  return [$settings, $$scope, slots];
 }
 var Unscheduled_task_container = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance32, create_fragment33, safe_not_equal, {}, add_css14);
+    init(this, options, instance31, create_fragment31, safe_not_equal, {}, add_css14);
   }
 };
 var unscheduled_task_container_default = Unscheduled_task_container;
 
 // src/ui/components/task-container.svelte
-var { window: window_1 } = globals;
 function get_each_context5(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[35] = list[i];
+  child_ctx[29] = list[i];
   return child_ctx;
 }
 function get_each_context_1(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[35] = list[i];
+  child_ctx[29] = list[i];
   return child_ctx;
 }
-function create_if_block_32(ctx) {
+function create_if_block_23(ctx) {
   let timelinecontrols;
   let t;
   let if_block_anchor;
-  let current;
-  timelinecontrols = new timeline_controls_default({ props: { day: (
-    /*day*/
-    ctx[1]
-  ) } });
+  let current2;
+  timelinecontrols = new timeline_controls_default({});
   let if_block = (
     /*$displayedTasks*/
-    ctx[12].noTime.length > 0 && /*$settings*/
-    ctx[4].showUncheduledTasks && create_if_block_42(ctx)
+    ctx[16].noTime.length > 0 && /*$settings*/
+    ctx[17].showUncheduledTasks && create_if_block_33(ctx)
   );
   return {
     c() {
@@ -31260,28 +36044,22 @@ function create_if_block_32(ctx) {
       if (if_block)
         if_block.m(target, anchor);
       insert(target, if_block_anchor, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
-      const timelinecontrols_changes = {};
-      if (dirty[0] & /*day*/
-      2)
-        timelinecontrols_changes.day = /*day*/
-        ctx2[1];
-      timelinecontrols.$set(timelinecontrols_changes);
       if (
         /*$displayedTasks*/
-        ctx2[12].noTime.length > 0 && /*$settings*/
-        ctx2[4].showUncheduledTasks
+        ctx2[16].noTime.length > 0 && /*$settings*/
+        ctx2[17].showUncheduledTasks
       ) {
         if (if_block) {
           if_block.p(ctx2, dirty);
           if (dirty[0] & /*$displayedTasks, $settings*/
-          4112) {
+          196608) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_42(ctx2);
+          if_block = create_if_block_33(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -31295,16 +36073,16 @@ function create_if_block_32(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(timelinecontrols.$$.fragment, local);
       transition_in(if_block);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(timelinecontrols.$$.fragment, local);
       transition_out(if_block);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(timelinecontrols, detaching);
@@ -31317,9 +36095,9 @@ function create_if_block_32(ctx) {
     }
   };
 }
-function create_if_block_42(ctx) {
+function create_if_block_33(ctx) {
   let unscheduledtaskcontainer;
-  let current;
+  let current2;
   unscheduledtaskcontainer = new unscheduled_task_container_default({
     props: {
       $$slots: { default: [create_default_slot_42] },
@@ -31332,26 +36110,26 @@ function create_if_block_42(ctx) {
     },
     m(target, anchor) {
       mount_component(unscheduledtaskcontainer, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       const unscheduledtaskcontainer_changes = {};
-      if (dirty[0] & /*$displayedTasks, $settings, gripCursor*/
-      4176 | dirty[1] & /*$$scope*/
-      512) {
+      if (dirty[0] & /*$displayedTasks, handleTaskMouseUp, $settings, gripCursor, handleUnscheduledTaskGripMouseDown*/
+      197256 | dirty[1] & /*$$scope*/
+      8) {
         unscheduledtaskcontainer_changes.$$scope = { dirty, ctx: ctx2 };
       }
       unscheduledtaskcontainer.$set(unscheduledtaskcontainer_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(unscheduledtaskcontainer.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(unscheduledtaskcontainer.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(unscheduledtaskcontainer, detaching);
@@ -31361,19 +36139,19 @@ function create_if_block_42(ctx) {
 function create_default_slot_52(ctx) {
   let grip;
   let t;
-  let current;
+  let current2;
   function mousedown_handler2() {
     return (
       /*mousedown_handler*/
-      ctx[24](
+      ctx[23](
         /*task*/
-        ctx[35]
+        ctx[29]
       )
     );
   }
   grip = new grip_default({ props: { cursor: (
     /*gripCursor*/
-    ctx[6]
+    ctx[3]
   ) } });
   grip.$on("mousedown", mousedown_handler2);
   return {
@@ -31384,26 +36162,26 @@ function create_default_slot_52(ctx) {
     m(target, anchor) {
       mount_component(grip, target, anchor);
       insert(target, t, anchor);
-      current = true;
+      current2 = true;
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const grip_changes = {};
       if (dirty[0] & /*gripCursor*/
-      64)
+      8)
         grip_changes.cursor = /*gripCursor*/
-        ctx[6];
+        ctx[3];
       grip.$set(grip_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(grip.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(grip.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(grip, detaching);
@@ -31416,13 +36194,13 @@ function create_each_block_1(ctx) {
   let task;
   let div;
   let __task_height_last;
-  let current;
+  let current2;
   function mouseup_handler() {
     return (
       /*mouseup_handler*/
-      ctx[25](
+      ctx[24](
         /*task*/
-        ctx[35]
+        ctx[29]
       )
     );
   }
@@ -31430,7 +36208,7 @@ function create_each_block_1(ctx) {
     props: {
       task: (
         /*task*/
-        ctx[35]
+        ctx[29]
       ),
       $$slots: { default: [create_default_slot_52] },
       $$scope: { ctx }
@@ -31443,43 +36221,43 @@ function create_each_block_1(ctx) {
       create_component(task.$$.fragment);
       set_style(div, "display", "contents");
       set_style(div, "--task-height", __task_height_last = /*$settings*/
-      ctx[4].defaultDurationMinutes * /*$settings*/
-      ctx[4].zoomLevel + "px");
+      ctx[17].defaultDurationMinutes * /*$settings*/
+      ctx[17].zoomLevel + "px");
     },
     m(target, anchor) {
       insert(target, div, anchor);
       mount_component(task, div, null);
-      current = true;
+      current2 = true;
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
       if (dirty[0] & /*$settings*/
-      16 && __task_height_last !== (__task_height_last = /*$settings*/
-      ctx[4].defaultDurationMinutes * /*$settings*/
-      ctx[4].zoomLevel + "px")) {
+      131072 && __task_height_last !== (__task_height_last = /*$settings*/
+      ctx[17].defaultDurationMinutes * /*$settings*/
+      ctx[17].zoomLevel + "px")) {
         set_style(div, "--task-height", __task_height_last);
       }
       const task_changes = {};
       if (dirty[0] & /*$displayedTasks*/
-      4096)
+      65536)
         task_changes.task = /*task*/
-        ctx[35];
-      if (dirty[0] & /*gripCursor, $displayedTasks*/
-      4160 | dirty[1] & /*$$scope*/
-      512) {
+        ctx[29];
+      if (dirty[0] & /*gripCursor, handleUnscheduledTaskGripMouseDown, $displayedTasks*/
+      65672 | dirty[1] & /*$$scope*/
+      8) {
         task_changes.$$scope = { dirty, ctx };
       }
       task.$set(task_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(task.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(task.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching && task)
@@ -31490,10 +36268,10 @@ function create_each_block_1(ctx) {
 }
 function create_default_slot_42(ctx) {
   let each_1_anchor;
-  let current;
+  let current2;
   let each_value_1 = (
     /*$displayedTasks*/
-    ctx[12].noTime
+    ctx[16].noTime
   );
   let each_blocks = [];
   for (let i = 0; i < each_value_1.length; i += 1) {
@@ -31516,13 +36294,13 @@ function create_default_slot_42(ctx) {
         }
       }
       insert(target, each_1_anchor, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
-      if (dirty[0] & /*$displayedTasks, handleTaskMouseUp, $settings, gripCursor, startScheduling*/
-      1314896) {
+      if (dirty[0] & /*$displayedTasks, handleTaskMouseUp, $settings, gripCursor, handleUnscheduledTaskGripMouseDown*/
+      197256) {
         each_value_1 = /*$displayedTasks*/
-        ctx2[12].noTime;
+        ctx2[16].noTime;
         let i;
         for (i = 0; i < each_value_1.length; i += 1) {
           const child_ctx = get_each_context_1(ctx2, each_value_1, i);
@@ -31544,19 +36322,19 @@ function create_default_slot_42(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       for (let i = 0; i < each_value_1.length; i += 1) {
         transition_in(each_blocks[i]);
       }
-      current = true;
+      current2 = true;
     },
     o(local) {
       each_blocks = each_blocks.filter(Boolean);
       for (let i = 0; i < each_blocks.length; i += 1) {
         transition_out(each_blocks[i]);
       }
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_each(each_blocks, detaching);
@@ -31565,14 +36343,14 @@ function create_default_slot_42(ctx) {
     }
   };
 }
-function create_if_block_22(ctx) {
+function create_if_block_13(ctx) {
   let ruler;
-  let current;
+  let current2;
   ruler = new ruler_default({
     props: {
       visibleHours: getVisibleHours(
         /*$settings*/
-        ctx[4]
+        ctx[17]
       )
     }
   });
@@ -31582,41 +36360,41 @@ function create_if_block_22(ctx) {
     },
     m(target, anchor) {
       mount_component(ruler, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       const ruler_changes = {};
       if (dirty[0] & /*$settings*/
-      16)
+      131072)
         ruler_changes.visibleHours = getVisibleHours(
           /*$settings*/
-          ctx2[4]
+          ctx2[17]
         );
       ruler.$set(ruler_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(ruler.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(ruler.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(ruler, detaching);
     }
   };
 }
-function create_if_block_12(ctx) {
+function create_if_block3(ctx) {
   let needle;
-  let current;
+  let current2;
   needle = new needle_default({
     props: {
       autoScrollBlocked: (
         /*autoScrollBlocked*/
-        ctx[34]
+        ctx[28]
       )
     }
   });
@@ -31626,55 +36404,28 @@ function create_if_block_12(ctx) {
     },
     m(target, anchor) {
       mount_component(needle, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       const needle_changes = {};
-      if (dirty[1] & /*autoScrollBlocked*/
-      8)
+      if (dirty[0] & /*autoScrollBlocked*/
+      268435456)
         needle_changes.autoScrollBlocked = /*autoScrollBlocked*/
-        ctx2[34];
+        ctx2[28];
       needle.$set(needle_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(needle.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(needle.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(needle, detaching);
-    }
-  };
-}
-function create_if_block2(ctx) {
-  let banner;
-  let current;
-  banner = new banner_default({});
-  return {
-    c() {
-      create_component(banner.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(banner, target, anchor);
-      current = true;
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(banner.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(banner.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(banner, detaching);
     }
   };
 }
@@ -31683,38 +36434,35 @@ function create_default_slot_32(ctx) {
   let t0;
   let resizehandle;
   let t1;
-  let current;
+  let current2;
   function mousedown_handler_1(...args) {
     return (
       /*mousedown_handler_1*/
-      ctx[26](
+      ctx[25](
         /*task*/
-        ctx[35],
+        ctx[29],
         ...args
       )
     );
   }
   grip = new grip_default({ props: { cursor: (
     /*gripCursor*/
-    ctx[6]
+    ctx[3]
   ) } });
   grip.$on("mousedown", mousedown_handler_1);
   function mousedown_handler_2(...args) {
     return (
       /*mousedown_handler_2*/
-      ctx[27](
+      ctx[26](
         /*task*/
-        ctx[35],
+        ctx[29],
         ...args
       )
     );
   }
   resizehandle = new resize_handle_default({
-    props: {
-      visible: !/*$editStatus*/
-      ctx[2] && !/*$fileSyncInProgress*/
-      ctx[3]
-    }
+    props: { visible: !/*$editOperation*/
+    ctx[2] }
   });
   resizehandle.$on("mousedown", mousedown_handler_2);
   return {
@@ -31729,35 +36477,34 @@ function create_default_slot_32(ctx) {
       insert(target, t0, anchor);
       mount_component(resizehandle, target, anchor);
       insert(target, t1, anchor);
-      current = true;
+      current2 = true;
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const grip_changes = {};
       if (dirty[0] & /*gripCursor*/
-      64)
+      8)
         grip_changes.cursor = /*gripCursor*/
-        ctx[6];
+        ctx[3];
       grip.$set(grip_changes);
       const resizehandle_changes = {};
-      if (dirty[0] & /*$editStatus, $fileSyncInProgress*/
-      12)
-        resizehandle_changes.visible = !/*$editStatus*/
-        ctx[2] && !/*$fileSyncInProgress*/
-        ctx[3];
+      if (dirty[0] & /*$editOperation*/
+      4)
+        resizehandle_changes.visible = !/*$editOperation*/
+        ctx[2];
       resizehandle.$set(resizehandle_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(grip.$$.fragment, local);
       transition_in(resizehandle.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(grip.$$.fragment, local);
       transition_out(resizehandle.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(grip, detaching);
@@ -31772,13 +36519,13 @@ function create_default_slot_32(ctx) {
 function create_each_block5(key_1, ctx) {
   let first;
   let scheduledtask;
-  let current;
+  let current2;
   function mouseup_handler_1() {
     return (
       /*mouseup_handler_1*/
-      ctx[28](
+      ctx[27](
         /*task*/
-        ctx[35]
+        ctx[29]
       )
     );
   }
@@ -31786,7 +36533,7 @@ function create_each_block5(key_1, ctx) {
     props: {
       task: (
         /*task*/
-        ctx[35]
+        ctx[29]
       ),
       $$slots: { default: [create_default_slot_32] },
       $$scope: { ctx }
@@ -31804,31 +36551,31 @@ function create_each_block5(key_1, ctx) {
     m(target, anchor) {
       insert(target, first, anchor);
       mount_component(scheduledtask, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const scheduledtask_changes = {};
       if (dirty[0] & /*$displayedTasks*/
-      4096)
+      65536)
         scheduledtask_changes.task = /*task*/
-        ctx[35];
-      if (dirty[0] & /*$editStatus, $fileSyncInProgress, $displayedTasks, gripCursor*/
-      4172 | dirty[1] & /*$$scope*/
-      512) {
+        ctx[29];
+      if (dirty[0] & /*$editOperation, handleResizerMouseDown, $displayedTasks, gripCursor, handleGripMouseDown*/
+      66828 | dirty[1] & /*$$scope*/
+      8) {
         scheduledtask_changes.$$scope = { dirty, ctx };
       }
       scheduledtask.$set(scheduledtask_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(scheduledtask.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(scheduledtask.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -31838,23 +36585,17 @@ function create_each_block5(key_1, ctx) {
   };
 }
 function create_default_slot_2(ctx) {
-  let t;
   let each_blocks = [];
   let each_1_lookup = /* @__PURE__ */ new Map();
   let each_1_anchor;
-  let current;
-  let if_block = (
-    /*$editStatus*/
-    ctx[2] && /*$settings*/
-    ctx[4].showHelp && create_if_block2(ctx)
-  );
+  let current2;
   let each_value = (
     /*$displayedTasks*/
-    ctx[12].withTime
+    ctx[16].withTime
   );
   const get_key = (ctx2) => getRenderKey(
     /*task*/
-    ctx2[35]
+    ctx2[29]
   );
   for (let i = 0; i < each_value.length; i += 1) {
     let child_ctx = get_each_context5(ctx, each_value, i);
@@ -31863,80 +36604,45 @@ function create_default_slot_2(ctx) {
   }
   return {
     c() {
-      if (if_block)
-        if_block.c();
-      t = space();
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
       each_1_anchor = empty();
     },
     m(target, anchor) {
-      if (if_block)
-        if_block.m(target, anchor);
-      insert(target, t, anchor);
       for (let i = 0; i < each_blocks.length; i += 1) {
         if (each_blocks[i]) {
           each_blocks[i].m(target, anchor);
         }
       }
       insert(target, each_1_anchor, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
-      if (
-        /*$editStatus*/
-        ctx2[2] && /*$settings*/
-        ctx2[4].showHelp
-      ) {
-        if (if_block) {
-          if (dirty[0] & /*$editStatus, $settings*/
-          20) {
-            transition_in(if_block, 1);
-          }
-        } else {
-          if_block = create_if_block2(ctx2);
-          if_block.c();
-          transition_in(if_block, 1);
-          if_block.m(t.parentNode, t);
-        }
-      } else if (if_block) {
-        group_outros();
-        transition_out(if_block, 1, 1, () => {
-          if_block = null;
-        });
-        check_outros();
-      }
-      if (dirty[0] & /*$displayedTasks, handleTaskMouseUp, $editStatus, $fileSyncInProgress, handleResizeStart, gripCursor, handleGripMouseDown*/
-      921676) {
+      if (dirty[0] & /*$displayedTasks, handleTaskMouseUp, $editOperation, handleResizerMouseDown, gripCursor, handleGripMouseDown*/
+      67340) {
         each_value = /*$displayedTasks*/
-        ctx2[12].withTime;
+        ctx2[16].withTime;
         group_outros();
         each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, each_1_anchor.parentNode, outro_and_destroy_block, create_each_block5, each_1_anchor, get_each_context5);
         check_outros();
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
-      transition_in(if_block);
       for (let i = 0; i < each_value.length; i += 1) {
         transition_in(each_blocks[i]);
       }
-      current = true;
+      current2 = true;
     },
     o(local) {
-      transition_out(if_block);
       for (let i = 0; i < each_blocks.length; i += 1) {
         transition_out(each_blocks[i]);
       }
-      current = false;
+      current2 = false;
     },
     d(detaching) {
-      if (if_block)
-        if_block.d(detaching);
-      if (detaching)
-        detach(t);
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].d(detaching);
       }
@@ -31945,40 +36651,45 @@ function create_default_slot_2(ctx) {
     }
   };
 }
-function create_default_slot_12(ctx) {
+function create_default_slot_1(ctx) {
   let show_if = isToday(
-    /*day*/
+    /*actualDay*/
     ctx[1]
   );
   let t;
   let scheduledtaskcontainer;
-  let current;
-  let if_block = show_if && create_if_block_12(ctx);
+  let current2;
+  let if_block = show_if && create_if_block3(ctx);
   scheduledtaskcontainer = new scheduled_task_container_default({
     props: {
-      cursor: (
-        /*containerCursor*/
-        ctx[5]
-      ),
       pointerOffsetY: (
         /*pointerOffsetY*/
-        ctx[15]
+        ctx[5]
       ),
       $$slots: { default: [create_default_slot_2] },
       $$scope: { ctx }
     }
   });
-  scheduledtaskcontainer.$on(
-    "mousedown",
-    /*handleMouseDown*/
-    ctx[16]
-  );
+  scheduledtaskcontainer.$on("mousedown", function() {
+    if (is_function(
+      /*handleContainerMouseDown*/
+      ctx[11]
+    ))
+      ctx[11].apply(this, arguments);
+  });
   scheduledtaskcontainer.$on("mouseup", function() {
     if (is_function(
       /*confirmEdit*/
-      ctx[8]
+      ctx[15]
     ))
-      ctx[8].apply(this, arguments);
+      ctx[15].apply(this, arguments);
+  });
+  scheduledtaskcontainer.$on("mouseenter", function() {
+    if (is_function(
+      /*handleMouseEnter*/
+      ctx[6]
+    ))
+      ctx[6].apply(this, arguments);
   });
   return {
     c() {
@@ -31992,25 +36703,25 @@ function create_default_slot_12(ctx) {
         if_block.m(target, anchor);
       insert(target, t, anchor);
       mount_component(scheduledtaskcontainer, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
-      if (dirty[0] & /*day*/
+      if (dirty[0] & /*actualDay*/
       2)
         show_if = isToday(
-          /*day*/
+          /*actualDay*/
           ctx[1]
         );
       if (show_if) {
         if (if_block) {
           if_block.p(ctx, dirty);
-          if (dirty[0] & /*day*/
+          if (dirty[0] & /*actualDay*/
           2) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_12(ctx);
+          if_block = create_if_block3(ctx);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(t.parentNode, t);
@@ -32023,28 +36734,28 @@ function create_default_slot_12(ctx) {
         check_outros();
       }
       const scheduledtaskcontainer_changes = {};
-      if (dirty[0] & /*containerCursor*/
+      if (dirty[0] & /*pointerOffsetY*/
       32)
-        scheduledtaskcontainer_changes.cursor = /*containerCursor*/
+        scheduledtaskcontainer_changes.pointerOffsetY = /*pointerOffsetY*/
         ctx[5];
-      if (dirty[0] & /*$displayedTasks, $editStatus, $fileSyncInProgress, gripCursor, $settings*/
-      4188 | dirty[1] & /*$$scope*/
-      512) {
+      if (dirty[0] & /*$displayedTasks, handleTaskMouseUp, $editOperation, handleResizerMouseDown, gripCursor, handleGripMouseDown*/
+      67340 | dirty[1] & /*$$scope*/
+      8) {
         scheduledtaskcontainer_changes.$$scope = { dirty, ctx };
       }
       scheduledtaskcontainer.$set(scheduledtaskcontainer_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(if_block);
       transition_in(scheduledtaskcontainer.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(if_block);
       transition_out(scheduledtaskcontainer.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (if_block)
@@ -32055,19 +36766,19 @@ function create_default_slot_12(ctx) {
     }
   };
 }
-function create_default_slot19(ctx) {
+function create_default_slot16(ctx) {
   let t;
   let column;
-  let current;
+  let current2;
   let if_block = !/*hideControls*/
-  ctx[0] && create_if_block_22(ctx);
+  ctx[0] && create_if_block_13(ctx);
   column = new column_default({
     props: {
       visibleHours: getVisibleHours(
         /*$settings*/
-        ctx[4]
+        ctx[17]
       ),
-      $$slots: { default: [create_default_slot_12] },
+      $$slots: { default: [create_default_slot_1] },
       $$scope: { ctx }
     }
   });
@@ -32083,7 +36794,7 @@ function create_default_slot19(ctx) {
         if_block.m(target, anchor);
       insert(target, t, anchor);
       mount_component(column, target, anchor);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       if (!/*hideControls*/
@@ -32095,7 +36806,7 @@ function create_default_slot19(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_22(ctx2);
+          if_block = create_if_block_13(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(t.parentNode, t);
@@ -32109,29 +36820,29 @@ function create_default_slot19(ctx) {
       }
       const column_changes = {};
       if (dirty[0] & /*$settings*/
-      16)
+      131072)
         column_changes.visibleHours = getVisibleHours(
           /*$settings*/
-          ctx2[4]
+          ctx2[17]
         );
-      if (dirty[0] & /*containerCursor, confirmEdit, $displayedTasks, $editStatus, $fileSyncInProgress, gripCursor, $settings, day*/
-      4478 | dirty[1] & /*$$scope, autoScrollBlocked*/
-      520) {
+      if (dirty[0] & /*pointerOffsetY, handleContainerMouseDown, confirmEdit, handleMouseEnter, $displayedTasks, handleTaskMouseUp, $editOperation, handleResizerMouseDown, gripCursor, handleGripMouseDown, autoScrollBlocked, actualDay*/
+      268537710 | dirty[1] & /*$$scope*/
+      8) {
         column_changes.$$scope = { dirty, ctx: ctx2 };
       }
       column.$set(column_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(if_block);
       transition_in(column.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(if_block);
       transition_out(column.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (if_block)
@@ -32142,24 +36853,24 @@ function create_default_slot19(ctx) {
     }
   };
 }
-function create_fragment34(ctx) {
+function create_fragment32(ctx) {
   let styledCursor_action;
   let t0;
   let t1;
   let t2;
   let scroller;
-  let current;
+  let current2;
   let mounted;
   let dispose;
   let if_block = !/*hideControls*/
-  ctx[0] && create_if_block_32(ctx);
+  ctx[0] && create_if_block_23(ctx);
   scroller = new scroller_default({
     props: {
       $$slots: {
         default: [
-          create_default_slot19,
-          ({ hovering: autoScrollBlocked }) => ({ 34: autoScrollBlocked }),
-          ({ hovering: autoScrollBlocked }) => [0, autoScrollBlocked ? 8 : 0]
+          create_default_slot16,
+          ({ hovering: autoScrollBlocked }) => ({ 28: autoScrollBlocked }),
+          ({ hovering: autoScrollBlocked }) => [autoScrollBlocked ? 268435456 : 0]
         ]
       },
       $$scope: { ctx }
@@ -32181,28 +36892,28 @@ function create_fragment34(ctx) {
         if_block.m(target, anchor);
       insert(target, t2, anchor);
       mount_component(scroller, target, anchor);
-      current = true;
+      current2 = true;
       if (!mounted) {
         dispose = [
-          listen(window_1, "blur", function() {
+          listen(window, "blur", function() {
             if (is_function(
               /*cancelEdit*/
-              ctx[10]
+              ctx[12]
             ))
-              ctx[10].apply(this, arguments);
+              ctx[12].apply(this, arguments);
           }),
           action_destroyer(styledCursor_action = styledCursor.call(
             null,
             document.body,
             /*bodyCursor*/
-            ctx[7]
+            ctx[4]
           )),
           listen(document, "mouseup", function() {
             if (is_function(
               /*cancelEdit*/
-              ctx[10]
+              ctx[12]
             ))
-              ctx[10].apply(this, arguments);
+              ctx[12].apply(this, arguments);
           })
         ];
         mounted = true;
@@ -32211,11 +36922,11 @@ function create_fragment34(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       if (styledCursor_action && is_function(styledCursor_action.update) && dirty[0] & /*bodyCursor*/
-      128)
+      16)
         styledCursor_action.update.call(
           null,
           /*bodyCursor*/
-          ctx[7]
+          ctx[4]
         );
       if (!/*hideControls*/
       ctx[0]) {
@@ -32226,7 +36937,7 @@ function create_fragment34(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_32(ctx);
+          if_block = create_if_block_23(ctx);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(t2.parentNode, t2);
@@ -32239,24 +36950,24 @@ function create_fragment34(ctx) {
         check_outros();
       }
       const scroller_changes = {};
-      if (dirty[0] & /*$settings, containerCursor, confirmEdit, $displayedTasks, $editStatus, $fileSyncInProgress, gripCursor, day, hideControls*/
-      4479 | dirty[1] & /*$$scope, autoScrollBlocked*/
-      520) {
+      if (dirty[0] & /*$settings, pointerOffsetY, handleContainerMouseDown, confirmEdit, handleMouseEnter, $displayedTasks, handleTaskMouseUp, $editOperation, handleResizerMouseDown, gripCursor, handleGripMouseDown, autoScrollBlocked, actualDay, hideControls*/
+      268668783 | dirty[1] & /*$$scope*/
+      8) {
         scroller_changes.$$scope = { dirty, ctx };
       }
       scroller.$set(scroller_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(if_block);
       transition_in(scroller.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(if_block);
       transition_out(scroller.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -32273,164 +36984,99 @@ function create_fragment34(ctx) {
     }
   };
 }
-function instance33($$self, $$props, $$invalidate) {
-  let cursorMinutes;
-  let tasks;
-  let startEdit;
+function instance32($$self, $$props, $$invalidate) {
+  let actualDay;
+  let confirmEdit;
+  let editOperation;
+  let getEditHandlers;
   let displayedTasks;
   let cancelEdit;
-  let editStatus;
-  let confirmEdit;
+  let handleContainerMouseDown;
+  let handleResizerMouseDown;
+  let handleTaskMouseUp;
+  let handleGripMouseDown;
+  let handleUnscheduledTaskGripMouseDown;
+  let handleMouseEnter;
+  let pointerOffsetY;
   let bodyCursor;
   let gripCursor;
-  let containerCursor;
-  let $editStatus, $$unsubscribe_editStatus = noop, $$subscribe_editStatus = () => ($$unsubscribe_editStatus(), $$unsubscribe_editStatus = subscribe(editStatus, ($$value) => $$invalidate(2, $editStatus = $$value)), editStatus);
-  let $fileSyncInProgress;
-  let $settings;
-  let $dataviewTasks;
-  let $pointerOffsetY;
+  let $editOperation, $$unsubscribe_editOperation = noop, $$subscribe_editOperation = () => ($$unsubscribe_editOperation(), $$unsubscribe_editOperation = subscribe(editOperation, ($$value) => $$invalidate(2, $editOperation = $$value)), editOperation);
+  let $editContext;
   let $visibleDayInTimeline;
-  let $displayedTasks, $$unsubscribe_displayedTasks = noop, $$subscribe_displayedTasks = () => ($$unsubscribe_displayedTasks(), $$unsubscribe_displayedTasks = subscribe(displayedTasks, ($$value) => $$invalidate(12, $displayedTasks = $$value)), displayedTasks);
-  component_subscribe($$self, settings, ($$value) => $$invalidate(4, $settings = $$value));
-  component_subscribe($$self, visibleDayInTimeline, ($$value) => $$invalidate(31, $visibleDayInTimeline = $$value));
-  $$self.$$.on_destroy.push(() => $$unsubscribe_editStatus());
+  let $displayedTasks, $$unsubscribe_displayedTasks = noop, $$subscribe_displayedTasks = () => ($$unsubscribe_displayedTasks(), $$unsubscribe_displayedTasks = subscribe(displayedTasks, ($$value) => $$invalidate(16, $displayedTasks = $$value)), displayedTasks);
+  let $settings;
+  component_subscribe($$self, visibleDayInTimeline, ($$value) => $$invalidate(22, $visibleDayInTimeline = $$value));
+  component_subscribe($$self, settings, ($$value) => $$invalidate(17, $settings = $$value));
+  $$self.$$.on_destroy.push(() => $$unsubscribe_editOperation());
   $$self.$$.on_destroy.push(() => $$unsubscribe_displayedTasks());
   let { hideControls = false } = $$props;
-  let { day = $visibleDayInTimeline } = $$props;
-  const { obsidianFacade, onUpdate, dataviewTasks, fileSyncInProgress } = getContext(obsidianContext);
-  component_subscribe($$self, dataviewTasks, (value) => $$invalidate(22, $dataviewTasks = value));
-  component_subscribe($$self, fileSyncInProgress, (value) => $$invalidate(3, $fileSyncInProgress = value));
-  const pointerOffsetY = writable(0);
-  component_subscribe($$self, pointerOffsetY, (value) => $$invalidate(23, $pointerOffsetY = value));
-  function handleMouseDown() {
-    return __awaiter(this, void 0, void 0, function* () {
-      const newTask = yield createTask2(day, cursorMinutes);
-      startEdit({
-        task: Object.assign(Object.assign({}, newTask), { isGhost: true }),
-        mode: "CREATE" /* CREATE */
-      });
-    });
-  }
-  function handleResizeStart(event, task) {
-    const mode = event.ctrlKey ? "RESIZE_AND_SHIFT_OTHERS" /* RESIZE_AND_SHIFT_OTHERS */ : "RESIZE" /* RESIZE */;
-    startEdit({ task, mode });
-  }
-  function handleTaskMouseUp(task) {
-    return __awaiter(this, void 0, void 0, function* () {
-      if ($editStatus) {
-        return;
-      }
-      const { path, line } = task.location;
-      yield obsidianFacade.revealLineInFile(path, line);
-    });
-  }
-  function handleGripMouseDown(event, task) {
-    if (event.ctrlKey) {
-      startEdit({
-        task,
-        mode: "DRAG_AND_SHIFT_OTHERS" /* DRAG_AND_SHIFT_OTHERS */
-      });
-    } else if (event.shiftKey) {
-      startEdit({ task: copy(task), mode: "CREATE" /* CREATE */ });
-    } else {
-      startEdit({ task, mode: "DRAG" /* DRAG */ });
-    }
-  }
-  function startScheduling(task) {
-    const withAddedTime = Object.assign(Object.assign({}, task), {
-      startMinutes: cursorMinutes,
-      // todo: remove this. It's added just for type compatibility
-      startTime: window.moment()
-    });
-    startEdit({
-      task: withAddedTime,
-      mode: "SCHEDULE" /* SCHEDULE */
-    });
-  }
-  const mousedown_handler2 = (task) => startScheduling(task);
+  let { day = void 0 } = $$props;
+  const { editContext } = getContext(obsidianContext);
+  component_subscribe($$self, editContext, (value) => $$invalidate(21, $editContext = value));
+  const mousedown_handler2 = (task) => handleUnscheduledTaskGripMouseDown(task);
   const mouseup_handler = (task) => handleTaskMouseUp(task);
   const mousedown_handler_1 = (task, event) => handleGripMouseDown(event, task);
-  const mousedown_handler_2 = (task, event) => handleResizeStart(event, task);
+  const mousedown_handler_2 = (task, event) => handleResizerMouseDown(event, task);
   const mouseup_handler_1 = (task) => handleTaskMouseUp(task);
   $$self.$$set = ($$props2) => {
     if ("hideControls" in $$props2)
       $$invalidate(0, hideControls = $$props2.hideControls);
     if ("day" in $$props2)
-      $$invalidate(1, day = $$props2.day);
+      $$invalidate(19, day = $$props2.day);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty[0] & /*$pointerOffsetY, $settings*/
-    8388624) {
+    if ($$self.$$.dirty[0] & /*day, $visibleDayInTimeline*/
+    4718592) {
       $:
-        cursorMinutes = offsetYToMinutes($pointerOffsetY, $settings.zoomLevel, $settings.startHour);
+        $$invalidate(1, actualDay = day || $visibleDayInTimeline);
     }
-    if ($$self.$$.dirty[0] & /*day, $dataviewTasks, $settings*/
-    4194322) {
-      $:
-        $$invalidate(21, tasks = useTasksForDay({
-          day,
-          dataviewTasks: $dataviewTasks,
-          settings: $settings
-        }));
-    }
-    if ($$self.$$.dirty[0] & /*tasks*/
+    if ($$self.$$.dirty[0] & /*$editContext*/
     2097152) {
       $:
-        $$subscribe_displayedTasks($$invalidate(
-          11,
-          { startEdit, displayedTasks, cancelEdit, editStatus, confirmEdit } = useEdit({
-            tasks,
-            settings,
-            pointerOffsetY,
-            fileSyncInProgress,
-            onUpdate
-          }),
-          displayedTasks,
-          ($$invalidate(10, cancelEdit), $$invalidate(21, tasks), $$invalidate(1, day), $$invalidate(22, $dataviewTasks), $$invalidate(4, $settings)),
-          $$subscribe_editStatus($$invalidate(9, editStatus)),
-          ($$invalidate(8, confirmEdit), $$invalidate(21, tasks), $$invalidate(1, day), $$invalidate(22, $dataviewTasks), $$invalidate(4, $settings))
-        ));
+        $$invalidate(15, { confirmEdit, editOperation, getEditHandlers } = $editContext, confirmEdit, $$subscribe_editOperation($$invalidate(14, editOperation)), ($$invalidate(20, getEditHandlers), $$invalidate(21, $editContext)));
     }
-    if ($$self.$$.dirty[0] & /*$fileSyncInProgress, $editStatus*/
-    12) {
+    if ($$self.$$.dirty[0] & /*getEditHandlers, actualDay*/
+    1048578) {
+      $:
+        $$subscribe_displayedTasks($$invalidate(13, { displayedTasks, cancelEdit, handleContainerMouseDown, handleResizerMouseDown, handleTaskMouseUp, handleGripMouseDown, handleUnscheduledTaskGripMouseDown, handleMouseEnter, pointerOffsetY } = getEditHandlers(actualDay), displayedTasks, ($$invalidate(12, cancelEdit), $$invalidate(20, getEditHandlers), $$invalidate(1, actualDay), $$invalidate(21, $editContext), $$invalidate(19, day), $$invalidate(22, $visibleDayInTimeline)), ($$invalidate(11, handleContainerMouseDown), $$invalidate(20, getEditHandlers), $$invalidate(1, actualDay), $$invalidate(21, $editContext), $$invalidate(19, day), $$invalidate(22, $visibleDayInTimeline)), ($$invalidate(10, handleResizerMouseDown), $$invalidate(20, getEditHandlers), $$invalidate(1, actualDay), $$invalidate(21, $editContext), $$invalidate(19, day), $$invalidate(22, $visibleDayInTimeline)), ($$invalidate(9, handleTaskMouseUp), $$invalidate(20, getEditHandlers), $$invalidate(1, actualDay), $$invalidate(21, $editContext), $$invalidate(19, day), $$invalidate(22, $visibleDayInTimeline)), ($$invalidate(8, handleGripMouseDown), $$invalidate(20, getEditHandlers), $$invalidate(1, actualDay), $$invalidate(21, $editContext), $$invalidate(19, day), $$invalidate(22, $visibleDayInTimeline)), ($$invalidate(7, handleUnscheduledTaskGripMouseDown), $$invalidate(20, getEditHandlers), $$invalidate(1, actualDay), $$invalidate(21, $editContext), $$invalidate(19, day), $$invalidate(22, $visibleDayInTimeline)), ($$invalidate(6, handleMouseEnter), $$invalidate(20, getEditHandlers), $$invalidate(1, actualDay), $$invalidate(21, $editContext), $$invalidate(19, day), $$invalidate(22, $visibleDayInTimeline)), ($$invalidate(5, pointerOffsetY), $$invalidate(20, getEditHandlers), $$invalidate(1, actualDay), $$invalidate(21, $editContext), $$invalidate(19, day), $$invalidate(22, $visibleDayInTimeline))));
+    }
+    if ($$self.$$.dirty[0] & /*$editOperation*/
+    4) {
       $:
         $$invalidate(
-          7,
-          { bodyCursor, gripCursor, containerCursor } = useCursor({
-            editBlocked: $fileSyncInProgress,
-            editMode: $editStatus
+          4,
+          { bodyCursor, gripCursor } = useCursor({
+            editMode: $editOperation === null || $editOperation === void 0 ? void 0 : $editOperation.mode
           }),
           bodyCursor,
-          ($$invalidate(6, gripCursor), $$invalidate(3, $fileSyncInProgress), $$invalidate(2, $editStatus)),
-          ($$invalidate(5, containerCursor), $$invalidate(3, $fileSyncInProgress), $$invalidate(2, $editStatus))
+          ($$invalidate(3, gripCursor), $$invalidate(2, $editOperation))
         );
     }
   };
   return [
     hideControls,
-    day,
-    $editStatus,
-    $fileSyncInProgress,
-    $settings,
-    containerCursor,
+    actualDay,
+    $editOperation,
     gripCursor,
     bodyCursor,
-    confirmEdit,
-    editStatus,
+    pointerOffsetY,
+    handleMouseEnter,
+    handleUnscheduledTaskGripMouseDown,
+    handleGripMouseDown,
+    handleTaskMouseUp,
+    handleResizerMouseDown,
+    handleContainerMouseDown,
     cancelEdit,
     displayedTasks,
+    editOperation,
+    confirmEdit,
     $displayedTasks,
-    dataviewTasks,
-    fileSyncInProgress,
-    pointerOffsetY,
-    handleMouseDown,
-    handleResizeStart,
-    handleTaskMouseUp,
-    handleGripMouseDown,
-    startScheduling,
-    tasks,
-    $dataviewTasks,
-    $pointerOffsetY,
+    $settings,
+    editContext,
+    day,
+    getEditHandlers,
+    $editContext,
+    $visibleDayInTimeline,
     mousedown_handler2,
     mouseup_handler,
     mousedown_handler_1,
@@ -32441,7 +37087,7 @@ function instance33($$self, $$props, $$invalidate) {
 var Task_container = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance33, create_fragment34, safe_not_equal, { hideControls: 0, day: 1 }, null, [-1, -1]);
+    init(this, options, instance32, create_fragment32, safe_not_equal, { hideControls: 0, day: 19 }, null, [-1, -1]);
   }
 };
 var task_container_default = Task_container;
@@ -32478,16 +37124,13 @@ var TimelineView = class extends import_obsidian4.ItemView {
 // src/ui/weekly-view.ts
 var import_obsidian5 = require("obsidian");
 
-// src/global-store/visible-date-range.ts
-var visibleDateRange = writable(getDaysOfCurrentWeek());
-
 // src/ui/components/week/header-actions.svelte
 function add_css15(target) {
   append_styles(target, "svelte-vfradk", ".range.svelte-vfradk{flex:1 0 0;margin-right:10px;white-space:nowrap}");
 }
 function create_default_slot_22(ctx) {
   let arrowlefttoline;
-  let current;
+  let current2;
   arrowlefttoline = new Arrow_left_to_line$1({ props: { class: "svg-icon" } });
   return {
     c() {
@@ -32495,27 +37138,27 @@ function create_default_slot_22(ctx) {
     },
     m(target, anchor) {
       mount_component(arrowlefttoline, target, anchor);
-      current = true;
+      current2 = true;
     },
     p: noop,
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(arrowlefttoline.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(arrowlefttoline.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(arrowlefttoline, detaching);
     }
   };
 }
-function create_default_slot_13(ctx) {
+function create_default_slot_12(ctx) {
   let circledoticon;
-  let current;
+  let current2;
   circledoticon = new Circle_dot$1({ props: { class: "svg-icon" } });
   return {
     c() {
@@ -32523,27 +37166,27 @@ function create_default_slot_13(ctx) {
     },
     m(target, anchor) {
       mount_component(circledoticon, target, anchor);
-      current = true;
+      current2 = true;
     },
     p: noop,
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(circledoticon.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(circledoticon.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(circledoticon, detaching);
     }
   };
 }
-function create_default_slot20(ctx) {
+function create_default_slot17(ctx) {
   let arrowrighttoline;
-  let current;
+  let current2;
   arrowrighttoline = new Arrow_right_to_line$1({ props: { class: "svg-icon" } });
   return {
     c() {
@@ -32551,25 +37194,25 @@ function create_default_slot20(ctx) {
     },
     m(target, anchor) {
       mount_component(arrowrighttoline, target, anchor);
-      current = true;
+      current2 = true;
     },
     p: noop,
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(arrowrighttoline.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(arrowrighttoline.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       destroy_component(arrowrighttoline, detaching);
     }
   };
 }
-function create_fragment35(ctx) {
+function create_fragment33(ctx) {
   let div1;
   let div0;
   let t0;
@@ -32581,7 +37224,7 @@ function create_fragment35(ctx) {
   let controlbutton1;
   let t5;
   let controlbutton2;
-  let current;
+  let current2;
   controlbutton0 = new control_button_default({
     props: {
       label: "Show previous week",
@@ -32597,7 +37240,7 @@ function create_fragment35(ctx) {
   controlbutton1 = new control_button_default({
     props: {
       label: "Show current week",
-      $$slots: { default: [create_default_slot_13] },
+      $$slots: { default: [create_default_slot_12] },
       $$scope: { ctx }
     }
   });
@@ -32609,7 +37252,7 @@ function create_fragment35(ctx) {
   controlbutton2 = new control_button_default({
     props: {
       label: "Show next week",
-      $$slots: { default: [create_default_slot20] },
+      $$slots: { default: [create_default_slot17] },
       $$scope: { ctx }
     }
   });
@@ -32652,17 +37295,17 @@ function create_fragment35(ctx) {
       mount_component(controlbutton1, div1, null);
       append(div1, t5);
       mount_component(controlbutton2, div1, null);
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
-      if (!current || dirty & /*startOfRange*/
+      if (!current2 || dirty & /*startOfRange*/
       2)
         set_data(
           t0,
           /*startOfRange*/
           ctx2[1]
         );
-      if (!current || dirty & /*endOfRange*/
+      if (!current2 || dirty & /*endOfRange*/
       1)
         set_data(
           t2,
@@ -32689,18 +37332,18 @@ function create_fragment35(ctx) {
       controlbutton2.$set(controlbutton2_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(controlbutton0.$$.fragment, local);
       transition_in(controlbutton1.$$.fragment, local);
       transition_in(controlbutton2.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(controlbutton0.$$.fragment, local);
       transition_out(controlbutton1.$$.fragment, local);
       transition_out(controlbutton2.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -32711,7 +37354,7 @@ function create_fragment35(ctx) {
     }
   };
 }
-function instance34($$self, $$props, $$invalidate) {
+function instance33($$self, $$props, $$invalidate) {
   let firstDayOfShownWeek;
   let startOfRange;
   let endOfRange;
@@ -32760,7 +37403,7 @@ function instance34($$self, $$props, $$invalidate) {
 var Header_actions = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance34, create_fragment35, safe_not_equal, {}, add_css15);
+    init(this, options, instance33, create_fragment33, safe_not_equal, {}, add_css15);
   }
 };
 var header_actions_default = Header_actions;
@@ -32779,7 +37422,7 @@ function get_each_context_12(ctx, list, i) {
   child_ctx[4] = list[i];
   return child_ctx;
 }
-function create_default_slot21(ctx) {
+function create_default_slot18(ctx) {
   let t_value = (
     /*day*/
     ctx[4].format(
@@ -32816,7 +37459,7 @@ function create_each_block_12(ctx) {
   let div_1;
   let __color_last;
   let t;
-  let current;
+  let current2;
   function click_handler() {
     return (
       /*click_handler*/
@@ -32829,7 +37472,7 @@ function create_each_block_12(ctx) {
   controlbutton = new control_button_default({
     props: {
       label: "Open note for day",
-      $$slots: { default: [create_default_slot21] },
+      $$slots: { default: [create_default_slot18] },
       $$scope: { ctx }
     }
   });
@@ -32856,7 +37499,7 @@ function create_each_block_12(ctx) {
       append(div, div_1);
       mount_component(controlbutton, div_1, null);
       append(div, t);
-      current = true;
+      current2 = true;
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
@@ -32873,7 +37516,7 @@ function create_each_block_12(ctx) {
         controlbutton_changes.$$scope = { dirty, ctx };
       }
       controlbutton.$set(controlbutton_changes);
-      if (!current || dirty & /*isToday, $visibleDateRange*/
+      if (!current2 || dirty & /*isToday, $visibleDateRange*/
       1) {
         toggle_class(div, "today", isToday(
           /*day*/
@@ -32882,14 +37525,14 @@ function create_each_block_12(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(controlbutton.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(controlbutton.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -32903,7 +37546,7 @@ function create_each_block6(ctx) {
   let div0;
   let taskcontainer;
   let t;
-  let current;
+  let current2;
   taskcontainer = new task_container_default({
     props: { day: (
       /*day*/
@@ -32924,7 +37567,7 @@ function create_each_block6(ctx) {
       append(div1, div0);
       mount_component(taskcontainer, div0, null);
       append(div1, t);
-      current = true;
+      current2 = true;
     },
     p(ctx2, dirty) {
       const taskcontainer_changes = {};
@@ -32935,14 +37578,14 @@ function create_each_block6(ctx) {
       taskcontainer.$set(taskcontainer_changes);
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       transition_in(taskcontainer.$$.fragment, local);
-      current = true;
+      current2 = true;
     },
     o(local) {
       transition_out(taskcontainer.$$.fragment, local);
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -32951,7 +37594,7 @@ function create_each_block6(ctx) {
     }
   };
 }
-function create_fragment36(ctx) {
+function create_fragment34(ctx) {
   let div1;
   let div0;
   let t0;
@@ -32959,7 +37602,7 @@ function create_fragment36(ctx) {
   let div2;
   let ruler;
   let t2;
-  let current;
+  let current2;
   let each_value_1 = (
     /*$visibleDateRange*/
     ctx[0]
@@ -33027,7 +37670,7 @@ function create_fragment36(ctx) {
           each_blocks[i].m(div2, null);
         }
       }
-      current = true;
+      current2 = true;
     },
     p(ctx2, [dirty]) {
       if (dirty & /*isToday, $visibleDateRange, obsidianFacade, $settings*/
@@ -33086,7 +37729,7 @@ function create_fragment36(ctx) {
       }
     },
     i(local) {
-      if (current)
+      if (current2)
         return;
       for (let i = 0; i < each_value_1.length; i += 1) {
         transition_in(each_blocks_1[i]);
@@ -33095,7 +37738,7 @@ function create_fragment36(ctx) {
       for (let i = 0; i < each_value.length; i += 1) {
         transition_in(each_blocks[i]);
       }
-      current = true;
+      current2 = true;
     },
     o(local) {
       each_blocks_1 = each_blocks_1.filter(Boolean);
@@ -33107,7 +37750,7 @@ function create_fragment36(ctx) {
       for (let i = 0; i < each_blocks.length; i += 1) {
         transition_out(each_blocks[i]);
       }
-      current = false;
+      current2 = false;
     },
     d(detaching) {
       if (detaching)
@@ -33122,7 +37765,7 @@ function create_fragment36(ctx) {
     }
   };
 }
-function instance35($$self, $$props, $$invalidate) {
+function instance34($$self, $$props, $$invalidate) {
   let $visibleDateRange;
   let $settings;
   component_subscribe($$self, visibleDateRange, ($$value) => $$invalidate(0, $visibleDateRange = $$value));
@@ -33134,7 +37777,7 @@ function instance35($$self, $$props, $$invalidate) {
 var Week = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance35, create_fragment36, safe_not_equal, {}, add_css16);
+    init(this, options, instance34, create_fragment34, safe_not_equal, {}, add_css16);
   }
 };
 var week_default = Week;
@@ -33176,37 +37819,37 @@ var WeeklyView = class extends import_obsidian5.ItemView {
   }
 };
 
-// src/util/debounce-with-delay.ts
-function debounceWithDelay(cb, timeout) {
-  let lastTimeout;
-  let lastArgs;
-  function set() {
-    lastTimeout = window.setTimeout(() => {
-      cb(...lastArgs);
-      lastTimeout = null;
-    }, timeout);
-  }
-  function debouncedFn(...args) {
-    lastArgs = args;
-    if (!lastTimeout) {
-      set();
-    }
-  }
-  function delay() {
-    if (lastTimeout) {
-      clearTimeout(lastTimeout);
-      set();
-    }
-  }
-  return [debouncedFn, delay];
-}
-
 // src/main.ts
 var DayPlanner = class extends import_obsidian6.Plugin {
   constructor() {
     super(...arguments);
     this.dataviewLoaded = writable(false);
-    this.fileSyncInProgress = writable(false);
+    this.initWeeklyLeaf = async () => {
+      await this.detachLeavesOfType(viewTypeWeekly);
+      await this.app.workspace.getLeaf(false).setViewState({
+        type: viewTypeWeekly,
+        active: true
+      });
+    };
+    this.initTimelineLeaf = async () => {
+      await this.detachLeavesOfType(viewTypeTimeline);
+      await this.app.workspace.getRightLeaf(false).setViewState({
+        type: viewTypeTimeline,
+        active: true
+      });
+      this.app.workspace.rightSplit.expand();
+    };
+    this.renderMarkdown = (el, text2) => {
+      const loader = new import_obsidian6.Component();
+      el.empty();
+      import_obsidian6.MarkdownRenderer.render(this.app, text2, el, "", loader);
+      loader.load();
+      return () => loader.unload();
+    };
+    this.getAllTasks = () => {
+      const source = this.settings().dataviewSource;
+      return this.refreshTasks(source);
+    };
     this.refreshTasks = (source) => {
       const dataview = (0, import_obsidian_dataview.getAPI)(this.app);
       if (!dataview) {
@@ -33232,7 +37875,7 @@ var DayPlanner = class extends import_obsidian6.Plugin {
       if (!(view instanceof import_obsidian6.FileView) || !view.file) {
         return;
       }
-      const dayUserSwitchedTo = (0, import_obsidian_daily_notes_interface5.getDateFromFile)(view.file, "day");
+      const dayUserSwitchedTo = (0, import_obsidian_daily_notes_interface7.getDateFromFile)(view.file, "day");
       if (dayUserSwitchedTo == null ? void 0 : dayUserSwitchedTo.isSame(get_store_value(visibleDayInTimeline), "day")) {
         return;
       }
@@ -33244,83 +37887,20 @@ var DayPlanner = class extends import_obsidian6.Plugin {
       }
       visibleDayInTimeline.set(dayUserSwitchedTo);
     };
-    this.updateStatusBar = async (dataviewTasks) => {
-    };
-    this.initWeeklyLeaf = async () => {
-      await this.detachLeavesOfType(viewTypeWeekly);
-      await this.app.workspace.getLeaf(false).setViewState({
-        type: viewTypeWeekly,
-        active: true
-      });
-    };
-    this.initTimelineLeaf = async () => {
-      await this.detachLeavesOfType(viewTypeTimeline);
-      await this.app.workspace.getRightLeaf(false).setViewState({
-        type: viewTypeTimeline,
-        active: true
-      });
-      this.app.workspace.rightSplit.expand();
-    };
-    this.syncTasksWithFile = async (dirty) => {
-      this.fileSyncInProgress.set(true);
-      await this.planEditor.syncTasksWithFile(dirty);
-    };
-    this.renderMarkdown = (el, text2) => {
-      const loader = new import_obsidian6.Component();
-      el.empty();
-      import_obsidian6.MarkdownRenderer.render(this.app, text2, el, "", loader);
-      loader.load();
-      return () => loader.unload();
-    };
   }
   async onload() {
     await this.initSettingsStore();
-    this.initDataviewTasks();
     this.obsidianFacade = new ObsidianFacade(this.app);
     this.planEditor = new PlanEditor(this.settings, this.obsidianFacade);
     this.registerCommands();
-    this.registerViews();
     this.addRibbonIcon("calendar-range", "Timeline", this.initTimelineLeaf);
     this.addSettingTab(new DayPlannerSettingsTab(this, this.settingsStore));
-    this.statusBar = new StatusBar(
-      this.settings,
-      this.addStatusBarItem(),
-      this.initTimelineLeaf
-    );
-    this.register(this.dataviewTasks.subscribe(this.updateStatusBar));
+    this.registerViews();
     this.app.workspace.on("active-leaf-change", this.handleActiveLeafChanged);
   }
-  getAllTasks() {
-    const source = this.settings().dataviewSource;
-    return this.refreshTasks(source);
-  }
-  initDataviewTasks() {
-    this.dataviewTasks = readable(this.getAllTasks(), (set) => {
-      const [updateTasks, delayUpdateTasks] = debounceWithDelay(() => {
-        try {
-          set(this.getAllTasks());
-        } finally {
-          this.fileSyncInProgress.set(false);
-        }
-      }, 1e3);
-      this.app.metadataCache.on(
-        // @ts-expect-error
-        "dataview:metadata-change",
-        updateTasks
-      );
-      document.addEventListener("keydown", delayUpdateTasks);
-      const source = derived(this.settingsStore, ($settings) => {
-        return $settings.dataviewSource;
-      });
-      const unsubscribeFromSettings = source.subscribe(() => {
-        updateTasks();
-      });
-      return () => {
-        this.app.metadataCache.off("dataview:metadata-change", updateTasks);
-        document.removeEventListener("keydown", delayUpdateTasks);
-        unsubscribeFromSettings();
-      };
-    });
+  async onunload() {
+    await this.detachLeavesOfType(viewTypeTimeline);
+    await this.detachLeavesOfType(viewTypeWeekly);
   }
   registerCommands() {
     this.addCommand({
@@ -33354,29 +37934,50 @@ var DayPlanner = class extends import_obsidian6.Plugin {
     this.settingsStore = settings;
     this.settings = () => get_store_value(settings);
   }
-  async onunload() {
-    await this.detachLeavesOfType(viewTypeTimeline);
-    await this.detachLeavesOfType(viewTypeWeekly);
-  }
   async detachLeavesOfType(type) {
-    return Promise.all(
-      this.app.workspace.getLeavesOfType(type).map((leaf) => leaf.detach())
-    );
+    await this.app.workspace.detachLeavesOfType(type);
   }
   registerViews() {
+    const dataviewTasks = useDebouncedDataviewTasks({
+      metadataCache: this.app.metadataCache,
+      getAllTasks: this.getAllTasks
+    });
+    const visibleTasks = useVisibleTasks({ dataviewTasks });
+    const tasksForToday = derived(
+      [visibleTasks, currentTime],
+      ([$visibleTasks, $currentTime]) => {
+        return $visibleTasks[getDayKey($currentTime)];
+      }
+    );
+    const editContext = derived(
+      [this.settingsStore, visibleTasks],
+      ([$settings, $visibleTasks]) => {
+        return useEditContext({
+          obsidianFacade: this.obsidianFacade,
+          onUpdate: this.planEditor.syncTasksWithFile,
+          settings: $settings,
+          visibleTasks: $visibleTasks
+        });
+      }
+    );
+    new status_bar_widget_default({
+      target: this.addStatusBarItem(),
+      props: {
+        onClick: this.initTimelineLeaf,
+        tasksForToday
+      }
+    });
     const componentContext = /* @__PURE__ */ new Map([
       [
         obsidianContext,
         {
           obsidianFacade: this.obsidianFacade,
-          metadataCache: this.app.metadataCache,
-          onUpdate: this.syncTasksWithFile,
           initWeeklyView: this.initWeeklyLeaf,
-          dataviewTasks: this.dataviewTasks,
           refreshTasks: this.refreshTasks,
           dataviewLoaded: this.dataviewLoaded,
-          fileSyncInProgress: this.fileSyncInProgress,
-          renderMarkdown: this.renderMarkdown
+          renderMarkdown: this.renderMarkdown,
+          editContext,
+          visibleTasks
         }
       ]
     ]);
@@ -33420,6 +38021,13 @@ fraction.js/fraction.js:
    * Copyright (c) 2021, Robert Eisele (robert@xarg.org)
    * Dual licensed under the MIT or GPL Version 2 licenses.
    **)
+
+moment/moment.js:
+  (*! moment.js *)
+  (*! version : 2.29.4 *)
+  (*! authors : Tim Wood, Iskren Chernev, Moment.js contributors *)
+  (*! license : MIT *)
+  (*! momentjs.com *)
 
 chroma-js/chroma.js:
   (**

@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "33c4569c0ef71611",
+        "id": "f38e670d0610e9fb",
         "type": "tabs",
         "children": [
           {
-            "id": "da5ae1661a17fae4",
+            "id": "b011763c3def56d1",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-12-01.md",
+                "file": "posts/2023-12-04.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -23,51 +23,12 @@
             }
           },
           {
-            "id": "1624dfdf9f6e93b6",
+            "id": "fd62fa932c27101e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "posts/english-speaking-pattern-11-30.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6ab8856ac3c2c070",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/java-algorithm-tips.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6bb311578ed667f5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/topological-sorting.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e56ce012d53dfc09",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/inmemory-cache-develop.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -219,15 +180,7 @@
             }
           },
           {
-            "id": "4c3b927f9c0fc305",
-            "type": "leaf",
-            "state": {
-              "type": "timeline",
-              "state": {}
-            }
-          },
-          {
-            "id": "bff6146316eec6f9",
+            "id": "25069e29f14c1392",
             "type": "leaf",
             "state": {
               "type": "tasks_timeline_view",
@@ -235,7 +188,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
@@ -254,18 +207,20 @@
       "random-note:랜덤 노트 열기": false,
       "markdown-importer:마크다운 형식 가져오기 열기": false,
       "smart-random-note:Open Random Note from Search": false,
-      "omnisearch:Omnisearch": false,
-      "templater-obsidian:Templater": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "homepage:Open homepage": false,
+      "obsidian-day-planner:Timeline": false,
+      "templater-obsidian:Templater": false,
       "meld-encrypt:New encrypted note": false,
       "meld-encrypt:Convert to or from an Encrypted note": false,
-      "obsidian-day-planner:Timeline": false,
-      "homepage:Open homepage": false,
+      "omnisearch:Omnisearch": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "1624dfdf9f6e93b6",
+  "active": "fd62fa932c27101e",
   "lastOpenFiles": [
+    "posts/2023-12-04.md",
+    "posts/2023-12-01.md",
     "posts/topological-sorting.md",
     "posts/inmemory-cache-develop.md",
     "posts/english-speaking-pattern-11-30.md",
@@ -273,7 +228,6 @@
     "posts/english-speaking-pattern-11-28.md",
     "posts/java-algorithm-tips.md",
     "posts/sort-algorithm.md",
-    "posts/2023-12-01.md",
     "posts/trie.md",
     "posts/dynamic-programming.md",
     "posts/2023-11-30.md",
@@ -291,7 +245,6 @@
     "posts/2023-11-29.md",
     "posts/2023-11-26.md",
     "posts/2023-11.md",
-    "posts/2023-10-23.md",
     "posts/attachments/inmemory-concurrency.png",
     "posts/attachments/jenkins-ssh-transfers.png",
     "posts/attachments/jenkins-ssh-server.png",

@@ -5,6 +5,14 @@
       "path": "posts/english-speaking-pattern-11-30.md"
     },
     {
+      "basename": "2023-12-04",
+      "path": "posts/2023-12-04.md"
+    },
+    {
+      "basename": "2023-12-01",
+      "path": "posts/2023-12-01.md"
+    },
+    {
       "basename": "topological-sorting",
       "path": "posts/topological-sorting.md"
     },
@@ -27,10 +35,6 @@
     {
       "basename": "sort-algorithm",
       "path": "posts/sort-algorithm.md"
-    },
-    {
-      "basename": "2023-12-01",
-      "path": "posts/2023-12-01.md"
     },
     {
       "basename": "trie",
@@ -195,10 +199,6 @@
     {
       "basename": "level4-writing",
       "path": "posts/level4-writing.md"
-    },
-    {
-      "basename": "level2-writing",
-      "path": "posts/level2-writing.md"
     }
   ],
   "omittedPaths": [
