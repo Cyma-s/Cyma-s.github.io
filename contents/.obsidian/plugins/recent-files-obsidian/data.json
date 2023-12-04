@@ -1,40 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "english-speaking-pattern-11-30",
+      "path": "posts/english-speaking-pattern-11-30.md"
+    },
+    {
       "basename": "topological-sorting",
       "path": "posts/topological-sorting.md"
     },
     {
-      "basename": "trie",
-      "path": "posts/trie.md"
+      "basename": "inmemory-cache-develop",
+      "path": "posts/inmemory-cache-develop.md"
     },
     {
-      "basename": "2023-12-01",
-      "path": "posts/2023-12-01.md"
-    },
-    {
-      "basename": "2023-11-30",
-      "path": "posts/2023-11-30.md"
-    },
-    {
-      "basename": "english-speaking-pattern-11-30",
-      "path": "posts/english-speaking-pattern-11-30.md"
+      "basename": "local-cache-concurrency-problem",
+      "path": "posts/local-cache-concurrency-problem.md"
     },
     {
       "basename": "english-speaking-pattern-11-28",
       "path": "posts/english-speaking-pattern-11-28.md"
     },
     {
+      "basename": "java-algorithm-tips",
+      "path": "posts/java-algorithm-tips.md"
+    },
+    {
       "basename": "sort-algorithm",
       "path": "posts/sort-algorithm.md"
     },
     {
-      "basename": "mit-ocw-sets-and-sorting",
-      "path": "posts/mit-ocw-sets-and-sorting.md"
+      "basename": "2023-12-01",
+      "path": "posts/2023-12-01.md"
     },
     {
-      "basename": "java-algorithm-tips",
-      "path": "posts/java-algorithm-tips.md"
+      "basename": "trie",
+      "path": "posts/trie.md"
+    },
+    {
+      "basename": "2023-11-30",
+      "path": "posts/2023-11-30.md"
+    },
+    {
+      "basename": "mit-ocw-sets-and-sorting",
+      "path": "posts/mit-ocw-sets-and-sorting.md"
     },
     {
       "basename": "algorithm-tips",
@@ -67,10 +75,6 @@
     {
       "basename": "kmp-algorithm",
       "path": "posts/kmp-algorithm.md"
-    },
-    {
-      "basename": "local-cache-concurrency-problem",
-      "path": "posts/local-cache-concurrency-problem.md"
     },
     {
       "basename": "top-down-approach-ch2",
@@ -195,10 +199,6 @@
     {
       "basename": "level2-writing",
       "path": "posts/level2-writing.md"
-    },
-    {
-      "basename": "dh-interview-answer",
-      "path": "posts/dh-interview-answer.md"
     }
   ],
   "omittedPaths": [
