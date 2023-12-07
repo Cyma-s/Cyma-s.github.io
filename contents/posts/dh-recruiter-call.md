@@ -1,7 +1,7 @@
 ---
 title: DH 리크루터 콜
 date: 2023-11-27 18:28:57 +0900
-updated: 2023-11-27 19:12:08 +0900
+updated: 2023-12-05 00:07:24 +0900
 tags: 
 ---
 
@@ -20,7 +20,7 @@ tags:
 	- coding + hiring manager 모두 진행할 예정이지만 아마 별로면 취소할 거다. 
 - 그렇다면 제가 1차 면접 합격 여부는 언제 알 수 있을까요?
 	- So when will I know if I made it to the first round of interviews?
-	- 바로 뒤에 받을 것이다. 속도를 높이려고 노력 중. 12/15~18 가능하다면.
+	- 바로 뒤에 받을 것이다. 속도를 높이려고 노력 중. 2차 면접 결과는 12/15~18 가능하다면.
 - 저의 1차 코딩 인터뷰 날짜는 언제로 정해졌을까요?
 	- When is my first coding interview date set?
 - 1차 인터뷰는 어떻게 진행될까요?

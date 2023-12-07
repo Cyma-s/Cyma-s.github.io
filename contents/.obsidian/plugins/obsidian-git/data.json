@@ -1,7 +1,7 @@
 {
-  "commitMessage": "글 자동 업로드: {{date}}",
-  "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
-  "autoSaveInterval": 180,
+  "commitMessage": "{{date}} : {{numFiles}} 개의 글 업로드\n{{files}}",
+  "commitDateFormat": "YYYY-MM-DD",
+  "autoSaveInterval": 1440,
   "autoPushInterval": 0,
   "autoPullInterval": 0,
   "autoPullOnBoot": false,
@@ -51,5 +51,5 @@
     "lastShownAuthorDisplay": "initials",
     "lastShownDateTimeFormatOptions": "date"
   },
-  "autoCommitMessage": "글 자동 업로드: {{date}}"
+  "autoCommitMessage": "{{date}} : {{numFiles}} 개의 글 업로드\n{{files}}"
 }

@@ -1,7 +1,7 @@
 ---
 title: 로컬 캐싱 동시성 문제 해결기
 date: 2023-11-20 18:16:11 +0900
-updated: 2023-11-30 17:02:01 +0900
+updated: 2023-12-07 21:38:42 +0900
 tags:
   - shook
   - trouble-shooting
@@ -161,18 +161,55 @@ public class InMemorySongs {
 
 지금까지 애널리틱스로 분석한 결과 노래 조회 요청은 약 2800회 요청되었고, 좋아요 요청은 90회 요청되었다.   
 
-이는 약 30:1의 비율이므로, locust 의 task 가중치를 30과 1로 설정하였다. 
+이는 약 30:1의 비율이므로, 읽기 요청의 가중치를 30으로, 업데이트 요청의 가중치를 1로 설정하였다. 노래 데이터를 가져오는 API 는 좋아요를 누르는 API 보다 약 30배 가량 자주 실행될 것이다.  
 
+스크립트는 다음과 같다.
 
-## 해결 방법
+```python
+import random  
+  
+import json  
+from locust import HttpUser, task, between  
+import random  
+  
+  
+class Sample(HttpUser):  
+    wait_time = between(1, 1)  
+  
+    def on_start(self):  
+        print("start")  
+  
+    def on_stop(self):  
+        print("stop")  
+  
+    @task(30)  
+    def get_likes(self):  
+        headers = {  
+            'Content-Type': 'application/json;charset=UTF-8',  
+            'Authorization': '1'  
+        }  
+        self.client.get("/songs/high-liked", headers=headers)  
+  
+    @task  
+    def get_song1(self):  
+        headers = {  
+            'Content-Type': 'application/json;charset=UTF-8',  
+            'Authorization': '1'  
+        }    
+        self.send(headers)  
+  
+    def send(self, headers):  
+        rand_value = random.randint(1, 2)  
+        value = True if rand_value == 1 else False  
+        body = {  
+            'likeStatus': value  
+        }  
+        self.client.put("/songs/167/parts/500/likes", json=body, headers=headers)
+```
 
-이를 해결하기 위해서는 동시성을 보장하기 위한 락을 사용해야 한다.  
+## synchronized 사용하기
 
-어떤 락이 우리의 상황에 가장 적합할 지 알아보도록 하자.
-
-### synchronized
-
-로직은 정말 간단하게 변경될 수 있다.
+간단하게 노래를 재정렬하는 API 에 `synchronized` 키워드만 추가하면 된다. 
 
 ```java
 private void reorder(final Song updatedSong) {  
@@ -191,8 +228,58 @@ private void reorder(final Song updatedSong) {
 
 #### 장점
 
-synchronized 의 장점은 무엇보다 간단하다는 것이다. 또한 lock 관리를 Java 가 해주기 때문에 복잡성이 줄어든다. 
+synchronized 의 장점은 무엇보다 간단하다는 것이다.  
+또한 lock 관리를 Java 가 해주기 때문에 복잡성이 줄어든다. 
 
 #### 단점
 
-그러나 `sortedSongIds` 라는 데이터에 단 하나의 스레드만 접근할 수 있기 때문에, 읽기 요청이 많은 우리 서비스에서 성능 저하가 일어날 가능성이 매우 높다. 
+그러나 `sortedSongIds` 라는 데이터에 단 하나의 스레드만 접근할 수 있기 때문에, 읽기 요청이 많은 우리 서비스에서 성능 저하가 일어날 가능성이 높다.  
+
+### 테스트 결과
+
+![[synchronized-request-time.png]]
+
+![[concurrency-synchronized-test.png]]
+
+전체 RPS 는 98.8 이다.  
+좋아요 요청의 평균 응답 시간은 31ms, 노래 데이터를 조회하는 요청은 23ms 가 소요된 것을 볼 수 있다.  
+
+## ReadWriteLock
+
+`ReadWriteLock` 이란 읽기 작업과 쓰기 작업에 대해 다른 수준의 잠금을 제공하는 동기화 메커니즘이다.  
+읽기 및 쓰기 작업이 동시에 수행될 때 발생할 수 있는 데이터 일관성 문제를 해결하는 데 도움이 된다.  
+
+읽기 락은 여러 스레드가 가져갈 수 있지만, 쓰기 락은 단 하나의 스레드만 가져가서 사용할 수 있다. 쓰기 락이 걸린 상태에서는 다른 스레드에서 읽기, 쓰기 모두 불가능하다. 
+
+finally 키워드를 사용하여 예외가 발생하거나 메서드에서 조기 반환되는 경우에도 `writeLock` 이 반드시 해제되도록 보장한다.  
+
+```java
+public List<Song> getSongs() {  
+    readWriteLock.readLock().unlock();  
+    try {  
+        return sortedSongIds.stream()  
+            .map(songs::get)  
+            .toList();  
+    } finally {  
+        readWriteLock.readLock().unlock();  
+    }  
+}
+
+private void reorder(final Song updatedSong) {  
+    readWriteLock.writeLock().lock();  
+    try {  
+        int currentSongIndex = sortedSongIds.indexOf(updatedSong.getId());  
+  
+        if (currentSongIndex == -1) {  
+            return;  
+        }  
+  
+        moveForward(updatedSong, currentSongIndex);  
+        moveBackward(updatedSong, currentSongIndex);  
+    } finally {  
+        readWriteLock.writeLock().unlock();  
+    }  
+}
+```
+
+### 테스트 결과
