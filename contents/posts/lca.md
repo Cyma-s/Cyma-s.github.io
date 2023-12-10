@@ -1,7 +1,7 @@
 ---
 title: 최소 공통 조상 (Lowest Common Ancestor)
 date: 2023-12-06 20:44:30 +0900
-updated: 2023-12-07 14:48:05 +0900
+updated: 2023-12-10 17:01:44 +0900
 tags:
   - algorithms
 ---
@@ -153,5 +153,46 @@ class LCAFinder:
 `find_lca` 에서 첫 번째 for 문을 지나고 나면, 반드시 u와 v의 깊이는 같아진다.  
 `depth[u]` 에서 `1 << i` 값을 뺀 값이 여전히 `depth[v]` 보다 깊다면 조상 노드로 거슬러 올라가는 과정을 계속해서 진행하는데, 이때 모든 정수는 2의 거듭제곱으로 표현 가능하기 때문에 해당 반복문을 지나고 나면 반드시 u, v는 같아지게 된다. u의 깊이가 v보다 깊은 경우에는 이미 조상 노드로 거슬러 올라가기 때문이다.  
 
-### 시간 복잡도
+## K 번째 조상으로 거슬러 올라가기
 
+```python
+for j in range(max_depth):  
+    if k & (1 << j):  
+        u = parent[u][j]
+```
+
+## 중요한 것
+
+i 번째 노드의 j 번째 조상이 갖는 값을 어떻게 추상화할 지 고민해야 한다.  
+
+### K 번째 조상까지 가는 길의 cost 계산하기
+
+먼저 sparse table 을 초기화해야 한다. 
+
+```python
+for j in range(1, max_depth):  
+    for i in range(1, n + 1):  
+        j_1th_parent = parent[i][j - 1]  
+        way_costs[i][j] = way_costs[i][j - 1] + way_costs[j_1th_parent][j - 1]  
+```
+
+`way_costs[i][j]` 란 i 번째 노드의 $2^j$ 번째 조상이 가지고 있는 cost 를 의미한다.  
+해당 값은 i 번째 노드의 $2^{j-1}$ 번째 조상이 가지고 있는 cost + i 번째 노드의 $2^{j-1}$ 조상 노드에서 $2^{j-1}$ 조상까지의 cost 로 표현할 수 있다.  
+이렇게 값을 계산할 때도 $log(N)$ 으로 효율적으로 계산하기 위해서는 계산할 값의 sparse table 도 필요하다. 
+
+```python
+def print_cost(u, v):  
+    lca = find_lca(u, v)  
+    u_diff, v_diff = depth[u] - depth[lca], depth[v] - depth[lca]  
+    total = 0  
+    for j in range(max_depth):  
+        if u_diff & (1 << j):  
+            total += way_costs[u][j]  
+            u = parent[u][j]  
+        if v_diff & (1 << j):  
+            total += way_costs[v][j]  
+            v = parent[v][j]  
+    print(total)
+```
+
+올라갈 때는 k 에 해당하는 cost 를 계산하며 올라가준다.  

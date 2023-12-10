@@ -1,7 +1,7 @@
 ---
 title: 영어 문장 패턴
 date: 2023-11-14 15:48:51 +0900
-updated: 2023-11-30 22:49:03 +0900
+updated: 2023-12-10 17:48:25 +0900
 tags:
   - english
 ---
@@ -52,7 +52,6 @@ tags:
 
 - I'm having a hard time answering that question, can I give it a little more thought?
 - The part is a little different than I thought.
-- 
 
 ## 참고
 

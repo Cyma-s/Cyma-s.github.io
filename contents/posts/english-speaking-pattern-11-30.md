@@ -1,7 +1,7 @@
 ---
 title: 11/30 영어 문장 구조 연습
 date: 2023-11-30 18:31:18 +0900
-updated: 2023-12-04 19:53:14 +0900
+updated: 2023-12-10 17:49:51 +0900
 tags:
   - english
 ---
@@ -62,10 +62,10 @@ tags:
 	- I have developed a service that allows people to share the best parts of songs and quickly find the good song in the process.
 - 서비스의 구조를 설명해보세요.
 	- 먼저 서비스는 2개의 인스턴스로 구성되어 있습니다. 2개는  production 서버 하나와 데이터베이스 서버 하나입니다. production 서버는 nginx 와 스프링 서버, self hosted runner 로 구성되어 있습니다. 데이터베이스는 MySQL 을 사용했습니다.
-	- First, our service consists of two instances. First is the production server, second is a database server. The production server consists of nginx, spring application, github self hosted runner. And we used MySQL as DBMS.
+	- First, our service consists of two EC2 instances. First is the production server, second is a database server. The production server consists of nginx, spring application, github self hosted runner. And we used MySQL as DBMS.
 - 서비스에서 발생한 문제는 무엇이었고, 어떻게 해결했나요?
 	- 데이터베이스에서 정렬이 필요한 쿼리가 있었는데, 이 쿼리의 실행 시간이 너무 오래걸리는 문제가 있었다. 해당 쿼리에서 자주 사용하는 데이터를 로컬에 캐싱하여 실행 시간을 줄일 수 있었다.
-	- There was a query that required sorting whole datas in database. In that case, the problem was that the query took too long to execute. We were able to. reduce the execution time by caching the frequently used data from that query locally. 
+	- There was a query that required sorting whole datas in database. In that case, the problem was that the query took too long to execute. We were able to reduce the execution time by caching the frequently used data from that query locally. 
 - 그 쿼리의 속도는 얼마 정도였나요?
 	- 1만 개의 항목 중 21개 항목을 가져오려고 시도하는 데 약 310밀리초가 걸렸습니다. 캐싱을 적용하고 나서 31ms 로 개선되었습니다. / 캐싱을 적용하고 나서 10배의 성능 개선을 할 수 있었습니다.
 	- When attempting to retrieve twenty-one items out of ten thousand, it took approximately three-hundred ten milliseconds. After applying the caching, it improved to thirty-one milliseconds. / After applying the caching, we can achieve  a tenfold improvement in performance.
