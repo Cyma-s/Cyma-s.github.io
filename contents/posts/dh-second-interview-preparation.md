@@ -1,7 +1,7 @@
 ---
 title: DH 인터뷰 준비
 date: 2023-12-09 21:30:43 +0900
-updated: 2023-12-10 18:03:06 +0900
+updated: 2023-12-10 21:57:02 +0900
 tags:
   - dh
 ---
@@ -42,13 +42,15 @@ tags:
 - OOP 란 무엇인가?
 - Clean Code 란 무엇이라고 생각하는가?
 - SOLID 란 무엇인가?
-	- SOLID is a set of five design principles in object-oriented programming that guide developers in creating more maintainable, understandable, and scalable code. First, Single Responsibility Principle states that a class should have on and only one reason to change, meaning it should have a single responsibility. It leads to cleaner and less complex code. Second, Open-Closed Principle suggests that software entities like classes modules, and functions should be open for extension but closed for modification. 
+	- SOLID is a set of five design principles in object-oriented programming that guide developers in creating more maintainable, understandable, and scalable code. First, Single Responsibility Principle states that a class should have on and only one reason to change, meaning it should have a single responsibility. Second, Open-Closed Principle suggests that software entities like classes modules, and functions should be open for extension but closed for modification.Third, Liskov substitution implies that objects of a superclass should be replaceable with objects of its subclasses without altering the correctness of the program. It ensures that a subclass can stand in for its parent class. Fourth, Interface Segregation Principle means it’s better to have many specific interfaces than a single, general-purpose interface. Fifth, Dependency Inversion Principle advocates for high-level modules not to depend on low-level modules, but both should depend on abstractions. It encourages decoupling in the code, which increases modularity and flexibility. 
 	- extension 과 modification 의 차이점은 무엇인가?
-	- Scalability 란 무엇인가?
 		- 
+	- Scalability 란 무엇인가?
+		- Scalability in software engineering refers to a system’s ability to handle an increasing amount of work or to be readily expanded to accommodate that growth. There are two main types of scalability. Vertical scalability involves adding more resources to the existing infrastructure. Horizontal Scalability involves adding more machines or nodes to handle increased load. Scalability ensures that the application can continue to function efficiently as its user base grows, data volumes increase, or operational demands rise. 
 - 테스트의 종류에는 무엇이 있는가?
 	- In my project, we adopted three testing techniques, acceptance test, unit test, integration test. First, Acceptance test focused on ensuring that the software meets the end users’ needs and compiles with the business requirements. Thorough integration testing has helped us to identify and resolve any issues arising from the interaction of individual components. 
 	- 어떤 테스트를 채택했고 이유는 무엇인가?
+		- 
 	- 테스트 커버리지는 어느 정도인가?
 		- Our team has rigorously performed both acceptance testing and integration testing on the project, leading to an improssive test coverage of 96%. 
 - 리팩토링이란 무엇인가?

@@ -1,20 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "2023-12-11",
-      "path": "posts/2023-12-11.md"
-    },
-    {
       "basename": "dh-second-interview-preparation",
       "path": "posts/dh-second-interview-preparation.md"
-    },
-    {
-      "basename": "2023-12-10",
-      "path": "posts/2023-12-10.md"
-    },
-    {
-      "basename": "english-speaking-pattern-11-30",
-      "path": "posts/english-speaking-pattern-11-30.md"
     },
     {
       "basename": "local-cache-concurrency-problem",
@@ -23,6 +11,22 @@
     {
       "basename": "shook-domain-model",
       "path": "posts/shook-domain-model.md"
+    },
+    {
+      "basename": "english-speaking-pattern-11-30",
+      "path": "posts/english-speaking-pattern-11-30.md"
+    },
+    {
+      "basename": "top-down-approach-ch2",
+      "path": "posts/top-down-approach-ch2.md"
+    },
+    {
+      "basename": "2023-12-10",
+      "path": "posts/2023-12-10.md"
+    },
+    {
+      "basename": "2023-12-11",
+      "path": "posts/2023-12-11.md"
     },
     {
       "basename": "english-speaking-pattern",
@@ -39,14 +43,6 @@
     {
       "basename": "topological-sorting",
       "path": "posts/topological-sorting.md"
-    },
-    {
-      "basename": "dh-interview-answer",
-      "path": "posts/dh-interview-answer.md"
-    },
-    {
-      "basename": "top-down-approach-ch2",
-      "path": "posts/top-down-approach-ch2.md"
     },
     {
       "basename": "2023-12-07",
