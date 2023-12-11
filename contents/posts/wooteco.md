@@ -1,7 +1,7 @@
 ---
 title: 우아한테크코스
 date: 2023-02-07 10:25:28 +0900
-updated: 2023-10-15 23:23:19 +0900
+updated: 2023-12-12 01:42:01 +0900
 tags:
   - 우테코
 ---
@@ -47,7 +47,7 @@ tags:
 - [[level2-week4]]
 - [[level2-week5]]
 - [[level2-week6]]
-- [[level2-week7-retrospect]]
+- [[level2-seventh-retrospect]]
 - [[level2-cart]]
 - [[level2-subway]]
 - [[level2-shopping-order]]

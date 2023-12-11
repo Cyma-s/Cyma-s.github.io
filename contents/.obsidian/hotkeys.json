@@ -168,21 +168,21 @@
       "key": "R"
     }
   ],
-  "homepage:open-homepage": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "D"
-    }
-  ],
   "editor:toggle-highlight": [
     {
       "modifiers": [
         "Mod"
       ],
       "key": "U"
+    }
+  ],
+  "daily-notes": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "D"
     }
   ]
 }

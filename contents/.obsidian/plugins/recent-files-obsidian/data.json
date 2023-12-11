@@ -1,40 +1,172 @@
 {
   "recentFiles": [
     {
+      "basename": "2023-12-11",
+      "path": "posts/2023-12-11.md"
+    },
+    {
+      "basename": "woowacourse-retrospect",
+      "path": "posts/woowacourse-retrospect.md"
+    },
+    {
+      "basename": "shook-third-demoday-retrospect",
+      "path": "posts/shook-third-demoday-retrospect.md"
+    },
+    {
+      "basename": "level2-third-retrospect",
+      "path": "posts/level2-third-retrospect.md"
+    },
+    {
+      "basename": "level2-sixth-retrospect",
+      "path": "posts/level2-sixth-retrospect.md"
+    },
+    {
+      "basename": "level2-seventh-retrospect",
+      "path": "posts/level2-seventh-retrospect.md"
+    },
+    {
+      "basename": "level2-second-retrospect",
+      "path": "posts/level2-second-retrospect.md"
+    },
+    {
+      "basename": "level2-fourth-retrospect",
+      "path": "posts/level2-fourth-retrospect.md"
+    },
+    {
+      "basename": "level2-first-retrospect",
+      "path": "posts/level2-first-retrospect.md"
+    },
+    {
+      "basename": "level2-eighth-retrospect",
+      "path": "posts/level2-eighth-retrospect.md"
+    },
+    {
+      "basename": "level1-third-retrospect",
+      "path": "posts/level1-third-retrospect.md"
+    },
+    {
+      "basename": "level1-sixth-retrospect",
+      "path": "posts/level1-sixth-retrospect.md"
+    },
+    {
+      "basename": "level1-seventh-retrospect",
+      "path": "posts/level1-seventh-retrospect.md"
+    },
+    {
+      "basename": "level1-fourth-retrospect",
+      "path": "posts/level1-fourth-retrospect.md"
+    },
+    {
+      "basename": "level1-fifth-retrospect",
+      "path": "posts/level1-fifth-retrospect.md"
+    },
+    {
+      "basename": "level1-eighth-retrospect",
+      "path": "posts/level1-eighth-retrospect.md"
+    },
+    {
+      "basename": "2023-03",
+      "path": "posts/2023-03.md"
+    },
+    {
+      "basename": "2023-03-29",
+      "path": "posts/2023-03-29.md"
+    },
+    {
+      "basename": "2023-03-27",
+      "path": "posts/2023-03-27.md"
+    },
+    {
+      "basename": "2023-03-26",
+      "path": "posts/2023-03-26.md"
+    },
+    {
+      "basename": "2023-03-23",
+      "path": "posts/2023-03-23.md"
+    },
+    {
+      "basename": "2023-03-22",
+      "path": "posts/2023-03-22.md"
+    },
+    {
       "basename": "dh-second-interview-preparation",
       "path": "posts/dh-second-interview-preparation.md"
     },
     {
-      "basename": "local-cache-concurrency-problem",
-      "path": "posts/local-cache-concurrency-problem.md"
+      "basename": "2023-03-20",
+      "path": "posts/2023-03-20.md"
     },
     {
-      "basename": "shook-domain-model",
-      "path": "posts/shook-domain-model.md"
+      "basename": "2023-03-19",
+      "path": "posts/2023-03-19.md"
     },
     {
-      "basename": "english-speaking-pattern-11-30",
-      "path": "posts/english-speaking-pattern-11-30.md"
+      "basename": "2023-03-18",
+      "path": "posts/2023-03-18.md"
     },
     {
-      "basename": "top-down-approach-ch2",
-      "path": "posts/top-down-approach-ch2.md"
+      "basename": "2023-03-17",
+      "path": "posts/2023-03-17.md"
+    },
+    {
+      "basename": "2023-03-16",
+      "path": "posts/2023-03-16.md"
+    },
+    {
+      "basename": "2023-03-14",
+      "path": "posts/2023-03-14.md"
+    },
+    {
+      "basename": "2023-03-13",
+      "path": "posts/2023-03-13.md"
+    },
+    {
+      "basename": "2023-03-12",
+      "path": "posts/2023-03-12.md"
+    },
+    {
+      "basename": "2023-03-10",
+      "path": "posts/2023-03-10.md"
+    },
+    {
+      "basename": "2023-03-05",
+      "path": "posts/2023-03-05.md"
+    },
+    {
+      "basename": "dh-recruiter-call",
+      "path": "posts/dh-recruiter-call.md"
+    },
+    {
+      "basename": "2023-03-06",
+      "path": "posts/2023-03-06.md"
     },
     {
       "basename": "2023-12-10",
       "path": "posts/2023-12-10.md"
     },
     {
-      "basename": "2023-12-11",
-      "path": "posts/2023-12-11.md"
+      "basename": "english-speaking-pattern-11-30",
+      "path": "posts/english-speaking-pattern-11-30.md"
+    },
+    {
+      "basename": "shook-domain-model",
+      "path": "posts/shook-domain-model.md"
+    },
+    {
+      "basename": "local-cache-concurrency-problem",
+      "path": "posts/local-cache-concurrency-problem.md"
+    },
+    {
+      "basename": "os-ch2",
+      "path": "posts/os-ch2.md"
+    },
+    {
+      "basename": "top-down-approach-ch2",
+      "path": "posts/top-down-approach-ch2.md"
     },
     {
       "basename": "english-speaking-pattern",
       "path": "posts/english-speaking-pattern.md"
-    },
-    {
-      "basename": "dh-recruiter-call",
-      "path": "posts/dh-recruiter-call.md"
     },
     {
       "basename": "dh-interview-study-11-09",
@@ -67,134 +199,6 @@
     {
       "basename": "2023-12",
       "path": "posts/2023-12.md"
-    },
-    {
-      "basename": "readme",
-      "path": "posts/readme.md"
-    },
-    {
-      "basename": "shook",
-      "path": "posts/shook.md"
-    },
-    {
-      "basename": "shook-third-demoday",
-      "path": "posts/shook-third-demoday.md"
-    },
-    {
-      "basename": "shook-my-page-query-improve",
-      "path": "posts/shook-my-page-query-improve.md"
-    },
-    {
-      "basename": "shook-load-test",
-      "path": "posts/shook-load-test.md"
-    },
-    {
-      "basename": "shook-migration",
-      "path": "posts/shook-migration.md"
-    },
-    {
-      "basename": "shook-maniadb",
-      "path": "posts/shook-maniadb.md"
-    },
-    {
-      "basename": "shook-hikaricp",
-      "path": "posts/shook-hikaricp.md"
-    },
-    {
-      "basename": "shook-nginx",
-      "path": "posts/shook-nginx.md"
-    },
-    {
-      "basename": "2023-12-05",
-      "path": "posts/2023-12-05.md"
-    },
-    {
-      "basename": "english-speaking-dec-1week",
-      "path": "posts/english-speaking-dec-1week.md"
-    },
-    {
-      "basename": "english-speaking-nov-3week",
-      "path": "posts/english-speaking-nov-3week.md"
-    },
-    {
-      "basename": "english-speaking-nov-4week",
-      "path": "posts/english-speaking-nov-4week.md"
-    },
-    {
-      "basename": "2023-12-04",
-      "path": "posts/2023-12-04.md"
-    },
-    {
-      "basename": "2023-12-01",
-      "path": "posts/2023-12-01.md"
-    },
-    {
-      "basename": "inmemory-cache-develop",
-      "path": "posts/inmemory-cache-develop.md"
-    },
-    {
-      "basename": "english-speaking-pattern-11-28",
-      "path": "posts/english-speaking-pattern-11-28.md"
-    },
-    {
-      "basename": "java-algorithm-tips",
-      "path": "posts/java-algorithm-tips.md"
-    },
-    {
-      "basename": "sort-algorithm",
-      "path": "posts/sort-algorithm.md"
-    },
-    {
-      "basename": "trie",
-      "path": "posts/trie.md"
-    },
-    {
-      "basename": "2023-11-30",
-      "path": "posts/2023-11-30.md"
-    },
-    {
-      "basename": "mit-ocw-sets-and-sorting",
-      "path": "posts/mit-ocw-sets-and-sorting.md"
-    },
-    {
-      "basename": "algorithm-tips",
-      "path": "posts/algorithm-tips.md"
-    },
-    {
-      "basename": "english-speaking-oct-4week",
-      "path": "posts/english-speaking-oct-4week.md"
-    },
-    {
-      "basename": "english-speaking-10-17",
-      "path": "posts/english-speaking-10-17.md"
-    },
-    {
-      "basename": "locust",
-      "path": "posts/locust.md"
-    },
-    {
-      "basename": "kmp-algorithm",
-      "path": "posts/kmp-algorithm.md"
-    },
-    {
-      "basename": "2023-10",
-      "path": "posts/2023-10.md"
-    },
-    {
-      "basename": "2023-11-29",
-      "path": "posts/2023-11-29.md"
-    },
-    {
-      "basename": "2023-11-26",
-      "path": "posts/2023-11-26.md"
-    },
-    {
-      "basename": "2023-11",
-      "path": "posts/2023-11.md"
-    },
-    {
-      "basename": "2023-10-23",
-      "path": "posts/2023-10-23.md"
     }
   ],
   "omittedPaths": [
