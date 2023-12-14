@@ -1,7 +1,7 @@
 ---
 title: DH 인터뷰 준비
 date: 2023-12-09 21:30:43 +0900
-updated: 2023-12-12 01:24:26 +0900
+updated: 2023-12-14 17:39:42 +0900
 tags:
   - dh
 ---
@@ -51,7 +51,7 @@ tags:
 		- 최근 프로젝트에서는 GitHub Actions를 사용하여 CI(지속적 통합)를 구성하고 GitHub의 자체 호스팅 실행기를 통해 CD(지속적 배포)를 설정했습니다. 이 설정은 개발 파이프라인을 자동화하고 효율성을 향상하며 코드 품질을 보장하는 데 필수적이었습니다. 그러나 GitHub Flow를 사용하고 동일한 저장소에 프런트엔드 및 백엔드 코드가 모두 있기 때문에 문제에 직면했습니다. 우리의 워크플로는 여러 가지의 변경 사항을 동기화하기 위해 기본 분기에 자주 병합해야 했습니다. 이로 인해 불완전한 프런트 엔드 기능을 병합해야 하는 상황이 발생하여 배포 프로세스를 완전히 자동화하는 능력에 영향을 미치는 경우가 많았습니다. 결과적으로 지속적인 전달을 달성했지만 이 설정에서는 완전히 자동화된 지속적인 배포가 불가능했습니다.
 		- In our recent project, we configured continuous integration using github actions and set up CD through github’s self-hosted runners. This setup was integral to automating our development pipeline, enhancing efficiency, and ensuring code quality. However, we encountered a challenge due to our use of GitHub Flow and having both front-end and back-end code in the same repository. Our workflow required frequent merges into the main branch to synchronize changes across different branches. This often led to situations where incomplete front-end features had to be merged, impacting our ability to fully automate the deployment process. As a result, while we achieved Continuous Delivery, fully automated Continuous Deployment wasn’t feasible under this setup.
 	- GitHub Flow 란?
-		- Github Flow is a streamlined workflow designed for projects that require frequent deployments. It begins with creating a feature branch off the main branch, where all development work occurs. Once a set of changes is ready, a pull request is opened for code review and discussion with the tema. After review, the branch can be deployed to a staging or production environment for testing. 
+		- Github Flow is a streamlined workflow designed for projects that require frequent deployments. It begins with creating a feature branch off the main branch, where all development work occurs. Once a set of changes is ready, a pull request is opened for code review and discussion with the code. After review, the branch can be deployed to a staging or production environment for testing. 
 		- In our project, we faced challenges with synchronizing deployment timing because we were developing both the front-end and back-end simultaneouly within a single repository. This complexity led us to consider Git Flow, which could potentially offer a more structured approach to managing parallel development streams and their integration. 
 	- Git Flow 와 비교했을 때 장단점은?
 - 서비스 구조는 어떻게 구성되어 있는가?
@@ -63,7 +63,6 @@ tags:
 	- REST is an architectural style for designing networked applications. It relies on a stateless, client-server communication model, and is used primarily in the development of web services. In REST, everything is a resource identified by a unique URI. 
 - DBMS 란?
 	- A Database Management System is software that provides an efficient, secure, and convenient way to store, retrieve and manage data in databases. It serves as an interface between the database and its users or the application programs, ensuring that the data is consistently organized and remain easily accessible. 
-
 
 ## Software Engineering
 
@@ -101,9 +100,33 @@ tags:
 
 ## 그 외 답변
 
+- 지원 동기
+	- I believe that Delivery Hero will expose me to a variety of problems and allow me to solve them. I applied because I want to work in a new environment with different people. 
+
 ## 질문
 
+- Could you say that again, please? 
+- Would you mind slowing down a little bit? I'm still adapting to fast-paced English and would appreciate the favor if you can.
+- May I correct my previous answer?
 - 인터뷰 결과는 언제 안내 되나요?
 	- When will the results of the interview be announced?
 - 일하시면서 좋은 점과 힘든 점이 있으셨나요? 저에게 소개해주실 수 있나요?
 	- Did you have any good or difficult points while working? Can you introduce it to me?
+
+## 질문
+
+- 자기 소개
+- Spring 을 사용한 이유
+- 간단하게 서비스 소개
+	- 서비스 구조는 어떻게 구성되어 있는가?
+	- 개발하면서 가장 challenging 했던 문제
+	- 동시성은 어떻게 해결할 수 있는가?
+	- 사람들이 더 많아지면 모두 캐싱할 수는 없지 않나?
+	- scale up 만이 답인가?
+- Collection 설명해보라고 함
+	- List 와 Set 의 차이점
+	- List, Set 과 Map 의 차이점 → Map 은 key 로 값 가져온다 그렇게만 말함..ㅋㅋ
+- NAT, VPC 란 무엇인가?
+- Java 를 제외한 다른 언어 써볼 생각 있는지
+
+전체적으로 분위기는 좋았고, 긴장하지 않게 많이 애써주셨던 것 같다. 다만 인터뷰를 30분 밖에 하지 않아서 왜 이렇게 빨리 끝났는지 의문이다. 15분 동안은 내가 질문하고 답변하는 시간을 가졌다. 질문도 크게 어렵지 않았고 Java 와 서비스에 대한 basic 한 질문들이 대부분이었다. 

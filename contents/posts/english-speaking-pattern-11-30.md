@@ -1,7 +1,7 @@
 ---
 title: 11/30 영어 문장 구조 연습
 date: 2023-11-30 18:31:18 +0900
-updated: 2023-12-10 17:49:51 +0900
+updated: 2023-12-12 17:46:09 +0900
 tags:
   - english
 ---
@@ -89,6 +89,8 @@ tags:
 
 - I want to work for a company with passionate coworkers and with whom I can actively communicate.
 - I’m looking forward to this interview.
+- 지원 동기
+	- I believe that Delivery Hero will expose me to a variety of problems and allow me to solve them. I applied because I want to work in a new environment with different people. 
 
 ## 질문
 

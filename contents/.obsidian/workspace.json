@@ -8,18 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1f17ec35932de941",
+            "id": "1e0fdecdefc8fc02",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-12-11.md",
+                "file": "posts/2023-12-14.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              },
-              "pinned": true
+              }
             }
           },
           {
@@ -36,84 +34,20 @@
             }
           },
           {
-            "id": "f25407abc6473316",
+            "id": "3a30d5275bbb0407",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/english-speaking-pattern-11-30.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "27625804004f61f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/local-cache-concurrency-problem.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8733b59eae2c94f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/english-speaking-pattern-11-30.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f884b46d3b07f756",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/dh-second-interview-preparation.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7a976741fc97ee15",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/woowacourse-retrospect.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f865ee7d3b52aff0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-03-22.md",
+                "file": "posts/bit-masking.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -142,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#회고  ",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -167,12 +101,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 370.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -196,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-12-11.md",
+                "file": "posts/bit-masking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -213,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-12-11.md",
+                "file": "posts/bit-masking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -244,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-12-11.md"
+                "file": "posts/bit-masking.md"
               }
             }
           },
@@ -302,9 +236,24 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "1f17ec35932de941",
+  "active": "3a30d5275bbb0407",
   "lastOpenFiles": [
+    "posts/2023-12-14.md",
+    "posts/english-speaking-dec-2week.md",
+    "posts/top-down-approach-ch2.md",
+    "posts/2023-12-11.md",
+    "posts/dh-second-interview-preparation.md",
+    "posts/english-speaking-pattern-11-30.md",
+    "posts/shook-nginx.md",
+    "posts/domain-driven-development-start.md",
+    "posts/local-cache-concurrency-problem.md",
+    "posts/delivery-hero-employment.md",
     "posts/woowacourse-retrospect.md",
+    "posts/2023-03-22.md",
+    "posts/nginx.md",
+    "posts/mysql-full-text-search.md",
+    "posts/replication.md",
+    "posts/transaction-manager.md",
     "posts/shook-third-demoday-retrospect.md",
     "posts/level2-third-retrospect.md",
     "posts/level2-sixth-retrospect.md",
@@ -315,21 +264,6 @@
     "posts/level2-eighth-retrospect.md",
     "posts/level1-third-retrospect.md",
     "posts/level1-sixth-retrospect.md",
-    "posts/level1-seventh-retrospect.md",
-    "posts/level1-fourth-retrospect.md",
-    "posts/level1-fifth-retrospect.md",
-    "posts/level1-eighth-retrospect.md",
-    "posts/2023-03.md",
-    "posts/2023-03-29.md",
-    "posts/2023-03-27.md",
-    "posts/2023-03-26.md",
-    "posts/2023-03-23.md",
-    "posts/2023-03-22.md",
-    "posts/dh-second-interview-preparation.md",
-    "posts/2023-03-20.md",
-    "posts/2023-03-19.md",
-    "posts/2023-03-18.md",
-    "posts/2023-03-17.md",
     "posts/attachments/read-write-lock-request-time.png",
     "posts/attachments/synchronized-request-time.png",
     "posts/attachments/concurrency-synchronized-test.png",

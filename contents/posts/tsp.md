@@ -1,7 +1,7 @@
 ---
 title: TSP 외판원 순회 문제
 date: 2023-09-01 21:34:59 +0900
-updated: 2023-11-09 14:39:44 +0900
+updated: 2023-12-14 18:25:47 +0900
 tags:
   - algorithms
 ---
@@ -22,7 +22,7 @@ N <= 16 일 때 DP 와 BitMasking 을 사용하여 O(N^2 * 2^n) 풀이가 가능
 ## DP + Bitmasking
 
 Held-Karp 알고리즘에 기반한 풀이라고 한다.   
-[[bitmasking]]
+[[bit-masking]]
 
 ### 아이디어
 
