@@ -1,7 +1,7 @@
 ---
 title: DH 리크루터 콜
 date: 2023-11-27 18:28:57 +0900
-updated: 2023-12-05 00:07:24 +0900
+updated: 2023-12-18 22:41:49 +0900
 tags: 
 ---
 
@@ -49,3 +49,34 @@ tags:
 working communicate 중요. 질문하고, 어떻게 하고 있는지 
 힌트도 줌. code clean, readable, testable, scabable, leetcode 확인할 것.  
 코딩 스케줄을 
+
+## 질문
+
+- 한 학기가 남았는데 
+	- I have one semester left in school, is it possible to start in September? 
+- 정확히 언제 입사하나요?
+	- What is my exact start date?
+- 입사 전에 어떤 것을 준비해야 할까요?
+	- Is there anything I need to prepare before joining?
+- probation 기간 동안 어떤 평가가 이루어지나요?
+	- What assessments are made during the probationary period?
+
+pintech.
+62000 euro. 3000 euro.
+bank account
+apartment
+6 month
+3 month notice period
+4/1
+
+40 hours / week
+27 days / years
+boucher lunch
+480 euros lunch
+gym memberships
+
+how can you learn quickly?
+deliver?
+we understand 
+proactive to learning
+try to curious

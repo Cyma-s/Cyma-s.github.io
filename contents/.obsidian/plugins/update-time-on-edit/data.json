@@ -107,8 +107,8 @@
     "posts/jenkins-migration.md": "6968ff8ec33af54e28f666ed9a34d313a91ba903d0c23bc8b57f3b27eb7abfe7",
     "posts/shook-function-develop.md": "56fe6d8f4e39c1a45b6e764eb9b183677b057ca0067918031f60ce6f0578fbd6",
     "posts/lower-bound-and-upper-bound.md": "a15b61d3913b0db34a672839d02d2395f86709fc3fe1daf9019151c7c7d7995a",
-    "posts/dh-recruiter-call.md": "e65671d1eddff551dd9d1cb701a176bdc0a8b8655ac02e709f97b0782f2e990b",
-    "posts/top-down-approach-ch2.md": "b21c8f9ff037f69f371595a429a1a7eed9099b643f62b0f63a99875a1d9ef8c0",
+    "posts/dh-recruiter-call.md": "fd97449e92f6e48225139d410d891f5e4f2e91ff722352b4e094b5cbbce51994",
+    "posts/top-down-approach-ch2.md": "a33f023dbedb3ace5eddf74a7c57cbdc010dd81df7e7dc7814e61a032dc81cea",
     "posts/2023-10.md": "3040a6553089b676972661862b2c835a1ac6bd672c823af86414ed435bbcae1f",
     "posts/2023-11-29.md": "582324dbd254a7edc2a7edc6dc942753c3ce9faa6bd651279881ead70a4808e9",
     "posts/english-speaking-pattern-11-30.md": "bf4b64afc614c6924314e7f84f37addd0a0b404d897e6b9e190d50f1f5876699",
@@ -138,7 +138,8 @@
     "posts/domain-driven-development-start.md": "e40154c525d6ae49d024f36863c3f391c9e6da04117e526f59c93ad7cfc17f8b",
     "posts/2023-12-14.md": "a45682a625008ff4709caf92e0a8b7434d6c9760f3b6755f04ac78b643e00403",
     "posts/english-speaking-dec-2week.md": "3868e828978758fc73eed095de006fc09b57260059e5232b35fefd057bd0bdb2",
-    "posts/bit-masking.md": "ce810ca323dbfcced7246e310d292ff32888302fd947f87bb3b94aba8190cb0d",
-    "posts/2023-09-01.md": "46c690a9d2dc0a27aba23e5442cc4ac51abbbb44e3bf0d6fbf671a83eeaf9630"
+    "posts/bit-masking.md": "7ea6c72991e80bb874b6763a6136737f8559e048ac763272e5ca4ca4cf2f76cc",
+    "posts/2023-09-01.md": "46c690a9d2dc0a27aba23e5442cc4ac51abbbb44e3bf0d6fbf671a83eeaf9630",
+    "posts/top-down-approach-ch3.md": "c808f4789d88115eba1b81d7ede204233eb598bd2fb1c1ad8c6317a34087b66b"
   }
 }
