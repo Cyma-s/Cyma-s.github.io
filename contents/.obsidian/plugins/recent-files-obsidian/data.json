@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "dh-recruiter-call",
-      "path": "posts/dh-recruiter-call.md"
+      "basename": "berlin-relocation-plan",
+      "path": "posts/berlin-relocation-plan.md"
     },
     {
-      "basename": "bit-masking",
-      "path": "posts/bit-masking.md"
+      "basename": "get-a-job-with-delivery-hero",
+      "path": "posts/get-a-job-with-delivery-hero.md"
     },
     {
       "basename": "top-down-approach-ch3",
@@ -15,6 +15,14 @@
     {
       "basename": "top-down-approach-ch2",
       "path": "posts/top-down-approach-ch2.md"
+    },
+    {
+      "basename": "dh-recruiter-call",
+      "path": "posts/dh-recruiter-call.md"
+    },
+    {
+      "basename": "bit-masking",
+      "path": "posts/bit-masking.md"
     },
     {
       "basename": "2023-12-14",
@@ -191,14 +199,6 @@
     {
       "basename": "shook-domain-model",
       "path": "posts/shook-domain-model.md"
-    },
-    {
-      "basename": "os-ch2",
-      "path": "posts/os-ch2.md"
-    },
-    {
-      "basename": "english-speaking-pattern",
-      "path": "posts/english-speaking-pattern.md"
     }
   ],
   "omittedPaths": [
