@@ -9,6 +9,18 @@
       "path": "posts/get-a-job-with-delivery-hero.md"
     },
     {
+      "basename": "2023-09-21",
+      "path": "posts/2023-09-21.md"
+    },
+    {
+      "basename": "2023-09-25",
+      "path": "posts/2023-09-25.md"
+    },
+    {
+      "basename": "objective",
+      "path": "posts/objective.md"
+    },
+    {
       "basename": "top-down-approach-ch3",
       "path": "posts/top-down-approach-ch3.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "2023-03-05",
       "path": "posts/2023-03-05.md"
-    },
-    {
-      "basename": "2023-03-06",
-      "path": "posts/2023-03-06.md"
-    },
-    {
-      "basename": "2023-12-10",
-      "path": "posts/2023-12-10.md"
-    },
-    {
-      "basename": "shook-domain-model",
-      "path": "posts/shook-domain-model.md"
     }
   ],
   "omittedPaths": [

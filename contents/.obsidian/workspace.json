@@ -71,6 +71,32 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "eb2db544db1093bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2023-09-21.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "dc2a0ff9dd1e1732",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2023-09-25.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 3
@@ -265,6 +291,9 @@
   "active": "a4588c5d0607febb",
   "lastOpenFiles": [
     "posts/get-a-job-with-delivery-hero.md",
+    "posts/2023-09-21.md",
+    "posts/2023-09-25.md",
+    "posts/objective.md",
     "posts/top-down-approach-ch3.md",
     "posts/berlin-relocation-plan.md",
     "posts/top-down-approach-ch2.md",
@@ -287,9 +316,6 @@
     "posts/transaction-manager.md",
     "posts/shook-third-demoday-retrospect.md",
     "posts/level2-third-retrospect.md",
-    "posts/level2-sixth-retrospect.md",
-    "posts/level2-seventh-retrospect.md",
-    "posts/level2-second-retrospect.md",
     "posts/attachments/read-write-lock-request-time.png",
     "posts/attachments/synchronized-request-time.png",
     "posts/attachments/concurrency-synchronized-test.png",
