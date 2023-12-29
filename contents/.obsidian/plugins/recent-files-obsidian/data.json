@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "readme",
+      "path": "posts/readme.md"
+    },
+    {
       "basename": "get-a-job-with-delivery-hero",
       "path": "posts/get-a-job-with-delivery-hero.md"
     },
@@ -9,16 +13,24 @@
       "path": "posts/dh-second-interview-preparation.md"
     },
     {
+      "basename": "top-down-approach-ch3",
+      "path": "posts/top-down-approach-ch3.md"
+    },
+    {
+      "basename": "berlin-relocation-plan",
+      "path": "posts/berlin-relocation-plan.md"
+    },
+    {
+      "basename": "2023-12-14",
+      "path": "posts/2023-12-14.md"
+    },
+    {
       "basename": "2023-12-04",
       "path": "posts/2023-12-04.md"
     },
     {
       "basename": "english-speaking-pattern-11-30",
       "path": "posts/english-speaking-pattern-11-30.md"
-    },
-    {
-      "basename": "2023-12-14",
-      "path": "posts/2023-12-14.md"
     },
     {
       "basename": "top-down-approach-ch2",
@@ -33,16 +45,8 @@
       "path": "posts/2023-09-25.md"
     },
     {
-      "basename": "berlin-relocation-plan",
-      "path": "posts/berlin-relocation-plan.md"
-    },
-    {
       "basename": "objective",
       "path": "posts/objective.md"
-    },
-    {
-      "basename": "top-down-approach-ch3",
-      "path": "posts/top-down-approach-ch3.md"
     },
     {
       "basename": "dh-recruiter-call",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-03-12",
       "path": "posts/2023-03-12.md"
-    },
-    {
-      "basename": "2023-03-10",
-      "path": "posts/2023-03-10.md"
     }
   ],
   "omittedPaths": [
