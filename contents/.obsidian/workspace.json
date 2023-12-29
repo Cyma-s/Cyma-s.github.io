@@ -21,19 +21,6 @@
             }
           },
           {
-            "id": "fd62fa932c27101e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/top-down-approach-ch2.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "d0ff53d7254874d5",
             "type": "leaf",
             "state": {
@@ -73,12 +60,12 @@
             }
           },
           {
-            "id": "eb2db544db1093bd",
+            "id": "fdd6958731f11fd7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-09-21.md",
+                "file": "posts/dh-second-interview-preparation.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,12 +73,12 @@
             }
           },
           {
-            "id": "dc2a0ff9dd1e1732",
+            "id": "06df15229f89c6e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-09-25.md",
+                "file": "posts/2023-12-04.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -182,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/berlin-relocation-plan.md",
+                "file": "posts/get-a-job-with-delivery-hero.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,7 +186,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/berlin-relocation-plan.md",
+                "file": "posts/get-a-job-with-delivery-hero.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -230,7 +217,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/berlin-relocation-plan.md"
+                "file": "posts/get-a-job-with-delivery-hero.md"
               }
             }
           },
@@ -288,22 +275,23 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "a4588c5d0607febb",
+  "active": "0746662ce0d90779",
   "lastOpenFiles": [
+    "posts/dh-second-interview-preparation.md",
     "posts/get-a-job-with-delivery-hero.md",
+    "posts/2023-12-04.md",
+    "posts/english-speaking-pattern-11-30.md",
+    "posts/2023-12-14.md",
+    "posts/top-down-approach-ch2.md",
     "posts/2023-09-21.md",
     "posts/2023-09-25.md",
+    "posts/berlin-relocation-plan.md",
     "posts/objective.md",
     "posts/top-down-approach-ch3.md",
-    "posts/berlin-relocation-plan.md",
-    "posts/top-down-approach-ch2.md",
     "posts/dh-recruiter-call.md",
     "posts/bit-masking.md",
-    "posts/2023-12-14.md",
     "posts/english-speaking-dec-2week.md",
     "posts/2023-12-11.md",
-    "posts/dh-second-interview-preparation.md",
-    "posts/english-speaking-pattern-11-30.md",
     "posts/shook-nginx.md",
     "posts/domain-driven-development-start.md",
     "posts/local-cache-concurrency-problem.md",
@@ -315,7 +303,6 @@
     "posts/replication.md",
     "posts/transaction-manager.md",
     "posts/shook-third-demoday-retrospect.md",
-    "posts/level2-third-retrospect.md",
     "posts/attachments/read-write-lock-request-time.png",
     "posts/attachments/synchronized-request-time.png",
     "posts/attachments/concurrency-synchronized-test.png",

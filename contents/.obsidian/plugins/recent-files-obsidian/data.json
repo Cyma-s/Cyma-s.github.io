@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "berlin-relocation-plan",
-      "path": "posts/berlin-relocation-plan.md"
-    },
-    {
       "basename": "get-a-job-with-delivery-hero",
       "path": "posts/get-a-job-with-delivery-hero.md"
+    },
+    {
+      "basename": "dh-second-interview-preparation",
+      "path": "posts/dh-second-interview-preparation.md"
+    },
+    {
+      "basename": "2023-12-04",
+      "path": "posts/2023-12-04.md"
+    },
+    {
+      "basename": "english-speaking-pattern-11-30",
+      "path": "posts/english-speaking-pattern-11-30.md"
+    },
+    {
+      "basename": "2023-12-14",
+      "path": "posts/2023-12-14.md"
+    },
+    {
+      "basename": "top-down-approach-ch2",
+      "path": "posts/top-down-approach-ch2.md"
     },
     {
       "basename": "2023-09-21",
@@ -17,16 +33,16 @@
       "path": "posts/2023-09-25.md"
     },
     {
+      "basename": "berlin-relocation-plan",
+      "path": "posts/berlin-relocation-plan.md"
+    },
+    {
       "basename": "objective",
       "path": "posts/objective.md"
     },
     {
       "basename": "top-down-approach-ch3",
       "path": "posts/top-down-approach-ch3.md"
-    },
-    {
-      "basename": "top-down-approach-ch2",
-      "path": "posts/top-down-approach-ch2.md"
     },
     {
       "basename": "dh-recruiter-call",
@@ -37,24 +53,12 @@
       "path": "posts/bit-masking.md"
     },
     {
-      "basename": "2023-12-14",
-      "path": "posts/2023-12-14.md"
-    },
-    {
       "basename": "english-speaking-dec-2week",
       "path": "posts/english-speaking-dec-2week.md"
     },
     {
       "basename": "2023-12-11",
       "path": "posts/2023-12-11.md"
-    },
-    {
-      "basename": "dh-second-interview-preparation",
-      "path": "posts/dh-second-interview-preparation.md"
-    },
-    {
-      "basename": "english-speaking-pattern-11-30",
-      "path": "posts/english-speaking-pattern-11-30.md"
     },
     {
       "basename": "shook-nginx",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-03-10",
       "path": "posts/2023-03-10.md"
-    },
-    {
-      "basename": "2023-03-05",
-      "path": "posts/2023-03-05.md"
     }
   ],
   "omittedPaths": [
