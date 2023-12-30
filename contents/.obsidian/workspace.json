@@ -99,7 +99,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -182,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/readme.md",
+                "file": "posts/berlin-relocation-plan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,7 +199,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/readme.md",
+                "file": "posts/berlin-relocation-plan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -230,7 +230,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/readme.md"
+                "file": "posts/berlin-relocation-plan.md"
               }
             }
           },
@@ -288,10 +288,11 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "1746cc217ec7073b",
+  "active": "a4588c5d0607febb",
   "lastOpenFiles": [
-    "posts/get-a-job-with-delivery-hero.md",
     "posts/dh-second-interview-preparation.md",
+    "posts/readme.md",
+    "posts/get-a-job-with-delivery-hero.md",
     "posts/top-down-approach-ch3.md",
     "posts/berlin-relocation-plan.md",
     "posts/2023-12-14.md",
@@ -315,7 +316,6 @@
     "posts/mysql-full-text-search.md",
     "posts/replication.md",
     "posts/transaction-manager.md",
-    "posts/shook-third-demoday-retrospect.md",
     "posts/attachments/read-write-lock-request-time.png",
     "posts/attachments/synchronized-request-time.png",
     "posts/attachments/concurrency-synchronized-test.png",
