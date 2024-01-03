@@ -1,7 +1,7 @@
 ---
 title: 베를린 이주 계획
 date: 2023-12-21 12:41:24 +0900
-updated: 2023-12-29 00:22:18 +0900
+updated: 2024-01-02 21:46:27 +0900
 tags: 
 ---
 
@@ -51,5 +51,3 @@ Delivery Hero: Oranienburger Str. 70
 - 건강검진
 - 집 계약 해지
 - 휴대폰 요금제 변경 및 eSIM 알아보기
-
-### Driving License
