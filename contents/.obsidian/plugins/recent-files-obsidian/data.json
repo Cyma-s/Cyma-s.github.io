@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "jenkins-migration",
+      "path": "posts/jenkins-migration.md"
+    },
+    {
+      "basename": "shook-prod-server-setting",
+      "path": "posts/shook-prod-server-setting.md"
+    },
+    {
+      "basename": "get-a-job-with-delivery-hero",
+      "path": "posts/get-a-job-with-delivery-hero.md"
+    },
+    {
       "basename": "berlin-relocation-plan",
       "path": "posts/berlin-relocation-plan.md"
     },
@@ -11,10 +23,6 @@
     {
       "basename": "readme",
       "path": "posts/readme.md"
-    },
-    {
-      "basename": "get-a-job-with-delivery-hero",
-      "path": "posts/get-a-job-with-delivery-hero.md"
     },
     {
       "basename": "top-down-approach-ch3",
@@ -191,14 +199,6 @@
     {
       "basename": "2023-03-14",
       "path": "posts/2023-03-14.md"
-    },
-    {
-      "basename": "2023-03-13",
-      "path": "posts/2023-03-13.md"
-    },
-    {
-      "basename": "2023-03-12",
-      "path": "posts/2023-03-12.md"
     }
   ],
   "omittedPaths": [
