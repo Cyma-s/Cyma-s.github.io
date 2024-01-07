@@ -1,12 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "jenkins-migration",
-      "path": "posts/jenkins-migration.md"
+      "basename": "2024-01-07",
+      "path": "posts/2024-01-07.md"
+    },
+    {
+      "basename": "2024-winter-vacation-plan",
+      "path": "posts/2024-winter-vacation-plan.md"
+    },
+    {
+      "basename": "top-down-approach-ch3",
+      "path": "posts/top-down-approach-ch3.md"
+    },
+    {
+      "basename": "jenkins-docker",
+      "path": "posts/jenkins-docker.md"
     },
     {
       "basename": "shook-prod-server-setting",
       "path": "posts/shook-prod-server-setting.md"
+    },
+    {
+      "basename": "github-jenkins-webhook",
+      "path": "posts/attachments/github-jenkins-webhook.png"
+    },
+    {
+      "basename": "spring-boot-3-swagger",
+      "path": "posts/spring-boot-3-swagger.md"
+    },
+    {
+      "basename": "api-docs-search",
+      "path": "posts/api-docs-search.md"
     },
     {
       "basename": "get-a-job-with-delivery-hero",
@@ -17,24 +41,24 @@
       "path": "posts/berlin-relocation-plan.md"
     },
     {
+      "basename": "2023-12-14",
+      "path": "posts/2023-12-14.md"
+    },
+    {
       "basename": "dh-second-interview-preparation",
       "path": "posts/dh-second-interview-preparation.md"
+    },
+    {
+      "basename": "2023-12-04",
+      "path": "posts/2023-12-04.md"
     },
     {
       "basename": "readme",
       "path": "posts/readme.md"
     },
     {
-      "basename": "top-down-approach-ch3",
-      "path": "posts/top-down-approach-ch3.md"
-    },
-    {
-      "basename": "2023-12-14",
-      "path": "posts/2023-12-14.md"
-    },
-    {
-      "basename": "2023-12-04",
-      "path": "posts/2023-12-04.md"
+      "basename": "jenkins-migration",
+      "path": "posts/jenkins-migration.md"
     },
     {
       "basename": "english-speaking-pattern-11-30",
@@ -175,30 +199,6 @@
     {
       "basename": "2023-03-23",
       "path": "posts/2023-03-23.md"
-    },
-    {
-      "basename": "2023-03-20",
-      "path": "posts/2023-03-20.md"
-    },
-    {
-      "basename": "2023-03-19",
-      "path": "posts/2023-03-19.md"
-    },
-    {
-      "basename": "2023-03-18",
-      "path": "posts/2023-03-18.md"
-    },
-    {
-      "basename": "2023-03-17",
-      "path": "posts/2023-03-17.md"
-    },
-    {
-      "basename": "2023-03-16",
-      "path": "posts/2023-03-16.md"
-    },
-    {
-      "basename": "2023-03-14",
-      "path": "posts/2023-03-14.md"
     }
   ],
   "omittedPaths": [

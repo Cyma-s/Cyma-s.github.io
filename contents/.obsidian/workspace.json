@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1e0fdecdefc8fc02",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-12-14.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "d0ff53d7254874d5",
             "type": "leaf",
             "state": {
@@ -34,12 +21,12 @@
             }
           },
           {
-            "id": "a4588c5d0607febb",
+            "id": "abfe16421086cd13",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/berlin-relocation-plan.md",
+                "file": "posts/2024-winter-vacation-plan.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,12 +34,12 @@
             }
           },
           {
-            "id": "0746662ce0d90779",
+            "id": "7f790ba289c657a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/get-a-job-with-delivery-hero.md",
+                "file": "posts/2024-01-07.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,12 +47,12 @@
             }
           },
           {
-            "id": "fdd6958731f11fd7",
+            "id": "c8a63f0302a362cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/dh-second-interview-preparation.md",
+                "file": "posts/jenkins-docker.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,33 +60,7 @@
             }
           },
           {
-            "id": "06df15229f89c6e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2023-12-04.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1746cc217ec7073b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/readme.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "171dd70c07141a60",
+            "id": "e63bb2c3ae68de52",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -110,22 +71,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "3ef7cf21eace351e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/jenkins-migration.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -208,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/jenkins-migration.md",
+                "file": "posts/2024-01-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -225,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/jenkins-migration.md",
+                "file": "posts/2024-01-07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -256,7 +204,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/jenkins-migration.md"
+                "file": "posts/2024-01-07.md"
               }
             }
           },
@@ -314,17 +262,33 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "3ef7cf21eace351e",
+  "active": "7f790ba289c657a1",
   "lastOpenFiles": [
+    "posts/2024-winter-vacation-plan.md",
+    "posts/top-down-approach-ch3.md",
+    "posts/attachments/bit-error-alternating-bit.jpeg",
+    "posts/attachments/bit-error-absent-nak.jpeg",
+    "posts/attachments/bit-error-numbering-receiver.jpeg",
+    "posts/attachments/bit-error-numbering-sender.jpeg",
+    "posts/attachments/bit-error-channel.jpeg",
+    "posts/attachments/all-reliable-channel.jpeg",
+    "posts/2024-01-07.md",
+    "posts/jenkins-docker.md",
     "posts/shook-prod-server-setting.md",
-    "posts/jenkins-migration.md",
+    "posts/attachments/jenkins-github-submodules.png",
+    "posts/attachments/jenkins-github-repository-setting.png",
+    "posts/attachments/jenkins-push-event.png",
+    "posts/attachments/jenkins-docker-github-project.png",
+    "posts/spring-boot-3-swagger.md",
+    "posts/api-docs-search.md",
+    "posts/attachments/IMG_0283.heic",
     "posts/get-a-job-with-delivery-hero.md",
     "posts/berlin-relocation-plan.md",
-    "posts/dh-second-interview-preparation.md",
-    "posts/readme.md",
-    "posts/top-down-approach-ch3.md",
     "posts/2023-12-14.md",
+    "posts/dh-second-interview-preparation.md",
     "posts/2023-12-04.md",
+    "posts/readme.md",
+    "posts/jenkins-migration.md",
     "posts/english-speaking-pattern-11-30.md",
     "posts/top-down-approach-ch2.md",
     "posts/2023-09-21.md",
@@ -336,22 +300,6 @@
     "posts/2023-12-11.md",
     "posts/shook-nginx.md",
     "posts/domain-driven-development-start.md",
-    "posts/local-cache-concurrency-problem.md",
-    "posts/delivery-hero-employment.md",
-    "posts/woowacourse-retrospect.md",
-    "posts/2023-03-22.md",
-    "posts/nginx.md",
-    "posts/mysql-full-text-search.md",
-    "posts/attachments/read-write-lock-request-time.png",
-    "posts/attachments/synchronized-request-time.png",
-    "posts/attachments/concurrency-synchronized-test.png",
-    "posts/attachments/inmemory-concurrency.png",
-    "posts/attachments/jenkins-ssh-transfers.png",
-    "posts/attachments/jenkins-ssh-server.png",
-    "posts/attachments/jenkins-publish-over-ssh.png",
-    "posts/attachments/jenkins-build-gradle-file.png",
-    "posts/attachments/jenkins-gradle-script.png",
-    "posts/attachments/jenkins-submodule-settings.png",
     "posts/Untitled 20231113 041648.mdenc",
     "calendar",
     "dictionary",

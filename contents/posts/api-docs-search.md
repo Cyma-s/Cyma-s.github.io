@@ -1,11 +1,11 @@
 ---
-title   : S-HOOK API 자동화 툴 정하기
-date    : 2023-08-07 22:45:31 +0900
-updated : 2023-08-07 22:45:54 +0900
-tags     : 
-- shook
-- 레벨3
-- spring
+title: S-HOOK API 자동화 툴 정하기
+date: 2023-08-07 22:45:31 +0900
+updated: 2024-01-07 14:56:59 +0900
+tags:
+  - shook
+  - 레벨3
+  - spring
 ---
 
 보통 API 자동화 툴이라고 하면 swagger, REST API docs 가 자주 고려된다.     
@@ -26,10 +26,6 @@ swagger 는 OpenAPI 사양을 사용하기 때문에, 표준화된 형식을 지
 
 Test 를 강제하지 않기 때문에 문서의 신뢰도를 높게 유지하기 어려운 문제가 있다. 
 
-### 보완법
-
-
-
 ## Spring REST docs
 
 가장 손꼽히는 장점은 테스트로부터 API 문서를 생성하므로 문서는 언제나 실제 코드와 함께 최신 상태라는 것이 보장된다.    
@@ -46,7 +42,3 @@ ascii docs 를 써야 한다.... 테스트 코드가 추가될 때마다 ascii d
 추가적으로 UI 가 swagger 에 비해서는 우아하지 않다. (예쁜 것도 중요하다.)     
 
 그러나 테스트 코드가 변경될 떄마다 직접 문서를 수정해야 하는 상황이 발생할 수 있다. (즉, 매우 귀찮다.)
-
-## restdocs-api-spec
-
-Spring ReST Docs 에서 OpenAPI 사양을 생성할 수 있다.    
