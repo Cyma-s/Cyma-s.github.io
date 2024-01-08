@@ -21,5 +21,8 @@ jobs:
       - name: Install Dependencies
         run: npm install --force
 
+      - name: Install gh-pages
+        run: npm install -g gh-pages
+
       - name: Build and Deploy
         run: npm run build && gh-pages -d public -b deploy
