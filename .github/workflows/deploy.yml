@@ -38,6 +38,11 @@ jobs:
         run: |
           git config --global user.email "ssol0319@naver.com"
           git config --global user.name "Cyma-s"
+      
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.0
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
       - name: Build and Deploy
         run: |
