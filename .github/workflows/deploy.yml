@@ -13,6 +13,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Cache NPM Dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
@@ -30,4 +38,4 @@ jobs:
           git config --global user.name "Cyma-s"
 
       - name: Build and Deploy
-        run: npm run build && gh-pages -d public -b deploy
+        run: npm run build && npx gh-pages -d public -b deploy --repo "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" 
