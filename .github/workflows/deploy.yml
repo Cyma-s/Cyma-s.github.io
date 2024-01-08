@@ -13,7 +13,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          persist-credentials: true
+          persist-credentials: false
+          fetch-depth: 0
+
 
       - name: Cache NPM Dependencies
         uses: actions/cache@v2
@@ -42,4 +44,6 @@ jobs:
       - name: Build and Deploy
         run: |
           npm run build
-          npx gh-pages -d public -b deploy --repo "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" 
+          gh-pages -d public -b deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
