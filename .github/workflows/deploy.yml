@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          persist-credentials: false
+          persist-credentials: true
 
       - name: Cache NPM Dependencies
         uses: actions/cache@v2
@@ -40,4 +40,6 @@ jobs:
           git config --global user.name "Cyma-s"
 
       - name: Build and Deploy
-        run: npm run build && gh-pages -d public -b deploy
+        run: |
+          npm run build
+          gh-pages -d public -b deploy --repo "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" 
