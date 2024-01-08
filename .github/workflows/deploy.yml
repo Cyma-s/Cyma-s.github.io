@@ -40,4 +40,4 @@ jobs:
           git config --global user.name "Cyma-s"
 
       - name: Build and Deploy
-        run: npm run build && npx gh-pages -d public -b deploy --repo "https://${{ secrets.GITHUB_TOKEN }}@github.com/Cyma-s.github.io"
+        run: npm run build && npx gh-pages -d public -b deploy --repo "https://${{ secrets.GITHUB_TOKEN }}@github.com/Cyma-s/Cyma-s.github.io"
