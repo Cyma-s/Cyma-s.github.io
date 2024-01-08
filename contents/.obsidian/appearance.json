@@ -1,8 +1,8 @@
 {
   "accentColor": "#ff007b",
-  "theme": "system",
-  "baseFontSize": 18,
-  "cssTheme": "Things",
+  "theme": "moonstone",
+  "baseFontSize": 14,
+  "cssTheme": "Border",
   "translucency": false,
   "monospaceFontFamily": "Bai Jamjuree",
   "textFontFamily": "Apple SD Gothic Neo",

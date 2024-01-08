@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-01-07.md",
+                "file": "posts/2024-01-08.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,25 +47,12 @@
             }
           },
           {
-            "id": "c8a63f0302a362cd",
+            "id": "659bb62b97757227",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/jenkins-docker.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e63bb2c3ae68de52",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/shook-prod-server-setting.md",
+                "file": "posts/how-secure-and-quick-is-quic.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -156,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2024-01-07.md",
+                "file": "posts/how-secure-and-quick-is-quic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2024-01-07.md",
+                "file": "posts/how-secure-and-quick-is-quic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -204,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2024-01-07.md"
+                "file": "posts/how-secure-and-quick-is-quic.md"
               }
             }
           },
@@ -217,18 +204,18 @@
             }
           },
           {
-            "id": "05257347f52405a6",
-            "type": "leaf",
-            "state": {
-              "type": "tasks_timeline_view",
-              "state": {}
-            }
-          },
-          {
             "id": "8452eca77f7b1165",
             "type": "leaf",
             "state": {
               "type": "timeline",
+              "state": {}
+            }
+          },
+          {
+            "id": "d113d85a53381936",
+            "type": "leaf",
+            "state": {
+              "type": "tasks_timeline_view",
               "state": {}
             }
           }
@@ -251,30 +238,39 @@
       "random-note:랜덤 노트 열기": false,
       "markdown-importer:마크다운 형식 가져오기 열기": false,
       "smart-random-note:Open Random Note from Search": false,
-      "omnisearch:Omnisearch": false,
       "templater-obsidian:Templater": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "periodic-notes:Open today": false,
-      "meld-encrypt:New encrypted note": false,
-      "meld-encrypt:Convert to or from an Encrypted note": false,
       "obsidian-full-calendar:Open Full Calendar": false,
       "obsidian-day-planner:Timeline": false,
-      "homepage:Open homepage": false
+      "homepage:Open homepage": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "meld-encrypt:New encrypted note": false,
+      "meld-encrypt:Convert to or from an Encrypted note": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "7f790ba289c657a1",
+  "active": "659bb62b97757227",
   "lastOpenFiles": [
-    "posts/2024-winter-vacation-plan.md",
+    "posts/how-secure-and-quick-is-quic.md",
+    "posts/2024-01-08.md",
+    "posts/jenkins-docker.md",
+    "posts/2024-school-activity-plan.md",
+    "posts/2024-01-07.md",
     "posts/top-down-approach-ch3.md",
+    "posts/2024-winter-vacation-plan.md",
+    "posts/shook-prod-server-setting.md",
+    "posts/2023-12.md",
+    "posts/2023.md",
+    "posts/2024-01.md",
+    "posts/2024.md",
+    "posts/2023-02.md",
+    "posts/readme.md",
     "posts/attachments/bit-error-alternating-bit.jpeg",
     "posts/attachments/bit-error-absent-nak.jpeg",
     "posts/attachments/bit-error-numbering-receiver.jpeg",
     "posts/attachments/bit-error-numbering-sender.jpeg",
     "posts/attachments/bit-error-channel.jpeg",
     "posts/attachments/all-reliable-channel.jpeg",
-    "posts/2024-01-07.md",
-    "posts/jenkins-docker.md",
-    "posts/shook-prod-server-setting.md",
     "posts/attachments/jenkins-github-submodules.png",
     "posts/attachments/jenkins-github-repository-setting.png",
     "posts/attachments/jenkins-push-event.png",
@@ -287,19 +283,11 @@
     "posts/2023-12-14.md",
     "posts/dh-second-interview-preparation.md",
     "posts/2023-12-04.md",
-    "posts/readme.md",
     "posts/jenkins-migration.md",
     "posts/english-speaking-pattern-11-30.md",
     "posts/top-down-approach-ch2.md",
     "posts/2023-09-21.md",
     "posts/2023-09-25.md",
-    "posts/objective.md",
-    "posts/dh-recruiter-call.md",
-    "posts/bit-masking.md",
-    "posts/english-speaking-dec-2week.md",
-    "posts/2023-12-11.md",
-    "posts/shook-nginx.md",
-    "posts/domain-driven-development-start.md",
     "posts/Untitled 20231113 041648.mdenc",
     "calendar",
     "dictionary",

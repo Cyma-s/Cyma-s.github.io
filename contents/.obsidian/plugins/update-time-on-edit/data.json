@@ -13,7 +13,7 @@
   ],
   "enableExperimentalHash": false,
   "fileHashMap": {
-    "posts/2023.md": "53020aa1990cbdeed119f034afc227d8d76f3959ed28a9b7d760ddeb5abd374a",
+    "posts/2023.md": "b057d91380b6afad6b273c4dd67880553b6c99b6fd1d3a870733bf0b40669a16",
     "posts/2023-10-29.md": "2a2185e4a3cd871ed32c3abc69e60a42fcb94dcfea01c1a6c716b0a21c1e8b43",
     "posts/inmemory-cache-develop.md": "c2f06dde18d48dd07243963b0a0a0971b78ff4ca32c3ded5797205fc6806adec",
     "posts/ehcache-apply.md": "9bdb3acb8a62d7dcccc842ce41bee9d17e58790b3cd15ed23f624f941e4555b7",
@@ -41,7 +41,7 @@
     "posts/mysql-execution-plan.md": "b612ccb9452e4cd012cb0d2a03cd85166fcc733f6d84f94add25266248683d30",
     "posts/2023-11-04.md": "82b8549832e0ff5d4c97f1b2493f8c8d930370457d57b6104a54584ddfc34dfa",
     "posts/2023-11.md": "5599b39b05999eb2f958f3c09cd11003a610a5e9efba34e12057ba714f9d9ef7",
-    "posts/readme.md": "7aefa0f573c08617b65c444da093e9a953b7e56ad1c1d8592f8d15597e398265",
+    "posts/readme.md": "7956360e5ec307c2fab4e2a0762b74167d584b9facb074fb08aeb94d6a358c78",
     "posts/binary-search-tree.md": "183f4e44cf90b581748c09d0390ba0e99a996c46056a2882a5ce4c6bc973c117",
     "posts/avl-tree.md": "e20e96c46843b694b3c9fe4fc6b28bac608759769e4303639071899dabb4efcc",
     "posts/2023-11-05.md": "26bb81bd8e03e89ac7230dd6fd6d9bc20e3a202732ab350731abb3424b319ed8",
@@ -123,7 +123,7 @@
     "posts/english-speaking-dec-1week.md": "7777de55185ca5694b68404885cc4dcd2a0db2705150a43b6420601895dff164",
     "posts/lca.md": "53a1ddc20575ace2cd22447cf73cf06b94b20f7b8af2c07e600aa48afd6f58fc",
     "posts/2023-12-07.md": "dc906d729459155bda5f2e14d2903e5a1b59ad3632dd2c4935f37594a31c3523",
-    "posts/2023-12.md": "008accc023383b456179ed280aff7255f160f35b26a6541a2ce79d0b638b3788",
+    "posts/2023-12.md": "5086c78d4c9e858e15c730dd8953bae82fe2489a74ddc552b30d7035d764b843",
     "posts/shook.md": "5d77df0ae31b399ede62c75c6843adcac2dee6189fe8909861bdfe2eacdea1cb",
     "posts/monitor-lock-and-java-synchoronized.md": "409993f33b0b23dbd827ceeb3e53dec37b15d9822f24514bd6d9b5dd3ce7bb1f",
     "posts/shook-domain-model.md": "2458d20bb3f05f87cf73c69f7e2df3bf1e82e397c149b0281fe80b67f1b817a1",
@@ -140,7 +140,7 @@
     "posts/english-speaking-dec-2week.md": "3868e828978758fc73eed095de006fc09b57260059e5232b35fefd057bd0bdb2",
     "posts/bit-masking.md": "7ea6c72991e80bb874b6763a6136737f8559e048ac763272e5ca4ca4cf2f76cc",
     "posts/2023-09-01.md": "46c690a9d2dc0a27aba23e5442cc4ac51abbbb44e3bf0d6fbf671a83eeaf9630",
-    "posts/top-down-approach-ch3.md": "b4090ca4db0e98f378b87942f590f4d588b6e91ddcd87dd50fff0f4b5a045d6c",
+    "posts/top-down-approach-ch3.md": "b2d0399cf83952940583139262e40386d2d8e76f10ef1f1990796d5da519e107",
     "posts/berlin-relocation-plan.md": "19f0ff2d97fbef2fe49e076ddd7f560bf0f20629471c36301a136136058631e2",
     "posts/get-a-job-with-delivery-hero.md": "f0238470a8a0385ee2e245c34580a33223f56d31e501341cfd0c16f815e62467",
     "posts/objective.md": "fcb907bfb8cc78dc465fa0f34a2e08410d636e99ba313e2a7ac85190c07c9704",
@@ -148,6 +148,10 @@
     "posts/2024-01-07.md": "499eb02f6195132f80cbd35c0be7b1211a9708e632acf53b7158ec357c349bda",
     "posts/api-docs-search.md": "9e41d330e1ac30fefa5d297581af3c20890de83c3636a62f67271e8b8cd8f83d",
     "posts/spring-boot-3-swagger.md": "9ab9b84c936482ec7eada6b24f54d9d75d84279b27595c7d80d199eb0d6be41e",
-    "posts/jenkins-docker.md": "e8870b5aa0e8de0f6fa7bb26b7aaff16cfc6ada7e2d7d315305442ac4156fbab"
+    "posts/jenkins-docker.md": "e8870b5aa0e8de0f6fa7bb26b7aaff16cfc6ada7e2d7d315305442ac4156fbab",
+    "posts/2024-01.md": "42f1b1bf78681daa30121937f2e6777735472404f68bc06274559bd2845d771b",
+    "posts/2024.md": "49c443c442ce3bf5c3857ad4986d6bd28362d568264f848b0eeb50beadbe9268",
+    "posts/2024-01-08.md": "78bc7b4a71b74fb532ad5854a00abd66528280e4ec9ead16b8b29be910b49cd3",
+    "posts/how-secure-and-quick-is-quic.md": "df101b4cd8cfbd6cd76191bdd727db94f82785e2dbee37f6c686e08c96f05523"
   }
 }

@@ -55,5 +55,14 @@
   "things-style@@h2-color": "#E31D56",
   "things-style@@em-color": "#828EFF",
   "things-style@@quote-color": "#6C6C6C",
-  "things-style@@tag-background-color-l": "#FFC3E1"
+  "things-style@@tag-background-color-l": "#FFC3E1",
+  "Components@@tab-autohide": false,
+  "Components@@status-bar-autohide": false,
+  "Components@@Ribbon-autohide": true,
+  "Components@@nav-header-autohide": false,
+  "Components@@CTA-BTN-enable": false,
+  "Components@@file-names-untrim": false,
+  "Appearance-light@@theme-light-style-select": "theme-light-background-default",
+  "Appearance-light@@card-layout-open-light": true,
+  "Appearance-light@@color-pink-rgb@@light": "#F92AA0"
 }

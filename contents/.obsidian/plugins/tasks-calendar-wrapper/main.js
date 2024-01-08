@@ -35858,6 +35858,9 @@ var QuickEntry = class extends React3.Component {
                 return;
               if (newTask.length > 1) {
                 callback.handleCreateNewTask(filePath, newTask);
+                if (this.textInput.current) {
+                  this.textInput.current.value = "";
+                }
               } else {
                 (_c = this.textInput.current) == null ? void 0 : _c.focus();
               }
@@ -36063,7 +36066,7 @@ var TimelineView = class extends React5.Component {
     if (this.props.userOptions.dailyNoteFormat && this.props.userOptions.dailyNoteFormat !== "")
       quickEntryFiles.add(daileNoteFolder + dailyNoteFileName);
     const baseStyles = [...new Set(styles)].join(" ");
-    const counterFilter = this.state.filter.length === 0 ? "" : this.state.filter + this.props.userOptions.counterBehavior;
+    const counterFilter = this.state.filter.length === 0 ? "" : this.state.filter + " " + this.props.userOptions.counterBehavior;
     const todayFocus = this.state.todayFocus ? "todayFocus" : "";
     return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
       "div",
@@ -36081,7 +36084,7 @@ var TimelineView = class extends React5.Component {
           counters: [
             {
               onClick: () => {
-                this.handleCounterFilterClick("todo");
+                this.handleCounterFilterClick("todoFilter");
               },
               cnt: todoCount,
               label: "Todo",
@@ -36090,7 +36093,7 @@ var TimelineView = class extends React5.Component {
             },
             {
               onClick: () => {
-                this.handleCounterFilterClick("overdue");
+                this.handleCounterFilterClick("overdueFilter");
               },
               cnt: overdueCount,
               id: "overdue",
@@ -36099,7 +36102,7 @@ var TimelineView = class extends React5.Component {
             },
             {
               onClick: () => {
-                this.handleCounterFilterClick("unplanned");
+                this.handleCounterFilterClick("unplannedFilter");
               },
               cnt: unplannedCount,
               id: "unplanned",
@@ -36431,11 +36434,11 @@ var ObsidianTaskAdapter = class {
    * @param outLinks Links from Obsidian.
    * //@param children 
    * //@param annotated 
-   * @param fontMatter The yaml data in the header of the file where the list item belongs.
+   * @param frontMatter The yaml data in the header of the file where the list item belongs.
    * @param tags Tag list contained in the list item.
    * @returns A TaskDataModel with basic information if the list item is a Task, null if it is not.
    */
-  fromLine(line, filePath, parent, position, outLinks, fontMatter, tags) {
+  fromLine(line, filePath, parent, position, outLinks, frontMatter, tags) {
     const regexMatch = line.match(TaskRegularExpressions.taskRegex);
     if (regexMatch === null) {
       return null;
@@ -36449,12 +36452,13 @@ var ObsidianTaskAdapter = class {
     if (blockLink !== "") {
       description = description.replace(TaskRegularExpressions.blockLinkRegex, "").trim();
     }
-    if (fontMatter) {
-      if (fontMatter["tag"] && typeof fontMatter["tag"] === "string") {
-        tags.push(fontMatter["tag"]);
+    if (frontMatter) {
+      if (frontMatter["tag"] && typeof frontMatter["tag"] === "string") {
+        const frontmatterTagPrefix = frontMatter["tag"].startsWith("#") ? "" : "#";
+        tags.push(frontmatterTagPrefix + frontMatter["tag"]);
       }
-      if (fontMatter["tags"] && typeof fontMatter["tags"] === typeof new Array()) {
-        fontMatter["tags"].forEach((t) => tags.push(t));
+      if (frontMatter["tags"] && typeof frontMatter["tags"] === typeof new Array()) {
+        frontMatter["tags"].forEach((t) => tags.push(t.startsWith("#") ? "" : "#" + t));
       }
     }
     tags = [...new Set(tags)];
@@ -36487,7 +36491,7 @@ var ObsidianTaskAdapter = class {
       priority: "",
       //happens: new Map<string, string>(),
       recurrence: "",
-      fontMatter: fontMatter || {},
+      fontMatter: frontMatter || {},
       isTasksTask: false,
       due: void 0,
       scheduled: void 0,

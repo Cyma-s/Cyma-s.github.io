@@ -5,6 +5,7 @@
   "taskFormat": "dataview",
   "setCreatedDate": true,
   "setDoneDate": true,
+  "setCancelledDate": true,
   "autoSuggestInEditor": true,
   "autoSuggestMinMatch": 0,
   "autoSuggestMaxItems": 6,
