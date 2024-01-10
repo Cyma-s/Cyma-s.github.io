@@ -140,7 +140,7 @@
     "posts/english-speaking-dec-2week.md": "3868e828978758fc73eed095de006fc09b57260059e5232b35fefd057bd0bdb2",
     "posts/bit-masking.md": "7ea6c72991e80bb874b6763a6136737f8559e048ac763272e5ca4ca4cf2f76cc",
     "posts/2023-09-01.md": "46c690a9d2dc0a27aba23e5442cc4ac51abbbb44e3bf0d6fbf671a83eeaf9630",
-    "posts/top-down-approach-ch3.md": "b2d0399cf83952940583139262e40386d2d8e76f10ef1f1990796d5da519e107",
+    "posts/top-down-approach-ch3.md": "1f260b029b616c8e076ef8e53c9fbd8c87e1bcac7a2d041db3d781662b4bac07",
     "posts/berlin-relocation-plan.md": "19f0ff2d97fbef2fe49e076ddd7f560bf0f20629471c36301a136136058631e2",
     "posts/get-a-job-with-delivery-hero.md": "f0238470a8a0385ee2e245c34580a33223f56d31e501341cfd0c16f815e62467",
     "posts/objective.md": "fcb907bfb8cc78dc465fa0f34a2e08410d636e99ba313e2a7ac85190c07c9704",
@@ -151,7 +151,10 @@
     "posts/jenkins-docker.md": "e8870b5aa0e8de0f6fa7bb26b7aaff16cfc6ada7e2d7d315305442ac4156fbab",
     "posts/2024-01.md": "42f1b1bf78681daa30121937f2e6777735472404f68bc06274559bd2845d771b",
     "posts/2024.md": "49c443c442ce3bf5c3857ad4986d6bd28362d568264f848b0eeb50beadbe9268",
-    "posts/2024-01-08.md": "78bc7b4a71b74fb532ad5854a00abd66528280e4ec9ead16b8b29be910b49cd3",
-    "posts/how-secure-and-quick-is-quic.md": "df101b4cd8cfbd6cd76191bdd727db94f82785e2dbee37f6c686e08c96f05523"
+    "posts/2024-01-08.md": "5cf12d6c95fd6adee8bab9669960516b3c3303c305dfb093b8f9b44119fe27fc",
+    "posts/how-secure-and-quick-is-quic.md": "df101b4cd8cfbd6cd76191bdd727db94f82785e2dbee37f6c686e08c96f05523",
+    "posts/2024-01-09.md": "8f1d570a78da4a89553afee8dde18309cab5a175080ce0a671a078b36e7556f7",
+    "posts/english-speaking.md": "627cc516c2f3a4b17cc0d1350204b0e4747b93591b2f6d0412de7ffd4226dd0c",
+    "posts/english-speaking-2024-01-09.md": "76ec14ab7e1f09ec0f28b25768b4a9f34088115782a700099142b2d0f1efd24e"
   }
 }

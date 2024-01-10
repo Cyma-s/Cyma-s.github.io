@@ -13,9 +13,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          persist-credentials: false
+          persist-credentials: true
           fetch-depth: 0
-
 
       - name: Cache NPM Dependencies
         uses: actions/cache@v2

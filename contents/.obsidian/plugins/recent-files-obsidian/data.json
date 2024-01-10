@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "english-speaking-2024-01-09",
+      "path": "posts/english-speaking-2024-01-09.md"
+    },
+    {
       "basename": "how-secure-and-quick-is-quic",
       "path": "posts/how-secure-and-quick-is-quic.md"
+    },
+    {
+      "basename": "top-down-approach-ch3",
+      "path": "posts/top-down-approach-ch3.md"
+    },
+    {
+      "basename": "2024-winter-vacation-plan",
+      "path": "posts/2024-winter-vacation-plan.md"
+    },
+    {
+      "basename": "english-speaking",
+      "path": "posts/english-speaking.md"
+    },
+    {
+      "basename": "2024-01-09",
+      "path": "posts/2024-01-09.md"
     },
     {
       "basename": "2024-01-08",
@@ -19,14 +39,6 @@
     {
       "basename": "2024-01-07",
       "path": "posts/2024-01-07.md"
-    },
-    {
-      "basename": "top-down-approach-ch3",
-      "path": "posts/top-down-approach-ch3.md"
-    },
-    {
-      "basename": "2024-winter-vacation-plan",
-      "path": "posts/2024-winter-vacation-plan.md"
     },
     {
       "basename": "shook-prod-server-setting",
@@ -187,18 +199,6 @@
     {
       "basename": "level2-eighth-retrospect",
       "path": "posts/level2-eighth-retrospect.md"
-    },
-    {
-      "basename": "level1-third-retrospect",
-      "path": "posts/level1-third-retrospect.md"
-    },
-    {
-      "basename": "level1-sixth-retrospect",
-      "path": "posts/level1-sixth-retrospect.md"
-    },
-    {
-      "basename": "level1-seventh-retrospect",
-      "path": "posts/level1-seventh-retrospect.md"
     }
   ],
   "omittedPaths": [
