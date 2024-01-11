@@ -31,16 +31,12 @@ jobs:
 
       - name: Install Dependencies
         run: npm install --force
-
-      - name: Install gh-pages
-        run: npm install -g gh-pages
-
-      - name: Configure Git
-        run: |
-          git config --global user.email "ssol0319@naver.com"
-          git config --global user.name "Cyma-s"
       
-      - name: Build and Deploy
-        run: |
-          npm run build
-          GH_TOKEN=${{ secrets.GITHUB_TOKEN }} gh-pages -d public -b deploy
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
