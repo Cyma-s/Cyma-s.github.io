@@ -43,6 +43,4 @@ jobs:
       - name: Build and Deploy
         run: |
           npm run build
-          gh-pages -d public -b deploy
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN=${{ secrets.GITHUB_TOKEN }} gh-pages -d public -b deploy
