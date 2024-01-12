@@ -104,7 +104,7 @@
     "posts/book-love-skill.md": "4341b6effd6f7e79a903b8fafd08ddac375debdc9fa40f7ccdb9f73dee1c874f",
     "posts/kmp-algorithm.md": "b1f16245bac485de002422a2610df6a05893ba1bcc94ba8a3e519ba242fbe648",
     "posts/2023-11-26.md": "3d0b324649349ffffc3f4a684ef7ebed290c10fa3e8707d876c38bd234ae690f",
-    "posts/jenkins-migration.md": "6968ff8ec33af54e28f666ed9a34d313a91ba903d0c23bc8b57f3b27eb7abfe7",
+    "posts/jenkins-migration.md": "3ab1bc0e5b337ce83d597459b745cec00342365dfcb8523d5bbbf868cf70dcda",
     "posts/shook-function-develop.md": "56fe6d8f4e39c1a45b6e764eb9b183677b057ca0067918031f60ce6f0578fbd6",
     "posts/lower-bound-and-upper-bound.md": "a15b61d3913b0db34a672839d02d2395f86709fc3fe1daf9019151c7c7d7995a",
     "posts/dh-recruiter-call.md": "fd97449e92f6e48225139d410d891f5e4f2e91ff722352b4e094b5cbbce51994",
@@ -144,7 +144,7 @@
     "posts/berlin-relocation-plan.md": "19f0ff2d97fbef2fe49e076ddd7f560bf0f20629471c36301a136136058631e2",
     "posts/get-a-job-with-delivery-hero.md": "f0238470a8a0385ee2e245c34580a33223f56d31e501341cfd0c16f815e62467",
     "posts/objective.md": "fcb907bfb8cc78dc465fa0f34a2e08410d636e99ba313e2a7ac85190c07c9704",
-    "posts/2024-winter-vacation-plan.md": "ba08e96cecff192f1dd0c9e33d00777e70ef038520b9647c4e581b79ea279920",
+    "posts/2024-winter-vacation-plan.md": "90b4a3d5bfdd3ea82e3f1a3a847a6fbffe299e6df4be4acc28ba75204316e21e",
     "posts/2024-01-07.md": "499eb02f6195132f80cbd35c0be7b1211a9708e632acf53b7158ec357c349bda",
     "posts/api-docs-search.md": "9e41d330e1ac30fefa5d297581af3c20890de83c3636a62f67271e8b8cd8f83d",
     "posts/spring-boot-3-swagger.md": "9ab9b84c936482ec7eada6b24f54d9d75d84279b27595c7d80d199eb0d6be41e",
@@ -152,9 +152,16 @@
     "posts/2024-01.md": "42f1b1bf78681daa30121937f2e6777735472404f68bc06274559bd2845d771b",
     "posts/2024.md": "49c443c442ce3bf5c3857ad4986d6bd28362d568264f848b0eeb50beadbe9268",
     "posts/2024-01-08.md": "5cf12d6c95fd6adee8bab9669960516b3c3303c305dfb093b8f9b44119fe27fc",
-    "posts/how-secure-and-quick-is-quic.md": "df101b4cd8cfbd6cd76191bdd727db94f82785e2dbee37f6c686e08c96f05523",
     "posts/2024-01-09.md": "8f1d570a78da4a89553afee8dde18309cab5a175080ce0a671a078b36e7556f7",
     "posts/english-speaking.md": "627cc516c2f3a4b17cc0d1350204b0e4747b93591b2f6d0412de7ffd4226dd0c",
-    "posts/english-speaking-2024-01-09.md": "76ec14ab7e1f09ec0f28b25768b4a9f34088115782a700099142b2d0f1efd24e"
+    "posts/english-speaking-2024-01-09.md": "a8bd4f474751205a14a6ad5683e61c72f71df579bc947d1f26330fb4af06d919",
+    "posts/2024-01-11.md": "2419544723542001323e907eabfb6ec078ba0dfa966b97255fe621d7a78becfa",
+    "posts/english-speaking-2024-01-11.md": "5e27f2b66d82e535df969149eb9920c8d07e3c1d2c251eaa92b9cb01e0257ef9",
+    "posts/research-subject-instruction.md": "01391419944df54f599fdedf29cf99d08c578a2de56ad83564ee8cc9ffe0973e",
+    "posts/2024-01-12.md": "dfe988bd3817fb8c2246005b1fbdae8d704454cb72bb12cfe7aeaa4f2653d7cf",
+    "posts/english-speaking-2024-01-12.md": "c33777a1dffaa837d1bc42caa227d001a790a0708ee189751f56ef42a7dc1825",
+    "posts/lab-meeting-01-12.md": "94b0b91ef0ec2e4f761c9be8e33d4a7327a1ac436ac7f0463ff5a93566aa9fe2",
+    "posts/ubuntu-device-recognition-error.md": "5a100c75ea05ab32fc3d8dbd428ec67fdfc6f96d192a94102c80187eab6d9560",
+    "posts/app-image-execute.md": "1ffaded240a3cfd917433f1de9f6926507d227d15544fbcc1f77c1cf0a4bdcee"
   }
 }

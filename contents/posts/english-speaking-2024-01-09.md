@@ -1,7 +1,7 @@
 ---
-title: 1/9 영어 연습
+title: 1월 9일 영어 회화 연습
 date: 2024-01-09 09:03:30 +0900
-updated: 2024-01-09 20:31:13 +0900
+updated: 2024-01-11 08:56:08 +0900
 tags: 
 ---
 
@@ -48,5 +48,23 @@ Naturally, I failed a lots of times before. / There would be tens of notes / whi
 그럴 때 말을 시작하면 다른 사람들이 이해하기 어려운 문장 완성됨. 당연히 알아듣기 힘듦. 
 내가 하려는 말을 처음부터 끝까지 정리하는 습관을 들이는 것 중요. 
 
-기억력에 의존하지 말고 떠오른 생각은 적어둔다. 모든 사람들이 그렇듯이 머리에 떠오른 생각을 전부 기억할 수는 없다. 그러니 어떤 아이디어가 떠올랐다면 다른 곳에 메모해두고, 메모를 보면서 말하면 효율이 좋을 것이다. 
+기억력에 의존하지 말고 떠오른 생각은 적어두기. 
+모든 사람들이 그렇듯이 머리에 떠오른 생각을 전부 기억할 수는 없다. 그러니 어떤 아이디어가 떠올랐다면 다른 곳에 메모해두고, 메모를 보면서 말하면 효율이 좋을 것이다. 
 물론 이전에도 많이 실패했다. 메모하는 습관을 들이기 위해 잃어버린 공책은 수십권 정도 될 것이다. 그렇지만 나아지려고 시도하지 않으면 나아지는 건 없다. 나는 오늘도 공책을 잃어버리겠지만, 오늘도 메모를 할 것이다. 
+
+## 교정받은 문장
+
+- Thinking in Korean is difficult, and speaking in English is equally challenging for me. 
+	- the same 보다 equally challenging 사용하기
+- I have a poor short-term memory and I forgot the sentence I just thought of a moment ago.
+- I’m obsessed with talking about the thoughts that come into my head, and I tend to **interrupt** when someone is speaking about a different subject. I’m consciously trying to fix this problem, but it’s difficult for me. 
+	- cut the word 보다 I tend to interrupt 사용하기
+- The solution recommended by those around me is as follows. 
+	- 간결하게 표현하기
+- I **should avoid preparing** to speak **too early** and take time to organize my thoughts. There are many cases where I think **I’ve forgotten** my thoughts, but in reality, they are just feelings. There are no thoughts, only feelings. 
+	- Don’t prepare to speak in first 대신 should avoid preparing 사용
+- I should develop a habit of organizing what I want to say from start to finish, not rely on my memory, and write down my thoughts. 
+- Like everyone else, I can’t remember all the thoughts that come to my mind, so if I have an idea, I’ll take a note somewhere else and then refer to the content of the note. It helps me to **speak in** well-organized sentences. 
+- I’ve experienced a lot of failures before. There are many notebooks to help make **note-taking** a habit. However, I can’t improve if I don’t try to do so. Therefore, even if I lose my notebook, I’ll still take notes. 
+
+좀 더 간결하게 표현하고, have+p.p 신경쓰기

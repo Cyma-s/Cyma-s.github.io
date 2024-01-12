@@ -1,18 +1,28 @@
 ---
-title: How Secure and Quick is QUIC? Provable Security and Performance Analyses
+title: 연구 주제 조사
 date: 2024-01-08 17:10:03 +0900
-updated: 2024-01-08 17:14:57 +0900
+updated: 2024-01-12 12:57:55 +0900
 tags:
-  - quic
-  - 논문
+  - 연구실
 ---
 
-## Abstraction
+## How Secure and Quick is QUIC? Provable Security and Performance Analyses
+
+### Abstraction
 
 QUIC은 구글에서 개발하여 2013년에 Chrome 에 구현한 보안 전송 프로토콜로, 현재 지연 시간을 줄이면서 TLS와 유사한 보안 특성을 제공하는 가장 유망한 솔루션 중 하나이다. 공격자가 있는 상황에서 입증 가능한 보안 및 성능 보장 측면에서 QUIC 의 장단점을 살펴본다. 먼저 QUIC과 같은 성능 중심 프로토콜을 분석하기 위한 보안 모델을 소개하고, 프로토콜의 빌딩 블럭에 대한 합리적인 가정 하에서 QUIC이 정의를 만족한다는 것을 증명한다. 그러나 QUIC은 TLS-DHE와 같은 일부 TLS 모드에서 제공하는 순방향 비밀성이라는 전통적인 개념을 만족하지 못한다. 
 
-## Introduction
+### Introduction
 
 TLS와 같은 프로토콜은 상대적으로 높은 연결 설정 지연 시간 오버헤드로 인해 사용자 불만을 야기하고 있다. 이를 위해 기밀성, 인증, 무결성과 같은 기본적인 보안 목표 이외에도 지연 시간이 짧은 새로운 전송 프로토콜을 설계하기 위한 여러 노력이 있었다. 
 
 그 중 가장 유망한 프로토콜 중 하나인 QUIC이 있다. QUIC은 TCP, TLS, DTLS 의 아이디어를 통합하여 TLS에 필적하는 보안 기능, TCP에 필적하는 혼잡 제어 기능 등을 제공한다. 중복 통신을 없애기 위해 TCP에 의존하지 않고, 더 빠른 연결 설정을 위해 initial keys 를 사용하지 않는다는 점이 TLS 와의 주요 차이점이다. 
+
+## A Survey of TCP Congestion Control Algorithm
+
+### Abstraction
+
+인터넷의 빠른 발전과 함께 다양한 애플리케이션에 기반한 Internet 이 나타났고, 인터넷의 트래픽 또한 기하급수적으로 증가했다. 네트워크의 혼잡은 네트워크 연구 분야에서 가장 중요한 문제가 되어가고 있다. 적절한 혼잡 제어 (CC) 는 네트워크 혼잡 문제를 완화할 수 있다. 
+
+### Instruction
+

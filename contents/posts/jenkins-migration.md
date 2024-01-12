@@ -1,7 +1,7 @@
 ---
 title: 젠킨스 마이그레이션
 date: 2023-11-26 17:50:19 +0900
-updated: 2023-11-28 20:13:09 +0900
+updated: 2024-01-11 19:21:32 +0900
 tags:
   - shook
 ---
@@ -90,7 +90,7 @@ sudo docker pull jenkins/jenkins:lts
 docker-compose 를 설치한다. 
 
 ```bash
-sudo apt install docker-compose
+sudo apt-get install docker-compose
 ```
 
 도커 실행 경로에 `docker-compose.yml` 파일을 만들고, 내용을 작성해준다. 

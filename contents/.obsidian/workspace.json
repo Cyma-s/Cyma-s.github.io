@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "abfe16421086cd13",
+            "id": "1c9c54edbbda590e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-winter-vacation-plan.md",
+                "file": "posts/2024-01-12.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,12 +34,12 @@
             }
           },
           {
-            "id": "7f790ba289c657a1",
+            "id": "5b99e40fa0ec41db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-01-09.md",
+                "file": "posts/english-speaking-2024-01-12.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,12 +47,12 @@
             }
           },
           {
-            "id": "659bb62b97757227",
+            "id": "cff2f0637db62b0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/how-secure-and-quick-is-quic.md",
+                "file": "posts/research-subject-instruction.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,12 +60,12 @@
             }
           },
           {
-            "id": "914dcf22fbacac0e",
+            "id": "31c07b4072635c64",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/english-speaking-2024-01-09.md",
+                "file": "posts/2024-01-12.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/english-speaking-2024-01-09.md",
+                "file": "posts/2024-01-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/english-speaking-2024-01-09.md",
+                "file": "posts/2024-01-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -204,7 +204,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/english-speaking-2024-01-09.md"
+                "file": "posts/2024-01-12.md"
               }
             }
           },
@@ -262,16 +262,27 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "914dcf22fbacac0e",
+  "active": "1c9c54edbbda590e",
   "lastOpenFiles": [
-    "posts/how-secure-and-quick-is-quic.md",
+    "posts/english-speaking-2024-01-12.md",
+    "posts/2024-01-12.md",
+    "posts/lab-meeting-01-12.md",
+    "posts/app-image-execute.md",
+    "posts/ubuntu-device-recognition-error.md",
     "posts/top-down-approach-ch3.md",
+    "posts/2024-winter-vacation-plan.md",
+    "template/TIL.md",
+    "posts/research-subject-instruction.md",
+    "posts/jenkins-migration.md",
+    "posts/english-speaking-2024-01-11.md",
+    "posts/2024-01-11.md",
+    "template/english-speaking-template.md",
+    "template/template.md",
+    "posts/english-speaking-2024-01-09.md",
+    "posts/2024-01-09.md",
     "posts/attachments/gbn-receiver-fsm.jpeg",
     "posts/attachments/gbn-extended-fsm.jpeg",
-    "posts/2024-winter-vacation-plan.md",
-    "posts/english-speaking-2024-01-09.md",
     "posts/english-speaking.md",
-    "posts/2024-01-09.md",
     "posts/2024-01-08.md",
     "posts/jenkins-docker.md",
     "posts/2024-school-activity-plan.md",
@@ -281,8 +292,6 @@
     "posts/2023.md",
     "posts/2024-01.md",
     "posts/2024.md",
-    "posts/2023-02.md",
-    "posts/readme.md",
     "posts/attachments/bit-error-alternating-bit.jpeg",
     "posts/attachments/bit-error-absent-nak.jpeg",
     "posts/attachments/bit-error-numbering-receiver.jpeg",
@@ -291,15 +300,7 @@
     "posts/attachments/all-reliable-channel.jpeg",
     "posts/attachments/jenkins-github-submodules.png",
     "posts/attachments/jenkins-github-repository-setting.png",
-    "posts/spring-boot-3-swagger.md",
-    "posts/api-docs-search.md",
     "posts/attachments/IMG_0283.heic",
-    "posts/get-a-job-with-delivery-hero.md",
-    "posts/berlin-relocation-plan.md",
-    "posts/2023-12-14.md",
-    "posts/dh-second-interview-preparation.md",
-    "posts/2023-12-04.md",
-    "posts/jenkins-migration.md",
     "posts/Untitled 20231113 041648.mdenc",
     "calendar",
     "dictionary",
