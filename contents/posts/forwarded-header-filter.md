@@ -1,7 +1,7 @@
 ---
 title: ForwardedHeaderFilter
 date: 2023-08-17 13:33:44 +0900
-updated: 2023-10-24 12:48:04 +0900
+updated: 2024-01-16 13:33:26 +0900
 tags:
   - spring
 ---
@@ -112,7 +112,8 @@ private static class ForwardedHeaderRemovingRequest extends HttpServletRequestWr
     // Override header accessors to not expose forwarded headers  
   
     @Override  
-    @Nullable    public String getHeader(String name) {  
+    @Nullable    
+    public String getHeader(String name) {  
        if (FORWARDED_HEADER_NAMES.contains(name)) {  
           return null;  
        }  
@@ -178,12 +179,14 @@ private static class ForwardedHeaderExtractingRequest extends ForwardedHeaderRem
   
   
     @Override  
-    @Nullable    public String getScheme() {  
+    @Nullable    
+    public String getScheme() {  
        return this.scheme;  
     }  
   
     @Override  
-    @Nullable    public String getServerName() {  
+    @Nullable    
+    public String getServerName() {  
        return this.host;  
     }  
   
@@ -213,12 +216,14 @@ private static class ForwardedHeaderExtractingRequest extends ForwardedHeaderRem
     }  
   
     @Override  
-    @Nullable    public String getRemoteHost() {  
+    @Nullable    
+    public String getRemoteHost() {  
        return (this.remoteAddress != null ? this.remoteAddress.getHostString() : super.getRemoteHost());  
     }  
   
     @Override  
-    @Nullable    public String getRemoteAddr() {  
+    @Nullable    
+    public String getRemoteAddr() {  
        return (this.remoteAddress != null ? this.remoteAddress.getHostString() : super.getRemoteAddr());  
     }  
   

@@ -1,16 +1,60 @@
 {
   "recentFiles": [
     {
-      "basename": "2024-01-12",
-      "path": "posts/2024-01-12.md"
+      "basename": "top-down-approach-ch3",
+      "path": "posts/top-down-approach-ch3.md"
+    },
+    {
+      "basename": "lab-meeting-01-16",
+      "path": "posts/lab-meeting-01-16.md"
+    },
+    {
+      "basename": "lidar-data-format",
+      "path": "posts/lidar-data-format.md"
+    },
+    {
+      "basename": "lidar-sensor-data",
+      "path": "posts/lidar-sensor-data.md"
+    },
+    {
+      "basename": "forwarded-header-filter",
+      "path": "posts/forwarded-header-filter.md"
+    },
+    {
+      "basename": "2023-10-30",
+      "path": "posts/2023-10-30.md"
+    },
+    {
+      "basename": "english-speaking-template",
+      "path": "template/english-speaking-template.md"
+    },
+    {
+      "basename": "shook-domain-model",
+      "path": "posts/shook-domain-model.md"
+    },
+    {
+      "basename": "lab-meeting-01-12",
+      "path": "posts/lab-meeting-01-12.md"
+    },
+    {
+      "basename": "research-subject-instruction",
+      "path": "posts/research-subject-instruction.md"
     },
     {
       "basename": "english-speaking-2024-01-12",
       "path": "posts/english-speaking-2024-01-12.md"
     },
     {
-      "basename": "lab-meeting-01-12",
-      "path": "posts/lab-meeting-01-12.md"
+      "basename": "2024-01-12",
+      "path": "posts/2024-01-12.md"
+    },
+    {
+      "basename": "github-merge-strategy",
+      "path": "posts/github-merge-strategy.md"
+    },
+    {
+      "basename": "branch-strategy",
+      "path": "posts/branch-strategy.md"
     },
     {
       "basename": "app-image-execute",
@@ -21,20 +65,12 @@
       "path": "posts/ubuntu-device-recognition-error.md"
     },
     {
-      "basename": "top-down-approach-ch3",
-      "path": "posts/top-down-approach-ch3.md"
-    },
-    {
       "basename": "2024-winter-vacation-plan",
       "path": "posts/2024-winter-vacation-plan.md"
     },
     {
       "basename": "TIL",
       "path": "template/TIL.md"
-    },
-    {
-      "basename": "research-subject-instruction",
-      "path": "posts/research-subject-instruction.md"
     },
     {
       "basename": "jenkins-migration",
@@ -47,10 +83,6 @@
     {
       "basename": "2024-01-11",
       "path": "posts/2024-01-11.md"
-    },
-    {
-      "basename": "english-speaking-template",
-      "path": "template/english-speaking-template.md"
     },
     {
       "basename": "template",
@@ -163,42 +195,6 @@
     {
       "basename": "objective",
       "path": "posts/objective.md"
-    },
-    {
-      "basename": "dh-recruiter-call",
-      "path": "posts/dh-recruiter-call.md"
-    },
-    {
-      "basename": "bit-masking",
-      "path": "posts/bit-masking.md"
-    },
-    {
-      "basename": "english-speaking-dec-2week",
-      "path": "posts/english-speaking-dec-2week.md"
-    },
-    {
-      "basename": "2023-12-11",
-      "path": "posts/2023-12-11.md"
-    },
-    {
-      "basename": "shook-nginx",
-      "path": "posts/shook-nginx.md"
-    },
-    {
-      "basename": "domain-driven-development-start",
-      "path": "posts/domain-driven-development-start.md"
-    },
-    {
-      "basename": "local-cache-concurrency-problem",
-      "path": "posts/local-cache-concurrency-problem.md"
-    },
-    {
-      "basename": "delivery-hero-employment",
-      "path": "posts/delivery-hero-employment.md"
-    },
-    {
-      "basename": "woowacourse-retrospect",
-      "path": "posts/woowacourse-retrospect.md"
     }
   ],
   "omittedPaths": [

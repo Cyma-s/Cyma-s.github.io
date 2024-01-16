@@ -126,7 +126,7 @@
     "posts/2023-12.md": "5086c78d4c9e858e15c730dd8953bae82fe2489a74ddc552b30d7035d764b843",
     "posts/shook.md": "5d77df0ae31b399ede62c75c6843adcac2dee6189fe8909861bdfe2eacdea1cb",
     "posts/monitor-lock-and-java-synchoronized.md": "409993f33b0b23dbd827ceeb3e53dec37b15d9822f24514bd6d9b5dd3ce7bb1f",
-    "posts/shook-domain-model.md": "2458d20bb3f05f87cf73c69f7e2df3bf1e82e397c149b0281fe80b67f1b817a1",
+    "posts/shook-domain-model.md": "986dcc97a8da7c2055e5e7abfa979cc0699cfc9a34f9ea44b94e96c6100e649f",
     "posts/dh-second-interview-preparation.md": "82b9d43f18850d1a046dc62646c27d374feda07b9577fd5decd065b61941c8dc",
     "posts/2023-12-10.md": "a7accdbeaf7285ef90f270f6825d4fa006a9f1782d35e46d5160ed7b941bc7f1",
     "posts/2023-12-11.md": "b3190636d0ffba125007e877ab8468c640fad960962ba95984dc232508595981",
@@ -162,6 +162,11 @@
     "posts/english-speaking-2024-01-12.md": "c33777a1dffaa837d1bc42caa227d001a790a0708ee189751f56ef42a7dc1825",
     "posts/lab-meeting-01-12.md": "94b0b91ef0ec2e4f761c9be8e33d4a7327a1ac436ac7f0463ff5a93566aa9fe2",
     "posts/ubuntu-device-recognition-error.md": "5a100c75ea05ab32fc3d8dbd428ec67fdfc6f96d192a94102c80187eab6d9560",
-    "posts/app-image-execute.md": "1ffaded240a3cfd917433f1de9f6926507d227d15544fbcc1f77c1cf0a4bdcee"
+    "posts/app-image-execute.md": "1ffaded240a3cfd917433f1de9f6926507d227d15544fbcc1f77c1cf0a4bdcee",
+    "posts/branch-strategy.md": "f542797493400b38ba15de5e0c67ba6026822a5f1442c590aa7c684bc1be505d",
+    "posts/lab-meeting-01-16.md": "55ed201566f66bc3be2fff277e94a6f29d237a0a865381ce69394d4395099501",
+    "posts/forwarded-header-filter.md": "75366a1945265777028b18282226983fac8ae6f1e0948447bc37ba9bbefc5981",
+    "posts/lidar-data-format.md": "e620e24932f5457779acba68dd662c86f4d234aef0ca505fac8666e9fa6d4f9d",
+    "posts/lidar-sensor-data.md": "685b758c5598661470b3cbaf08d00bcf590fc2840500f9d80759cdd6cc067555"
   }
 }
