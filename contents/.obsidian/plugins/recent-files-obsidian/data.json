@@ -1,12 +1,52 @@
 {
   "recentFiles": [
     {
-      "basename": "top-down-approach-ch3",
-      "path": "posts/top-down-approach-ch3.md"
+      "basename": "2024-01-19",
+      "path": "posts/2024-01-19.md"
+    },
+    {
+      "basename": "trie",
+      "path": "posts/trie.md"
+    },
+    {
+      "basename": "getter-setter-position",
+      "path": "posts/getter-setter-position.md"
+    },
+    {
+      "basename": "berlin-relocation-plan",
+      "path": "posts/berlin-relocation-plan.md"
+    },
+    {
+      "basename": "2024-winter-vacation-plan",
+      "path": "posts/2024-winter-vacation-plan.md"
+    },
+    {
+      "basename": "2024-01-16",
+      "path": "posts/2024-01-16.md"
+    },
+    {
+      "basename": "github-codeowners",
+      "path": "posts/github-codeowners.md"
+    },
+    {
+      "basename": "domain-driven-development-start",
+      "path": "posts/domain-driven-development-start.md"
+    },
+    {
+      "basename": "shook-domain-model",
+      "path": "posts/shook-domain-model.md"
+    },
+    {
+      "basename": "shook-domain-aggregate",
+      "path": "posts/shook-domain-aggregate.md"
     },
     {
       "basename": "lab-meeting-01-16",
       "path": "posts/lab-meeting-01-16.md"
+    },
+    {
+      "basename": "top-down-approach-ch3",
+      "path": "posts/top-down-approach-ch3.md"
     },
     {
       "basename": "lidar-data-format",
@@ -27,10 +67,6 @@
     {
       "basename": "english-speaking-template",
       "path": "template/english-speaking-template.md"
-    },
-    {
-      "basename": "shook-domain-model",
-      "path": "posts/shook-domain-model.md"
     },
     {
       "basename": "lab-meeting-01-12",
@@ -63,10 +99,6 @@
     {
       "basename": "ubuntu-device-recognition-error",
       "path": "posts/ubuntu-device-recognition-error.md"
-    },
-    {
-      "basename": "2024-winter-vacation-plan",
-      "path": "posts/2024-winter-vacation-plan.md"
     },
     {
       "basename": "TIL",
@@ -161,40 +193,12 @@
       "path": "posts/get-a-job-with-delivery-hero.md"
     },
     {
-      "basename": "berlin-relocation-plan",
-      "path": "posts/berlin-relocation-plan.md"
-    },
-    {
       "basename": "2023-12-14",
       "path": "posts/2023-12-14.md"
     },
     {
       "basename": "dh-second-interview-preparation",
       "path": "posts/dh-second-interview-preparation.md"
-    },
-    {
-      "basename": "2023-12-04",
-      "path": "posts/2023-12-04.md"
-    },
-    {
-      "basename": "english-speaking-pattern-11-30",
-      "path": "posts/english-speaking-pattern-11-30.md"
-    },
-    {
-      "basename": "top-down-approach-ch2",
-      "path": "posts/top-down-approach-ch2.md"
-    },
-    {
-      "basename": "2023-09-21",
-      "path": "posts/2023-09-21.md"
-    },
-    {
-      "basename": "2023-09-25",
-      "path": "posts/2023-09-25.md"
-    },
-    {
-      "basename": "objective",
-      "path": "posts/objective.md"
     }
   ],
   "omittedPaths": [
