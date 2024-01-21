@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/shook-domain-aggregate.md",
+                "file": "posts/domain-driven-development-start.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -169,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2024-01-19.md",
+                "file": "posts/domain-driven-development-start.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +186,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2024-01-19.md",
+                "file": "posts/domain-driven-development-start.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -217,7 +217,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2024-01-19.md"
+                "file": "posts/domain-driven-development-start.md"
               }
             }
           },
@@ -275,18 +275,18 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "ed62fd2f7b28e19e",
+  "active": "cff2f0637db62b0f",
   "lastOpenFiles": [
-    "posts/trie.md",
+    "posts/shook-domain-aggregate.md",
+    "posts/shook-domain-model.md",
+    "posts/github-codeowners.md",
     "posts/2024-01-19.md",
+    "posts/trie.md",
     "posts/getter-setter-position.md",
     "posts/berlin-relocation-plan.md",
     "posts/2024-winter-vacation-plan.md",
     "posts/2024-01-16.md",
-    "posts/github-codeowners.md",
     "posts/domain-driven-development-start.md",
-    "posts/shook-domain-model.md",
-    "posts/shook-domain-aggregate.md",
     "posts/lab-meeting-01-16.md",
     "posts/top-down-approach-ch3.md",
     "posts/lidar-data-format.md",

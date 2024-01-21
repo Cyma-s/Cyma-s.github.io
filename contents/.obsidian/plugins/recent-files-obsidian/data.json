@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "domain-driven-development-start",
+      "path": "posts/domain-driven-development-start.md"
+    },
+    {
+      "basename": "shook-domain-aggregate",
+      "path": "posts/shook-domain-aggregate.md"
+    },
+    {
+      "basename": "shook-domain-model",
+      "path": "posts/shook-domain-model.md"
+    },
+    {
+      "basename": "github-codeowners",
+      "path": "posts/github-codeowners.md"
+    },
+    {
       "basename": "2024-01-19",
       "path": "posts/2024-01-19.md"
     },
@@ -23,22 +39,6 @@
     {
       "basename": "2024-01-16",
       "path": "posts/2024-01-16.md"
-    },
-    {
-      "basename": "github-codeowners",
-      "path": "posts/github-codeowners.md"
-    },
-    {
-      "basename": "domain-driven-development-start",
-      "path": "posts/domain-driven-development-start.md"
-    },
-    {
-      "basename": "shook-domain-model",
-      "path": "posts/shook-domain-model.md"
-    },
-    {
-      "basename": "shook-domain-aggregate",
-      "path": "posts/shook-domain-aggregate.md"
     },
     {
       "basename": "lab-meeting-01-16",
