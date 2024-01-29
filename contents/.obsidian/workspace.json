@@ -21,19 +21,6 @@
             }
           },
           {
-            "id": "321c6091d955c715",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2024-01-16.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "5b99e40fa0ec41db",
             "type": "leaf",
             "state": {
@@ -47,12 +34,12 @@
             }
           },
           {
-            "id": "cff2f0637db62b0f",
+            "id": "a19af525fec68b19",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/domain-driven-development-start.md",
+                "file": "posts/2024-01-29.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,12 +47,12 @@
             }
           },
           {
-            "id": "bb4cedebeb976cea",
+            "id": "b7fb195c115fb5dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/github-codeowners.md",
+                "file": "posts/geek-haus.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,12 +60,12 @@
             }
           },
           {
-            "id": "ed62fd2f7b28e19e",
+            "id": "8ca55ce25b13fb6e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-01-19.md",
+                "file": "posts/geek-haus-01-29.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -169,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/domain-driven-development-start.md",
+                "file": "posts/geek-haus-01-29.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/domain-driven-development-start.md",
+                "file": "posts/geek-haus-01-29.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -217,7 +204,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/domain-driven-development-start.md"
+                "file": "posts/geek-haus-01-29.md"
               }
             }
           },
@@ -238,7 +225,7 @@
             }
           },
           {
-            "id": "8fe0616851449d5b",
+            "id": "367464775a2ff5b6",
             "type": "leaf",
             "state": {
               "type": "tasks_timeline_view",
@@ -267,28 +254,39 @@
       "omnisearch:Omnisearch": false,
       "templater-obsidian:Templater": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "periodic-notes:Open today": false,
       "meld-encrypt:New encrypted note": false,
       "meld-encrypt:Convert to or from an Encrypted note": false,
       "obsidian-full-calendar:Open Full Calendar": false,
       "obsidian-day-planner:Timeline": false,
-      "homepage:Open homepage": false
+      "homepage:Open homepage": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "cff2f0637db62b0f",
+  "active": "8ca55ce25b13fb6e",
   "lastOpenFiles": [
-    "posts/shook-domain-aggregate.md",
+    "posts/geek-haus-01-29.md",
+    "posts/geek-haus.md",
+    "posts/2024-01-29.md",
+    "posts/2024-01-26.md",
+    "posts/2024-01-22.md",
+    "posts/jenkins-docker.md",
+    "posts/top-down-approach-ch3.md",
     "posts/shook-domain-model.md",
-    "posts/github-codeowners.md",
+    "posts/jenkins-migration.md",
+    "posts/matzip-vpc-setting.md",
+    "posts/attachments/jenkins-build-trigger.png",
+    "posts/2024-01.md",
     "posts/2024-01-19.md",
+    "posts/github-codeowners.md",
+    "posts/2024-01-21.md",
+    "posts/2024-01-16.md",
+    "posts/domain-driven-development-start.md",
+    "posts/shook-domain-aggregate.md",
     "posts/trie.md",
     "posts/getter-setter-position.md",
     "posts/berlin-relocation-plan.md",
     "posts/2024-winter-vacation-plan.md",
-    "posts/2024-01-16.md",
-    "posts/domain-driven-development-start.md",
     "posts/lab-meeting-01-16.md",
-    "posts/top-down-approach-ch3.md",
     "posts/lidar-data-format.md",
     "posts/lidar-sensor-data.md",
     "posts/attachments/Pasted image 20240116143752.png",
@@ -297,22 +295,11 @@
     "posts/attachments/lidar-packet-footer.png",
     "posts/forwarded-header-filter.md",
     "posts/2023-10-30.md",
-    "template/english-speaking-template.md",
-    "posts/portfolio.md",
-    "posts/lab-meeting-01-12.md",
-    "posts/research-subject-instruction.md",
-    "posts/english-speaking-2024-01-12.md",
-    "posts/2024-01-12.md",
-    "posts/2024-01-13.md",
-    "posts/github-merge-strategy.md",
-    "posts/branch-strategy.md",
-    "posts/app-image-execute.md",
     "posts/attachments/gbn-receiver-fsm.jpeg",
     "posts/attachments/gbn-extended-fsm.jpeg",
     "posts/attachments/bit-error-alternating-bit.jpeg",
     "posts/attachments/bit-error-absent-nak.jpeg",
     "posts/attachments/bit-error-numbering-receiver.jpeg",
-    "posts/attachments/bit-error-numbering-sender.jpeg",
     "posts/attachments/IMG_0283.heic",
     "posts/Untitled 20231113 041648.mdenc",
     "calendar",

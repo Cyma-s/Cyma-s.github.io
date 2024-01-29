@@ -1,7 +1,7 @@
 ---
 title: Jenkins 로 docker image 빌드 후 배포하기
 date: 2024-01-07 15:24:31 +0900
-updated: 2024-01-07 15:51:33 +0900
+updated: 2024-01-22 23:02:03 +0900
 tags:
   - jenkins
   - docker
@@ -97,3 +97,34 @@ pipeline {
     }  
 }
 ```
+
+## Docker Hub 에서 이미지 받아서 배포하기
+
+이제 새로운 파이프라인을 만든다.  
+
+build 파이프라인이 stable 할 때만 해당 프로젝트가 실행되도록 한다.  
+
+![[jenkins-build-trigger.png]]
+
+다음으로, Send files or execute commands over SSH 를 선택한다.  
+Exec command 에는 다음과 같이 적어주었다.  
+
+```shell
+sudo docker stop neupinion 
+sudo docker rm -f $(sudo docker ps -qa)
+sudo docker image prune -a -f
+sudo docker pull neupinion/neupinion:latest && \
+sudo docker run -d -p 8080:8080 \
+    -p 8090:8090 \
+    -e "SPRING_PROFILE=prod" \
+    --name neupinion \
+    neupinion/neupinion:latest
+sudo docker-compose up -d
+```
+
+Build 가 완료되면 Slack Notification 으로 Success, Failure 를 결과로 알려주도록 설정한다.  
+
+이로써 모든 설정이 완료되었다.  
+Github main 브랜치에 코드가 push 되면, Jenkins 서버에서 코드를 pull 받아서 build 한 뒤 Docker hub 로 이미지를 만들고, Docker hub 에 업로드 된 이미지를 프로덕션 서버에서 pull 받아 배포하는 과정을 자동화할 수 있었다.  
+
+굉장히 많은 삽질을 했지만, 결국은 해냈다.
