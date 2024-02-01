@@ -71,7 +71,6 @@
     "posts/tsp.md": "7757c2d11b63ca1d98cc89b86d79a78be35c11a7331b7d1b61ae4bfe33bf5f10",
     "posts/bellman-ford-algorithm.md": "227ffbcf98aee1f0bc8dfb10fbc17df352ae4ce42bcb17dd73df6a9d8e08c541",
     "posts/java-algorithm-tips.md": "1b9c8ae1ffd502ddaaeba52f22eb2993a70ca540bfd3a03b0bb632fdc5fe5e7f",
-    "posts/2023-11-13.md": "ae1a8394e9080d3ab196d6d2a38e4ff860b02ce83af8e3279a73499612bc95e8",
     "posts/mit-ocw-data-structure.md": "08b310df1cb5531c758fa8ffa9ddbd588299222924f104c2c61fc3107c3da605",
     "posts/mit-ocw-sets-and-sorting.md": "315b80f1674f3549f355669f4d9e3b749cc8425e7efcdd9ac4f71d238ccdc06a",
     "posts/2023-11-14.md": "ee8734448f44113ae9b5ee9bb90e8858b2a9b638eef8186c9b484de1a910896d",
@@ -153,7 +152,7 @@
     "posts/2024.md": "49c443c442ce3bf5c3857ad4986d6bd28362d568264f848b0eeb50beadbe9268",
     "posts/2024-01-08.md": "5cf12d6c95fd6adee8bab9669960516b3c3303c305dfb093b8f9b44119fe27fc",
     "posts/2024-01-09.md": "8f1d570a78da4a89553afee8dde18309cab5a175080ce0a671a078b36e7556f7",
-    "posts/english-speaking.md": "627cc516c2f3a4b17cc0d1350204b0e4747b93591b2f6d0412de7ffd4226dd0c",
+    "posts/english-speaking.md": "95f4c6c3cce6263d6d64ea1e6414af01522f71e9550ab0deb07296d496c3a3da",
     "posts/english-speaking-2024-01-09.md": "a8bd4f474751205a14a6ad5683e61c72f71df579bc947d1f26330fb4af06d919",
     "posts/2024-01-11.md": "2419544723542001323e907eabfb6ec078ba0dfa966b97255fe621d7a78becfa",
     "posts/english-speaking-2024-01-11.md": "5e27f2b66d82e535df969149eb9920c8d07e3c1d2c251eaa92b9cb01e0257ef9",
@@ -177,8 +176,11 @@
     "posts/2024-01-26.md": "289c784600e9930ae1b4f4ba0a044c299aed9032b1bcea7db746cf4ee443b6b4",
     "posts/geek-haus.md": "d80ece9c412040398eb07cc230554d271647f03ecf5bd4343baea40a6fa758e1",
     "posts/geek-haus-01-29.md": "57d8bd6717d0bde9b4f71f9243059fba74ff8f41b0587652e86d2cacf32f8ab3",
-    "posts/2024-02-01.md": "09d7bcab97421b6853f0f8b15391d61f0e3e40a55f0dbc8b4906402772d2aa9e",
+    "posts/2024-02-01.md": "35a10dac7d9ac7593c0d6fe7b433cc19c9129536d6f301e726a23cbbbbbf198f",
     "posts/2024-02.md": "dcc2bb5e5d9c7256cad043d5cfcf6fe453d546778fd74ba42a7889c09e93a4ad",
-    "posts/why-should-we-avoid-use-static.md": "370730e25621a750dc69288a0103e23d19f7f3931c88da1c51b665534050c6cd"
+    "posts/why-should-we-avoid-use-static.md": "370730e25621a750dc69288a0103e23d19f7f3931c88da1c51b665534050c6cd",
+    "posts/english-speaking-2024-02-01.md": "5ae77f1c648d427c245f611ba6bcad844c8a9767a71cbad623fa105f2c397b0a",
+    "posts/have-pp-guideline.md": "044e560a377f10dbb97cab292c203145e4dc5ab9f7218f2e740eb3eee5fc5450",
+    "posts/preposition-guideline.md": "d67a2a206a79a2ff367ad210e69dcd9b61c57b04ef3ca06a685640df96b6d5d4"
   }
 }
