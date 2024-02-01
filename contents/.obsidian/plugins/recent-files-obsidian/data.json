@@ -1,28 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "why-should-we-avoid-use-static",
+      "path": "posts/why-should-we-avoid-use-static.md"
+    },
+    {
+      "basename": "readme",
+      "path": "posts/readme.md"
+    },
+    {
+      "basename": "2024-02-01",
+      "path": "posts/2024-02-01.md"
+    },
+    {
+      "basename": "berlin-relocation-plan",
+      "path": "posts/berlin-relocation-plan.md"
+    },
+    {
       "basename": "geek-haus-01-29",
       "path": "posts/geek-haus-01-29.md"
-    },
-    {
-      "basename": "geek-haus",
-      "path": "posts/geek-haus.md"
-    },
-    {
-      "basename": "2024-01-29",
-      "path": "posts/2024-01-29.md"
-    },
-    {
-      "basename": "2024-01-26",
-      "path": "posts/2024-01-26.md"
-    },
-    {
-      "basename": "2024-01-22",
-      "path": "posts/2024-01-22.md"
-    },
-    {
-      "basename": "jenkins-docker",
-      "path": "posts/jenkins-docker.md"
     },
     {
       "basename": "top-down-approach-ch3",
@@ -31,6 +27,26 @@
     {
       "basename": "shook-domain-model",
       "path": "posts/shook-domain-model.md"
+    },
+    {
+      "basename": "2024-02",
+      "path": "posts/2024-02.md"
+    },
+    {
+      "basename": "2024-01-26",
+      "path": "posts/2024-01-26.md"
+    },
+    {
+      "basename": "geek-haus",
+      "path": "posts/geek-haus.md"
+    },
+    {
+      "basename": "2024-01-22",
+      "path": "posts/2024-01-22.md"
+    },
+    {
+      "basename": "jenkins-docker",
+      "path": "posts/jenkins-docker.md"
     },
     {
       "basename": "jenkins-migration",
@@ -75,10 +91,6 @@
     {
       "basename": "getter-setter-position",
       "path": "posts/getter-setter-position.md"
-    },
-    {
-      "basename": "berlin-relocation-plan",
-      "path": "posts/berlin-relocation-plan.md"
     },
     {
       "basename": "2024-winter-vacation-plan",
@@ -187,18 +199,6 @@
     {
       "basename": "2023-12",
       "path": "posts/2023-12.md"
-    },
-    {
-      "basename": "2023",
-      "path": "posts/2023.md"
-    },
-    {
-      "basename": "2024",
-      "path": "posts/2024.md"
-    },
-    {
-      "basename": "2023-02",
-      "path": "posts/2023-02.md"
     }
   ],
   "omittedPaths": [

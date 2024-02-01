@@ -41,7 +41,7 @@
     "posts/mysql-execution-plan.md": "b612ccb9452e4cd012cb0d2a03cd85166fcc733f6d84f94add25266248683d30",
     "posts/2023-11-04.md": "82b8549832e0ff5d4c97f1b2493f8c8d930370457d57b6104a54584ddfc34dfa",
     "posts/2023-11.md": "5599b39b05999eb2f958f3c09cd11003a610a5e9efba34e12057ba714f9d9ef7",
-    "posts/readme.md": "7956360e5ec307c2fab4e2a0762b74167d584b9facb074fb08aeb94d6a358c78",
+    "posts/readme.md": "5a20325be6100def09ce668fb3710c5da8d0e259b2f08dd5f9184efdd656b8a3",
     "posts/binary-search-tree.md": "183f4e44cf90b581748c09d0390ba0e99a996c46056a2882a5ce4c6bc973c117",
     "posts/avl-tree.md": "e20e96c46843b694b3c9fe4fc6b28bac608759769e4303639071899dabb4efcc",
     "posts/2023-11-05.md": "26bb81bd8e03e89ac7230dd6fd6d9bc20e3a202732ab350731abb3424b319ed8",
@@ -126,7 +126,7 @@
     "posts/2023-12.md": "5086c78d4c9e858e15c730dd8953bae82fe2489a74ddc552b30d7035d764b843",
     "posts/shook.md": "5d77df0ae31b399ede62c75c6843adcac2dee6189fe8909861bdfe2eacdea1cb",
     "posts/monitor-lock-and-java-synchoronized.md": "409993f33b0b23dbd827ceeb3e53dec37b15d9822f24514bd6d9b5dd3ce7bb1f",
-    "posts/shook-domain-model.md": "986dcc97a8da7c2055e5e7abfa979cc0699cfc9a34f9ea44b94e96c6100e649f",
+    "posts/shook-domain-model.md": "cb0daa31a106ad5b633f345e638f1a6ca1754adb7be954e6de912bb57aa275fc",
     "posts/dh-second-interview-preparation.md": "82b9d43f18850d1a046dc62646c27d374feda07b9577fd5decd065b61941c8dc",
     "posts/2023-12-10.md": "a7accdbeaf7285ef90f270f6825d4fa006a9f1782d35e46d5160ed7b941bc7f1",
     "posts/2023-12-11.md": "b3190636d0ffba125007e877ab8468c640fad960962ba95984dc232508595981",
@@ -141,7 +141,7 @@
     "posts/bit-masking.md": "7ea6c72991e80bb874b6763a6136737f8559e048ac763272e5ca4ca4cf2f76cc",
     "posts/2023-09-01.md": "46c690a9d2dc0a27aba23e5442cc4ac51abbbb44e3bf0d6fbf671a83eeaf9630",
     "posts/top-down-approach-ch3.md": "1f260b029b616c8e076ef8e53c9fbd8c87e1bcac7a2d041db3d781662b4bac07",
-    "posts/berlin-relocation-plan.md": "19f0ff2d97fbef2fe49e076ddd7f560bf0f20629471c36301a136136058631e2",
+    "posts/berlin-relocation-plan.md": "0ce7653fa4704220deffc92c549083d6ef511484cf2ff4d35e942a1a52cdb928",
     "posts/get-a-job-with-delivery-hero.md": "f0238470a8a0385ee2e245c34580a33223f56d31e501341cfd0c16f815e62467",
     "posts/objective.md": "fcb907bfb8cc78dc465fa0f34a2e08410d636e99ba313e2a7ac85190c07c9704",
     "posts/2024-winter-vacation-plan.md": "90b4a3d5bfdd3ea82e3f1a3a847a6fbffe299e6df4be4acc28ba75204316e21e",
@@ -175,8 +175,10 @@
     "posts/2024-01-21.md": "92a7f60873646b1c41d9df09f01911a03b59ef6203e60cad0ab8e8e1c333afa3",
     "posts/2024-01-22.md": "7eba83b060342beb8d5a875bf6b4536fa281b6d2dd3f997863faa1f501fe6efb",
     "posts/2024-01-26.md": "289c784600e9930ae1b4f4ba0a044c299aed9032b1bcea7db746cf4ee443b6b4",
-    "posts/2024-01-29.md": "62aa76a491e11840ece5fd5a6bdde35e6c90c84fc1c29498ce55d9b01f1ac02a",
-    "posts/geek-haus.md": "f9e897da5d9662899e0160206350966b8a7c5578a26355f55bccbb65b4c3b88c",
-    "posts/geek-haus-01-29.md": "5562c99a511b7100c6b346ec0e32fbd79a54f301df20a27830158bbc31e3c7b9"
+    "posts/geek-haus.md": "d80ece9c412040398eb07cc230554d271647f03ecf5bd4343baea40a6fa758e1",
+    "posts/geek-haus-01-29.md": "57d8bd6717d0bde9b4f71f9243059fba74ff8f41b0587652e86d2cacf32f8ab3",
+    "posts/2024-02-01.md": "09d7bcab97421b6853f0f8b15391d61f0e3e40a55f0dbc8b4906402772d2aa9e",
+    "posts/2024-02.md": "dcc2bb5e5d9c7256cad043d5cfcf6fe453d546778fd74ba42a7889c09e93a4ad",
+    "posts/why-should-we-avoid-use-static.md": "370730e25621a750dc69288a0103e23d19f7f3931c88da1c51b665534050c6cd"
   }
 }

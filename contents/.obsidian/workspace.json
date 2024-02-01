@@ -8,38 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d0ff53d7254874d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/top-down-approach-ch3.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5b99e40fa0ec41db",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/shook-domain-model.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "a19af525fec68b19",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-01-29.md",
+                "file": "posts/2024-02-01.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,25 +21,12 @@
             }
           },
           {
-            "id": "b7fb195c115fb5dc",
+            "id": "e5bf2eed6c1782f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/geek-haus.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8ca55ce25b13fb6e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/geek-haus-01-29.md",
+                "file": "posts/why-should-we-avoid-use-static.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +34,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -156,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/geek-haus-01-29.md",
+                "file": "posts/why-should-we-avoid-use-static.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/geek-haus-01-29.md",
+                "file": "posts/why-should-we-avoid-use-static.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -204,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/geek-haus-01-29.md"
+                "file": "posts/why-should-we-avoid-use-static.md"
               }
             }
           },
@@ -262,16 +223,21 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "8ca55ce25b13fb6e",
+  "active": "e5bf2eed6c1782f7",
   "lastOpenFiles": [
+    "posts/readme.md",
+    "posts/why-should-we-avoid-use-static.md",
+    "posts/2024-02-01.md",
+    "posts/berlin-relocation-plan.md",
     "posts/geek-haus-01-29.md",
-    "posts/geek-haus.md",
-    "posts/2024-01-29.md",
-    "posts/2024-01-26.md",
-    "posts/2024-01-22.md",
-    "posts/jenkins-docker.md",
     "posts/top-down-approach-ch3.md",
     "posts/shook-domain-model.md",
+    "posts/2024-02.md",
+    "posts/2024-01-26.md",
+    "posts/2024-01-29.md",
+    "posts/geek-haus.md",
+    "posts/2024-01-22.md",
+    "posts/jenkins-docker.md",
     "posts/jenkins-migration.md",
     "posts/matzip-vpc-setting.md",
     "posts/attachments/jenkins-build-trigger.png",
@@ -284,17 +250,12 @@
     "posts/shook-domain-aggregate.md",
     "posts/trie.md",
     "posts/getter-setter-position.md",
-    "posts/berlin-relocation-plan.md",
     "posts/2024-winter-vacation-plan.md",
     "posts/lab-meeting-01-16.md",
-    "posts/lidar-data-format.md",
-    "posts/lidar-sensor-data.md",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",
     "posts/attachments/Pasted image 20240116143215.png",
     "posts/attachments/lidar-packet-footer.png",
-    "posts/forwarded-header-filter.md",
-    "posts/2023-10-30.md",
     "posts/attachments/gbn-receiver-fsm.jpeg",
     "posts/attachments/gbn-extended-fsm.jpeg",
     "posts/attachments/bit-error-alternating-bit.jpeg",

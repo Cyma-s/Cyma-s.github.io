@@ -1,7 +1,7 @@
 ---
 title: 1/29 개발 영어
 date: 2024-01-29 17:04:18 +0900
-updated: 2024-01-29 17:36:43 +0900
+updated: 2024-01-29 18:21:06 +0900
 tags:
   - english
 ---
@@ -73,4 +73,97 @@ tags:
 	- Parenthe!ses (양괄호)
 - `)`
 	- Right Parenthesis
-	- Closing Parenthesis
+	- Closing Parenthesis : 클로징
+	- close (가까운) : 클로스
+	- close (닫다) : 클로즈
+- `(`
+	- opening parenthesis
+	- left parenthesis
+- `[ ]`
+	- Brackets
+	- Square Brackets
+- `{}`
+	- Braces (브레시스)
+	- Curly Brackets
+- `<>`
+	- Angle Brackets
+	- Chevrons (셰브론스)
+- `<`
+	- Opening Angle Brackets
+	- Less Than Symbol
+- `>`
+	- Closing Angle Brackets
+	- Greater Than Symbol
+- `#`
+	- Number Sign
+	- Hash
+- `@`
+	- At sign
+- `!`
+	- E!xclamation Mark (엑스크레메이션)
+- `%`
+	- Perc!ent Sign
+- `*`
+	- Asterisk (에스터리스크)
+	- Star
+- `^`
+	- Caret (캐럿)
+- `$`
+	- Dollar Sign
+- `?`
+	- Question Mark
+- 삼항 연산자: ternary operator
+- `:`
+	- colon
+- ← bullet point
+- `;`
+	- Semi Colon (세미 콜론, 세마이 콜론)
+- `-`
+	- Hyphen
+	- Dash
+- `_`
+	- underscore
+- `+`
+	- plus sign
+- =
+	- Equal sign
+- \
+	- back slash
+- /
+	- Forward Slash
+- `
+	- backtick
+	- Grave Accent
+- `""`
+	- Double Quotation Marks
+- `''`
+	- Single Quotation Marks
+- `,`
+	- comma
+- `.`
+	- Dot
+	- Period
+- `|`
+	- Pipe
+	- Ve!rtical Bar
+- `&`
+	- And Sign
+	- A!mpersand
+- `~`
+	- Tilde (틸더)
+
+## camelCase, snake_case, 그리고 …
+
+- Camel Case
+- Pascal Case
+- Snake Case
+- Kebab Case
+
+## 질문
+
+### 대답
+
+- 첫 수업 소감 알았던 거 몰랐던 거
+	- 오늘 수업 굉장히 유익하고 재미있었다. 수업에서 나오는 기본적인 영어 단어 같은 건 알고 있었지만, 간단한 발음도 제대로 모르고 있었음. 특히 키보드에 있는 기호들을 어떻게 부르는지 알려주신 게 많은 도움이 되었다.
+- 기존에 영어 얼마나 했는지
+	- 작년 10월부터 영어 회화 학원을 다니기 시작했는데, 다닌지 얼마 안 돼서 아직도 잘은 못한다. 지금도 잘 못하는 것 같고, 오늘 한글을 영어로 바꾸는 문제가 있었는데, 몇 달째 공부하는데도 잘 안 되네요. 이번 개발 영어 수업 잘 들어서 영어 잘해보도록 노력하겠습니다.
