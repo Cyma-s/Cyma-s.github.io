@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "2024-02-01",
+      "path": "posts/2024-02-01.md"
+    },
+    {
       "basename": "english-speaking-2024-02-01",
       "path": "posts/english-speaking-2024-02-01.md"
     },
@@ -9,12 +13,16 @@
       "path": "posts/preposition-guideline.md"
     },
     {
-      "basename": "have-pp-guideline",
-      "path": "posts/have-pp-guideline.md"
+      "basename": "matzip-aws",
+      "path": "posts/matzip-aws.md"
     },
     {
-      "basename": "2024-02-01",
-      "path": "posts/2024-02-01.md"
+      "basename": "matzip-vpc-setting",
+      "path": "posts/matzip-vpc-setting.md"
+    },
+    {
+      "basename": "have-pp-guideline",
+      "path": "posts/have-pp-guideline.md"
     },
     {
       "basename": "english-speaking",
@@ -109,10 +117,6 @@
       "path": "posts/shook-second-demoday.md"
     },
     {
-      "basename": "matzip-aws",
-      "path": "posts/matzip-aws.md"
-    },
-    {
       "basename": "2023-11-14",
       "path": "posts/2023-11-14.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "top-down-approach-ch3",
       "path": "posts/top-down-approach-ch3.md"
-    },
-    {
-      "basename": "shook-domain-model",
-      "path": "posts/shook-domain-model.md"
     }
   ],
   "omittedPaths": [

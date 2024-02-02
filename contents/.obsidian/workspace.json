@@ -32,22 +32,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "5e6d8fbcb36b7ea4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/preposition-guideline.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/english-speaking-2024-02-01.md",
+                "file": "posts/2024-02-01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/english-speaking-2024-02-01.md",
+                "file": "posts/2024-02-01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/english-speaking-2024-02-01.md"
+                "file": "posts/2024-02-01.md"
               }
             }
           },
@@ -236,12 +222,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "8ab1ce920cd426c7",
+  "active": "a19af525fec68b19",
   "lastOpenFiles": [
+    "posts/english-speaking-2024-02-01.md",
     "posts/preposition-guideline.md",
+    "posts/matzip-aws.md",
+    "posts/matzip-vpc-setting.md",
     "posts/have-pp-guideline.md",
     "posts/2024-02-01.md",
-    "posts/english-speaking-2024-02-01.md",
     "posts/english-speaking.md",
     "posts/english-speaking-2024-01-12.md",
     "posts/english-speaking-pattern-11-28.md",
@@ -262,8 +250,6 @@
     "posts/2024-01-09.md",
     "posts/readme.md",
     "posts/2023-10-16.md",
-    "posts/floyd-warshall-algorithm.md",
-    "posts/pair-programming-rule.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",

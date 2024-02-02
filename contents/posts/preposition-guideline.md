@@ -1,7 +1,7 @@
 ---
 title: 영어 전치사
 date: 2024-02-01 17:03:22 +0900
-updated: 2024-02-01 17:06:30 +0900
+updated: 2024-02-01 22:46:07 +0900
 tags:
   - english
 ---
@@ -28,4 +28,3 @@ tags:
 - 시간: 지속 기간을 나타낼 때 사용한다. Ex. for two hours, for a week
 - 목적: 목적이나 이유를 나타낼 때 사용한다. Ex. for pleasure, for work
 - 대상: 수혜자를 나타낼 때 사용한다. Ex. for me, for the team
-
