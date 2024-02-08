@@ -1,12 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "2024-02-01",
-      "path": "posts/2024-02-01.md"
+      "basename": "shook-prod-server-setting",
+      "path": "posts/shook-prod-server-setting.md"
+    },
+    {
+      "basename": "jenkins-migration",
+      "path": "posts/jenkins-migration.md"
+    },
+    {
+      "basename": "jenkins-docker",
+      "path": "posts/jenkins-docker.md"
+    },
+    {
+      "basename": "2024-02-06",
+      "path": "posts/2024-02-06.md"
     },
     {
       "basename": "english-speaking-2024-02-01",
       "path": "posts/english-speaking-2024-02-01.md"
+    },
+    {
+      "basename": "geek-haus-02-05",
+      "path": "posts/geek-haus-02-05.md"
+    },
+    {
+      "basename": "2024-02-05",
+      "path": "posts/2024-02-05.md"
+    },
+    {
+      "basename": "2024-02-01",
+      "path": "posts/2024-02-01.md"
+    },
+    {
+      "basename": "TIL",
+      "path": "template/TIL.md"
+    },
+    {
+      "basename": "template",
+      "path": "template/template.md"
     },
     {
       "basename": "preposition-guideline",
@@ -149,10 +181,6 @@
       "path": "posts/2023-12-05.md"
     },
     {
-      "basename": "shook-prod-server-setting",
-      "path": "posts/shook-prod-server-setting.md"
-    },
-    {
       "basename": "2023-03-17",
       "path": "posts/2023-03-17.md"
     },
@@ -171,34 +199,6 @@
     {
       "basename": "shook-my-page-query-improve",
       "path": "posts/shook-my-page-query-improve.md"
-    },
-    {
-      "basename": "2024-01-19",
-      "path": "posts/2024-01-19.md"
-    },
-    {
-      "basename": "english-speaking-pattern-11-30",
-      "path": "posts/english-speaking-pattern-11-30.md"
-    },
-    {
-      "basename": "2023-11-08",
-      "path": "posts/2023-11-08.md"
-    },
-    {
-      "basename": "why-should-we-avoid-use-static",
-      "path": "posts/why-should-we-avoid-use-static.md"
-    },
-    {
-      "basename": "berlin-relocation-plan",
-      "path": "posts/berlin-relocation-plan.md"
-    },
-    {
-      "basename": "geek-haus-01-29",
-      "path": "posts/geek-haus-01-29.md"
-    },
-    {
-      "basename": "top-down-approach-ch3",
-      "path": "posts/top-down-approach-ch3.md"
     }
   ],
   "omittedPaths": [

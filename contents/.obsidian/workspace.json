@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-02-01.md",
+                "file": "posts/2024-02-06.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,19 +21,46 @@
             }
           },
           {
-            "id": "8ab1ce920cd426c7",
+            "id": "98459872b60d899f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/english-speaking-2024-02-01.md",
+                "file": "posts/jenkins-docker.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4a56d3433c202427",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/jenkins-migration.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7719f3dd84989320",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/shook-prod-server-setting.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -62,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "docker",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -116,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2024-02-01.md",
+                "file": "posts/shook-prod-server-setting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2024-02-01.md",
+                "file": "posts/shook-prod-server-setting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2024-02-01.md"
+                "file": "posts/shook-prod-server-setting.md"
               }
             }
           },
@@ -222,14 +249,23 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a19af525fec68b19",
+  "active": "7719f3dd84989320",
   "lastOpenFiles": [
+    "posts/jenkins-migration.md",
+    "posts/jenkins-docker.md",
+    "posts/2024-02-06.md",
     "posts/english-speaking-2024-02-01.md",
+    "posts/english-speaking-2024-02-05.md",
+    "posts/shook-prod-server-setting.md",
+    "posts/geek-haus-02-05.md",
+    "posts/2024-02-05.md",
+    "posts/2024-02-01.md",
+    "template/TIL.md",
+    "template/template.md",
     "posts/preposition-guideline.md",
     "posts/matzip-aws.md",
     "posts/matzip-vpc-setting.md",
     "posts/have-pp-guideline.md",
-    "posts/2024-02-01.md",
     "posts/english-speaking.md",
     "posts/english-speaking-2024-01-12.md",
     "posts/english-speaking-pattern-11-28.md",
@@ -241,15 +277,6 @@
     "posts/lower-bound-and-upper-bound.md",
     "posts/level2-week5.md",
     "posts/2023-11-13.md",
-    "posts/ioc-container-and-di.md",
-    "posts/level4-writing.md",
-    "posts/2023-09-25.md",
-    "posts/2023-06-06.md",
-    "posts/2023-04-15.md",
-    "posts/jpa.md",
-    "posts/2024-01-09.md",
-    "posts/readme.md",
-    "posts/2023-10-16.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",

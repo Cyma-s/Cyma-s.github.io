@@ -1,7 +1,7 @@
 ---
 title: S-HOOK 운영 서버 설정 실록
 date: 2023-08-11 18:17:25 +0900
-updated: 2023-11-22 16:50:46 +0900
+updated: 2024-02-04 10:04:42 +0900
 tags:
   - aws
   - shook
@@ -190,8 +190,8 @@ sudo npm run build
 즉시 설치해주자. 
 
 ```bash
-wget -O- [https://apt.corretto.aws/corretto.key](https://apt.corretto.aws/corretto.key) | sudo apt-key add -  
- sudo add-apt-repository ‘deb [https://apt.corretto.aws](https://apt.corretto.aws/) stable main’
+ wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add - 
+ sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
 
 sudo apt-get install -y java-17-amazon-corretto-jdk
 ```

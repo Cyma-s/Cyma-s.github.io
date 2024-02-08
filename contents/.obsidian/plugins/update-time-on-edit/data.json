@@ -96,7 +96,7 @@
     "posts/2023-11-20.md": "6fa18705a83bd72e6f919f12c72900f3718e82b0b89817adf5b5c8ba8e9f4e2e",
     "posts/local-cache-concurrency-problem.md": "a7bbcd73aba53a75556326d7a20bdbeb53246fc30b58c2c5d4d12f03b4cc658a",
     "posts/top-down-approach-ch1.md": "4b8d799f4f5c22d4ae6a058ef2698d371e8dd676f07a5949b31d92e0ebd86064",
-    "posts/shook-prod-server-setting.md": "db7075770cea2ba3d3aa1d3537c89b9b0ec41bbc87544ed50769d0b39d9a48b1",
+    "posts/shook-prod-server-setting.md": "de956ff60aad5166323951afbecbcd16f8841941ecf2c526a7dc191635ed33b3",
     "posts/shook-migration.md": "089ec5dc2ff3c07b92cb6cbfa0638fa6b12652ba9198e9439a55ba74969731ed",
     "posts/what-is-index.md": "0b52e2ed39f45f91cb1da668adc94b3428338ae09347b2713efddda5bdd3cddd",
     "posts/2023-11-25.md": "deb9d18211cd93f9b51b7160f726041c2262dec5fa25775e7a6e4bf2cde4b0e0",
@@ -181,6 +181,9 @@
     "posts/why-should-we-avoid-use-static.md": "370730e25621a750dc69288a0103e23d19f7f3931c88da1c51b665534050c6cd",
     "posts/english-speaking-2024-02-01.md": "5ae77f1c648d427c245f611ba6bcad844c8a9767a71cbad623fa105f2c397b0a",
     "posts/have-pp-guideline.md": "044e560a377f10dbb97cab292c203145e4dc5ab9f7218f2e740eb3eee5fc5450",
-    "posts/preposition-guideline.md": "e334cf14184bbd406762b4f2174b3fc0560e6b3762a045fc628c901c420e5912"
+    "posts/preposition-guideline.md": "e334cf14184bbd406762b4f2174b3fc0560e6b3762a045fc628c901c420e5912",
+    "posts/2024-02-05.md": "bab03597d790f10a982b67293dfe6714f58065d30f99e31adba14bd8ec650cb7",
+    "posts/geek-haus-02-05.md": "b56709766896933610eb273a02fd8e48b28dadaf65c149da95e1a16d79aee364",
+    "posts/2024-02-06.md": "bdbf496858dc191297a66df4b85cb6233ce820572d6e2711767c109ef00531d2"
   }
 }

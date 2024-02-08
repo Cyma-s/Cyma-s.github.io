@@ -5,14 +5,6 @@ updated:
 tags:
 ---
 
-```tasks
-not done 
-due this week
-short mode
-```
-
-## TODO
-
 ## LOG
 
 ## 오늘의 영어
