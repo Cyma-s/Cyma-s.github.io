@@ -58,9 +58,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "953a9e717da7968d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/pcl.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -143,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/point-cloud-compression.md",
+                "file": "posts/pcl.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/point-cloud-compression.md",
+                "file": "posts/pcl.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +204,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/point-cloud-compression.md"
+                "file": "posts/pcl.md"
               }
             }
           },
@@ -249,12 +262,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c08e3f2f3a33ae40",
+  "active": "953a9e717da7968d",
   "lastOpenFiles": [
-    "posts/what-is-lidar.md",
+    "posts/pcl.md",
     "posts/point-cloud-compression.md",
-    "posts/english-speaking-2024-02-13.md",
+    "posts/what-is-lidar.md",
     "posts/2024-02-06.md",
+    "posts/english-speaking-2024-02-13.md",
     "posts/jenkins-docker.md",
     "posts/jenkins-migration.md",
     "posts/shook-prod-server-setting.md",
@@ -276,7 +290,6 @@
     "posts/english-speaking-2024-01-12.md",
     "posts/english-speaking-pattern-11-28.md",
     "posts/shook-tech-stack.md",
-    "posts/inmemory-cache-develop.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",

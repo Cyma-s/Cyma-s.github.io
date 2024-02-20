@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "pcl",
+      "path": "posts/pcl.md"
+    },
+    {
       "basename": "point-cloud-compression",
       "path": "posts/point-cloud-compression.md"
     },
@@ -9,12 +13,12 @@
       "path": "posts/what-is-lidar.md"
     },
     {
-      "basename": "english-speaking-2024-02-13",
-      "path": "posts/english-speaking-2024-02-13.md"
-    },
-    {
       "basename": "2024-02-06",
       "path": "posts/2024-02-06.md"
+    },
+    {
+      "basename": "english-speaking-2024-02-13",
+      "path": "posts/english-speaking-2024-02-13.md"
     },
     {
       "basename": "jenkins-docker",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-10",
       "path": "posts/2023-10.md"
-    },
-    {
-      "basename": "shook-load-test",
-      "path": "posts/shook-load-test.md"
     }
   ],
   "omittedPaths": [
