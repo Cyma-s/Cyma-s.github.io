@@ -1,7 +1,7 @@
 ---
 title: 02월 13일 영어회화
 date: 2024-02-13 20:01:43 +0900
-updated: 2024-02-13 20:16:58 +0900
+updated: 2024-02-21 17:50:44 +0900
 tags:
   - english
 ---
@@ -22,7 +22,7 @@ tags:
 ## 구문
 
 - when ~ , then I will 구문은 fact 나 habit 을 뜻한다. 이때는 현재형을 사용할 수도 있다. 현재형을 사용하는 것도 fact, habit 을 의미한다.
-- If + past tense, S could / would / should (not) 는 가능성을 표현하는 
+- If + past tense, S could / would / should (not) 는 가능성을 표현하는 구문이다.
 - I’m thinking about having more of these classes.
 
 ## 알아둘 내용

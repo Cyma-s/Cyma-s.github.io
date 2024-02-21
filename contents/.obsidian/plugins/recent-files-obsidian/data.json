@@ -1,8 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "pcl",
-      "path": "posts/pcl.md"
+      "basename": "english-speaking-2024-02-13",
+      "path": "posts/english-speaking-2024-02-13.md"
     },
     {
       "basename": "point-cloud-compression",
@@ -13,12 +13,16 @@
       "path": "posts/what-is-lidar.md"
     },
     {
-      "basename": "2024-02-06",
-      "path": "posts/2024-02-06.md"
+      "basename": "dh-second-interview-preparation",
+      "path": "posts/dh-second-interview-preparation.md"
     },
     {
-      "basename": "english-speaking-2024-02-13",
-      "path": "posts/english-speaking-2024-02-13.md"
+      "basename": "pcl",
+      "path": "posts/pcl.md"
+    },
+    {
+      "basename": "2024-02-06",
+      "path": "posts/2024-02-06.md"
     },
     {
       "basename": "jenkins-docker",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-04-25",
       "path": "posts/2023-04-25.md"
-    },
-    {
-      "basename": "2023-10",
-      "path": "posts/2023-10.md"
     }
   ],
   "omittedPaths": [
