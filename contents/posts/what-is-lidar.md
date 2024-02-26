@@ -1,7 +1,7 @@
 ---
 title: LiDAR 강의 준비
 date: 2024-02-12 21:56:51 +0900
-updated: 2024-02-15 16:29:39 +0900
+updated: 2024-02-23 16:39:07 +0900
 tags:
   - lidar
   - lab
@@ -51,7 +51,7 @@ Velodyne lidar sensors meet the FDA eye-safety standards under [IEC 60825](http
 #### 참고
 
 - https://gaussian37.github.io/autodrive-lidar-intro/
-- [LiDAR 를 소개하는 한글 자료](https://www.kibme.org/resources/journal/20220617110654606.pdf)
+- [LiDAR 를 소개하는 한글 자료](https://www.kibme.org/resources/journal/20220617110654606.pdf)_
 
 ---
 

@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "berlin-relocation-plan",
+      "path": "posts/berlin-relocation-plan.md"
+    },
+    {
+      "basename": "what-is-lidar",
+      "path": "posts/what-is-lidar.md"
+    },
+    {
       "basename": "english-speaking-2024-02-13",
       "path": "posts/english-speaking-2024-02-13.md"
     },
     {
       "basename": "point-cloud-compression",
       "path": "posts/point-cloud-compression.md"
-    },
-    {
-      "basename": "what-is-lidar",
-      "path": "posts/what-is-lidar.md"
     },
     {
       "basename": "dh-second-interview-preparation",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-07-04",
       "path": "posts/2023-07-04.md"
-    },
-    {
-      "basename": "2023-04-25",
-      "path": "posts/2023-04-25.md"
     }
   ],
   "omittedPaths": [
