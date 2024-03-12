@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "what-is-lidar",
+      "path": "posts/what-is-lidar.md"
+    },
+    {
       "basename": "point-cloud-compression",
       "path": "posts/point-cloud-compression.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "pcl",
       "path": "posts/pcl.md"
-    },
-    {
-      "basename": "what-is-lidar",
-      "path": "posts/what-is-lidar.md"
     },
     {
       "basename": "dh-second-interview-preparation",

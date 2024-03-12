@@ -59,8 +59,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -143,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/point-cloud-compression.md",
+                "file": "posts/what-is-lidar.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/point-cloud-compression.md",
+                "file": "posts/what-is-lidar.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/point-cloud-compression.md"
+                "file": "posts/what-is-lidar.md"
               }
             }
           },
@@ -249,12 +248,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c08e3f2f3a33ae40",
+  "active": "8b3b3623179b7b4e",
   "lastOpenFiles": [
+    "posts/point-cloud-compression.md",
     "posts/english-speaking-2024-02-13.md",
     "posts/pcl.md",
     "posts/what-is-lidar.md",
-    "posts/point-cloud-compression.md",
     "posts/dh-second-interview-preparation.md",
     "posts/berlin-relocation-plan.md",
     "posts/2024-02-06.md",
