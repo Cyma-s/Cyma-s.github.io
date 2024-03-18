@@ -58,8 +58,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ee5437df1c820f2a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2024-03-13.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9d867db386778219",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/handler-adapter.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -142,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/what-is-lidar.md",
+                "file": "posts/handler-adapter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +186,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/what-is-lidar.md",
+                "file": "posts/handler-adapter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +217,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/what-is-lidar.md"
+                "file": "posts/handler-adapter.md"
               }
             }
           },
@@ -211,7 +238,7 @@
             }
           },
           {
-            "id": "367464775a2ff5b6",
+            "id": "99eae4e052a1d927",
             "type": "leaf",
             "state": {
               "type": "tasks_timeline_view",
@@ -248,12 +275,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "8b3b3623179b7b4e",
+  "active": "9d867db386778219",
   "lastOpenFiles": [
-    "posts/point-cloud-compression.md",
-    "posts/english-speaking-2024-02-13.md",
+    "posts/handler-mapping.md",
+    "posts/bellman-ford-algorithm.md",
+    "posts/2024-03-13.md",
+    "posts/ioc-container-and-di.md",
+    "posts/top-down-approach-ch1.md",
+    "posts/dh-interview-study.md",
     "posts/pcl.md",
     "posts/what-is-lidar.md",
+    "posts/2024-03-12.md",
+    "posts/point-cloud-compression.md",
+    "posts/english-speaking-2024-02-13.md",
     "posts/dh-second-interview-preparation.md",
     "posts/berlin-relocation-plan.md",
     "posts/2024-02-06.md",
@@ -269,13 +303,6 @@
     "posts/2024-02-05.md",
     "posts/2024-02-01.md",
     "template/TIL.md",
-    "template/template.md",
-    "posts/preposition-guideline.md",
-    "posts/matzip-aws.md",
-    "posts/matzip-vpc-setting.md",
-    "posts/have-pp-guideline.md",
-    "posts/english-speaking.md",
-    "posts/english-speaking-2024-01-12.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",

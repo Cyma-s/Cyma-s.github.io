@@ -1,8 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "handler-adapter",
+      "path": "posts/handler-adapter.md"
+    },
+    {
+      "basename": "handler-mapping",
+      "path": "posts/handler-mapping.md"
+    },
+    {
+      "basename": "bellman-ford-algorithm",
+      "path": "posts/bellman-ford-algorithm.md"
+    },
+    {
+      "basename": "2024-03-13",
+      "path": "posts/2024-03-13.md"
+    },
+    {
+      "basename": "ioc-container-and-di",
+      "path": "posts/ioc-container-and-di.md"
+    },
+    {
+      "basename": "top-down-approach-ch1",
+      "path": "posts/top-down-approach-ch1.md"
+    },
+    {
+      "basename": "dh-interview-study",
+      "path": "posts/dh-interview-study.md"
+    },
+    {
+      "basename": "pcl",
+      "path": "posts/pcl.md"
+    },
+    {
       "basename": "what-is-lidar",
       "path": "posts/what-is-lidar.md"
+    },
+    {
+      "basename": "2024-03-12",
+      "path": "posts/2024-03-12.md"
     },
     {
       "basename": "point-cloud-compression",
@@ -11,10 +47,6 @@
     {
       "basename": "english-speaking-2024-02-13",
       "path": "posts/english-speaking-2024-02-13.md"
-    },
-    {
-      "basename": "pcl",
-      "path": "posts/pcl.md"
     },
     {
       "basename": "dh-second-interview-preparation",
@@ -133,10 +165,6 @@
       "path": "posts/level2-week5.md"
     },
     {
-      "basename": "ioc-container-and-di",
-      "path": "posts/ioc-container-and-di.md"
-    },
-    {
       "basename": "level4-writing",
       "path": "posts/level4-writing.md"
     },
@@ -171,34 +199,6 @@
     {
       "basename": "floyd-warshall-algorithm",
       "path": "posts/floyd-warshall-algorithm.md"
-    },
-    {
-      "basename": "pair-programming-rule",
-      "path": "posts/pair-programming-rule.md"
-    },
-    {
-      "basename": "2023-07-11",
-      "path": "posts/2023-07-11.md"
-    },
-    {
-      "basename": "shook-second-demoday",
-      "path": "posts/shook-second-demoday.md"
-    },
-    {
-      "basename": "2023-11-14",
-      "path": "posts/2023-11-14.md"
-    },
-    {
-      "basename": "2023-08-04",
-      "path": "posts/2023-08-04.md"
-    },
-    {
-      "basename": "simultaneously-throw-exception",
-      "path": "posts/simultaneously-throw-exception.md"
-    },
-    {
-      "basename": "2023-07-04",
-      "path": "posts/2023-07-04.md"
     }
   ],
   "omittedPaths": [

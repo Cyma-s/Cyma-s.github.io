@@ -69,7 +69,7 @@
     "posts/minimum-vertex-cover.md": "ceac301002474f69a81073936b40a541ef12301e5d415410b94212087201fa0c",
     "posts/floyd-warshall-algorithm.md": "64d22fb62fbaffaf3c3faa241924cfccc20c32d4300e7046ccefd9f2662ea095",
     "posts/tsp.md": "7757c2d11b63ca1d98cc89b86d79a78be35c11a7331b7d1b61ae4bfe33bf5f10",
-    "posts/bellman-ford-algorithm.md": "227ffbcf98aee1f0bc8dfb10fbc17df352ae4ce42bcb17dd73df6a9d8e08c541",
+    "posts/bellman-ford-algorithm.md": "eeeca3677d70874e22fe29a8c4f74e068cfae241a67973676e18adb9fee5c128",
     "posts/java-algorithm-tips.md": "1b9c8ae1ffd502ddaaeba52f22eb2993a70ca540bfd3a03b0bb632fdc5fe5e7f",
     "posts/mit-ocw-data-structure.md": "08b310df1cb5531c758fa8ffa9ddbd588299222924f104c2c61fc3107c3da605",
     "posts/mit-ocw-sets-and-sorting.md": "315b80f1674f3549f355669f4d9e3b749cc8425e7efcdd9ac4f71d238ccdc06a",
@@ -95,7 +95,7 @@
     "posts/level4-writing.md": "ce1cf0ed9de0087dfe873428d0bb82b215967ebde1dc03f9596b875dd351f271",
     "posts/2023-11-20.md": "6fa18705a83bd72e6f919f12c72900f3718e82b0b89817adf5b5c8ba8e9f4e2e",
     "posts/local-cache-concurrency-problem.md": "a7bbcd73aba53a75556326d7a20bdbeb53246fc30b58c2c5d4d12f03b4cc658a",
-    "posts/top-down-approach-ch1.md": "4b8d799f4f5c22d4ae6a058ef2698d371e8dd676f07a5949b31d92e0ebd86064",
+    "posts/top-down-approach-ch1.md": "c6bfe2e68e692fd3acdc802f10473726552482a4363679cbafab2285655cc072",
     "posts/shook-prod-server-setting.md": "de956ff60aad5166323951afbecbcd16f8841941ecf2c526a7dc191635ed33b3",
     "posts/shook-migration.md": "089ec5dc2ff3c07b92cb6cbfa0638fa6b12652ba9198e9439a55ba74969731ed",
     "posts/what-is-index.md": "0b52e2ed39f45f91cb1da668adc94b3428338ae09347b2713efddda5bdd3cddd",
@@ -188,6 +188,8 @@
     "posts/what-is-lidar.md": "71b3b486f523b97d07ea92ee556b7b6f9c59d31c5ee5658a7113388dffbbe4f2",
     "posts/english-speaking-2024-02-13.md": "fa3e498378b89a1e9401714b13871d9f3a242b71e8e40385a4118d98041dd107",
     "posts/point-cloud-compression.md": "5d3f5f976a305cba217fd77dac72dd036d359246dad5728088e7ae34c73c67fe",
-    "posts/pcl.md": "3f15f593375982e3b3392e8eabea70fc44179a3116ae3afb74bec87d59fefd49"
+    "posts/pcl.md": "3f15f593375982e3b3392e8eabea70fc44179a3116ae3afb74bec87d59fefd49",
+    "posts/2024-03-12.md": "16b794306f0d1549caab5c7dd56a04e7e0884ac06ca264b2897f906996955b9f",
+    "posts/2024-03-13.md": "3f5e73f66db54e8cfb7be1f5f30d828cbb8aa88d88bc391d9c40cd61781ca8b8"
   }
 }
