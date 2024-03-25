@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "blocking-synchronous",
+      "path": "posts/blocking-synchronous.md"
+    },
+    {
+      "basename": "rsync",
+      "path": "posts/rsync.md"
+    },
+    {
+      "basename": "top-down-approach-ch2",
+      "path": "posts/top-down-approach-ch2.md"
+    },
+    {
+      "basename": "english-speaking-2024-02-13",
+      "path": "posts/english-speaking-2024-02-13.md"
+    },
+    {
       "basename": "point-cloud-compression",
       "path": "posts/point-cloud-compression.md"
     },
@@ -19,10 +35,6 @@
     {
       "basename": "what-is-lidar",
       "path": "posts/what-is-lidar.md"
-    },
-    {
-      "basename": "top-down-approach-ch2",
-      "path": "posts/top-down-approach-ch2.md"
     },
     {
       "basename": "handler-adapter",
@@ -51,10 +63,6 @@
     {
       "basename": "2024-03-12",
       "path": "posts/2024-03-12.md"
-    },
-    {
-      "basename": "english-speaking-2024-02-13",
-      "path": "posts/english-speaking-2024-02-13.md"
     },
     {
       "basename": "dh-second-interview-preparation",
@@ -191,14 +199,6 @@
     {
       "basename": "jpa",
       "path": "posts/jpa.md"
-    },
-    {
-      "basename": "2024-01-09",
-      "path": "posts/2024-01-09.md"
-    },
-    {
-      "basename": "readme",
-      "path": "posts/readme.md"
     }
   ],
   "omittedPaths": [

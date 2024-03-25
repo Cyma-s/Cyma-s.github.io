@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/english-speaking-2024-02-13.md",
+                "file": "posts/top-down-approach-ch2.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -71,9 +71,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "1331da62e7ebf45d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/blocking-synchronous.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -156,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/point-cloud-compression.md",
+                "file": "posts/blocking-synchronous.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +186,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/point-cloud-compression.md",
+                "file": "posts/blocking-synchronous.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -204,7 +217,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/point-cloud-compression.md"
+                "file": "posts/blocking-synchronous.md"
               }
             }
           },
@@ -262,13 +275,17 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c08e3f2f3a33ae40",
+  "active": "1331da62e7ebf45d",
   "lastOpenFiles": [
+    "posts/rsync.md",
+    "posts/blocking-synchronous.md",
+    "posts/top-down-approach-ch2.md",
+    "posts/english-speaking-2024-02-13.md",
+    "posts/point-cloud-compression.md",
     "posts/2024-03-13.md",
     "posts/top-down-approach-ch1.md",
     "posts/top-down-approach-ch3.md",
     "posts/what-is-lidar.md",
-    "posts/top-down-approach-ch2.md",
     "posts/handler-adapter.md",
     "posts/handler-mapping.md",
     "posts/bellman-ford-algorithm.md",
@@ -276,8 +293,6 @@
     "posts/dh-interview-study.md",
     "posts/pcl.md",
     "posts/2024-03-12.md",
-    "posts/point-cloud-compression.md",
-    "posts/english-speaking-2024-02-13.md",
     "posts/dh-second-interview-preparation.md",
     "posts/berlin-relocation-plan.md",
     "posts/2024-02-06.md",
@@ -288,8 +303,6 @@
     "posts/application-context-aware.md",
     "posts/shook-migration.md",
     "posts/english-speaking-2024-02-01.md",
-    "posts/english-speaking-2024-02-05.md",
-    "posts/geek-haus-02-05.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",
