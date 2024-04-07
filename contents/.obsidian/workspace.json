@@ -32,9 +32,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6ad8ccd02b18dd09",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/top-down-approach-ch3.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -117,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2024-03-13.md",
+                "file": "posts/top-down-approach-ch3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2024-03-13.md",
+                "file": "posts/top-down-approach-ch3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2024-03-13.md"
+                "file": "posts/top-down-approach-ch3.md"
               }
             }
           },
@@ -223,7 +236,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "76cfc82b2d8596f6",
+  "active": "6ad8ccd02b18dd09",
   "lastOpenFiles": [
     "posts/top-down-approach-ch2.md",
     "posts/2024-03-13.md",

@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "2024-03-13",
-      "path": "posts/2024-03-13.md"
+      "basename": "top-down-approach-ch3",
+      "path": "posts/top-down-approach-ch3.md"
     },
     {
       "basename": "top-down-approach-ch2",
       "path": "posts/top-down-approach-ch2.md"
+    },
+    {
+      "basename": "2024-03-13",
+      "path": "posts/2024-03-13.md"
     },
     {
       "basename": "2024-03-26",
@@ -43,10 +47,6 @@
     {
       "basename": "top-down-approach-ch1",
       "path": "posts/top-down-approach-ch1.md"
-    },
-    {
-      "basename": "top-down-approach-ch3",
-      "path": "posts/top-down-approach-ch3.md"
     },
     {
       "basename": "handler-adapter",
