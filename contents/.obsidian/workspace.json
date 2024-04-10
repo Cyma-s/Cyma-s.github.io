@@ -21,25 +21,12 @@
             }
           },
           {
-            "id": "76cfc82b2d8596f6",
+            "id": "6b679cbb8d21d76c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-03-13.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6ad8ccd02b18dd09",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/top-down-approach-ch3.md",
+                "file": "posts/dh-second-interview-preparation.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +34,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -130,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/top-down-approach-ch3.md",
+                "file": "posts/dh-second-interview-preparation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/top-down-approach-ch3.md",
+                "file": "posts/dh-second-interview-preparation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/top-down-approach-ch3.md"
+                "file": "posts/dh-second-interview-preparation.md"
               }
             }
           },
@@ -236,10 +223,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "6ad8ccd02b18dd09",
+  "active": "6b679cbb8d21d76c",
   "lastOpenFiles": [
     "posts/top-down-approach-ch2.md",
     "posts/2024-03-13.md",
+    "posts/top-down-approach-ch3.md",
     "posts/2024-03-26.md",
     "posts/what-is-lidar.md",
     "posts/point-cloud-compression.md",
@@ -249,7 +237,6 @@
     "posts/rsync.md",
     "posts/english-speaking-2024-02-13.md",
     "posts/top-down-approach-ch1.md",
-    "posts/top-down-approach-ch3.md",
     "posts/handler-adapter.md",
     "posts/handler-mapping.md",
     "posts/bellman-ford-algorithm.md",
