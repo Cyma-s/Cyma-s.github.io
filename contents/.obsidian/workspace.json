@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/preposition-guideline.md",
+                "file": "posts/2024-multicore.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/preposition-guideline.md",
+                "file": "posts/2024-multicore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/preposition-guideline.md",
+                "file": "posts/2024-multicore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/preposition-guideline.md"
+                "file": "posts/2024-multicore.md"
               }
             }
           },
@@ -239,6 +239,11 @@
   },
   "active": "6b679cbb8d21d76c",
   "lastOpenFiles": [
+    "posts/2024-database-system.md",
+    "posts/2024-multicore.md",
+    "posts/spring-jdbc.md",
+    "posts/2023-04-12.md",
+    "posts/preposition-guideline.md",
     "posts/sort-algorithm.md",
     "posts/cidr.md",
     "posts/app-image-execute.md",
@@ -260,11 +265,6 @@
     "posts/short-programming-knowledge.md",
     "posts/shook-planning-interview.md",
     "posts/spring-external-api-call-method.md",
-    "posts/level2-week1.md",
-    "posts/2023-06-30.md",
-    "posts/2023-06-01.md",
-    "posts/2023-08-24.md",
-    "posts/what-is-lidar.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",

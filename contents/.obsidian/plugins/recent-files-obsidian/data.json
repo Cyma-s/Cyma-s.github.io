@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "2024-multicore",
+      "path": "posts/2024-multicore.md"
+    },
+    {
+      "basename": "2024-database-system",
+      "path": "posts/2024-database-system.md"
+    },
+    {
+      "basename": "spring-jdbc",
+      "path": "posts/spring-jdbc.md"
+    },
+    {
+      "basename": "2023-04-12",
+      "path": "posts/2023-04-12.md"
+    },
+    {
       "basename": "preposition-guideline",
       "path": "posts/preposition-guideline.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "2024-01",
       "path": "posts/2024-01.md"
-    },
-    {
-      "basename": "level1-eighth-retrospect",
-      "path": "posts/level1-eighth-retrospect.md"
-    },
-    {
-      "basename": "2024-02-05",
-      "path": "posts/2024-02-05.md"
-    },
-    {
-      "basename": "shook-domain-model",
-      "path": "posts/shook-domain-model.md"
-    },
-    {
-      "basename": "mit-ocw-data-structure",
-      "path": "posts/mit-ocw-data-structure.md"
     }
   ],
   "omittedPaths": [
