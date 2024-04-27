@@ -1,7 +1,7 @@
 ---
 title: 멀티코어컴퓨팅
 date: 2024-04-22 15:08:20 +0900
-updated: 2024-04-22 17:44:59 +0900
+updated: 2024-04-22 19:58:12 +0900
 tags:
   - school
 ---
@@ -107,7 +107,7 @@ tags:
 	- good price / performance
 	- memory not shared
 - Grid Computing
-	- fedetation of computer resources from multiple locations to reach a common goal (a large scale distributed system)
+	- federation of computer resources from multiple locations to reach a common goal (a large scale distributed system)
 	- grid tend to be more loosely coupled, heterogeneous, and geographically dispersed
 
 ### Cloud Computing
