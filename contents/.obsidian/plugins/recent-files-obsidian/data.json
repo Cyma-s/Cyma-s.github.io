@@ -1,20 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "java-algorithm-tips",
-      "path": "posts/java-algorithm-tips.md"
-    },
-    {
-      "basename": "top-down-approach-ch2",
-      "path": "posts/top-down-approach-ch2.md"
+      "basename": "transactional",
+      "path": "posts/transactional.md"
     },
     {
       "basename": "top-down-approach-ch3",
       "path": "posts/top-down-approach-ch3.md"
     },
     {
-      "basename": "2024-05-07",
-      "path": "posts/2024-05-07.md"
+      "basename": "java-algorithm-tips",
+      "path": "posts/java-algorithm-tips.md"
+    },
+    {
+      "basename": "top-down-approach-ch2",
+      "path": "posts/top-down-approach-ch2.md"
     },
     {
       "basename": "top-down-approach-ch1",
@@ -195,10 +195,6 @@
     {
       "basename": "2023-02-07",
       "path": "posts/2023-02-07.md"
-    },
-    {
-      "basename": "2023-05-11",
-      "path": "posts/2023-05-11.md"
     }
   ],
   "omittedPaths": [

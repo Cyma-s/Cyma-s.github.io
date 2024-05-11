@@ -34,19 +34,20 @@
             }
           },
           {
-            "id": "21015426aea8839b",
+            "id": "3b4e01a8e6ca0a08",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-05-07.md",
+                "file": "posts/transactional.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -130,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/java-algorithm-tips.md",
+                "file": "posts/transactional.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/java-algorithm-tips.md",
+                "file": "posts/transactional.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/java-algorithm-tips.md"
+                "file": "posts/transactional.md"
               }
             }
           },
@@ -199,7 +200,7 @@
             }
           },
           {
-            "id": "931d18c0507273f1",
+            "id": "1bb22bd51279db14",
             "type": "leaf",
             "state": {
               "type": "tasks_timeline_view",
@@ -207,7 +208,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -236,12 +237,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "cf0873159c7baecb",
+  "active": "3b4e01a8e6ca0a08",
   "lastOpenFiles": [
-    "posts/top-down-approach-ch2.md",
-    "posts/java-algorithm-tips.md",
     "posts/top-down-approach-ch3.md",
     "posts/2024-05-07.md",
+    "posts/java-algorithm-tips.md",
+    "posts/2024-05-08.md",
+    "posts/top-down-approach-ch2.md",
     "posts/top-down-approach-ch1.md",
     "posts/2024-multicore.md",
     "posts/2024-database-system.md",
@@ -263,7 +265,6 @@
     "posts/transaction-and-spring-transaction.md",
     "posts/english-speaking-10-17.md",
     "posts/bit-masking.md",
-    "posts/2023-11-05.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",
