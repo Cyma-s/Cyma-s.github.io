@@ -1,16 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "transactional",
-      "path": "posts/transactional.md"
+      "basename": "webmvctest",
+      "path": "posts/webmvctest.md"
+    },
+    {
+      "basename": "level2-week2",
+      "path": "posts/level2-week2.md"
+    },
+    {
+      "basename": "jpa-dto-projection",
+      "path": "posts/jpa-dto-projection.md"
+    },
+    {
+      "basename": "2024-05-16",
+      "path": "posts/2024-05-16.md"
+    },
+    {
+      "basename": "java-algorithm-tips",
+      "path": "posts/java-algorithm-tips.md"
     },
     {
       "basename": "top-down-approach-ch3",
       "path": "posts/top-down-approach-ch3.md"
     },
     {
-      "basename": "java-algorithm-tips",
-      "path": "posts/java-algorithm-tips.md"
+      "basename": "transactional",
+      "path": "posts/transactional.md"
     },
     {
       "basename": "top-down-approach-ch2",
@@ -183,18 +199,6 @@
     {
       "basename": "2023-03-14",
       "path": "posts/2023-03-14.md"
-    },
-    {
-      "basename": "2023-05-27",
-      "path": "posts/2023-05-27.md"
-    },
-    {
-      "basename": "minimum-spanning-tree",
-      "path": "posts/minimum-spanning-tree.md"
-    },
-    {
-      "basename": "2023-02-07",
-      "path": "posts/2023-02-07.md"
     }
   ],
   "omittedPaths": [
