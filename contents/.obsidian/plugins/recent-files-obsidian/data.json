@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "fifth-demoday-index",
+      "path": "posts/fifth-demoday-index.md"
+    },
+    {
+      "basename": "mysql-execution-plan",
+      "path": "posts/mysql-execution-plan.md"
+    },
+    {
+      "basename": "mysql-explain",
+      "path": "posts/mysql-explain.md"
+    },
+    {
+      "basename": "2024-05-16",
+      "path": "posts/2024-05-16.md"
+    },
+    {
       "basename": "webmvctest",
       "path": "posts/webmvctest.md"
     },
@@ -11,10 +27,6 @@
     {
       "basename": "jpa-dto-projection",
       "path": "posts/jpa-dto-projection.md"
-    },
-    {
-      "basename": "2024-05-16",
-      "path": "posts/2024-05-16.md"
     },
     {
       "basename": "java-algorithm-tips",
@@ -187,18 +199,6 @@
     {
       "basename": "2023-03-30",
       "path": "posts/2023-03-30.md"
-    },
-    {
-      "basename": "shook-my-page-query-improve",
-      "path": "posts/shook-my-page-query-improve.md"
-    },
-    {
-      "basename": "2023-07-18",
-      "path": "posts/2023-07-18.md"
-    },
-    {
-      "basename": "2023-03-14",
-      "path": "posts/2023-03-14.md"
     }
   ],
   "omittedPaths": [
