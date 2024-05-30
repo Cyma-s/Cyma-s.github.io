@@ -69,7 +69,7 @@
     "posts/minimum-vertex-cover.md": "ceac301002474f69a81073936b40a541ef12301e5d415410b94212087201fa0c",
     "posts/floyd-warshall-algorithm.md": "64d22fb62fbaffaf3c3faa241924cfccc20c32d4300e7046ccefd9f2662ea095",
     "posts/tsp.md": "7757c2d11b63ca1d98cc89b86d79a78be35c11a7331b7d1b61ae4bfe33bf5f10",
-    "posts/bellman-ford-algorithm.md": "eeeca3677d70874e22fe29a8c4f74e068cfae241a67973676e18adb9fee5c128",
+    "posts/bellman-ford-algorithm.md": "6b23bd681edd4b1a44e6710007da842fa280bb45af808b12e92fb0cb1f97e885",
     "posts/java-algorithm-tips.md": "1b9c8ae1ffd502ddaaeba52f22eb2993a70ca540bfd3a03b0bb632fdc5fe5e7f",
     "posts/mit-ocw-data-structure.md": "08b310df1cb5531c758fa8ffa9ddbd588299222924f104c2c61fc3107c3da605",
     "posts/mit-ocw-sets-and-sorting.md": "315b80f1674f3549f355669f4d9e3b749cc8425e7efcdd9ac4f71d238ccdc06a",
@@ -149,7 +149,7 @@
     "posts/spring-boot-3-swagger.md": "9ab9b84c936482ec7eada6b24f54d9d75d84279b27595c7d80d199eb0d6be41e",
     "posts/jenkins-docker.md": "0204546109ebe2660c3e627ac4f5f7afd6cea8a73d168ad7d77a0a736d76fb6c",
     "posts/2024-01.md": "f784736c0f795dae103cefa403b5366f384d923579996dabf6843a4724887bb7",
-    "posts/2024.md": "49c443c442ce3bf5c3857ad4986d6bd28362d568264f848b0eeb50beadbe9268",
+    "posts/2024.md": "f0dc63b43aeef2bc83c2daae2385c02265f2e4838b3eabce2db19604e2bc3c3f",
     "posts/2024-01-08.md": "5cf12d6c95fd6adee8bab9669960516b3c3303c305dfb093b8f9b44119fe27fc",
     "posts/2024-01-09.md": "8f1d570a78da4a89553afee8dde18309cab5a175080ce0a671a078b36e7556f7",
     "posts/english-speaking.md": "95f4c6c3cce6263d6d64ea1e6414af01522f71e9550ab0deb07296d496c3a3da",
@@ -192,12 +192,14 @@
     "posts/2024-03-12.md": "16b794306f0d1549caab5c7dd56a04e7e0884ac06ca264b2897f906996955b9f",
     "posts/2024-03-13.md": "3f5e73f66db54e8cfb7be1f5f30d828cbb8aa88d88bc391d9c40cd61781ca8b8",
     "posts/rsync.md": "cb805c1df4d8e6cab08f7a3268e52ba1f6e77396fb69bd7f1ef2d6775aadbd6c",
-    "posts/blocking-synchronous.md": "8228c255aa3d3bc223018bd8ea09651c20f177e15b9a9feab1d67d69ceabbe5c",
+    "posts/blocking-synchronous.md": "40536e0c76103e6922a23314bd71ac25b8a7a8393e6236ef10019717ca403649",
     "posts/2024-03-26.md": "e269f1bc80e7c91194a0f62d099e5856a3c5a7d33e263115a2c3a8afcf431041",
     "posts/technical-debt.md": "20a422e0791ee647d9dbb83d0c8976b4d8dcf56ef7c262f073e2bc299e4a7146",
     "posts/2024-database-system.md": "8643ba4f5fed7f15bdc2e958bfb63f7aacc9025cc23f1bb4c42d6f9a70ef1c1c",
     "posts/2024-multicore.md": "15c9e7639fdc037fae4ae1b8ec051ea0b39fd7aab3260af6d9b327585520e9d0",
-    "posts/2024-05-16.md": "edf97f68f74d6358649d9854e2d008b0a1d086e89fe88779722986222b2dad36",
-    "posts/ipv4-ipv6-tunneling-protocol.md": "83718d67d6f502df94730448061833073130146c31d8f8982abd9cfc482f2e58"
+    "posts/ipv4-ipv6-tunneling-protocol.md": "83718d67d6f502df94730448061833073130146c31d8f8982abd9cfc482f2e58",
+    "posts/2024-05-28.md": "66d8d94a8e98693e684f7ad51b271ac5b6cede74cc16128e0dafdb46bf6f8b24",
+    "posts/2024-05.md": "ed48ee634124df6a173d73c7e8f735981d9053d93e51c1cb5708602cd7360805",
+    "posts/count-to-infinity-problem.md": "1ed886b019406b8f3b35de13252c7e2adfe13bd93709dda1339c848cea07f643"
   }
 }

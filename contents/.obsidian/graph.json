@@ -13,6 +13,13 @@
         "a": 1,
         "rgb": 16711803
       }
+    },
+    {
+      "query": "file:2023",
+      "color": {
+        "a": 1,
+        "rgb": 3028479
+      }
     }
   ],
   "collapse-display": false,
@@ -21,10 +28,10 @@
   "nodeSizeMultiplier": 1.23248697916667,
   "lineSizeMultiplier": 0.793448893229167,
   "collapse-forces": false,
-  "centerStrength": 0.525349934895833,
-  "repelStrength": 16.4054361979167,
-  "linkStrength": 0.954020182291667,
-  "linkDistance": 303,
-  "scale": 0.15938449812817942,
-  "close": false
+  "centerStrength": 0.568627450980392,
+  "repelStrength": 11.3397214089256,
+  "linkStrength": 0.615428977020673,
+  "linkDistance": 51,
+  "scale": 0.6560981853657223,
+  "close": true
 }
