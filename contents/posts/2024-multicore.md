@@ -1,7 +1,7 @@
 ---
 title: 멀티코어컴퓨팅
 date: 2024-04-22 15:08:20 +0900
-updated: 2024-04-22 19:58:12 +0900
+updated: 2024-06-17 18:17:41 +0900
 tags:
   - school
 ---
@@ -1257,3 +1257,1776 @@ int sum(int[] arr){ 
 	- CopyOnWriteArrayList behaves as a List implementation that allows multiple concurrent reads, and for reads to occur concurrently with a write. The way it does this is to make a brand new copy of the list every time it is altered.
 - Barrier
 	- a type of synchronization method. A barrier for a group of threads or processes in the source code means any thread/process must stop at this point and cannot proceed until all other threads / processes reach this barrier.
+
+## Pthread Programming
+
+### What is Thread?
+
+- Independent stream of instructions executed simultaneously by OS
+- Multithreaded program
+	- A main program contains a number of procedures that are scheduled to run simultaneously and independently by OS
+
+### Processes and Threads
+
+- Threads share resources of a process
+	- Changes made by one thread affect other threads
+	- Two pointers having the same value point to the same data
+	- Reading and writing to the same memory location is possible
+- Processes don’t share resources
+
+### Thread Properties
+
+- Exists within a process and uses the process resources
+- Has its own independent flow of control as long as its parent process exists and the OS supports it.
+- Duplicates only the essential resources it needs to be independently schedulable (like stack, register)
+- May share the process resources with other threads that act equally independently
+- Dies if the parent process dies - or something similar
+- Is “lightweight” because most of the overhead has already been accomplished through the creation of its process
+- All threads within a process share same address space
+- Therefore, inter-thread communication is more efficient than inter-process communication
+
+### pthread
+
+- POSIX thread
+- Standardized C language threads for UNIX
+- For portability
+- Working in shared memory multiprocessor
+
+- Why pthreads?
+	- Performance gains
+	- Requires fewer system resources than process
+		- compare fork() and pthread_create(): 10~50 times
+
+### Pthreads API
+
+- Thread Management
+	- Thread creation, and destruction
+- Mutexes
+	- synchronization
+- Conditional Variables
+	- Communication between threads that share a mutex
+
+#### Thread Creation
+
+```c
+int pthread_create(
+	pthread_t *restrict thread,
+	const pthread_attr_t *restrict attr,
+	void *(*start_routine) (void *),
+	void *restrict arg
+);
+```
+
+- Creates a new thread and makes it executable
+- The creating process (or thread) must provide a location for storage of thread id
+- The third parameter is just the name of the function for the thread to run
+- The last parameter is a pointer to the arguments
+- When a new thread is created, it runs concurrently with the creating process.
+- When creating a thread, you indicate which function the thread should execute
+- Thread handle returned via `pthread_t` structure
+- Specify `NULL` to use default attributes
+- Single argument sent to the function
+- If no arguments to function, specify `NULL`
+- Check error codes!
+
+- [i] Example
+```c
+#include <iostream>
+#include <thread>
+#include <stdio.h>
+
+long OddSum=0;
+long EvenSum=0;
+
+void findEven(long start, long end)
+{
+        for (long i=start;i<=end;i++) if ((i&1)==0) EvenSum += i;
+}
+
+void findOdd(long start, long end)
+{
+        for (long i=start;i<=end;i++) if ((i&1)==1) OddSum += i;
+}
+
+
+// Functor (Function Object)
+class FindOddFunctor {
+        public:
+                void operator()(int start, int end) {
+                        for (int i=start;i<=end;i++) if ((i&1)==1) OddSum += i;
+                }
+};
+
+// class member function
+class FindOddClass {
+	public:
+		void myrun(int start, int end) {
+                        for (int i=start;i<=end;i++) if ((i&1)==1) OddSum += i;
+		}
+};
+
+
+int main()
+{
+        long start = 0, end = 1000;
+
+        std::thread t1(findEven, start, end);
+
+        //std::thread t2(findOdd, start, end);   // (method 1) create thread using function pointer
+
+	//FindOddFunctor findoddfunctor;
+        //std::thread t2(findoddfunctor, start, end); // (method 2) create thread using functor
+
+	//FindOddClass oddObj;
+        //std::thread t2(&FindOddClass::myrun, &oddObj, start, end); // (method 3) create thread using member function of an object
+
+	// (method 4) create thread using lambda function
+	std::thread t2([&](long s, long e) {
+		for (long i=s;i<=e;i++) if ((i&1)==1) OddSum += i;
+	}, start, end);
+		
+        t1.join(); // wait until thread t1 is finished.
+        t2.join(); // wait until thread t2 is finished.
+        //t2.detach(); // continue to run without waiting
+
+        std::cout << "OddSum: " << OddSum << std::endl;
+        std::cout << "EvenSum: " << EvenSum << std::endl;
+
+        return 0;
+}
+```
+#### Thread Termination
+
+`void pthread_exit(void *value_ptr)`
+
+- There are several ways in which a pthread may be terminated
+	- The thread returns from its starting routine (the main routine for the initial thread)
+	- The thread makes a call to the `pthread_exit` subroutine
+	- The thread is canceled is terminated due to making a call to either the `exec()` or `exit()`
+	- If main() finishes first, without calling `pthread_exit` explicitly itself
+- Typically, the pthread_exit() routine is called to quit the thread
+- If main() finishes before the threads it has created, and exits with pthread_exit(), the other threads will continue to execute. Otherwise, they’ll be automatically terminated when main() finishes.
+- The programmer may optionally specify a termination status, which is stored as a void pointer for any thread that may join the calling thread
+- Cleanup: the pthread_exit() routine does not close files; any files opened inside the thread wil remain open after the thread is terminated.
+
+#### Thread Cancellation
+
+- One thread can request that another exit with pthread_cancel
+- `int pthread_cancel(pthread_t thread)`
+- The pthread_cancel returns after making the request
+
+#### Joining
+
+`int pthread_join(pthread_t thread, void **value_ptr)`
+
+- The pthread_join() subroutine blocks the calling thread until the specified thread terminates
+- The programmer is able to obtain the target thread’s termination return status if it was specified in the target thread’s call to pthread_exit()
+- A joining thread can match one pthread_join() call. It is a logical error to attempt multiple joins on the same thread
+
+#### Mutexes
+
+- Mutual Exclusion
+- implementing thread synchronization and protecting shared data when multiple writes occur
+- A mutex variable acts like a “lock” protecting access to a shared data resource
+	- only one thread can lock a mutex variable at any given time
+- Used for preventing race condition
+- When several threads compete for a mutex, the losers block at that call - an unblocking call is available with `trylock` instead of the `lock` call
+
+##### Mutex Routines
+
+`pthread_mutex_init (mutex, attr)`
+`pthread_mutex_destroy(mutex)`
+
+- Mutex variables must be declared with type `pthread_mutex_t`, and must be initialized before they can be used.
+
+##### Locking / Unlocking Mutexes
+
+- `pthread_mutex_lock(mutex)`
+	- acquire a lock on the specified mutex variable
+- `pthread_mutex_trylock(mutex)`
+	- attempt to lock a mutex. However, if the mutex is already locked, the routine will return immediately with a “busy” error code
+- `pthread_mutex_unlock(mutex)`
+	- unlock a mutex if called by the owning thread
+
+##### User’s Responsibility for Using Mutex
+
+- When protecting shared data, it is the programmer’s responsibility to make sure every thread that needs to use a mutex does so
+- For example, if 3 threads are updating the same data, but only one or two use a mutex, the data can still be corrupted
+
+#### Condition Variables
+
+- another way for threads to synchronize
+- mutexes
+	- synchronization by controlling thread access to data
+- condition variables
+	- synchronization based upon the actual value of data
+	- Without condition variables, the programmer would need to have threads continually polling (possibly in a critical section), to check if the condition is met
+	- always used in conjunction with a mutex lock
+
+##### Condition Variables Routines
+
+`pthread_cond_init(condition, attr)`
+`pthread_cond_destroy(condition)`
+
+- Condition variables must be declared with type `pthread_cond_t`, and must be initialized before they can be used
+- attr is used to set condition variable attributes (NULL: defaults)
+- `pthread_cond_destroy()` should be used to free a condition variable that is no longer needed
+- `pthread_cond_wait`
+	- blocks the calling thread until the specified condition is signalled
+	- This routine should be called while mutex is locked
+	- will automatically release the mutex lock while it waits
+	- After signal is received and thread is awakened, mutex will be automatically locked for use
+- `pthread_cond_signal(condition)`
+	- signal (or wake up) another thread which is waiting on the condition variable
+	- It is a logical error to call pthread_cond_signal() before calling pthread_cond_wait()
+- `pthread_cond_broadcast(condition)`
+	- should be used instead of pthread_cond_signal() if more than one thread is in a blocking wait state
+
+## C++ Multithreaded Programming
+
+### C++ Multi-Threading
+
+- C++11
+	- First C++ standard that introduced threads, mutexes (locks), conditional variables etc
+- C++17
+	- Parallel STL: addition of parallel algorithms in STL
+
+### C++ Thread Library
+
+- include header file `<thread>`
+- Create and starts a new thread using `std::thread`
+	- Syntax: `thread(func, args…)`
+	- `func` will be called in a new thread
+	- The new thread will terminate when `func` returns
+	- All parameters passed to `func` are passed by value
+	- For pass by reference, wrap them in `std::ref`
+- 4 ways to create a thread in C++
+	- using function pointer
+	- using functor (function object)
+	- using class member function
+	- using lambda expression
+- Call the member function `join()` to wait for a thread to finish
+- Call the member function `detach()` to run independently
+	- No join: join is not allowed after calling detach()
+	- If thread object is destructed without calling detach(), error might occur
+	- After a call to this function, the thread object becomes non-joinable and can be destroyed safely
+- The parent thread should call `join()` or `detach()`
+- Include header file `<mutex>` to use `std::mutex`
+	- `std::lock_guard`: locks a supplied mutex on construction and unlocks it on destruction (simple exclusive lock)
+- `std::atomic` for atomic variables
+	- operations are atomic
+	- behave as if it is inside a mutex-protected critical section
+	- usually faster than mutex lock (HW supported)
+
+### Parallel STL
+
+- C++ STL algorithms with support for execution policies (C++17 or later)
+- Execution Policy
+	- `Stl_function(execution_policy, ... other_arguments ...);`
+	- `std::execution::seq`
+		- 1 thread, sequential
+	- `std::execution::par`
+		- multiple threads
+	- `std::execution::par_unseq`
+		- multiple threads, SIMD (vectorization) possible
+	- `std::execution::unseq`
+		- 1 thread, SIMD (vectorization) possible
+
+#### Example
+
+- clock_lock
+
+```c
+#include <iostream>
+#include <thread>
+#include <mutex>
+
+int inc_num=10001234;
+int dec_num=10000000;
+
+std::mutex m;
+
+class CountLock {
+	int count;
+public:
+	CountLock() : count(0) {}
+	int getCount() 
+	{
+		int val;
+		m.lock();
+		val = count;
+		m.unlock();
+		return val;
+	}
+	
+	void inc()
+	{
+		m.lock();
+		count++;
+		m.unlock();
+	}
+
+	void dec()
+	{
+		m.lock();
+		count--;
+		m.unlock();
+	}
+};
+ 
+class Producer
+{
+	CountLock& c_lock;
+public:
+	Producer(CountLock& clock): c_lock(clock) {
+	}
+
+	void run() {
+		for (int i=0;i<inc_num;i++) c_lock.inc();
+	}
+};
+
+class Consumer
+{
+	CountLock& c_lock;
+public:
+	Consumer(CountLock& clock): c_lock(clock) {
+	}
+
+	void run() {
+		for (int i=0;i<dec_num;i++) c_lock.dec();
+	}
+};
+ 
+int main()  
+{
+    CountLock count_lock;
+    Producer p(count_lock);
+    Consumer c(count_lock);
+    std::thread threadP(&Producer::run,&p);
+    std::thread threadC(&Consumer::run,&c);
+    threadP.join();    
+    threadC.join();    
+    std::cout<<"after main join count:"<<count_lock.getCount()<<std::endl;
+    return 0;
+}
+```
+
+- clock_atomic
+
+```cpp
+#include <iostream>
+#include <thread>
+#include <chrono>
+#include <atomic>
+
+int inc_num=10001234;
+int dec_num=10000000;
+
+class CountLock {
+	std::atomic<int> count;
+public:
+	CountLock() : count(0) {}
+	int getCount() 
+	{
+		return count;
+	}
+	
+	void inc()
+	{
+		count++;
+	}
+
+	void dec()
+	{
+		count--;
+	}
+};
+ 
+class Producer
+{
+	CountLock& c_lock;
+public:
+	Producer(CountLock& clock): c_lock(clock) {
+	}
+
+	void run() {
+		for (int i=0;i<inc_num;i++) c_lock.inc();
+	}
+};
+
+class Consumer
+{
+	CountLock& c_lock;
+public:
+	Consumer(CountLock& clock): c_lock(clock) {
+	}
+
+	void run() {
+		for (int i=0;i<dec_num;i++) c_lock.dec();
+	}
+};
+ 
+int main()  
+{
+    CountLock count_lock;
+    Producer p(count_lock);
+    Consumer c(count_lock);
+    std::thread threadP(&Producer::run,&p);
+    std::thread threadC(&Consumer::run,&c);
+    threadP.join();    
+    threadC.join();    
+    std::cout<<"after main join count:"<<count_lock.getCount()<<std::endl;
+    return 0;
+}
+```
+
+- psort.cpp
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <ctime>
+#include <execution>
+
+int main()
+{
+	std::vector<int> vec(100000000);
+
+	// fill vector with random numbers
+	std::srand(unsigned(std::time(nullptr)));
+	std::generate(vec.begin(), vec.end(), std::rand);
+	auto start_time = std::chrono::high_resolution_clock::now();
+
+	std::sort(vec.begin(), vec.end());
+
+	auto end_time = std::chrono::high_resolution_clock::now();
+	auto time_diff = end_time - start_time;
+	std::cout << "sorting time: " <<
+		time_diff / std::chrono::milliseconds(1) << "ms to run.\n";
+
+	std::srand(unsigned(std::time(nullptr)));
+	std::generate(vec.begin(), vec.end(), std::rand);
+	start_time = std::chrono::high_resolution_clock::now();
+
+	std::sort(std::execution::par, vec.begin(), vec.end());
+
+	end_time = std::chrono::high_resolution_clock::now();
+	time_diff = end_time - start_time;
+	std::cout << "parallel sorting time: " <<
+		time_diff / std::chrono::milliseconds(1) << "ms to run.\n";
+
+	system("pause");
+	return 0;
+}
+```
+
+- ptransform.cpp
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <ctime>
+#include <execution>
+
+bool isPrime(int x)
+{
+    int i;
+    if (x <= 1) return false;
+    for (i = 2; i < x; i++) {
+        if (x % i == 0) return false;
+    }
+    return true;
+}
+
+int getPrimeNo(int n)
+{
+    int i;
+    int prime_count = 0;
+
+    for (i = 2; i <= n; i++) {
+        if (isPrime(i)) prime_count++;
+    }
+    std::cout << "No. of Primes (" << n << ") =" << prime_count << "\n";
+    return prime_count;
+}
+
+int main()
+{
+    int i;
+    std::vector<int> A = { 100000, 100100, 100200, 100300, 100400, 100500, 100600, 100700, 100800, 100900, 
+                           101000, 101100, 101200, 101300, 101400, 101500, 101600, 101700, 101800, 101900 };
+    std::vector<int> B;
+    B.resize(A.size());
+
+    auto start_time = std::chrono::high_resolution_clock::now();
+    std::transform(A.begin(), A.end(), B.begin(), getPrimeNo);
+    auto end_time = std::chrono::high_resolution_clock::now();
+    auto time_diff = end_time - start_time;
+    std::cout << "transform time:" << time_diff / std::chrono::milliseconds(1) << "ms\n";
+    for (i = 0; i < B.size(); i++) std::cout << B[i] << "\n";
+
+    start_time = std::chrono::high_resolution_clock::now();
+    std::transform(std::execution::par, A.begin(), A.end(), B.begin(), getPrimeNo);
+    end_time = std::chrono::high_resolution_clock::now();
+    time_diff = end_time - start_time;
+    std::cout << "parallel transform time:" << time_diff / std::chrono::milliseconds(1) << "ms\n";
+    for (i = 0; i < B.size(); i++) std::cout << B[i] << "\n";
+
+    system("pause");
+    return 0;
+}
+```
+
+## OpenMP
+
+### Background
+
+- OpenMP is a framework for shared memory parallel computing
+- OpenMP is a standard C/C++ and Fortran compilers
+- Compiler directives indicate where parallelism should be used
+	- C/C++ use `#pragma` directives
+	- Fortran uses structured comments
+- A library provides support routines
+- Based on the fork / join model:
+	- the program starts as a single thread
+	- at designated parallel regions a pool of threads is formed
+	- the threads execute in parallel across the region
+	- at the end of the region the threads wait for all of the team to arrive
+	- the master thread continues until the next parallel region
+- Some advantages
+	- Usually can arrange so the same code can run sequentially
+	- Can add parallelism incrementally
+	- Compiler can optimize
+- The OpenMP standard specifies support for C/C++ and Fortran
+- Many compilers now support OpenMP
+- The OpenMP runtime creates and manages separate threads
+- OpenMP is much easier to use than low level thread libraries
+- You still have to make sure what you are donig is thread-safe
+
+### Some OMP Library Functions
+
+- The OMP library provides a number of useful routines
+- Some of the most commonly used
+	- `omp_get_thread_num`: current thread index
+	- `omp_get_num_threads`: size of the active team
+	- `omp_get_max_threads`: maximum number of threads
+	- `omp_get_num_procs`: number of processors available
+	- `omp_get_wtime`: elapsed wall clock time from “some time in the past”
+	- `omp_get_wtick`: timer resolution
+
+### Parallel Loops in OpenMP
+
+- OpenMP provides directives to support parallel loops
+```cpp
+#pragma omp parallel
+#pragma omp for
+	for (i = 0; i<n; i++)
+```
+```cpp
+#pragma omp parallel for
+for (i = start; i<end; i++)
+```
+
+- There are some restrictions on the loop, including
+	- The loop has to be of this simple form with
+		- start and end computable before the loop
+		- a simple comparison test
+		- a simple increment or decrement expression
+	- exits with `bread`, `goto`, `return` are not allowed
+
+### Shared and Private Variables
+
+- Variables declared before a prallel block can be shared or private
+- Shared variables are shared among all threads
+- Private variables vary independently within threads
+	- On entry, values of private variables are undefined
+	- On exit, values of private variables are undefined
+- By default,
+	- all varaibles declared outside a parallel block are shared
+	- except the loop index variable, which is private
+- Variables declared in a prallel block are always private
+- Variables can be explicitly declared shared or private
+- A simple example
+```cpp
+#pragma omp parallel for 
+for (i = 0; i<n; i++)
+	x[i] = x[i] + y[i];
+```
+- Here x, y, and n are shared an i is private in the parallel loop
+- We can make the attributes explicit with
+```cpp
+#pragma omp parallel for shared(x, y, n) private (i)
+for (i = 0; i<n; i++) {
+	x[i] = x[i] + y[i];
+}
+
+or
+
+#pragma omp parallel for default(shared) private (i)
+for (i = 0; i<n; i++) {
+	x[i] = x[i] + y[i];
+}
+```
+- The value of i is undefined after the loop
+
+### Critical Sections and Reduction Variables
+
+```cpp
+int sum = 0;
+#pragma omp parallel for
+for(i = 0; i<n; i++) {
+	int val = f(i);
+	sum = sum + val;
+}
+```
+
+- Problem: there is a race condition in the updating of sum
+- One solution is to use a critical section
+```cpp
+int sum = 0;
+#pragma omp parallel for
+for(i = 0; i<n; i++) {
+	int val = f(i);
+	#pragma omp critical
+	sum = sum + val;
+}
+```
+- Only one thread at a time is allowed into a critical section
+- An alternative is to use a reduction variable
+```cpp
+int sum = 0;
+#pragma omp parallel for reduction(+:sum)
+for(i = 0; i<n; i++) {
+	int val = f(i);
+	sum = sum + val;
+}
+```
+- Reduction variables are in between private and shared variables
+- Other supported reduction operators include `*, &&, and ||`
+
+### Some Additional Clauses
+
+- `firstprivate` `lastprivate` declare variables private
+- `firstprivate` variables are initialized to their value before the parallel section
+- For `lastprivate` variables the value of the variable after the loop is the value after the logically last iteration
+- Variables can be listed both as `firstprivate` and `lastprivate`
+- The `if` clause can be used to enable parallelization conditionally
+- `num_threads(p)` says to use `P` threads
+- `schedule(static, n)` divides the loop into chunks of size n assigned cyclically to the threads
+- `schedule(dynamic, n)` divides the loop into chunks of size n assigned cyclically to the next available thread
+
+### The parallel region
+
+- A parallel region is a block of code executed by multiple threads simultaneously
+```cpp
+#pragma omp parallel [clause ...]
+{
+	"this will be executed in parallel"
+} (implied barrier)
+
+!$omp parallel [clause ...]
+"this will be executed in parallel"
+!$omp end parallel
+```
+
+#### The parallel region - clauses
+
+- A parallel region supports the following clauses
+	- if
+	- private
+	- shared
+	- default
+	- reduction
+	- copyin
+	- firstprivate
+	- num_threads
+
+### Work-sharing constructs
+
+```cpp
+#pragma omp for 
+{
+
+}
+
+#pragma omp sections
+{
+
+}
+
+#pragma omp single
+{
+
+}
+```
+
+- The work is distributed over the threads
+- Must be enclosed in a prallel region
+- Must be encountered by all threads in the team, or none at all
+- No implied barrier on entry; implied barrier on exit (unless nowait is specified)
+- A work-sharing construct does not launch any new threads
+
+### Load balancing
+
+- Load balancing is an important aspect of performance
+- For regular operations, load balancing is not a issue
+- For less regular workloads, care needs to be taken in distributing the work over the threads
+- Examples of irregular workloads
+	- Transposing a matrix
+	- Multiplication of triangular matrices
+	- Parallel searches in a linked list
+- For these irregular situations, the schedule clause supports various iteration scheduling algorithms
+
+#### The schedule clause / 1
+
+- `static [, chunk]`
+	- Distribute iterations in blocks of size “chunk” over the threads in a round-robin fashion
+	- In absence of chunk, each thread executes approx. N/P chunks for a loop of length N and P threads
+- `dynamic [, chunk]`
+	- Fixed portions of work; size is controlled by the value of chunk
+	- When a thread finishes, it starts on the next portion of work
+- `guided [, chunk]`
+	- Same dynamic behaviour as “dynamic”, but size of the portion of work decreases exponentially
+- `runtime`
+	- Iteration scheduling scheme is set at runtime through environment variable`OMP_SCHEDULE
+
+### The SECTIONS directive
+
+- The individual code blocks are distributed over the threads
+
+```cpp
+#pragma omp sections [clauses]
+{
+#pragma omp section
+<code block1>
+#pragma omp section
+<code block2>
+...
+}
+```
+- Clauses supported
+	- private
+	- firstprivate
+	- lastprivate
+	- reduction
+	- nowait
+
+### Barrier
+
+- We need to have updated all of a first, before using a
+- Each thread waits until all others have reached this point
+	- `#pragma omp barrier`
+
+### Critical region
+
+- If sum is a shared variable, this loop can not be run in parallel
+- All threads execute the code, but only one at a time
+	- `#pragma omp critical [(name)]`
+	- `#pragma omp atomic`
+		- This is a lightweight, special form of a critical section
+
+### SINGLE and MASTER construct
+
+- Only one thread in the team executes the code enclosed
+```cpp
+#pragma omp single [clauses ...]
+{
+<code-block>
+}
+```
+- Only master thread executes the code block:
+```cpp
+#pragma omp master
+{code block}
+```
+- There is no implied barrier on entry or exit
+
+### pi computation
+
+![[pi-computation.png]]
+
+#### OpenMP
+
+```cpp
+#include <omp.h>
+#include <stdio.h>
+
+long num_steps = 1000000000; 
+double step;
+
+void main ()
+{ 
+	long i; double x, pi, sum = 0.0;
+	double start_time, end_time;
+
+	start_time = omp_get_wtime();
+	step = 1.0/(double) num_steps;
+	for (i=0;i< num_steps; i++){
+		x = (i+0.5)*step;
+		sum = sum + 4.0/(1.0+x*x);
+	}
+	pi = step * sum;
+	end_time = omp_get_wtime();
+	double timeDiff = end_time - start_time;
+        printf("Execution Time : %.10lfsec\n", timeDiff);
+
+	printf("pi=%.10lf\n",pi);
+}
+```
+
+#### pthread
+
+```cpp
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define NUM_THREADS 4
+#define num_steps 100000
+
+double pi[NUM_THREADS];
+
+void *run(void *threadid) {
+	int* t_ptr=(int*)threadid;
+    double step;
+	double x, sum = 0.0;
+	int my_id, i;
+	int i_start = 0, i_end = 0;
+	my_id = *t_ptr;
+
+	i_start = my_id * (num_steps / NUM_THREADS);
+	i_end = i_start + (num_steps / NUM_THREADS);
+	step = 1.0 / (double)num_steps;
+
+	for (i = i_start; i < i_end; i++) {
+		x = (i + 0.5)*step;
+		sum = sum + 4.0 / (1.0 + x*x);
+	}
+
+	printf("Myid%d, sum=%.8lf\n", my_id, sum*step);
+	pi[my_id] = sum*step;
+	pthread_exit(NULL);
+}
+
+int main(int argc, char *argv[]) {
+
+	pthread_t threads[NUM_THREADS];
+
+	int t, pro_i, status;
+	int ta[NUM_THREADS];
+
+	for (t = 0; t < NUM_THREADS; t++){
+		ta[t]=t;
+		pro_i = pthread_create(&threads[t], NULL, run, (void *)&ta[t]);
+
+		if (pro_i) {
+			printf("ERROR code is %d\n", pro_i);
+			exit(-1);
+		}
+	}
+
+    int i;
+    for (i=0;i<NUM_THREADS;i++) 
+	pthread_join(threads[i], (void **)&status);
+
+    double pi_sum=0;
+    for (i=0;i<NUM_THREADS;i++) pi_sum = pi_sum + pi[i];
+    
+    printf("integration result=%.8lf\n", pi_sum);
+    pthread_exit(NULL);
+}
+```
+
+### Matrix Calculation
+
+```cpp
+#include <stdio.h>
+#include <omp.h>
+
+#define NUM_THREADS 4
+
+#define NX 1000
+#define NM NX
+#define NY NX
+
+int a[NX * NM];
+int b[NM * NY];
+int m[NX * NY];
+
+#define A(i, n) a[(i) + NX * (n)]
+#define B(n, j) b[(n) + NM * (j)]
+#define M(i, j) m[(i) + NX * (j)]
+
+void printMatrix(int* mat, int X, int Y)
+{
+	int i,j;
+	for (j=0;j<Y;j++) {
+		for (i=0;i<X;i++) {
+			printf("%4d ",mat[i+j*X]);
+		}
+		printf("\n");
+	}
+}
+
+int main()
+{
+    int i, j, n;
+	double t1,t2;
+    /* Initialize the Matrix arrays */
+
+	omp_set_num_threads(NUM_THREADS);
+	t1=omp_get_wtime();
+#pragma omp parallel for default(shared) private(n, i)
+    for (n = 0; n < NM; n++) {
+	for (i = 0; i < NX; i++) {
+	    A(i, n) =3;
+	}
+    }
+#pragma omp parallel for default(shared) private(n, j)
+    for (j = 0; j < NY; j++) {
+	for (n = 0; n < NM; n++) {
+	    B(n, j) = 2;
+	}
+    }
+ 
+#pragma omp parallel for default(shared) private(i, j)
+    for (j = 0; j < NY; j++) {
+	for (i = 0; i < NX; i++) {
+	    M(i, j) = 0;
+	}
+    }
+ 
+    /* Matrix-Matrix Multiplication */
+#pragma omp parallel for default(shared) private(i, j, n)
+    for (j = 0; j < NY; j++) {
+	for (n = 0; n < NM; n++) {
+	    for (i = 0; i < NX; i++) {
+		M(i, j) += A(i, n) * B(n, j);
+	    }
+	}
+    }
+	t2=omp_get_wtime();
+
+	//printMatrix(m,NX,NY);
+	printf("computation time:%lf, using %d threads\n",t2-t1,NUM_THREADS);
+    return 0;
+}
+```
+
+### Schedule
+
+```cpp
+#include <omp.h>
+#include <stdio.h>
+
+#define NUM_THREADS 4
+#define END_NUM 20
+
+int main ()
+{ 
+	int i;
+	double start_time, end_time;
+	omp_set_num_threads(NUM_THREADS);
+	start_time = omp_get_wtime( );
+
+	#pragma omp parallel for schedule(static,2)
+	//#pragma omp parallel for schedule(dynamic, 2)
+	//#pragma omp parallel for schedule(guided, 2)
+	for (i = 1; i <= END_NUM; i++) {
+		printf("%3d -- (%d/%d)\n",i, omp_get_thread_num(),omp_get_num_threads());
+	}
+
+	end_time = omp_get_wtime( );
+	printf("time elapsed: %lfs\n",end_time-start_time);
+
+	return 0;
+}
+```
+
+### Merge Sort
+
+- Serial Merge Sort
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <omp.h>
+
+#define SWAP(a,b) {int temp = a; a = b; b = temp;}
+
+#define SIZE (1<<16)
+
+void setUp(int a[], int size);
+void tearDown(double start, double end, int a[], int size);
+void merge(int a[], int size, int temp[]);
+void mergesort_serial(int a[], int size, int temp[]);
+void mergesort_parallel_omp
+(int a[], int size, int temp[], int threads);
+
+int main() {
+	int a[SIZE];
+	int temp[SIZE];
+	double startTime, endTime;
+	int num_threads;
+
+	num_threads = omp_get_num_threads();
+
+	setUp(a, SIZE);
+
+	startTime = omp_get_wtime();
+	mergesort_serial(a, SIZE, temp);
+	endTime = omp_get_wtime();
+
+	tearDown(startTime, endTime, a, SIZE);
+}
+
+void setUp(int a[], int size){
+	int i;
+
+	srand(time(NULL));
+	for (i = 0; i<size; ++i) {
+		a[i] = rand() % size;
+	}
+	return;
+}
+
+void tearDown(double start, double end, int a[], int size) {
+	int sorted = 1;
+	int i;
+
+	printf("Time to execute: %f\n", end-start);
+	
+	for (i = 0; i < size-1; ++i) {
+		sorted &= (a[i] <= a[i+1]);
+	}
+
+	printf("Array sorted: %d\n", sorted);
+
+	printf("Num threads: %d\n", omp_get_num_threads());
+}
+
+void merge(int a[], int size, int temp[]) {
+	int i1 = 0;
+	int i2 = size / 2;
+	int it = 0;
+
+	while(i1 < size/2 && i2 < size) {
+		if (a[i1] <= a[i2]) {
+			temp[it] = a[i1];
+			i1 += 1;
+		}
+		else {
+			temp[it] = a[i2];
+			i2 += 1;
+		}
+		it += 1;
+	}
+
+	while (i1 < size/2) {
+	    temp[it] = a[i1];
+	    i1++;
+	    it++;
+	}
+	while (i2 < size) {
+	    temp[it] = a[i2];
+	    i2++;
+	    it++;
+	}
+
+	memcpy(a, temp, size*sizeof(int));
+
+}
+
+void mergesort_serial(int a[], int size, int temp[]) {
+	int i;
+
+	if (size == 2) { 
+		if (a[0] <= a[1])
+			return;
+		else {
+			SWAP(a[0], a[1]);
+			return;
+		}
+	}
+
+	mergesort_serial(a, size/2, temp);
+	mergesort_serial(a + size/2, size - size/2, temp);
+	merge(a, size, temp);
+}
+
+void mergesort_parallel_omp
+(int a[], int size, int temp[], int threads) {
+	if ( threads == 1) {
+        mergesort_serial(a, size, temp);
+    }
+    else if (threads > 1) {
+        #pragma omp parallel sections
+        {
+            #pragma omp section
+            mergesort_parallel_omp(a, size/2, temp, threads/2);
+            #pragma omp section
+            mergesort_parallel_omp(a + size/2, size-size/2,
+                temp + size/2, threads-threads/2);
+        }
+
+        merge(a, size, temp);
+	} // threads > 1
+}
+```
+
+#### Merge-Sort Algorithm
+
+- if n = 1
+$$T_{1(n)}= \theta(1)$$
+- otherwise,
+$$T_1{(n)}= 2T_{1}(\frac{n}{2})+ \theta(n) = \theta(n logn)$$
+
+## Manycore GPU Programming with CUDA
+
+### Moore’s Law
+
+- Transistor count of integrated circuits doubles every two years
+
+### The Need of Multicore Architecture
+
+- Hard to design high clock speed (frequency)
+	- power consumption and heat generation: too high
+	- number of cores may still increase
+
+### Many-core GPUs
+
+- Motivation
+	- Originally driven by the insatiable market demand for realtime, high-definition 3D graphics
+	- progammable GPU has evolved into a highly parallel, multithreaded, manycore processor with tremendous computational horsepower and very high memory bandwidth
+	- GPGPU
+		- General Purpose computing on GPU (Graphical Processing Unit)
+		- Utilization of GPU (typically handles computations for graphics) to perform general purpose computation (traditionally handled by CPU)
+
+### Processor: Multicore vs Many-core
+
+- Multicore direction (CPU) : 2~8 cores
+	- Typically handles general purpose computation
+	- seeks to maintain/increase the execution speed of sequential programs
+	- Complex: out-of-order, multiple instruction issue, branch prediction, pipelining, large cache, …
+	- while moving into multiple cores
+	- Ex. Intel i7 has 4 cores (hexa-core was release recently)
+- Many-core direction (GPU): 100~3000 cores
+	- Focus on the execution throughput of parallel applications
+	- Simple: in order, single instruction issue
+	- Large number of smaller cores
+
+### GPU
+
+- Specially designed for highly parallel applications
+	- Programmable using high level lauguages
+	- Supports standard 32-bit floating point precision
+	- Lots of GFLOPS
+- Fast processing must come with high bandwidth!
+- Simpler memory models and fewer constraints allow high bandwidth
+- Memory bandwidth
+	- the rate at which data can be read from or stored into memory by a processor
+- GPU is specialized for
+	- Compute-intensive
+	- Highly data parallel computation
+		- the same program is executed on many data elements in parallel
+	- More transistors devoted to data processing rather than data caching and flow control
+- What graphics rendering needs?
+	- Geometry(vertex) + Pixel processing
+- Motivates many application developers to move the computationally intensive parts of their software to GPUs for execution
+
+### Applications
+
+- 3D rendering
+	- large sets of piels and vertices are mapped to parallel threads
+- image and media processing applications such as post-processing of rendered images, cideo encoding and decoding, image scaling, stereo vision, and pattern recognition
+	- can map image blocks and pixels to parallel processing threads
+- many other kinds of algorithms are accelerated by data-parallel processing
+	- from general signal processing or physics simulation to compuational finance or computational biology
+
+### CPU vs GPU
+- CPU vs GPU: fundamentally different design philosophies
+- CPU: Optimized for sequential code performance
+	- sophisticated control logic
+		- to allow instructions from single thread to execute in parallel or even out-of-order
+		- branch prediction
+	- large cache memory
+	- powerful ALU: reduced operation latency
+	- **Minimize latency (time to complete a task)**
+- GPU: Optimized for execution throughput of multiple threads
+	- Originally for fast (3D) video game
+		- Requires a massive number of floating-point calculations per frame
+	- Minimize control logic and cache memory
+		- Much more chip area is dedicated to the floating-point calculations
+		- Boost memory throughput
+	- Energy Efficient ALU
+	- Designed as (data parallel) numeric computing engines
+	- **GPU designed for many simple tasks and Maximize throughput (number of tasks in fixed time)**
+
+### GPU Architecture
+
+- GPUs consist of many simple cores
+- Array of highly threaded streaming multiprocessors (SMs)
+- Two or more SMs form a building block
+
+### GPU chip design
+
+- GPU core is stream processor
+- Stream processors are grouped in stream multiprocessors
+	- SM is basically a SIMD processor (single instruction multiple data)
+
+### Winning Applications Use Both CPU and GPU
+
+- GPUs will not perform well on some tasks on which CPUs perform well
+- Use both CPUs and GPUs
+	- Executing essentially sequential parts on CPU
+	- Numerically intensive parts on GPU
+- CUDA
+	- Introduced by NVIDIA in 2007
+	- Designed to support joint CPU / GPU execution of applications
+
+### Popularity of GPUs
+
+- Performance
+- Cost
+- large marketplace & customer population
+- Practical factors and easy accessibility
+	- GE MRI with {clusters and GPU}
+- Support of IEEE floating-point standard
+- CUDA
+	- programmer can use C/C++ programming tools
+	- No longer go through complex graphics interface
+
+### Why more parallelism?
+
+- Applications will continue to demand increased speed
+- A good implementation on GPU can achieve more than 100 times speedup over sequential execution
+- Supercomputing applications
+	- Any applications that require data-parallel calculations such as matrix calculations
+
+### CUDA(Computer Unified Device Architecture)
+
+- Parallel Computing Framework Developed by NVIDIA (working only NVIDIA cards)
+- Introduced in 2006
+- General purpose Programming Model
+	- GPGPU (General Purpose GPU)
+	- Offers a computing API
+	- Explicit GPU memory management
+- Goal
+	- Develop application SW that transparently scales its parallelism to leverage the increasing number of processor cores
+
+### Compute Capability
+
+- general specifications and features of compute device
+- Defined by major revision number and minor revision number
+
+### CUDA - Main Features
+
+- C/C++ with extensions
+- Heterogeneous programming model
+- Operates in CPU (host) and GPU (device)
+
+### CUDA Device and Threads
+
+- Device
+	- Is a coprocessor to the CPU or host
+	- Has access to DRAM (device memory)
+	- Runs many threads in parallel
+	- Is typically a GPU but can also be another type of parallel processing device
+- Data-parallel portions of an application are expressed as device kernels which run on many threads
+- Differences between GPU and CPU threads
+	- CPU threads are extremely lightweight (little overhead for creation)
+	- GPU needs 1000s of threads for full efficiency
+		- multicore CPU needs only a few
+
+## CUDA Programming Slides (NVIDIA)
+
+- __host__: CPU → CPU
+- __device__: GPU → GPU
+- __global__: CPU → GPU
+
+`<<<block, thread>>>`
+
+- `a`, `b` and `c` must point to device memory (매개변수는 디바이스)
+
+(N+thread-1)/(Thread)
+
+## Thrust
+
+### Transformation.cu
+
+```cpp
+#include <thrust/device_vector.h>
+#include <thrust/transform.h>
+#include <thrust/sequence.h>
+#include <thrust/copy.h>
+#include <thrust/fill.h>
+#include <thrust/replace.h>
+#include <thrust/functional.h>
+#include <iostream>
+
+struct saxpy_functor
+{
+    const int a;
+
+    saxpy_functor(int _a) : a(_a) {}
+
+    __host__ __device__
+        int operator()(const int& x, const int& y) const {
+            return a * x + y;
+        }
+};
+
+void saxpy_fast(int A, thrust::device_vector<int>& X, thrust::device_vector<int>& Y)
+{
+    // Y <- A * X + Y
+    thrust::transform(X.begin(), X.end(), Y.begin(), Y.begin(), saxpy_functor(A));
+}
+
+void saxpy_slow(int A, thrust::device_vector<int>& X, thrust::device_vector<int>& Y)
+{
+    thrust::device_vector<int> temp(X.size());
+
+    // temp <- A
+    thrust::fill(temp.begin(), temp.end(), A);
+
+    // temp <- A * X
+    thrust::transform(X.begin(), X.end(), temp.begin(), temp.begin(), thrust::multiplies<int>());
+
+    // Y <- A * X + Y
+    thrust::transform(temp.begin(), temp.end(), Y.begin(), Y.begin(), thrust::plus<int>());
+}
+
+int main(void)
+{
+    // allocate three device_vectors with 10 elements
+    thrust::device_vector<int> X(10);
+    thrust::device_vector<int> Y(10);
+    thrust::device_vector<int> Y2(10);
+    thrust::device_vector<int> Y3(10);
+    thrust::device_vector<int> Z(10);
+
+    // initialize X to 0,1,2,3, ....
+    thrust::sequence(X.begin(), X.end());
+
+    // compute Y = -X
+    thrust::transform(X.begin(), X.end(), Y.begin(), thrust::negate<int>());
+
+    // fill Z with twos
+    thrust::fill(Z.begin(), Z.end(), 2);
+
+    // compute Y = X mod 2
+    thrust::transform(X.begin(), X.end(), Z.begin(), Y.begin(), thrust::modulus<int>());
+
+    // replace all the ones in Y with tens
+    thrust::replace(Y.begin(), Y.end(), 1, 10);
+
+
+    // print X
+    std::cout << "X = ";
+    thrust::copy(X.begin(), X.end(), std::ostream_iterator<int>(std::cout, " "));
+    std::cout << "\n";
+
+    // print Y
+    std::cout << "Y = ";
+    thrust::copy(Y.begin(), Y.end(), std::ostream_iterator<int>(std::cout, " "));
+    std::cout << "\n";
+
+    std::cout << "Y=2*X+Y using saxpy_slow : ";
+    saxpy_slow(2,X,Y);
+    thrust::copy(Y.begin(), Y.end(), std::ostream_iterator<int>(std::cout, " "));
+    std::cout << "\n";
+
+    std::cout << "Y=3*X+Y using saxpy_fast : ";
+    saxpy_fast(3,X,Y);
+    thrust::copy(Y.begin(), Y.end(), std::ostream_iterator<int>(std::cout, " "));
+    std::cout << "\n";
+
+    return 0;
+}
+```
+
+```cpp
+#include <thrust/transform_reduce.h>
+#include <thrust/functional.h>
+#include <thrust/device_vector.h>
+#include <thrust/host_vector.h>
+#include <cmath>
+
+// square<T> computes the square of a number f(x) -> x*x
+template <typename T>
+struct square
+{
+    __host__ __device__
+        T operator()(const T& x) const { 
+            return x * x;
+        }
+};
+
+int main(void)
+{
+    // initialize host array
+    float x[4] = {1.0, 2.0, 3.0, 4.0};
+
+    // transfer to device
+    thrust::device_vector<float> d_x(x, x + 4);
+
+    // setup arguments
+    square<float>        unary_op;
+    thrust::plus<float> binary_op;
+    float init = 0;
+
+    float sum = thrust::reduce(d_x.begin(), d_x.end());
+    // compute norm
+    float norm = std::sqrt( thrust::transform_reduce(d_x.begin(), d_x.end(), unary_op, init, binary_op) );
+
+    std::cout << "X = ";
+    for (int i=0;i<d_x.size();i++) std::cout << d_x[i] << " ";
+    std::cout << "\n";
+    std::cout << "sum = " << sum << std::endl;
+    std::cout << "norm = " << norm << std::endl;
+
+    thrust::inclusive_scan(d_x.begin(),d_x.end(), d_x.begin());
+    std::cout << "prefix sum(X) = ";
+    for (int i=0;i<d_x.size();i++) std::cout << d_x[i] << " ";
+    std::cout << "\n";
+
+    return 0;
+}
+```
+
+```cpp
+#include <thrust/transform_reduce.h>
+#include <thrust/functional.h>
+#include <thrust/device_vector.h>
+#include <thrust/host_vector.h>
+#include <cmath>
+
+// square<T> computes the square of a number f(x) -> x*x
+template <typename T>
+struct square
+{
+    __host__ __device__
+        T operator()(const T& x) const { 
+            return x * x;
+        }
+};
+
+int main(void)
+{
+    // initialize host array
+    float x[4] = {1.0, 2.0, 3.0, 4.0};
+
+    // transfer to device
+    thrust::device_vector<float> d_x(x, x + 4);
+
+    // setup arguments
+    square<float>        unary_op;
+    thrust::plus<float> binary_op;
+    float init = 0;
+
+    float sum = thrust::reduce(d_x.begin(), d_x.end());
+    // compute norm
+    float norm = std::sqrt( thrust::transform_reduce(d_x.begin(), d_x.end(), unary_op, init, binary_op) );
+
+    std::cout << "X = ";
+    for (int i=0;i<d_x.size();i++) std::cout << d_x[i] << " ";
+    std::cout << "\n";
+    std::cout << "sum = " << sum << std::endl;
+    std::cout << "norm = " << norm << std::endl;
+
+    thrust::inclusive_scan(d_x.begin(),d_x.end(), d_x.begin());
+    std::cout << "prefix sum(X) = ";
+    for (int i=0;i<d_x.size();i++) std::cout << d_x[i] << " ";
+    std::cout << "\n";
+
+    return 0;
+}
+```
+
+```cpp
+#include <thrust/host_vector.h>
+#include <thrust/device_vector.h>
+#include <thrust/generate.h>
+#include <thrust/sort.h>
+#include <thrust/copy.h>
+#include <thrust/random.h>
+#include <iostream>
+#include <chrono>
+#include <algorithm>
+#include <vector>
+
+int main() {
+
+	//	data initialization (random number generation for vectors)
+			std::vector<int> vec(20000000);
+			std::generate(vec.begin(), vec.end(), std::rand);
+			thrust::device_vector<int> d_vec(vec.begin(), vec.end()) ;
+
+	// perform STL sorting
+			std::cout << "first 10 elements (before sorting): "; std::copy(vec.begin(), vec.begin()+10, std::ostream_iterator<int>(std::cout, " ")); std::cout << "\n";
+			auto start_time = std::chrono::high_resolution_clock::now();
+
+			std::sort(vec.begin(), vec.end());
+
+			auto end_time = std::chrono::high_resolution_clock::now();
+			auto time_diff = end_time - start_time;
+			std::cout << "first 10 elements (after sorting): "; std::copy(vec.begin(), vec.begin()+10, std::ostream_iterator<int>(std::cout, " ")); std::cout << "\n";
+			std::cout << "STL sorting time (single thread): " << time_diff / std::chrono::milliseconds(1) << "ms to run.\n\n";
+
+	// perform thrust sorting
+			std::cout << "first 10 elements (before sorting): "; thrust::copy(d_vec.begin(), d_vec.begin()+10, std::ostream_iterator<int>(std::cout, " ")); std::cout << "\n";
+			start_time = std::chrono::high_resolution_clock::now();
+
+		  thrust::sort(d_vec.begin(), d_vec.end());
+
+			end_time = std::chrono::high_resolution_clock::now();
+			time_diff = end_time - start_time;
+			std::cout << "first 10 elements (after sorting): "; thrust::copy(d_vec.begin(), d_vec.begin()+10, std::ostream_iterator<int>(std::cout, " ")); std::cout << "\n";
+			std::cout << "thrust sorting time (GPU): " << time_diff / std::chrono::milliseconds(1) << "ms to run.\n";
+
+	return 0;
+}
+```
+
+## Parallel Algorithms (focus on sorting algorithms)
+
+### Parallel / Distributed Algorithms
+
+- Parallel program (algorithm)
+	- A program (algorithm) is divided into multiple processes (threads) which are run on multiple processors
+	- The processors normally are in one machine execute one program at a time have high speed communications between them
+- Distributed program (algorithm)
+	- A program (algorithm) is divided into multiple processes which are run on multiple distinct machines
+	- The multiple machines are usual connected by network. Machines used typically are workstations running multiple programs
+
+### Parallelism idea
+
+- Idea: Have 4 threads simultaneously sum 1/4 of the array
+	- Warning: This is an inferior first approach
+	- Create 4 thread objects, each given a portion of the work 
+	- Call start() on each thread object to actually run it in parallel
+	- Wait for threads to finish using join()
+	- Add together their 4 answers for the final result
+	- Problems: processor utilization, subtask size
+
+### A Better Approach
+
+- Problem → Solution is to use lots of threads, far more than the number of processors
+
+1. reusable and efficient across platforms
+2. Use processors “available to you now”
+	- Hang out “work chunks” as you go
+3.  Load balance
+	- in general subproblems may take significantly different amounts of time
+
+### Naive algorithm is poor
+
+- Suppose we create 1 thread to process every 1000 elements
+- Then combining results will have `arr.length / 1000` additions
+	- Linear in size of array (with constant factor 1 / 1000)
+	- Previously we had only 4 pieces (constant in size of array)
+- In the extreme, if we create 1 thread for every 1 element, the loop to combine results has length-of-array iterations
+	- Just like the original sequential algorithms
+
+### Being realistic
+
+- In theory, you can divide down to single elements, do all your result - combining in parallel and get optiomal speedup
+	- Total time $O(n / numProcessors + log n)$
+- In practice, creating all those threads and communicating swamps the savings, so
+	- Use a sequential cutoff, typically around 500-1000
+		- Eliminates almost all the recursive thread creation (bottom levels of tree)
+		- Exactly like quicksort switching to insertion sort for small subproblems, but more important here
+	- Do not create two recursive threads; create one and do the other “yourself”
+		- Cust the number of threads created by another 2x
+
+### Similar Problems
+
+- Maximum or minimum element
+- Is there an element satisfying some property
+- Left-most element satisfying some property
+- Corners of a rectangle containing all points (a bounding box)
+- Counts, for example, number of strings that start with a vowel
+
+=> computations of this form are called **reductions**
+
+### Even easier: Maps (Data Parallelism)
+
+- A map operates on each element of a collection independently to create a new collection of the same size
+	- No combining results
+	- For arrays, this is so trivial some hardware has direct support
+- Canonical example: Vector addition
+```cpp
+int[] vector_add(int[] arr1, int[] arr2) {
+	assert (arr1.length == arr2.length);
+	result = new int[arr1.length];
+	FORALL(i = 0; i<arr1.length; i++) {
+		result[i] = arr1[i] + arr2[i];
+	}
+	return result;
+}
+```
+
+### Maps and reductions
+
+Maps and reductions: the “workhorses” of parallel programming
+
+- By far the two most important and common patterns
+- Learn to recognize when an algorithm can be written in terms of maps and reductions
+- Use maps and reductions to describe (parallel) algorithms
+
+### Divide-and-Conquer
+
+- Divide
+	- divide the original problem into smaller subproblems that are easier are to solve
+- Conquer
+	- solve the smaller subproblems (perhaps recursively)
+- Merge
+	- combine the solutions to the smaller subproblems to obtain a solution for the original problem
+
+→ Can be extended to parallel algorithm
+
+- The divide-and-conquer paradigm improves program modularity, and often leads to simple and efficient algorithms
+- Since the subproblems created in the divide step are often independent, they can be solved in parallel
+- If the subproblems are solved recursively, each recursive divide step generates even more independent subproblems to be solved in parallel
+- In order to obtain a highly parallel algorithm it is often necessary to parallelize the divide and merge steps, too
+
+### Example of Parallel Program
+
+- `spawn`
+	- Subroutine can execute at the same time as its parent
+- `sync`
+	- Wait until all children are done
+	- A procedure cannot safely use the return values of the children it has spawned until it executes a `sync` statement
+
+### Analyzing algorithms
+
+- Like all algorithms, parallel algorithms should be
+	- Correct
+	- Efficient
+- For our algorithms so far, correctness is “obvious” so we’ll focus on efficiency
+	- Want asymptotic bounds
+	- Want to analyze the algorithm without regard to a specific number of processors
+
+### Performance Measure
+
+- $T_p$
+	- running time of an algorithm on $p$ processors
+- $T_1$: work
+	- running time of algorithm on 1 processor
+- $T_{infinity}$
+	- the longest time to execute the algorithm on infinite number of processors
+- Lower bounds on $T_p$
+	- $T_{p}>= \frac{T_{1}}{ p}$
+	- $T_{p}>= T_{infinity}$
+		- P processors cannot do more than infinite number of processors
+- Speedup
+	- $\frac{T_{1}}{ T_{p}}$ : speedup on p processors
+- Parallelism
+	- $\frac{T_{1}}{ T_{infinity}}$
+	- Max possible parallel speedup
+
+### Related Sorting Algorithms
+
+- Sorting Algorithms
+	- Sort an array `A[1, ... , n]` of n keys (using p ≤ n processors)
+- Examples of divide-and-conquer methods
+	- Merge-sort
+	- Quick-sort
+
+### Merge-Sort
+
+- Basic Plan
+	- Divide array into two halves
+	- Recursively sort each half
+	- Merge two halves to make sorted whole
+
+### Performance analysis
+
+$$T(n)=aT(\frac{b}{n}​)+f(n)$$
+
+- The Master Theorem
+	- it is used to analyze the time complexity of a recursively defined algorithm
+- $T(n)$ : the time complexity of the algorithm if input size is n
+- $a$: the count of recursive call
+- $n/b$ : the size of problem which are processed by each recursive call
+- $f(n)$: the time that takes to resolve if we can’t divide the problem into subproblems (conquer)
+
+#### 마스터 정리의 세 가지 경우의 수
+
+1. $f(n)$ 이 재귀 호출 부분보다 느리게 증가하는 경우
+	- 하위 문제들을 해결하는 데 드는 시간이 최종적으로 알고리즘의 전체 시간 복잡도를 결정한다.
+	- 이 경우, 전체 시간 복잡도는 재귀 호출의 시간 복잡도에 의해 지배된다.
+2. $f(n)$ 이 재귀 호출 부분과 비슷한 속도로 증가하는 경우
+	- 재귀 호출과 결합 비용 $f(n)$ 이 비슷한 비율로 증가한다. 따라서 이 둘의 결합이 최종 시간 복잡도를 결정한다.
+	- 이 경우, 전체 시간 복잡도는 재귀 호출과 $f(n)$ 이 결합되어 결정된다.
+	- $T(n) = \Theta(n^{log_{b}{a}}log^{k+1}n)$ 
+3. $f(n)$ 이 재귀 호출 부분과 빠르게 증가하는 경우
+	- 상위 문제를 해결하는 데 드는 시간이 최종적으로 알고리즘의 시간 복잡도를 결정한다.
+	- 이 경우, 전체 시간 복잡도는 $f(n)$ 에 의해 지배된다.
+
+Merge-Sort 를 진행할 때, 다음과 같은 방식으로 작동한다.
+
+1. 배열을 두 개의 균등한 부분으로 나눈다.
+2. 각각의 부분을 재귀적으로 정렬한다.
+3. 두 정렬된 부분을 병합하여 전체를 정렬한다.
+
+이 알고리즘의 시간 복잡도는 다음과 같이 나타낼 수 있다.
+
+$$T(n) = 2T\left(\frac{n}{2}\right)+ O(n)$$
+
+- a = 2 (두 개의 부분으로 나누기 때문에)
+- b = 2 (각 부분의 크기가 원래의 반이기 때문에)
+- $f(n) = O(n)$ (병합하는 데 걸리는 시간)
+
+#### 왜 $n^{log_{b}{a}}$ 를 계산해야 하는가?
+
+- a: 각 문제에서 만들어지는 하위 문제의 수
+- b: 각 하위 문제의 크기
+
+- [?] 전체 문제의 크기 n 에서 문제를 b 로 나누고 a 의 하위 문제를 해결할 때, 각 단계에서 얼마나 많은 계산이 필요한가?
+
+$n^{log_{b}{a}}$ 는 각 단계에서 발생하는 재귀 호출들의 총 계산량을 나타낸다. 이를 통해 각 단계에서 하위 문제를 해결하는 데 드는 비용과 비교하여 전체 알고리즘의 시간 복잡도를 결정할 수 있다.
+
+### Time Complexity Notation
+
+- Asymptotic Notation (점근적 표기법)
+	- A way to describe the behavior of functions in the limit
+	- 어떤 함수의 인수값이 무한히 커질 때, 그 함수의 증가율을 더 간단한 함수를 이용해 나타내는 것
+- O notation - upper bound
+- $\Omega$ notation - lower bound
+- $\Theta$ notation - tight bound
+
+### Parallel Merge
+
+1. Find $x = T[q_1]$, where $q_1$ is the midpoint of $T[p_1..r_1]$
+2. Use binary search to find the index $q_2$ in subarray $T[p_2..r_2]$ so that the subarray would still be sorted if we insert $x$ between $T[q_{2}- 1]$ and $T[q_2]$
+3. Copy $x$ to $A[q_3]$, where $q_{3}= p_{3}+ (q_{1}- p_{1}) + (q_{2}- p_2)$
+4. Perfom the following two steps in aprallel
+	1. Recursively merge $T[p_1..q_{1}- 1]$ with $T[p_2..q_{2}- 1]$, and place the result into $A[p_3..q_{3}- 1]$
+	2. Recursively merge $T[q_{1}+ 1..r_{1]}$ with $T[q_{2}+ 1..r_2]$, and place the result into $A[q_{3}+ 1..r_3]$
+
+### Quick-Sort algorithm
+
+- a recursive procedure
+	- Select one of the numbers as pivot
+	- Divide the list into two sublists: a “low list” containing numbers smaller than the pivot, and a “high list” containing numbers larger than the pivot
+	- The low list and high list recursively repeat the procedure to sort themselves
+	- The final sorted result is the concatenation of the sorted low list, the pivot, and the sorted high list
+
+### Randomized quick-sort
+
+- Worst-Case Time Complexity of Quick-Sort: $O(N^2)$
+- Average Time Complexity of Sequential Randomized Quick-Sort: $O(NlogN)$
+
+### Parallel partition
+
+- Recursive divide-and-conquer
+
+### Prefix Sums
+
+- Input: A sequence of n elements ${x_{1,}x_{2,}..., x_n}$ drawn from a set S with a binary associative operation, denoted by +
+- Output: A sequence of n partial sums ${s_{1,}s_{2,}..., s_n}$
+
+![[prefix-sums.png]]

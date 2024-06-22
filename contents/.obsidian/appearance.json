@@ -1,10 +1,10 @@
 {
-  "accentColor": "#3845ff",
-  "theme": "moonstone",
+  "accentColor": "#ff0088",
+  "theme": "obsidian",
   "baseFontSize": 17,
-  "cssTheme": "Border",
+  "cssTheme": "Vicious",
   "translucency": false,
-  "monospaceFontFamily": "Bai Jamjuree",
-  "textFontFamily": "Apple SD Gothic Neo",
-  "interfaceFontFamily": "Apple SD Gothic Neo"
+  "monospaceFontFamily": "American Typewriter",
+  "textFontFamily": "Pretendard Variable",
+  "interfaceFontFamily": "Pretendard Variable"
 }

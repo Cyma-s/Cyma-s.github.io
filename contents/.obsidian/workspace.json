@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/ipv4-ipv6-tunneling-protocol.md",
+                "file": "posts/2024-06-17.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,20 +34,12 @@
             }
           },
           {
-            "id": "9711ccdba68bc02f",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "6f9e0308a376366c",
+            "id": "d8f316a65959f84f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-06.md",
+                "file": "posts/2024-multicore.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -55,12 +47,12 @@
             }
           },
           {
-            "id": "70aad4fe1ae783c0",
+            "id": "4c9245215913aa2c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-06-16.md",
+                "file": "posts/multicore-final-exam.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -68,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -97,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "docker",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -138,20 +130,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4ca53cfec1b4f55e",
-            "type": "leaf",
-            "state": {
-              "type": "full-calendar-view",
-              "state": {}
-            }
-          },
-          {
             "id": "873203d8d0289465",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2024-06-16.md",
+                "file": "posts/2024-multicore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2024-06-16.md",
+                "file": "posts/2024-multicore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,20 +170,12 @@
             }
           },
           {
-            "id": "49401136649a95ec",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
             "id": "0c913a0673d25394",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2024-06-16.md"
+                "file": "posts/2024-multicore.md"
               }
             }
           },
@@ -212,7 +188,7 @@
             }
           },
           {
-            "id": "8452eca77f7b1165",
+            "id": "80866eba4558f2ff",
             "type": "leaf",
             "state": {
               "type": "timeline",
@@ -220,15 +196,15 @@
             }
           },
           {
-            "id": "369f1691cc12b9d0",
+            "id": "0f288c16337c6108",
             "type": "leaf",
             "state": {
-              "type": "tasks_timeline_view",
+              "type": "time-ruler-view",
               "state": {}
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -246,45 +222,48 @@
       "random-note:랜덤 노트 열기": false,
       "markdown-importer:마크다운 형식 가져오기 열기": false,
       "smart-random-note:Open Random Note from Search": false,
-      "omnisearch:Omnisearch": false,
-      "templater-obsidian:Templater": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-day-planner:Timeline": false,
+      "templater-obsidian:Templater": false,
       "meld-encrypt:New encrypted note": false,
       "meld-encrypt:Convert to or from an Encrypted note": false,
-      "obsidian-full-calendar:Open Full Calendar": false,
-      "obsidian-day-planner:Timeline": false,
+      "meld-encrypt:Encrypt/Decrypt": false,
+      "obsidian-kanban:새 보드 만들기": false,
       "homepage:Open homepage": false,
-      "periodic-notes:Open today": false
+      "omnisearch:Omnisearch": false,
+      "time-ruler:Open Time Ruler": false
     }
   },
-  "active": "70aad4fe1ae783c0",
+  "active": "d8f316a65959f84f",
   "lastOpenFiles": [
-    "posts/blocking-synchronous.md",
+    "posts/multicore-final-exam.md",
+    "posts/2024-multicore.md",
+    "posts/2024-06-17.md",
+    "posts/attachments/prefix-sums.png",
+    "posts/attachments/pi-computation.png",
     "posts/2024-06-16.md",
-    "posts/Untitled.md",
-    "posts/2024-06.md",
-    "posts/2024.md",
-    "posts/2024-05.md",
-    "posts/java-algorithm-tips.md",
-    "posts/ipv4-ipv6-tunneling-protocol.md",
-    "posts/2024-05-28.md",
-    "posts/count-to-infinity-problem.md",
-    "posts/bellman-ford-algorithm.md",
-    "posts/2024-01.md",
-    "posts/2024-03-26.md",
-    "posts/2024-05-16.md",
-    "posts/fifth-demoday-index.md",
-    "posts/2024-05-24.md",
-    "posts/mysql-execution-plan.md",
-    "posts/mysql-explain.md",
-    "posts/webmvctest.md",
-    "posts/level2-week2.md",
-    "posts/jpa-dto-projection.md",
-    "posts/top-down-approach-ch3.md",
-    "posts/transactional.md",
-    "posts/2024-05-07.md",
-    "posts/2024-05-08.md",
-    "posts/top-down-approach-ch2.md",
+    "posts/hikaricp.md",
+    "posts/fibonaci-matrix.md",
+    "posts/english-speaking-pattern.md",
+    "posts/english-speaking-nov-4week.md",
+    "posts/english-speaking-oct-4week.md",
+    "posts/english-speaking-2024-02-13.md",
+    "posts/english-speaking-2024-01-11.md",
+    "posts/english-speaking-2024-01-09.md",
+    "posts/cache-and-cacheable.md",
+    "posts/ehcache-apply.md",
+    "posts/dh-recruiter-call.md",
+    "posts/dh-interview-study-11-07.md",
+    "posts/dh-interview-study.md",
+    "posts/cors.md",
+    "posts/cidr.md",
+    "posts/broken-pipe-error.md",
+    "posts/branch-strategy.md",
+    "posts/book-love-skill.md",
+    "posts/blocking-synchronous.md",
+    "posts/bipartite-matching.md",
+    "posts/bean-scope.md",
+    "posts/concurrency-test.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",
@@ -293,8 +272,6 @@
     "posts/attachments/gbn-receiver-fsm.jpeg",
     "posts/attachments/gbn-extended-fsm.jpeg",
     "posts/attachments/bit-error-alternating-bit.jpeg",
-    "posts/attachments/bit-error-absent-nak.jpeg",
-    "posts/attachments/bit-error-numbering-receiver.jpeg",
     "posts/attachments/IMG_0283.heic",
     "posts/Untitled 20231113 041648.mdenc",
     "calendar",

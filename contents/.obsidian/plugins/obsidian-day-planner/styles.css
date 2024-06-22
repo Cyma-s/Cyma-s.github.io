@@ -458,8 +458,13 @@
   background-color: transparent;
 }
 [data-type=timeline] .view-content,
-[data-type=weekly] .view-content {
+[data-type=weekly] .view-content,
+[data-type=timeTracker] .view-content {
   --time-ruler-width: 30px;
+  --scrollbar-width: 12px;
+  --shadow-color: #00000010;
+  --shadow-right: 2px 0px 2px var(--shadow-color);
+  --shadow-bottom: 0px 2px 2px var(--shadow-color);
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -468,4 +473,13 @@
   position: absolute;
   right: 0;
   left: 0;
+}
+.day-planner-release-notes-modal .modal-content {
+  height: 100%;
+  overflow: auto;
+}
+.day-planner-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--size-4-2);
 }

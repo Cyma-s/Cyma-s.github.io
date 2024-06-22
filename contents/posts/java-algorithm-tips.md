@@ -1,11 +1,10 @@
 ---
 title: 자바 알고리즘 라이브러리
 date: 2023-11-09 15:06:37 +0900
-updated: 2023-12-01 01:05:28 +0900
+updated: 2024-06-17 10:31:31 +0900
 tags:
   - algorithms
 ---
-
 ## 자료구조
 
 - `Queue` -> `PriorityQueue`

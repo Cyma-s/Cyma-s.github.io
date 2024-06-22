@@ -1,7 +1,7 @@
 ---
 title: Spring에서 외부 API XML Response 파싱하기
 date: 2023-07-26 23:27:52 +0900
-updated: 2023-10-02 23:17:50 +0900
+updated: 2024-06-17 10:34:40 +0900
 tags:
   - spring
   - shook
@@ -18,8 +18,6 @@ S-HOOK의 검색 기능을 구현하면서, 많은 노래를 검색할 수 있�
 그런데 maniaDB의 search API 는 리턴되는 Response가 XML이다... 그렇기 때문에 기존에 우리가 사용하던 JSON DTO의 방식을 그대로 사용할 수가 없다. 
 
 Spring 에서 XML 을 파싱하는 방법에 대해 알아보자.
-
-## 
 
 ## 참고
 

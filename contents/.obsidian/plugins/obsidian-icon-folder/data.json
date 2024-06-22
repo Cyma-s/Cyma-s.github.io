@@ -1,6 +1,6 @@
 {
   "settings": {
-    "migrated": 3,
+    "migrated": 5,
     "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
     "fontSize": 16,
     "emojiStyle": "native",
@@ -11,7 +11,43 @@
       "📚"
     ],
     "recentlyUsedIconsSize": 5,
-    "rules": [],
+    "rules": [
+      {
+        "icon": "🖼",
+        "rule": "attachments/obsidian-templater-shortcut.png\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 0,
+        "useFilePath": true
+      },
+      {
+        "icon": "🖼",
+        "rule": "attachments/obsidian-templater-location.png\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 1,
+        "useFilePath": true
+      },
+      {
+        "icon": "🖼",
+        "rule": "attachments\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 2,
+        "useFilePath": true
+      },
+      {
+        "icon": "📂",
+        "rule": "template\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 3,
+        "useFilePath": true
+      },
+      {
+        "icon": "📚",
+        "rule": "2023.md\\/[\\w\\d\\s]+\\.(?:\\w+\\.)*\\w+",
+        "for": "files",
+        "order": 4,
+        "useFilePath": true
+      }
+    ],
     "extraMargin": {
       "top": 0,
       "right": 4,
@@ -22,30 +58,21 @@
     "iconInTitleEnabled": false,
     "iconsBackgroundCheckEnabled": false,
     "iconInFrontmatterEnabled": false,
-    "iconsInNotesEnabled": true
-  },
-  "2023.md": {
-    "iconName": "📚",
-    "inheritanceIcon": "📚"
-  },
-  "template": {
-    "iconName": "📂",
-    "inheritanceIcon": "📂"
-  },
-  "attachments": {
-    "iconName": "🖼",
-    "inheritanceIcon": "🖼"
-  },
-  "attachments/obsidian-templater-location.png": {
-    "iconName": "🖼",
-    "inheritanceIcon": "🖼"
-  },
-  "attachments/obsidian-templater-shortcut.png": {
-    "iconName": "🖼",
-    "inheritanceIcon": "🖼"
+    "iconsInNotesEnabled": true,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "debugMode": false
   },
   "attachments/obsidian-templater-new-file.png": "🖼",
   "attachments/obsidian-templater-template-choose.png": "🖼",
   "posts/attachments": "🖼",
-  "posts/attachments/acceptance-test-failed.png": "🖼"
+  "posts/attachments/acceptance-test-failed.png": "🖼",
+  "2023.md": "📚",
+  "template": "📂",
+  "attachments": "🖼",
+  "attachments/obsidian-templater-location.png": "🖼",
+  "attachments/obsidian-templater-shortcut.png": "🖼"
 }

@@ -30,13 +30,12 @@ module.exports = __toCommonJS(main_exports);
 var import_obsidian = require("obsidian");
 var DEFAULT_SETTINGS = {
   font: "None",
-  processed_font: "",
   force_mode: false,
   custom_css_mode: false,
   custom_css: ""
 };
-function get_default_css(font_family_name) {
-  return `:root {
+function get_default_css(font_family_name, css_class = ":root *") {
+  return `${css_class} {
 		--font-default: ${font_family_name};
 		--default-font: ${font_family_name};
 		--font-family-editor: ${font_family_name};
@@ -45,7 +44,12 @@ function get_default_css(font_family_name) {
 		--font-text-override: ${font_family_name},
 		--font-monospace-override: ${font_family_name},	
 	}
-	`;
+`;
+}
+function get_custom_css(font_family_name, css_class = ":root *") {
+  return `${css_class} * {
+		font-family: ${font_family_name} !important;
+		}`;
 }
 function arrayBufferToBase64(buffer) {
   let binary = "";
@@ -55,63 +59,41 @@ function arrayBufferToBase64(buffer) {
   }
   return btoa(binary);
 }
-function applyCss(css, css_id) {
-  const style = document.createElement("style");
-  style.innerHTML = css;
-  document.head.appendChild(style);
+function applyCss(css, css_id, appendMode = false) {
   const existingStyle = document.getElementById(css_id);
-  if (existingStyle) {
-    existingStyle.remove();
+  if (existingStyle && appendMode) {
+    existingStyle.innerHTML += css;
+  } else {
+    const style = document.createElement("style");
+    style.innerHTML = css;
+    document.head.appendChild(style);
+    if (existingStyle) {
+      existingStyle.remove();
+    }
+    style.id = css_id;
   }
-  style.id = css_id;
 }
 var FontPlugin = class extends import_obsidian.Plugin {
-  async process_font() {
+  constructor() {
+    super(...arguments);
+    this.config_dir = this.app.vault.configDir;
+    this.plugin_folder_path = `${this.config_dir}/plugins/custom-font-loader`;
+    this.font_folder_path = `${this.app.vault.configDir}/fonts`;
+  }
+  async load_plugin() {
     await this.loadSettings();
     try {
-      if (this.settings.font && this.settings.font.toLowerCase() != "none") {
-        console.log("loading %s", this.settings.font);
-        const font_family_name = this.settings.font.split(".")[0];
-        const font_extension_name = this.settings.font.split(".")[1];
-        const config_dir = this.app.vault.configDir;
-        const plugin_folder_path = `${config_dir}/plugins/custom-font-loader`;
-        const css_font_path = `${plugin_folder_path}/${this.settings.font.toLowerCase().replace(".", "_")}.css`;
-        if (this.settings.font != this.settings.processed_font || !await this.app.vault.adapter.exists(css_font_path)) {
-          new import_obsidian.Notice("Processing Font files");
-          const file = `${config_dir}/fonts/${this.settings.font}`;
-          const arrayBuffer = await this.app.vault.adapter.readBinary(file);
-          const base64 = arrayBufferToBase64(arrayBuffer);
-          const css_type_font = {
-            "woff": "font/woff",
-            "ttf": "font/truetype",
-            "woff2": "font/woff2"
-          };
-          const base64_css = `@font-face{
-	font-family: '${font_family_name}';
-	src: url(data:${css_type_font[font_extension_name]};base64,${base64});
-}`;
-          this.app.vault.adapter.write(css_font_path, base64_css);
-          console.log("saved font %s into %s", font_family_name, css_font_path);
-          this.settings.processed_font = this.settings.font;
-          await this.saveSettings();
-          console.log("Font CSS Saved into %s", css_font_path);
-          await this.process_font();
+      const font_file_name = this.settings.font;
+      if (font_file_name && font_file_name.toLowerCase() != "none") {
+        if (font_file_name != "all") {
+          await this.process_and_load_font(font_file_name, false);
         } else {
-          const content = await this.app.vault.adapter.read(css_font_path);
-          let css_string = "";
-          if (this.settings.custom_css_mode) {
-            css_string = this.settings.custom_css;
-          } else {
-            css_string = get_default_css(font_family_name);
+          applyCss("", "custom_font_base64");
+          const files = await this.app.vault.adapter.list(this.font_folder_path);
+          for (const file of files.files) {
+            const file_name = file.split("/")[2];
+            await this.process_and_load_font(file_name, true);
           }
-          if (this.settings.force_mode)
-            css_string = css_string + `
-					* {
-						font-family: ${font_family_name} !important;
-					}
-						`;
-          applyCss(content, "custom_font_base64");
-          applyCss(css_string, "custom_font_general");
         }
       } else {
         applyCss("", "custom_font_base64");
@@ -121,8 +103,71 @@ var FontPlugin = class extends import_obsidian.Plugin {
       new import_obsidian.Notice(error);
     }
   }
+  async process_and_load_font(font_file_name, load_all_fonts) {
+    console.log("loading %s", font_file_name);
+    const css_font_path = `${this.plugin_folder_path}/${font_file_name.toLowerCase().replace(".", "_")}.css`;
+    if (!await this.app.vault.adapter.exists(css_font_path)) {
+      await this.convert_font_to_css(font_file_name, css_font_path);
+    } else {
+      await this.load_font(css_font_path, load_all_fonts);
+      await this.load_css(font_file_name);
+    }
+  }
+  async load_font(css_font_path, appendMode) {
+    const content = await this.app.vault.adapter.read(css_font_path);
+    applyCss(content, "custom_font_base64", appendMode);
+  }
+  async load_css(font_file_name) {
+    let css_string = "";
+    const font_family_name = font_file_name.split(".")[0];
+    if (this.settings.custom_css_mode) {
+      css_string = this.settings.custom_css;
+    } else {
+      css_string = get_default_css(font_family_name);
+    }
+    if (this.settings.force_mode)
+      css_string += `
+					* {
+						font-family: ${font_family_name} !important;
+					}
+						`;
+    applyCss(css_string, "custom_font_general");
+  }
+  async convert_font_to_css(font_file_name, css_font_path) {
+    new import_obsidian.Notice("Processing Font files");
+    const file = `${this.config_dir}/fonts/${font_file_name}`;
+    const arrayBuffer = await this.app.vault.adapter.readBinary(file);
+    const base64 = arrayBufferToBase64(arrayBuffer);
+    const font_family_name = font_file_name.split(".")[0];
+    const font_extension_name = font_file_name.split(".")[1];
+    let css_type = "";
+    switch (font_extension_name) {
+      case "woff":
+        css_type = "font/woff";
+        break;
+      case "ttf":
+        css_type = "font/truetype";
+        break;
+      case "woff2":
+        css_type = "font/woff2";
+        break;
+      case "otf":
+        css_type = "font/opentype";
+        break;
+      default:
+        css_type = "font";
+    }
+    const base64_css = `@font-face{
+	font-family: '${font_family_name}';
+	src: url(data:${css_type};base64,${base64});
+}`;
+    this.app.vault.adapter.write(css_font_path, base64_css);
+    console.log("saved font %s into %s", font_family_name, css_font_path);
+    console.log("Font CSS Saved into %s", css_font_path);
+    await this.load_plugin();
+  }
   async onload() {
-    this.process_font();
+    this.load_plugin();
     this.addSettingTab(new FontSettingTab(this.app, this));
   }
   async onunload() {
@@ -148,11 +193,11 @@ var FontSettingTab = class extends import_obsidian.PluginSettingTab {
   async display() {
     const { containerEl } = this;
     containerEl.empty();
+    const font_folder_path = `${this.app.vault.configDir}/fonts`;
     const infoContainer = containerEl.createDiv();
     infoContainer.setText("In Order to set the font, copy your font into '.obsidian/fonts/' directory.");
     const options = [{ name: "none", value: "None" }];
     try {
-      const font_folder_path = `${this.app.vault.configDir}/fonts`;
       if (!await this.app.vault.adapter.exists(font_folder_path)) {
         await this.app.vault.adapter.mkdir(font_folder_path);
       }
@@ -163,17 +208,18 @@ var FontSettingTab = class extends import_obsidian.PluginSettingTab {
           options.push({ name: file_name, value: file_name });
         }
       }
+      options.push({ name: "all", value: "Multiple fonts" });
     } catch (error) {
       console.log(error);
     }
-    new import_obsidian.Setting(containerEl).setName("Font").setDesc("Choose font").addDropdown((dropdown) => {
+    new import_obsidian.Setting(containerEl).setName("Font").setDesc("Choose font (If you choose multiple fonts option, we will load and process all fonts in the folder for you)").addDropdown((dropdown) => {
       for (const opt of options) {
         dropdown.addOption(opt.name, opt.value);
       }
       dropdown.setValue(this.plugin.settings.font).onChange(async (value) => {
         this.plugin.settings.font = value;
         await this.plugin.saveSettings();
-        await this.plugin.process_font();
+        await this.plugin.load_plugin();
       });
     });
     new import_obsidian.Setting(containerEl).setName("Force Style").setDesc("This option should only be used if you have installed a community theme and normal mode doesn't work").addToggle((toggle) => {
@@ -181,7 +227,7 @@ var FontSettingTab = class extends import_obsidian.PluginSettingTab {
       toggle.onChange(async (value) => {
         this.plugin.settings.force_mode = value;
         await this.plugin.saveSettings();
-        await this.plugin.process_font();
+        await this.plugin.load_plugin();
       });
     });
     new import_obsidian.Setting(containerEl).setName("Custom CSS Mode").setDesc("If you want to apply a custom css style rather than default style, choose this.").addToggle((toggle) => {
@@ -192,17 +238,17 @@ var FontSettingTab = class extends import_obsidian.PluginSettingTab {
         }
         this.plugin.settings.custom_css_mode = value;
         this.plugin.saveSettings();
-        this.plugin.process_font();
+        this.plugin.load_plugin();
         this.display();
       });
     });
     if (this.plugin.settings.custom_css_mode) {
-      new import_obsidian.Setting(containerEl).setName("Custom CSS Style").setDesc("Input your custom css style").addTextArea((text) => {
+      new import_obsidian.Setting(containerEl).setName("Custom CSS Style").setDesc("Input your custom css style").addTextArea(async (text) => {
         text.onChange(
           async (new_value) => {
             this.plugin.settings.custom_css = new_value;
             await this.plugin.saveSettings();
-            await this.plugin.process_font();
+            await this.plugin.load_plugin();
           }
         );
         text.setDisabled(!this.plugin.settings.custom_css_mode);
@@ -213,7 +259,20 @@ var FontSettingTab = class extends import_obsidian.PluginSettingTab {
           } catch (error) {
             console.log(error);
           }
-          text.setValue(get_default_css(font_family_name));
+          if (font_family_name == "all") {
+            if (await this.app.vault.adapter.exists(font_folder_path)) {
+              const files = await this.app.vault.adapter.list(font_folder_path);
+              let final_str = "";
+              for (const file of files.files) {
+                const file_name = file.split("/")[2];
+                const font_family = file_name.split(".")[0];
+                final_str += "\n" + get_custom_css(font_family, "." + font_family);
+              }
+              text.setValue(final_str);
+            }
+          } else {
+            text.setValue(get_default_css(font_family_name));
+          }
         } else {
           text.setValue(this.plugin.settings.custom_css);
         }

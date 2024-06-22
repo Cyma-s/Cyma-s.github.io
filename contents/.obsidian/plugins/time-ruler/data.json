@@ -1,0 +1,50 @@
+{
+  "calendars": [
+    "https://p114-caldav.icloud.com/published/2/MjAwMjQ1ODAxMjEyMDAyNNca9kR26EjSwnbNE8cVX7LzQs5bEATn4teC-V-yuzoxCol70KahPTgyiDUhhaRqX7VForUtgWnUeOamGc0mdHM"
+  ],
+  "fieldFormat": "dataview",
+  "muted": false,
+  "timerEvent": "notification",
+  "inbox": null,
+  "search": "",
+  "taskSearch": "",
+  "fileOrder": [
+    "Daily: Dec 05",
+    "Daily: Dec 07",
+    "Daily: Dec 11",
+    "Daily: Dec 14",
+    "Daily: Jan 07",
+    "Daily: Jan 08",
+    "Daily: Jan 11",
+    "Daily: Jan 12",
+    "Daily: Jan 26",
+    "Daily: Nov 08",
+    "posts/2024-multicore",
+    "posts/about-pool-sizing",
+    "posts/level2-review-mosquito",
+    "posts/monitor-lock-and-java-synchoronized",
+    "posts/mysql-execution-plan",
+    "posts/ori-05-26",
+    "posts/shook-function-develop",
+    "posts/spring-data-jdbc",
+    "posts/transaction-and-spring-transaction"
+  ],
+  "customStatus": {
+    "include": false,
+    "statuses": "-"
+  },
+  "showCompleted": false,
+  "groupBy": "path",
+  "dayStartEnd": [
+    0,
+    24
+  ],
+  "twentyFourHourFormat": false,
+  "filterFunction": "",
+  "addTaskToEnd": false,
+  "extendBlocks": false,
+  "hideTimes": false,
+  "borders": true,
+  "viewMode": "day",
+  "scheduledSubtasks": true
+}

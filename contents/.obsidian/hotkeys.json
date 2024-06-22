@@ -71,15 +71,6 @@
       "key": "ArrowRight"
     }
   ],
-  "editor:insert-wikilink": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "L"
-    }
-  ],
   "templater-obsidian:create-new-note-from-template": [
     {
       "modifiers": [
