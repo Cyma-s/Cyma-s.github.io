@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-multicore.md",
+                "file": "posts/2024-06-22.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2024-multicore.md",
+                "file": "posts/2024-06-22.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2024-multicore.md",
+                "file": "posts/2024-06-22.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2024-multicore.md"
+                "file": "posts/2024-06-22.md"
               }
             }
           },
@@ -231,13 +231,15 @@
       "obsidian-kanban:새 보드 만들기": false,
       "homepage:Open homepage": false,
       "omnisearch:Omnisearch": false,
-      "time-ruler:Open Time Ruler": false
+      "time-ruler:Open Time Ruler": false,
+      "periodic-notes:Open today": false
     }
   },
   "active": "d8f316a65959f84f",
   "lastOpenFiles": [
-    "posts/multicore-final-exam.md",
     "posts/2024-multicore.md",
+    "posts/2024-06-22.md",
+    "posts/multicore-final-exam.md",
     "posts/2024-06-17.md",
     "posts/attachments/prefix-sums.png",
     "posts/attachments/pi-computation.png",
@@ -263,7 +265,6 @@
     "posts/blocking-synchronous.md",
     "posts/bipartite-matching.md",
     "posts/bean-scope.md",
-    "posts/concurrency-test.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",

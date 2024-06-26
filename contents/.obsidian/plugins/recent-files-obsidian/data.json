@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "2024-06-22",
+      "path": "posts/2024-06-22.md"
+    },
+    {
       "basename": "2024-multicore",
       "path": "posts/2024-multicore.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "mit-ocw-data-structure",
       "path": "posts/mit-ocw-data-structure.md"
-    },
-    {
-      "basename": "meeting-process-refactoring-request",
-      "path": "posts/meeting-process-refactoring-request.md"
     }
   ],
   "omittedPaths": [
