@@ -1,16 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "jpa-dirty-checking",
+      "path": "posts/jpa-dirty-checking.md"
+    },
+    {
+      "basename": "transaction",
+      "path": "posts/transaction.md"
+    },
+    {
+      "basename": "transactional",
+      "path": "posts/transactional.md"
+    },
+    {
+      "basename": "multicore-final-exam",
+      "path": "posts/multicore-final-exam.md"
+    },
+    {
+      "basename": "transaction-and-spring-transaction",
+      "path": "posts/transaction-and-spring-transaction.md"
+    },
+    {
+      "basename": "2024-06-26",
+      "path": "posts/2024-06-26.md"
+    },
+    {
       "basename": "2024-06-22",
       "path": "posts/2024-06-22.md"
     },
     {
       "basename": "2024-multicore",
       "path": "posts/2024-multicore.md"
-    },
-    {
-      "basename": "multicore-final-exam",
-      "path": "posts/multicore-final-exam.md"
     },
     {
       "basename": "2024-06-17",
@@ -179,26 +199,6 @@
     {
       "basename": "shook-sixth-demoday-function",
       "path": "posts/shook-sixth-demoday-function.md"
-    },
-    {
-      "basename": "shook-maniadb",
-      "path": "posts/shook-maniadb.md"
-    },
-    {
-      "basename": "shook-five-minute-speech",
-      "path": "posts/shook-five-minute-speech.md"
-    },
-    {
-      "basename": "rollback-release",
-      "path": "posts/rollback-release.md"
-    },
-    {
-      "basename": "mockito",
-      "path": "posts/mockito.md"
-    },
-    {
-      "basename": "mit-ocw-data-structure",
-      "path": "posts/mit-ocw-data-structure.md"
     }
   ],
   "omittedPaths": [

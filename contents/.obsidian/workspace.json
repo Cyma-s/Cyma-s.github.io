@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-06-22.md",
+                "file": "posts/transaction.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -52,7 +52,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/multicore-final-exam.md",
+                "file": "posts/transactional.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7359d31f78e897f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/jpa-dirty-checking.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -135,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2024-06-22.md",
+                "file": "posts/jpa-dirty-checking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2024-06-22.md",
+                "file": "posts/jpa-dirty-checking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2024-06-22.md"
+                "file": "posts/jpa-dirty-checking.md"
               }
             }
           },
@@ -235,11 +248,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d8f316a65959f84f",
+  "active": "7359d31f78e897f9",
   "lastOpenFiles": [
-    "posts/2024-multicore.md",
-    "posts/2024-06-22.md",
+    "posts/transaction.md",
+    "posts/transactional.md",
     "posts/multicore-final-exam.md",
+    "posts/transaction-and-spring-transaction.md",
+    "posts/2024-06-26.md",
+    "posts/2024-06-22.md",
+    "posts/2024-multicore.md",
     "posts/2024-06-17.md",
     "posts/attachments/prefix-sums.png",
     "posts/attachments/pi-computation.png",
@@ -261,10 +278,6 @@
     "posts/cidr.md",
     "posts/broken-pipe-error.md",
     "posts/branch-strategy.md",
-    "posts/book-love-skill.md",
-    "posts/blocking-synchronous.md",
-    "posts/bipartite-matching.md",
-    "posts/bean-scope.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",
