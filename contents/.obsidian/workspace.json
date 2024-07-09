@@ -65,7 +65,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/jpa-dirty-checking.md",
+                "file": "posts/tomcat.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1f08bec63d0be889",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/tomcat-thread-pool.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "29435053adab57ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/ws-and-was.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +99,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -148,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/jpa-dirty-checking.md",
+                "file": "posts/tomcat-thread-pool.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/jpa-dirty-checking.md",
+                "file": "posts/tomcat-thread-pool.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/jpa-dirty-checking.md"
+                "file": "posts/tomcat-thread-pool.md"
               }
             }
           },
@@ -248,10 +274,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "7359d31f78e897f9",
+  "active": "1f08bec63d0be889",
   "lastOpenFiles": [
-    "posts/transaction.md",
+    "posts/level3-level-log.md",
     "posts/transactional.md",
+    "posts/tomcat.md",
+    "posts/ws-and-was.md",
+    "posts/tomcat-thread-pool.md",
+    "posts/jpa-dirty-checking.md",
+    "posts/transaction.md",
     "posts/multicore-final-exam.md",
     "posts/transaction-and-spring-transaction.md",
     "posts/2024-06-26.md",
@@ -273,11 +304,6 @@
     "posts/ehcache-apply.md",
     "posts/dh-recruiter-call.md",
     "posts/dh-interview-study-11-07.md",
-    "posts/dh-interview-study.md",
-    "posts/cors.md",
-    "posts/cidr.md",
-    "posts/broken-pipe-error.md",
-    "posts/branch-strategy.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",

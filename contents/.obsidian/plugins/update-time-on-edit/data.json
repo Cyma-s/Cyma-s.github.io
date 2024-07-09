@@ -205,6 +205,9 @@
     "posts/wiki-index.md": "3abc4de35723d63d8fb795e4c7895605375d16bedf9b5f360767732a9b4882d2",
     "posts/multicore-final-exam.md": "9913b41442c0090e42beb071d5244d7485cec0e476837466d34f09c52d375ea4",
     "posts/2024-06-22.md": "d124dafbcd938d269fa08068d3fa93f7c8453d0418b4246e724268fab8f236ac",
-    "posts/2024-06-26.md": "5fcb0d4d1e252da0264fdd6657d561f597cf0ab5151bc02ad11442d4d32642bf"
+    "posts/2024-06-26.md": "5fcb0d4d1e252da0264fdd6657d561f597cf0ab5151bc02ad11442d4d32642bf",
+    "posts/tomcat.md": "57520f21ffe4e3e82f14b94cc84933fd5ce77ba345902026be44097cc2154fd4",
+    "posts/ws-and-was.md": "bdfdd31d10a46d11c859444c384bfc96c3afa284f9f7778f61c174fa730bdd7a",
+    "posts/tomcat-thread-pool.md": "f503f10492e153ec856e71a3bdc0f90d3c58dd71bc61effa2d5606c3b28c98f2"
   }
 }

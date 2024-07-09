@@ -1,16 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "tomcat-thread-pool",
+      "path": "posts/tomcat-thread-pool.md"
+    },
+    {
+      "basename": "level3-level-log",
+      "path": "posts/level3-level-log.md"
+    },
+    {
+      "basename": "transactional",
+      "path": "posts/transactional.md"
+    },
+    {
+      "basename": "tomcat",
+      "path": "posts/tomcat.md"
+    },
+    {
+      "basename": "ws-and-was",
+      "path": "posts/ws-and-was.md"
+    },
+    {
       "basename": "jpa-dirty-checking",
       "path": "posts/jpa-dirty-checking.md"
     },
     {
       "basename": "transaction",
       "path": "posts/transaction.md"
-    },
-    {
-      "basename": "transactional",
-      "path": "posts/transactional.md"
     },
     {
       "basename": "multicore-final-exam",
@@ -177,28 +193,12 @@
       "path": "posts/top-down-approach-ch3.md"
     },
     {
-      "basename": "tomcat-thread-pool",
-      "path": "posts/tomcat-thread-pool.md"
-    },
-    {
       "basename": "tcp",
       "path": "posts/tcp.md"
     },
     {
       "basename": "spurious-wakeups",
       "path": "posts/spurious-wakeups.md"
-    },
-    {
-      "basename": "spring-xml-parsing",
-      "path": "posts/spring-xml-parsing.md"
-    },
-    {
-      "basename": "spring-profile-trouble-shooting",
-      "path": "posts/spring-profile-trouble-shooting.md"
-    },
-    {
-      "basename": "shook-sixth-demoday-function",
-      "path": "posts/shook-sixth-demoday-function.md"
     }
   ],
   "omittedPaths": [
