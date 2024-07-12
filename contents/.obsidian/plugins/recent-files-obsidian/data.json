@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "mockito",
+      "path": "posts/mockito.md"
+    },
+    {
+      "basename": "mock-vs-mockbean",
+      "path": "posts/mock-vs-mockbean.md"
+    },
+    {
+      "basename": "shook-like-issue",
+      "path": "posts/shook-like-issue.md"
+    },
+    {
+      "basename": "monitor-lock-and-java-synchoronized",
+      "path": "posts/monitor-lock-and-java-synchoronized.md"
+    },
+    {
       "basename": "tomcat-thread-pool",
       "path": "posts/tomcat-thread-pool.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "vpc",
       "path": "posts/vpc.md"
-    },
-    {
-      "basename": "trie",
-      "path": "posts/trie.md"
-    },
-    {
-      "basename": "top-down-approach-ch3",
-      "path": "posts/top-down-approach-ch3.md"
-    },
-    {
-      "basename": "tcp",
-      "path": "posts/tcp.md"
-    },
-    {
-      "basename": "spurious-wakeups",
-      "path": "posts/spurious-wakeups.md"
     }
   ],
   "omittedPaths": [

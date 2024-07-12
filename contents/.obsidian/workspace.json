@@ -78,7 +78,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/tomcat-thread-pool.md",
+                "file": "posts/mockito.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -174,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/tomcat-thread-pool.md",
+                "file": "posts/mockito.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/tomcat-thread-pool.md",
+                "file": "posts/mockito.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/tomcat-thread-pool.md"
+                "file": "posts/mockito.md"
               }
             }
           },
@@ -276,11 +276,14 @@
   },
   "active": "1f08bec63d0be889",
   "lastOpenFiles": [
+    "posts/mock-vs-mockbean.md",
+    "posts/shook-like-issue.md",
+    "posts/monitor-lock-and-java-synchoronized.md",
+    "posts/tomcat-thread-pool.md",
     "posts/level3-level-log.md",
     "posts/transactional.md",
     "posts/tomcat.md",
     "posts/ws-and-was.md",
-    "posts/tomcat-thread-pool.md",
     "posts/jpa-dirty-checking.md",
     "posts/transaction.md",
     "posts/multicore-final-exam.md",
@@ -301,9 +304,6 @@
     "posts/english-speaking-2024-01-11.md",
     "posts/english-speaking-2024-01-09.md",
     "posts/cache-and-cacheable.md",
-    "posts/ehcache-apply.md",
-    "posts/dh-recruiter-call.md",
-    "posts/dh-interview-study-11-07.md",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",
