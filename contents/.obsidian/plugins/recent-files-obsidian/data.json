@@ -1,164 +1,100 @@
 {
   "recentFiles": [
     {
-      "basename": "mockito",
-      "path": "posts/mockito.md"
+      "basename": "spring-multi-profile-issue",
+      "path": "posts/spring-multi-profile-issue.md"
     },
     {
-      "basename": "mock-vs-mockbean",
-      "path": "posts/mock-vs-mockbean.md"
+      "basename": "application-context-aware",
+      "path": "posts/application-context-aware.md"
     },
     {
-      "basename": "shook-like-issue",
-      "path": "posts/shook-like-issue.md"
+      "basename": "assertj",
+      "path": "posts/assertj.md"
     },
     {
-      "basename": "monitor-lock-and-java-synchoronized",
-      "path": "posts/monitor-lock-and-java-synchoronized.md"
+      "basename": "2023",
+      "path": "posts/2023.md"
     },
     {
-      "basename": "tomcat-thread-pool",
-      "path": "posts/tomcat-thread-pool.md"
+      "basename": "2024",
+      "path": "posts/2024.md"
     },
     {
-      "basename": "level3-level-log",
-      "path": "posts/level3-level-log.md"
+      "basename": "2024-03-13",
+      "path": "posts/2024-03-13.md"
     },
     {
-      "basename": "transactional",
-      "path": "posts/transactional.md"
-    },
-    {
-      "basename": "tomcat",
-      "path": "posts/tomcat.md"
-    },
-    {
-      "basename": "ws-and-was",
-      "path": "posts/ws-and-was.md"
-    },
-    {
-      "basename": "jpa-dirty-checking",
-      "path": "posts/jpa-dirty-checking.md"
-    },
-    {
-      "basename": "transaction",
-      "path": "posts/transaction.md"
-    },
-    {
-      "basename": "multicore-final-exam",
-      "path": "posts/multicore-final-exam.md"
-    },
-    {
-      "basename": "transaction-and-spring-transaction",
-      "path": "posts/transaction-and-spring-transaction.md"
-    },
-    {
-      "basename": "2024-06-26",
-      "path": "posts/2024-06-26.md"
-    },
-    {
-      "basename": "2024-06-22",
-      "path": "posts/2024-06-22.md"
-    },
-    {
-      "basename": "2024-multicore",
-      "path": "posts/2024-multicore.md"
+      "basename": "2024-03-26",
+      "path": "posts/2024-03-26.md"
     },
     {
       "basename": "2024-06-17",
       "path": "posts/2024-06-17.md"
     },
     {
+      "basename": "2024-06",
+      "path": "posts/2024-06.md"
+    },
+    {
       "basename": "2024-06-16",
       "path": "posts/2024-06-16.md"
     },
     {
-      "basename": "hikaricp",
-      "path": "posts/hikaricp.md"
+      "basename": "transactional",
+      "path": "posts/transactional.md"
     },
     {
-      "basename": "fibonaci-matrix",
-      "path": "posts/fibonaci-matrix.md"
+      "basename": "2024-07-15",
+      "path": "posts/2024-07-15.md"
     },
     {
-      "basename": "english-speaking-pattern",
-      "path": "posts/english-speaking-pattern.md"
+      "basename": "2024-multicore",
+      "path": "posts/2024-multicore.md"
     },
     {
-      "basename": "english-speaking-nov-4week",
-      "path": "posts/english-speaking-nov-4week.md"
+      "basename": "2024-school-activity-plan",
+      "path": "posts/2024-school-activity-plan.md"
     },
     {
-      "basename": "english-speaking-oct-4week",
-      "path": "posts/english-speaking-oct-4week.md"
+      "basename": "adapter-pattern",
+      "path": "posts/adapter-pattern.md"
     },
     {
-      "basename": "english-speaking-2024-02-13",
-      "path": "posts/english-speaking-2024-02-13.md"
+      "basename": "bean",
+      "path": "posts/bean.md"
     },
     {
-      "basename": "english-speaking-2024-01-11",
-      "path": "posts/english-speaking-2024-01-11.md"
+      "basename": "bean-candidate",
+      "path": "posts/bean-candidate.md"
     },
     {
-      "basename": "english-speaking-2024-01-09",
-      "path": "posts/english-speaking-2024-01-09.md"
-    },
-    {
-      "basename": "cache-and-cacheable",
-      "path": "posts/cache-and-cacheable.md"
-    },
-    {
-      "basename": "ehcache-apply",
-      "path": "posts/ehcache-apply.md"
-    },
-    {
-      "basename": "dh-recruiter-call",
-      "path": "posts/dh-recruiter-call.md"
-    },
-    {
-      "basename": "dh-interview-study-11-07",
-      "path": "posts/dh-interview-study-11-07.md"
-    },
-    {
-      "basename": "dh-interview-study",
-      "path": "posts/dh-interview-study.md"
-    },
-    {
-      "basename": "cors",
-      "path": "posts/cors.md"
+      "basename": "complexity",
+      "path": "posts/complexity.md"
     },
     {
       "basename": "cidr",
       "path": "posts/cidr.md"
     },
     {
-      "basename": "broken-pipe-error",
-      "path": "posts/broken-pipe-error.md"
+      "basename": "default-method",
+      "path": "posts/default-method.md"
     },
     {
-      "basename": "branch-strategy",
-      "path": "posts/branch-strategy.md"
+      "basename": "delivery-hero-employment",
+      "path": "posts/delivery-hero-employment.md"
     },
     {
-      "basename": "book-love-skill",
-      "path": "posts/book-love-skill.md"
+      "basename": "ehcache-apply",
+      "path": "posts/ehcache-apply.md"
     },
     {
-      "basename": "blocking-synchronous",
-      "path": "posts/blocking-synchronous.md"
+      "basename": "ws-and-was",
+      "path": "posts/ws-and-was.md"
     },
     {
-      "basename": "bipartite-matching",
-      "path": "posts/bipartite-matching.md"
-    },
-    {
-      "basename": "bean-scope",
-      "path": "posts/bean-scope.md"
-    },
-    {
-      "basename": "concurrency-test",
-      "path": "posts/concurrency-test.md"
+      "basename": "writing-subject-candidate",
+      "path": "posts/writing-subject-candidate.md"
     },
     {
       "basename": "woowacourse-retrospect",
@@ -169,36 +105,100 @@
       "path": "posts/wooteco-ux.md"
     },
     {
-      "basename": "wooteco-aop",
-      "path": "posts/wooteco-aop.md"
+      "basename": "wooteco-OT",
+      "path": "posts/wooteco-OT.md"
     },
     {
-      "basename": "wooteco",
-      "path": "posts/wooteco.md"
+      "basename": "wooteco-aop",
+      "path": "posts/wooteco-aop.md"
     },
     {
       "basename": "wiki-index",
       "path": "posts/wiki-index.md"
     },
     {
+      "basename": "wooteco",
+      "path": "posts/wooteco.md"
+    },
+    {
       "basename": "why-string-is-final",
       "path": "posts/why-string-is-final.md"
+    },
+    {
+      "basename": "why-should-we-avoid-use-static",
+      "path": "posts/why-should-we-avoid-use-static.md"
     },
     {
       "basename": "why-return-type-of-add-function-is-boolean",
       "path": "posts/why-return-type-of-add-function-is-boolean.md"
     },
     {
-      "basename": "what-is-lidar",
-      "path": "posts/what-is-lidar.md"
-    },
-    {
       "basename": "what-is-index",
       "path": "posts/what-is-index.md"
     },
     {
-      "basename": "vpc",
-      "path": "posts/vpc.md"
+      "basename": "what-is-lidar",
+      "path": "posts/what-is-lidar.md"
+    },
+    {
+      "basename": "webmvctest",
+      "path": "posts/webmvctest.md"
+    },
+    {
+      "basename": "vepohuhyemal-study",
+      "path": "posts/vepohuhyemal-study.md"
+    },
+    {
+      "basename": "view-resolver",
+      "path": "posts/view-resolver.md"
+    },
+    {
+      "basename": "vepohuhemal-study-question",
+      "path": "posts/vepohuhemal-study-question.md"
+    },
+    {
+      "basename": "vacation-plan",
+      "path": "posts/vacation-plan.md"
+    },
+    {
+      "basename": "ubuntu-device-recognition-error",
+      "path": "posts/ubuntu-device-recognition-error.md"
+    },
+    {
+      "basename": "tsp",
+      "path": "posts/tsp.md"
+    },
+    {
+      "basename": "trie",
+      "path": "posts/trie.md"
+    },
+    {
+      "basename": "transaction-and-spring-transaction",
+      "path": "posts/transaction-and-spring-transaction.md"
+    },
+    {
+      "basename": "transaction",
+      "path": "posts/transaction.md"
+    },
+    {
+      "basename": "topological-sorting",
+      "path": "posts/topological-sorting.md"
+    },
+    {
+      "basename": "top-down-approach-ch1",
+      "path": "posts/top-down-approach-ch1.md"
+    },
+    {
+      "basename": "tomcat-thread-pool",
+      "path": "posts/tomcat-thread-pool.md"
+    },
+    {
+      "basename": "tomcat",
+      "path": "posts/tomcat.md"
+    },
+    {
+      "basename": "text-vs-varchar",
+      "path": "posts/text-vs-varchar.md"
     }
   ],
   "omittedPaths": [
