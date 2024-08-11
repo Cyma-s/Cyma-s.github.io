@@ -1,12 +1,48 @@
 {
   "recentFiles": [
     {
-      "basename": "spring-multi-profile-issue",
-      "path": "posts/spring-multi-profile-issue.md"
+      "basename": "ws-and-was",
+      "path": "posts/ws-and-was.md"
+    },
+    {
+      "basename": "java-algorithm-tips",
+      "path": "posts/java-algorithm-tips.md"
+    },
+    {
+      "basename": "2024-06-17",
+      "path": "posts/2024-06-17.md"
+    },
+    {
+      "basename": "transaction",
+      "path": "posts/transaction.md"
     },
     {
       "basename": "application-context-aware",
       "path": "posts/application-context-aware.md"
+    },
+    {
+      "basename": "mockito",
+      "path": "posts/mockito.md"
+    },
+    {
+      "basename": "dh-second-interview-preparation",
+      "path": "posts/dh-second-interview-preparation.md"
+    },
+    {
+      "basename": "dh-interview-study-11-07",
+      "path": "posts/dh-interview-study-11-07.md"
+    },
+    {
+      "basename": "interview-questions",
+      "path": "posts/interview-questions.md"
+    },
+    {
+      "basename": "2024-07-24",
+      "path": "posts/2024-07-24.md"
+    },
+    {
+      "basename": "spring-multi-profile-issue",
+      "path": "posts/spring-multi-profile-issue.md"
     },
     {
       "basename": "assertj",
@@ -27,10 +63,6 @@
     {
       "basename": "2024-03-26",
       "path": "posts/2024-03-26.md"
-    },
-    {
-      "basename": "2024-06-17",
-      "path": "posts/2024-06-17.md"
     },
     {
       "basename": "2024-06",
@@ -87,10 +119,6 @@
     {
       "basename": "ehcache-apply",
       "path": "posts/ehcache-apply.md"
-    },
-    {
-      "basename": "ws-and-was",
-      "path": "posts/ws-and-was.md"
     },
     {
       "basename": "writing-subject-candidate",
@@ -171,34 +199,6 @@
     {
       "basename": "trie",
       "path": "posts/trie.md"
-    },
-    {
-      "basename": "transaction-and-spring-transaction",
-      "path": "posts/transaction-and-spring-transaction.md"
-    },
-    {
-      "basename": "transaction",
-      "path": "posts/transaction.md"
-    },
-    {
-      "basename": "topological-sorting",
-      "path": "posts/topological-sorting.md"
-    },
-    {
-      "basename": "top-down-approach-ch1",
-      "path": "posts/top-down-approach-ch1.md"
-    },
-    {
-      "basename": "tomcat-thread-pool",
-      "path": "posts/tomcat-thread-pool.md"
-    },
-    {
-      "basename": "tomcat",
-      "path": "posts/tomcat.md"
-    },
-    {
-      "basename": "text-vs-varchar",
-      "path": "posts/text-vs-varchar.md"
     }
   ],
   "omittedPaths": [

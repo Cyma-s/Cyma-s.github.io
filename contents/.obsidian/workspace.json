@@ -8,84 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cf0873159c7baecb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/java-algorithm-tips.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4c09a2e3d7a1fffd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2024-06-17.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d8f316a65959f84f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/transaction.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4c9245215913aa2c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/application-context-aware.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1f08bec63d0be889",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/mockito.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1f81f8f006911c48",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/spring-multi-profile-issue.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "29435053adab57ca",
             "type": "leaf",
             "state": {
@@ -98,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -174,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/spring-multi-profile-issue.md",
+                "file": "posts/ws-and-was.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/spring-multi-profile-issue.md",
+                "file": "posts/ws-and-was.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/spring-multi-profile-issue.md"
+                "file": "posts/ws-and-was.md"
               }
             }
           },
@@ -274,15 +195,23 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "1f81f8f006911c48",
+  "active": "29435053adab57ca",
   "lastOpenFiles": [
+    "posts/java-algorithm-tips.md",
+    "posts/2024-06-17.md",
+    "posts/transaction.md",
     "posts/application-context-aware.md",
+    "posts/mockito.md",
+    "posts/dh-second-interview-preparation.md",
+    "posts/dh-interview-study-11-07.md",
+    "posts/interview-questions.md",
+    "posts/2024-07-24.md",
+    "posts/spring-multi-profile-issue.md",
     "posts/assertj.md",
     "posts/2023.md",
     "posts/2024.md",
     "posts/2024-03-13.md",
     "posts/2024-03-26.md",
-    "posts/2024-06-17.md",
     "posts/2024-06.md",
     "posts/2024-06-16.md",
     "posts/transactional.md",
@@ -294,14 +223,6 @@
     "posts/adapter-pattern.md",
     "posts/bean.md",
     "posts/bean-candidate.md",
-    "posts/complexity.md",
-    "posts/cidr.md",
-    "posts/default-method.md",
-    "posts/delivery-hero-employment.md",
-    "posts/ehcache-apply.md",
-    "posts/ws-and-was.md",
-    "posts/writing-subject-candidate.md",
-    "posts/woowacourse-retrospect.md",
     "posts/attachments/prefix-sums.png",
     "posts/attachments/pi-computation.png",
     "posts/attachments/jenkins-build-trigger.png",
