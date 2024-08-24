@@ -1,8 +1,8 @@
 {
-  "accentColor": "#ff0088",
-  "theme": "obsidian",
+  "accentColor": "#00b3ff",
+  "theme": "moonstone",
   "baseFontSize": 17,
-  "cssTheme": "Vicious",
+  "cssTheme": "Obuntu",
   "translucency": false,
   "monospaceFontFamily": "American Typewriter",
   "textFontFamily": "Pretendard Variable",

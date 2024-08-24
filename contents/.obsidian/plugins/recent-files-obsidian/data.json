@@ -1,204 +1,200 @@
 {
   "recentFiles": [
     {
-      "basename": "ws-and-was",
-      "path": "posts/ws-and-was.md"
+      "basename": "kotlin-in-action",
+      "path": "posts/kotlin-in-action.md"
     },
     {
-      "basename": "java-algorithm-tips",
-      "path": "posts/java-algorithm-tips.md"
+      "basename": "2024-08-24",
+      "path": "posts/2024-08-24.md"
     },
     {
-      "basename": "2024-06-17",
-      "path": "posts/2024-06-17.md"
+      "basename": "singleton-vs-static",
+      "path": "posts/singleton-vs-static.md"
     },
     {
-      "basename": "transaction",
-      "path": "posts/transaction.md"
+      "basename": "2023-08-09",
+      "path": "posts/2023-08-09.md"
     },
     {
-      "basename": "application-context-aware",
-      "path": "posts/application-context-aware.md"
-    },
-    {
-      "basename": "mockito",
-      "path": "posts/mockito.md"
-    },
-    {
-      "basename": "dh-second-interview-preparation",
-      "path": "posts/dh-second-interview-preparation.md"
-    },
-    {
-      "basename": "dh-interview-study-11-07",
-      "path": "posts/dh-interview-study-11-07.md"
-    },
-    {
-      "basename": "interview-questions",
-      "path": "posts/interview-questions.md"
-    },
-    {
-      "basename": "2024-07-24",
-      "path": "posts/2024-07-24.md"
-    },
-    {
-      "basename": "spring-multi-profile-issue",
-      "path": "posts/spring-multi-profile-issue.md"
-    },
-    {
-      "basename": "assertj",
-      "path": "posts/assertj.md"
-    },
-    {
-      "basename": "2023",
-      "path": "posts/2023.md"
-    },
-    {
-      "basename": "2024",
-      "path": "posts/2024.md"
-    },
-    {
-      "basename": "2024-03-13",
-      "path": "posts/2024-03-13.md"
-    },
-    {
-      "basename": "2024-03-26",
-      "path": "posts/2024-03-26.md"
-    },
-    {
-      "basename": "2024-06",
-      "path": "posts/2024-06.md"
-    },
-    {
-      "basename": "2024-06-16",
-      "path": "posts/2024-06-16.md"
-    },
-    {
-      "basename": "transactional",
-      "path": "posts/transactional.md"
-    },
-    {
-      "basename": "2024-07-15",
-      "path": "posts/2024-07-15.md"
-    },
-    {
-      "basename": "2024-multicore",
-      "path": "posts/2024-multicore.md"
-    },
-    {
-      "basename": "2024-school-activity-plan",
-      "path": "posts/2024-school-activity-plan.md"
-    },
-    {
-      "basename": "adapter-pattern",
-      "path": "posts/adapter-pattern.md"
+      "basename": "pair-programming-rule",
+      "path": "posts/pair-programming-rule.md"
     },
     {
       "basename": "bean",
       "path": "posts/bean.md"
     },
     {
-      "basename": "bean-candidate",
-      "path": "posts/bean-candidate.md"
+      "basename": "jenkins-docker",
+      "path": "posts/jenkins-docker.md"
     },
     {
-      "basename": "complexity",
-      "path": "posts/complexity.md"
+      "basename": "top-down-approach-ch3",
+      "path": "posts/top-down-approach-ch3.md"
     },
     {
-      "basename": "cidr",
-      "path": "posts/cidr.md"
+      "basename": "2023-09-01",
+      "path": "posts/2023-09-01.md"
     },
     {
-      "basename": "default-method",
-      "path": "posts/default-method.md"
+      "basename": "2023-03-20",
+      "path": "posts/2023-03-20.md"
     },
     {
-      "basename": "delivery-hero-employment",
-      "path": "posts/delivery-hero-employment.md"
-    },
-    {
-      "basename": "ehcache-apply",
-      "path": "posts/ehcache-apply.md"
-    },
-    {
-      "basename": "writing-subject-candidate",
-      "path": "posts/writing-subject-candidate.md"
-    },
-    {
-      "basename": "woowacourse-retrospect",
-      "path": "posts/woowacourse-retrospect.md"
-    },
-    {
-      "basename": "wooteco-ux",
-      "path": "posts/wooteco-ux.md"
-    },
-    {
-      "basename": "wooteco-OT",
-      "path": "posts/wooteco-OT.md"
-    },
-    {
-      "basename": "wooteco-aop",
-      "path": "posts/wooteco-aop.md"
-    },
-    {
-      "basename": "wiki-index",
-      "path": "posts/wiki-index.md"
-    },
-    {
-      "basename": "wooteco",
-      "path": "posts/wooteco.md"
-    },
-    {
-      "basename": "why-string-is-final",
-      "path": "posts/why-string-is-final.md"
+      "basename": "rollback-release",
+      "path": "posts/rollback-release.md"
     },
     {
       "basename": "why-should-we-avoid-use-static",
       "path": "posts/why-should-we-avoid-use-static.md"
     },
     {
-      "basename": "why-return-type-of-add-function-is-boolean",
-      "path": "posts/why-return-type-of-add-function-is-boolean.md"
+      "basename": "level2-cart",
+      "path": "posts/level2-cart.md"
     },
     {
-      "basename": "what-is-index",
-      "path": "posts/what-is-index.md"
+      "basename": "level4-mvc",
+      "path": "posts/level4-mvc.md"
     },
     {
-      "basename": "what-is-lidar",
-      "path": "posts/what-is-lidar.md"
-    },
-    {
-      "basename": "webmvctest",
-      "path": "posts/webmvctest.md"
-    },
-    {
-      "basename": "vepohuhyemal-study",
-      "path": "posts/vepohuhyemal-study.md"
-    },
-    {
-      "basename": "view-resolver",
-      "path": "posts/view-resolver.md"
-    },
-    {
-      "basename": "vepohuhemal-study-question",
-      "path": "posts/vepohuhemal-study-question.md"
-    },
-    {
-      "basename": "vacation-plan",
-      "path": "posts/vacation-plan.md"
-    },
-    {
-      "basename": "ubuntu-device-recognition-error",
-      "path": "posts/ubuntu-device-recognition-error.md"
-    },
-    {
-      "basename": "tsp",
-      "path": "posts/tsp.md"
+      "basename": "2023-10-09",
+      "path": "posts/2023-10-09.md"
     },
     {
       "basename": "trie",
       "path": "posts/trie.md"
+    },
+    {
+      "basename": "2023-04-17",
+      "path": "posts/2023-04-17.md"
+    },
+    {
+      "basename": "level4-retrospect",
+      "path": "posts/level4-retrospect.md"
+    },
+    {
+      "basename": "2023-10-31",
+      "path": "posts/2023-10-31.md"
+    },
+    {
+      "basename": "2024-06-17",
+      "path": "posts/2024-06-17.md"
+    },
+    {
+      "basename": "2023-12",
+      "path": "posts/2023-12.md"
+    },
+    {
+      "basename": "level4-db-connection-pool",
+      "path": "posts/level4-db-connection-pool.md"
+    },
+    {
+      "basename": "shook-s3-introduce",
+      "path": "posts/shook-s3-introduce.md"
+    },
+    {
+      "basename": "app-image-execute",
+      "path": "posts/app-image-execute.md"
+    },
+    {
+      "basename": "2023-07-17",
+      "path": "posts/2023-07-17.md"
+    },
+    {
+      "basename": "2023-07-05",
+      "path": "posts/2023-07-05.md"
+    },
+    {
+      "basename": "2023-06-28",
+      "path": "posts/2023-06-28.md"
+    },
+    {
+      "basename": "level2-subway",
+      "path": "posts/level2-subway.md"
+    },
+    {
+      "basename": "top-down-approach-ch1",
+      "path": "posts/top-down-approach-ch1.md"
+    },
+    {
+      "basename": "2023-05-27",
+      "path": "posts/2023-05-27.md"
+    },
+    {
+      "basename": "2023-06-01",
+      "path": "posts/2023-06-01.md"
+    },
+    {
+      "basename": "2023-07-11",
+      "path": "posts/2023-07-11.md"
+    },
+    {
+      "basename": "2024-01-07",
+      "path": "posts/2024-01-07.md"
+    },
+    {
+      "basename": "2023-11-08",
+      "path": "posts/2023-11-08.md"
+    },
+    {
+      "basename": "assertj",
+      "path": "posts/assertj.md"
+    },
+    {
+      "basename": "jpa-dto-projection",
+      "path": "posts/jpa-dto-projection.md"
+    },
+    {
+      "basename": "2023-10-04",
+      "path": "posts/2023-10-04.md"
+    },
+    {
+      "basename": "2023-06-30",
+      "path": "posts/2023-06-30.md"
+    },
+    {
+      "basename": "github-self-hosted-runner",
+      "path": "posts/github-self-hosted-runner.md"
+    },
+    {
+      "basename": "dh-recruiter-call",
+      "path": "posts/dh-recruiter-call.md"
+    },
+    {
+      "basename": "level4-architecture-shook",
+      "path": "posts/level4-architecture-shook.md"
+    },
+    {
+      "basename": "shook-tech-stack",
+      "path": "posts/shook-tech-stack.md"
+    },
+    {
+      "basename": "get-a-job-with-delivery-hero",
+      "path": "posts/get-a-job-with-delivery-hero.md"
+    },
+    {
+      "basename": "2023-09-15",
+      "path": "posts/2023-09-15.md"
+    },
+    {
+      "basename": "application-context",
+      "path": "posts/application-context.md"
+    },
+    {
+      "basename": "2024-01-11",
+      "path": "posts/2024-01-11.md"
+    },
+    {
+      "basename": "2024-01-08",
+      "path": "posts/2024-01-08.md"
+    },
+    {
+      "basename": "test",
+      "path": "posts/test.md"
+    },
+    {
+      "basename": "2023-03-13",
+      "path": "posts/2023-03-13.md"
     }
   ],
   "omittedPaths": [
