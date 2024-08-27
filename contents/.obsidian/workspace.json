@@ -33,8 +33,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/kotlin-in-action.md",
+                "file": "posts/2024-08-26.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/kotlin-in-action.md",
+                "file": "posts/2024-08-26.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/kotlin-in-action.md"
+                "file": "posts/2024-08-26.md"
               }
             }
           },
@@ -209,10 +208,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "99945a4a6af84e30",
+  "active": "a5769f8c7a7b6adf",
   "lastOpenFiles": [
-    "posts/2024-08-26.md",
     "posts/kotlin-in-action.md",
+    "posts/get-a-job-with-delivery-hero.md",
+    "posts/2024-08-26.md",
     "posts/2024-08-24.md",
     "posts/2024-08-25.md",
     "posts/kotlin-singleton.md",
@@ -236,7 +236,6 @@
     "posts/2023-10-31.md",
     "posts/2024-06-17.md",
     "posts/2023-12.md",
-    "posts/level4-db-connection-pool.md",
     "posts/attachments/prefix-sums.png",
     "posts/attachments/pi-computation.png",
     "posts/attachments/jenkins-build-trigger.png",

@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "2024-08-26",
+      "path": "posts/2024-08-26.md"
+    },
+    {
       "basename": "kotlin-in-action",
       "path": "posts/kotlin-in-action.md"
     },
     {
-      "basename": "2024-08-26",
-      "path": "posts/2024-08-26.md"
+      "basename": "get-a-job-with-delivery-hero",
+      "path": "posts/get-a-job-with-delivery-hero.md"
     },
     {
       "basename": "2024-08-24",
@@ -179,10 +183,6 @@
     {
       "basename": "shook-tech-stack",
       "path": "posts/shook-tech-stack.md"
-    },
-    {
-      "basename": "get-a-job-with-delivery-hero",
-      "path": "posts/get-a-job-with-delivery-hero.md"
     },
     {
       "basename": "2023-09-15",
