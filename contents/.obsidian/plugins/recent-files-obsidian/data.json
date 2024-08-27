@@ -5,8 +5,20 @@
       "path": "posts/kotlin-in-action.md"
     },
     {
+      "basename": "2024-08-26",
+      "path": "posts/2024-08-26.md"
+    },
+    {
       "basename": "2024-08-24",
       "path": "posts/2024-08-24.md"
+    },
+    {
+      "basename": "2024-08-25",
+      "path": "posts/2024-08-25.md"
+    },
+    {
+      "basename": "kotlin-singleton",
+      "path": "posts/kotlin-singleton.md"
     },
     {
       "basename": "singleton-vs-static",
@@ -187,14 +199,6 @@
     {
       "basename": "2024-01-08",
       "path": "posts/2024-01-08.md"
-    },
-    {
-      "basename": "test",
-      "path": "posts/test.md"
-    },
-    {
-      "basename": "2023-03-13",
-      "path": "posts/2023-03-13.md"
     }
   ],
   "omittedPaths": [
