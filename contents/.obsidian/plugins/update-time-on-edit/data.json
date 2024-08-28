@@ -41,7 +41,7 @@
     "posts/mysql-execution-plan.md": "b612ccb9452e4cd012cb0d2a03cd85166fcc733f6d84f94add25266248683d30",
     "posts/2023-11-04.md": "82b8549832e0ff5d4c97f1b2493f8c8d930370457d57b6104a54584ddfc34dfa",
     "posts/2023-11.md": "5599b39b05999eb2f958f3c09cd11003a610a5e9efba34e12057ba714f9d9ef7",
-    "posts/readme.md": "5a20325be6100def09ce668fb3710c5da8d0e259b2f08dd5f9184efdd656b8a3",
+    "posts/readme.md": "a2b65ecf62d0e679721bcac740b94b3c5bfde984df4da16359956bec50e07bfe",
     "posts/binary-search-tree.md": "183f4e44cf90b581748c09d0390ba0e99a996c46056a2882a5ce4c6bc973c117",
     "posts/avl-tree.md": "e20e96c46843b694b3c9fe4fc6b28bac608759769e4303639071899dabb4efcc",
     "posts/2023-11-05.md": "26bb81bd8e03e89ac7230dd6fd6d9bc20e3a202732ab350731abb3424b319ed8",
@@ -206,7 +206,6 @@
     "posts/tomcat.md": "da3ec1ccc2f22f4e3e4bcae3b7c74005fd9f27d54f4530377de45ec6e94568a3",
     "posts/ws-and-was.md": "bdfdd31d10a46d11c859444c384bfc96c3afa284f9f7778f61c174fa730bdd7a",
     "posts/tomcat-thread-pool.md": "f503f10492e153ec856e71a3bdc0f90d3c58dd71bc61effa2d5606c3b28c98f2",
-    "posts/2024-07-15.md": "ed323906c530a79068316c27675de4672435d954e5c62d26b522bba46c4270b8",
     "posts/vepohuhemal-study-question.md": "0ac7f42c07f2738b42b41cdba45f4a7bb9c825269086ad8b70ffa89930b1d834",
     "posts/why-string-is-final.md": "fa0438addbb44f7ddad738197382c7484dce35fa6fb8389beb132b8b9fceddc7",
     "posts/2024-08-20.md": "344699d36fbcbb13884fc039722839f576c784e952f7f711102d572458b86797",
@@ -214,6 +213,8 @@
     "posts/kotlin-in-action.md": "db7cd2e6845987236397e5aaa588da490c57a2af69beafce7b17cda3808ef2e0",
     "posts/kotlin-singleton.md": "7eed9f7f567c65953f530f424c7760da4bf62c24bf8e1d48573b99432536e170",
     "posts/2024-08-25.md": "32efcb31e223d804116024b013532aef99a2a32fdae470b5ddd53d7bdc3aeed2",
-    "posts/2024-08-26.md": "c0d29d4080b1f4a9178fc7975f0c47471795814a8e56d35e66b5447541bf20bb"
+    "posts/2024-08-26.md": "c0d29d4080b1f4a9178fc7975f0c47471795814a8e56d35e66b5447541bf20bb",
+    "posts/2024-08.md": "3a002839bf6256c63ffc37be1a196172392fdb441e94831231a82048f09e7a4d",
+    "posts/2024-08-27.md": "a62ada6a8f1aa5c74a28f22e0aeb2383c6a10f95bf113e2231abfa4cd275a1b5"
   }
 }

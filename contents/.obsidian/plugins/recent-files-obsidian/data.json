@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "2024-08-27",
+      "path": "posts/2024-08-27.md"
+    },
+    {
+      "basename": "readme",
+      "path": "posts/readme.md"
+    },
+    {
+      "basename": "2024-08",
+      "path": "posts/2024-08.md"
+    },
+    {
       "basename": "2024-08-26",
       "path": "posts/2024-08-26.md"
     },
@@ -183,22 +195,6 @@
     {
       "basename": "shook-tech-stack",
       "path": "posts/shook-tech-stack.md"
-    },
-    {
-      "basename": "2023-09-15",
-      "path": "posts/2023-09-15.md"
-    },
-    {
-      "basename": "application-context",
-      "path": "posts/application-context.md"
-    },
-    {
-      "basename": "2024-01-11",
-      "path": "posts/2024-01-11.md"
-    },
-    {
-      "basename": "2024-01-08",
-      "path": "posts/2024-01-08.md"
     }
   ],
   "omittedPaths": [

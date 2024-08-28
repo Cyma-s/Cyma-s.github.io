@@ -32,8 +32,48 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "48c2f5f087b420f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/readme.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "30f47212198d3170",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2024-08.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "98f10761a231e7be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2024-08-27.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -108,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2024-08-26.md",
+                "file": "posts/2024-08-27.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2024-08-26.md",
+                "file": "posts/2024-08-27.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2024-08-26.md"
+                "file": "posts/2024-08-27.md"
               }
             }
           },
@@ -208,11 +248,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a5769f8c7a7b6adf",
+  "active": "98f10761a231e7be",
   "lastOpenFiles": [
+    "posts/2024-07-15.md",
+    "posts/2024-08-27.md",
+    "posts/readme.md",
+    "posts/2024-08.md",
+    "posts/2024-08-26.md",
     "posts/kotlin-in-action.md",
     "posts/get-a-job-with-delivery-hero.md",
-    "posts/2024-08-26.md",
     "posts/2024-08-24.md",
     "posts/2024-08-25.md",
     "posts/kotlin-singleton.md",
@@ -232,10 +276,6 @@
     "posts/2023-10-09.md",
     "posts/trie.md",
     "posts/2023-04-17.md",
-    "posts/level4-retrospect.md",
-    "posts/2023-10-31.md",
-    "posts/2024-06-17.md",
-    "posts/2023-12.md",
     "posts/attachments/prefix-sums.png",
     "posts/attachments/pi-computation.png",
     "posts/attachments/jenkins-build-trigger.png",
