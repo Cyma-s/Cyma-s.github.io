@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-08.md",
+                "file": "posts/2024-08-30.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -65,7 +65,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-08-27.md",
+                "file": "posts/singleton-vs-static.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "094edfd8ff7d88be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/garbage-collection.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +86,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -148,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2024-08-27.md",
+                "file": "posts/2024-08-30.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +178,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2024-08-27.md",
+                "file": "posts/2024-08-30.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +201,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2024-08-27.md"
+                "file": "posts/2024-08-30.md"
               }
             }
           },
@@ -248,12 +261,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "98f10761a231e7be",
+  "active": "30f47212198d3170",
   "lastOpenFiles": [
-    "posts/2024-07-15.md",
-    "posts/2024-08-27.md",
-    "posts/readme.md",
     "posts/2024-08.md",
+    "posts/garbage-collection.md",
+    "posts/attachments/gc-deletion-with-compacting.png",
+    "posts/attachments/gc-normal-deletion.png",
+    "posts/attachments/gc-marking.png",
+    "posts/singleton-vs-static.md",
+    "posts/2024-08-30.md",
+    "posts/2024-08-27.md",
+    "posts/2024-07-15.md",
+    "posts/readme.md",
     "posts/2024-08-26.md",
     "posts/kotlin-in-action.md",
     "posts/get-a-job-with-delivery-hero.md",
@@ -261,7 +280,6 @@
     "posts/2024-08-25.md",
     "posts/kotlin-singleton.md",
     "posts/코틀린 인 액션.md",
-    "posts/singleton-vs-static.md",
     "posts/2023-08-09.md",
     "posts/pair-programming-rule.md",
     "posts/bean.md",
@@ -273,9 +291,6 @@
     "posts/why-should-we-avoid-use-static.md",
     "posts/level2-cart.md",
     "posts/level4-mvc.md",
-    "posts/2023-10-09.md",
-    "posts/trie.md",
-    "posts/2023-04-17.md",
     "posts/attachments/prefix-sums.png",
     "posts/attachments/pi-computation.png",
     "posts/attachments/jenkins-build-trigger.png",
@@ -283,9 +298,6 @@
     "posts/attachments/lidar-3d-point-computed-by.png",
     "posts/attachments/Pasted image 20240116143215.png",
     "posts/attachments/lidar-packet-footer.png",
-    "posts/attachments/gbn-receiver-fsm.jpeg",
-    "posts/attachments/gbn-extended-fsm.jpeg",
-    "posts/attachments/bit-error-alternating-bit.jpeg",
     "posts/attachments/IMG_0283.heic",
     "posts/Untitled 20231113 041648.mdenc",
     "calendar",

@@ -21,6 +21,7 @@
     "Daily: Nov 08",
     "posts/2024-multicore",
     "posts/about-pool-sizing",
+    "posts/garbage-collection",
     "posts/level2-review-mosquito",
     "posts/monitor-lock-and-java-synchoronized",
     "posts/mysql-execution-plan",
