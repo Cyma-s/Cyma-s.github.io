@@ -1,12 +1,12 @@
 ---
 title: Garbage Collection in Java
 date: 2024-08-30 12:50:21 +0200
-updated: 2024-08-30 13:42:02 +0200
+updated: 2024-08-30 22:09:53 +0200
 tags:
   - java
 ---
 
-## Garbage COllection 이란?
+## Garbage Collection 이란?
 
 어떤 객체들이 사용되고, 어떤 객체들이 사용되지 않는지를 확인하고, 사용되지 않는 객체들을 제거하는 힙 메모리 탐색 과정이다. 사용중인 객체란 프로그램이 해당 객체로의 포인트를 관리하고 있음을 의미하고, 사용되지 않는 객체란 프로그램에서 더 이상 참조되지 않는 객체를 의미한다.
 
@@ -140,4 +140,3 @@ load barrier 는 remapping 으로 재배치된 객체를 가리키는 참조를 
 - https://www.baeldung.com/jvm-garbage-collectors
 - https://www.oracle.com/java/technologies/javase/gc-tuning-6.html
 - [ZGC OpenJDK wiki](https://wiki.openjdk.org/display/zgc/Main#Main-QuickStart)
-- 

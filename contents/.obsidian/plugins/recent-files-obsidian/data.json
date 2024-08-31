@@ -1,14 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "2024-08",
-      "path": "posts/2024-08.md"
-    },
-    {
-      "basename": "2024-08-30",
-      "path": "posts/2024-08-30.md"
-    },
-    {
       "basename": "garbage-collection",
       "path": "posts/garbage-collection.md"
     },
@@ -17,12 +9,20 @@
       "path": "posts/singleton-vs-static.md"
     },
     {
-      "basename": "2024-08-27",
-      "path": "posts/2024-08-27.md"
-    },
-    {
       "basename": "readme",
       "path": "posts/readme.md"
+    },
+    {
+      "basename": "2024-08",
+      "path": "posts/2024-08.md"
+    },
+    {
+      "basename": "2024-08-30",
+      "path": "posts/2024-08-30.md"
+    },
+    {
+      "basename": "2024-08-27",
+      "path": "posts/2024-08-27.md"
     },
     {
       "basename": "2024-08-26",
