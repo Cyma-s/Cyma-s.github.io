@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "readme",
+      "path": "posts/readme.md"
+    },
+    {
+      "basename": "2025-02",
+      "path": "posts/2025-02.md"
+    },
+    {
+      "basename": "2025-02-24",
+      "path": "posts/2025-02-24.md"
+    },
+    {
+      "basename": "2024-08",
+      "path": "posts/2024-08.md"
+    },
+    {
+      "basename": "TIL",
+      "path": "template/TIL.md"
+    },
+    {
+      "basename": "template",
+      "path": "template/template.md"
+    },
+    {
+      "basename": "ws-and-was",
+      "path": "posts/ws-and-was.md"
+    },
+    {
       "basename": "kotlin-in-action",
       "path": "posts/kotlin-in-action.md"
     },
@@ -11,14 +39,6 @@
     {
       "basename": "garbage-collection",
       "path": "posts/garbage-collection.md"
-    },
-    {
-      "basename": "readme",
-      "path": "posts/readme.md"
-    },
-    {
-      "basename": "2024-08",
-      "path": "posts/2024-08.md"
     },
     {
       "basename": "2024-08-30",
@@ -179,26 +199,6 @@
     {
       "basename": "jpa-dto-projection",
       "path": "posts/jpa-dto-projection.md"
-    },
-    {
-      "basename": "2023-10-04",
-      "path": "posts/2023-10-04.md"
-    },
-    {
-      "basename": "2023-06-30",
-      "path": "posts/2023-06-30.md"
-    },
-    {
-      "basename": "github-self-hosted-runner",
-      "path": "posts/github-self-hosted-runner.md"
-    },
-    {
-      "basename": "dh-recruiter-call",
-      "path": "posts/dh-recruiter-call.md"
-    },
-    {
-      "basename": "level4-architecture-shook",
-      "path": "posts/level4-architecture-shook.md"
     }
   ],
   "omittedPaths": [

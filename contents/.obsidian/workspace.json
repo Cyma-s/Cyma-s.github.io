@@ -13,11 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/readme.md",
+                "file": "posts/2025-02-24.md",
                 "mode": "source",
+                "source": false,
                 "backlinks": true,
-                "source": false
-              }
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-02-24"
             }
           },
           {
@@ -26,11 +37,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2024-08.md",
+                "file": "posts/readme.md",
                 "mode": "source",
+                "source": false,
                 "backlinks": true,
-                "source": false
-              }
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "readme"
             }
           },
           {
@@ -39,11 +61,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/kotlin-in-action.md",
+                "file": "posts/2025-02-24.md",
                 "mode": "source",
+                "source": false,
                 "backlinks": true,
-                "source": false
-              }
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-02-24"
             }
           },
           {
@@ -54,13 +87,24 @@
               "state": {
                 "file": "posts/garbage-collection.md",
                 "mode": "source",
+                "source": false,
                 "backlinks": true,
-                "source": false
-              }
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "garbage-collection"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -79,8 +123,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
             }
           },
           {
@@ -95,7 +142,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "검색"
             }
           },
           {
@@ -103,7 +152,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
             }
           },
           {
@@ -111,7 +162,9 @@
             "type": "leaf",
             "state": {
               "type": "recent-files",
-              "state": {}
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
             }
           }
         ]
@@ -134,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/kotlin-in-action.md",
+                "file": "posts/2025-02-24.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +195,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "2025-02-24 의 백링크"
             }
           },
           {
@@ -151,10 +206,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/kotlin-in-action.md",
+                "file": "posts/2025-02-24.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "2025-02-24 의 나가는 링크"
             }
           },
           {
@@ -164,8 +221,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
             }
           },
           {
@@ -174,8 +235,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/kotlin-in-action.md"
-              }
+                "file": "posts/2025-02-24.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2025-02-24 의 개요"
             }
           },
           {
@@ -183,7 +249,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -191,7 +259,9 @@
             "type": "leaf",
             "state": {
               "type": "timeline",
-              "state": {}
+              "state": {},
+              "icon": "create-new",
+              "title": "Day Planner Timeline"
             }
           },
           {
@@ -199,7 +269,9 @@
             "type": "leaf",
             "state": {
               "type": "time-ruler-view",
-              "state": {}
+              "state": {},
+              "icon": "ruler",
+              "title": "Time Ruler"
             }
           }
         ],
@@ -212,14 +284,14 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:퀵 스위처 열기": true,
+      "switcher:빠른 전환기 열기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "markdown-importer:마크다운 형식 불러오기 열기": false,
+      "random-note:무작위 노트 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": true,
-      "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "random-note:랜덤 노트 열기": false,
-      "markdown-importer:마크다운 형식 가져오기 열기": false,
       "smart-random-note:Open Random Note from Search": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-day-planner:Timeline": false,
@@ -230,15 +302,23 @@
       "obsidian-kanban:새 보드 만들기": false,
       "homepage:Open homepage": false,
       "omnisearch:Omnisearch": false,
-      "time-ruler:Open Time Ruler": false
+      "time-ruler:Open Time Ruler": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "98f10761a231e7be",
+  "active": "30f47212198d3170",
   "lastOpenFiles": [
+    "posts/2025-02.md",
+    "posts/readme.md",
+    "posts/2025-02-24.md",
+    "posts/2024-08.md",
+    "posts/무제 파일.md",
+    "template/TIL.md",
+    "template/template.md",
+    "posts/ws-and-was.md",
+    "posts/kotlin-in-action.md",
     "posts/singleton-vs-static.md",
     "posts/garbage-collection.md",
-    "posts/readme.md",
-    "posts/2024-08.md",
     "posts/2024-08-30.md",
     "posts/attachments/gc-deletion-with-compacting.png",
     "posts/attachments/gc-normal-deletion.png",
@@ -246,7 +326,6 @@
     "posts/2024-08-27.md",
     "posts/2024-07-15.md",
     "posts/2024-08-26.md",
-    "posts/kotlin-in-action.md",
     "posts/get-a-job-with-delivery-hero.md",
     "posts/2024-08-24.md",
     "posts/2024-08-25.md",
@@ -257,12 +336,6 @@
     "posts/bean.md",
     "posts/jenkins-docker.md",
     "posts/top-down-approach-ch3.md",
-    "posts/2023-09-01.md",
-    "posts/2023-03-20.md",
-    "posts/rollback-release.md",
-    "posts/why-should-we-avoid-use-static.md",
-    "posts/level2-cart.md",
-    "posts/level4-mvc.md",
     "posts/attachments/prefix-sums.png",
     "posts/attachments/pi-computation.png",
     "posts/attachments/jenkins-build-trigger.png",

@@ -1,12 +1,12 @@
 ---
 title: VERO WIKI
 date: 2023-08-01 22:38:31 +0900
-updated: 2024-08-27 11:57:33 +0200
+updated: 2025-02-24 23:17:48 +0100
 ---
 
 **⚖️ 알게 된 것들을 종류 가리지 않고 적는 개인 위키입니다.**
 
-이번 달의 TIL: [[2024-08|2024년 08월의 TIL✨]] 
+이번 달의 TIL: [[2025-02|2025년 02월의 TIL✨]] 
 
 > 지금 아무것도 못한다고 해서 앞으로도 아무것도 못하는 건 아니다. 그러나 지금부터 아무것도 하지 않는다면 나는 앞으로 아무것도 못할 것이다.
 
@@ -19,6 +19,6 @@ updated: 2024-08-27 11:57:33 +0200
 문제를 해결하기 위한 새로운 기술을 도입하는 과정에 관심이 많습니다.    
 ## Languages & Technologies
 
-- Languages: **Java**, Python, SQL
-- Technologies: **Spring Boot**, Spring Data JPA, AWS, nginx
+- Languages: **Java**, Kotlin, Python, SQL
+- Technologies: **Spring Boot**, Spring Data JPA, Ktor, AWS, nginx
 - Other: Git, MySQL, Unit, Integration testing
