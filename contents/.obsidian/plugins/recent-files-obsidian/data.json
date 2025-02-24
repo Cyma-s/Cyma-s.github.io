@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "garbage-collection",
-      "path": "posts/garbage-collection.md"
+      "basename": "kotlin-in-action",
+      "path": "posts/kotlin-in-action.md"
     },
     {
       "basename": "singleton-vs-static",
       "path": "posts/singleton-vs-static.md"
+    },
+    {
+      "basename": "garbage-collection",
+      "path": "posts/garbage-collection.md"
     },
     {
       "basename": "readme",
@@ -27,10 +31,6 @@
     {
       "basename": "2024-08-26",
       "path": "posts/2024-08-26.md"
-    },
-    {
-      "basename": "kotlin-in-action",
-      "path": "posts/kotlin-in-action.md"
     },
     {
       "basename": "get-a-job-with-delivery-hero",

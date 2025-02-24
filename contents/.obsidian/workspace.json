@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/singleton-vs-static.md",
+                "file": "posts/kotlin-in-action.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -118,8 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5,
-    "collapsed": true
+    "width": 370.5
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -135,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/garbage-collection.md",
+                "file": "posts/kotlin-in-action.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/garbage-collection.md",
+                "file": "posts/kotlin-in-action.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/garbage-collection.md"
+                "file": "posts/kotlin-in-action.md"
               }
             }
           },
@@ -231,11 +230,10 @@
       "obsidian-kanban:새 보드 만들기": false,
       "homepage:Open homepage": false,
       "omnisearch:Omnisearch": false,
-      "time-ruler:Open Time Ruler": false,
-      "periodic-notes:Open today": false
+      "time-ruler:Open Time Ruler": false
     }
   },
-  "active": "094edfd8ff7d88be",
+  "active": "98f10761a231e7be",
   "lastOpenFiles": [
     "posts/singleton-vs-static.md",
     "posts/garbage-collection.md",
