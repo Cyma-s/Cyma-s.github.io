@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2025-02-24.md",
+                "file": "posts/level1-third-retrospect.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-02-24"
+              "title": "level1-third-retrospect"
             }
           },
           {
@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2025-02-24.md",
+                "file": "posts/2024-03-13.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-02-24"
+              "title": "2024-03-13"
             }
           },
           {
@@ -103,8 +103,7 @@
               "title": "garbage-collection"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -136,8 +135,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": true,
+                "query": "tag:#회고",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -167,7 +166,8 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -235,13 +235,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2025-02-24.md",
+                "file": "posts/level1-third-retrospect.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-02-24 의 개요"
+              "title": "level1-third-retrospect 의 개요"
             }
           },
           {
@@ -275,7 +275,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -306,36 +306,37 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "30f47212198d3170",
+  "active": "48c2f5f087b420f7",
   "lastOpenFiles": [
+    "posts/level2-first-retrospect.md",
+    "posts/level1-eighth-retrospect.md",
+    "posts/2024-06-16.md",
+    "posts/shook.md",
+    "posts/level4-mvc.md",
+    "posts/2023-06-07.md",
+    "posts/jdk-synchronizer.md",
+    "posts/matzip-issue.md",
+    "posts/2023-02-16.md",
+    "posts/controller-vs-restcontroller.md",
+    "posts/english-speaking-pattern.md",
+    "posts/minimum-vertex-cover.md",
+    "posts/2023-07-04.md",
+    "posts/pair-programming-rule.md",
+    "posts/view-resolver.md",
+    "posts/app-image-execute.md",
+    "posts/entity-manager-readonly.md",
+    "posts/broken-pipe-error.md",
+    "posts/effective-java-ed3.md",
+    "posts/2024-08-24.md",
+    "posts/2025.md",
     "posts/2025-02.md",
-    "posts/readme.md",
-    "posts/2025-02-24.md",
-    "posts/2024-08.md",
-    "posts/무제 파일.md",
-    "template/TIL.md",
-    "template/template.md",
-    "posts/ws-and-was.md",
-    "posts/kotlin-in-action.md",
-    "posts/singleton-vs-static.md",
-    "posts/garbage-collection.md",
-    "posts/2024-08-30.md",
+    "posts/2024-03-13.md",
+    "posts/2024-03-26.md",
+    "posts/2024-06-17.md",
+    "posts/2025-02-25.md",
     "posts/attachments/gc-deletion-with-compacting.png",
     "posts/attachments/gc-normal-deletion.png",
     "posts/attachments/gc-marking.png",
-    "posts/2024-08-27.md",
-    "posts/2024-07-15.md",
-    "posts/2024-08-26.md",
-    "posts/get-a-job-with-delivery-hero.md",
-    "posts/2024-08-24.md",
-    "posts/2024-08-25.md",
-    "posts/kotlin-singleton.md",
-    "posts/코틀린 인 액션.md",
-    "posts/2023-08-09.md",
-    "posts/pair-programming-rule.md",
-    "posts/bean.md",
-    "posts/jenkins-docker.md",
-    "posts/top-down-approach-ch3.md",
     "posts/attachments/prefix-sums.png",
     "posts/attachments/pi-computation.png",
     "posts/attachments/jenkins-build-trigger.png",

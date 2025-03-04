@@ -1,44 +1,188 @@
 {
   "recentFiles": [
     {
-      "basename": "readme",
-      "path": "posts/readme.md"
+      "basename": "level1-third-retrospect",
+      "path": "posts/level1-third-retrospect.md"
+    },
+    {
+      "basename": "level2-first-retrospect",
+      "path": "posts/level2-first-retrospect.md"
+    },
+    {
+      "basename": "level1-eighth-retrospect",
+      "path": "posts/level1-eighth-retrospect.md"
+    },
+    {
+      "basename": "2024-06-16",
+      "path": "posts/2024-06-16.md"
+    },
+    {
+      "basename": "shook",
+      "path": "posts/shook.md"
+    },
+    {
+      "basename": "level4-mvc",
+      "path": "posts/level4-mvc.md"
+    },
+    {
+      "basename": "2023-06-07",
+      "path": "posts/2023-06-07.md"
+    },
+    {
+      "basename": "jdk-synchronizer",
+      "path": "posts/jdk-synchronizer.md"
+    },
+    {
+      "basename": "matzip-issue",
+      "path": "posts/matzip-issue.md"
+    },
+    {
+      "basename": "2023-02-16",
+      "path": "posts/2023-02-16.md"
+    },
+    {
+      "basename": "controller-vs-restcontroller",
+      "path": "posts/controller-vs-restcontroller.md"
+    },
+    {
+      "basename": "english-speaking-pattern",
+      "path": "posts/english-speaking-pattern.md"
+    },
+    {
+      "basename": "minimum-vertex-cover",
+      "path": "posts/minimum-vertex-cover.md"
+    },
+    {
+      "basename": "2023-07-04",
+      "path": "posts/2023-07-04.md"
+    },
+    {
+      "basename": "pair-programming-rule",
+      "path": "posts/pair-programming-rule.md"
+    },
+    {
+      "basename": "view-resolver",
+      "path": "posts/view-resolver.md"
+    },
+    {
+      "basename": "app-image-execute",
+      "path": "posts/app-image-execute.md"
+    },
+    {
+      "basename": "entity-manager-readonly",
+      "path": "posts/entity-manager-readonly.md"
+    },
+    {
+      "basename": "broken-pipe-error",
+      "path": "posts/broken-pipe-error.md"
+    },
+    {
+      "basename": "effective-java-ed3",
+      "path": "posts/effective-java-ed3.md"
+    },
+    {
+      "basename": "2024-08-24",
+      "path": "posts/2024-08-24.md"
+    },
+    {
+      "basename": "2025",
+      "path": "posts/2025.md"
     },
     {
       "basename": "2025-02",
       "path": "posts/2025-02.md"
     },
     {
-      "basename": "2025-02-24",
-      "path": "posts/2025-02-24.md"
+      "basename": "2024-03-13",
+      "path": "posts/2024-03-13.md"
     },
     {
-      "basename": "2024-08",
-      "path": "posts/2024-08.md"
+      "basename": "2024-03-26",
+      "path": "posts/2024-03-26.md"
     },
     {
-      "basename": "TIL",
-      "path": "template/TIL.md"
+      "basename": "2024-06-17",
+      "path": "posts/2024-06-17.md"
     },
     {
-      "basename": "template",
-      "path": "template/template.md"
+      "basename": "2025-02-25",
+      "path": "posts/2025-02-25.md"
     },
     {
-      "basename": "ws-and-was",
-      "path": "posts/ws-and-was.md"
+      "basename": "2024",
+      "path": "posts/2024.md"
     },
     {
-      "basename": "kotlin-in-action",
-      "path": "posts/kotlin-in-action.md"
+      "basename": "2023-12-14",
+      "path": "posts/2023-12-14.md"
     },
     {
-      "basename": "singleton-vs-static",
-      "path": "posts/singleton-vs-static.md"
+      "basename": "2024-01",
+      "path": "posts/2024-01.md"
     },
     {
-      "basename": "garbage-collection",
-      "path": "posts/garbage-collection.md"
+      "basename": "2024-01-07",
+      "path": "posts/2024-01-07.md"
+    },
+    {
+      "basename": "2024-01-08",
+      "path": "posts/2024-01-08.md"
+    },
+    {
+      "basename": "2024-01-11",
+      "path": "posts/2024-01-11.md"
+    },
+    {
+      "basename": "2024-01-12",
+      "path": "posts/2024-01-12.md"
+    },
+    {
+      "basename": "2024-01-16",
+      "path": "posts/2024-01-16.md"
+    },
+    {
+      "basename": "2024-01-19",
+      "path": "posts/2024-01-19.md"
+    },
+    {
+      "basename": "2024-01-21",
+      "path": "posts/2024-01-21.md"
+    },
+    {
+      "basename": "2024-01-22",
+      "path": "posts/2024-01-22.md"
+    },
+    {
+      "basename": "2024-01-26",
+      "path": "posts/2024-01-26.md"
+    },
+    {
+      "basename": "2024-02-01",
+      "path": "posts/2024-02-01.md"
+    },
+    {
+      "basename": "2024-02-05",
+      "path": "posts/2024-02-05.md"
+    },
+    {
+      "basename": "2024-02-06",
+      "path": "posts/2024-02-06.md"
+    },
+    {
+      "basename": "2024-06",
+      "path": "posts/2024-06.md"
+    },
+    {
+      "basename": "2024-08-20",
+      "path": "posts/2024-08-20.md"
+    },
+    {
+      "basename": "2024-08-25",
+      "path": "posts/2024-08-25.md"
+    },
+    {
+      "basename": "2024-08-26",
+      "path": "posts/2024-08-26.md"
     },
     {
       "basename": "2024-08-30",
@@ -49,156 +193,12 @@
       "path": "posts/2024-08-27.md"
     },
     {
-      "basename": "2024-08-26",
-      "path": "posts/2024-08-26.md"
+      "basename": "2023-03-09",
+      "path": "posts/2023-03-09.md"
     },
     {
-      "basename": "get-a-job-with-delivery-hero",
-      "path": "posts/get-a-job-with-delivery-hero.md"
-    },
-    {
-      "basename": "2024-08-24",
-      "path": "posts/2024-08-24.md"
-    },
-    {
-      "basename": "2024-08-25",
-      "path": "posts/2024-08-25.md"
-    },
-    {
-      "basename": "kotlin-singleton",
-      "path": "posts/kotlin-singleton.md"
-    },
-    {
-      "basename": "2023-08-09",
-      "path": "posts/2023-08-09.md"
-    },
-    {
-      "basename": "pair-programming-rule",
-      "path": "posts/pair-programming-rule.md"
-    },
-    {
-      "basename": "bean",
-      "path": "posts/bean.md"
-    },
-    {
-      "basename": "jenkins-docker",
-      "path": "posts/jenkins-docker.md"
-    },
-    {
-      "basename": "top-down-approach-ch3",
-      "path": "posts/top-down-approach-ch3.md"
-    },
-    {
-      "basename": "2023-09-01",
-      "path": "posts/2023-09-01.md"
-    },
-    {
-      "basename": "2023-03-20",
-      "path": "posts/2023-03-20.md"
-    },
-    {
-      "basename": "rollback-release",
-      "path": "posts/rollback-release.md"
-    },
-    {
-      "basename": "why-should-we-avoid-use-static",
-      "path": "posts/why-should-we-avoid-use-static.md"
-    },
-    {
-      "basename": "level2-cart",
-      "path": "posts/level2-cart.md"
-    },
-    {
-      "basename": "level4-mvc",
-      "path": "posts/level4-mvc.md"
-    },
-    {
-      "basename": "2023-10-09",
-      "path": "posts/2023-10-09.md"
-    },
-    {
-      "basename": "trie",
-      "path": "posts/trie.md"
-    },
-    {
-      "basename": "2023-04-17",
-      "path": "posts/2023-04-17.md"
-    },
-    {
-      "basename": "level4-retrospect",
-      "path": "posts/level4-retrospect.md"
-    },
-    {
-      "basename": "2023-10-31",
-      "path": "posts/2023-10-31.md"
-    },
-    {
-      "basename": "2024-06-17",
-      "path": "posts/2024-06-17.md"
-    },
-    {
-      "basename": "2023-12",
-      "path": "posts/2023-12.md"
-    },
-    {
-      "basename": "level4-db-connection-pool",
-      "path": "posts/level4-db-connection-pool.md"
-    },
-    {
-      "basename": "shook-s3-introduce",
-      "path": "posts/shook-s3-introduce.md"
-    },
-    {
-      "basename": "app-image-execute",
-      "path": "posts/app-image-execute.md"
-    },
-    {
-      "basename": "2023-07-17",
-      "path": "posts/2023-07-17.md"
-    },
-    {
-      "basename": "2023-07-05",
-      "path": "posts/2023-07-05.md"
-    },
-    {
-      "basename": "2023-06-28",
-      "path": "posts/2023-06-28.md"
-    },
-    {
-      "basename": "level2-subway",
-      "path": "posts/level2-subway.md"
-    },
-    {
-      "basename": "top-down-approach-ch1",
-      "path": "posts/top-down-approach-ch1.md"
-    },
-    {
-      "basename": "2023-05-27",
-      "path": "posts/2023-05-27.md"
-    },
-    {
-      "basename": "2023-06-01",
-      "path": "posts/2023-06-01.md"
-    },
-    {
-      "basename": "2023-07-11",
-      "path": "posts/2023-07-11.md"
-    },
-    {
-      "basename": "2024-01-07",
-      "path": "posts/2024-01-07.md"
-    },
-    {
-      "basename": "2023-11-08",
-      "path": "posts/2023-11-08.md"
-    },
-    {
-      "basename": "assertj",
-      "path": "posts/assertj.md"
-    },
-    {
-      "basename": "jpa-dto-projection",
-      "path": "posts/jpa-dto-projection.md"
+      "basename": "2023-03-08",
+      "path": "posts/2023-03-08.md"
     }
   ],
   "omittedPaths": [
