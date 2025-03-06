@@ -64,5 +64,6 @@
   "Components@@file-names-untrim": false,
   "Appearance-light@@theme-light-style-select": "theme-light-background-default",
   "Appearance-light@@card-layout-open-light": true,
-  "Appearance-light@@color-pink-rgb@@light": "#F92AA0"
+  "Appearance-light@@color-pink-rgb@@light": "#F92AA0",
+  "catppuccin-interface-styles@@ctp-bold-folder-title": true
 }

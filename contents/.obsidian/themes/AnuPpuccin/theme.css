@@ -19,14 +19,14 @@ settings:
 
 # Colors
 
-  -
+-
     id: anp-colors-section-header
     title: Colors
     description: Theme Accent and Flavors, Color Overrides, Extended Color Schemes
     type: heading
     level: 1
     collapsed: true
-  -
+-
     id: anuppuccin-theme-light
     title: Light Theme Flavor
     description: Select your preferred light mode flavor
@@ -34,13 +34,13 @@ settings:
     allowEmpty: false
     default: ctp-latte
     options:
-      - 
+    -
         label: Latte
         value: ctp-latte
-      - 
+    -
         label: Rosé Pine
         value: ctp-rosepine-light
-  -
+-
     id: anuppuccin-theme-dark
     title: Dark Theme Flavor
     description: Select your preferred dark mode flavor
@@ -48,19 +48,19 @@ settings:
     allowEmpty: false
     default: ctp-mocha
     options:
-      - 
+    -
         label: Frappe
         value: ctp-frappe
-      - 
+    -
         label: Macchiato
         value: ctp-macchiato
-      - 
+    -
         label: Mocha
         value: ctp-mocha
-      - 
+    -
         label: Mocha Old
         value: ctp-mocha-old
-  -
+-
     id: anuppuccin-light-theme-accents
     title: Light Theme Accent
     description: Select your preferred light theme accent (Defaults to dark theme accent if left empty)
@@ -68,49 +68,49 @@ settings:
     allowEmpty: true
     default: none
     options:
-      - 
+    -
         label: Rosewater
         value: ctp-accent-light-rosewater
-      - 
+    -
         label: Flamingo
         value: ctp-accent-light-flamingo
-      - 
+    -
         label: Pink
         value: ctp-accent-light-pink
-      - 
+    -
         label: Mauve
         value: ctp-accent-light-mauve
-      - 
+    -
         label: Red
         value: ctp-accent-light-red
-      - 
+    -
         label: Maroon
         value: ctp-accent-light-maroon
-      - 
+    -
         label: Peach
         value: ctp-accent-light-peach
-      - 
+    -
         label: Yellow
         value: ctp-accent-light-yellow
-      - 
+    -
         label: Green
         value: ctp-accent-light-green
-      - 
+    -
         label: Teal
         value: ctp-accent-light-teal
-      - 
+    -
         label: Sky
         value: ctp-accent-light-sky
-      - 
+    -
         label: Sapphire
         value: ctp-accent-light-sapphire
-      - 
+    -
         label: Blue
         value: ctp-accent-light-blue
-      - 
+    -
         label: Lavender
         value: ctp-accent-light-lavender
-  -
+-
     id: anuppuccin-theme-accents
     title: Dark Theme Accent
     description: Select your preferred accent
@@ -118,55 +118,55 @@ settings:
     allowEmpty: false
     default: ctp-accent-rosewater
     options:
-      - 
+    -
         label: Rosewater
         value: ctp-accent-rosewater
-      - 
+    -
         label: Flamingo
         value: ctp-accent-flamingo
-      - 
+    -
         label: Pink
         value: ctp-accent-pink
-      - 
+    -
         label: Mauve
         value: ctp-accent-mauve
-      - 
+    -
         label: Red
         value: ctp-accent-red
-      - 
+    -
         label: Maroon
         value: ctp-accent-maroon
-      - 
+    -
         label: Peach
         value: ctp-accent-peach
-      - 
+    -
         label: Yellow
         value: ctp-accent-yellow
-      - 
+    -
         label: Green
         value: ctp-accent-green
-      - 
+    -
         label: Teal
         value: ctp-accent-teal
-      - 
+    -
         label: Sky
         value: ctp-accent-sky
-      - 
+    -
         label: Sapphire
         value: ctp-accent-sapphire
-      - 
+    -
         label: Blue
         value: ctp-accent-blue
-      - 
+    -
         label: Lavender
         value: ctp-accent-lavender
-  -
+-
     id: anuppuccin-accent-toggle
     title: Force Custom Accents
     description: Forces colorscheme-specific custom accents to be utilised instead of default obsidian accent
     type: class-toggle
     default: true
-  -
+-
     id: anuppuccin-url-extended-colorschemes
     title: Extended Color Schemes Snippet
     description: "Download the snippet by clicking on [this link](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css)."
@@ -175,189 +175,189 @@ settings:
 
 # Colors :: Color Overrides
 
-  -
+-
     id: anp-color-overrides-header
     title: Color Overrides
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: ctp-custom-rosewater
     title: Rosewater
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-flamingo
     title: Flamingo
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-pink
     title: Pink
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-mauve
     title: Mauve
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-red
     title: Red
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-maroon
     title: Maroon
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-peach
     title: Peach
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-yellow
     title: Yellow
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-green
     title: Green
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-teal
     title: Teal
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-sky
     title: Sky
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-sapphire
     title: Sapphire
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-blue
     title: Blue
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-lavender
     title: Lavender
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-text
     title: Text
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-subtext1
     title: Subtext 1
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-subtext0
     title: Subtext0
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-overlay2
     title: Overlay 2
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-overlay1
     title: Overlay 1
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-overlay0
     title: Overlay 0
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-surface2
     title: Surface 2
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-surface1
     title: Surface 1
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-surface0
     title: Surface 0
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-base
     title: Base
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-mantle
     title: Mantle
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'rgb-values'
-  -
+-
     id: ctp-custom-crust
     title: Crust
     type: variable-themed-color
@@ -367,79 +367,85 @@ settings:
 
 # File Editor
 
-  -
+-
     id: anp-editor-header
     title: File Editor & Markdown Elements
     description: Callouts, Checkboxes, Codeblocks, Lists, Tables, Tags, etc.
     type: heading
     level: 1
     collapsed: true
-  -
+-
     id: anp-active-line
     title: Active line highlight
     type: class-select
     allowEmpty: false
     default: anp-no-highlight
     options:
-      -
+    -
         label: None
         value: anp-no-highlight
-      -
+    -
         label: Highlight
         value: anp-current-line
-      -
+    -
         label: Highlight + Border
         value: anp-current-line-border
-      -
+    -
         label: Border Only
         value: anp-current-line-border-only
 
 # File Editor & Markdown Elements :: Callouts
-  -
+-
     id: anp-callout-header
     title: Callouts
     description: Callout styles, border radius, custom colors
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-callout-select
     title: Callout Style
     type: class-select
     default: none
     allowEmpty: false
     options:
-      - 
+    -
         label: Default
         value: none
-      - 
+    -
         label: Sleek
         value: anp-callout-sleek
-      - 
+    -
         label: Block
         value: anp-callout-block
-      - 
+    -
         label: Vanilla Normal
         value: anp-callout-vanilla-normal
-      - 
+    -
         label: Vanilla Plus
         value: anp-callout-vanilla-plus
-  -
+-
     id: anp-callout-color-toggle
     title: Enable Custom Callout Colors
     type: class-toggle
-  -
+-
     id: callout-radius
     title: Callout Radius
     type: variable-number
     default: 4
     format: px
-  -
+-
+    id: callout-padding
+    title: Callout Padding
+    description: Be careful, it does not properly work with all the callouts style yet.
+    type: variable-text
+    default: 0px
+-
     id: callout-title-padding
     title: Callout Title Padding
     type: variable-text
     default: 8px
-  -
+-
     id: callout-title-opacity
     title: Callout Title Background Opacity
     description: Applies to Sleek, Vanilla and Vanilla Plus callouts
@@ -448,94 +454,94 @@ settings:
     min: 0
     max: 1
     step: 0.05
-  -
+-
     id: callout-content-padding
     title: Callout Content Padding
     type: variable-text
     default: 8px
-  -
+-
     id: anp-callout-fold-position
     title: Callout Fold Position
     type: variable-select
     default: '0'
     options:
-      - 
+    -
         label: Left
         value: 0
-      - 
+    -
         label: Right
         value: 1
 
 # File Editor & Markdown Elements :: Checkboxes
 
-  -
+-
     id: anp-custom-checkboxes-header
     title: Checkboxes
     description: Custom checkboxes and speech bubbles
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-custom-checkboxes
     title: Enable Custom Checkboxes
     type: class-toggle
-  -
+-
     id: anp-speech-bubble
     title: Enable Speech Bubbles
     type: class-toggle
 
 # File Editor & Markdown Elements :: Codeblocks
 
-  -
+-
     id: anp-codeblock-header
     title: Codeblocks
     description: Codeblock wrapping, line numbering
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-codeblock-numbers
     title: Enable Codeblock Numbering
     type: class-toggle
-  -
+-
     id: anp-codeblock-wrap-edit
     title: Codeblock Line Wrap (Edit Mode)
     description: Does not work for codeblocks with syntax highlighting
     type: class-select
     default: none
     options:
-      -
+    -
         label: Wrap
         value: none
-      -
+    -
         label: No Wrap
         value: anp-codeblock-edit-nowrap
-  -
+-
     id: anp-codeblock-wrap-preview
     title: Codeblock Line Wrap (Preview Mode)
     description: Does not work for codeblocks with syntax highlighting
     type: class-select
     default: none
     options:
-      -
+    -
         label: Wrap
         value: none
-      -
+    -
         label: No Wrap
         value: anp-codeblock-preview-nowrap
-  -
+-
     id: anp-codeblock-wrap-hl-preview
     title: Syntax Highlighted Codeblock Line Wrap (Preview Mode)
     type: class-select
     default: none
     options:
-      -
+    -
         label: Wrap
         value: none
-      -
+    -
         label: No Wrap
         value: anp-codeblock-preview-hl-nowrap
-  -
+-
     id: anp-code-bg-color
     title: Codeblock Background Color
     type: variable-themed-color
@@ -544,7 +550,7 @@ settings:
     opacity: false
     default-light: '#'
     default-dark: '#'
-  -
+-
     id: anp-code-text-color
     title: Codeblock Text Color
     type: variable-themed-color
@@ -556,159 +562,329 @@ settings:
     default-dark: '#'
 
 # File Editor & Markdown Elements :: Embeds
-  -
+-
     id: anp-embed-header
     title: Embeds
-    description: Maximum embed height
+    description: Images, videos, iframes, etc.
     type: heading
     level: 2
     collapsed: true
-  -
-    id: embed-max-height
-    title: Maximum embed height in px
+-
+    id: embed-corner-radius
+    title: Embed Corner Radius
     type: variable-number
-    default: 200
+    default: 4
+    format: px
+
+# File Editor & Markdown Elements :: LaTeX
+
+-
+    id: anp-latex-header
+    title: LaTex
+    type: heading
+    description: LaTeX (Math) color, font size
+    level: 2
+    collapsed: true
+-
+    id: anp-latex-inline-color
+    title: LaTeX Inline Color
+    type: class-select
+    allowEmpty: true
+    default: anp-latex-inline-text
+    options:
+    -
+        label: Rosewater
+        value: anp-latex-inline-rosewater
+    -
+        label: Flamingo
+        value: anp-latex-inline-flamingo
+    -
+        label: Pink
+        value: anp-latex-inline-pink
+    -
+        label: Mauve
+        value: anp-latex-inline-mauve
+    -
+        label: Red
+        value: anp-latex-inline-red
+    -
+        label: Maroon
+        value: anp-latex-inline-maroon
+    -
+        label: Peach
+        value: anp-latex-inline-peach
+    -
+        label: Yellow
+        value: anp-latex-inline-yellow
+    -
+        label: Green
+        value: anp-latex-inline-green
+    -
+        label: Teal
+        value: anp-latex-inline-teal
+    -
+        label: Sky
+        value: anp-latex-inline-sky
+    -
+        label: Sapphire
+        value: anp-latex-inline-sapphire
+    -
+        label: Blue
+        value: anp-latex-inline-blue
+    -
+        label: Lavender
+        value: anp-latex-inline-lavender
+    -
+        label: Text
+        value: anp-latex-inline-text
+    -
+        label: Subtext 1
+        value: anp-latex-inline-subtext1
+    -
+        label: Subtext 0
+        value: anp-latex-inline-subtext0
+    -
+        label: Overlay 2
+        value: anp-latex-inline-overlay2
+    -
+        label: Overlay 1
+        value: anp-latex-inline-overlay1
+    -
+        label: Overlay 0
+        value: anp-latex-inline-overlay0
+    -
+        label: Surface 2
+        value: anp-latex-inline-surface2
+    -
+        label: Surface 1
+        value: anp-latex-inline-surface1
+    -
+        label: Surface 0
+        value: anp-latex-inline-surface0
+-
+    id: anp-latex-block-color
+    title: LaTeX Block Color
+    type: class-select
+    allowEmpty: true
+    default: anp-latex-block-text
+    options:
+    -
+        label: Rosewater
+        value: anp-latex-block-rosewater
+    -
+        label: Flamingo
+        value: anp-latex-block-flamingo
+    -
+        label: Pink
+        value: anp-latex-block-pink
+    -
+        label: Mauve
+        value: anp-latex-block-mauve
+    -
+        label: Red
+        value: anp-latex-block-red
+    -
+        label: Maroon
+        value: anp-latex-block-maroon
+    -
+        label: Peach
+        value: anp-latex-block-peach
+    -
+        label: Yellow
+        value: anp-latex-block-yellow
+    -
+        label: Green
+        value: anp-latex-block-green
+    -
+        label: Teal
+        value: anp-latex-block-teal
+    -
+        label: Sky
+        value: anp-latex-block-sky
+    -
+        label: Sapphire
+        value: anp-latex-block-sapphire
+    -
+        label: Blue
+        value: anp-latex-block-blue
+    -
+        label: Lavender
+        value: anp-latex-block-lavender
+    -
+        label: Text
+        value: anp-latex-block-text
+    -
+        label: Subtext 1
+        value: anp-latex-block-subtext1
+    -
+        label: Subtext 0
+        value: anp-latex-block-subtext0
+    -
+        label: Overlay 2
+        value: anp-latex-block-overlay2
+    -
+        label: Overlay 1
+        value: anp-latex-block-overlay1
+    -
+        label: Overlay 0
+        value: anp-latex-block-overlay0
+    -
+        label: Surface 2
+        value: anp-latex-block-surface2
+    -
+        label: Surface 1
+        value: anp-latex-block-surface1
+    -
+        label: Surface 0
+        value: anp-latex-block-surface0
+-
+    id: anp-latex-block-font-size
+    title: LaTeX Block Font Size
+    description: Change the font size of LaTeX blocks.
+    type: variable-number
+    default: 100
+    format: "%"
 
 # File Editor & Markdown Elements :: Lists
 
-  -
+-
     id: anp-list-header
     title: Lists
     description: Styling, indent, spacing
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-list-toggle
     title: Enable List Styling
     type: class-toggle
-  -
+-
     id: list-indent
     title: List Indent
     type: variable-number
     default: 2
     format: em
-  -
+-
     id: list-spacing
     title: List Spacing
     type: variable-number
     default: 0.075
     format: em
-  -
+-
     id: list-marker-color
     title: Unordered list bullet color
     type: variable-themed-color
     default-light: '#'
     default-dark: '#'
     format: 'hex'
-  -
+-
     id: list-numbered-style
     title: Ordered list style
     type: variable-select
     default: decimal
     options:
-      -
+    -
         label: "Decimal"
         value: decimal
-      -
+    -
         label: "Decimal with leading zeroes"
         value: decimal-leading-zero
-      -
+    -
         label: "Lowercase alphabetical"
         value: lower-alpha
-      -
+    -
         label: "Uppercase alphabetical"
         value: upper-alpha
-      -
+    -
         label: "Lowercase Roman Numerals"
         value: lower-roman
-      -
+    -
         label: "Uppercase Roman Numerals"
         value: upper-roman
-      -
+    -
         label: "Lowercase Latin"
         value: lower-latin
-      -
+    -
         label: "Uppercase Latin"
         value: upper-latin
-      -
+    -
         label: "Lowercase Greek"
         value: lower-greek
-      -
+    -
         label: "Uppercase Greek"
         value: upper-greek
-      -
+    -
         label: "Hiragana"
         value: hiragana
-      -
+    -
         label: "Hiragana Iroha"
         value: hiragana-iroha
-      -
+    -
         label: "Katakana"
         value: armenian
-      -
+    -
         label: "Katakana Iroha"
         value: katakana-iroha
-      -
+    -
         label: "Armenian"
         value: armenian
-      -
+    -
         label: "CJK Ideographic"
         value: cjk-ideographic
-      -
+    -
         label: "Hebrew"
         value: hebrew
 
 # File Editor & Markdown Elements :: Tables
 
-  -
+-
     id: anp-table-header
     title: Tables
     description: Table width, alignment, table element highlight and alignment, border width
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-table-toggle
     title: Enable Table Styling
     type: class-toggle
-  -
+-
     id: anp-table-width
     title: Enable Custom Table Width
     description: Use anp-table-width for yaml syntax
     type: class-toggle
-  -
+-
     id: anp-table-auto
     title: Center Tables
     description: Use anp-table-auto for yaml syntax
     type: class-toggle
-  -
+-
     id: anp-table-th-highlight
     title: <th> Highlight
     type: class-toggle
-  -
+-
     id: anp-td-highlight
     title: <td> Highlight
     type: class-select
     default: anp-td-none
     allowEmpty: false
     options:
-      -
+    -
         label: None
         value: none
-      -
+    -
         label: Alternate Rows
         value: anp-table-row-alt
-      -
+    -
         label: Alternate Columns
         value: anp-table-col-alt
-      -
+    -
         label: Checkered
         value: anp-table-checkered
-      -
+    -
         label: Full
         value: anp-table-full
-  -
+-
     id: anp-table-highlight-opacity
     title: Highlight Opacity
     default: 0.5
@@ -716,43 +892,43 @@ settings:
     min: 0
     max: 1
     step: 0.1
-  -
+-
     id: anp-table-align-th
     title: <th> Text Align
     type: variable-select
     default: center
     options:
-      -
+    -
         label: Left
         value: left
-      -
+    -
         label: Center
         value: center
-      -
+    -
         label: Right
         value: right
-  -
+-
     id: anp-table-align-td
     title: <td> Text Align
     type: variable-select
     default: center
     options:
-      -
+    -
         label: Left
         value: left
-      -
+    -
         label: Center
         value: center
-      -
+    -
         label: Right
         value: right
-  -
+-
     id: anp-table-thickness
     title: Custom Table Border Width
     type: variable-number
     default: 2
     format: px
-  -
+-
     id: anp-table-width-pct
     title: Custom Table Width
     type: variable-number
@@ -761,20 +937,20 @@ settings:
 
 # File Editor & Markdown Elements :: Tags
 
-  -
+-
     id: anp-tags-header
     title: Tags
     description: Border Width and Border Radius of Tags
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: tag-border-width
     title: Tag Border Width
     type: variable-number
     default: 0
     format: px
-  -
+-
     id: tag-radius
     title: Tag Radius
     type: variable-number-slider
@@ -786,30 +962,30 @@ settings:
 
 # File Preview
 
-  -
+-
     id: anp-preview-header
     title: File Preview
     description: File Preview Margins and Word-Wrap Width
     type: heading
     level: 1
     collapsed: true
-  -
+-
     id: anp-toggle-preview
     title: Enable Custom Preview Margins
     type: class-toggle
-  -
+-
     id: file-margins
     title: File Margins
     type: variable-number
     default: 32
     format: px
-  -
+-
     id: anp-preview-width-pct
     title: Preview Width
     type: variable-number
     default: 80
     format: "%"
-  -
+-
     id: file-line-width
     title: Maximum Preview Width
     type: variable-number
@@ -818,7 +994,7 @@ settings:
 
 # Integrations
 
-  -
+-
     id: anp-plugin-header
     title: Integrations
     description: Kanban, MAKE.md, Minimal Cards Snippet, etc.
@@ -828,7 +1004,7 @@ settings:
 
 # Integrations :: Kanban
 
-  -
+-
     id: anp-plugin-kanban
     title: Kanban
     description: 
@@ -838,26 +1014,26 @@ settings:
 
 # Integrations :: Kanban :: Card Settings
 
-  -
+-
     id: anp-plugin-card-settings
     title: Card Settings
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: anp-kanban-hide-card-menus
     title: Hide the Card Menu Button
     type: class-toggle
-  -
+-
     id: anp-kanban-hide-archive-btn
     title: Hide the Archive Card Button
     type: class-toggle
-  -
+-
     id: anp-kanban-hide-card-border
     title: Disable Card Borders
     type: class-toggle
-  -
+-
     id: anp-kanban-card-opacity
     title: Card Opacity
     type: variable-number-slider
@@ -865,7 +1041,7 @@ settings:
     min: 0
     max: 1
     step: 0.05
-  -
+-
     id: anp-kanban-card-radius
     title: Card Radius
     type: variable-number-slider
@@ -874,7 +1050,7 @@ settings:
     min: 0
     max: 10
     step: 1
-  -
+-
     id: anp-kanban-card-spacing
     title: Card Spacing
     type: variable-number-slider
@@ -886,23 +1062,23 @@ settings:
 
 # Integrations :: Kanban :: Lane Settings
 
-  -
+-
     id: anp-plugin-lane-settings
     title: Lane Settings
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: anp-kanban-lanes
     title: Enable Full Height Lanes
     description: Toggles maximum height for Kanban lanes
     type: class-toggle
-  -
+-
     id: anp-kanban-hide-lane-border
     title: Disable Lane Borders
     type: class-toggle
-  -
+-
     id: anp-kanban-lane-opacity
     title: Lane Opacity
     type: variable-number-slider
@@ -910,7 +1086,7 @@ settings:
     min: 0
     max: 1
     step: 0.05
-  -
+-
     id: anp-kanban-lane-radius
     title: Lane Radius
     type: variable-number-slider
@@ -919,7 +1095,7 @@ settings:
     min: 0
     max: 10
     step: 1
-  -
+-
     id: anp-kanban-lane-spacing
     title: Lane Spacing
     type: variable-number-slider
@@ -929,76 +1105,111 @@ settings:
     max: 20
     step: 1
 
+# Integrations :: Kanban :: Search Settings
+
+-
+    id: anp-plugin-kanban-search-settings
+    title: Search Settings
+    description: 
+    type: heading
+    level: 3
+    collapsed: true
+-
+    id: anp-kanban-search-full
+    title: Enable Full Width Search Bar
+    description: 
+    type: class-toggle
+-
+    id: anp-kanban-collapse-lanes
+    title: Collapse Lanes With No Search Results
+    description: 
+    type: class-toggle
+-
+    id: anp-kanban-hide-cards
+    title: Hide Cards That Don't Contain the Search Query
+    description: 
+    type: class-toggle
+-
+    id: anp-kanban-hide-mark
+    title: Hide Search Result Highlight in Cards
+    description: 
+    type: class-toggle
+-
+    id: anp-kanban-uncollapse-lanes
+    title: Uncollapse Lanes and Unhide Cards When Sorting
+    description: 
+    type: class-toggle
+
 # Integrations :: MAKE.md
 
-  -
+-
     id: anp-plugin-makemd
     title: MAKE.md
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-inline-title-vis
     title: Inline Title Visibility
     description: Make.md requires inline titles to be enabled to show folder titles, hence this toggle exists to disable it on notes elsewhere.
     type: variable-select
     default: block
     options:
-      -
+    -
         label: Visible
         value: block
-      -
+    -
         label: Invisible
         value: none
 
 # Integrations :: Minimal Cards
 
-  -
+-
     id: anp-snippet-minimal-cards
     title: Minimal Cards
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-snippet-minimal-cards-disc
     title: Usage
     description: "Minimal Cards is a feature of [Minimal](https://github.com/kepano/obsidian-minimal). AnuPpuccin does not come compiled with the snippet, however you can use a compiled version with this theme."
     type: info-text
     markdown: true
-  -
+-
     id: anuppuccin-url-minimal-cards-snippet
     title: Minimal Cards Snippet
     description: "Download the snippet from [kepano](https://github.com/kepano/)'s github via [this link](https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss)."
     type: info-text
     markdown: true
-  -
+-
     id: cards-min-width
     title: Card minimum width
     type: variable-text
     default: 180px
-  -
+-
     id: cards-max-width
     title: Card maximum width
     description: Default fills the available width, accepts valid CSS units
     type: variable-text
     default: 1fr
-  -
+-
     id: cards-mobile-width
     title: Card minimum width on mobile
     type: variable-text
     default: 120px
-  -
+-
     id: cards-padding
     title: Card padding
     type: variable-text
     default: 1.2em
-  -
+-
     id: cards-image-height
     title: Card maximum image height
     type: variable-text
     default: 400px
-  -
+-
     id: cards-border-width
     title: Card border width
     type: variable-text
@@ -1006,72 +1217,77 @@ settings:
 
 # Miscellaneous
 
-  -
+-
     id: anp-misc-element-header
     title: Miscellaneous
     description: Color Palette Transition, Custom Metadata Button
     type: heading
     level: 1
     collapsed: true
-  -
+-
     id: anp-color-transition-toggle
     title: Enable Color Transition (WIP)
     description: "Adds a transition when switching palettes, looks really neat :)"
     type: class-toggle
-  -
+-
     id: anp-button-metadata-toggle
     title: Enable Custom Metadata Button
     type: class-toggle
-  -
+-
     id: anp-print
     title: Enable Print Styling
     type: class-toggle
 
 # Show/Hide UI Elements
 
-  -
+-
     id: anp-show-hide-elements-header
     title: Show/Hide UI Elements
     description: Toggle Visibility of UI Elements
     type: heading
     level: 1
     collapsed: true
-  -
+-
     id: anp-autohide-titlebar
     title: Autohide Title Bar
     type: class-toggle
-  -
+-
     id: anp-cursor
     title: Pointer cursor
     type: variable-select
     default: pointer
     options:
-      -
+    -
         label: Pointer
         value: pointer
-      -
+    -
         label: Normal
         value: initial
-  -
+-
     id: anp-toggle-metadata
     title: Hide Metadata
     type: class-toggle
-  -
+-
     id: anp-toggle-scrollbars
     title: Hide Scrollbars
     type: class-toggle
-  -
+-
     id: anp-hide-status-bar
     title: Hide Status Bar
     type: class-toggle
-  -
+-
     id: anp-tooltip-toggle
     title: Hide Tooltips
     type: class-toggle
+-
+    id: anp-hide-external-link-icon
+    title: Hide External Link Icon
+    type: class-toggle
+    default: true
 
 # Typography
 
-  -
+-
     id: anp-typography-header
     title: Typography
     description: Fonts, Headings, Text Decoration, etc.
@@ -1081,191 +1297,196 @@ settings:
 
 # Typography :: Font Families
 
-  -
+-
     id: anp-font-families-header
     title: Font Families
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-editor-font-source
     title: Source Editor Font
     type: variable-text
     default: Iosevka Comfy Duo
-  -
+-
     id: anp-editor-font-lp
     title: Live Preview Editor Font
+    type: variable-text
+    default: Noto Sans
+-
+    id: anp-editor-font-rv
+    title: Reading View Editor Font
     type: variable-text
     default: Noto Sans
 
 # Typography :: Font Weights
 
-  -
+-
     id: anp-font-weight-header
     title: Font Weights
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: bold-weight
     title: Bold Weight
     type: variable-select
     default: '600'
     options:
-      -
+    -
         label: 'Bolder (Relative)'
         value: bolder
-      -
+    -
         label: Lightest
         value: 100
-      -
+    -
         label: Lighter
         value: 200
-      -
+    -
         label: Light
         value: 300
-      -
+    -
         label: Normal
         value: 400
-      -
+    -
         label: Bold
         value: 500
-      -
+    -
         label: Bolder
         value: 600
-      -
+    -
         label: Extrabold
         value: 700
-      -
+    -
         label: Extra-extrabold
         value: 800
-      -
+    -
         label: Black
         value: 900
-  -
+-
     id: anp-font-live-preview-wt
     title: Live Preview Mode Weight
     type: variable-select
     default: '400'
     options:
-      -
+    -
         label: Lightest
         value: 100
-      -
+    -
         label: Lighter
         value: 200
-      -
+    -
         label: Light
         value: 300
-      -
+    -
         label: Normal
         value: 400
-      -
+    -
         label: Bold
         value: 500
-      -
+    -
         label: Bolder
         value: 600
-      -
+    -
         label: Extrabold
         value: 700
-      -
+    -
         label: Extra-extrabold
         value: 800
-      -
+    -
         label: Black
         value: 900
-  -
+-
     id: anp-font-preview-wt
     title: Reading Mode Weight
     type: variable-select
     default: '400'
     options:
-      -
+    -
         label: Lightest
         value: 100
-      -
+    -
         label: Lighter
         value: 200
-      -
+    -
         label: Light
         value: 300
-      -
+    -
         label: Normal
         value: 400
-      -
+    -
         label: Bold
         value: 500
-      -
+    -
         label: Bolder
         value: 600
-      -
+    -
         label: Extrabold
         value: 700
-      -
+    -
         label: Extra-extrabold
         value: 800
-      -
+    -
         label: Black
         value: 900
-  -
+-
     id: anp-font-editor-wt
     title: Source Mode Weight
     type: variable-select
     default: '400'
     options:
-      -
+    -
         label: Lightest
         value: 100
-      -
+    -
         label: Lighter
         value: 200
-      -
+    -
         label: Light
         value: 300
-      -
+    -
         label: Normal
         value: 400
-      -
+    -
         label: Bold
         value: 500
-      -
+    -
         label: Bolder
         value: 600
-      -
+    -
         label: Extrabold
         value: 700
-      -
+    -
         label: Extra-extrabold
         value: 800
-      -
+    -
         label: Black
         value: 900
 
 # Typography :: Headings
 
-  -
+-
     id: anp-header-header
     title: Headings
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-header-color-toggle
     title: Enable Custom Heading Colors
     type: class-toggle
-  -
+-
     id: anp-header-margin-toggle
     title: Enable Custom Heading Margin
     type: class-toggle
-  -
+-
     id: anp-header-divider-color-toggle
     title: Inherit Divider Color from Heading Color
     type: class-toggle
-  -
+-
     id: anp-header-margin-value
     title: Heading margin value
     description: Size unit is px
@@ -1278,672 +1499,698 @@ settings:
 
 # Typography :: Headings :: H1
 
-  -
+-
     id: anp-h1-header
     title: H1
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: h1-font
     title: H1 Font Family
     type: variable-text
     default: Noto Serif
-  -
+-
     id: h1-size
     title: H1 Font Size
     type: variable-number
     default: 2
     format: em
-  -
+-
     id: h1-weight
     title: H1 Font Weight
     type: variable-number
     default: 700
-  -
+-
     id: h1-line-height
     title: H1 Line Height
     type: variable-number
     default: 1.2
-  -
+-
     id: anp-h1-color-custom
     title: H1 Color
     type: class-select
     allowEmpty: true
     default: anp-h1-red
     options:
-      - 
+    -
         label: Rosewater
         value: anp-h1-rosewater
-      - 
+    -
         label: Flamingo
         value: anp-h1-flamingo
-      - 
+    -
         label: Pink
         value: anp-h1-pink
-      - 
+    -
         label: Mauve
         value: anp-h1-mauve
-      - 
+    -
         label: Red
         value: anp-h1-red
-      - 
+    -
         label: Maroon
         value: anp-h1-maroon
-      - 
+    -
         label: Peach
         value: anp-h1-peach
-      - 
+    -
         label: Yellow
         value: anp-h1-yellow
-      - 
+    -
         label: Green
         value: anp-h1-green
-      - 
+    -
         label: Teal
         value: anp-h1-teal
-      - 
+    -
         label: Sky
         value: anp-h1-sky
-      - 
+    -
         label: Sapphire
         value: anp-h1-sapphire
-      - 
+    -
         label: Blue
         value: anp-h1-blue
-      - 
+    -
         label: Lavender
         value: anp-h1-lavender
-  -
+-
     id: anp-h1-divider
     title: H1 Divider
     type: class-toggle
 
 # Typography :: Headings :: H2
 
-  -
+-
     id: anp-h2-header
     title: H2
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: h2-font
     title: H2 Font Family
     type: variable-text
     default: Noto Serif
-  -
+-
     id: h2-size
     title: H2 Font Size
     type: variable-number
     default: 1.6
     format: em
-  -
+-
     id: h2-weight
     title: H2 Font Weight
     type: variable-number
     default: 600
-  -
+-
     id: h2-line-height
     title: H2 Line Height
     type: variable-number
     default: 1.2
-  -
+-
     id: anp-h2-color-custom
     title: H2 Color
     type: class-select
     allowEmpty: true
     default: anp-h2-peach
     options:
-      - 
+    -
         label: Rosewater
         value: anp-h2-rosewater
-      - 
+    -
         label: Flamingo
         value: anp-h2-flamingo
-      - 
+    -
         label: Pink
         value: anp-h2-pink
-      - 
+    -
         label: Mauve
         value: anp-h2-mauve
-      - 
+    -
         label: Red
         value: anp-h2-red
-      - 
+    -
         label: Maroon
         value: anp-h2-maroon
-      - 
+    -
         label: Peach
         value: anp-h2-peach
-      - 
+    -
         label: Yellow
         value: anp-h2-yellow
-      - 
+    -
         label: Green
         value: anp-h2-green
-      - 
+    -
         label: Teal
         value: anp-h2-teal
-      - 
+    -
         label: Sky
         value: anp-h2-sky
-      - 
+    -
         label: Sapphire
         value: anp-h2-sapphire
-      - 
+    -
         label: Blue
         value: anp-h2-blue
-      - 
+    -
         label: Lavender
         value: anp-h2-lavender
-  -
+-
     id: anp-h2-divider
     title: H2 Divider
     type: class-toggle
 
 # Typography :: Headings :: H3
 
-  -
+-
     id: anp-h3-header
     title: H3
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: h3-font
     title: H3 Font Family
     type: variable-text
     default: Noto Serif
-  -
+-
     id: h3-size
     title: H3 Font Size
     type: variable-number
     default: 1.37
     format: em
-  -
+-
     id: h3-weight
     title: H3 Font Weight
     type: variable-number
     default: 600
-  -
+-
     id: h3-line-height
     title: H3 Line Height
     type: variable-number
     default: 1.3
-  -
+-
     id: anp-h3-color-custom
     title: H3 Color
     type: class-select
     allowEmpty: true
     default: anp-h3-green
     options:
-      - 
+    -
         label: Rosewater
         value: anp-h3-rosewater
-      - 
+    -
         label: Flamingo
         value: anp-h3-flamingo
-      - 
+    -
         label: Pink
         value: anp-h3-pink
-      - 
+    -
         label: Mauve
         value: anp-h3-mauve
-      - 
+    -
         label: Red
         value: anp-h3-red
-      - 
+    -
         label: Maroon
         value: anp-h3-maroon
-      - 
+    -
         label: Peach
         value: anp-h3-peach
-      - 
+    -
         label: Yellow
         value: anp-h3-yellow
-      - 
+    -
         label: Green
         value: anp-h3-green
-      - 
+    -
         label: Teal
         value: anp-h3-teal
-      - 
+    -
         label: Sky
         value: anp-h3-sky
-      - 
+    -
         label: Sapphire
         value: anp-h3-sapphire
-      - 
+    -
         label: Blue
         value: anp-h3-blue
-      - 
+    -
         label: Lavender
         value: anp-h3-lavender
-  -
+-
     id: anp-h3-divider
     title: H3 Divider
     type: class-toggle
 
 # Typography :: Headings :: H4
 
-  -
+-
     id: anp-h4-header
     title: H4
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: h4-font
     title: H4 Font Family
     type: variable-text
     default: Noto Serif
-  -
+-
     id: h4-size
     title: H4 Font Size
     type: variable-number
     default: 1.25
     format: em
-  -
+-
     id: h4-weight
     title: H4 Font Weight
     type: variable-number
     default: 600
-  -
+-
     id: h4-line-height
     title: H4 Line Height
     type: variable-number
     default: 1.4
-  -
+-
     id: anp-h4-color-custom
     title: H4 Color
     type: class-select
     allowEmpty: true
     default: anp-h4-teal
     options:
-      - 
+    -
         label: Rosewater
         value: anp-h4-rosewater
-      - 
+    -
         label: Flamingo
         value: anp-h4-flamingo
-      - 
+    -
         label: Pink
         value: anp-h4-pink
-      - 
+    -
         label: Mauve
         value: anp-h4-mauve
-      - 
+    -
         label: Red
         value: anp-h4-red
-      - 
+    -
         label: Maroon
         value: anp-h4-maroon
-      - 
+    -
         label: Peach
         value: anp-h4-peach
-      - 
+    -
         label: Yellow
         value: anp-h4-yellow
-      - 
+    -
         label: Green
         value: anp-h4-green
-      - 
+    -
         label: Teal
         value: anp-h4-teal
-      - 
+    -
         label: Sky
         value: anp-h4-sky
-      - 
+    -
         label: Sapphire
         value: anp-h4-sapphire
-      - 
+    -
         label: Blue
         value: anp-h4-blue
-      - 
+    -
         label: Lavender
         value: anp-h4-lavender
-  -
+-
     id: anp-h4-divider
     title: H4 Divider
     type: class-toggle
 
 # Typography :: Headings :: H5
 
-  -
+-
     id: anp-h5-header
     title: H5
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: h5-font
     title: H5 Font Family
     type: variable-text
     default: Noto Serif
-  -
+-
     id: h5-size
     title: H5 Font Size
     type: variable-number
     default: 1.12
     format: em
-  -
+-
     id: h5-weight
     title: H5 Font Weight
     type: variable-number
     default: 600
-  -
+-
     id: h5-line-height
     title: H5 Line Height
     type: variable-number
     default: 1.5
-  -
+-
     id: anp-h5-color-custom
     title: H5 Color
     type: class-select
     allowEmpty: true
     default: anp-h5-lavender
     options:
-      - 
+    -
         label: Rosewater
         value: anp-h5-rosewater
-      - 
+    -
         label: Flamingo
         value: anp-h5-flamingo
-      - 
+    -
         label: Pink
         value: anp-h5-pink
-      - 
+    -
         label: Mauve
         value: anp-h5-mauve
-      - 
+    -
         label: Red
         value: anp-h5-red
-      - 
+    -
         label: Maroon
         value: anp-h5-maroon
-      - 
+    -
         label: Peach
         value: anp-h5-peach
-      - 
+    -
         label: Yellow
         value: anp-h5-yellow
-      - 
+    -
         label: Green
         value: anp-h5-green
-      - 
+    -
         label: Teal
         value: anp-h5-teal
-      - 
+    -
         label: Sky
         value: anp-h5-sky
-      - 
+    -
         label: Sapphire
         value: anp-h5-sapphire
-      - 
+    -
         label: Blue
         value: anp-h5-blue
-      - 
+    -
         label: Lavender
         value: anp-h5-lavender
-  -
+-
     id: anp-h5-divider
     title: H5 Divider
     type: class-toggle
 
 # Typography :: Headings :: H6
 
-  -
+-
     id: anp-h6-header
     title: H6
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: h6-font
     title: H6 Font Family
     type: variable-text
     default: Noto Serif
-  -
+-
     id: h6-size
     title: H6 Font Size
     type: variable-number
     default: 1.12
     format: em
-  -
+-
     id: h6-weight
     title: H6 Font Weight
     type: variable-number
     default: 600
-  -
+-
     id: h6-line-height
     title: H6 Line Height
     type: variable-number
     default: 1.5
-  -
+-
     id: anp-h6-color-custom
     title: H6 Color
     type: class-select
     allowEmpty: true
     default: anp-h6-mauve
     options:
-      - 
+    -
         label: Rosewater
         value: anp-h6-rosewater
-      - 
+    -
         label: Flamingo
         value: anp-h6-flamingo
-      - 
+    -
         label: Pink
         value: anp-h6-pink
-      - 
+    -
         label: Mauve
         value: anp-h6-mauve
-      - 
+    -
         label: Red
         value: anp-h6-red
-      - 
+    -
         label: Maroon
         value: anp-h6-maroon
-      - 
+    -
         label: Peach
         value: anp-h6-peach
-      - 
+    -
         label: Yellow
         value: anp-h6-yellow
-      - 
+    -
         label: Green
         value: anp-h6-green
-      - 
+    -
         label: Teal
         value: anp-h6-teal
-      - 
+    -
         label: Sky
         value: anp-h6-sky
-      - 
+    -
         label: Sapphire
         value: anp-h6-sapphire
-      - 
+    -
         label: Blue
         value: anp-h6-blue
-      - 
+    -
         label: Lavender
         value: anp-h6-lavender
-  -
+-
     id: anp-h6-divider
     title: H6 Divider
     type: class-toggle
 
+# Typography :: Comments
+
+-
+    id: anp-comment-header
+    title: Comments
+    description: 
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: hide-comments
+    title: Hide Comments
+    description: Hides the comments while not editing them.
+    type: class-toggle
+-
+    id: hide-comment-indicators
+    title: Hide Comment Indicators
+    description: Hides the '%%' while not editing comments.
+    type: class-toggle
+
 # Typography :: Text Decoration
 
-  -
+-
     id: anp-decor-header
     title: Text Decoration
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-decoration-toggle
     title: Enable Decoration Colors
     type: class-toggle
-  -
+-
     id: anp-bold-custom
     title: Bold Color
     type: class-select
-    allowEmpty: true
+    allowEmpty: false
     default: anp-bold-red
     options:
-      - 
+    -
+        label: None
+        value: none
+    -
         label: Rosewater
         value: anp-bold-rosewater
-      - 
+    -
         label: Flamingo
         value: anp-bold-flamingo
-      - 
+    -
         label: Pink
         value: anp-bold-pink
-      - 
+    -
         label: Mauve
         value: anp-bold-mauve
-      - 
+    -
         label: Red
         value: anp-bold-red
-      - 
+    -
         label: Maroon
         value: anp-bold-maroon
-      - 
+    -
         label: Peach
         value: anp-bold-peach
-      - 
+    -
         label: Yellow
         value: anp-bold-yellow
-      - 
+    -
         label: Green
         value: anp-bold-green
-      - 
+    -
         label: Teal
         value: anp-bold-teal
-      - 
+    -
         label: Sky
         value: anp-bold-sky
-      - 
+    -
         label: Sapphire
         value: anp-bold-sapphire
-      - 
+    -
         label: Blue
         value: anp-bold-blue
-      - 
+    -
         label: Lavender
         value: anp-bold-lavender
-  -
+-
     id: anp-italic-custom
     title: Italic Color
     type: class-select
-    allowEmpty: true
+    allowEmpty: false
     default: anp-italic-green
     options:
-      - 
+    -
+        label: None
+        value: none
+    -
         label: Rosewater
         value: anp-italic-rosewater
-      - 
+    -
         label: Flamingo
         value: anp-italic-flamingo
-      - 
+    -
         label: Pink
         value: anp-italic-pink
-      - 
+    -
         label: Mauve
         value: anp-italic-mauve
-      - 
+    -
         label: Red
         value: anp-italic-red
-      - 
+    -
         label: Maroon
         value: anp-italic-maroon
-      - 
+    -
         label: Peach
         value: anp-italic-peach
-      - 
+    -
         label: Yellow
         value: anp-italic-yellow
-      - 
+    -
         label: Green
         value: anp-italic-green
-      - 
+    -
         label: Teal
         value: anp-italic-teal
-      - 
+    -
         label: Sky
         value: anp-italic-sky
-      - 
+    -
         label: Sapphire
         value: anp-italic-sapphire
-      - 
+    -
         label: Blue
         value: anp-italic-blue
-      - 
+    -
         label: Lavender
         value: anp-italic-lavender
-  -
+-
     id: anp-highlight-custom
     title: Highlight Color
     type: class-select
-    allowEmpty: true
+    allowEmpty: false
     default: anp-highlight-yellow
     options:
-      - 
+    -
         label: Rosewater
         value: anp-highlight-rosewater
-      - 
+    -
         label: Flamingo
         value: anp-highlight-flamingo
-      - 
+    -
         label: Pink
         value: anp-highlight-pink
-      - 
+    -
         label: Mauve
         value: anp-highlight-mauve
-      - 
+    -
         label: Red
         value: anp-highlight-red
-      - 
+    -
         label: Maroon
         value: anp-highlight-maroon
-      - 
+    -
         label: Peach
         value: anp-highlight-peach
-      - 
+    -
         label: Yellow
         value: anp-highlight-yellow
-      - 
+    -
         label: Green
         value: anp-highlight-green
-      - 
+    -
         label: Teal
         value: anp-highlight-teal
-      - 
+    -
         label: Sky
         value: anp-highlight-sky
-      - 
+    -
         label: Sapphire
         value: anp-highlight-sapphire
-      - 
+    -
         label: Blue
         value: anp-highlight-blue
-      - 
+    -
         label: Lavender
         value: anp-highlight-lavender
 
 # Workspace
 
-  -
+-
     id: anp-workspace-header
     title: Workspace
     description: Background, Colorful Frame, Layout, Sidebar, Tabs, Translucency, etc.
@@ -1953,40 +2200,40 @@ settings:
 
 # Workspace :: Canvas
 
-  -
+-
     id: anp-canvas-header
     title: Canvas
     description: Darken Canvas Background
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-canvas-dark-bg
     title: Darker Canvas Background
     type: class-toggle
 
 # Workspace :: Colorful Frame
 
-  -
+-
     id: colorful-frame
     title: Colorful Frame
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-colorful-frame
     title: "Enable Colorful Frame (WIP)"
     type: class-toggle
-  -
+-
     id: anp-colorful-frame-icon-toggle-light
     title: "Invert Icon Colors - Light"
     type: class-toggle
-  -
+-
     id: anp-colorful-frame-icon-toggle-dark
     title: "Invert Icon Colors - Dark"
     type: class-toggle
-  -
+-
     id: anp-colorful-frame-opacity
     title: Colorful Frame Opacity
     type: variable-number-slider
@@ -1994,7 +2241,7 @@ settings:
     min: 0
     max: 1
     step: 0.05
-  -
+-
     id: anp-colorful-frame-color
     title: Custom Colorful Frame Color
     type: variable-themed-color
@@ -2003,63 +2250,63 @@ settings:
     default-light: '#'
     default-dark: '#'
     alt-format:
-      -
+    -
         id: anp-colorful-frame-color-hsl
         format: "hsl-values"
 
 # Workspace :: File Browser
 
-  -
+-
     id: anp-filebrowser-header
     title: File Browser
     description: 'Enable/Disable File Browser elements'
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-custom-vault-toggle
     title: Enable custom vault title
     type: class-toggle
-  -
+-
     id: anp-file-icons
     title: Enable file icons
     type: class-toggle
-  -
+-
     id: anp-floating-header
     title: Enable floating vault title
     type: class-toggle
-  -
+-
     id: anp-collapse-folders
     title: Enable folder icons for collapse indicators
     type: class-toggle
-  -
+-
     id: anp-file-label-align
     title: File label alignment
     type: variable-select
     default: "0"
     options:
-      -
+    -
         label: Right
         value: 1
-      -
+    -
         label: Left
         value: 0
 
 # Workspace :: PDF Viewer
 
-  -
+-
     id: anp-pdf-viewer-header
     title: PDF Viewer
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-pdf-blend-toggle-dark
     title: Toggle PDF background blending - Dark Mode
     desc: Blends PDF viewer background with obsidian background in dark mode
     type: class-toggle
-  -
+-
     id: anp-pdf-blend-toggle-light
     title: Toggle PDF background blending - Light Mode
     desc: Blends PDF viewer background with obsidian background in light mode
@@ -2067,59 +2314,59 @@ settings:
 
 # Workspace :: Rainbow Folders
 
-  -
+-
     id: anp-rainbow-section-header
     title: Rainbow Folders
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anuppuccin-url-custom-rainbow-colors
     title: Custom rainbow folder colors snippet
     description: "Download the snippet through [this link](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/custom-rainbow-colors.css)."
     type: info-text
     markdown: true
-  -
+-
     id: anp-alt-rainbow-style
     title: Rainbow style
     type: class-select
     allowEmpty: false
     default: anp-default-rainbow
     options:
-      - 
+    -
         label: None
         value: anp-default-rainbow
-      - 
+    -
         label: Full
         value: anp-full-rainbow-color-toggle
-      - 
+    -
         label: Simple
         value: anp-simple-rainbow-color-toggle
 
 # Workspace :: Rainbow Folders :: Full Folder Settings
 
-  -
+-
     id: anp-full-rainbow-folder-settings
     title: Full Folder Settings
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: anp-rainbow-file-toggle
     title: File recolor toggle
     desc: Recolors files to match the folders
     type: class-toggle
-  -
+-
     id: anp-full-rainbow-text-color-toggle-light
-    title: Invert title colors (Dark Mode)
-    type: class-toggle
-  -
-    id: anp-full-rainbow-text-color-toggle-dark
     title: Invert title colors (Light Mode)
     type: class-toggle
-  -
+-
+    id: anp-full-rainbow-text-color-toggle-dark
+    title: Invert title colors (Dark Mode)
+    type: class-toggle
+-
     id: anp-rainbow-folder-bg-opacity
     title: Folder background color opacity
     type: variable-number
@@ -2127,50 +2374,50 @@ settings:
 
 # Workspace :: Rainbow Folders :: Simple Folder Settings
 
-  -
+-
     id: anp-simple-rainbow-folder-settings
     title: Simple Folder Settings
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: anp-simple-rainbow-title-toggle
     title: Enable title recolor
     type: class-toggle
-  -
+-
     id: anp-simple-rainbow-collapse-icon-toggle
     title: Enable collapse icon recolor
     type: class-toggle
-  -
+-
     id: anp-simple-rainbow-indentation-toggle
     title: Enable collapse indent recolor
     type: class-toggle
-  -
+-
     id: anp-simple-rainbow-icon-toggle
     title: Enable circular file
     type: class-toggle
-  -
+-
     id: anp-rainbow-subfolder-color-toggle
     title: Enable subfolder color inheritance
     type: class-toggle
 
 # Workspace :: Stacked Tabs
 
-  -
+-
     id: anp-stacked-tabs-header
     title: Stacked Tabs
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-stacked-header-width
     title: Stacked tabs header width
     type: variable-number
     default: 40
     format: px
-  -
+-
     id: anp-tab-stacked-pane-width
     title: Stacked tabs pane width multiplier
     description: Multiplies the stack tab pane with which depends on file line width
@@ -2179,86 +2426,86 @@ settings:
 
 # Workspace :: Status Bar
 
-  -
+-
     id: anp-status-bar-header
     title: Status Bar
     description: Select status bar style
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-status-bar-select
     title: Status Bar Style
     type: class-select
     default: none
     options:
-      -
+    -
         label: Default
         value: none
-      -
+    -
         label: Floating
         value: anp-floating-status-bar
-      -
+    -
         label: Fixed
         value: anp-fixed-status-bar
 
 # Workspace :: Tabs
 
-  -
+-
     id: anp-alt-tab-header
     title: Tabs
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-alt-tab-style
     title: Tab style
     type: class-select
     allowEmpty: false
     default: anp-default-tab
     options:
-      - 
+    -
         label: Default
         value: anp-default-tab
-      - 
+    -
         label: Depth
         value: anp-depth-tab-toggle
-      - 
+    -
         label: Minimalistic
         value: anp-mini-tab-toggle
-      - 
+    -
         label: Safari-style (Animated)
         value: anp-alternate-tab-toggle
-      - 
+    -
         label: Safari-style (Vanilla)
         value: anp-safari-tab-toggle
-  -
+-
     id: anp-alt-tab-custom-height
     title: Custom tab height
     type: variable-number
     allowEmpty: false
     default: 40
     format: px
-  -
+-
     id: anp-disable-newtab-align
     title: Disable new tab button right alignment
     type: class-toggle
 
 # Workspace :: Tabs :: Depth Tab Settings
 
-  -
+-
     id: anp-depth-tab-header
     title: Depth Tab Settings
     description: Only applies to inactive tabs
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: anp-depth-tab-text-invert
     title: Invert tab text color
     type: class-toggle
-  -
+-
     id: anp-depth-tab-opacity
     title: Tab opacity
     type: variable-number-slider
@@ -2266,7 +2513,7 @@ settings:
     max: 1
     min: 0
     step: 0.1
-  -
+-
     id: anp-depth-tab-gap
     title: Tab gap
     type: variable-number
@@ -2275,26 +2522,26 @@ settings:
 
 # Workspace :: Tabs :: Animated Safari-style Tab Settings
 
-  -
+-
     id: anp-safari-tab-header
     title: Animated Safari-style Tab Settings
     description: Adapted from github.com/chuckharmston's snippets
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: anp-safari-tab-radius
     title: Tab radius
     type: variable-number
     default: 6
     format: px
-  -
+-
     id: anp-safari-tab-gap
     title: Tab gap
     type: variable-number
     default: 10
     format: px
-  -
+-
     id: anp-safari-border-width
     title: Tab border width
     type: variable-number
@@ -2303,28 +2550,28 @@ settings:
 
 # Workspace :: Tabs :: Vanilla Safari-style Tab Settings
 
-  -
+-
     id: anp-safari-vanilla-tab-header
     title: Vanilla Safari-style Tab Settings
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: anp-safari-tab-animated
     title: Enable WIP animated safari tabs
     type: class-toggle
 
 # Workspace :: Translucency
 
-  -
+-
     id: anp-translucency-header
     title: Translucency
     description: 
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-translucency-opacity
     description: Drag to change background opacity
     title: Window opacity
@@ -2333,91 +2580,91 @@ settings:
 
 # Workspace :: Workspace Layout
 
-  -
+-
     id: anp-layout-header
     title: Workspace Layout
     description: Workspace layout and arrangement
     type: heading
     level: 2
     collapsed: true
-  -
+-
     id: anp-layout-select
     title: Workspace Layout variant
     type: class-select
     allowEmpty: false
     default: none
     options:
-      -
+    -
         label: Default
         value: none
-      -
+    -
         label: Border
         value: anp-border-layout
-      -
+    -
         label: Cards
         value: anp-card-layout
-  -
+-
     id: anp-bg-fix
     title: Background fix for applying colors
     type: class-toggle
-  -
+-
     id: anp-hide-borders
     title: Hide borders
     type: class-toggle
 
 # Workspace :: Workspace Layout :: Card Layout
 
-  -
+-
     id: anp-layout-card
     title: Card Layout Settings
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: anp-card-radius
     title: Card radius
     type: variable-number
     default: 16
     format: px
-  -
+-
     id: anp-card-layout-padding
     title: Card padding
     type: variable-number
     default: 10
     format: px
-  -
+-
     id: anp-card-header-left-padding
     title: Tab left padding
     type: variable-number
     default: 20
     format: px
-  -
+-
     id: anp-card-shadows
     title: Enable shadows
     type: class-toggle
-  -
+-
     id: anp-card-layout-actions
     title: Enable card format for actions
     type: class-toggle
-  -
+-
     id: anp-card-layout-filebrowser
     title: Enable card format for file browser
     type: class-toggle
-  -
+-
     id: anp-layout-border
     title: Border Layout Settings
     description: 
     type: heading
     level: 3
     collapsed: true
-  -
+-
     id: anp-border-radius
     title: Border Layout Radius
     type: variable-number
     default: 16
     format: px
-  -
+-
     id: anp-border-padding
     title: Border Layout Padding
     type: variable-number
@@ -2426,26 +2673,26 @@ settings:
 
 # Credits
 
-  -
+-
     id: anuppuccin-support
     title: Support AnuPpuccin
     description: If you like the theme, here are some ways to support development
     type: heading
     level: 1
     collapsed: true
-  -
+-
     id: anuppuccin-url-donate
     title: Buy Me a Coffee
     description: "[https://www.buymeacoffee.com/anubisnekhet](https://www.buymeacoffee.com/anubisnekhet)"
     type: info-text
     markdown: true
-  -
+-
     id: anuppuccin-url-star-repo
     title: Star the Theme on GitHub
     description: "[https://github.com/anubisnekhet/anuppuccin](https://github.com/anubisnekhet/anuppuccin)"
     type: info-text
     markdown: true
-  -
+-
     id: anuppuccin-url-submit-issue
     title: Submit an Issue on GitHub
     description: "[https://github.com/anubisnekhet/anuppuccin/issues](https://github.com/anubisnekhet/anuppuccin/issues)"
@@ -2995,7 +3242,8 @@ settings:
   --icon-color-focused: rgb(var(--ctp-accent));
 }
 
-.theme-dark, .theme-light {
+.theme-dark,
+.theme-light {
   --mono-rgb-0: var(--ctp-crust);
   --mono-rgb-100: var(--ctp-text);
   --color-red-rgb: var(--ctp-red);
@@ -3028,21 +3276,19 @@ settings:
   --text-highlight-bg: rgba(var(--ctp-yellow), 0.2);
   --text-highlight-bg-active: rgba(var(--ctp-yellow), 0.4);
   --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(var(255, 255, 255), 0.09),
-  0 2px 4px 0 rgba(var(--ctp-crust),.15),
-  0 1px 1.5px 0 rgba(var(--ctp-crust),.1),
-  0 1px 2px 0 rgba(var(--ctp-crust),.2),
-  0 0 0 0 transparent;
+      0 2px 4px 0 rgba(var(--ctp-crust), 0.15),
+      0 1px 1.5px 0 rgba(var(--ctp-crust), 0.1),
+      0 1px 2px 0 rgba(var(--ctp-crust), 0.2), 0 0 0 0 transparent;
   --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(var(255, 255, 255), 0.16),
-  0 2px 3px 0 rgba(var(--ctp-crust),.3),
-  0 1px 1.5px 0 rgba(var(--ctp-crust),.2),
-  0 1px 2px 0 rgba(var(--ctp-crust),.4),
-  0 0 0 0 transparent;
+      0 2px 3px 0 rgba(var(--ctp-crust), 0.3),
+      0 1px 1.5px 0 rgba(var(--ctp-crust), 0.2),
+      0 1px 2px 0 rgba(var(--ctp-crust), 0.4), 0 0 0 0 transparent;
   --shadow-s: 0px 1px 2px rgba(var(--ctp-crust), 0.121),
-  0px 3.4px 6.7px rgba(var(--ctp-crust), 0.179),
-  0px 15px 30px rgba(var(--ctp-crust), 0.3);
+      0px 3.4px 6.7px rgba(var(--ctp-crust), 0.179),
+      0px 15px 30px rgba(var(--ctp-crust), 0.3);
   --shadow-l: 0px 1.8px 7.3px rgba(var(--ctp-crust), 0.071),
-  0px 6.3px 24.7px rgba(var(--ctp-crust), 0.112),
-  0px 30px 90px rgba(var(--ctp-crust), 0.2);
+      0px 6.3px 24.7px rgba(var(--ctp-crust), 0.112),
+      0px 30px 90px rgba(var(--ctp-crust), 0.2);
   --background-primary: rgb(var(--ctp-base));
   --background-primary-alt: rgb(var(--ctp-mantle));
   --background-secondary: rgb(var(--ctp-mantle));
@@ -3056,7 +3302,7 @@ settings:
   --background-modifier-error-rgb: var(--ctp-red);
   --background-modifier-error-hover: rgba(var(--ctp-red), 0.9);
   --background-modifier-message: rgba(var(--ctp-crust), 0.9);
-  --modal-border-color:rgb(var(--ctp-surface0));
+  --modal-border-color: rgb(var(--ctp-surface0));
   --text-normal: rgb(var(--ctp-text));
   --text-muted: rgb(var(--ctp-overlay2));
   --text-muted-rgb: var(--ctp-overlay2);
@@ -3075,7 +3321,7 @@ settings:
   --max-width-image: 90%;
   --drag-ghost-background: rgb(var(--ctp-text));
   --drag-ghost-text-color: rgb(var(--ctp-crust));
-  --nav-indentation-guide-color: rgba(var(--ctp-crust), 0.4);
+  --nav-indentation-guide-color: rgb(var(--ctp-overlay0));
   --titlebar-text-color-focused: var(--color-accent);
   --callout-title-padding: var(--size-4-2);
   --table-border-width: var(--anp-table-thickness, 1px);
@@ -3117,7 +3363,7 @@ body {
   --anp-preview-width-max: 800px;
   --anp-header-margin-value: 15px;
   --anp-header-font: "Noto Serif";
-  --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width, 1)*var(--file-line-width));
+  --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width, 1) * var(--file-line-width));
   --anp-table-width-pct: 100%;
   --code-background: var(--anp-code-bg-color, var(--background-secondary-alt));
   --canvas-color: var(--ctp-overlay2);
@@ -3189,6 +3435,10 @@ body.theme-dark {
 
 .markdown-source-view.is-live-preview {
   --font-text: var(--anp-editor-font-lp, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
+}
+
+.markdown-preview-view {
+  --font-text: var(--anp-editor-font-rv, var(--font-text-override)), var(--font-text-theme), var(--font-interface);
 }
 
 /*-Highlighted gutter number-*/
@@ -3367,7 +3617,8 @@ input.slider,
 }
 
 /*======== PRINT ================*/
-.anp-print .print.theme-light, .anp-print .print.theme-dark {
+.anp-print .print.theme-light,
+.anp-print .print.theme-dark {
   --ctp-crust: inherit;
   --ctp-mantle: inherit;
   --ctp-base: inherit;
@@ -3425,7 +3676,11 @@ input.slider,
     --ctp-blue: inherit;
     --ctp-lavender: inherit;
   }
-  .anp-print .print, body.anp-print, .anp-print .markdown-rendered, :root:has(.anp-print), :root {
+  .anp-print .print,
+  body.anp-print,
+  .anp-print .markdown-rendered,
+  :root:has(.anp-print),
+  :root {
     background-color: rgb(var(--ctp-base));
   }
   .anp-print .print .markdown-preview-view {
@@ -3484,7 +3739,8 @@ input.slider,
 .anp-canvas-dark-bg .canvas-wrapper {
   background-color: var(--background-secondary);
 }
-.anp-canvas-dark-bg .canvas-controls button, .anp-canvas-dark-bg .canvas-card-menu {
+.anp-canvas-dark-bg .canvas-controls button,
+.anp-canvas-dark-bg .canvas-card-menu {
   background-color: var(--background-primary);
 }
 .anp-canvas-dark-bg .canvas-card-menu .canvas-card-menu-button svg {
@@ -3572,7 +3828,10 @@ input.slider,
   background-color: var(--background-modifier-active);
 }
 
-.mod-left-split .workspace-tab-header.has-active-menu:hover, .mod-right-split .workspace-tab-header.has-active-menu:hover, .mod-left-split .workspace-tab-header.is-active:hover, .mod-right-split .workspace-tab-header.is-active:hover {
+.mod-left-split .workspace-tab-header.has-active-menu:hover,
+.mod-right-split .workspace-tab-header.has-active-menu:hover,
+.mod-left-split .workspace-tab-header.is-active:hover,
+.mod-right-split .workspace-tab-header.is-active:hover {
   background-color: var(--background-modifier-active-hover);
 }
 
@@ -3580,7 +3839,8 @@ input.slider,
   display: none;
 }
 
-.workspace, .horizontal-main-container,
+.workspace,
+.horizontal-main-container,
 .anp-card-layout .mod-vertical .workspace-tabs,
 .anp-border-layout .mod-vertical .workspace-tabs {
   background-color: var(--tab-container-background);
@@ -3619,7 +3879,12 @@ input.slider,
   background-color: rgba(var(--ctp-text), 0.075);
 }
 
-.mod-community-theme .modal-content .community-modal-details .community-modal-info summary h1:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h2:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h3:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h4:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h5:first-child, .mod-community-theme .modal-content .community-modal-details .community-modal-info summary h6:first-child {
+.mod-community-theme .modal-content .community-modal-details .community-modal-info summary h1:first-child,
+.mod-community-theme .modal-content .community-modal-details .community-modal-info summary h2:first-child,
+.mod-community-theme .modal-content .community-modal-details .community-modal-info summary h3:first-child,
+.mod-community-theme .modal-content .community-modal-details .community-modal-info summary h4:first-child,
+.mod-community-theme .modal-content .community-modal-details .community-modal-info summary h5:first-child,
+.mod-community-theme .modal-content .community-modal-details .community-modal-info summary h6:first-child {
   margin-block: 0;
   display: inline;
 }
@@ -3675,7 +3940,8 @@ body.is-translucent {
 .is-translucent:not(.is-fullscreen) .view-header-title-container:not(.mod-at-end):after {
   background-image: none;
 }
-.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .workspace-tab-header, .is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .view-header {
+.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .workspace-tab-header,
+.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-stacked .view-header {
   background-color: var(--background-primary);
 }
 
@@ -3688,7 +3954,8 @@ body.is-translucent {
   visibility: hidden;
 }
 
-.is-translucent.anp-card-layout, .is-translucent.anp-border-layout {
+.is-translucent.anp-card-layout,
+.is-translucent.anp-border-layout {
   --card-background-color: transparent;
 }
 
@@ -3698,14 +3965,14 @@ body.is-translucent {
   --title-bar-target-translate-y: 18px;
   --title-bar-translate-y: 40px;
   /**
-   * This should fix the drag/click titlebar issue.
-   * 
-   * Invisible boxes are not rendered (as if they were fully transparent),
-   * cannot be interacted with (and behave as if they had pointer-events: none),
-   * and are removed from navigation (similar to display: none).
-   * 
-   * @see: https://drafts.csswg.org/css-display/#visibility
-   */
+  * This should fix the drag/click titlebar issue.
+  * 
+  * Invisible boxes are not rendered (as if they were fully transparent),
+  * cannot be interacted with (and behave as if they had pointer-events: none),
+  * and are removed from navigation (similar to display: none).
+  * 
+  * @see: https://drafts.csswg.org/css-display/#visibility
+  */
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header {
   margin-top: calc(var(--title-bar-translate-y) * -1);
@@ -3808,7 +4075,9 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   max-width: var(--tab-max-width-active);
 }
 
-.anp-alternate-tab-toggle, .anp-default-tab, .anp-safari-tab-toggle {
+.anp-alternate-tab-toggle,
+.anp-default-tab,
+.anp-safari-tab-toggle {
   --header-height: var(--anp-alt-tab-custom-height, 40px);
   --tab-stacked-header-width: var(--anp-stacked-header-width, 40px);
 }
@@ -3883,7 +4152,9 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   padding: 0 4px 0 8px;
   transition: 400ms, background-color 150ms ease-in-out, max-width 400ms;
 }
-.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner, .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-close-button, .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner,
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-close-button,
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
   color: var(--text-muted);
 }
 
@@ -3901,14 +4172,20 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   color: var(--color-accent);
 }
 
-.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner, .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title, .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
   color: var(--text-faint);
 }
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
   background-color: rgba(var(--ctp-surface1), 0.4);
 }
 
-.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner, .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title, .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
   color: var(--color-accent) !important;
 }
 
@@ -3926,7 +4203,8 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   height: var(--tab-height);
 }
 
-.is-focused:not(.anp-mini-tab-toggle.anp-colorful-frame) .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+.is-focused:not(.anp-mini-tab-toggle.anp-colorful-frame) .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
   color: var(--color-accent);
 }
 
@@ -4012,7 +4290,8 @@ body.anp-card-layout.anp-hide-borders {
 body.anp-card-layout.anp-hide-borders .menu {
   border: 0px !important;
 }
-body.anp-card-layout .sidebar-toggle-button, body.anp-card-layout .workspace-tabs.mod-top {
+body.anp-card-layout .sidebar-toggle-button,
+body.anp-card-layout .workspace-tabs.mod-top {
   --tab-container-background: var(--card-background-color);
 }
 body.anp-card-layout .workspace-tabs.mod-top:has(.obsidian-banner-wrapper) {
@@ -4043,32 +4322,30 @@ body.anp-card-layout.anp-card-layout-actions .side-dock-actions {
   margin-top: 2px;
   border-width: 1px 1px 0px 1px;
 }
-body.anp-card-layout.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-layout-actions .side-dock-settings {
+body.anp-card-layout.anp-card-layout-actions .side-dock-actions {
   border-style: solid;
   border-color: var(--tab-outline-color);
   background-color: var(--card-foreground-color);
-}
-body.anp-card-layout.anp-card-layout-actions .side-dock-settings {
-  border-width: 1px 1px 0px 0px;
-  border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
 }
 body.anp-card-layout.anp-card-layout-actions.anp-fixed-status-bar .side-dock-settings {
   border-width: 1px;
   border-radius: 0px var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0px;
 }
-body.anp-card-layout .side-dock-actions,
-body.anp-card-layout .side-dock-settings {
+body.anp-card-layout .side-dock-actions {
   padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
+}
+body.anp-card-layout .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border: none;
+  margin: var(--anp-card-layout-padding, 10px);
+  margin-bottom: 0;
+  background-color: transparent;
 }
 body.anp-card-layout .workspace-ribbon.mod-left {
   margin-top: calc(var(--header-height) - 1px);
 }
-body.anp-card-layout .workspace-tab-header-container, body.anp-card-layout .workspace-ribbon.mod-left:before {
+body.anp-card-layout .workspace-tab-header-container,
+body.anp-card-layout .workspace-ribbon.mod-left:before {
   border-bottom: none;
-}
-body.anp-card-layout .mod-vertical .workspace-tabs {
-  padding-left: var(--anp-card-layout-padding, 10px);
-  padding-right: var(--anp-card-layout-padding, 10px);
 }
 body.anp-card-layout .mod-vertical .workspace-tabs .workspace-tab-header-container {
   padding-left: var(--anp-card-header-left-padding, 20px);
@@ -4084,10 +4361,8 @@ body.anp-card-layout .mod-right-split .workspace-tab-container {
   background-color: var(--tab-container-background);
 }
 body.anp-card-layout .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout.anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
-  border-radius: var(--anp-card-radius, var(--radius-xl));
   background-color: var(--card-foreground-color);
   border: 1px solid var(--tab-outline-color);
-  margin-bottom: var(--anp-card-layout-padding, 10px);
 }
 body.anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content, body.anp-card-layout.anp-card-shadows.anp-card-layout-actions .side-dock-actions, body.anp-card-layout.anp-card-shadows.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
   box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
@@ -4125,6 +4400,15 @@ body.anp-card-layout .workspace-drop-overlay:before {
   margin: auto;
 }
 
+body.anp-card-layout:not(.is-phone) .mod-vertical .workspace-tabs {
+  padding-left: var(--anp-card-layout-padding, 10px);
+  padding-right: var(--anp-card-layout-padding, 10px);
+}
+body.anp-card-layout:not(.is-phone) .workspace-split .workspace-leaf-content:not([data-type=file-explorer]), body.anp-card-layout:not(.is-phone).anp-card-layout-filebrowser .workspace-leaf-content[data-type=file-explorer] {
+  border-radius: var(--anp-card-radius, var(--radius-xl));
+  margin-bottom: var(--anp-card-layout-padding, 10px);
+}
+
 /*--------------------------
 Inspired by https://github.com/Akifyss/obsidian-border
 ---------------------------*/
@@ -4143,37 +4427,94 @@ body.anp-border-layout .horizontal-main-container {
 body.anp-border-layout.anp-fixed-status-bar {
   --anp-border-bottom-padding: calc(var(--anp-border-padding, 20px) - 18px);
 }
-body.anp-border-layout .workspace {
-  margin-right: var(--anp-border-padding, 20px);
+body.anp-border-layout .workspace .workspace-tab-container {
+  border-bottom: var(--border-border-style);
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
-  border-left: var(--border-border-style);
-}
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-left-space .workspace-tab-container {
-  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
-}
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-tabs:nth-child(2).workspace-tabs.mod-top-left-space > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2).mod-top-left-space > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2).mod-top-left-space > .workspace-tab-container {
   border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
 }
-body.anp-border-layout .workspace:not(.is-left-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical:last-child > .workspace-tabs:nth-child(2) .workspace-tab-container {
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root .workspace-tabs.mod-top-left-space > .workspace-tab-container {
   border-left: var(--border-border-style);
 }
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs .workspace-tab-container {
-  border-right: var(--border-border-style);
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs > .workspace-tab-container {
+  border-left: var(--border-border-style);
 }
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs.mod-top-right-space .workspace-tab-container {
-  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:not(.mod-top-left-space) > .workspace-tab-header-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:not(.mod-top-left-space) > .workspace-tab-header-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-tabs:not(.mod-top-left-space) > .workspace-tab-header-container {
+  border-left: var(--border-border-style);
 }
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:last-child .workspace-tab-container {
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2) > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2) > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2) > .workspace-tab-container {
+  border-left: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2):not(.mod-top-left-space) > .workspace-tab-header-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2):not(.mod-top-left-space) > .workspace-tab-header-container,
+body.anp-border-layout .workspace:not(.is-left-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:nth-child(2) > .workspace-split.mod-vertical > .workspace-tabs:nth-child(2):not(.mod-top-left-space) > .workspace-tab-header-container {
+  border-left: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-tabs:last-child.mod-top-right-space > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-tabs:last-child.mod-top-right-space > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-tabs:last-child.mod-top-right-space > .workspace-tab-container {
   border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
 }
-body.anp-border-layout .workspace:not(.is-right-sidedock-open) .workspace-split.mod-vertical .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-tabs:last-child .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-tabs:last-child .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical:last-child > .workspace-tabs:last-child .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical:last-child > .workspace-tabs:last-child .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical:last-child > .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root .workspace-tabs.mod-top-right-space > .workspace-tab-container {
+  border-right: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-tabs > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-tabs > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-tabs > .workspace-tab-container {
+  border-right: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-tabs:not(.mod-top-right-space) > .workspace-tab-header-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-tabs:not(.mod-top-right-space) > .workspace-tab-header-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-tabs:not(.mod-top-right-space) > .workspace-tab-header-container {
+  border-right: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical > .workspace-tabs:last-child > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical > .workspace-tabs:last-child > .workspace-tab-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical > .workspace-tabs:last-child > .workspace-tab-container {
+  border-right: var(--border-border-style);
+}
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical > .workspace-tabs:last-child:not(.mod-top-right-space) > .workspace-tab-header-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical > .workspace-tabs:last-child:not(.mod-top-right-space) > .workspace-tab-header-container,
+body.anp-border-layout .workspace:not(.is-right-sidedock-open) > .workspace-split.mod-vertical.mod-root > .workspace-split.mod-vertical > .workspace-split.mod-vertical > .workspace-split.mod-horizontal:last-child > .workspace-split.mod-vertical > .workspace-tabs:last-child:not(.mod-top-right-space) > .workspace-tab-header-container {
   border-right: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split {
   background-color: var(--card-background-color);
   padding-left: calc(var(--anp-border-padding, 20px) - 20px);
-  padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs {
   background-color: var(--card-background-color);
@@ -4188,16 +4529,19 @@ body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tab
   border-left: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
   border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
-  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
   border-top: var(--border-border-style);
   border-left: var(--border-border-style);
 }
+body.anp-border-layout .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border-top: none;
+  background-color: var(--card-foreground-color);
+  border-left: var(--border-border-style);
+  border-bottom: var(--border-border-style);
+}
 body.anp-border-layout .workspace .workspace-split.mod-right-split {
-  padding-bottom: var(--anp-border-bottom-padding, 20px);
   background-color: var(--card-background-color);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs {
@@ -4213,17 +4557,14 @@ body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-ta
   border-right: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
-  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
   border-bottom: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
-  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
   border-top: var(--border-border-style);
   border-right: var(--border-border-style);
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) {
   background-color: var(--card-background-color);
-  padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
 body.anp-border-layout .workspace .workspace-split:not(.mod-right-split):not(.mod-left-split) > .workspace-split {
   padding-bottom: 0;
@@ -4254,11 +4595,37 @@ body.anp-border-layout .workspace-split {
 body.anp-border-layout .workspace-ribbon.mod-left:before {
   border-bottom: 1px solid var(--card-background-color);
 }
-body.anp-border-layout .workspace-ribbon.mod-left, body.anp-border-layout .workspace-ribbon.mod-left.is-focused {
+body.anp-border-layout .workspace-ribbon.mod-left,
+body.anp-border-layout .workspace-ribbon.mod-left.is-focused {
   border-right-color: var(--card-background-color);
 }
 body.anp-border-layout.is-popout-window .workspace {
   margin-left: var(--anp-border-padding, 20px);
+}
+
+body.anp-border-layout:not(.is-mobile) .workspace {
+  margin-right: var(--anp-border-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split {
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-tabs.mod-top-left-space .workspace-tab-container {
+  border-top-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border-bottom-left-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split {
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split .workspace-tabs:last-child .workspace-tab-container {
+  border-bottom-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-right-split .workspace-tabs.mod-top-right-space .workspace-tab-container {
+  border-top-right-radius: var(--anp-border-radius, var(--radius-xl));
+}
+body.anp-border-layout:not(.is-mobile) .workspace .workspace-split.mod-root:not(.mod-right-split):not(.mod-left-split) {
+  padding-bottom: var(--anp-border-bottom-padding, 20px);
 }
 
 .anp-bg-fix .workspace,
@@ -4339,11 +4706,23 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   --callout-content-padding: 0;
 }
 
-.callout-content > p:first-child, .callout-content > ul:first-child, .callout-content > ol:first-child {
+.callout-content > p:first-child,
+.callout-content > ul:first-child,
+.callout-content > ol:first-child {
   margin-top: 0px;
 }
-.callout-content > p:last-child, .callout-content > ul:last-child, .callout-content > ol:last-child {
+.callout-content > p:last-child,
+.callout-content > ul:last-child,
+.callout-content > ol:last-child {
   margin-bottom: 0px;
+}
+.callout-content > h1,
+.callout-content > h2,
+.callout-content > h3,
+.callout-content > h4,
+.callout-content > h5,
+.callout-content > h6 {
+  margin: 0 !important;
 }
 
 .anp-callout-block .callout:not([data-callout-metadata*=anp-sleek],
@@ -4437,7 +4816,8 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 [data-callout-metadata*=anp-vanilla-plus],
 [data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
 [data-callout=blank-container],
-[data-callout=multi-column]) > .callout-title, .anp-callout-vanilla-normal .callout:not([data-callout-metadata*=anp-sleek],
+[data-callout=multi-column]) > .callout-title,
+.anp-callout-vanilla-normal .callout:not([data-callout-metadata*=anp-sleek],
 [data-callout-metadata*=anp-vanilla-plus],
 [data-callout-metadata*=anp-block]):not([data-callout-metadata*=revert],
 [data-callout=blank-container],
@@ -4527,13 +4907,15 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   background-color: rgba(var(--callout-color), 0.05) !important;
   color: var(--ctp-text);
 }
-.callout[data-callout=formula] .callout-title .callout-icon, .callout[data-callout=formula] .callout-title .callout-fold {
+.callout[data-callout=formula] .callout-title .callout-icon,
+.callout[data-callout=formula] .callout-title .callout-fold {
   display: none;
 }
 .callout[data-callout=formula] .callout-content {
   background-color: transparent !important;
 }
-.callout[data-callout=formula] .callout-content ul, .callout[data-callout=formula] .callout-content ol {
+.callout[data-callout=formula] .callout-content ul,
+.callout[data-callout=formula] .callout-content ol {
   padding-inline-start: 12px;
 }
 
@@ -4544,8 +4926,8 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 
 /*-Decorations for bold and italics-*/
 .anp-decoration-toggle {
-  --italic-color: rgb(var(--anp-italic-color, var(--ctp-green)));
-  --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
+  --italic-color: rgb(var(--anp-italic-color, var(--text-normal)));
+  --bold-color: rgb(var(--anp-bold-color, var(--text-normal)));
   --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
 
@@ -4566,8 +4948,8 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   --link-decoration-active: none;
 }
 
-.external-link,
-.external-link:hover {
+.anp-hide-external-link-icon .external-link,
+.anp-hide-external-link-icon .external-link:hover {
   background-image: none;
   padding-right: 0px;
 }
@@ -4582,6 +4964,12 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 /*-Footnote-*/
 sup[data-footnote-id] {
   font-size: var(--font-smallest);
+}
+
+img,
+iframe,
+video {
+  border-radius: var(--embed-corner-radius, 4px);
 }
 
 .internal-embed[alt*=seamless].markdown-embed {
@@ -5165,6 +5553,15 @@ sup[data-footnote-id] {
   --h6-font: var(--anp-editor-font);
 }
 
+.hide-comment-indicators .is-live-preview .cm-line:not(.cm-active) .cm-comment-start,
+.hide-comment-indicators .is-live-preview .cm-line:not(.cm-active) .cm-comment-end {
+  display: none;
+}
+
+.hide-comments .is-live-preview .cm-line:not(.cm-active) .cm-comment {
+  display: none;
+}
+
 /*-Custom hr margins-*/
 hr {
   margin-block-start: 5px;
@@ -5189,7 +5586,196 @@ hr {
   background-color: transparent;
 }
 
-.anp-toggle-metadata .frontmatter-container, .markdown-rendered.hide-metadata .frontmatter-container {
+.anp-latex-inline-rosewater span.math:not(.math-block) {
+  color: rgb(var(--ctp-rosewater));
+}
+
+.anp-latex-block-rosewater .math-block {
+  color: rgb(var(--ctp-rosewater));
+}
+
+.anp-latex-inline-flamingo span.math:not(.math-block) {
+  color: rgb(var(--ctp-flamingo));
+}
+
+.anp-latex-block-flamingo .math-block {
+  color: rgb(var(--ctp-flamingo));
+}
+
+.anp-latex-inline-pink span.math:not(.math-block) {
+  color: rgb(var(--ctp-pink));
+}
+
+.anp-latex-block-pink .math-block {
+  color: rgb(var(--ctp-pink));
+}
+
+.anp-latex-inline-mauve span.math:not(.math-block) {
+  color: rgb(var(--ctp-mauve));
+}
+
+.anp-latex-block-mauve .math-block {
+  color: rgb(var(--ctp-mauve));
+}
+
+.anp-latex-inline-red span.math:not(.math-block) {
+  color: rgb(var(--ctp-red));
+}
+
+.anp-latex-block-red .math-block {
+  color: rgb(var(--ctp-red));
+}
+
+.anp-latex-inline-maroon span.math:not(.math-block) {
+  color: rgb(var(--ctp-maroon));
+}
+
+.anp-latex-block-maroon .math-block {
+  color: rgb(var(--ctp-maroon));
+}
+
+.anp-latex-inline-peach span.math:not(.math-block) {
+  color: rgb(var(--ctp-peach));
+}
+
+.anp-latex-block-peach .math-block {
+  color: rgb(var(--ctp-peach));
+}
+
+.anp-latex-inline-yellow span.math:not(.math-block) {
+  color: rgb(var(--ctp-yellow));
+}
+
+.anp-latex-block-yellow .math-block {
+  color: rgb(var(--ctp-yellow));
+}
+
+.anp-latex-inline-green span.math:not(.math-block) {
+  color: rgb(var(--ctp-green));
+}
+
+.anp-latex-block-green .math-block {
+  color: rgb(var(--ctp-green));
+}
+
+.anp-latex-inline-teal span.math:not(.math-block) {
+  color: rgb(var(--ctp-teal));
+}
+
+.anp-latex-block-teal .math-block {
+  color: rgb(var(--ctp-teal));
+}
+
+.anp-latex-inline-sky span.math:not(.math-block) {
+  color: rgb(var(--ctp-sky));
+}
+
+.anp-latex-block-sky .math-block {
+  color: rgb(var(--ctp-sky));
+}
+
+.anp-latex-inline-sapphire span.math:not(.math-block) {
+  color: rgb(var(--ctp-sapphire));
+}
+
+.anp-latex-block-sapphire .math-block {
+  color: rgb(var(--ctp-sapphire));
+}
+
+.anp-latex-inline-blue span.math:not(.math-block) {
+  color: rgb(var(--ctp-blue));
+}
+
+.anp-latex-block-blue .math-block {
+  color: rgb(var(--ctp-blue));
+}
+
+.anp-latex-inline-lavender span.math:not(.math-block) {
+  color: rgb(var(--ctp-lavender));
+}
+
+.anp-latex-block-lavender .math-block {
+  color: rgb(var(--ctp-lavender));
+}
+
+.anp-latex-inline-text span.math:not(.math-block) {
+  color: rgb(var(--ctp-text));
+}
+
+.anp-latex-block-text .math-block {
+  color: rgb(var(--ctp-text));
+}
+
+.anp-latex-inline-subtext1 span.math:not(.math-block) {
+  color: rgb(var(--ctp-subtext1));
+}
+
+.anp-latex-block-subtext1 .math-block {
+  color: rgb(var(--ctp-subtext1));
+}
+
+.anp-latex-inline-subtext0 span.math:not(.math-block) {
+  color: rgb(var(--ctp-subtext0));
+}
+
+.anp-latex-block-subtext0 .math-block {
+  color: rgb(var(--ctp-subtext0));
+}
+
+.anp-latex-inline-overlay2 span.math:not(.math-block) {
+  color: rgb(var(--ctp-overlay2));
+}
+
+.anp-latex-block-overlay2 .math-block {
+  color: rgb(var(--ctp-overlay2));
+}
+
+.anp-latex-inline-overlay1 span.math:not(.math-block) {
+  color: rgb(var(--ctp-overlay1));
+}
+
+.anp-latex-block-overlay1 .math-block {
+  color: rgb(var(--ctp-overlay1));
+}
+
+.anp-latex-inline-overlay0 span.math:not(.math-block) {
+  color: rgb(var(--ctp-overlay0));
+}
+
+.anp-latex-block-overlay0 .math-block {
+  color: rgb(var(--ctp-overlay0));
+}
+
+.anp-latex-inline-surface2 span.math:not(.math-block) {
+  color: rgb(var(--ctp-surface2));
+}
+
+.anp-latex-block-surface2 .math-block {
+  color: rgb(var(--ctp-surface2));
+}
+
+.anp-latex-inline-surface1 span.math:not(.math-block) {
+  color: rgb(var(--ctp-surface1));
+}
+
+.anp-latex-block-surface1 .math-block {
+  color: rgb(var(--ctp-surface1));
+}
+
+.anp-latex-inline-surface0 span.math:not(.math-block) {
+  color: rgb(var(--ctp-surface0));
+}
+
+.anp-latex-block-surface0 .math-block {
+  color: rgb(var(--ctp-surface0));
+}
+
+.math-block {
+  font-size: var(--anp-latex-block-font-size, var(--font-size-lg));
+}
+
+.anp-toggle-metadata .frontmatter-container,
+.markdown-rendered.hide-metadata .frontmatter-container {
   display: none;
 }
 
@@ -5391,7 +5977,7 @@ body.rainbow-tags {
   --r7-color-light: rgba(var(--ctp-mauve), var(--rainbow-tags-opacity));
 }
 
-.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .nav-folder.mod-root .nav-folder > .nav-folder-children :is(.nav-file, .nav-folder) {
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .nav-folder.mod-root .nav-folder > .nav-folder-children:is(.nav-file, .nav-folder) {
   margin-left: var(--size-2-1);
 }
 .anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .tree-item .nav-folder-title {
@@ -5609,23 +6195,29 @@ Minimal cards are a snippet designed by Kepano for the Minimal theme.
 None of the original code was used in this theme, and the following code is merely some tweaks to the snippet.
 --------------------------------------------*/
 .cards .table-view-table > tbody > tr > td:last-child {
-  border-bottom-color: transparent !important; /*-No border for last cell-*/
+  border-bottom-color: transparent !important;
+  /*-No border for last cell-*/
 }
 .cards .table-view-table > tbody > tr > td:first-child {
-  width: 100% !important; /*-Max width for first cell-*/
-  border-bottom: 1px dashed var(--background-modifier-border) !important; /*-Border for first table that spans to the end because of max width-*/
+  width: 100% !important;
+  /*-Max width for first cell-*/
+  border-bottom: 1px dashed var(--background-modifier-border) !important;
+  /*-Border for first table that spans to the end because of max width-*/
 }
 .cards .table-view-table > tbody > tr > td:first-child span {
-  margin: 2px calc(var(--cards-padding) * 0.5) 0 calc(var(--cards-padding) * 0.5); /*-Add padding to text-*/
+  margin: 2px calc(var(--cards-padding) * 0.5) 0 calc(var(--cards-padding) * 0.5);
+  /*-Add padding to text-*/
 }
 .cards .table-view-table > tbody > tr > td:first-child span a {
-  padding: 0 !important; /*-0 padding on link-*/
+  padding: 0 !important;
+  /*-0 padding on link-*/
 }
 .cards .table-view-table > tbody > tr > td:not(:last-child):not(:first-child) > .el-p.el-p.el-p:not(.el-embed-image) {
   border-bottom: 1px dashed var(--background-modifier-border);
 }
 .cards:not([class*=cards-cols-]) {
-  --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width))); /*-force card width to be obeyed on notes not having cards-cols css class-*/
+  --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
+  /*-force card width to be obeyed on notes not having cards-cols css class-*/
 }
 
 .cards.cards-bookmark .table-view-table .table-view-tbody tr::after {
@@ -5633,15 +6225,20 @@ None of the original code was used in this theme, and the following code is mere
   content: " ";
   width: 25px;
   height: 25px;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!  --%3E%3Cpath d='M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z'/%3E%3C/svg%3E"); /*-SVG for bookmark-*/
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!  --%3E%3Cpath d='M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z'/%3E%3C/svg%3E");
+  /*-SVG for bookmark-*/
   -webkit-mask-repeat: no-repeat;
-  background-color: var(--color-accent); /*-Bookmark follows accent color-*/
+  background-color: var(--color-accent);
+  /*-Bookmark follows accent color-*/
   position: absolute;
-  margin-top: calc(-2px + -1 * var(--cards-border-width)); /*-Bookmark is a bit higher than the card-*/
-  margin-left: 5px; /*-Bookmark is 5px from the left*/
+  margin-top: calc(-2px + -1 * var(--cards-border-width));
+  /*-Bookmark is a bit higher than the card-*/
+  margin-left: 5px;
+  /*-Bookmark is 5px from the left*/
 }
 .cards.cards-bookmark .table-view-table tbody tr > td:first-child span {
-  margin: 2px calc(var(--cards-padding) * 0.5) 0 calc(var(--cards-padding) * 0.5 + 20px); /*-Shift first cell title to the left by about 20px-*/
+  margin: 2px calc(var(--cards-padding) * 0.5) 0 calc(var(--cards-padding) * 0.5 + 20px);
+  /*-Shift first cell title to the left by about 20px-*/
 }
 
 /*---------------COLORFUL FRAME--------------*/
@@ -5685,13 +6282,15 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
 .anp-colorful-frame.anuppuccin-accent-toggle.anp-colorful-frame .sidebar-toggle-button, .anp-colorful-frame.anp-colorful-frame.anp-colorful-frame.anp-colorful-frame .sidebar-toggle-button {
   --background-modifier-hover: rgba(var(--ctp-text), 0.075);
 }
-.anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner .workspace-tab-header-inner-title, .anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner .workspace-tab-header-inner-close-button {
+.anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner .workspace-tab-header-inner-title,
+.anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner .workspace-tab-header-inner-close-button {
   color: var(--text-muted);
 }
 .anp-colorful-frame .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner .workspace-tab-header-inner-close-button {
   color: var(--text-muted);
 }
-.anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active .workspace-tab-header-inner .workspace-tab-header-inner-title, .anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active .workspace-tab-header-inner .workspace-tab-header-inner-close-button {
+.anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active .workspace-tab-header-inner .workspace-tab-header-inner-title,
+.anp-colorful-frame.is-focused .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active .workspace-tab-header-inner .workspace-tab-header-inner-close-button {
   color: var(--color-accent);
 }
 .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-container, .anp-colorful-frame.anp-colorful-frame.anp-card-layout, .anp-colorful-frame.anp-colorful-frame.anp-card-layout .workspace-tabs.mod-top, .anp-colorful-frame.anp-colorful-frame.anp-card-layout .sidebar-toggle-button, .anp-colorful-frame.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .workspace-ribbon.mod-left:before {
@@ -5717,19 +6316,33 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
   --icon-color: var(--colorful-icon-color-alt);
   --icon-color-hover: var(--colorful-icon-color);
 }
-.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-tab-list .clickable-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-tab-list .clickable-icon:hover, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-new-tab .clickable-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-new-tab .clickable-icon:hover, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-tab-list .clickable-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-tab-list .clickable-icon:hover, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-new-tab .clickable-icon, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-new-tab .clickable-icon:hover {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-tab-list .clickable-icon,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-tab-list .clickable-icon:hover,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-new-tab .clickable-icon,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout) .mod-top .workspace-tab-header-new-tab .clickable-icon:hover, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-tab-list .clickable-icon,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-tab-list .clickable-icon:hover,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-new-tab .clickable-icon,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused .mod-top .workspace-tab-header-new-tab .clickable-icon:hover {
   color: var(--colorful-icon-color-alt);
 }
 .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top {
   --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active {
   --tab-text-color-focused-active: var(--colorful-icon-color-alt);
   --tab-text-color-active: var(--colorful-icon-color-alt);
   --tab-text-color-focused: var(--colorful-icon-color-alt);
   --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
 }
-.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button, .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header .workspace-tab-header-inner-close-button,
+.anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
   --tab-text-color-focused: var(--colorful-icon-color-alt);
   --tab-text-color-focused-active-current: var(--colorful-icon-color-alt);
 }
@@ -5891,11 +6504,14 @@ body.anp-colorful-frame.anp-card-layout .workspace,
   color: var(--background-secondary-alt);
 }
 
-.anp-colorful-frame.anp-card-layout.is-focused.anp-colorful-frame-icon-toggle-light.theme-light .mod-left-split .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .anp-colorful-frame.anp-card-layout.is-focused.anp-colorful-frame-icon-toggle-light.theme-light .mod-right-split .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .anp-colorful-frame.anp-card-layout.is-focused.anp-colorful-frame-icon-toggle-dark.theme-dark .mod-left-split .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .anp-colorful-frame.anp-card-layout.is-focused.anp-colorful-frame-icon-toggle-dark.theme-dark .mod-right-split .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+.anp-colorful-frame.anp-card-layout.is-focused.anp-colorful-frame-icon-toggle-light.theme-light .mod-left-split .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.anp-colorful-frame.anp-card-layout.is-focused.anp-colorful-frame-icon-toggle-light.theme-light .mod-right-split .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .anp-colorful-frame.anp-card-layout.is-focused.anp-colorful-frame-icon-toggle-dark.theme-dark .mod-left-split .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.anp-colorful-frame.anp-card-layout.is-focused.anp-colorful-frame-icon-toggle-dark.theme-dark .mod-right-split .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
   color: var(--text-normal);
 }
 
-.anp-colorful-frame.anp-card-layout .mod-left-split .workspace-tab-container, .anp-colorful-frame.anp-card-layout .mod-right-split .workspace-tab-container {
+.anp-colorful-frame.anp-card-layout .mod-left-split .workspace-tab-container,
+.anp-colorful-frame.anp-card-layout .mod-right-split .workspace-tab-container {
   background-color: transparent;
 }
 .anp-colorful-frame.anp-card-layout .mod-left-split {
@@ -5914,7 +6530,9 @@ body.anp-colorful-frame.anp-card-layout .workspace,
   background-color: rgba(var(--ctp-crust), 0.3);
 }
 
-.anp-colorful-frame.anp-card-layout.anp-colorful-frame-icon-toggle-light.theme-light .mod-right-split .workspace-tab-header.is-active, .anp-colorful-frame.anp-card-layout.anp-colorful-frame-icon-toggle-light.theme-light .mod-left-split .workspace-tab-header.is-active, .anp-colorful-frame.anp-card-layout.anp-colorful-frame-icon-toggle-dark.theme-dark .mod-right-split .workspace-tab-header.is-active, .anp-colorful-frame.anp-card-layout.anp-colorful-frame-icon-toggle-dark.theme-dark .mod-left-split .workspace-tab-header.is-active {
+.anp-colorful-frame.anp-card-layout.anp-colorful-frame-icon-toggle-light.theme-light .mod-right-split .workspace-tab-header.is-active,
+.anp-colorful-frame.anp-card-layout.anp-colorful-frame-icon-toggle-light.theme-light .mod-left-split .workspace-tab-header.is-active, .anp-colorful-frame.anp-card-layout.anp-colorful-frame-icon-toggle-dark.theme-dark .mod-right-split .workspace-tab-header.is-active,
+.anp-colorful-frame.anp-card-layout.anp-colorful-frame-icon-toggle-dark.theme-dark .mod-left-split .workspace-tab-header.is-active {
   background-color: rgba(var(--ctp-text), 0.3);
 }
 
@@ -5944,11 +6562,13 @@ body.anp-colorful-frame.anp-card-layout .workspace,
   --titlebar-text-color-focused: var(--background-secondary-alt);
 }
 
-.anp-colorful-frame.is-frameless:not(.is-hidden-frameless) .sidebar-toggle-button.mod-right, .anp-colorful-frame.is-frameless:not(.is-hidden-frameless) .sidebar-toggle-button.mod-left {
+.anp-colorful-frame.is-frameless:not(.is-hidden-frameless) .sidebar-toggle-button.mod-right,
+.anp-colorful-frame.is-frameless:not(.is-hidden-frameless) .sidebar-toggle-button.mod-left {
   border-radius: var(--radius-m);
 }
 
-.anp-colorful-frame:not(.is-frameless) .sidebar-toggle-button.mod-right, .anp-colorful-frame:not(.is-frameless) .sidebar-toggle-button.mod-left {
+.anp-colorful-frame:not(.is-frameless) .sidebar-toggle-button.mod-right,
+.anp-colorful-frame:not(.is-frameless) .sidebar-toggle-button.mod-left {
   border-radius: var(--radius-m);
 }
 
@@ -6001,7 +6621,9 @@ body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .work
 body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .clickable-icon:active, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .clickable-icon:active {
   background-color: rgba(var(--ctp-crust), 0.3);
 }
-body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+body.anp-colorful-frame.anp-border-layout .workspace-split.mod-right-split .workspace-tabs.mod-top > .workspace-tab-header-container .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title, body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+body.anp-colorful-frame.anp-border-layout .workspace-split.mod-left-split .workspace-tabs.mod-top > .workspace-tab-header-container .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
   color: var(--colorful-icon-color);
 }
 body.anp-colorful-frame.anp-border-layout.anp-mini-tab-toggle .workspace-tabs.mod-top .workspace-tab-header-inner-title,
@@ -6353,6 +6975,111 @@ Icons were taken from Font Awesome: https://fontawesome.com/
   left: calc(var(--checkbox-size) * 1);
   font-weight: bold;
 }
+.anp-custom-checkboxes [data-task=u] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=u] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=u][type=checkbox]:checked {
+  --checkbox-color: transparent;
+  --checkbox-color-hover: transparent;
+  border-width: 0;
+}
+.anp-custom-checkboxes [data-task=u] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=u] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=u][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXRyZW5kaW5nLXVwIj48cG9seWxpbmUgcG9pbnRzPSIyMiA3IDEzLjUgMTUuNSA4LjUgMTAuNSAyIDE3Ii8+PHBvbHlsaW5lIHBvaW50cz0iMTYgNyAyMiA3IDIyIDEzIi8+PC9zdmc+");
+  -webkit-mask-size: contain;
+  background-color: rgb(var(--ctp-green));
+  left: 0px;
+}
+.anp-custom-checkboxes [data-task=u] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=u] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=u][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-green));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
+.anp-custom-checkboxes [data-task=d] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=d] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=d][type=checkbox]:checked {
+  --checkbox-color: transparent;
+  --checkbox-color-hover: transparent;
+  border-width: 0;
+}
+.anp-custom-checkboxes [data-task=d] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=d] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=d][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXRyZW5kaW5nLWRvd24iPjxwb2x5bGluZSBwb2ludHM9IjIyIDE3IDEzLjUgOC41IDguNSAxMy41IDIgNyIvPjxwb2x5bGluZSBwb2ludHM9IjE2IDE3IDIyIDE3IDIyIDExIi8+PC9zdmc+");
+  -webkit-mask-size: contain;
+  background-color: rgb(var(--ctp-red));
+  left: 0px;
+}
+.anp-custom-checkboxes [data-task=d] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=d] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=d][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-red));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
+.anp-custom-checkboxes [data-task=f] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=f] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=f][type=checkbox]:checked {
+  --checkbox-color: transparent;
+  --checkbox-color-hover: transparent;
+  border-width: 0;
+}
+.anp-custom-checkboxes [data-task=f] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=f] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=f][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZsYW1lIj48cGF0aCBkPSJNOC41IDE0LjVBMi41IDIuNSAwIDAgMCAxMSAxMmMwLTEuMzgtLjUtMi0xLTMtMS4wNzItMi4xNDMtLjIyNC00LjA1NCAyLTYgLjUgMi41IDIgNC45IDQgNi41IDIgMS42IDMgMy41IDMgNS41YTcgNyAwIDEgMS0xNCAwYzAtMS4xNTMuNDMzLTIuMjk0IDEtM2EyLjUgMi41IDAgMCAwIDIuNSAyLjV6Ii8+PC9zdmc+");
+  -webkit-mask-size: contain;
+  background-color: rgb(var(--ctp-red));
+  left: 0px;
+}
+.anp-custom-checkboxes [data-task=f] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=f] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=f][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-red));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
+.anp-custom-checkboxes [data-task=k] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=k] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=k][type=checkbox]:checked {
+  --checkbox-color: transparent;
+  --checkbox-color-hover: transparent;
+  border-width: 0;
+}
+.anp-custom-checkboxes [data-task=k] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=k] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=k][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWtleS1yb3VuZCI+PHBhdGggZD0iTTIgMTh2M2MwIC42LjQgMSAxIDFoNHYtM2gzdi0zaDJsMS40LTEuNGE2LjUgNi41IDAgMSAwLTQtNFoiLz48Y2lyY2xlIGN4PSIxNi41IiBjeT0iNy41IiByPSIuNSIvPjwvc3ZnPg==");
+  -webkit-mask-size: contain;
+  background-color: rgb(var(--ctp-yellow));
+  left: 0px;
+}
+.anp-custom-checkboxes [data-task=k] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=k] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=k][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-yellow));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
+.anp-custom-checkboxes [data-task=w] > input[type=checkbox]:checked,
+.anp-custom-checkboxes [data-task=w] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task=w][type=checkbox]:checked {
+  --checkbox-color: transparent;
+  --checkbox-color-hover: transparent;
+  border-width: 0;
+}
+.anp-custom-checkboxes [data-task=w] > input[type=checkbox]:checked:after,
+.anp-custom-checkboxes [data-task=w] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task=w][type=checkbox]:checked:after {
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNha2UiPjxwYXRoIGQ9Ik0yMCAyMXYtOGEyIDIgMCAwIDAtMi0ySDZhMiAyIDAgMCAwLTIgMnY4Ii8+PHBhdGggZD0iTTQgMTZzLjUtMSAyLTEgMi41IDIgNCAyIDIuNS0yIDQtMiAyLjUgMiA0IDIgMi0xIDItMSIvPjxwYXRoIGQ9Ik0yIDIxaDIwIi8+PHBhdGggZD0iTTcgOHYzIi8+PHBhdGggZD0iTTEyIDh2MyIvPjxwYXRoIGQ9Ik0xNyA4djMiLz48cGF0aCBkPSJNNyA0aDAuMDEiLz48cGF0aCBkPSJNMTIgNGgwLjAxIi8+PHBhdGggZD0iTTE3IDRoMC4wMSIvPjwvc3ZnPg==");
+  -webkit-mask-size: contain;
+  background-color: rgb(var(--ctp-mauve));
+  left: 0px;
+}
+.anp-custom-checkboxes [data-task=w] > input[type=checkbox]:checked:before,
+.anp-custom-checkboxes [data-task=w] > p > input[type=checkbox]:checked:before, .anp-custom-checkboxes [data-task=w][type=checkbox]:checked:before {
+  color: rgb(var(--ctp-mauve));
+  margin: 0 3px;
+  position: absolute;
+  left: calc(var(--checkbox-size) * 1);
+  font-weight: bold;
+}
 
 .anp-custom-checkboxes-labels [data-task="!"] input[type=checkbox]:checked:before, .anp-custom-checkboxes-labels [data-task="!"][type=checkbox]:checked:before {
   content: "IMP";
@@ -6663,6 +7390,11 @@ None of the original code was used and the feature was implemented from scratch.
   -webkit-mask-repeat: no-repeat;
 }
 
+.anp-file-icons .nav-file .nav-file-title[data-path$=".excalidraw.md"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 13.5V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2h-5.5'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M10.4 12.6a2 2 0 0 1 3 3L8 21l-4 1 1-4Z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+}
+
 .anp-file-icons .nav-file .nav-file-title[data-path$=".svg"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".bmp"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".jpg"]::before,
@@ -6694,6 +7426,11 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-file-icons .nav-file .nav-file-title[data-path$=".mov"]::before,
 .anp-file-icons .nav-file .nav-file-title[data-path$=".mkv"]::before {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8H4Z'/%3E%3Cpath d='m4 11-.88-2.87a2 2 0 0 1 1.33-2.5l11.48-3.5a2 2 0 0 1 2.5 1.32l.87 2.87L4 11.01Z'/%3E%3Cpath d='M6.6 4.99l3.38 4.2m1.88-5.81l3.38 4.2'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+}
+
+.anp-file-icons .nav-file .nav-file-title[data-path$=".loom"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v18'/%3E%3Crect width='18' height='18' x='3' y='3' rx='2'/%3E%3Cpath d='M3 9h18M3 15h18'/%3E%3C/svg%3E");
   -webkit-mask-repeat: no-repeat;
 }
 
@@ -6734,51 +7471,62 @@ None of the original code was used and the feature was implemented from scratch.
 * folder colors.
 *---------------------------------------------------------------*/
 .nav-folder-children > .nav-folder:nth-child(11n+2),
+.nav-files-container > div > .nav-folder:nth-child(11n+2),
 [data-type=bookmarks] .tree-item:nth-child(11n+2) {
   --rainbow-folder-color: var(--ctp-red);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+3),
+.nav-files-container > div > .nav-folder:nth-child(11n+3),
 [data-type=bookmarks] .tree-item:nth-child(11n+3) {
   --rainbow-folder-color: var(--ctp-maroon);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+4),
+.nav-files-container > div > .nav-folder:nth-child(11n+4),
 [data-type=bookmarks] .tree-item:nth-child(11n+4) {
   --rainbow-folder-color: var(--ctp-peach);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+5),
+.nav-files-container > div > .nav-folder:nth-child(11n+5),
 [data-type=bookmarks] .tree-item:nth-child(11n+5) {
   --rainbow-folder-color: var(--ctp-yellow);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+6),
+.nav-files-container > div > .nav-folder:nth-child(11n+6),
 [data-type=bookmarks] .tree-item:nth-child(11n+6) {
   --rainbow-folder-color: var(--ctp-green);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+7),
+.nav-files-container > div > .nav-folder:nth-child(11n+7),
 [data-type=bookmarks] .tree-item:nth-child(11n+7) {
   --rainbow-folder-color: var(--ctp-teal);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+8),
+.nav-files-container > div > .nav-folder:nth-child(11n+8),
 [data-type=bookmarks] .tree-item:nth-child(11n+8) {
   --rainbow-folder-color: var(--ctp-sky);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+9),
+.nav-files-container > div > .nav-folder:nth-child(11n+9),
 [data-type=bookmarks] .tree-item:nth-child(11n+9) {
   --rainbow-folder-color: var(--ctp-sapphire);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+10),
+.nav-files-container > div > .nav-folder:nth-child(11n+10),
 [data-type=bookmarks] .tree-item:nth-child(11n+10) {
   --rainbow-folder-color: var(--ctp-blue);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+11),
+.nav-files-container > div > .nav-folder:nth-child(11n+11),
 [data-type=bookmarks] .tree-item:nth-child(11n+11) {
   --rainbow-folder-color: var(--ctp-lavender);
 }
 .nav-folder-children > .nav-folder:nth-child(11n+12),
+.nav-files-container > div > .nav-folder:nth-child(11n+12),
 [data-type=bookmarks] .tree-item:nth-child(11n+12) {
   --rainbow-folder-color: var(--ctp-mauve);
 }
 
-.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder.nav-folder .nav-folder,
+.anp-rainbow-subfolder-color-toggle .nav-files-container .nav-folder.nav-folder .nav-folder,
 .anp-rainbow-subfolder-color-toggle [data-type=bookmarks] .tree-item .tree-item {
   --rainbow-folder-color: inherit;
 }
@@ -6786,30 +7534,32 @@ None of the original code was used and the feature was implemented from scratch.
 /*---------------------------------------------------------------
 * FULL RAINBOW STYLE
 *---------------------------------------------------------------*/
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
-.anp-full-rainbow-color-toggle .nav-folder.mod-root .collapse-icon svg.svg-icon,
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-folder .nav-folder-title,
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-folder .nav-file-title,
+.anp-full-rainbow-color-toggle .nav-files-container .collapse-icon svg.svg-icon,
 .anp-full-rainbow-color-toggle .tree-item-self .tree-item-icon {
   color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
+  --icon-color: var(--anp-full-rainbow-text-inverted,
+          var(--background-primary));
 }
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-files-container > div > .nav-folder-children > .nav-file .nav-file-title {
   color: var(--anp-full-rainbow-text-inverted, var(--background-primary));
 }
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-dark .nav-folder.mod-root > .nav-folder-children > .nav-file {
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-dark .nav-files-container > .nav-folder-children > .nav-file {
   background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
 }
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-light .nav-folder.mod-root > .nav-folder-children > .nav-file {
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle.theme-light .nav-files-container > div > .nav-file {
   background-color: rgba(var(--ctp-overlay1), var(--anp-rainbow-folder-bg-opacity));
 }
-.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file {
+.anp-full-rainbow-color-toggle.anp-rainbow-file-toggle .nav-files-container > div > .nav-file {
   border-radius: 5px;
   margin-bottom: 2px;
 }
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover,
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children .nav-file .nav-file-title:hover {
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-files-container > div > .nav-folder .nav-folder-title:hover,
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-files-container > div .nav-file .nav-file-title:hover {
   background-color: rgba(var(--ctp-base), 0.1);
 }
-.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-files-container > div > .nav-folder .nav-file-title.is-active {
   border-color: rgba(var(--ctp-base), 0.2);
   background-color: rgba(var(--ctp-base), 0.2);
 }
@@ -6829,24 +7579,24 @@ None of the original code was used and the feature was implemented from scratch.
 .anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection {
   background-color: rgba(var(--ctp-accent), 0.2);
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
+.anp-full-rainbow-color-toggle .nav-files-container .nav-folder > .nav-folder-children {
   padding: 0 5px 0 5px;
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder {
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-folder {
   transition: background-color 0.4s;
   background-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-bg-opacity));
   margin-bottom: 2px;
   border-radius: 5px;
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-folder .nav-folder-children {
   border-color: rgba(var(--ctp-crust), 0.4);
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-file.has-focus {
   background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
   border-left: none;
   border-color: rgb(var(--ctp-accent));
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title, .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus > .nav-file-title {
+.anp-full-rainbow-color-toggle .nav-files-container > div > .nav-file > .nav-file-title, .anp-full-rainbow-color-toggle .nav-files-container > div > .nav-file.has-focus > .nav-file-title {
   margin-bottom: 0;
 }
 .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-file-title, .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-file-title:focus-within,
@@ -6855,10 +7605,7 @@ None of the original code was used and the feature was implemented from scratch.
   box-shadow: none;
 }
 
-.anp-full-rainbow-text-color-toggle-dark.theme-dark {
-  --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
-}
-
+.anp-full-rainbow-text-color-toggle-dark.theme-dark,
 .anp-full-rainbow-text-color-toggle-light.theme-light {
   --anp-full-rainbow-text-inverted: rgb(var(--ctp-text));
 }
@@ -6866,14 +7613,17 @@ None of the original code was used and the feature was implemented from scratch.
 /*---------------------------------------------------------------
 * SIMPLE RAINBOW STYLE
 *---------------------------------------------------------------*/
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-files-container > div > .nav-folder .nav-folder-title,
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle [data-type=bookmarks] .tree-item .tree-item-inner {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
   --nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
   --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1);
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.is-being-dragged-over {
+  background-color: rgba(var(--rainbow-folder-color), 0.1);
+}
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-files-container > div > .nav-folder .nav-folder-title:after,
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] .tree-item .tree-item-inner:after {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
@@ -6890,24 +7640,18 @@ None of the original code was used and the feature was implemented from scratch.
   flex-grow: 1;
   justify-content: space-between;
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-files-container .nav-folder > .nav-folder-children,
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle [data-type=bookmarks] .tree-item .tree-item-children {
   transition: color 0.4s;
   border-color: rgba(var(--rainbow-folder-color), 0.5);
 }
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-icon-toggle .tree-item-self .tree-item-icon {
-  --icon-color: rgba(
-  	var(--rainbow-folder-color),
-  	var(--anp-simple-rainbow-opacity, 1)
-  );
-  --nav-collapse-icon-color: rgba(
-  	var(--rainbow-folder-color),
-  	var(--anp-simple-rainbow-opacity, 1)
-  );
-  --nav-collapse-icon-color-collapsed: rgba(
-  	var(--rainbow-folder-color),
-  	var(--anp-simple-rainbow-opacity, 1)
-  );
+  --icon-color: rgba(var(--rainbow-folder-color),
+          var(--anp-simple-rainbow-opacity, 1));
+  --nav-collapse-icon-color: rgba(var(--rainbow-folder-color),
+          var(--anp-simple-rainbow-opacity, 1));
+  --nav-collapse-icon-color-collapsed: rgba(var(--rainbow-folder-color),
+          var(--anp-simple-rainbow-opacity, 1));
 }
 
 .modal {
@@ -7092,19 +7836,19 @@ None of the original code was used and the feature was implemented from scratch.
 }
 
 .setting-item[data-id=anuppuccin-url-donate] .setting-item-name::before {
-  content: "☕";
+  content: " ☕";
 }
 
 .setting-item[data-id=anuppuccin-url-star-repo] .setting-item-name::before {
-  content: "⭐";
+  content: " ⭐";
 }
 
 .setting-item[data-id=anuppuccin-url-submit-issue] .setting-item-name::before {
-  content: "🐞";
+  content: " 🐞";
 }
 
 .setting-item[data-id=anuppuccin-url-minimal-cards-snippet] .setting-item-name::before {
-  content: "⬇";
+  content: " ⬇";
 }
 
 .setting-item:is([data-id*=anuppuccin-theme-settings]) > .setting-item-info > .setting-item-name {
@@ -7526,7 +8270,9 @@ None of the original code was used and the feature was implemented from scratch.
   color: var(--text-muted);
 }
 
-.dataview.inline-field-standalone-value, .dataview.inline-field-key, .dataview.inline-field-value {
+.dataview.inline-field-standalone-value,
+.dataview.inline-field-key,
+.dataview.inline-field-value {
   padding-left: 0px;
   padding-right: 0px;
   font-family: inherit;
@@ -7534,7 +8280,8 @@ None of the original code was used and the feature was implemented from scratch.
   color: var(--text-normal);
 }
 
-.dataview.inline-field-standalone-value, .dataview.inline-field-value {
+.dataview.inline-field-standalone-value,
+.dataview.inline-field-value {
   text-decoration: underline;
   text-decoration-line: underline;
   text-decoration-color: rgba(var(--ctp-yellow), 0.4);
@@ -7555,100 +8302,48 @@ None of the original code was used and the feature was implemented from scratch.
   padding-left: 8px;
 }
 
-/* WIP, not implemented due to volatile excalidraw updates
-.theme-light .excalidraw.excalidraw-container:not(.theme--dark),
-.theme-dark .excalidraw.excalidraw-container.theme--dark {
-  --button-destructive-bg-color: #ffe3e3;
-  --button-destructive-color: #c92a2a;
-  --button-gray-1: #e9ecef;
-  --button-gray-2: #ced4da;
-  --button-gray-3: #adb5bd;
-  --button-special-active-bg-color: #ebfbee;
-  --dialog-border-color: var(--color-gray-20);
-  --dropdown-icon: url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"292.4\" height=\"292.4\" viewBox=\"0 0 292 292\"><path d=\"M287 197L159 69c-4-3-8-5-13-5s-9 2-13 5L5 197c-3 4-5 8-5 13s2 9 5 13c4 4 8 5 13 5h256c5 0 9-1 13-5s5-8 5-13-1-9-5-13z\"/></svg>");
-  --focus-highlight-color: #a5d8ff;
-  --icon-fill-color: var(--color-gray-80);
-  --icon-green-fill-color: #2b8a3e;
-  --default-bg-color: #ffffff;
-  --input-bg-color: #ffffff;
-  --input-border-color: #ced4da;
-  --input-hover-bg-color: #f1f3f5;
-  --input-label-color: #495057;
-  --island-bg-color: rgba(255, 255, 255, 0.96);
-  --keybinding-color: var(--color-gray-40);
-  --link-color: #1c7ed6;
-  --overlay-bg-color: rgba(255, 255, 255, 0.88);
-  --popup-bg-color: #ffffff;
-  --popup-secondary-bg-color: #f1f3f5;
-  --popup-text-color: #000000;
-  --popup-text-inverted-color: #ffffff;
-  --select-highlight-color: #339af0;
-  --shadow-island: 0px 7px 14px rgba(0, 0, 0, 0.05), 0px 0px 3.12708px rgba(0, 0, 0, 0.0798), 0px 0px 0.931014px rgba(0, 0, 0, 0.1702);
-  --button-hover-bg: var(--color-gray-10);
-  --default-border-color: var(--color-gray-30);
-  --default-button-size: 2rem;
-  --default-icon-size: 1rem;
-  --lg-button-size: 2.25rem;
-  --lg-icon-size: 1rem;
-  --editor-container-padding: 1rem;
-  --scrollbar-thumb: var(--button-gray-2);
-  --scrollbar-thumb-hover: var(--button-gray-3);
-  --modal-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
-  --avatar-border-color: var(--color-gray-20);
-  --sidebar-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
-  --sidebar-border-color: var(--color-gray-20);
-  --sidebar-bg-color: #fff;
-  --library-dropdown-shadow: 0px 15px 6px rgba(0, 0, 0, 0.01), 0px 8px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-  --space-factor: 0.25rem;
-  --text-primary-color: var(--color-gray-80);
-  --color-selection: var(--color-accent);
-  --color-icon-white: #ffffff;
-  --color-primary: var(--color-accent) !important;
-  --color-primary-darker: color-mix(in hsl, var(--color-accent), #000000, 70%) !important;
-  --color-primary-darkest: color-mix(in hsl, var(--color-accent), #000000) !important;
-  --color-primary-light: color-mix(in hsl, var(--color-accent), #FFFFFF) !important;
-  --color-primary-light-darker: color-mix(in hsl, var(--color-accent), var(--color-primary)) !important;
-  --color-gray-10: #f5f5f5;
-  --color-gray-20: #ebebeb;
-  --color-gray-30: #d6d6d6;
-  --color-gray-40: #b8b8b8;
-  --color-gray-50: #999999;
-  --color-gray-60: #7a7a7a;
-  --color-gray-70: #5c5c5c;
-  --color-gray-80: #3d3d3d;
-  --color-gray-85: #242424;
-  --color-gray-90: #1e1e1e;
-  --color-gray-100: #121212;
-  --color-warning: #fceeca;
-  --color-warning-dark: #f5c354;
-  --color-warning-darker: #f3ab2c;
-  --color-warning-darkest: #ec8b14;
-  --color-text-warning: var(--text-primary-color);
-  --color-danger: #db6965;
-  --color-danger-dark: #db6965;
-  --color-danger-darker: #d65550;
-  --color-danger-darkest: #d1413c;
-  --color-danger-text: black;
-  --color-danger-background: #fff0f0;
-  --color-danger-icon-background: #ffdad6;
-  --color-danger-color: #700000;
-  --color-danger-icon-color: #700000;
-  --color-warning-background: var(--color-warning);
-  --color-warning-icon-background: var(--color-warning-dark);
-  --color-warning-color: var(--text-primary-color);
-  --color-warning-icon-color: var(--text-primary-color);
-  --color-muted: var(--color-gray-30);
-  --color-muted-darker: var(--color-gray-60);
-  --color-muted-darkest: var(--color-gray-100);
-  --color-muted-background: var(--color-gray-80);
-  --color-muted-background-darker: var(--color-gray-100);
-  --color-promo: #e70078;
-  --color-success: #268029;
-  --color-success-lighter: #cafccc;
-  --border-radius-md: 0.375rem;
-  --border-radius-lg: 0.5rem;
+/* Extremely WIP excalidraw support
+ * Excalidraw, quite frankly, has extremely inconsistent styling and theming.
+ * This file will be removed if it's determined that excalidraw is not capable of being consistently themed.
+**/
+.excalidraw.theme--dark {
+  --island-bg-color: rgb(var(--ctp-base));
+  --color-primary-darkest: rgb(var(--ctp-accent));
+  --color-surface-high: rgba(var(--ctp-surface2), 0.4);
+  --color-surface-low: rgb(var(--ctp-base));
+  --color-on-surface: rgb(var(--ctp-text));
+  --color-brand-hover: rgb(var(--ctp-base));
+  --color-surface-primary-container: rgb(var(--ctp-accent));
+  --color-on-primary-container: rgb(var(--ctp-base));
+  --color-gray-50: rgb(var(--ctp-mantle));
 }
-*/
+
+.excalidraw .buttonList .zIndexButton.active,
+.excalidraw .buttonList button.active,
+.excalidraw .buttonList label.active {
+  --icon-fill-color: rgb(var(--ctp-base));
+}
+
+.excalidraw.theme--dark.excalidraw .App-menu__left {
+  --button-hover-bg: rgba(var(--ctp-surface2), 0.6) !important;
+}
+
+.excalidraw .HintViewer {
+  display: none;
+}
+
+.excalidraw .ExcTextField__input input::placeholder {
+  color: rgb(var(--ctp-subtext1));
+}
+
+.excalidraw-container.theme--dark {
+  color: rgb(var(--ctp-text));
+}
+
+.excalidraw .layer-ui__result-item b {
+  color: rgb(var(--ctp-accent));
+}
+
 .obsidian-icon-folder-icon {
   margin-top: -5px;
 }
@@ -7822,11 +8517,13 @@ div[class*=mk-] [style*="--icon-color:#ffffff"] {
   background-color: var(--interactive-normal);
   box-shadow: var(--input-shadow);
 }
-.mk-filter-bar .mk-filter > span, .mk-filter-bar .mk-filter > div {
+.mk-filter-bar .mk-filter > span,
+.mk-filter-bar .mk-filter > div {
   background-color: transparent;
   border-right: 1px solid var(--background-modifier-border);
 }
-.mk-filter-bar .mk-filter > span:hover, .mk-filter-bar .mk-filter > div:hover {
+.mk-filter-bar .mk-filter > span:hover,
+.mk-filter-bar .mk-filter > div:hover {
   background-color: var(--interactive-hover);
 }
 .mk-filter-bar .mk-filter > div {
@@ -7863,6 +8560,12 @@ div[class*=mk-] [style*="--icon-color:#ffffff"] {
   background-color: var(--background-modifier-hover);
 }
 
+/* Notion-Styled Kanban Fix */
+body.theme-dark.theme-dark {
+  --notion-kanban-card: rgb(var(--ctp-surface0));
+  --notion-kanban-card-hover: rgb(var(--ctp-surface1));
+}
+
 /* Fix bottom padding of kanban board on mobile */
 body.is-mobile .kanban-plugin__board > div {
   padding-bottom: 5rem;
@@ -7883,183 +8586,6 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   background-position: var(--kanban-dot-offset) var(--kanban-dot-offset);
   background-size: var(--kanban-dot-spacing) var(--kanban-dot-spacing);
   flex-grow: 1;
-}
-
-/* Kanban lanes */
-.kanban-plugin__lane {
-  background-color: rgba(var(--ctp-mantle), var(--anp-kanban-lane-opacity, 1));
-  border-radius: var(--anp-kanban-lane-radius, 6px);
-}
-.kanban-plugin__lane-wrapper {
-  margin-right: var(--anp-kanban-lane-spacing, 10px);
-}
-.kanban-plugin__lane-form-wrapper {
-  border-color: var(--interactive-accent);
-}
-.kanban-plugin__lane-grip {
-  color: var(--background-modifier-border);
-}
-.kanban-plugin__lane-header-wrapper {
-  padding-right: 8px;
-}
-.kanban-plugin__lane-title p {
-  font-weight: 500;
-}
-.kanban-plugin__lane-title-count {
-  margin-right: 5px;
-}
-.kanban-plugin__lane-setting-wrapper > div:last-child {
-  margin-bottom: 0;
-}
-.kanban-plugin__lane-items {
-  margin: 0;
-  padding: 8px;
-}
-.kanban-plugin__action-confirm-wrapper {
-  margin: 8px 8px 0;
-}
-
-.kanban-plugin button.kanban-plugin__new-item-button {
-  font-size: 0.875rem;
-  gap: 0.25em;
-  height: auto;
-  line-height: var(--line-height-tight);
-  padding: 7px 10px;
-}
-
-/* Kanban lane card counts */
-.kanban-plugin .kanban-plugin__lane-title-count {
-  background-color: var(--background-modifier-hover);
-  border-radius: 2em;
-  flex-shrink: 0;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 20px;
-  min-width: 20px;
-  padding: 0 6px;
-  text-align: center;
-}
-
-/* Kanban card placeholder */
-.kanban-plugin .kanban-plugin__lane-items > .kanban-plugin__placeholder,
-.kanban-plugin__drag-container .kanban-plugin__lane-items > .kanban-plugin__placeholder {
-  border: 2px dashed rgba(var(--text-muted-rgb), 0.1);
-  margin-bottom: 0;
-  width: auto;
-}
-.kanban-plugin .kanban-plugin__lane-items > .kanban-plugin__placeholder:not(:only-child),
-.kanban-plugin__drag-container .kanban-plugin__lane-items > .kanban-plugin__placeholder:not(:only-child) {
-  border-width: 0;
-}
-
-.is-sorting .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
-  border-color: var(--background-modifier-border);
-}
-
-/* Kanban cards */
-.kanban-plugin__lane-items > div {
-  margin-top: 0;
-  margin-bottom: var(--anp-kanban-card-spacing, 8px);
-}
-.kanban-plugin__item:hover {
-  border-color: var(--background-modifier-border-hover);
-}
-.kanban-plugin__item.is-complete .kanban-plugin__item-markdown {
-  color: var(--text-muted);
-  text-decoration-line: line-through;
-  opacity: 0.75;
-}
-.kanban-plugin__item .markdown-preview-view .tag {
-  --tag-border-width: 0;
-  --tag-padding-y: 0;
-  --tag-padding-x: 0;
-  --tag-background: transparent;
-  --tag-color: var(--link-color);
-  --tag-size: reset;
-}
-.kanban-plugin__item-content-wrapper {
-  background-color: rgba(var(--ctp-base), var(--anp-kanban-card-opacity, 1));
-}
-.kanban-plugin__item-title-wrapper {
-  background-color: transparent;
-  padding: 8px;
-}
-.kanban-plugin__item-title-wrapper div:first-child > a.clickable-icon {
-  position: relative;
-  left: -2px;
-}
-.kanban-plugin__item-title-wrapper div:last-child > a.clickable-icon {
-  position: relative;
-  right: -2px;
-}
-
-.kanban-plugin__lane-items {
-  position: relative;
-}
-
-.kanban-plugin__item-wrapper:hover {
-  z-index: 1;
-}
-
-/* Kanban card content */
-.kanban-plugin,
-.kanban-plugin__drag-container {
-  --checkbox-size: 16px;
-  --input-radius: var(--anp-kanban-card-radius, 6px);
-}
-.kanban-plugin code[class*=language-],
-.kanban-plugin__drag-container code[class*=language-] {
-  font-size: 0.875em;
-  padding: 0.75em;
-  white-space: pre;
-}
-.kanban-plugin button.copy-code-button,
-.kanban-plugin__drag-container button.copy-code-button {
-  display: none;
-}
-.kanban-plugin textarea,
-.kanban-plugin__drag-container textarea {
-  background-color: transparent;
-}
-
-.kanban-plugin__drag-container p, .kanban-plugin__drag-container code {
-  overflow: hidden;
-}
-
-/* Kanban card meta and tags */
-.kanban-plugin,
-.kanban-plugin__drag-container {
-  --tag-color: var(--text-faint);
-}
-.kanban-plugin .kanban-plugin__item-metadata,
-.kanban-plugin__drag-container .kanban-plugin__item-metadata {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  width: 100%;
-}
-.kanban-plugin .kanban-plugin__item-metadata:not(:empty),
-.kanban-plugin__drag-container .kanban-plugin__item-metadata:not(:empty) {
-  padding-top: 8px;
-}
-.kanban-plugin .kanban-plugin__item-metadata-date-wrapper,
-.kanban-plugin__drag-container .kanban-plugin__item-metadata-date-wrapper {
-  line-height: var(--line-height-tight);
-}
-.kanban-plugin .kanban-plugin__item-tags,
-.kanban-plugin__drag-container .kanban-plugin__item-tags {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-.kanban-plugin .kanban-plugin__item-tags:not(:empty),
-.kanban-plugin__drag-container .kanban-plugin__item-tags:not(:empty) {
-  padding-top: 0;
-}
-.kanban-plugin .kanban-plugin__item-tag,
-.kanban-plugin__drag-container .kanban-plugin__item-tag {
-  margin: 0;
 }
 
 /* Kanban date button and date picker */
@@ -8095,7 +8621,26 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   border-width: 0;
 }
 
-/* Kanban buttons */
+/* Kanban Autocomplete Fix */
+.kanban-plugin__autocomplete-item-active em {
+  color: var(--text-on-accent);
+}
+
+/* Kanban Callout Fix */
+.kanban-plugin__item .callout {
+  margin-top: 0.66em;
+}
+
+.kanban-plugin__item .callout-fold,
+.kanban-plugin__item .callout-icon {
+  display: none;
+}
+
+/* Kanban conditional settings */
+.setting-item[data-id=anp-kanban-hide-card-menus]:not(:has(.is-enabled)) + [data-id=anp-kanban-hide-archive-btn] {
+  display: none;
+}
+
 .kanban-plugin button,
 .kanban-plugin__drag-container button {
   box-shadow: none;
@@ -8106,23 +8651,16 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   color: var(--text-normal);
   transition: background-color 0.1s;
 }
-
-/* Kanban Autocomplete Fix */
-.kanban-plugin__autocomplete-item-active em {
-  color: var(--text-on-accent);
-}
-
-/* Notion-Styled Kanban Fix */
-body.theme-dark.theme-dark {
-  --notion-kanban-card: rgb(var(--ctp-surface0));
-  --notion-kanban-card-hover: rgb(var(--ctp-surface1));
+.kanban-plugin .kanban-plugin__new-item-button,
+.kanban-plugin__drag-container .kanban-plugin__new-item-button {
+  font-size: 0.875rem;
+  gap: 0.25em;
+  height: auto;
+  line-height: var(--line-height-tight);
+  padding: 7px 10px;
 }
 
 .anp-kanban-hide-card-menus:not(.is-mobile) .kanban-plugin__item-title + .kanban-plugin__item-postfix-button-wrapper {
-  display: none;
-}
-
-.setting-item[data-id=anp-kanban-hide-card-menus]:not(:has(.is-enabled)) + [data-id=anp-kanban-hide-archive-btn] {
   display: none;
 }
 
@@ -8132,11 +8670,12 @@ body.theme-dark.theme-dark {
 }
 .anp-kanban-hide-card-menus.anp-kanban-hide-archive-btn:not(.is-mobile) .kanban-plugin__item-prefix-button-wrapper {
   background-color: var(--background-primary);
+  border-top-right-radius: var(--anp-kanban-card-radius, 6px);
   display: none;
-  padding: 5px;
+  padding: 3px;
   position: absolute;
-  right: -2px;
-  top: 0;
+  right: 1px;
+  top: 1px;
   z-index: 1;
 }
 .anp-kanban-hide-card-menus.anp-kanban-hide-archive-btn:not(.is-mobile) .kanban-plugin__item:hover .kanban-plugin__item-prefix-button-wrapper {
@@ -8146,37 +8685,396 @@ body.theme-dark.theme-dark {
   display: none;
 }
 
-.anp-kanban-hide-card-border .kanban-plugin .kanban-plugin__item {
-  border-width: 0;
+.kanban-plugin__item-wrapper:hover {
+  z-index: 1;
 }
-.anp-kanban-hide-card-border .kanban-plugin .kanban-plugin__item:hover .kanban-plugin__item-content-wrapper {
-  border-radius: var(--anp-kanban-card-radius, 6px);
+
+.kanban-plugin__item {
+  --checkbox-size: 16px;
+  --input-radius: var(--anp-kanban-card-radius, 6px);
+  --tag-color: var(--text-faint);
+  background-color: rgba(var(--ctp-base), var(--anp-kanban-card-opacity, 1));
+  border-width: 0;
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+.kanban-plugin__item:hover {
   box-shadow: inset 0 0 0 1px var(--background-modifier-border-hover);
 }
-.anp-kanban-hide-card-border .kanban-plugin__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item {
-  border-width: 0;
-  box-shadow: var(--shadow-s);
+.kanban-plugin__item.is-search-hit {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), inset 0 0 0 1px var(--background-modifier-border);
 }
-.anp-kanban-hide-card-border .kanban-plugin__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper {
-  border-radius: var(--anp-kanban-card-radius, 6px);
-  box-shadow: inset 0 0 0 1px var(--interactive-accent);
+.kanban-plugin__item.is-complete .kanban-plugin__item-markdown {
+  color: var(--text-muted);
+  text-decoration-line: line-through;
+  opacity: 0.75;
+}
+.kanban-plugin__item .markdown-preview-view .tag {
+  --tag-border-width: 0;
+  --tag-padding-y: 0;
+  --tag-padding-x: 0;
+  --tag-background: transparent;
+  --tag-color: var(--link-color);
+  --tag-size: reset;
+}
+.kanban-plugin__item code[class*=language-] {
+  font-size: 0.875em;
+  padding: 0.75em;
+  white-space: pre;
+}
+.kanban-plugin__item button.copy-code-button {
+  display: none;
+}
+.kanban-plugin__item textarea {
+  background-color: transparent;
+}
+
+.kanban-plugin__item-content-wrapper {
+  background-color: transparent;
+}
+
+.kanban-plugin__item-title-wrapper {
+  background-color: transparent;
+  column-gap: 5px;
+  padding: 8px;
+}
+
+.kanban-plugin__item .kanban-plugin__item-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+.kanban-plugin__item .kanban-plugin__item-metadata:not(:empty) {
+  padding-top: 8px;
+}
+
+.kanban-plugin__item .kanban-plugin__item-metadata-date-wrapper {
+  line-height: var(--line-height-tight);
+}
+
+.kanban-plugin__item .kanban-plugin__item-tags {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.kanban-plugin__item .kanban-plugin__item-tags:not(:empty) {
+  padding-top: 0;
+}
+
+.kanban-plugin__item .kanban-plugin__item-tag {
+  margin: 0;
+}
+
+.kanban-plugin__drag-container p,
+.kanban-plugin__drag-container code {
+  overflow: hidden;
+}
+
+.anp-kanban-hide-card-border .kanban-plugin__item:not(:hover) {
+  box-shadow: none;
+}
+.anp-kanban-hide-card-border .kanban-plugin__item.is-search-hit {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.kanban-plugin__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item {
+  border-color: var(--background-modifier-border-hover);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border-hover), var(--shadow-s);
+}
+
+.kanban-plugin__lane {
+  background-color: rgba(var(--ctp-mantle), var(--anp-kanban-lane-opacity, 1));
+  border-radius: var(--anp-kanban-lane-radius, 6px);
+  border-width: 0;
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+.kanban-plugin__lane-wrapper {
+  margin-right: var(--anp-kanban-lane-spacing, 10px);
+  transition: width 200ms;
+}
+
+.kanban-plugin__lane-grip {
+  color: var(--background-modifier-border);
+  margin: 0;
+}
+
+.kanban-plugin__lane-header-wrapper {
+  gap: 5px;
+  padding-right: 8px;
+}
+
+.kanban-plugin__lane-title p {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.kanban-plugin__lane .kanban-plugin__lane-title-count {
+  background-color: var(--background-modifier-hover);
+  border-radius: 2em;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  min-width: 20px;
+  padding: 0 6px;
+  text-align: center;
+}
+
+.kanban-plugin__lane-setting-wrapper > div:last-child {
+  margin-bottom: 0;
+}
+
+.kanban-plugin__lane-items {
+  margin: 0;
+  padding: 8px;
+  position: relative;
+}
+
+.kanban-plugin__lane-items > div {
+  margin-top: 0;
+  margin-bottom: var(--anp-kanban-card-spacing, 8px);
+}
+
+.kanban-plugin__action-confirm-wrapper {
+  margin: 8px 8px 0;
+}
+
+.kanban-plugin__lane-setting-wrapper {
+  border-bottom: 1px solid var(--background-modifier-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0;
+}
+.kanban-plugin__lane-setting-wrapper > div {
+  padding: 0 12px;
+}
+.kanban-plugin__lane-setting-wrapper > div:last-child {
+  border-width: 0;
+}
+.kanban-plugin__lane-setting-wrapper .kanban-plugin__checkbox-wrapper {
+  flex-direction: row-reverse;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.kanban-plugin__lane-setting-wrapper .checkbox-container {
+  margin-left: 0;
+}
+
+.kanban-plugin__lane-wrapper .kanban-plugin__lane-items > .kanban-plugin__placeholder {
+  border-width: 2px;
+  margin-bottom: 0;
+  width: auto;
+}
+.kanban-plugin__lane-wrapper .kanban-plugin__lane-items > .kanban-plugin__placeholder:not(:only-child) {
+  border-width: 0 !important;
+}
+.kanban-plugin__lane-wrapper.is-sorting .kanban-plugin__lane-items > .kanban-plugin__placeholder {
+  border-color: var(--background-modifier-border);
 }
 
 .anp-kanban-lanes .kanban-plugin__lane-wrapper {
   height: 100%;
 }
-
 .anp-kanban-lanes .kanban-plugin__scroll-container.kanban-plugin__vertical {
   flex-grow: 1;
 }
 
-.anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__lane,
-.anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__lane-header-wrapper,
-.anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__item-button-wrapper,
-.anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__item-form {
+.anp-kanban-hide-lane-border .kanban-plugin__lane,
+.anp-kanban-hide-lane-border .kanban-plugin__lane-header-wrapper,
+.anp-kanban-hide-lane-border .kanban-plugin__item-button-wrapper,
+.anp-kanban-hide-lane-border .kanban-plugin__item-form {
   border-width: 0;
+  box-shadow: none;
 }
-.anp-kanban-hide-lane-border .kanban-plugin .kanban-plugin__lane-items {
+.anp-kanban-hide-lane-border .kanban-plugin__lane-items {
   padding-bottom: 0;
   padding-top: 0;
+}
+.anp-kanban-hide-lane-border .kanban-plugin__lane-setting-wrapper {
+  border-bottom-width: 0;
+  padding-top: 6px;
+}
+
+.anp-kanban-search-full .kanban-plugin__search-wrapper {
+  padding: 10px;
+}
+.anp-kanban-search-full .kanban-plugin__search-wrapper .kanban-plugin__filter-input {
+  flex: 1;
+}
+.anp-kanban-search-full .kanban-plugin__search-wrapper .clickable-icon {
+  position: absolute;
+  right: calc(1em - 2px);
+}
+.anp-kanban-search-full .kanban-plugin__search-wrapper .kanban-plugin__icon {
+  display: flex;
+}
+
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)),
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]),
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)),
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) {
+  width: 44px !important;
+}
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__lane-header-wrapper,
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-header-wrapper,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__lane-header-wrapper,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-header-wrapper {
+  border-width: 0;
+  gap: 10px;
+  position: absolute;
+  transform-origin: 18px 22px;
+  transform: rotate(90deg);
+  z-index: 1;
+}
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__lane-grip,
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-grip,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__lane-grip,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-grip {
+  transform: rotate(-90deg);
+}
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__lane-settings-button-wrapper,
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-settings-button-wrapper,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__lane-settings-button-wrapper,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-settings-button-wrapper {
+  display: none;
+}
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__item-wrapper,
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__item-wrapper,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__item-wrapper,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__item-wrapper {
+  display: none;
+}
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__placeholder:only-child,
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__placeholder:only-child,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__placeholder:only-child,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__placeholder:only-child {
+  display: none;
+}
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__new-item-button,
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__new-item-button,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__new-item-button,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__new-item-button {
+  font-size: 0;
+}
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__item-button-plus,
+.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__item-button-plus,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) .kanban-plugin__item-button-plus,
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
+.kanban-plugin__item:not(.is-search-miss),
+.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__item-button-plus {
+  font-size: 0.875rem;
+}
+
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper {
+  width: 44px !important;
+}
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper {
+  border-width: 0;
+  gap: 10px;
+  position: absolute;
+  transform-origin: 18px 22px;
+  transform: rotate(90deg);
+  z-index: 1;
+}
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper .kanban-plugin__lane-grip {
+  transform: rotate(-90deg);
+}
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper .kanban-plugin__lane-settings-button-wrapper {
+  display: none;
+}
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper .kanban-plugin__item-wrapper {
+  display: none;
+}
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper .kanban-plugin__placeholder:only-child {
+  display: none;
+}
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper .kanban-plugin__new-item-button {
+  font-size: 0;
+}
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper .kanban-plugin__item-button-plus {
+  font-size: 0.875rem;
+}
+
+.anp-kanban-hide-cards:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__item-wrapper:has(.is-search-miss),
+.anp-kanban-hide-cards.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container)) .kanban-plugin__item-wrapper:has(.is-search-miss) {
+  display: none;
+}
+
+.anp-kanban-hide-cards.anp-kanban-hide-card-border .kanban-plugin__item.is-search-hit {
+  box-shadow: none;
+}
+
+.anp-kanban-hide-cards:not(.anp-kanban-hide-card-border) .kanban-plugin__item.is-search-hit {
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+.anp-kanban-hide-mark .kanban-plugin__item-wrapper .is-search-hit mark {
+  background-color: transparent;
+  color: inherit;
 }
