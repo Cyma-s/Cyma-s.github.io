@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "2025-04-19",
+      "path": "posts/2025-04-19.md"
+    },
+    {
+      "basename": "2023-10-16",
+      "path": "posts/2023-10-16.md"
+    },
+    {
+      "basename": "2023-10-15",
+      "path": "posts/2023-10-15.md"
+    },
+    {
+      "basename": "garbage-collection",
+      "path": "posts/garbage-collection.md"
+    },
+    {
+      "basename": "readme",
+      "path": "posts/readme.md"
+    },
+    {
       "basename": "level1-writing",
       "path": "posts/level1-writing.md"
     },
@@ -11,14 +31,6 @@
     {
       "basename": "2025-03",
       "path": "posts/2025-03.md"
-    },
-    {
-      "basename": "readme",
-      "path": "posts/readme.md"
-    },
-    {
-      "basename": "garbage-collection",
-      "path": "posts/garbage-collection.md"
     },
     {
       "basename": "level1-third-retrospect",
@@ -187,18 +199,6 @@
     {
       "basename": "2024-02-06",
       "path": "posts/2024-02-06.md"
-    },
-    {
-      "basename": "2024-06",
-      "path": "posts/2024-06.md"
-    },
-    {
-      "basename": "2024-08-20",
-      "path": "posts/2024-08-20.md"
-    },
-    {
-      "basename": "2024-08-25",
-      "path": "posts/2024-08-25.md"
     }
   ],
   "omittedPaths": [
