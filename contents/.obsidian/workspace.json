@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/level1-writing.md",
+                "file": "posts/2025-04-19.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "level1-writing"
+              "title": "2025-04-19"
             }
           },
           {
@@ -139,8 +139,8 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
+              "icon": "lucide-file",
+              "title": "플러그인이 더 이상 활성화돼있지 않음"
             }
           }
         ]
@@ -226,8 +226,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-file",
+              "title": "플러그인이 더 이상 활성화돼있지 않음"
             }
           },
           {
@@ -236,8 +236,8 @@
             "state": {
               "type": "timeline",
               "state": {},
-              "icon": "create-new",
-              "title": "Day Planner Timeline"
+              "icon": "lucide-file",
+              "title": "플러그인이 더 이상 활성화돼있지 않음"
             }
           },
           {
@@ -246,8 +246,8 @@
             "state": {
               "type": "time-ruler-view",
               "state": {},
-              "icon": "ruler",
-              "title": "Time Ruler"
+              "icon": "lucide-file",
+              "title": "플러그인이 더 이상 활성화돼있지 않음"
             }
           }
         ],
@@ -267,27 +267,16 @@
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": true,
       "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
-      "smart-random-note:Open Random Note from Search": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-day-planner:Timeline": false,
-      "templater-obsidian:Templater": false,
-      "meld-encrypt:New encrypted note": false,
-      "meld-encrypt:Convert to or from an Encrypted note": false,
-      "meld-encrypt:Encrypt/Decrypt": false,
-      "obsidian-kanban:새 보드 만들기": false,
-      "homepage:Open homepage": false,
-      "omnisearch:Omnisearch": false,
-      "time-ruler:Open Time Ruler": false,
-      "periodic-notes:Open today": false
+      "command-palette:명령어 팔레트 열기": false
     }
   },
   "active": "48c2f5f087b420f7",
   "lastOpenFiles": [
+    "posts/level1-writing.md",
+    "posts/2025-04-19.md",
     "posts/2025-03-06.md",
     "posts/2025-03.md",
     "posts/readme.md",
-    "posts/level1-writing.md",
     "posts/garbage-collection.md",
     "posts/level1-third-retrospect.md",
     "posts/2025-02-25.md",
@@ -309,7 +298,6 @@
     "posts/view-resolver.md",
     "posts/app-image-execute.md",
     "posts/entity-manager-readonly.md",
-    "posts/broken-pipe-error.md",
     "posts/attachments/gc-deletion-with-compacting.png",
     "posts/attachments/gc-normal-deletion.png",
     "posts/attachments/gc-marking.png",
