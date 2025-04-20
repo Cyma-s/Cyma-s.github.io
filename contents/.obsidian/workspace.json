@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/학교/2024-database-system.md",
+                "file": "posts/개발 공부/top-down-approach-ch3.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2024-database-system"
+              "title": "top-down-approach-ch3"
             }
           },
           {
@@ -55,8 +55,7 @@
               "title": "2025-04-20"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -217,16 +216,6 @@
             }
           },
           {
-            "id": "80866eba4558f2ff",
-            "type": "leaf",
-            "state": {
-              "type": "timeline",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "플러그인이 더 이상 활성화돼있지 않음"
-            }
-          },
-          {
             "id": "0f288c16337c6108",
             "type": "leaf",
             "state": {
@@ -237,17 +226,17 @@
             }
           },
           {
-            "id": "9684faea1c8c01d7",
+            "id": "9218193bae96a178",
             "type": "leaf",
             "state": {
-              "type": "timeline",
+              "type": "planner-timeline",
               "state": {},
               "icon": "create-new",
-              "title": "Day Planner Timeline"
+              "title": "Timeline"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -270,18 +259,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "meld-encrypt:New encrypted note": false,
       "meld-encrypt:Convert to or from an Encrypted note": false,
-      "meld-encrypt:Encrypt/Decrypt": false,
-      "obsidian-day-planner:Timeline": false,
       "homepage:Open homepage": false,
       "obsidian-kanban:새 보드 만들기": false,
       "time-ruler:Open Time Ruler": false,
+      "obsidian-git:Open Git source control": false,
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false,
+      "meld-encrypt:Encrypt/Decrypt In-place": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "41ec79aeb9d25236",
+  "active": "30f47212198d3170",
   "lastOpenFiles": [
-    "posts/TIL/2025/2025-04-19.md",
     "posts/TIL/2025/2025-04-20.md",
+    "posts/TIL/2025/2025-04-19.md",
+    "posts/2025-04-20.md",
+    "posts/개발 공부/top-down-approach-ch3.md",
+    "posts/학교/2024-database-system.md",
+    "posts/개발 공부/top-down-approach-ch1.md",
     "posts/TIL/2025/2025-04.md",
     "posts/TIL/2025/2025-02-25.md",
     "posts/readme.md",
@@ -303,10 +298,6 @@
     "posts/우아한테크코스/wooteco-aop.md",
     "posts/우아한테크코스/wooteco.md",
     "posts/wiki-index.md",
-    "posts/개발 공부/why-should-we-avoid-use-static.md",
-    "posts/개발 공부/프로그래밍 언어/why-return-type-of-add-function-is-boolean.md",
-    "posts/학교/what-is-lidar.md",
-    "posts/개발 공부/Spring/webmvctest.md",
     "posts/개발 공부/개발 컨벤션",
     "posts/개발 공부/프로그래밍 언어",
     "posts/영어",

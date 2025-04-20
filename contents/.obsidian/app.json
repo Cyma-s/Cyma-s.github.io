@@ -8,5 +8,6 @@
   "propertiesInDocument": "source",
   "newFileLocation": "folder",
   "newFileFolderPath": "posts",
-  "vimMode": false
+  "vimMode": false,
+  "livePreview": true
 }

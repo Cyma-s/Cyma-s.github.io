@@ -25,10 +25,11 @@
   "obsidian-kanban",
   "obsidian-smart-typography",
   "obsidian-minimal-settings",
-  "fontsource",
   "custom-font-loader",
   "obsidian-linter",
   "find-unlinked-files",
   "code-styler",
-  "time-ruler"
+  "time-ruler",
+  "floating-toc",
+  "cm-typewriter-scroll-obsidian"
 ]
