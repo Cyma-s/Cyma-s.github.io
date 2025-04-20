@@ -56,9 +56,6 @@ const Header = ({ title, date, tags, minToRead, updated }) => {
           <Property>Created Date </Property><Date>· {date} </Date>
         </div>
         <div>
-          <Property>Read Time </Property><Date>· {minToRead} min read </Date>
-        </div>
-        <div>
           <Property>Last Update </Property><Date>· {updated} </Date>
         </div>
       </Information>

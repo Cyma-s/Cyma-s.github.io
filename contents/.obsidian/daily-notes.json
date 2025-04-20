@@ -1,6 +1,6 @@
 {
   "template": "template/TIL",
   "format": "YYYY-MM-DD",
-  "folder": "posts",
+  "folder": "posts/TIL/2025",
   "autorun": true
 }

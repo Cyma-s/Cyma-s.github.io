@@ -1,7 +1,7 @@
 ---
-title: tomcat
+title: Tomcat
 date: 2023-09-17 19:52:18 +0900
-updated: 2024-07-17 17:40:18 +0900
+updated: 2025-04-20 21:18:07 +0200
 tags:
   - tomcat
 ---
