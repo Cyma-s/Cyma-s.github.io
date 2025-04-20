@@ -7,8 +7,6 @@ import useScroll from "hooks/useScroll"
 
 import getElementOffset from "utils/getElmentOffset"
 
-import RevealOnScroll from "components/RevealOnScroll"
-
 const STICK_OFFSET = 100
 
 const TocWrapper = styled.div`
@@ -99,22 +97,20 @@ const Toc = ({ items, articleOffset }) => {
   }
 
   return (
-    <RevealOnScroll revealAt={revealAt} reverse>
-      <TocWrapper stick={y > articleOffset - STICK_OFFSET}>
-        <div>
-          {items.map((item, i) => (
-            <ParagraphTitle
-              key={i}
-              subtitle={item.tagName === "H3"}
-              active={i === active}
-              onClick={() => handleClickTitle(i)}
-            >
-              {item.innerText}
-            </ParagraphTitle>
-          ))}
-        </div>
-      </TocWrapper>
-    </RevealOnScroll>
+    <TocWrapper stick={y > articleOffset - STICK_OFFSET}>
+      <div>
+        {items.map((item, i) => (
+          <ParagraphTitle
+            key={i}
+            subtitle={item.tagName === "H3"}
+            active={i === active}
+            onClick={() => handleClickTitle(i)}
+          >
+            {item.innerText}
+          </ParagraphTitle>
+        ))}
+      </div>
+    </TocWrapper>
   )
 }
 

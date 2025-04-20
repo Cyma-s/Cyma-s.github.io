@@ -7,7 +7,8 @@ const CommonStyle = css`
     font-size: 14.5px;
     color: #ccc;
     background: none;
-    font-family: "Bai Jamjuree", monospace;
+    font-family: "Courier New", monospace;
+    font-weight: 500;
     text-align: left;
     white-space: pre;
     word-spacing: normal;

@@ -11,8 +11,10 @@ const Wrapper = styled.aside`
   right: 117%;
   top: 0px;
   width: 240px;
-  height: auto;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
   font-size: 16px;
+  padding-right: 4px;
 
   @media (max-width: 1300px) {
     display: none;
@@ -64,10 +66,20 @@ const FolderContents = styled.div`
 `
 
 const SideDirectoryTree = ({ posts }) => {
-  const [openFolders, setOpenFolders] = useState(() => ({}))
+  const [openFolders, setOpenFolders] = useState(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("sideDirectory-openFolders")
+      return stored ? JSON.parse(stored) : {}
+    }
+    return {}
+  })
 
   const toggleFolder = (pathKey) => {
-    setOpenFolders(prev => ({ ...prev, [pathKey]: !prev[pathKey] }))
+    setOpenFolders(prev => {
+      const newState = { ...prev, [pathKey]: !prev[pathKey] }
+      localStorage.setItem("sideDirectory-openFolders", JSON.stringify(newState))
+      return newState
+    })
   }
 
   const countPosts = (node) => {
