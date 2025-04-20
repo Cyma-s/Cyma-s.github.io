@@ -7,5 +7,6 @@
   "showLineNumber": false,
   "propertiesInDocument": "source",
   "newFileLocation": "folder",
-  "newFileFolderPath": "posts"
+  "newFileFolderPath": "posts",
+  "vimMode": false
 }

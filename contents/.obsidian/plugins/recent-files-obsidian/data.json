@@ -1,204 +1,204 @@
 {
   "recentFiles": [
     {
+      "basename": "2025-04-20",
+      "path": "posts/TIL/2025/2025-04-20.md"
+    },
+    {
       "basename": "2025-04-19",
-      "path": "posts/2025-04-19.md"
+      "path": "posts/TIL/2025/2025-04-19.md"
     },
     {
-      "basename": "2023-10-16",
-      "path": "posts/2023-10-16.md"
+      "basename": "2025-04",
+      "path": "posts/TIL/2025/2025-04.md"
     },
     {
-      "basename": "2023-10-15",
-      "path": "posts/2023-10-15.md"
-    },
-    {
-      "basename": "garbage-collection",
-      "path": "posts/garbage-collection.md"
+      "basename": "2025-02-25",
+      "path": "posts/TIL/2025/2025-02-25.md"
     },
     {
       "basename": "readme",
       "path": "posts/readme.md"
     },
     {
-      "basename": "level1-writing",
-      "path": "posts/level1-writing.md"
+      "basename": "why-string-is-final",
+      "path": "posts/개발 공부/why-string-is-final.md"
     },
     {
-      "basename": "2025-03-06",
-      "path": "posts/2025-03-06.md"
+      "basename": "what-is-index",
+      "path": "posts/개발 공부/what-is-index.md"
     },
     {
-      "basename": "2025-03",
-      "path": "posts/2025-03.md"
+      "basename": "vacation-plan",
+      "path": "posts/나/vacation-plan.md"
     },
     {
-      "basename": "level1-third-retrospect",
-      "path": "posts/level1-third-retrospect.md"
+      "basename": "objective",
+      "path": "posts/나/objective.md"
     },
     {
-      "basename": "2025-02-25",
-      "path": "posts/2025-02-25.md"
+      "basename": "obsidian-plugin",
+      "path": "posts/나/obsidian-plugin.md"
     },
     {
-      "basename": "2024-03-13",
-      "path": "posts/2024-03-13.md"
+      "basename": "inbox",
+      "path": "posts/개발 공부/inbox.md"
     },
     {
-      "basename": "level2-first-retrospect",
-      "path": "posts/level2-first-retrospect.md"
+      "basename": "berlin-relocation-plan",
+      "path": "posts/나/berlin-relocation-plan.md"
     },
     {
-      "basename": "level1-eighth-retrospect",
-      "path": "posts/level1-eighth-retrospect.md"
+      "basename": "book-love-skill",
+      "path": "posts/나/book-love-skill.md"
     },
     {
-      "basename": "2024-06-16",
-      "path": "posts/2024-06-16.md"
+      "basename": "writing-subject-candidate",
+      "path": "posts/나/writing-subject-candidate.md"
     },
     {
-      "basename": "shook",
-      "path": "posts/shook.md"
+      "basename": "ws-and-was",
+      "path": "posts/개발 공부/ws-and-was.md"
     },
     {
-      "basename": "level4-mvc",
-      "path": "posts/level4-mvc.md"
+      "basename": "woowacourse-retrospect",
+      "path": "posts/우아한테크코스/woowacourse-retrospect.md"
     },
     {
-      "basename": "2023-06-07",
-      "path": "posts/2023-06-07.md"
+      "basename": "wooteco-ux",
+      "path": "posts/우아한테크코스/wooteco-ux.md"
     },
     {
-      "basename": "jdk-synchronizer",
-      "path": "posts/jdk-synchronizer.md"
+      "basename": "wooteco-ot",
+      "path": "posts/우아한테크코스/wooteco-ot.md"
     },
     {
-      "basename": "matzip-issue",
-      "path": "posts/matzip-issue.md"
+      "basename": "wooteco-aop",
+      "path": "posts/우아한테크코스/wooteco-aop.md"
     },
     {
-      "basename": "2023-02-16",
-      "path": "posts/2023-02-16.md"
+      "basename": "wooteco",
+      "path": "posts/우아한테크코스/wooteco.md"
     },
     {
-      "basename": "controller-vs-restcontroller",
-      "path": "posts/controller-vs-restcontroller.md"
+      "basename": "why-should-we-avoid-use-static",
+      "path": "posts/개발 공부/why-should-we-avoid-use-static.md"
     },
     {
-      "basename": "english-speaking-pattern",
-      "path": "posts/english-speaking-pattern.md"
+      "basename": "why-return-type-of-add-function-is-boolean",
+      "path": "posts/개발 공부/프로그래밍 언어/why-return-type-of-add-function-is-boolean.md"
     },
     {
-      "basename": "minimum-vertex-cover",
-      "path": "posts/minimum-vertex-cover.md"
+      "basename": "what-is-lidar",
+      "path": "posts/학교/what-is-lidar.md"
     },
     {
-      "basename": "2023-07-04",
-      "path": "posts/2023-07-04.md"
+      "basename": "webmvctest",
+      "path": "posts/개발 공부/Spring/webmvctest.md"
     },
     {
-      "basename": "pair-programming-rule",
-      "path": "posts/pair-programming-rule.md"
+      "basename": "vpc",
+      "path": "posts/개발 공부/vpc.md"
     },
     {
       "basename": "view-resolver",
-      "path": "posts/view-resolver.md"
+      "path": "posts/개발 공부/Spring/view-resolver.md"
     },
     {
-      "basename": "app-image-execute",
-      "path": "posts/app-image-execute.md"
+      "basename": "vepohuhyemal-study",
+      "path": "posts/우아한테크코스/vepohuhyemal-study.md"
     },
     {
-      "basename": "entity-manager-readonly",
-      "path": "posts/entity-manager-readonly.md"
+      "basename": "vepohuhemal-study-question",
+      "path": "posts/우아한테크코스/vepohuhemal-study-question.md"
     },
     {
-      "basename": "broken-pipe-error",
-      "path": "posts/broken-pipe-error.md"
+      "basename": "ubuntu-device-recognition-error",
+      "path": "posts/개발 공부/ubuntu-device-recognition-error.md"
     },
     {
-      "basename": "effective-java-ed3",
-      "path": "posts/effective-java-ed3.md"
+      "basename": "tsp",
+      "path": "posts/개발 공부/알고리즘/tsp.md"
     },
     {
-      "basename": "2024-08-24",
-      "path": "posts/2024-08-24.md"
+      "basename": "trie",
+      "path": "posts/개발 공부/알고리즘/trie.md"
     },
     {
-      "basename": "2025",
-      "path": "posts/2025.md"
+      "basename": "transactional",
+      "path": "posts/개발 공부/Spring/transactional.md"
     },
     {
-      "basename": "2025-02",
-      "path": "posts/2025-02.md"
+      "basename": "transaction-and-spring-transaction",
+      "path": "posts/우아한테크코스/transaction-and-spring-transaction.md"
     },
     {
-      "basename": "2024-03-26",
-      "path": "posts/2024-03-26.md"
+      "basename": "transaction",
+      "path": "posts/개발 공부/데이터베이스/transaction.md"
     },
     {
-      "basename": "2024-06-17",
-      "path": "posts/2024-06-17.md"
+      "basename": "topological-sorting",
+      "path": "posts/개발 공부/알고리즘/topological-sorting.md"
     },
     {
-      "basename": "2024",
-      "path": "posts/2024.md"
+      "basename": "top-down-approach-ch1",
+      "path": "posts/개발 공부/top-down-approach-ch1.md"
     },
     {
-      "basename": "2023-12-14",
-      "path": "posts/2023-12-14.md"
+      "basename": "tomcat-thread-pool",
+      "path": "posts/개발 공부/tomcat-thread-pool.md"
     },
     {
-      "basename": "2024-01",
-      "path": "posts/2024-01.md"
+      "basename": "tomcat",
+      "path": "posts/개발 공부/tomcat.md"
     },
     {
-      "basename": "2024-01-07",
-      "path": "posts/2024-01-07.md"
+      "basename": "text-vs-varchar",
+      "path": "posts/개발 공부/text-vs-varchar.md"
     },
     {
-      "basename": "2024-01-08",
-      "path": "posts/2024-01-08.md"
+      "basename": "test-isolation",
+      "path": "posts/우아한테크코스/S-HOOK/test-isolation.md"
     },
     {
-      "basename": "2024-01-11",
-      "path": "posts/2024-01-11.md"
+      "basename": "test",
+      "path": "posts/개발 공부/test.md"
     },
     {
-      "basename": "2024-01-12",
-      "path": "posts/2024-01-12.md"
+      "basename": "technical-debt",
+      "path": "posts/개발 공부/technical-debt.md"
     },
     {
-      "basename": "2024-01-16",
-      "path": "posts/2024-01-16.md"
+      "basename": "study-rule",
+      "path": "posts/우아한테크코스/study-rule.md"
     },
     {
-      "basename": "2024-01-19",
-      "path": "posts/2024-01-19.md"
+      "basename": "tcp",
+      "path": "posts/개발 공부/tcp.md"
     },
     {
-      "basename": "2024-01-21",
-      "path": "posts/2024-01-21.md"
+      "basename": "state-pattern",
+      "path": "posts/우아한테크코스/state-pattern.md"
     },
     {
-      "basename": "2024-01-22",
-      "path": "posts/2024-01-22.md"
+      "basename": "stack-unwinding",
+      "path": "posts/개발 공부/프로그래밍 언어/stack-unwinding.md"
     },
     {
-      "basename": "2024-01-26",
-      "path": "posts/2024-01-26.md"
+      "basename": "spurious-wakeups",
+      "path": "posts/개발 공부/spurious-wakeups.md"
     },
     {
-      "basename": "2024-02-01",
-      "path": "posts/2024-02-01.md"
+      "basename": "spring-authentication",
+      "path": "posts/개발 공부/Spring/spring-authentication.md"
     },
     {
-      "basename": "2024-02-05",
-      "path": "posts/2024-02-05.md"
+      "basename": "speaking-theme-computer-science",
+      "path": "posts/영어/speaking-theme-computer-science.md"
     },
     {
-      "basename": "2024-02-06",
-      "path": "posts/2024-02-06.md"
+      "basename": "sort-algorithm",
+      "path": "posts/개발 공부/알고리즘/sort-algorithm.md"
     }
   ],
   "omittedPaths": [

@@ -1,10 +1,10 @@
 {
   "accentColor": "#00b3ff",
-  "theme": "obsidian",
+  "theme": "moonstone",
   "baseFontSize": 17,
   "cssTheme": "Catppuccin",
   "translucency": false,
   "monospaceFontFamily": "American Typewriter",
   "textFontFamily": "Eulyoo1945",
-  "interfaceFontFamily": "Pretendard Variable"
+  "interfaceFontFamily": "Pretendard"
 }

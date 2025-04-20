@@ -5,16 +5,14 @@ import { graphql } from "gatsby"
 import IndexLayout from "components/IndexLayout"
 import IndexPage from "components/IndexPage"
 import SEO from "components/SEO"
-import SideTagList from "components/SideTagList"
 import VerticalSpace from "components/VerticalSpace"
+import SideDirectoryTree from "components/SideDirectoryTree"
 
 import { title, description, siteUrl } from "../../blog-config"
-import SidePostList from "components/SidePostList"
+import SideRecentList from "components/SideRecentList"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
-  const tags = _.sortBy(data.allMarkdownRemark.group, ["totalCount"]).reverse()
-
   const indexHtml = data.markdownRemark.html
 
   if (posts.length === 0) {
@@ -31,8 +29,8 @@ const BlogIndex = ({ data }) => {
     <IndexLayout>
       <SEO title={title} description={description} url={siteUrl} />
       <VerticalSpace size={48} />
-      <SideTagList tags={tags} postCount={posts.length} />
-      <SidePostList posts={posts} recentPostCount={20}/>
+      <SideRecentList posts={posts} />
+      <SideDirectoryTree posts={posts} />
       <IndexPage html={indexHtml}></IndexPage>
     </IndexLayout>
   )
