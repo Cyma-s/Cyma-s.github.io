@@ -23,6 +23,16 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
+      
+      - name: Cache Gatsby files
+         uses: actions/cache@v3
+         with:
+           path: |
+             .cache
+             public
+         key: ${{ runner.os }}-gatsby-${{ github.sha }}
+         restore-keys: |
+           ${{ runner.os }}-gatsby-
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
