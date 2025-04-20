@@ -30,9 +30,9 @@ jobs:
           path: |
             .cache
             public
-        key: ${{ runner.os }}-gatsby-${{ github.sha }}
-        restore-keys: |
-          ${{ runner.os }}-gatsby-
+          key: ${{ runner.os }}-gatsby-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -50,4 +50,3 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: deploy
-
