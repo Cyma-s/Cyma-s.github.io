@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2025-04-20.md",
+                "file": "posts/우아한테크코스/interceptor-argument-resolver-authenticated.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-04-20"
+              "title": "interceptor-argument-resolver-authenticated"
             }
           },
           {
@@ -132,7 +132,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 370.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -271,8 +272,8 @@
   },
   "active": "30f47212198d3170",
   "lastOpenFiles": [
-    "posts/2025-04-20.md",
     "posts/TIL/2025/2025-04-20.md",
+    "posts/2025-04-20.md",
     "posts/TIL/2025/2025-04.md",
     "posts/개발 공부/spurious-wakeups.md",
     "posts/개발 공부/technical-debt.md",

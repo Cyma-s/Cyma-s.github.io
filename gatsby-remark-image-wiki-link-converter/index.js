@@ -30,7 +30,7 @@ module.exports = ({ markdownAST }) => {
         // 매치를 이미지 노드로 변환
         newNodes.push({
           type: "image",
-          url: `./attachments/${link}`,
+          url: `/attachments/${link}`,
           alt: link,
         });
 
