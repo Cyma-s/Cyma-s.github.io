@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "2025-04-24",
+      "path": "posts/TIL/2025/2025-04-24.md"
+    },
+    {
       "basename": "2025-04-22",
       "path": "posts/TIL/2025/2025-04-22.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "webmvctest",
       "path": "posts/개발 공부/Spring/webmvctest.md"
-    },
-    {
-      "basename": "view-resolver",
-      "path": "posts/개발 공부/Spring/view-resolver.md"
     }
   ],
   "omittedPaths": [
