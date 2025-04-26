@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "30f47212198d3170",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/TIL/2025/2025-04-24.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025-04-24"
-            }
-          },
-          {
             "id": "8d3207d4f9d1a183",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2025-04.md",
+                "file": "posts/TIL/2025/2025-04-26.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-04"
+              "title": "2025-04-26"
             }
           }
         ]
@@ -132,7 +108,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 370.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -196,13 +173,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/TIL/2025/2025-04-24.md",
+                "file": "posts/TIL/2025/2025-04-26.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-04-24 의 개요"
+              "title": "2025-04-26 의 개요"
             }
           },
           {
@@ -259,10 +236,11 @@
       "meld-encrypt:Encrypt/Decrypt In-place": false
     }
   },
-  "active": "30f47212198d3170",
+  "active": "8d3207d4f9d1a183",
   "lastOpenFiles": [
-    "posts/TIL/2025/2025-04.md",
     "posts/TIL/2025/2025-04-24.md",
+    "posts/TIL/2025/2025-04-26.md",
+    "posts/TIL/2025/2025-04.md",
     "posts/TIL/2025/2025-04-20.md",
     "template/TIL.md",
     "posts/TIL/2025/2025-04-19.md",
@@ -286,7 +264,6 @@
     "posts/개발 공부/네트워크/top-down-approach-ch1.md",
     "posts/개발 공부/text-vs-varchar.md",
     "posts/개발 공부/test.md",
-    "posts/개발 공부/네트워크/tcp.md",
     "posts/개발 공부/네트워크",
     "posts/나",
     "posts/개발 공부/개발 컨벤션",

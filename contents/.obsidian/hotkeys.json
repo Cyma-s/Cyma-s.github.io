@@ -1,12 +1,4 @@
 {
-  "app:toggle-left-sidebar": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "S"
-    }
-  ],
   "workspace:previous-tab": [
     {
       "modifiers": [
@@ -21,13 +13,6 @@
         "Shift"
       ],
       "key": "["
-    },
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "E"
     }
   ],
   "editor:toggle-strikethrough": [
@@ -174,6 +159,33 @@
         "Shift"
       ],
       "key": "D"
+    }
+  ],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "E"
+    }
+  ],
+  "editor:insert-horizontal-rule": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "-"
+    }
+  ],
+  "quickadd:choice:cbad7a00-98fd-4071-a1fe-a53f006f0dbd": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "I"
     }
   ]
 }
