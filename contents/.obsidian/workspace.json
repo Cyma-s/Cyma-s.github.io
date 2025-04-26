@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2025-04-22.md",
+                "file": "posts/TIL/2025/2025-04-24.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-04-22"
+              "title": "2025-04-24"
             }
           },
           {
-            "id": "bf882fba6081af62",
+            "id": "8d3207d4f9d1a183",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2025-04-20.md",
+                "file": "posts/TIL/2025/2025-04.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-04-20"
+              "title": "2025-04"
             }
           }
         ]
@@ -132,8 +132,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5,
-    "collapsed": true
+    "width": 370.5
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -197,13 +196,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/level1-writing.md",
+                "file": "posts/TIL/2025/2025-04-24.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "level1-writing 의 개요"
+              "title": "2025-04-24 의 개요"
             }
           },
           {
@@ -212,18 +211,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "lucide-file",
-              "title": "플러그인이 더 이상 활성화돼있지 않음"
-            }
-          },
-          {
-            "id": "0f288c16337c6108",
-            "type": "leaf",
-            "state": {
-              "type": "time-ruler-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "플러그인이 더 이상 활성화돼있지 않음"
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -237,7 +226,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -246,6 +235,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "quickadd:QuickAdd": false,
       "switcher:빠른 전환기 열기": false,
       "daily-notes:오늘의 일일 노트 열기": false,
       "markdown-importer:마크다운 형식 불러오기 열기": false,
@@ -266,17 +256,22 @@
       "obsidian-git:Open Git source control": false,
       "obsidian-day-planner:Open Timeline": false,
       "obsidian-day-planner:Open Multi-Day View": false,
-      "meld-encrypt:Encrypt/Decrypt In-place": false,
-      "periodic-notes:Open today": false
+      "meld-encrypt:Encrypt/Decrypt In-place": false
     }
   },
   "active": "30f47212198d3170",
   "lastOpenFiles": [
-    "posts/우아한테크코스/interceptor-argument-resolver-authenticated.md",
-    "posts/TIL/2025/2025-04-22.md",
-    "posts/TIL/2025/2025-04-20.md",
-    "posts/2025-04-20.md",
     "posts/TIL/2025/2025-04.md",
+    "posts/TIL/2025/2025-04-24.md",
+    "posts/TIL/2025/2025-04-20.md",
+    "template/TIL.md",
+    "posts/TIL/2025/2025-04-19.md",
+    "template/TILMonthlyIndex.md",
+    "2025-04.md",
+    "posts/2025-04-24.md",
+    "posts/TIL/2025/2025-04-22.md",
+    "posts/우아한테크코스/interceptor-argument-resolver-authenticated.md",
+    "posts/2025-04-20.md",
     "posts/개발 공부/spurious-wakeups.md",
     "posts/개발 공부/technical-debt.md",
     "posts/개발 공부/ws-and-was.md",
@@ -292,12 +287,6 @@
     "posts/개발 공부/text-vs-varchar.md",
     "posts/개발 공부/test.md",
     "posts/개발 공부/네트워크/tcp.md",
-    "posts/개발 공부/short-programming-knowledge.md",
-    "posts/개발 공부/programming-book.md",
-    "posts/개발 공부/os-ch2.md",
-    "posts/개발 공부/operating-system-concepts.md",
-    "posts/개발 공부/nginx.md",
-    "posts/개발 공부/네트워크/ipv4-ipv6-tunneling-protocol.md",
     "posts/개발 공부/네트워크",
     "posts/나",
     "posts/개발 공부/개발 컨벤션",

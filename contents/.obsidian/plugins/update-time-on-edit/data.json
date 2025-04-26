@@ -216,7 +216,6 @@
     "posts/나/berlin-relocation-plan.md": "399c2c3a9e94f511e301945a735ee1a6011d954c76386980dd08e0003f0062ef",
     "posts/나/obsidian-plugin.md": "9ea027bd50cae20bd7dfb679ec63079ba7aaafcbbc4b488d5871eaf2d2ba8c33",
     "posts/나/objective.md": "fcb907bfb8cc78dc465fa0f34a2e08410d636e99ba313e2a7ac85190c07c9704",
-    "posts/TIL/2025/2025-04.md": "00a86a34ae20b1f71a0b0a539ea4d2e548eb1e59ad792314e32c57fc17bc0c69",
     "posts/개발 공부/네트워크/count-to-infinity-problem.md": "1ed886b019406b8f3b35de13252c7e2adfe13bd93709dda1339c848cea07f643",
     "posts/개발 공부/네트워크/ipv4-ipv6-tunneling-protocol.md": "83718d67d6f502df94730448061833073130146c31d8f8982abd9cfc482f2e58",
     "posts/개발 공부/네트워크/top-down-approach-ch3.md": "ef37cfbe65ff27cae829cd5dd0b2a1368a883df5dfa0be124dd0d0afad4987d4",
@@ -224,6 +223,8 @@
     "posts/개발 공부/네트워크/top-down-approach-ch2.md": "553b14b36d12366daee295df5e59f7b151cca4e954086b6404749c40a881a4e1",
     "posts/개발 공부/데이터베이스/what-is-index.md": "0b52e2ed39f45f91cb1da668adc94b3428338ae09347b2713efddda5bdd3cddd",
     "posts/개발 공부/프로그래밍 언어/why-should-we-avoid-use-static.md": "370730e25621a750dc69288a0103e23d19f7f3931c88da1c51b665534050c6cd",
-    "posts/개발 공부/프로그래밍 언어/why-string-is-final.md": "fa0438addbb44f7ddad738197382c7484dce35fa6fb8389beb132b8b9fceddc7"
+    "posts/개발 공부/프로그래밍 언어/why-string-is-final.md": "fa0438addbb44f7ddad738197382c7484dce35fa6fb8389beb132b8b9fceddc7",
+    "posts/TIL/2025/2025-04-24.md": "e20a2a6ad057398fa0cffa6d4e3a9b3d73ea1c06d1c935f93b411ce49e67d856",
+    "posts/TIL/2025/2025-04.md": "606d999d87e676bb3a57a00b468f6404fcb92c8cbd0c65266dd16bcef838cc81"
   }
 }

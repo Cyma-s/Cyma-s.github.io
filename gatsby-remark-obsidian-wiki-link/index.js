@@ -1,4 +1,32 @@
 const visit = require("unist-util-visit");
+const fs = require("fs");
+const path = require("path");
+
+const CONTENT_ROOT = path.resolve(__dirname, "../contents/posts");
+
+// 모든 .md 파일의 상대 경로를 미리 수집
+function buildLinkMap(rootDir) {
+  const linkMap = {};
+
+  function walk(dir) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(fullPath);
+      } else if (entry.isFile() && entry.name.endsWith(".md")) {
+        const baseName = path.basename(entry.name, ".md");
+        const relativePath = path.relative(rootDir, fullPath).replace(/\.md$/, "").split(path.sep).join("/");
+        linkMap[baseName] = `/${relativePath}`;
+      }
+    }
+  }
+
+  walk(rootDir);
+  return linkMap;
+}
+
+const linkMap = buildLinkMap(CONTENT_ROOT);
 
 module.exports = ({ markdownAST }) => {
   visit(markdownAST, "text", (node, index, parent) => {
@@ -30,7 +58,7 @@ module.exports = ({ markdownAST }) => {
         // 매치를 링크 노드로 변환
         newNodes.push({
           type: "link",
-          url: `/${link}`,
+          url: linkMap[link] || `/${link}`,
           title: null,
           // alias가 없으면 link를 텍스트로 사용합니다.
           children: [{ type: "text", value: alias || link }],

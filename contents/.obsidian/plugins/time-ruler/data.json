@@ -28,7 +28,17 @@
     "posts/ori-05-26",
     "posts/shook-function-develop",
     "posts/spring-data-jdbc",
-    "posts/transaction-and-spring-transaction"
+    "posts/transaction-and-spring-transaction",
+    "posts/개발 공부/Spring/about-pool-sizing.md",
+    "posts/개발 공부/Spring/spring-data-jdbc.md",
+    "posts/개발 공부/데이터베이스/mysql-execution-plan.md",
+    "posts/개발 공부/프로그래밍 언어/garbage-collection.md",
+    "posts/개발 공부/프로그래밍 언어/monitor-lock-and-java-synchoronized.md",
+    "posts/우아한테크코스/S-HOOK/shook-function-develop.md",
+    "posts/우아한테크코스/level2-review-mosquito.md",
+    "posts/우아한테크코스/ori-05-26.md",
+    "posts/우아한테크코스/transaction-and-spring-transaction.md",
+    "posts/학교/2024-multicore.md"
   ],
   "customStatus": {
     "include": false,
@@ -47,5 +57,6 @@
   "hideTimes": false,
   "borders": true,
   "viewMode": "day",
-  "scheduledSubtasks": true
+  "scheduledSubtasks": true,
+  "openInMain": false
 }

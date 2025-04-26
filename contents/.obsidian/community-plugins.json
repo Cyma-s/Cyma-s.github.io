@@ -9,7 +9,6 @@
   "update-time-on-edit",
   "templater-obsidian",
   "table-editor-obsidian",
-  "periodic-notes",
   "obsidian-tasks-plugin",
   "dataview",
   "obsidian-admonition",
@@ -28,5 +27,6 @@
   "code-styler",
   "time-ruler",
   "floating-toc",
-  "cm-typewriter-scroll-obsidian"
+  "cm-typewriter-scroll-obsidian",
+  "quickadd"
 ]
