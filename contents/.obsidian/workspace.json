@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2025-04-26.md",
+                "file": "posts/TIL/2025/2025-04-27.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-04-26"
+              "title": "2025-04-27"
             }
           }
         ]
@@ -108,8 +108,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5,
-    "collapsed": true
+    "width": 370.5
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -173,13 +172,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/TIL/2025/2025-04-26.md",
+                "file": "posts/TIL/2025/2025-04-27.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-04-26 의 개요"
+              "title": "2025-04-27 의 개요"
             }
           },
           {
@@ -238,8 +237,9 @@
   },
   "active": "8d3207d4f9d1a183",
   "lastOpenFiles": [
-    "posts/TIL/2025/2025-04-24.md",
     "posts/TIL/2025/2025-04-26.md",
+    "posts/TIL/2025/2025-04-27.md",
+    "posts/TIL/2025/2025-04-24.md",
     "posts/TIL/2025/2025-04.md",
     "posts/TIL/2025/2025-04-20.md",
     "template/TIL.md",
@@ -263,7 +263,6 @@
     "posts/개발 공부/네트워크/vpc.md",
     "posts/개발 공부/네트워크/top-down-approach-ch1.md",
     "posts/개발 공부/text-vs-varchar.md",
-    "posts/개발 공부/test.md",
     "posts/개발 공부/네트워크",
     "posts/나",
     "posts/개발 공부/개발 컨벤션",
