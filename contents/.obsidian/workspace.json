@@ -32,36 +32,12 @@
             }
           },
           {
-            "id": "8ab0f4070a0b6220",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "template/TILMonthlyIndex.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "TILMonthlyIndex"
-            }
-          },
-          {
             "id": "2ece950a1118d77f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2025-05-01.md",
+                "file": "posts/TIL/2025/2025-05-02.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +52,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-01"
+              "title": "2025-05-02"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -285,12 +260,13 @@
       "meld-encrypt:Encrypt/Decrypt In-place": false
     }
   },
-  "active": "2ece950a1118d77f",
+  "active": "8d3207d4f9d1a183",
   "lastOpenFiles": [
-    "posts/TIL/2025/2025-05.md",
     "template/TILMonthlyIndex.md",
-    "posts/TIL/2025/2025-04.md",
+    "posts/TIL/2025/2025-05-02.md",
     "posts/TIL/2025/2025-05-01.md",
+    "posts/TIL/2025/2025-05.md",
+    "posts/TIL/2025/2025-04.md",
     "posts/TIL/2025/2025-04-27.md",
     "posts/TIL/2025/2025-04-26.md",
     "posts/TIL/2025/2025-04-24.md",
@@ -312,7 +288,6 @@
     "posts/개발 공부/tomcat-thread-pool.md",
     "posts/개발 공부/tomcat.md",
     "posts/개발 공부/데이터베이스/what-is-index.md",
-    "posts/개발 공부/네트워크/vpc.md",
     "posts/개발 공부/네트워크",
     "posts/나",
     "posts/개발 공부/개발 컨벤션",
