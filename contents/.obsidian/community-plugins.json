@@ -6,7 +6,6 @@
   "obsidian-icon-folder",
   "recent-files-obsidian",
   "omnisearch",
-  "update-time-on-edit",
   "templater-obsidian",
   "table-editor-obsidian",
   "obsidian-tasks-plugin",
@@ -28,5 +27,6 @@
   "time-ruler",
   "floating-toc",
   "cm-typewriter-scroll-obsidian",
-  "quickadd"
+  "quickadd",
+  "update-time-on-edit"
 ]
