@@ -5,6 +5,30 @@
       "path": "posts/TIL/2025/2025-07-15.md"
     },
     {
+      "basename": "2025-07",
+      "path": "posts/TIL/2025/2025-07.md"
+    },
+    {
+      "basename": "TILMonthlyIndex",
+      "path": "template/TILMonthlyIndex.md"
+    },
+    {
+      "basename": "TIL",
+      "path": "template/TIL.md"
+    },
+    {
+      "basename": "2025-05",
+      "path": "posts/TIL/2025/2025-05.md"
+    },
+    {
+      "basename": "english-speaking-template",
+      "path": "template/english-speaking-template.md"
+    },
+    {
+      "basename": "template",
+      "path": "template/template.md"
+    },
+    {
       "basename": "2025-05-29",
       "path": "posts/TIL/2025/2025-05-29.md"
     },
@@ -13,16 +37,8 @@
       "path": "posts/나/alone-you-are-bound-to-break.md"
     },
     {
-      "basename": "2025-05",
-      "path": "posts/TIL/2025/2025-05.md"
-    },
-    {
       "basename": "2025-05-01",
       "path": "posts/TIL/2025/2025-05-01.md"
-    },
-    {
-      "basename": "TILMonthlyIndex",
-      "path": "template/TILMonthlyIndex.md"
     },
     {
       "basename": "2025-05-02",
@@ -47,10 +63,6 @@
     {
       "basename": "2025-04-20",
       "path": "posts/TIL/2025/2025-04-20.md"
-    },
-    {
-      "basename": "TIL",
-      "path": "template/TIL.md"
     },
     {
       "basename": "2025-04-19",
@@ -187,18 +199,6 @@
     {
       "basename": "obsidian-plugin",
       "path": "posts/나/obsidian-plugin.md"
-    },
-    {
-      "basename": "inbox",
-      "path": "posts/개발 공부/inbox.md"
-    },
-    {
-      "basename": "berlin-relocation-plan",
-      "path": "posts/나/berlin-relocation-plan.md"
-    },
-    {
-      "basename": "book-love-skill",
-      "path": "posts/나/book-love-skill.md"
     }
   ],
   "omittedPaths": [

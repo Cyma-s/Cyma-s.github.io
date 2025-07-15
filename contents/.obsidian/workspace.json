@@ -98,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 370.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -232,15 +233,23 @@
       "obsidian-git:Open Git source control": false,
       "obsidian-day-planner:Open Timeline": false,
       "obsidian-day-planner:Open Multi-Day View": false,
-      "meld-encrypt:Encrypt/Decrypt In-place": false
+      "meld-encrypt:Encrypt/Decrypt In-place": false,
+      "meld-encrypt:Lock and Close all open encrypted notes": false,
+      "meld-encrypt:Encrypt Selection": false,
+      "meld-encrypt:Decrypt at Cursor": false
     }
   },
   "active": "7a9aa1d2a6846135",
   "lastOpenFiles": [
-    "posts/TIL/2025/2025-05-29.md",
+    "posts/TIL/2025/2025-07.md",
     "posts/TIL/2025/2025-07-15.md",
-    "posts/나/alone-you-are-bound-to-break.md",
+    "template/TILMonthlyIndex.md",
+    "template/TIL.md",
     "posts/TIL/2025/2025-05.md",
+    "template/english-speaking-template.md",
+    "template/template.md",
+    "posts/TIL/2025/2025-05-29.md",
+    "posts/나/alone-you-are-bound-to-break.md",
     "posts/TIL/2025/2025-05-01.md",
     "posts/TIL/2025/2025-05-02.md",
     "posts/학교/what-is-lidar.md",
@@ -259,11 +268,6 @@
     "posts/학교",
     "posts/우아한테크코스/S-HOOK/test-isolation.md",
     "posts/우아한테크코스/S-HOOK/shook.md",
-    "posts/우아한테크코스/S-HOOK/shook-webclient-reason.md",
-    "posts/우아한테크코스/S-HOOK/shook-user-inducement-plan.md",
-    "posts/우아한테크코스/S-HOOK/shook-third-demoday.md",
-    "posts/우아한테크코스/S-HOOK/shook-third-demoday-retrospect.md",
-    "posts/우아한테크코스/S-HOOK/shook-tech-stack.md",
     "posts/우아한테크코스/S-HOOK",
     "posts/우아한테크코스/DH 준비",
     "posts/우아한테크코스",
