@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2025-05-29.md",
+                "file": "posts/TIL/2025/2025-07-15.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-29"
+              "title": "2025-07-15"
             }
           }
         ]
@@ -237,8 +237,9 @@
   },
   "active": "7a9aa1d2a6846135",
   "lastOpenFiles": [
-    "posts/나/alone-you-are-bound-to-break.md",
     "posts/TIL/2025/2025-05-29.md",
+    "posts/TIL/2025/2025-07-15.md",
+    "posts/나/alone-you-are-bound-to-break.md",
     "posts/TIL/2025/2025-05.md",
     "posts/TIL/2025/2025-05-01.md",
     "posts/TIL/2025/2025-05-02.md",
@@ -263,7 +264,6 @@
     "posts/우아한테크코스/S-HOOK/shook-third-demoday.md",
     "posts/우아한테크코스/S-HOOK/shook-third-demoday-retrospect.md",
     "posts/우아한테크코스/S-HOOK/shook-tech-stack.md",
-    "posts/우아한테크코스/S-HOOK/shook-sixth-demoday-function.md",
     "posts/우아한테크코스/S-HOOK",
     "posts/우아한테크코스/DH 준비",
     "posts/우아한테크코스",
