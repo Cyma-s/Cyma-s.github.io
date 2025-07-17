@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "2025-07-17",
+      "path": "posts/TIL/2025/2025-07-17.md"
+    },
+    {
       "basename": "2025-07-15",
       "path": "posts/TIL/2025/2025-07-15.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "objective",
       "path": "posts/나/objective.md"
-    },
-    {
-      "basename": "obsidian-plugin",
-      "path": "posts/나/obsidian-plugin.md"
     }
   ],
   "omittedPaths": [

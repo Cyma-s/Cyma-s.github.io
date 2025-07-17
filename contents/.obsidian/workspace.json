@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2025-07-15.md",
+                "file": "posts/TIL/2025/2025-07-17.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-07-15"
+              "title": "2025-07-17"
             }
           }
         ]
@@ -241,8 +241,10 @@
   },
   "active": "7a9aa1d2a6846135",
   "lastOpenFiles": [
-    "posts/TIL/2025/2025-07.md",
+    "posts/attachments/Pasted image 20250717213648.png",
     "posts/TIL/2025/2025-07-15.md",
+    "posts/TIL/2025/2025-07-17.md",
+    "posts/TIL/2025/2025-07.md",
     "template/TILMonthlyIndex.md",
     "template/TIL.md",
     "posts/TIL/2025/2025-05.md",
@@ -266,8 +268,6 @@
     "posts/학교/2024-multicore.md",
     "posts/학교/2024-database-system.md",
     "posts/학교",
-    "posts/우아한테크코스/S-HOOK/test-isolation.md",
-    "posts/우아한테크코스/S-HOOK/shook.md",
     "posts/우아한테크코스/S-HOOK",
     "posts/우아한테크코스/DH 준비",
     "posts/우아한테크코스",
