@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "2025-07-17"
             }
+          },
+          {
+            "id": "34128535fd1c14ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/readme.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "readme"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,8 +123,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5,
-    "collapsed": true
+    "width": 370.5
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -239,11 +263,11 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "7a9aa1d2a6846135",
+  "active": "34128535fd1c14ee",
   "lastOpenFiles": [
+    "posts/TIL/2025/2025-07-17.md",
     "posts/attachments/Pasted image 20250717213648.png",
     "posts/TIL/2025/2025-07-15.md",
-    "posts/TIL/2025/2025-07-17.md",
     "posts/TIL/2025/2025-07.md",
     "template/TILMonthlyIndex.md",
     "template/TIL.md",
@@ -286,7 +310,6 @@
     "posts/attachments/Pasted image 20240116143752.png",
     "posts/attachments/lidar-3d-point-computed-by.png",
     "posts/attachments/Pasted image 20240116143215.png",
-    "posts/attachments/lidar-packet-footer.png",
     "무제 파일.canvas"
   ]
 }
