@@ -1,7 +1,7 @@
 ---
 title: VERO WIKI
 date: 2023-08-01 22:38:31 +0900
-updated: 2025-07-17 21:52:30 +0200
+updated: 2025-07-17 21:57:21 +0200
 ---
 
 **글의 주제를 가리지 않고 적는 개인 위키입니다.**
@@ -12,13 +12,13 @@ updated: 2025-07-17 21:52:30 +0200
 
 ## Introduction
 
-안녕하세요! 배우는 과정을 즐기는 개발자, 김은솔입니다.  
-문제 해결을 위해 이론적으로 완벽한 하나의 정답보다 팀에 가장 적합한 대안을 팀원과 함께 논의하는 것을 좋아합니다.    
-서비스의 방향은 사용자를 향해야 한다고 생각합니다. 데이터에 기반하여 사용자 경험을 향상시키기 위해 노력해왔습니다.   
-지식의 문서화를 지향합니다. 가장 중요한 것은 팀원 모두가 비슷한 수준의 서비스 이해도를 가지는 것이라 생각하여, 사소한 것이라도 문서로 남기는 개발 문화를 주도합니다.
-문제를 해결하기 위한 새로운 기술을 도입하는 과정에 관심이 많습니다.    
+안녕하세요! 무엇이든 빠르게 배우는 개발자, 김은솔입니다.  
+
+- 문제 해결을 위해 이론적으로 완벽한 하나의 정답보다 팀에 가장 적합한 대안을 팀원과 함께 논의하는 것을 좋아합니다.    
+- 지식의 문서화를 지향합니다. 가장 중요한 것은 팀원 모두가 비슷한 수준의 서비스 이해도를 가지는 것이라 생각하여, 어느 팀에서든 문서로 기록하는 개발 문화를 주도하는 편입니다.
+- 문제를 해결하기 위한 새로운 기술을 도입하는 과정에 관심이 많습니다.    
 ## Languages & Technologies
 
 - Languages: **Java**, **Kotlin**, Python
-- Technologies: **Spring Boot**, Spring Data JPA, Ktor, AWS, nginx
-- Other: Git, MySQL, Unit, Integration testing
+- Technologies: **Spring Boot**, Spring Data JPA, Ktor, nginx, Kafka
+- Other: MySQL, PostgreSQL, Unit / Integration testing, Grafana
