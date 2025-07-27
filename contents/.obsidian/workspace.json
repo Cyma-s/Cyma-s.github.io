@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/readme.md",
+                "file": "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "reflection-on-10-month-journey-at-dh"
             }
           }
         ],
@@ -123,7 +123,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 370.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -265,6 +266,17 @@
   },
   "active": "34128535fd1c14ee",
   "lastOpenFiles": [
+    "posts/attachments/크리스마스마켓.jpeg",
+    "posts/attachments/8E338FFF-FAD0-4F56-ABA7-883185066775_1_105_c.jpeg",
+    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.md",
+    "posts/우아한테크코스/DH 준비/get-a-job-with-delivery-hero.md",
+    "posts/attachments/2024-lck-준결승.jpeg",
+    "posts/독일 생활/DH/dh.md",
+    "posts/독일 생활/DH",
+    "posts/독일 생활",
+    "posts/우아한테크코스/DH 준비/dh-second-interview-preparation.md",
+    "posts/우아한테크코스/DH 준비/dh-recruiter-call.md",
+    "posts/readme.md",
     "posts/TIL/2025/2025-07-17.md",
     "posts/attachments/Pasted image 20250717213648.png",
     "posts/TIL/2025/2025-07-15.md",
@@ -285,12 +297,6 @@
     "posts/학교/multicore-final-exam.md",
     "posts/학교/lidar-sensor-data.md",
     "posts/학교/lidar-data-format.md",
-    "posts/학교/lab-meeting-01-16.md",
-    "posts/학교/lab-meeting-01-12.md",
-    "posts/학교/2024-winter-vacation-plan.md",
-    "posts/학교/2024-school-activity-plan.md",
-    "posts/학교/2024-multicore.md",
-    "posts/학교/2024-database-system.md",
     "posts/학교",
     "posts/우아한테크코스/S-HOOK",
     "posts/우아한테크코스/DH 준비",
@@ -299,8 +305,6 @@
     "posts/나",
     "posts/개발 공부/프로그래밍 언어",
     "posts/개발 공부/알고리즘",
-    "posts/개발 공부/데이터베이스",
-    "posts/개발 공부/네트워크",
     "posts/attachments/gc-deletion-with-compacting.png",
     "posts/attachments/gc-normal-deletion.png",
     "posts/attachments/gc-marking.png",
@@ -308,8 +312,6 @@
     "posts/attachments/pi-computation.png",
     "posts/attachments/jenkins-build-trigger.png",
     "posts/attachments/Pasted image 20240116143752.png",
-    "posts/attachments/lidar-3d-point-computed-by.png",
-    "posts/attachments/Pasted image 20240116143215.png",
     "무제 파일.canvas"
   ]
 }

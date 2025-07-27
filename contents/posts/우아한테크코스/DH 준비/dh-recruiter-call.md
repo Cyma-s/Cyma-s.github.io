@@ -1,14 +1,13 @@
 ---
 title: DH 리크루터 콜
 date: 2023-11-27 18:28:57 +0900
-updated: 2023-12-18 22:41:49 +0900
+updated: 2025-07-17 22:06:38 +0200
 tags: 
 ---
 
 ## 내용
 
 - 이주 비용 지원
-- 
 
 ## 질문
 
@@ -48,7 +47,6 @@ tags:
 내일 live coding senior 엔지니어가 challenge
 working communicate 중요. 질문하고, 어떻게 하고 있는지 
 힌트도 줌. code clean, readable, testable, scabable, leetcode 확인할 것.  
-코딩 스케줄을 
 
 ## 질문
 
@@ -60,23 +58,3 @@ working communicate 중요. 질문하고, 어떻게 하고 있는지
 	- Is there anything I need to prepare before joining?
 - probation 기간 동안 어떤 평가가 이루어지나요?
 	- What assessments are made during the probationary period?
-
-pintech.
-62000 euro. 3000 euro.
-bank account
-apartment
-6 month
-3 month notice period
-4/1
-
-40 hours / week
-27 days / years
-boucher lunch
-480 euros lunch
-gym memberships
-
-how can you learn quickly?
-deliver?
-we understand 
-proactive to learning
-try to curious
