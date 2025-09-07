@@ -54,9 +54,19 @@
               "icon": "lucide-file",
               "title": "reflection-on-10-month-journey-at-dh"
             }
+          },
+          {
+            "id": "966d77017847ac25",
+            "type": "leaf",
+            "state": {
+              "type": "planner-release-notes",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Day Planner Release 0.27.0"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -258,13 +268,12 @@
       "obsidian-git:Open Git source control": false,
       "obsidian-day-planner:Open Timeline": false,
       "obsidian-day-planner:Open Multi-Day View": false,
-      "meld-encrypt:Encrypt/Decrypt In-place": false,
       "meld-encrypt:Lock and Close all open encrypted notes": false,
       "meld-encrypt:Encrypt Selection": false,
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "34128535fd1c14ee",
+  "active": "966d77017847ac25",
   "lastOpenFiles": [
     "posts/attachments/크리스마스마켓.jpeg",
     "posts/attachments/8E338FFF-FAD0-4F56-ABA7-883185066775_1_105_c.jpeg",

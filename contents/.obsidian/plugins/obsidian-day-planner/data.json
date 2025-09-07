@@ -24,7 +24,7 @@
   "showUnscheduledNestedTasks": true,
   "showNow": true,
   "showNext": true,
-  "pluginVersion": "0.28.0",
+  "pluginVersion": "0.27.0",
   "showCompletedTasks": true,
   "showSubtasksInTaskBlocks": true,
   "icals": [],

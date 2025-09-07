@@ -54,7 +54,7 @@
   "devMode": false,
   "templateFolderPath": "template",
   "announceUpdates": true,
-  "version": "1.13.2",
+  "version": "1.18.1",
   "disableOnlineFeatures": true,
   "enableRibbonIcon": true,
   "ai": {
