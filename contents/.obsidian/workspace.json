@@ -56,17 +56,31 @@
             }
           },
           {
-            "id": "966d77017847ac25",
+            "id": "bc45fc951bb4126a",
             "type": "leaf",
             "state": {
-              "type": "planner-release-notes",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "posts/TIL/2025/2025-09-07.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "Day Planner Release 0.27.0"
+              "title": "2025-09-07"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -273,11 +287,12 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "966d77017847ac25",
+  "active": "34128535fd1c14ee",
   "lastOpenFiles": [
+    "posts/TIL/2025/2025-09-07.md",
+    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.md",
     "posts/attachments/크리스마스마켓.jpeg",
     "posts/attachments/8E338FFF-FAD0-4F56-ABA7-883185066775_1_105_c.jpeg",
-    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.md",
     "posts/우아한테크코스/DH 준비/get-a-job-with-delivery-hero.md",
     "posts/attachments/2024-lck-준결승.jpeg",
     "posts/독일 생활/DH/dh.md",
@@ -320,7 +335,6 @@
     "posts/attachments/prefix-sums.png",
     "posts/attachments/pi-computation.png",
     "posts/attachments/jenkins-build-trigger.png",
-    "posts/attachments/Pasted image 20240116143752.png",
     "무제 파일.canvas"
   ]
 }
