@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ab72c6a9d2adcc62",
+        "id": "599335a7e0560a48",
         "type": "tabs",
         "children": [
           {
-            "id": "836c31399a328cca",
+            "id": "698792f75c47f181",
             "type": "leaf",
             "state": {
-              "type": "meld-encrypted-view",
+              "type": "markdown",
               "state": {
-                "file": "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
+                "file": "posts/나/vague-anxiety.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "reflection-on-10-month-journey-at-dh"
+              "title": "vague-anxiety"
             }
           }
         ]
@@ -98,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 370.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -237,11 +238,17 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "836c31399a328cca",
+  "active": "698792f75c47f181",
   "lastOpenFiles": [
+    "posts/나/vague-anxiety.md",
+    "posts/나/무제.md",
+    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
+    "posts/나/obsidian-plugin.md",
+    "posts/나/objective.md",
+    "posts/나/berlin-relocation-plan.md",
+    "posts/나/alone-you-are-bound-to-break.md",
     "posts/TIL/2025/2025-07-17.md",
     "posts/TIL/2025/2025-09-07.md",
-    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
     "posts/attachments/크리스마스마켓.jpeg",
     "posts/attachments/8E338FFF-FAD0-4F56-ABA7-883185066775_1_105_c.jpeg",
     "posts/우아한테크코스/DH 준비/get-a-job-with-delivery-hero.md",
@@ -261,16 +268,11 @@
     "template/english-speaking-template.md",
     "template/template.md",
     "posts/TIL/2025/2025-05-29.md",
-    "posts/나/alone-you-are-bound-to-break.md",
     "posts/TIL/2025/2025-05-01.md",
     "posts/TIL/2025/2025-05-02.md",
     "posts/학교/what-is-lidar.md",
     "posts/학교/pcl.md",
     "posts/학교/research-subject-instruction.md",
-    "posts/학교/point-cloud-compression.md",
-    "posts/학교/multicore-final-exam.md",
-    "posts/학교/lidar-sensor-data.md",
-    "posts/학교/lidar-data-format.md",
     "posts/학교",
     "posts/우아한테크코스/S-HOOK",
     "posts/우아한테크코스/DH 준비",

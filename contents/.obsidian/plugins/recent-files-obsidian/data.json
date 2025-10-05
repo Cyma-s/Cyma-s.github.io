@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "vague-anxiety",
+      "path": "posts/나/vague-anxiety.md"
+    },
+    {
       "basename": "reflection-on-10-month-journey-at-dh",
       "path": "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc"
+    },
+    {
+      "basename": "obsidian-plugin",
+      "path": "posts/나/obsidian-plugin.md"
+    },
+    {
+      "basename": "objective",
+      "path": "posts/나/objective.md"
+    },
+    {
+      "basename": "berlin-relocation-plan",
+      "path": "posts/나/berlin-relocation-plan.md"
+    },
+    {
+      "basename": "alone-you-are-bound-to-break",
+      "path": "posts/나/alone-you-are-bound-to-break.md"
     },
     {
       "basename": "2025-07-17",
@@ -59,10 +79,6 @@
     {
       "basename": "2025-05-29",
       "path": "posts/TIL/2025/2025-05-29.md"
-    },
-    {
-      "basename": "alone-you-are-bound-to-break",
-      "path": "posts/나/alone-you-are-bound-to-break.md"
     },
     {
       "basename": "2025-05-01",
@@ -183,18 +199,6 @@
     {
       "basename": "ipv4-ipv6-tunneling-protocol",
       "path": "posts/개발 공부/네트워크/ipv4-ipv6-tunneling-protocol.md"
-    },
-    {
-      "basename": "interceptor",
-      "path": "posts/개발 공부/interceptor.md"
-    },
-    {
-      "basename": "count-to-infinity-problem",
-      "path": "posts/개발 공부/네트워크/count-to-infinity-problem.md"
-    },
-    {
-      "basename": "cors",
-      "path": "posts/개발 공부/네트워크/cors.md"
     }
   ],
   "omittedPaths": [
