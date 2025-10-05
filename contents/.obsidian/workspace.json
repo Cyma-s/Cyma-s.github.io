@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7a9aa1d2a6846135",
+            "id": "836c31399a328cca",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "meld-encrypted-view",
               "state": {
-                "file": "posts/TIL/2025/2025-07-17.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025-07-17"
-            }
-          },
-          {
-            "id": "34128535fd1c14ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.md",
+                "file": "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -54,33 +30,8 @@
               "icon": "lucide-file",
               "title": "reflection-on-10-month-journey-at-dh"
             }
-          },
-          {
-            "id": "bc45fc951bb4126a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/TIL/2025/2025-09-07.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025-09-07"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -147,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5,
-    "collapsed": true
+    "width": 370.5
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -287,10 +237,11 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "34128535fd1c14ee",
+  "active": "836c31399a328cca",
   "lastOpenFiles": [
+    "posts/TIL/2025/2025-07-17.md",
     "posts/TIL/2025/2025-09-07.md",
-    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.md",
+    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
     "posts/attachments/크리스마스마켓.jpeg",
     "posts/attachments/8E338FFF-FAD0-4F56-ABA7-883185066775_1_105_c.jpeg",
     "posts/우아한테크코스/DH 준비/get-a-job-with-delivery-hero.md",
@@ -301,7 +252,6 @@
     "posts/우아한테크코스/DH 준비/dh-second-interview-preparation.md",
     "posts/우아한테크코스/DH 준비/dh-recruiter-call.md",
     "posts/readme.md",
-    "posts/TIL/2025/2025-07-17.md",
     "posts/attachments/Pasted image 20250717213648.png",
     "posts/TIL/2025/2025-07-15.md",
     "posts/TIL/2025/2025-07.md",
@@ -328,7 +278,6 @@
     "posts/영어",
     "posts/나",
     "posts/개발 공부/프로그래밍 언어",
-    "posts/개발 공부/알고리즘",
     "posts/attachments/gc-deletion-with-compacting.png",
     "posts/attachments/gc-normal-deletion.png",
     "posts/attachments/gc-marking.png",
