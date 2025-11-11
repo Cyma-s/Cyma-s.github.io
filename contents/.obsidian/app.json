@@ -9,5 +9,6 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "posts",
   "vimMode": false,
-  "livePreview": true
+  "livePreview": true,
+  "promptDelete": false
 }

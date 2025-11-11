@@ -5,8 +5,4 @@ updated:
 tags:
 ---
 
-## LOG
-
-## 배운 것
-
-## 느낀 것
+## Today’s LOG in English

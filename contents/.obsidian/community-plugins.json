@@ -26,7 +26,7 @@
   "code-styler",
   "time-ruler",
   "floating-toc",
-  "cm-typewriter-scroll-obsidian",
   "quickadd",
-  "update-time-on-edit"
+  "update-time-on-edit",
+  "typewriter-mode"
 ]

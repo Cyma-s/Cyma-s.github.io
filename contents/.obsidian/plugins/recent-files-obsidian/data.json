@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "english-writing-2",
+      "path": "posts/영어/글쓰기 연습/english-writing-2.md"
+    },
+    {
+      "basename": "english-writing-1",
+      "path": "posts/영어/글쓰기 연습/english-writing-1.md"
+    },
+    {
       "basename": "2025-11-09",
       "path": "posts/TIL/2025/2025-11-09.md"
+    },
+    {
+      "basename": "2025-07-17",
+      "path": "posts/TIL/2025/2025-07-17.md"
+    },
+    {
+      "basename": "readme",
+      "path": "posts/readme.md"
+    },
+    {
+      "basename": "TIL",
+      "path": "template/TIL.md"
     },
     {
       "basename": "vague-anxiety",
@@ -29,10 +49,6 @@
       "path": "posts/나/alone-you-are-bound-to-break.md"
     },
     {
-      "basename": "2025-07-17",
-      "path": "posts/TIL/2025/2025-07-17.md"
-    },
-    {
       "basename": "get-a-job-with-delivery-hero",
       "path": "posts/우아한테크코스/DH 준비/get-a-job-with-delivery-hero.md"
     },
@@ -49,10 +65,6 @@
       "path": "posts/우아한테크코스/DH 준비/dh-recruiter-call.md"
     },
     {
-      "basename": "readme",
-      "path": "posts/readme.md"
-    },
-    {
       "basename": "2025-07-15",
       "path": "posts/TIL/2025/2025-07-15.md"
     },
@@ -63,10 +75,6 @@
     {
       "basename": "TILMonthlyIndex",
       "path": "template/TILMonthlyIndex.md"
-    },
-    {
-      "basename": "TIL",
-      "path": "template/TIL.md"
     },
     {
       "basename": "2025-05",
@@ -187,18 +195,6 @@
     {
       "basename": "programming-book",
       "path": "posts/개발 공부/programming-book.md"
-    },
-    {
-      "basename": "os-ch2",
-      "path": "posts/개발 공부/os-ch2.md"
-    },
-    {
-      "basename": "operating-system-concepts",
-      "path": "posts/개발 공부/operating-system-concepts.md"
-    },
-    {
-      "basename": "nginx",
-      "path": "posts/개발 공부/nginx.md"
     }
   ],
   "omittedPaths": [
