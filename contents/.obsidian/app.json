@@ -6,9 +6,10 @@
   "readableLineLength": true,
   "showLineNumber": false,
   "propertiesInDocument": "source",
-  "newFileLocation": "folder",
+  "newFileLocation": "current",
   "newFileFolderPath": "posts",
   "vimMode": false,
   "livePreview": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "showUnsupportedFiles": true
 }

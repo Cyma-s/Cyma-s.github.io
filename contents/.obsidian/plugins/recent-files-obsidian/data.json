@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "english-writing-5",
+      "path": "posts/영어/글쓰기 연습/english-writing-5.md"
+    },
+    {
+      "basename": "english-writing-4",
+      "path": "posts/영어/글쓰기 연습/english-writing-4.md"
+    },
+    {
+      "basename": "english-writing-3",
+      "path": "posts/영어/글쓰기 연습/english-writing-3.md"
+    },
+    {
       "basename": "english-writing-2",
       "path": "posts/영어/글쓰기 연습/english-writing-2.md"
     },
@@ -187,14 +199,6 @@
     {
       "basename": "tcp",
       "path": "posts/개발 공부/네트워크/tcp.md"
-    },
-    {
-      "basename": "short-programming-knowledge",
-      "path": "posts/개발 공부/short-programming-knowledge.md"
-    },
-    {
-      "basename": "programming-book",
-      "path": "posts/개발 공부/programming-book.md"
     }
   ],
   "omittedPaths": [
