@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "english-writing-8",
+      "path": "posts/영어/글쓰기 연습/english-writing-8.md"
+    },
+    {
+      "basename": "english-writing-7",
+      "path": "posts/영어/글쓰기 연습/english-writing-7.md"
+    },
+    {
+      "basename": "english-writing-6",
+      "path": "posts/영어/글쓰기 연습/english-writing-6.md"
+    },
+    {
       "basename": "english-writing-5",
       "path": "posts/영어/글쓰기 연습/english-writing-5.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "top-down-approach-ch1",
       "path": "posts/개발 공부/네트워크/top-down-approach-ch1.md"
-    },
-    {
-      "basename": "text-vs-varchar",
-      "path": "posts/개발 공부/text-vs-varchar.md"
-    },
-    {
-      "basename": "test",
-      "path": "posts/개발 공부/test.md"
-    },
-    {
-      "basename": "tcp",
-      "path": "posts/개발 공부/네트워크/tcp.md"
     }
   ],
   "omittedPaths": [

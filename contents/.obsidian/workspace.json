@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/영어/글쓰기 연습/english-writing-5.md",
+                "file": "posts/영어/글쓰기 연습/english-writing-8.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "english-writing-5"
+              "title": "english-writing-8"
             }
           }
         ]
@@ -241,8 +241,11 @@
   },
   "active": "698792f75c47f181",
   "lastOpenFiles": [
-    "posts/영어/글쓰기 연습/english-writing-4.md",
+    "posts/영어/글쓰기 연습/english-writing-7.md",
+    "posts/영어/글쓰기 연습/english-writing-8.md",
+    "posts/영어/글쓰기 연습/english-writing-6.md",
     "posts/영어/글쓰기 연습/english-writing-5.md",
+    "posts/영어/글쓰기 연습/english-writing-4.md",
     "posts/영어/글쓰기 연습/english-writing-3.md",
     "posts/영어/글쓰기 연습/english-writing-2.md",
     "posts/Untitled.md",
@@ -272,9 +275,6 @@
     "posts/우아한테크코스/DH 준비/dh-recruiter-call.md",
     "posts/attachments/Pasted image 20250717213648.png",
     "posts/TIL/2025/2025-07-15.md",
-    "posts/TIL/2025/2025-07.md",
-    "template/TILMonthlyIndex.md",
-    "posts/TIL/2025/2025-05.md",
     "posts/학교",
     "posts/우아한테크코스/S-HOOK",
     "posts/우아한테크코스/DH 준비",

@@ -1,7 +1,7 @@
 ---
 title: 불신과 의심의 끝은
 date: 2025-11-14 20:39:04 +0100
-updated: 2025-11-14 21:43:32 +0100
+updated: 2025-11-17 20:34:25 +0100
 tags:
   - english
 ---
@@ -154,4 +154,3 @@ Let’s begin to be nice to myself.
 		- The class starts at 3
 	- The class begins at 9 → 공지/글/설명에서 자연스러움. 공식 일정
 	- The class starts at 9 → 회화에서도 자연스럽고 캐주얼함. 그냥 9시에 시작한다는 뜻
-	- 
