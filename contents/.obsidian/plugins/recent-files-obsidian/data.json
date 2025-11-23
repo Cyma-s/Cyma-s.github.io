@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "english-writing-9",
+      "path": "posts/영어/글쓰기 연습/english-writing-9.md"
+    },
+    {
       "basename": "english-writing-8",
       "path": "posts/영어/글쓰기 연습/english-writing-8.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "vpc",
       "path": "posts/개발 공부/네트워크/vpc.md"
-    },
-    {
-      "basename": "top-down-approach-ch1",
-      "path": "posts/개발 공부/네트워크/top-down-approach-ch1.md"
     }
   ],
   "omittedPaths": [
