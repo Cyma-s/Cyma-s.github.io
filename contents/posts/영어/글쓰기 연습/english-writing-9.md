@@ -1,7 +1,7 @@
 ---
 title: 다들 왜 이렇게 영어를 잘할까
 date: 2025-11-20 22:13:01 +0100
-updated: 2025-11-20 23:11:26 +0100
+updated: 2025-11-23 13:56:03 +0100
 tags:
   - english
 ---
@@ -134,7 +134,7 @@ Even though now I’ve started thinking to learn more about English, when I just
 	- Used when talking about numbers or time
 	- I estimate the task will take two days
 
-## be picked up / get picked up
+### be picked up / get picked up
 
 - be picked up → simple passive
 	- Just the passive form of pick up.
