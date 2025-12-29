@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "english-writing-10",
+      "path": "posts/영어/글쓰기 연습/english-writing-10.md"
+    },
+    {
+      "basename": "english-speaking-10-17",
+      "path": "posts/영어/english-speaking-10-17.md"
+    },
+    {
+      "basename": "english-speaking-2024-01-09",
+      "path": "posts/영어/english-speaking-2024-01-09.md"
+    },
+    {
+      "basename": "english-speaking",
+      "path": "posts/영어/english-speaking.md"
+    },
+    {
+      "basename": "english-speaking-dec-2week",
+      "path": "posts/영어/english-speaking-dec-2week.md"
+    },
+    {
+      "basename": "english-speaking-nov-3week",
+      "path": "posts/영어/english-speaking-nov-3week.md"
+    },
+    {
+      "basename": "english-speaking-nov-4week",
+      "path": "posts/영어/english-speaking-nov-4week.md"
+    },
+    {
+      "basename": "english-speaking-oct-4week",
+      "path": "posts/영어/english-speaking-oct-4week.md"
+    },
+    {
+      "basename": "english-speaking-pattern",
+      "path": "posts/영어/english-speaking-pattern.md"
+    },
+    {
       "basename": "english-writing-9",
       "path": "posts/영어/글쓰기 연습/english-writing-9.md"
     },
@@ -163,42 +199,6 @@
     {
       "basename": "technical-debt",
       "path": "posts/개발 공부/technical-debt.md"
-    },
-    {
-      "basename": "ws-and-was",
-      "path": "posts/개발 공부/ws-and-was.md"
-    },
-    {
-      "basename": "why-string-is-final",
-      "path": "posts/개발 공부/프로그래밍 언어/why-string-is-final.md"
-    },
-    {
-      "basename": "nat",
-      "path": "posts/개발 공부/네트워크/nat.md"
-    },
-    {
-      "basename": "why-should-we-avoid-use-static",
-      "path": "posts/개발 공부/프로그래밍 언어/why-should-we-avoid-use-static.md"
-    },
-    {
-      "basename": "ubuntu-device-recognition-error",
-      "path": "posts/개발 공부/ubuntu-device-recognition-error.md"
-    },
-    {
-      "basename": "tomcat-thread-pool",
-      "path": "posts/개발 공부/tomcat-thread-pool.md"
-    },
-    {
-      "basename": "tomcat",
-      "path": "posts/개발 공부/tomcat.md"
-    },
-    {
-      "basename": "what-is-index",
-      "path": "posts/개발 공부/데이터베이스/what-is-index.md"
-    },
-    {
-      "basename": "vpc",
-      "path": "posts/개발 공부/네트워크/vpc.md"
     }
   ],
   "omittedPaths": [
