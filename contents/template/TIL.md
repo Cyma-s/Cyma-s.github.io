@@ -5,4 +5,4 @@ updated:
 tags:
 ---
 
-## Today’s LOG in English
+## LOG

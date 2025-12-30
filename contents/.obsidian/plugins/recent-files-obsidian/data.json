@@ -1,6 +1,66 @@
 {
   "recentFiles": [
     {
+      "basename": "branch-strategy",
+      "path": "posts/개발 공부/branch-strategy.md"
+    },
+    {
+      "basename": "default-method",
+      "path": "posts/우아한테크코스/default-method.md"
+    },
+    {
+      "basename": "2025-12-29",
+      "path": "posts/TIL/2025/2025-12-29.md"
+    },
+    {
+      "basename": "2025-retrospective",
+      "path": "posts/TIL/2025/2025-retrospective.md"
+    },
+    {
+      "basename": "TILMonthlyIndex",
+      "path": "template/TILMonthlyIndex.md"
+    },
+    {
+      "basename": "TIL",
+      "path": "template/TIL.md"
+    },
+    {
+      "basename": "2025-12",
+      "path": "posts/TIL/2025/2025-12.md"
+    },
+    {
+      "basename": "2025-07-17",
+      "path": "posts/TIL/2025/2025-07-17.md"
+    },
+    {
+      "basename": "reflection-on-10-month-journey-at-dh",
+      "path": "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc"
+    },
+    {
+      "basename": "alone-you-are-bound-to-break",
+      "path": "posts/나/alone-you-are-bound-to-break.md"
+    },
+    {
+      "basename": "berlin-relocation-plan",
+      "path": "posts/나/berlin-relocation-plan.md"
+    },
+    {
+      "basename": "book-love-skill",
+      "path": "posts/나/book-love-skill.md"
+    },
+    {
+      "basename": "objective",
+      "path": "posts/나/objective.md"
+    },
+    {
+      "basename": "obsidian-plugin",
+      "path": "posts/나/obsidian-plugin.md"
+    },
+    {
+      "basename": "vacation-plan",
+      "path": "posts/나/vacation-plan.md"
+    },
+    {
       "basename": "english-writing-10",
       "path": "posts/영어/글쓰기 연습/english-writing-10.md"
     },
@@ -73,44 +133,12 @@
       "path": "posts/영어/글쓰기 연습/english-writing-1.md"
     },
     {
-      "basename": "2025-11-09",
-      "path": "posts/TIL/2025/2025-11-09.md"
-    },
-    {
-      "basename": "2025-07-17",
-      "path": "posts/TIL/2025/2025-07-17.md"
-    },
-    {
       "basename": "readme",
       "path": "posts/readme.md"
     },
     {
-      "basename": "TIL",
-      "path": "template/TIL.md"
-    },
-    {
       "basename": "vague-anxiety",
       "path": "posts/나/vague-anxiety.md"
-    },
-    {
-      "basename": "reflection-on-10-month-journey-at-dh",
-      "path": "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc"
-    },
-    {
-      "basename": "obsidian-plugin",
-      "path": "posts/나/obsidian-plugin.md"
-    },
-    {
-      "basename": "objective",
-      "path": "posts/나/objective.md"
-    },
-    {
-      "basename": "berlin-relocation-plan",
-      "path": "posts/나/berlin-relocation-plan.md"
-    },
-    {
-      "basename": "alone-you-are-bound-to-break",
-      "path": "posts/나/alone-you-are-bound-to-break.md"
     },
     {
       "basename": "get-a-job-with-delivery-hero",
@@ -135,10 +163,6 @@
     {
       "basename": "2025-07",
       "path": "posts/TIL/2025/2025-07.md"
-    },
-    {
-      "basename": "TILMonthlyIndex",
-      "path": "template/TILMonthlyIndex.md"
     },
     {
       "basename": "2025-05",
@@ -175,30 +199,6 @@
     {
       "basename": "2025-04-26",
       "path": "posts/TIL/2025/2025-04-26.md"
-    },
-    {
-      "basename": "2025-04-24",
-      "path": "posts/TIL/2025/2025-04-24.md"
-    },
-    {
-      "basename": "2025-04-20",
-      "path": "posts/TIL/2025/2025-04-20.md"
-    },
-    {
-      "basename": "2025-04-19",
-      "path": "posts/TIL/2025/2025-04-19.md"
-    },
-    {
-      "basename": "interceptor-argument-resolver-authenticated",
-      "path": "posts/우아한테크코스/interceptor-argument-resolver-authenticated.md"
-    },
-    {
-      "basename": "spurious-wakeups",
-      "path": "posts/개발 공부/spurious-wakeups.md"
-    },
-    {
-      "basename": "technical-debt",
-      "path": "posts/개발 공부/technical-debt.md"
     }
   ],
   "omittedPaths": [

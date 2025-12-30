@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "599335a7e0560a48",
+        "id": "f4038fda6eccd2cb",
         "type": "tabs",
         "children": [
           {
-            "id": "698792f75c47f181",
+            "id": "afb32235bd2695fc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/영어/글쓰기 연습/english-writing-10.md",
+                "file": "posts/개발 공부/branch-strategy.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "english-writing-10"
+              "title": "branch-strategy"
             }
           }
         ]
@@ -238,8 +238,25 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "698792f75c47f181",
+  "active": "afb32235bd2695fc",
   "lastOpenFiles": [
+    "posts/우아한테크코스/default-method.md",
+    "posts/TIL/2025/2025-12-29.md",
+    "posts/TIL/2025/2025-retrospective.md",
+    "template/TILMonthlyIndex.md",
+    "template/TIL.md",
+    "posts/TIL/2026",
+    "posts/TIL/2025/2025-12.md",
+    "posts/TIL/2025/2025-07-17.md",
+    "posts/TIL/2025/2025-11-09.md",
+    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
+    "posts/나/alone-you-are-bound-to-break.md",
+    "posts/나/berlin-relocation-plan.md",
+    "posts/나/book-love-skill.md",
+    "posts/나/objective.md",
+    "posts/나/obsidian-plugin.md",
+    "posts/나/vacation-plan.md",
+    "posts/영어/글쓰기 연습/english-writing-10.md",
     "posts/영어/english-speaking-10-17.md",
     "posts/영어/english-speaking-2024-01-09.md",
     "posts/영어/english-speaking.md",
@@ -248,26 +265,10 @@
     "posts/영어/english-speaking-nov-4week.md",
     "posts/영어/english-speaking-oct-4week.md",
     "posts/영어/english-speaking-pattern.md",
-    "posts/영어/글쓰기 연습/english-writing-10.md",
     "posts/영어/글쓰기 연습/english-writing-9.md",
     "posts/영어/글쓰기 연습/english-writing-8.md",
     "posts/영어/글쓰기 연습/english-writing-7.md",
-    "posts/영어/글쓰기 연습/english-writing-6.md",
-    "posts/영어/글쓰기 연습/english-writing-5.md",
-    "posts/영어/글쓰기 연습/english-writing-4.md",
-    "posts/영어/글쓰기 연습/english-writing-3.md",
-    "posts/영어/글쓰기 연습/english-writing-2.md",
-    "posts/Untitled.md",
-    "posts/영어/글쓰기 연습/무제.md",
-    "posts/영어/글쓰기 연습/english-writing-1.md",
-    "posts/TIL/2025/2025-11-09.md",
     "posts/영어/글쓰기 연습",
-    "posts/TIL/2025/2025-07-17.md",
-    "posts/readme.md",
-    "template/TIL.md",
-    "posts/나/vague-anxiety.md",
-    "posts/나/무제.md",
-    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
     "posts/attachments/크리스마스마켓.jpeg",
     "posts/attachments/8E338FFF-FAD0-4F56-ABA7-883185066775_1_105_c.jpeg",
     "posts/attachments/2024-lck-준결승.jpeg",
@@ -279,7 +280,6 @@
     "posts/우아한테크코스/DH 준비",
     "posts/우아한테크코스",
     "posts/영어",
-    "posts/나",
     "posts/attachments/gc-deletion-with-compacting.png",
     "posts/attachments/gc-normal-deletion.png",
     "posts/attachments/gc-marking.png",

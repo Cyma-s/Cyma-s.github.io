@@ -11,5 +11,6 @@
   "vimMode": false,
   "livePreview": true,
   "promptDelete": false,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "autoConvertHtml": true
 }
