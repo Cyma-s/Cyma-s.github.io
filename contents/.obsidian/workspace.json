@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2026-02-17.md",
+                "file": "posts/readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-02-17"
+              "title": "readme"
             }
           },
           {
@@ -265,8 +265,8 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "posts/TIL/2026/2026-02.md",
     "posts/TIL/2025/2026-02-17.md",
+    "posts/TIL/2026/2026-02.md",
     "posts/TIL/2025/2026-01-25.md",
     "posts/TIL/2026/2026-01.md",
     "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
