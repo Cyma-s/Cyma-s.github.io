@@ -10,11 +10,10 @@
           {
             "id": "e7a7b303c61786dc",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2026-01-25.md",
+                "file": "posts/TIL/2025/2026-02-17.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,25 +27,35 @@
                   "unlinkedCollapsed": true
                 }
               },
-              "pinned": true,
               "icon": "lucide-file",
-              "title": "2026-01-25"
+              "title": "2026-02-17"
             }
           },
           {
-            "id": "6efb28379e1825ca",
+            "id": "4c7e30aaf6b5dd57",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.11.5"
+                "file": "posts/TIL/2026/2026-02.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-book-up",
-              "title": "릴리즈 노트 1.11.5"
+              "icon": "lucide-file",
+              "title": "2026-02"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +122,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 370.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -253,8 +263,10 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "6efb28379e1825ca",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "posts/TIL/2026/2026-02.md",
+    "posts/TIL/2025/2026-02-17.md",
     "posts/TIL/2025/2026-01-25.md",
     "posts/TIL/2026/2026-01.md",
     "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
@@ -281,8 +293,6 @@
     "posts/영어/english-speaking-dec-2week.md",
     "posts/영어/english-speaking-nov-3week.md",
     "posts/영어/english-speaking-nov-4week.md",
-    "posts/영어/english-speaking-oct-4week.md",
-    "posts/영어/english-speaking-pattern.md",
     "posts/영어/글쓰기 연습",
     "posts/attachments/크리스마스마켓.jpeg",
     "posts/attachments/8E338FFF-FAD0-4F56-ABA7-883185066775_1_105_c.jpeg",
