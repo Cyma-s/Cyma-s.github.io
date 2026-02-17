@@ -12,5 +12,6 @@
   "livePreview": true,
   "promptDelete": false,
   "showUnsupportedFiles": true,
-  "autoConvertHtml": true
+  "autoConvertHtml": true,
+  "openBehavior": "daily"
 }

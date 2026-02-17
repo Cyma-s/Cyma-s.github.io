@@ -1,23 +1,52 @@
 {
   "main": {
-    "id": "ee7c9da1be8c30c0",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "ac786e7a2024408f",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "4f9c650e1ae62c59",
+            "id": "e7a7b303c61786dc",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/TIL/2025/2026-01-25.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "2026-01-25"
+            }
+          },
+          {
+            "id": "6efb28379e1825ca",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "새 탭"
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "릴리즈 노트 1.11.5"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -224,8 +253,10 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "4f9c650e1ae62c59",
+  "active": "6efb28379e1825ca",
   "lastOpenFiles": [
+    "posts/TIL/2025/2026-01-25.md",
+    "posts/TIL/2026/2026-01.md",
     "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
     "posts/TIL/2025/2025-retrospective.md",
     "posts/나/alone-you-are-bound-to-break.md",
@@ -252,7 +283,6 @@
     "posts/영어/english-speaking-nov-4week.md",
     "posts/영어/english-speaking-oct-4week.md",
     "posts/영어/english-speaking-pattern.md",
-    "posts/영어/글쓰기 연습/english-writing-9.md",
     "posts/영어/글쓰기 연습",
     "posts/attachments/크리스마스마켓.jpeg",
     "posts/attachments/8E338FFF-FAD0-4F56-ABA7-883185066775_1_105_c.jpeg",
