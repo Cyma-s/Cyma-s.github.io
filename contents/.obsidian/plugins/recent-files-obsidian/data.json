@@ -1,6 +1,186 @@
 {
   "recentFiles": [
     {
+      "basename": "2025-retrospective",
+      "path": "posts/TIL/2025/2025-retrospective.md"
+    },
+    {
+      "basename": "level4-retrospect",
+      "path": "posts/우아한테크코스/level4-retrospect.md"
+    },
+    {
+      "basename": "level3-level-log",
+      "path": "posts/우아한테크코스/level3-level-log.md"
+    },
+    {
+      "basename": "level2-third-retrospect",
+      "path": "posts/우아한테크코스/level2-third-retrospect.md"
+    },
+    {
+      "basename": "level2-level-log",
+      "path": "posts/우아한테크코스/level2-level-log.md"
+    },
+    {
+      "basename": "woowacourse-retrospect",
+      "path": "posts/우아한테크코스/woowacourse-retrospect.md"
+    },
+    {
+      "basename": "2024-02-06",
+      "path": "posts/TIL/2024/2024-02-06.md"
+    },
+    {
+      "basename": "2023-08-07",
+      "path": "posts/TIL/2023/2023-08-07.md"
+    },
+    {
+      "basename": "2023-07",
+      "path": "posts/TIL/2023/2023-07.md"
+    },
+    {
+      "basename": "spring-multi-profile-issue",
+      "path": "posts/개발 공부/Spring/spring-multi-profile-issue.md"
+    },
+    {
+      "basename": "hikaricp",
+      "path": "posts/우아한테크코스/S-HOOK/hikaricp.md"
+    },
+    {
+      "basename": "concurrency-test",
+      "path": "posts/개발 공부/concurrency-test.md"
+    },
+    {
+      "basename": "avl-tree",
+      "path": "posts/개발 공부/알고리즘/avl-tree.md"
+    },
+    {
+      "basename": "2023-10-18",
+      "path": "posts/TIL/2023/2023-10-18.md"
+    },
+    {
+      "basename": "level4-mvc",
+      "path": "posts/우아한테크코스/level4-mvc.md"
+    },
+    {
+      "basename": "level1-sixth-retrospect",
+      "path": "posts/우아한테크코스/level1-sixth-retrospect.md"
+    },
+    {
+      "basename": "2025-04-19",
+      "path": "posts/TIL/2025/2025-04-19.md"
+    },
+    {
+      "basename": "english-speaking-pattern",
+      "path": "posts/영어/english-speaking-pattern.md"
+    },
+    {
+      "basename": "english-speaking-dec-2week",
+      "path": "posts/영어/english-speaking-dec-2week.md"
+    },
+    {
+      "basename": "top-down-approach-ch1",
+      "path": "posts/개발 공부/네트워크/top-down-approach-ch1.md"
+    },
+    {
+      "basename": "2023-03-26",
+      "path": "posts/TIL/2023/2023-03-26.md"
+    },
+    {
+      "basename": "english-speaking-dec-1week",
+      "path": "posts/영어/english-speaking-dec-1week.md"
+    },
+    {
+      "basename": "shook-third-demoday-retrospect",
+      "path": "posts/우아한테크코스/S-HOOK/shook-third-demoday-retrospect.md"
+    },
+    {
+      "basename": "cors",
+      "path": "posts/개발 공부/네트워크/cors.md"
+    },
+    {
+      "basename": "english-speaking-pattern-11-30",
+      "path": "posts/영어/english-speaking-pattern-11-30.md"
+    },
+    {
+      "basename": "2023-06-28",
+      "path": "posts/TIL/2023/2023-06-28.md"
+    },
+    {
+      "basename": "2023-04-08",
+      "path": "posts/TIL/2023/2023-04-08.md"
+    },
+    {
+      "basename": "level2-week5",
+      "path": "posts/우아한테크코스/level2-week5.md"
+    },
+    {
+      "basename": "spurious-wakeups",
+      "path": "posts/개발 공부/spurious-wakeups.md"
+    },
+    {
+      "basename": "2025-07-15",
+      "path": "posts/TIL/2025/2025-07-15.md"
+    },
+    {
+      "basename": "2025-02",
+      "path": "posts/TIL/2025/2025-02.md"
+    },
+    {
+      "basename": "wooteco-ot",
+      "path": "posts/우아한테크코스/wooteco-ot.md"
+    },
+    {
+      "basename": "2024-08-30",
+      "path": "posts/TIL/2024/2024-08-30.md"
+    },
+    {
+      "basename": "nat",
+      "path": "posts/개발 공부/네트워크/nat.md"
+    },
+    {
+      "basename": "test-isolation",
+      "path": "posts/우아한테크코스/S-HOOK/test-isolation.md"
+    },
+    {
+      "basename": "mit-ocw-sets-and-sorting",
+      "path": "posts/우아한테크코스/DH 준비/mit-ocw-sets-and-sorting.md"
+    },
+    {
+      "basename": "why-string-is-final",
+      "path": "posts/개발 공부/프로그래밍 언어/why-string-is-final.md"
+    },
+    {
+      "basename": "matzip-vpc-setting",
+      "path": "posts/우아한테크코스/matzip-vpc-setting.md"
+    },
+    {
+      "basename": "ori-06-08",
+      "path": "posts/우아한테크코스/ori-06-08.md"
+    },
+    {
+      "basename": "2023-11-30",
+      "path": "posts/TIL/2023/2023-11-30.md"
+    },
+    {
+      "basename": "2024-08-25",
+      "path": "posts/TIL/2024/2024-08-25.md"
+    },
+    {
+      "basename": "getter-setter-position",
+      "path": "posts/개발 공부/프로그래밍 언어/getter-setter-position.md"
+    },
+    {
+      "basename": "english-speaking-nov-3week",
+      "path": "posts/영어/english-speaking-nov-3week.md"
+    },
+    {
+      "basename": "2023-02-06",
+      "path": "posts/TIL/2023/2023-02-06.md"
+    },
+    {
+      "basename": "2023-05",
+      "path": "posts/TIL/2023/2023-05.md"
+    },
+    {
       "basename": "readme",
       "path": "posts/readme.md"
     },
@@ -19,186 +199,6 @@
     {
       "basename": "2026-01",
       "path": "posts/TIL/2026/2026-01.md"
-    },
-    {
-      "basename": "reflection-on-10-month-journey-at-dh",
-      "path": "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc"
-    },
-    {
-      "basename": "2025-retrospective",
-      "path": "posts/TIL/2025/2025-retrospective.md"
-    },
-    {
-      "basename": "alone-you-are-bound-to-break",
-      "path": "posts/나/alone-you-are-bound-to-break.md"
-    },
-    {
-      "basename": "branch-strategy",
-      "path": "posts/개발 공부/branch-strategy.md"
-    },
-    {
-      "basename": "default-method",
-      "path": "posts/우아한테크코스/default-method.md"
-    },
-    {
-      "basename": "2025-12-29",
-      "path": "posts/TIL/2025/2025-12-29.md"
-    },
-    {
-      "basename": "TILMonthlyIndex",
-      "path": "template/TILMonthlyIndex.md"
-    },
-    {
-      "basename": "TIL",
-      "path": "template/TIL.md"
-    },
-    {
-      "basename": "2025-12",
-      "path": "posts/TIL/2025/2025-12.md"
-    },
-    {
-      "basename": "2025-07-17",
-      "path": "posts/TIL/2025/2025-07-17.md"
-    },
-    {
-      "basename": "berlin-relocation-plan",
-      "path": "posts/나/berlin-relocation-plan.md"
-    },
-    {
-      "basename": "book-love-skill",
-      "path": "posts/나/book-love-skill.md"
-    },
-    {
-      "basename": "objective",
-      "path": "posts/나/objective.md"
-    },
-    {
-      "basename": "obsidian-plugin",
-      "path": "posts/나/obsidian-plugin.md"
-    },
-    {
-      "basename": "vacation-plan",
-      "path": "posts/나/vacation-plan.md"
-    },
-    {
-      "basename": "english-writing-10",
-      "path": "posts/영어/글쓰기 연습/english-writing-10.md"
-    },
-    {
-      "basename": "english-speaking-10-17",
-      "path": "posts/영어/english-speaking-10-17.md"
-    },
-    {
-      "basename": "english-speaking-2024-01-09",
-      "path": "posts/영어/english-speaking-2024-01-09.md"
-    },
-    {
-      "basename": "english-speaking",
-      "path": "posts/영어/english-speaking.md"
-    },
-    {
-      "basename": "english-speaking-dec-2week",
-      "path": "posts/영어/english-speaking-dec-2week.md"
-    },
-    {
-      "basename": "english-speaking-nov-3week",
-      "path": "posts/영어/english-speaking-nov-3week.md"
-    },
-    {
-      "basename": "english-speaking-nov-4week",
-      "path": "posts/영어/english-speaking-nov-4week.md"
-    },
-    {
-      "basename": "english-speaking-oct-4week",
-      "path": "posts/영어/english-speaking-oct-4week.md"
-    },
-    {
-      "basename": "english-speaking-pattern",
-      "path": "posts/영어/english-speaking-pattern.md"
-    },
-    {
-      "basename": "english-writing-9",
-      "path": "posts/영어/글쓰기 연습/english-writing-9.md"
-    },
-    {
-      "basename": "english-writing-8",
-      "path": "posts/영어/글쓰기 연습/english-writing-8.md"
-    },
-    {
-      "basename": "english-writing-7",
-      "path": "posts/영어/글쓰기 연습/english-writing-7.md"
-    },
-    {
-      "basename": "english-writing-6",
-      "path": "posts/영어/글쓰기 연습/english-writing-6.md"
-    },
-    {
-      "basename": "english-writing-5",
-      "path": "posts/영어/글쓰기 연습/english-writing-5.md"
-    },
-    {
-      "basename": "english-writing-4",
-      "path": "posts/영어/글쓰기 연습/english-writing-4.md"
-    },
-    {
-      "basename": "english-writing-3",
-      "path": "posts/영어/글쓰기 연습/english-writing-3.md"
-    },
-    {
-      "basename": "english-writing-2",
-      "path": "posts/영어/글쓰기 연습/english-writing-2.md"
-    },
-    {
-      "basename": "english-writing-1",
-      "path": "posts/영어/글쓰기 연습/english-writing-1.md"
-    },
-    {
-      "basename": "vague-anxiety",
-      "path": "posts/나/vague-anxiety.md"
-    },
-    {
-      "basename": "get-a-job-with-delivery-hero",
-      "path": "posts/우아한테크코스/DH 준비/get-a-job-with-delivery-hero.md"
-    },
-    {
-      "basename": "2024-lck-준결승",
-      "path": "posts/attachments/2024-lck-준결승.jpeg"
-    },
-    {
-      "basename": "dh-second-interview-preparation",
-      "path": "posts/우아한테크코스/DH 준비/dh-second-interview-preparation.md"
-    },
-    {
-      "basename": "dh-recruiter-call",
-      "path": "posts/우아한테크코스/DH 준비/dh-recruiter-call.md"
-    },
-    {
-      "basename": "2025-07-15",
-      "path": "posts/TIL/2025/2025-07-15.md"
-    },
-    {
-      "basename": "2025-07",
-      "path": "posts/TIL/2025/2025-07.md"
-    },
-    {
-      "basename": "2025-05",
-      "path": "posts/TIL/2025/2025-05.md"
-    },
-    {
-      "basename": "english-speaking-template",
-      "path": "template/english-speaking-template.md"
-    },
-    {
-      "basename": "template",
-      "path": "template/template.md"
-    },
-    {
-      "basename": "2025-05-29",
-      "path": "posts/TIL/2025/2025-05-29.md"
-    },
-    {
-      "basename": "2025-05-01",
-      "path": "posts/TIL/2025/2025-05-01.md"
     }
   ],
   "omittedPaths": [
