@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2025/2025-retrospective.md",
+                "file": "posts/TIL/2026/2026-01-25.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-retrospective"
+              "title": "2026-01-25"
             }
           },
           {
@@ -262,8 +262,9 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "41ec79aeb9d25236",
   "lastOpenFiles": [
+    "posts/TIL/2025/2025-retrospective.md",
     "posts/우아한테크코스/level4-retrospect.md",
     "posts/우아한테크코스/level3-level-log.md",
     "posts/우아한테크코스/level2-third-retrospect.md",
@@ -289,7 +290,6 @@
     "posts/개발 공부/네트워크/cors.md",
     "posts/영어/english-speaking-pattern-11-30.md",
     "posts/TIL/2023/2023-06-28.md",
-    "posts/TIL/2023/2023-04-08.md",
     "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
     "posts/TIL/2026",
     "posts/영어/글쓰기 연습",
