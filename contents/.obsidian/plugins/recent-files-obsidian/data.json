@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "2026-02-20",
+      "path": "posts/TIL/2026/2026-02-20.md"
+    },
+    {
+      "basename": "2026-02-17",
+      "path": "posts/TIL/2026/2026-02-17.md"
+    },
+    {
+      "basename": "2026-02",
+      "path": "posts/TIL/2026/2026-02.md"
+    },
+    {
+      "basename": "readme",
+      "path": "posts/readme.md"
+    },
+    {
       "basename": "2026-01-25",
       "path": "posts/TIL/2026/2026-01-25.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "2023-05",
       "path": "posts/TIL/2023/2023-05.md"
-    },
-    {
-      "basename": "readme",
-      "path": "posts/readme.md"
-    },
-    {
-      "basename": "2026-02-17",
-      "path": "posts/TIL/2026/2026-02-17.md"
-    },
-    {
-      "basename": "2026-02",
-      "path": "posts/TIL/2026/2026-02.md"
-    },
-    {
-      "basename": "2026-01",
-      "path": "posts/TIL/2026/2026-01.md"
     }
   ],
   "omittedPaths": [

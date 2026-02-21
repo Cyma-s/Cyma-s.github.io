@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2026/2026-01-25.md",
+                "file": "posts/TIL/2026/2026-02-20.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-01-25"
+              "title": "2026-02-20"
             }
           },
           {
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2026/2026-02.md",
+                "file": "posts/TIL/2026/2026-02-20.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,10 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-02"
+              "title": "2026-02-20"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +123,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.5
+    "width": 370.5,
+    "collapsed": true
   },
   "right": {
     "id": "e4930a9ea45d668e",
@@ -262,8 +264,13 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "41ec79aeb9d25236",
+  "active": "4c7e30aaf6b5dd57",
   "lastOpenFiles": [
+    "posts/TIL/2026/2026-02-17.md",
+    "posts/TIL/2026/2026-02.md",
+    "posts/TIL/2026/2026-02-20.md",
+    "posts/readme.md",
+    "posts/TIL/2026/2026-01-25.md",
     "posts/TIL/2025/2025-retrospective.md",
     "posts/우아한테크코스/level4-retrospect.md",
     "posts/우아한테크코스/level3-level-log.md",
@@ -285,11 +292,6 @@
     "posts/영어/english-speaking-dec-2week.md",
     "posts/개발 공부/네트워크/top-down-approach-ch1.md",
     "posts/TIL/2023/2023-03-26.md",
-    "posts/영어/english-speaking-dec-1week.md",
-    "posts/우아한테크코스/S-HOOK/shook-third-demoday-retrospect.md",
-    "posts/개발 공부/네트워크/cors.md",
-    "posts/영어/english-speaking-pattern-11-30.md",
-    "posts/TIL/2023/2023-06-28.md",
     "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
     "posts/TIL/2026",
     "posts/영어/글쓰기 연습",
