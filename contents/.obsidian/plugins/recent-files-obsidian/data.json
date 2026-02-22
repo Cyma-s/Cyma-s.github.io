@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "2026-02-22",
+      "path": "posts/TIL/2026/2026-02-22.md"
+    },
+    {
       "basename": "2026-02-20",
       "path": "posts/TIL/2026/2026-02-20.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "2023-02-06",
       "path": "posts/TIL/2023/2023-02-06.md"
-    },
-    {
-      "basename": "2023-05",
-      "path": "posts/TIL/2023/2023-05.md"
     }
   ],
   "omittedPaths": [
