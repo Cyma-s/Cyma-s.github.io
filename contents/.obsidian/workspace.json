@@ -10,10 +10,11 @@
           {
             "id": "e7a7b303c61786dc",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2026/2026-02-20.md",
+                "file": "posts/TIL/2026/2026-03-01.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -27,17 +28,18 @@
                   "unlinkedCollapsed": true
                 }
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "2026-02-20"
+              "title": "2026-03-01"
             }
           },
           {
-            "id": "4c7e30aaf6b5dd57",
+            "id": "1cc0d3701408aecb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TIL/2026/2026-02-22.md",
+                "file": "posts/TIL/2026/2026-03.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +54,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-02-22"
+              "title": "2026-03"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -264,12 +265,17 @@
       "meld-encrypt:Decrypt at Cursor": false
     }
   },
-  "active": "4c7e30aaf6b5dd57",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "posts/TIL/2026/2026-03.md",
+    "posts/TIL/2026/2026-03-01.md",
+    "posts/TIL/2026/2026-02-28.md",
+    "posts/TIL/2026/2026-02-27.md",
+    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
     "posts/TIL/2026/2026-02-20.md",
     "posts/TIL/2026/2026-02-22.md",
-    "posts/TIL/2026/2026-02-17.md",
     "posts/TIL/2026/2026-02.md",
+    "posts/TIL/2026/2026-02-17.md",
     "posts/readme.md",
     "posts/TIL/2026/2026-01-25.md",
     "posts/TIL/2025/2025-retrospective.md",
@@ -288,11 +294,6 @@
     "posts/TIL/2023/2023-10-18.md",
     "posts/우아한테크코스/level4-mvc.md",
     "posts/우아한테크코스/level1-sixth-retrospect.md",
-    "posts/TIL/2025/2025-04-19.md",
-    "posts/영어/english-speaking-pattern.md",
-    "posts/영어/english-speaking-dec-2week.md",
-    "posts/개발 공부/네트워크/top-down-approach-ch1.md",
-    "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc",
     "posts/TIL/2026",
     "posts/영어/글쓰기 연습",
     "posts/attachments/크리스마스마켓.jpeg",

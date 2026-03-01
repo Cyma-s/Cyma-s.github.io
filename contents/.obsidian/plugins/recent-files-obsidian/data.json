@@ -1,20 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "2026-02-22",
-      "path": "posts/TIL/2026/2026-02-22.md"
+      "basename": "2026-03-01",
+      "path": "posts/TIL/2026/2026-03-01.md"
+    },
+    {
+      "basename": "2026-03",
+      "path": "posts/TIL/2026/2026-03.md"
+    },
+    {
+      "basename": "2026-02-27",
+      "path": "posts/TIL/2026/2026-02-27.md"
+    },
+    {
+      "basename": "reflection-on-10-month-journey-at-dh",
+      "path": "posts/독일 생활/DH/reflection-on-10-month-journey-at-dh.mdenc"
     },
     {
       "basename": "2026-02-20",
       "path": "posts/TIL/2026/2026-02-20.md"
     },
     {
-      "basename": "2026-02-17",
-      "path": "posts/TIL/2026/2026-02-17.md"
+      "basename": "2026-02-22",
+      "path": "posts/TIL/2026/2026-02-22.md"
     },
     {
       "basename": "2026-02",
       "path": "posts/TIL/2026/2026-02.md"
+    },
+    {
+      "basename": "2026-02-17",
+      "path": "posts/TIL/2026/2026-02-17.md"
     },
     {
       "basename": "readme",
@@ -183,22 +199,6 @@
     {
       "basename": "2023-11-30",
       "path": "posts/TIL/2023/2023-11-30.md"
-    },
-    {
-      "basename": "2024-08-25",
-      "path": "posts/TIL/2024/2024-08-25.md"
-    },
-    {
-      "basename": "getter-setter-position",
-      "path": "posts/개발 공부/프로그래밍 언어/getter-setter-position.md"
-    },
-    {
-      "basename": "english-speaking-nov-3week",
-      "path": "posts/영어/english-speaking-nov-3week.md"
-    },
-    {
-      "basename": "2023-02-06",
-      "path": "posts/TIL/2023/2023-02-06.md"
     }
   ],
   "omittedPaths": [
